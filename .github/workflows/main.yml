@@ -33,5 +33,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: html # The folder the action should deploy.
-          TARGET_FOLDER: master2
+          TARGET_FOLDER: master
           REPOSITORY_NAME: test-sakura-editor/doxygen
