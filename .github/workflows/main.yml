@@ -27,6 +27,13 @@ jobs:
           working-directory: '.'
           doxyfile-path: './doxygen.conf'
 
+    # create tempdata
+    - name: create tempdata
+      run: |
+        mkdir -p html/temp
+        date >   html/out.txt
+        date >   html/temp/out.txt
+
     - name: Deploy doxygen
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
