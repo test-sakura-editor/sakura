@@ -24,9 +24,9 @@ jobs:
     # create tempdata
     - name: create tempdata
       run: |
-        mkdir -p html/temp
-        date >   html/out.txt
-        date >   html/temp/out.txt
+        mkdir -p outout/temp
+        date >   outout/out.txt
+        date >   outout/temp/out.txt
 
     - name: Doxygen Build
       uses: mattnotmitt/doxygen-action@v1
@@ -40,4 +40,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: html # The folder the action should deploy.
-          TARGET_FOLDER: doxygen/master
+          TARGET_FOLDER: outout
