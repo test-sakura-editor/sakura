@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/CDocFile.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDocFile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d1b/_c_doc_file_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    Copyright (C) 2013, Uchi</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d78/_c_file_8h.html">io/CFile.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d4d/file_8h.html">util/file.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//####本来はここにあるべきでは無い</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/d31/struct_s_file_info.html">   33</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d31/struct_s_file_info.html">SFileInfo</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d4/d9d/class_c_doc_file.html">CDocFile</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   eCharCode;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span>        bBomExist;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   eCharCodeLoad;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span>        bBomExistLoad;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>   cFileTime;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d8/d31/struct_s_file_info.html">SFileInfo</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        eCharCode = eCharCodeLoad = <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9de2ccc6e97fe1633d715e098ebbf566">CODE_DEFAULT</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        bBomExist = bBomExistLoad = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cFileTime.ClearFILETIME();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d8/d31/struct_s_file_info.html#abb5bdd0397c985818534fed7c474c9ac">   49</a></span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d8/d31/struct_s_file_info.html#abb5bdd0397c985818534fed7c474c9ac">SetCodeSet</a>(<a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eSet, <span class="keywordtype">bool</span> bBom)   { eCharCode = eCharCodeLoad = eSet; bBomExist = bBomExistLoad = bBom; } </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d8/d31/struct_s_file_info.html#aec93f35c146c2e98a02aafedc970289f">   50</a></span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d8/d31/struct_s_file_info.html#aec93f35c146c2e98a02aafedc970289f">SetBomExist</a>(<span class="keywordtype">bool</span> bBom)                  { bBomExist = bBomExistLoad = bBom; }   </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span>    SetFileTime( FILETIME&amp; Time )           { cFileTime.SetFILETIME( Time ); }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d9d/class_c_doc_file.html">CDocFile</a> : <span class="keyword">public</span> <a class="code" href="../../dd/d67/class_c_file.html">CFile</a>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d4/d9d/class_c_doc_file.html">CDocFile</a>(<a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>* pcDoc) : m_pcDocRef(pcDoc) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#a8f183642a828e7a11e0b3f88d0c84614">   58</a></span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#a8f183642a828e7a11e0b3f88d0c84614">SetCodeSet</a>(<a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeSet , <span class="keywordtype">bool</span> bBomExist) { m_sFileInfo.<a class="code" href="../../d8/d31/struct_s_file_info.html#abb5bdd0397c985818534fed7c474c9ac">SetCodeSet</a>(eCodeSet, bBomExist); }    </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#a6024a6412cd2c36ec5b54af876293b8d">   59</a></span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#a6024a6412cd2c36ec5b54af876293b8d">SetCodeSetChg</a>(<a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeSet , <span class="keywordtype">bool</span> bBomExist)  { m_sFileInfo.eCharCode = eCodeSet; m_sFileInfo.bBomExist = bBomExist; }    </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#ad297ad824bd089d068138976e40cba61">   60</a></span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>       <a class="code" href="../../d4/d9d/class_c_doc_file.html#ad297ad824bd089d068138976e40cba61">GetCodeSet</a>()<span class="keyword"> const          </span>{ <span class="keywordflow">return</span> m_sFileInfo.eCharCode; }       </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#a3b74c0cde297bbac784a684ab54ab509">   61</a></span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#a3b74c0cde297bbac784a684ab54ab509">SetBomDefoult</a>()             { m_sFileInfo.bBomExist= <a class="code" href="../../d6/d55/class_c_code_type_name.html">CCodeTypeName</a>( m_sFileInfo.eCharCode ).IsBomDefOn(); } </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#ab7656bb434735381873f7365b9a2b37c">   62</a></span>&#160;    <span class="keywordtype">void</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#ab7656bb434735381873f7365b9a2b37c">CancelChgCodeSet</a>()          { m_sFileInfo.eCharCode = m_sFileInfo.eCharCodeLoad; m_sFileInfo.bBomExist = m_sFileInfo.bBomExistLoad; }       </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#afd547f7755b6fb3c31cd50ec7cd3044b">   63</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#afd547f7755b6fb3c31cd50ec7cd3044b">IsBomExist</a>()<span class="keyword"> const          </span>{ <span class="keywordflow">return</span> m_sFileInfo.bBomExist; }       </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#a15e359d73013833a832117162e6c9f2d">   64</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d4/d9d/class_c_doc_file.html#a15e359d73013833a832117162e6c9f2d">IsChgCodeSet</a>()<span class="keyword"> const        </span>{ <span class="keywordflow">return</span> (!IsFileTimeZero()) &amp;&amp; ((m_sFileInfo.eCharCode != m_sFileInfo.eCharCodeLoad) || (m_sFileInfo.bBomExist != m_sFileInfo.bBomExistLoad)); }       </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>&amp;      GetFileTime()               { <span class="keywordflow">return</span> m_sFileInfo.cFileTime; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span>            ClearFileTime()             { m_sFileInfo.cFileTime.ClearFILETIME(); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span>            IsFileTimeZero()<span class="keyword"> const      </span>{ <span class="keywordflow">return</span> m_sFileInfo.cFileTime.IsZero(); }  <span class="comment">// 新規ファイル？</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">const</span> SYSTEMTIME    GetFileSysTime()<span class="keyword"> const  </span>{ <span class="keywordflow">return</span> m_sFileInfo.cFileTime.GetSYSTEMTIME(); }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span>            SetFileTime( FILETIME&amp; Time )   { m_sFileInfo.cFileTime.SetFILETIME( Time ); }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_doc_file.html#a568cc3672cc7d6cbcba893120b35d014">   72</a></span>&#160;    <span class="keyword">const</span> WCHAR*    <a class="code" href="../../d4/d9d/class_c_doc_file.html#a568cc3672cc7d6cbcba893120b35d014">GetFileName</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> <a class="code" href="../../d2/d4d/file_8h.html#a27fca3d6dfd4e01806432c112452cb05">GetFileTitlePointer</a>(GetFilePath()); }   </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> WCHAR*    GetSaveFilePath(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span>            SetSaveFilePath(LPCWSTR pszPath){ m_szSaveFilePath.Assign(pszPath); }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">public</span>: <span class="comment">//####</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>*   m_pcDocRef;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d8/d31/struct_s_file_info.html">SFileInfo</a>   m_sFileInfo;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../da/db3/class_c_file_path.html">CFilePath</a>   m_szSaveFilePath;   <span class="comment">/* 保存時のファイルのパス（マクロ用） */</span>    <span class="comment">// 2006.09.04 ryoji</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_doc_file_html_a568cc3672cc7d6cbcba893120b35d014"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#a568cc3672cc7d6cbcba893120b35d014">CDocFile::GetFileName</a></div><div class="ttdeci">const WCHAR * GetFileName() const</div><div class="ttdoc">ファイル名(パスなし)を取得</div><div class="ttdef"><b>Definition:</b> CDocFile.h:72</div></div>
+<div class="ttc" id="astruct_s_file_info_html"><div class="ttname"><a href="../../d8/d31/struct_s_file_info.html">SFileInfo</a></div><div class="ttdef"><b>Definition:</b> CDocFile.h:33</div></div>
+<div class="ttc" id="astruct_s_file_info_html_abb5bdd0397c985818534fed7c474c9ac"><div class="ttname"><a href="../../d8/d31/struct_s_file_info.html#abb5bdd0397c985818534fed7c474c9ac">SFileInfo::SetCodeSet</a></div><div class="ttdeci">void SetCodeSet(ECodeType eSet, bool bBom)</div><div class="ttdoc">文字コードセットを設定</div><div class="ttdef"><b>Definition:</b> CDocFile.h:49</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_a6024a6412cd2c36ec5b54af876293b8d"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#a6024a6412cd2c36ec5b54af876293b8d">CDocFile::SetCodeSetChg</a></div><div class="ttdeci">void SetCodeSetChg(ECodeType eCodeSet, bool bBomExist)</div><div class="ttdoc">文字コードセットを設定(文字コード指定用)</div><div class="ttdef"><b>Definition:</b> CDocFile.h:59</div></div>
+<div class="ttc" id="aclass_c_file_html"><div class="ttname"><a href="../../dd/d67/class_c_file.html">CFile</a></div><div class="ttdef"><b>Definition:</b> CFile.h:37</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_a15e359d73013833a832117162e6c9f2d"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#a15e359d73013833a832117162e6c9f2d">CDocFile::IsChgCodeSet</a></div><div class="ttdeci">bool IsChgCodeSet() const</div><div class="ttdoc">文字コードセットが変更されたか？</div><div class="ttdef"><b>Definition:</b> CDocFile.h:64</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div><div class="ttdef"><b>Definition:</b> CEditDoc.h:77</div></div>
+<div class="ttc" id="aclass_c_code_type_name_html"><div class="ttname"><a href="../../d6/d55/class_c_code_type_name.html">CCodeTypeName</a></div><div class="ttdef"><b>Definition:</b> charset.h:116</div></div>
+<div class="ttc" id="afile_8h_html_a27fca3d6dfd4e01806432c112452cb05"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a27fca3d6dfd4e01806432c112452cb05">GetFileTitlePointer</a></div><div class="ttdeci">const WCHAR * GetFileTitlePointer(const WCHAR *pszPath)</div><div class="ttdoc">ファイルフルパス内のファイル名を指すポインタを取得。2007.09.20 kobake 作成</div><div class="ttdef"><b>Definition:</b> file.cpp:182</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_a8f183642a828e7a11e0b3f88d0c84614"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#a8f183642a828e7a11e0b3f88d0c84614">CDocFile::SetCodeSet</a></div><div class="ttdeci">void SetCodeSet(ECodeType eCodeSet, bool bBomExist)</div><div class="ttdoc">文字コードセットを設定</div><div class="ttdef"><b>Definition:</b> CDocFile.h:58</div></div>
+<div class="ttc" id="aclass_c_file_path_html"><div class="ttname"><a href="../../da/db3/class_c_file_path.html">CFilePath</a></div><div class="ttdef"><b>Definition:</b> CMyString.h:41</div></div>
+<div class="ttc" id="astruct_s_file_info_html_aec93f35c146c2e98a02aafedc970289f"><div class="ttname"><a href="../../d8/d31/struct_s_file_info.html#aec93f35c146c2e98a02aafedc970289f">SFileInfo::SetBomExist</a></div><div class="ttdeci">void SetBomExist(bool bBom)</div><div class="ttdoc">BOM付加を設定</div><div class="ttdef"><b>Definition:</b> CDocFile.h:50</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_afd547f7755b6fb3c31cd50ec7cd3044b"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#afd547f7755b6fb3c31cd50ec7cd3044b">CDocFile::IsBomExist</a></div><div class="ttdeci">bool IsBomExist() const</div><div class="ttdoc">保存時にBOMを付加するかどうかを取得</div><div class="ttdef"><b>Definition:</b> CDocFile.h:63</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_ad297ad824bd089d068138976e40cba61"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#ad297ad824bd089d068138976e40cba61">CDocFile::GetCodeSet</a></div><div class="ttdeci">ECodeType GetCodeSet() const</div><div class="ttdoc">文字コードセットを取得</div><div class="ttdef"><b>Definition:</b> CDocFile.h:60</div></div>
+<div class="ttc" id="aclass_c_doc_file_html_a3b74c0cde297bbac784a684ab54ab509"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#a3b74c0cde297bbac784a684ab54ab509">CDocFile::SetBomDefoult</a></div><div class="ttdeci">void SetBomDefoult()</div><div class="ttdoc">BOM付加のデフォルト値を設定する</div><div class="ttdef"><b>Definition:</b> CDocFile.h:61</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60a9de2ccc6e97fe1633d715e098ebbf566"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9de2ccc6e97fe1633d715e098ebbf566">CODE_DEFAULT</a></div><div class="ttdeci">@ CODE_DEFAULT</div><div class="ttdoc">デフォルトの文字コード</div><div class="ttdef"><b>Definition:</b> charset.h:49</div></div>
+<div class="ttc" id="a_c_file_8h_html"><div class="ttname"><a href="../../d9/d78/_c_file_8h.html">CFile.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_file_html"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html">CDocFile</a></div><div class="ttdef"><b>Definition:</b> CDocFile.h:54</div></div>
+<div class="ttc" id="afile_8h_html"><div class="ttname"><a href="../../d2/d4d/file_8h.html">file.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_file_html_ab7656bb434735381873f7365b9a2b37c"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html#ab7656bb434735381873f7365b9a2b37c">CDocFile::CancelChgCodeSet</a></div><div class="ttdeci">void CancelChgCodeSet()</div><div class="ttdoc">文字コードセット1の変更をキャンセルする</div><div class="ttdef"><b>Definition:</b> CDocFile.h:62</div></div>
+<div class="ttc" id="aclass_c_file_time_html"><div class="ttname"><a href="../../d4/d39/class_c_file_time.html">CFileTime</a></div><div class="ttdef"><b>Definition:</b> file.h:63</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

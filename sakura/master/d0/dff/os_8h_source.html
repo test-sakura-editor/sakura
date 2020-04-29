@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/os.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">os.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/dff/os_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ObjIdl.h&gt;</span> <span class="comment">// LPDATAOBJECT</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//システム資源</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;BOOL GetSystemResources( <span class="keywordtype">int</span>* pnSystemResources, <span class="keywordtype">int</span>* pnUserResources, <span class="keywordtype">int</span>* pnGDIResources );   <span class="comment">/* システムリソースを調べる */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;BOOL CheckSystemResources( <span class="keyword">const</span> WCHAR* pszAppName );   <span class="comment">/* システムリソースのチェック */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//クリップボード</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#a975fa30543808dc8c77914aa85dc0768">SetClipboardText</a>( HWND hwnd, <span class="keyword">const</span> WCHAR* pszText, <span class="keywordtype">int</span> nLength ); </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;BOOL IsDataAvailable( LPDATAOBJECT pDataObject, CLIPFORMAT cfFormat );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;HGLOBAL GetGlobalData( LPDATAOBJECT pDataObject, CLIPFORMAT cfFormat );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//  Sep. 10, 2002 genta CWSH.cppからの移動に伴う追加</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#ac1a25a69957350449eafca2550cf020c">ReadRegistry</a>(HKEY Hive, <span class="keyword">const</span> WCHAR* Path, <span class="keyword">const</span> WCHAR* Item, WCHAR* Buffer, <span class="keywordtype">unsigned</span> BufferCount);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//  May 01, 2004 genta マルチモニタ対応のデスクトップ領域取得</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a>(HWND     hWnd, LPRECT prcWork, LPRECT prcMonitor = NULL);   <span class="comment">// 2006.04.21 ryoji パラメータ prcMonitor を追加</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a>(LPCRECT  prc,  LPRECT prcWork, LPRECT prcMonitor = NULL);   <span class="comment">// 2006.04.21 ryoji</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a>(POINT    pt,   LPRECT prcWork, LPRECT prcMonitor = NULL);   <span class="comment">// 2006.04.21 ryoji</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a>(HMONITOR hMon, LPRECT prcWork, LPRECT prcMonitor = NULL);   <span class="comment">// 2006.04.21 ryoji</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// 2006.06.17 ryoji</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define PACKVERSION( major, minor ) MAKELONG( minor, major )</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;DWORD GetComctl32Version();                 <span class="comment">// Comctl32.dll のバージョン番号を取得                      // 2006.06.17 ryoji</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;BOOL <a class="code" href="../../d0/dff/os_8h.html#ad97177212f739e3b638c6bf20ce18fce">IsVisualStyle</a>();                       <span class="comment">// 自分が現在ビジュアルスタイル表示状態かどうかを示す       // 2006.06.17 ryoji</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dff/os_8h.html#ac58edc89689e3287f376b9a4fd42a761">PreventVisualStyle</a>( HWND hWnd );       <span class="comment">// 指定ウィンドウでビジュアルスタイルを使わないようにする   // 2006.06.23 ryoji</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/dff/os_8h.html#a02e718fb8679634c0b38cc9a4bfe7c58">MyInitCommonControls</a>();                <span class="comment">// コモンコントロールを初期化する                           // 2006.06.21 ryoji</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* Wow64 のエミュレーション上で実行しているか判定する */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;BOOL IsWow64();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a> final {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html#a0a29e0329dce5451574be8ca8f998da9">CDisableWow64FsRedirect</a>(BOOL isOn);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html#aeeb2448268217625fdce3108d5e8656c">~CDisableWow64FsRedirect</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// コピー不可 (C++11 で利用可能)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html#a0a29e0329dce5451574be8ca8f998da9">CDisableWow64FsRedirect</a>(<span class="keyword">const</span> <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// ムーブ不可 (C++11 で利用可能)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html#a0a29e0329dce5451574be8ca8f998da9">CDisableWow64FsRedirect</a>(<a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp; operator = (<a class="code" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    BOOL    m_isSuccess;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    PVOID   m_OldValue;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//カレントディレクトリユーティリティ。</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//コンストラクタでカレントディレクトリを保存し、デストラクタでカレントディレクトリを復元するモノ。</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//2008.03.01 kobake 作成</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../dd/d42/class_c_current_directory_backup_point.html">   90</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d42/class_c_current_directory_backup_point.html">CCurrentDirectoryBackupPoint</a>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../dd/d42/class_c_current_directory_backup_point.html">CCurrentDirectoryBackupPoint</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    ~<a class="code" href="../../dd/d42/class_c_current_directory_backup_point.html">CCurrentDirectoryBackupPoint</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    WCHAR m_szCurDir[_MAX_PATH];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;BOOL <a class="code" href="../../d0/dff/os_8h.html#a3fd5100395b8635f74fb0392a6c47bbe">IsPowerShellAvailable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;BOOL <a class="code" href="../../d0/dff/os_8h.html#a6970ed2fdf2ad11a2bf4fa806186bab9">ImeSetOpen</a>(HWND hWnd, BOOL bOpen, BOOL* pBackup);</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aos_8h_html_a6970ed2fdf2ad11a2bf4fa806186bab9"><div class="ttname"><a href="../../d0/dff/os_8h.html#a6970ed2fdf2ad11a2bf4fa806186bab9">ImeSetOpen</a></div><div class="ttdeci">BOOL ImeSetOpen(HWND hWnd, BOOL bOpen, BOOL *pBackup)</div><div class="ttdoc">IMEのオープン状態を設定する</div><div class="ttdef"><b>Definition:</b> os.cpp:460</div></div>
+<div class="ttc" id="aos_8h_html_abb195e506a53384f695b3ad0c5380da0"><div class="ttname"><a href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a></div><div class="ttdeci">bool GetMonitorWorkRect(HWND hWnd, LPRECT prcWork, LPRECT prcMonitor=NULL)</div><div class="ttdef"><b>Definition:</b> os.cpp:87</div></div>
+<div class="ttc" id="aos_8h_html_a02e718fb8679634c0b38cc9a4bfe7c58"><div class="ttname"><a href="../../d0/dff/os_8h.html#a02e718fb8679634c0b38cc9a4bfe7c58">MyInitCommonControls</a></div><div class="ttdeci">void MyInitCommonControls()</div><div class="ttdef"><b>Definition:</b> os.cpp:55</div></div>
+<div class="ttc" id="aos_8h_html_ac1a25a69957350449eafca2550cf020c"><div class="ttname"><a href="../../d0/dff/os_8h.html#ac1a25a69957350449eafca2550cf020c">ReadRegistry</a></div><div class="ttdeci">bool ReadRegistry(HKEY Hive, const WCHAR *Path, const WCHAR *Item, WCHAR *Buffer, unsigned BufferCount)</div><div class="ttdoc">レジストリから文字列を読み出す．</div><div class="ttdef"><b>Definition:</b> os.cpp:137</div></div>
+<div class="ttc" id="aclass_c_disable_wow64_fs_redirect_html_aeeb2448268217625fdce3108d5e8656c"><div class="ttname"><a href="../../da/dca/class_c_disable_wow64_fs_redirect.html#aeeb2448268217625fdce3108d5e8656c">CDisableWow64FsRedirect::~CDisableWow64FsRedirect</a></div><div class="ttdeci">~CDisableWow64FsRedirect()</div><div class="ttdoc">ファイルシステムリダイレクションを元に戻す</div><div class="ttdef"><b>Definition:</b> os.cpp:415</div></div>
+<div class="ttc" id="aos_8h_html_ac58edc89689e3287f376b9a4fd42a761"><div class="ttname"><a href="../../d0/dff/os_8h.html#ac58edc89689e3287f376b9a4fd42a761">PreventVisualStyle</a></div><div class="ttdeci">void PreventVisualStyle(HWND hWnd)</div><div class="ttdef"><b>Definition:</b> os.cpp:44</div></div>
+<div class="ttc" id="aclass_c_disable_wow64_fs_redirect_html_a0a29e0329dce5451574be8ca8f998da9"><div class="ttname"><a href="../../da/dca/class_c_disable_wow64_fs_redirect.html#a0a29e0329dce5451574be8ca8f998da9">CDisableWow64FsRedirect::CDisableWow64FsRedirect</a></div><div class="ttdeci">CDisableWow64FsRedirect(BOOL isOn)</div><div class="ttdoc">コンストラクタで ファイルシステムリダイレクションを無効にする</div><div class="ttdef"><b>Definition:</b> os.cpp:403</div></div>
+<div class="ttc" id="aos_8h_html_ad97177212f739e3b638c6bf20ce18fce"><div class="ttname"><a href="../../d0/dff/os_8h.html#ad97177212f739e3b638c6bf20ce18fce">IsVisualStyle</a></div><div class="ttdeci">BOOL IsVisualStyle()</div><div class="ttdef"><b>Definition:</b> os.cpp:30</div></div>
+<div class="ttc" id="aos_8h_html_a975fa30543808dc8c77914aa85dc0768"><div class="ttname"><a href="../../d0/dff/os_8h.html#a975fa30543808dc8c77914aa85dc0768">SetClipboardText</a></div><div class="ttdeci">bool SetClipboardText(HWND hwnd, const WCHAR *pszText, int nLength)</div><div class="ttdoc">クリープボードにText形式でコピーする。UNICODE版。nLengthは文字単位。</div><div class="ttdef"><b>Definition:</b> os.cpp:209</div></div>
+<div class="ttc" id="aclass_c_current_directory_backup_point_html"><div class="ttname"><a href="../../dd/d42/class_c_current_directory_backup_point.html">CCurrentDirectoryBackupPoint</a></div><div class="ttdef"><b>Definition:</b> os.h:90</div></div>
+<div class="ttc" id="aos_8h_html_a3fd5100395b8635f74fb0392a6c47bbe"><div class="ttname"><a href="../../d0/dff/os_8h.html#a3fd5100395b8635f74fb0392a6c47bbe">IsPowerShellAvailable</a></div><div class="ttdeci">BOOL IsPowerShellAvailable(void)</div><div class="ttdoc">PowerShell が利用可能か判定する</div><div class="ttdef"><b>Definition:</b> os.cpp:422</div></div>
+<div class="ttc" id="aclass_c_disable_wow64_fs_redirect_html"><div class="ttname"><a href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a></div><div class="ttdoc">Wow64 の ファイルシステムリダイレクションを一時的に無効にして、クラス破棄時に元に戻すクラス</div><div class="ttdef"><b>Definition:</b> os.h:61</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

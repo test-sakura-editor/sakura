@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/logic/CDocLineMgr.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li><li class="navelem"><a class="el" href="../../dir_87a0ea050e52e582fa6d0fa170a3c4f0.html">logic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDocLineMgr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d81/_c_doc_line_mgr_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2000, genta</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2001, hor, genta</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2002, aroka, MIK, hor</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2003, Moca, ryoji</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;memory_resource&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span> <span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d89/_c_ope_8h.html">COpe.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d31/_c_doc_line_8h.html">CDocLine.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a>; <span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html">DocLineReplaceArg</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a43c73c6aa1975342dc3d2064033cd7f4">   33</a></span>&#160;    <a class="code" href="../../db/dfa/class_c_range_base.html">CLogicRange</a>     <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a43c73c6aa1975342dc3d2064033cd7f4">sDelRange</a>;          </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a0ece13cbd61d8b172da778e7ccf07e0b">   34</a></span>&#160;    COpeLineData*   <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a0ece13cbd61d8b172da778e7ccf07e0b">pcmemDeleted</a>;       </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a793a59f70f3a1ba1d2780f12668c5f0c">   35</a></span>&#160;    COpeLineData*   <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a793a59f70f3a1ba1d2780f12668c5f0c">pInsData</a>;           </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a71df709eb8ef9a81832a114cbad8c048">   36</a></span>&#160;    CLogicInt       <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a71df709eb8ef9a81832a114cbad8c048">nDeletedLineNum</a>;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a78cd43b4fb278f13573f651aef924515">   37</a></span>&#160;    CLogicInt       <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a78cd43b4fb278f13573f651aef924515">nInsLineNum</a>;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a4663870b129ed0f64fc53ab629891ab7">   38</a></span>&#160;    <a class="code" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a>     <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a4663870b129ed0f64fc53ab629891ab7">ptNewPos</a>;           </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a998fdc06fbe7bda67cb52d731c2d4970">   39</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a998fdc06fbe7bda67cb52d731c2d4970">nDelSeq</a>;            </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d8/de2/struct_doc_line_replace_arg.html#a1bcda28b3150647a057fa4e501327825">   40</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d8/de2/struct_doc_line_replace_arg.html#a1bcda28b3150647a057fa4e501327825">nInsSeq</a>;            </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//2007.09.30 kobake WhereCurrentWord_2 を CWordParse に移動</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ~<a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//状態</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#a7cf7272794e1a2e8e5c953dc5ff8f09d">   54</a></span>&#160;    CLogicInt <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a7cf7272794e1a2e8e5c953dc5ff8f09d">GetLineCount</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_nLines; }  </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//行データへのアクセス</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#adee5e264da625c844a8dda8604344f5f">GetLine</a>( CLogicInt nLine ) <span class="keyword">const</span>;                       </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#adee5e264da625c844a8dda8604344f5f">GetLine</a>( CLogicInt nLine ){</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span><a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*<span class="keyword">&gt;</span>(<span class="keyword">const_cast&lt;</span><a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;<a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#adee5e264da625c844a8dda8604344f5f">GetLine</a>( nLine )));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#a1f863f3a0c770cb5ddef0beeea0d6ccd">   61</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a1f863f3a0c770cb5ddef0beeea0d6ccd">GetDocLineTop</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pDocLineTop; }     </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#a743ca179fbaa145d900b936a66bd0123">   62</a></span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a743ca179fbaa145d900b936a66bd0123">GetDocLineTop</a>() { <span class="keywordflow">return</span> m_pDocLineTop; }     </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#a29343db1a0a4687961e3db1c222dd24d">   63</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a29343db1a0a4687961e3db1c222dd24d">GetDocLineBottom</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pDocLineBot; }  </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#ae2d9783e2bee48c2ab1f98b8c2fece0b">   64</a></span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#ae2d9783e2bee48c2ab1f98b8c2fece0b">GetDocLineBottom</a>() { <span class="keywordflow">return</span> m_pDocLineBot; }  </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//行データの管理</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a7bacf9a9a06614a15afab00a9dc7377d">InsertNewLine</a>(<a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pPos);    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#abab189c76ed3684015b0379ffcdbb529">AddNewLine</a>();                     </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a3d73166bdf34e70f34c219674ee75ffd">DeleteAllLine</a>();                       </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a6a6462f6ecf016bd47ba7c90d720df39">DeleteLine</a>( <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* );               </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//デバッグ</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a32e3aeca958fc164212e4978c0c81390">DUMP</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//                         実装補助                            //</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> _Init();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// -- -- チェーン関数 -- -- // 2007.10.11 kobake 作成</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#ac25ff893374f2bc5c46eef672a20af6c">_PushBottom</a>(<a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pDocLineNew);             </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#a040f7efaf409b22a35f2e1b5e420a0b2">_InsertBeforePos</a>(<a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pDocLineNew, <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pPos); </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#ae024981a83f73f2da655bd1f29f09688">_InsertAfterPos</a>(<a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pDocLineNew, <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pPos); </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//                        メンバ変数                           //</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*   m_pDocLineTop;      </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*   m_pDocLineBot;      </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    CLogicInt   m_nLines;           </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::unique_ptr&lt;std::pmr::memory_resource&gt; m_docLineMemRes;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">//$$ kobake注: 以下、絶対に切り離したい（最低切り離せなくても、変数の意味をコメントで明確に記すべき）変数群</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d4/dc4/class_c_doc_line_mgr.html#abe9409c40eb34d6db8c524a3814faba0">   96</a></span>&#160;    <span class="keyword">mutable</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*   <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html#abe9409c40eb34d6db8c524a3814faba0">m_pDocLineCurrent</a>;  </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">mutable</span> CLogicInt   m_nPrevReferLine;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">mutable</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>*   m_pCodePrevRefer;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_doc_line_replace_arg_html"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html">DocLineReplaceArg</a></div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:32</div></div>
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a6a6462f6ecf016bd47ba7c90d720df39"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a6a6462f6ecf016bd47ba7c90d720df39">CDocLineMgr::DeleteLine</a></div><div class="ttdeci">void DeleteLine(CDocLine *)</div><div class="ttdoc">行の削除</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:101</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a040f7efaf409b22a35f2e1b5e420a0b2"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a040f7efaf409b22a35f2e1b5e420a0b2">CDocLineMgr::_InsertBeforePos</a></div><div class="ttdeci">void _InsertBeforePos(CDocLine *pDocLineNew, CDocLine *pPos)</div><div class="ttdoc">pPosの直前に挿入</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:268</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a4663870b129ed0f64fc53ab629891ab7"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a4663870b129ed0f64fc53ab629891ab7">DocLineReplaceArg::ptNewPos</a></div><div class="ttdeci">CLogicPoint ptNewPos</div><div class="ttdoc">[out] 挿入された部分の次の位置</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:38</div></div>
+<div class="ttc" id="a_c_ope_8h_html"><div class="ttname"><a href="../../d9/d89/_c_ope_8h.html">COpe.h</a></div><div class="ttdoc">編集操作要素</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_abe9409c40eb34d6db8c524a3814faba0"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#abe9409c40eb34d6db8c524a3814faba0">CDocLineMgr::m_pDocLineCurrent</a></div><div class="ttdeci">CDocLine * m_pDocLineCurrent</div><div class="ttdoc">順アクセス時の現在位置</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:96</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a43c73c6aa1975342dc3d2064033cd7f4"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a43c73c6aa1975342dc3d2064033cd7f4">DocLineReplaceArg::sDelRange</a></div><div class="ttdeci">CLogicRange sDelRange</div><div class="ttdoc">[in] 削除範囲。ロジック単位。</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:33</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a998fdc06fbe7bda67cb52d731c2d4970"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a998fdc06fbe7bda67cb52d731c2d4970">DocLineReplaceArg::nDelSeq</a></div><div class="ttdeci">int nDelSeq</div><div class="ttdoc">[in] 削除行のOpeシーケンス</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:39</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a3d73166bdf34e70f34c219674ee75ffd"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a3d73166bdf34e70f34c219674ee75ffd">CDocLineMgr::DeleteAllLine</a></div><div class="ttdeci">void DeleteAllLine()</div><div class="ttdoc">全ての行を削除する</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:88</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_abab189c76ed3684015b0379ffcdbb529"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#abab189c76ed3684015b0379ffcdbb529">CDocLineMgr::AddNewLine</a></div><div class="ttdeci">CDocLine * AddNewLine()</div><div class="ttdoc">最下部に新しい行を挿入</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:80</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a71df709eb8ef9a81832a114cbad8c048"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a71df709eb8ef9a81832a114cbad8c048">DocLineReplaceArg::nDeletedLineNum</a></div><div class="ttdeci">CLogicInt nDeletedLineNum</div><div class="ttdoc">[out] 削除した行の総数</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:36</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLogicPoint, CLogicInt &gt;</a></div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a793a59f70f3a1ba1d2780f12668c5f0c"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a793a59f70f3a1ba1d2780f12668c5f0c">DocLineReplaceArg::pInsData</a></div><div class="ttdeci">COpeLineData * pInsData</div><div class="ttdoc">[in,out] 挿入するデータ(中身が移動する)</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:35</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a1f863f3a0c770cb5ddef0beeea0d6ccd"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a1f863f3a0c770cb5ddef0beeea0d6ccd">CDocLineMgr::GetDocLineTop</a></div><div class="ttdeci">const CDocLine * GetDocLineTop() const</div><div class="ttdoc">先頭行を取得</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:61</div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a29343db1a0a4687961e3db1c222dd24d"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a29343db1a0a4687961e3db1c222dd24d">CDocLineMgr::GetDocLineBottom</a></div><div class="ttdeci">const CDocLine * GetDocLineBottom() const</div><div class="ttdoc">最終行を取得</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:63</div></div>
+<div class="ttc" id="a_c_doc_line_8h_html"><div class="ttname"><a href="../../d1/d31/_c_doc_line_8h.html">CDocLine.h</a></div><div class="ttdoc">文書データ1行</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_ac25ff893374f2bc5c46eef672a20af6c"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#ac25ff893374f2bc5c46eef672a20af6c">CDocLineMgr::_PushBottom</a></div><div class="ttdeci">void _PushBottom(CDocLine *pDocLineNew)</div><div class="ttdoc">最下部に挿入</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:251</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a743ca179fbaa145d900b936a66bd0123"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a743ca179fbaa145d900b936a66bd0123">CDocLineMgr::GetDocLineTop</a></div><div class="ttdeci">CDocLine * GetDocLineTop()</div><div class="ttdoc">先頭行を取得</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:62</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a1bcda28b3150647a057fa4e501327825"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a1bcda28b3150647a057fa4e501327825">DocLineReplaceArg::nInsSeq</a></div><div class="ttdeci">int nInsSeq</div><div class="ttdoc">[out] 挿入行の元のシーケンス</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:40</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_ae024981a83f73f2da655bd1f29f09688"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#ae024981a83f73f2da655bd1f29f09688">CDocLineMgr::_InsertAfterPos</a></div><div class="ttdeci">void _InsertAfterPos(CDocLine *pDocLineNew, CDocLine *pPos)</div><div class="ttdoc">pPosの直後に挿入</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:296</div></div>
+<div class="ttc" id="aclass_c_bregexp_html"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html">CBregexp</a></div><div class="ttdoc">Perl互換正規表現 BREGEXP.DLL をサポートするクラス</div><div class="ttdef"><b>Definition:</b> CBregexp.h:64</div></div>
+<div class="ttc" id="aclass_c_range_base_html"><div class="ttname"><a href="../../db/dfa/class_c_range_base.html">CRangeBase&lt; CLogicPoint &gt;</a></div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a32e3aeca958fc164212e4978c0c81390"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a32e3aeca958fc164212e4978c0c81390">CDocLineMgr::DUMP</a></div><div class="ttdeci">void DUMP()</div><div class="ttdoc">CDocLineMgrDEBUG用</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:334</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_adee5e264da625c844a8dda8604344f5f"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#adee5e264da625c844a8dda8604344f5f">CDocLineMgr::GetLine</a></div><div class="ttdeci">const CDocLine * GetLine(CLogicInt nLine) const</div><div class="ttdoc">指定行を取得</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:146</div></div>
+<div class="ttc" id="aclass_c_doc_line_html"><div class="ttname"><a href="../../d9/d35/class_c_doc_line.html">CDocLine</a></div><div class="ttdoc">文書データ1行</div><div class="ttdef"><b>Definition:</b> CDocLine.h:35</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a0ece13cbd61d8b172da778e7ccf07e0b"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a0ece13cbd61d8b172da778e7ccf07e0b">DocLineReplaceArg::pcmemDeleted</a></div><div class="ttdeci">COpeLineData * pcmemDeleted</div><div class="ttdoc">[out] 削除されたデータを保存</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:34</div></div>
+<div class="ttc" id="astruct_doc_line_replace_arg_html_a78cd43b4fb278f13573f651aef924515"><div class="ttname"><a href="../../d8/de2/struct_doc_line_replace_arg.html#a78cd43b4fb278f13573f651aef924515">DocLineReplaceArg::nInsLineNum</a></div><div class="ttdeci">CLogicInt nInsLineNum</div><div class="ttdoc">[out] 挿入によって増えた行の数</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:37</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a></div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:47</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_ae2d9783e2bee48c2ab1f98b8c2fece0b"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#ae2d9783e2bee48c2ab1f98b8c2fece0b">CDocLineMgr::GetDocLineBottom</a></div><div class="ttdeci">CDocLine * GetDocLineBottom()</div><div class="ttdoc">最終行を取得</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:64</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a7cf7272794e1a2e8e5c953dc5ff8f09d"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a7cf7272794e1a2e8e5c953dc5ff8f09d">CDocLineMgr::GetLineCount</a></div><div class="ttdeci">CLogicInt GetLineCount() const</div><div class="ttdoc">全行数を返す</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:54</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html_a7bacf9a9a06614a15afab00a9dc7377d"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html#a7bacf9a9a06614a15afab00a9dc7377d">CDocLineMgr::InsertNewLine</a></div><div class="ttdeci">CDocLine * InsertNewLine(CDocLine *pPos)</div><div class="ttdoc">pPosの直前に新しい行を挿入</div><div class="ttdef"><b>Definition:</b> CDocLineMgr.cpp:72</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

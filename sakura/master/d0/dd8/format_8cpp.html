@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/format.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">format.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a74a2816a2eb2ff0d78fb9571993541bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/format_8cpp.html#a74a2816a2eb2ff0d78fb9571993541bd">GetDateTimeFormat</a> (WCHAR *szResult, int size, const WCHAR *format, const SYSTEMTIME &amp;systime)</td></tr>
+<tr class="separator:a74a2816a2eb2ff0d78fb9571993541bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efdfccb46c6bbb1235c3ba883100cde"><td class="memItemLeft" align="right" valign="top">UINT32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/format_8cpp.html#a1efdfccb46c6bbb1235c3ba883100cde">ParseVersion</a> (const WCHAR *sVer)</td></tr>
+<tr class="separator:a1efdfccb46c6bbb1235c3ba883100cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3cd336c4841a98da5f1e7524fd7cbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd8/format_8cpp.html#adb3cd336c4841a98da5f1e7524fd7cbf">CompareVersion</a> (const WCHAR *verA, const WCHAR *verB)</td></tr>
+<tr class="separator:adb3cd336c4841a98da5f1e7524fd7cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="adb3cd336c4841a98da5f1e7524fd7cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3cd336c4841a98da5f1e7524fd7cbf">&#9670;&nbsp;</a></span>CompareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CompareVersion </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>verA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>verB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>バージョン番号の比較</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">バージョンA</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">バージョンB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 0: バージョンは等しい、1以上: Aが新しい、-1以下: Bが新しい</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>syat </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2011.03.18 新規 </dd></dl>
+
+</div>
+</div>
+<a id="a74a2816a2eb2ff0d78fb9571993541bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a2816a2eb2ff0d78fb9571993541bd">&#9670;&nbsp;</a></span>GetDateTimeFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetDateTimeFormat </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>szResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SYSTEMTIME &amp;&#160;</td>
+          <td class="paramname"><em>systime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>日時をフォーマット</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">書式変換後の文字列</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">バッファサイズ</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>書式 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">systime</td><td>書式化したい日時 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>bool true</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>Y y m d H M S の変換に対応</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>aroka </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2005.11.21 新規</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">todo:</a></b></dt><dd>出力バッファのサイズチェックを行う </dd></dl>
+
+</div>
+</div>
+<a id="a1efdfccb46c6bbb1235c3ba883100cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1efdfccb46c6bbb1235c3ba883100cde">&#9670;&nbsp;</a></span>ParseVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT32 ParseVersion </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>sVer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>バージョン番号の解析</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">バージョン番号文字列</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>UINT32 8bit（符号1bit+数値7bit）ずつメジャー、マイナー、ビルド、リビジョンを格納</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>syat </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2011.03.18 新規 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>参考 PHP version_compare <a href="http://php.s3.to/man/function.version-compare.html">http://php.s3.to/man/function.version-compare.html</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

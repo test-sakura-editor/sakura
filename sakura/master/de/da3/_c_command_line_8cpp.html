@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/_main/CCommandLine.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_e3eabb1034bf36573937be9d2ebf3dc3.html">_main</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CCommandLine.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>コマンドラインパーサ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d0c/_c_command_line_8h_source.html">CCommandLine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5f/_c_memory_8h_source.html">mem/CMemory.h</a>&quot;</code><br />
+<code>#include &lt;tchar.h&gt;</code><br />
+<code>#include &lt;io.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d6f/_c_running_timer_8h_source.html">debug/CRunningTimer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d9f/_c_text_stream_8h_source.html">io/CTextStream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de2/_c_sakura_environment_8h_source.html">env/CSakuraEnvironment.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af653d7142f8b688d84a27164639d4a06"><td class="memItemLeft" align="right" valign="top"><a id="af653d7142f8b688d84a27164639d4a06"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#af653d7142f8b688d84a27164639d4a06">CMDLINEOPT_R</a>&#160;&#160;&#160;1002</td></tr>
+<tr class="memdesc:af653d7142f8b688d84a27164639d4a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューモード <br /></td></tr>
+<tr class="separator:af653d7142f8b688d84a27164639d4a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723f86447b515a7fc74c5814ee3a4077"><td class="memItemLeft" align="right" valign="top"><a id="a723f86447b515a7fc74c5814ee3a4077"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a723f86447b515a7fc74c5814ee3a4077">CMDLINEOPT_NOWIN</a>&#160;&#160;&#160;1003</td></tr>
+<tr class="memdesc:a723f86447b515a7fc74c5814ee3a4077"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスクトレイのみ起動 <br /></td></tr>
+<tr class="separator:a723f86447b515a7fc74c5814ee3a4077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97a2e65bd4ee1720af0ee79311eedb7"><td class="memItemLeft" align="right" valign="top"><a id="ad97a2e65bd4ee1720af0ee79311eedb7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#ad97a2e65bd4ee1720af0ee79311eedb7">CMDLINEOPT_WRITEQUIT</a>&#160;&#160;&#160;1004</td></tr>
+<tr class="memdesc:ad97a2e65bd4ee1720af0ee79311eedb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SakuExtとの連動専用 <br /></td></tr>
+<tr class="separator:ad97a2e65bd4ee1720af0ee79311eedb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7170fc13a8e18ecdfc02f02651bc6054"><td class="memItemLeft" align="right" valign="top"><a id="a7170fc13a8e18ecdfc02f02651bc6054"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a7170fc13a8e18ecdfc02f02651bc6054">CMDLINEOPT_GREPMODE</a>&#160;&#160;&#160;1100</td></tr>
+<tr class="memdesc:a7170fc13a8e18ecdfc02f02651bc6054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grep実行モードで起動 <br /></td></tr>
+<tr class="separator:a7170fc13a8e18ecdfc02f02651bc6054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03350728b3a6d9eea46716219269dbb"><td class="memItemLeft" align="right" valign="top"><a id="aa03350728b3a6d9eea46716219269dbb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#aa03350728b3a6d9eea46716219269dbb">CMDLINEOPT_GREPDLG</a>&#160;&#160;&#160;1101</td></tr>
+<tr class="memdesc:aa03350728b3a6d9eea46716219269dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">サクラエディタが起動すると同時にGrepダイアログを表示 <br /></td></tr>
+<tr class="separator:aa03350728b3a6d9eea46716219269dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8c2beba235c44cece324ffa5789c78"><td class="memItemLeft" align="right" valign="top"><a id="acb8c2beba235c44cece324ffa5789c78"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#acb8c2beba235c44cece324ffa5789c78">CMDLINEOPT_DEBUGMODE</a>&#160;&#160;&#160;1999</td></tr>
+<tr class="memdesc:acb8c2beba235c44cece324ffa5789c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">アウトプット用のウィンドウとして起動 <br /></td></tr>
+<tr class="separator:acb8c2beba235c44cece324ffa5789c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1374b895a90ed2af9012fbfc7f9666c5"><td class="memItemLeft" align="right" valign="top"><a id="a1374b895a90ed2af9012fbfc7f9666c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a1374b895a90ed2af9012fbfc7f9666c5">CMDLINEOPT_NOMOREOPT</a>&#160;&#160;&#160;1998</td></tr>
+<tr class="memdesc:a1374b895a90ed2af9012fbfc7f9666c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">これ以降引数無効 <br /></td></tr>
+<tr class="separator:a1374b895a90ed2af9012fbfc7f9666c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fb4b6ea8a202264ce343a4ae898fef"><td class="memItemLeft" align="right" valign="top"><a id="a55fb4b6ea8a202264ce343a4ae898fef"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a55fb4b6ea8a202264ce343a4ae898fef">CMDLINEOPT_AT</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:a55fb4b6ea8a202264ce343a4ae898fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">レスポンスファイルを指定 <br /></td></tr>
+<tr class="separator:a55fb4b6ea8a202264ce343a4ae898fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87541a39ea99790b656c7f387417b44"><td class="memItemLeft" align="right" valign="top"><a id="af87541a39ea99790b656c7f387417b44"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#af87541a39ea99790b656c7f387417b44">CMDLINEOPT_X</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:af87541a39ea99790b656c7f387417b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを開いたときのカーソルの桁位置を指定 <br /></td></tr>
+<tr class="separator:af87541a39ea99790b656c7f387417b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809bdeacdedd5657bbfa6b3a1daea420"><td class="memItemLeft" align="right" valign="top"><a id="a809bdeacdedd5657bbfa6b3a1daea420"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a809bdeacdedd5657bbfa6b3a1daea420">CMDLINEOPT_Y</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a809bdeacdedd5657bbfa6b3a1daea420"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを開いたときのカーソルの行位置を指定 <br /></td></tr>
+<tr class="separator:a809bdeacdedd5657bbfa6b3a1daea420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9e6678b07acf4c29fd158419e1e799"><td class="memItemLeft" align="right" valign="top"><a id="ade9e6678b07acf4c29fd158419e1e799"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#ade9e6678b07acf4c29fd158419e1e799">CMDLINEOPT_VX</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ade9e6678b07acf4c29fd158419e1e799"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクロール：ウィンドウ左端の桁位置 <br /></td></tr>
+<tr class="separator:ade9e6678b07acf4c29fd158419e1e799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9511bbed263ca22ff1bc47e098555a98"><td class="memItemLeft" align="right" valign="top"><a id="a9511bbed263ca22ff1bc47e098555a98"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a9511bbed263ca22ff1bc47e098555a98">CMDLINEOPT_VY</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a9511bbed263ca22ff1bc47e098555a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクロール：ウィンドウ上端の行位置 <br /></td></tr>
+<tr class="separator:a9511bbed263ca22ff1bc47e098555a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3dd6da5607e133225c9e68070c569b"><td class="memItemLeft" align="right" valign="top"><a id="acb3dd6da5607e133225c9e68070c569b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#acb3dd6da5607e133225c9e68070c569b">CMDLINEOPT_TYPE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:acb3dd6da5607e133225c9e68070c569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ別設定 <br /></td></tr>
+<tr class="separator:acb3dd6da5607e133225c9e68070c569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d410d28d2a70727e689a0c24626774"><td class="memItemLeft" align="right" valign="top"><a id="a68d410d28d2a70727e689a0c24626774"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a68d410d28d2a70727e689a0c24626774">CMDLINEOPT_CODE</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a68d410d28d2a70727e689a0c24626774"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字コード種別 <br /></td></tr>
+<tr class="separator:a68d410d28d2a70727e689a0c24626774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9e1604eea0e6a8fcc2b7f728a58fd5"><td class="memItemLeft" align="right" valign="top"><a id="abb9e1604eea0e6a8fcc2b7f728a58fd5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#abb9e1604eea0e6a8fcc2b7f728a58fd5">CMDLINEOPT_SX</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:abb9e1604eea0e6a8fcc2b7f728a58fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの幅 <br /></td></tr>
+<tr class="separator:abb9e1604eea0e6a8fcc2b7f728a58fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ead15cad819a259f6f11cfd6c533df5"><td class="memItemLeft" align="right" valign="top"><a id="a2ead15cad819a259f6f11cfd6c533df5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a2ead15cad819a259f6f11cfd6c533df5">CMDLINEOPT_SY</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a2ead15cad819a259f6f11cfd6c533df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの高さ <br /></td></tr>
+<tr class="separator:a2ead15cad819a259f6f11cfd6c533df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2fc511f93757210a253be8ab0bd4159"><td class="memItemLeft" align="right" valign="top"><a id="af2fc511f93757210a253be8ab0bd4159"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#af2fc511f93757210a253be8ab0bd4159">CMDLINEOPT_WX</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:af2fc511f93757210a253be8ab0bd4159"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ左上のX座標 <br /></td></tr>
+<tr class="separator:af2fc511f93757210a253be8ab0bd4159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de8504cf5e3fc49af40e7f78ef28549"><td class="memItemLeft" align="right" valign="top"><a id="a8de8504cf5e3fc49af40e7f78ef28549"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a8de8504cf5e3fc49af40e7f78ef28549">CMDLINEOPT_WY</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a8de8504cf5e3fc49af40e7f78ef28549"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ左上のY座標 <br /></td></tr>
+<tr class="separator:a8de8504cf5e3fc49af40e7f78ef28549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bde55d4b809170a518290797023d78"><td class="memItemLeft" align="right" valign="top"><a id="af0bde55d4b809170a518290797023d78"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#af0bde55d4b809170a518290797023d78">CMDLINEOPT_GKEY</a>&#160;&#160;&#160;101</td></tr>
+<tr class="memdesc:af0bde55d4b809170a518290797023d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepの検索文字列 <br /></td></tr>
+<tr class="separator:af0bde55d4b809170a518290797023d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff9fcb1380fc578fb7c2f1a02d8fd05"><td class="memItemLeft" align="right" valign="top"><a id="a6ff9fcb1380fc578fb7c2f1a02d8fd05"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a6ff9fcb1380fc578fb7c2f1a02d8fd05">CMDLINEOPT_GFILE</a>&#160;&#160;&#160;102</td></tr>
+<tr class="memdesc:a6ff9fcb1380fc578fb7c2f1a02d8fd05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepの検索対象のファイル <br /></td></tr>
+<tr class="separator:a6ff9fcb1380fc578fb7c2f1a02d8fd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6bafdfcf95271bbfb31a88319df1f45"><td class="memItemLeft" align="right" valign="top"><a id="ad6bafdfcf95271bbfb31a88319df1f45"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#ad6bafdfcf95271bbfb31a88319df1f45">CMDLINEOPT_GFOLDER</a>&#160;&#160;&#160;103</td></tr>
+<tr class="memdesc:ad6bafdfcf95271bbfb31a88319df1f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepの検索対象のフォルダ <br /></td></tr>
+<tr class="separator:ad6bafdfcf95271bbfb31a88319df1f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781d8a318b37130a2a405063c18b2fe1"><td class="memItemLeft" align="right" valign="top"><a id="a781d8a318b37130a2a405063c18b2fe1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a781d8a318b37130a2a405063c18b2fe1">CMDLINEOPT_GOPT</a>&#160;&#160;&#160;104</td></tr>
+<tr class="memdesc:a781d8a318b37130a2a405063c18b2fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepの条件 <br /></td></tr>
+<tr class="separator:a781d8a318b37130a2a405063c18b2fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd051532a0136d7ca54dcd81450b152c"><td class="memItemLeft" align="right" valign="top"><a id="afd051532a0136d7ca54dcd81450b152c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#afd051532a0136d7ca54dcd81450b152c">CMDLINEOPT_GCODE</a>&#160;&#160;&#160;105</td></tr>
+<tr class="memdesc:afd051532a0136d7ca54dcd81450b152c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepでの文字コードを指定 <br /></td></tr>
+<tr class="separator:afd051532a0136d7ca54dcd81450b152c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada24ba1029b603e7a45f81ec32a0ed64"><td class="memItemLeft" align="right" valign="top"><a id="ada24ba1029b603e7a45f81ec32a0ed64"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#ada24ba1029b603e7a45f81ec32a0ed64">CMDLINEOPT_M</a>&#160;&#160;&#160;106</td></tr>
+<tr class="memdesc:ada24ba1029b603e7a45f81ec32a0ed64"><td class="mdescLeft">&#160;</td><td class="mdescRight">起動時に実行するマクロのファイル名を指定 <br /></td></tr>
+<tr class="separator:ada24ba1029b603e7a45f81ec32a0ed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ca203387b0a7f619d648e0521462eb"><td class="memItemLeft" align="right" valign="top"><a id="a19ca203387b0a7f619d648e0521462eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a19ca203387b0a7f619d648e0521462eb">CMDLINEOPT_MTYPE</a>&#160;&#160;&#160;107</td></tr>
+<tr class="memdesc:a19ca203387b0a7f619d648e0521462eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">マクロの種類を拡張子名で指定 <br /></td></tr>
+<tr class="separator:a19ca203387b0a7f619d648e0521462eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6b572fa14ceb2d2dd025ee6628756e"><td class="memItemLeft" align="right" valign="top"><a id="a7a6b572fa14ceb2d2dd025ee6628756e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a7a6b572fa14ceb2d2dd025ee6628756e">CMDLINEOPT_GREPR</a>&#160;&#160;&#160;108</td></tr>
+<tr class="memdesc:a7a6b572fa14ceb2d2dd025ee6628756e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grepの置換文字列 <br /></td></tr>
+<tr class="separator:a7a6b572fa14ceb2d2dd025ee6628756e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b31e9b4aa86cb0e142d410f499ad01a"><td class="memItemLeft" align="right" valign="top"><a id="a7b31e9b4aa86cb0e142d410f499ad01a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a7b31e9b4aa86cb0e142d410f499ad01a">CMDLINEOPT_GROUP</a>&#160;&#160;&#160;500</td></tr>
+<tr class="memdesc:a7b31e9b4aa86cb0e142d410f499ad01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブモードのグループを指定して開く <br /></td></tr>
+<tr class="separator:a7b31e9b4aa86cb0e142d410f499ad01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bba6e5e91a92a8d4a48239e1ea30655"><td class="memItemLeft" align="right" valign="top"><a id="a0bba6e5e91a92a8d4a48239e1ea30655"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#a0bba6e5e91a92a8d4a48239e1ea30655">CMDLINEOPT_PROF</a>&#160;&#160;&#160;501</td></tr>
+<tr class="memdesc:a0bba6e5e91a92a8d4a48239e1ea30655"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロファイルを選択 <br /></td></tr>
+<tr class="separator:a0bba6e5e91a92a8d4a48239e1ea30655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98fb594e09bb190618e0ecc3c07371d"><td class="memItemLeft" align="right" valign="top"><a id="aa98fb594e09bb190618e0ecc3c07371d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/_c_command_line_8cpp.html#aa98fb594e09bb190618e0ecc3c07371d">CMDLINEOPT_PROFMGR</a>&#160;&#160;&#160;502</td></tr>
+<tr class="memdesc:aa98fb594e09bb190618e0ecc3c07371d"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロファイルマネージャを起動時に表示 <br /></td></tr>
+<tr class="separator:aa98fb594e09bb190618e0ecc3c07371d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>コマンドラインパーサ </p>
+<dl class="section author"><dt>著者</dt><dd>aroka </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002/01/08 作成 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

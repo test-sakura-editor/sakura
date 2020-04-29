@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CGraphics クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../da/d9c/class_c_graphics-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CGraphics クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>描画管理  
+ <a href="../../dc/d90/class_c_graphics.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d51/_c_graphics_8h_source.html">CGraphics.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a49d4d4b40521ce23988e6f938cfec7cb"><td class="memItemLeft" align="right" valign="top"><a id="a49d4d4b40521ce23988e6f938cfec7cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CGraphics</b> (const <a class="el" href="../../dc/d90/class_c_graphics.html">CGraphics</a> &amp;rhs)</td></tr>
+<tr class="separator:a49d4d4b40521ce23988e6f938cfec7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efdcd50bfd1b4234bd1219a2f59ccc1"><td class="memItemLeft" align="right" valign="top"><a id="a9efdcd50bfd1b4234bd1219a2f59ccc1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CGraphics</b> (HDC hdc=NULL)</td></tr>
+<tr class="separator:a9efdcd50bfd1b4234bd1219a2f59ccc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03323d3f30d4347f1e4e9de1a3dcaac5"><td class="memItemLeft" align="right" valign="top"><a id="a03323d3f30d4347f1e4e9de1a3dcaac5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (HDC hdc)</td></tr>
+<tr class="separator:a03323d3f30d4347f1e4e9de1a3dcaac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2088be457e327e945d27c5ace1b6d3e"><td class="memItemLeft" align="right" valign="top"><a id="af2088be457e327e945d27c5ace1b6d3e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator HDC</b> () const</td></tr>
+<tr class="separator:af2088be457e327e945d27c5ace1b6d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0b4c9724fb6c7da56fe6286cdab19d"><td class="memItemLeft" align="right" valign="top"><a id="a7d0b4c9724fb6c7da56fe6286cdab19d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushClipping</b> (const RECT &amp;rc)</td></tr>
+<tr class="separator:a7d0b4c9724fb6c7da56fe6286cdab19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbfebbf1af533475b1496b16277e70cc"><td class="memItemLeft" align="right" valign="top"><a id="abbfebbf1af533475b1496b16277e70cc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopClipping</b> ()</td></tr>
+<tr class="separator:abbfebbf1af533475b1496b16277e70cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6e9ddc23b4bba5456cf3a86f5def33"><td class="memItemLeft" align="right" valign="top"><a id="a4f6e9ddc23b4bba5456cf3a86f5def33"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearClipping</b> ()</td></tr>
+<tr class="separator:a4f6e9ddc23b4bba5456cf3a86f5def33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc386f3e5a830e71fd33856a521a51a2"><td class="memItemLeft" align="right" valign="top"><a id="abc386f3e5a830e71fd33856a521a51a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClipping</b> (const RECT &amp;rc)</td></tr>
+<tr class="separator:abc386f3e5a830e71fd33856a521a51a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31215f657e045cd81005a9b3473c741f"><td class="memItemLeft" align="right" valign="top"><a id="a31215f657e045cd81005a9b3473c741f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushTextForeColor</b> (COLORREF color)</td></tr>
+<tr class="separator:a31215f657e045cd81005a9b3473c741f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf6bdd9d922400915e2dcef0780d270"><td class="memItemLeft" align="right" valign="top"><a id="acbf6bdd9d922400915e2dcef0780d270"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopTextForeColor</b> ()</td></tr>
+<tr class="separator:acbf6bdd9d922400915e2dcef0780d270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6675329829d0f39b450cf8965e2ca67"><td class="memItemLeft" align="right" valign="top"><a id="ab6675329829d0f39b450cf8965e2ca67"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearTextForeColor</b> ()</td></tr>
+<tr class="separator:ab6675329829d0f39b450cf8965e2ca67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a65767032b564210655d5a078b96c0"><td class="memItemLeft" align="right" valign="top"><a id="a59a65767032b564210655d5a078b96c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTextForeColor</b> (COLORREF color)</td></tr>
+<tr class="separator:a59a65767032b564210655d5a078b96c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16901ad8bc7ab614ff34a414a0dd2dc"><td class="memItemLeft" align="right" valign="top"><a id="aa16901ad8bc7ab614ff34a414a0dd2dc"></a>
+COLORREF&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentTextForeColor</b> ()</td></tr>
+<tr class="separator:aa16901ad8bc7ab614ff34a414a0dd2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cd2f051e9103b3ce2ea30bbfe1dcfc"><td class="memItemLeft" align="right" valign="top"><a id="ac2cd2f051e9103b3ce2ea30bbfe1dcfc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushTextBackColor</b> (COLORREF color)</td></tr>
+<tr class="separator:ac2cd2f051e9103b3ce2ea30bbfe1dcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6629a6042029aa98de94a28a5d970249"><td class="memItemLeft" align="right" valign="top"><a id="a6629a6042029aa98de94a28a5d970249"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopTextBackColor</b> ()</td></tr>
+<tr class="separator:a6629a6042029aa98de94a28a5d970249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2fdfff4f0293cd8e170fc83237e08a"><td class="memItemLeft" align="right" valign="top"><a id="aaf2fdfff4f0293cd8e170fc83237e08a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearTextBackColor</b> ()</td></tr>
+<tr class="separator:aaf2fdfff4f0293cd8e170fc83237e08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e634faa8e5547a1f2cf8da5a9e6e648"><td class="memItemLeft" align="right" valign="top"><a id="a9e634faa8e5547a1f2cf8da5a9e6e648"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTextBackColor</b> (COLORREF color)</td></tr>
+<tr class="separator:a9e634faa8e5547a1f2cf8da5a9e6e648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09de54de421967f7f974e234a6d62594"><td class="memItemLeft" align="right" valign="top"><a id="a09de54de421967f7f974e234a6d62594"></a>
+COLORREF&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextBackColor</b> ()</td></tr>
+<tr class="separator:a09de54de421967f7f974e234a6d62594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e3ad2c942001b2ec081f49da2e242d"><td class="memItemLeft" align="right" valign="top"><a id="a76e3ad2c942001b2ec081f49da2e242d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTextBackTransparent</b> (bool b)</td></tr>
+<tr class="separator:a76e3ad2c942001b2ec081f49da2e242d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0b5d94516de0f875d148094901edde"><td class="memItemLeft" align="right" valign="top"><a id="a5d0b5d94516de0f875d148094901edde"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreTextColors</b> ()</td></tr>
+<tr class="separator:a5d0b5d94516de0f875d148094901edde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1eed45ae31a0664655c3c70f9da5f10"><td class="memItemLeft" align="right" valign="top"><a id="aa1eed45ae31a0664655c3c70f9da5f10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushMyFont</b> (HFONT hFont)</td></tr>
+<tr class="separator:aa1eed45ae31a0664655c3c70f9da5f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945050d21043969073daf36440588f1a"><td class="memItemLeft" align="right" valign="top"><a id="a945050d21043969073daf36440588f1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushMyFont</b> (const <a class="el" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a> &amp;sFont)</td></tr>
+<tr class="separator:a945050d21043969073daf36440588f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca923aacd0cdf73eda07c465e339299"><td class="memItemLeft" align="right" valign="top"><a id="aeca923aacd0cdf73eda07c465e339299"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopMyFont</b> ()</td></tr>
+<tr class="separator:aeca923aacd0cdf73eda07c465e339299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f8767f42fb743465e6e0eb12c8f1d3"><td class="memItemLeft" align="right" valign="top"><a id="a25f8767f42fb743465e6e0eb12c8f1d3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearMyFont</b> ()</td></tr>
+<tr class="separator:a25f8767f42fb743465e6e0eb12c8f1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38168fc5de9b29e59053e3ceaa52dd2d"><td class="memItemLeft" align="right" valign="top"><a id="a38168fc5de9b29e59053e3ceaa52dd2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#a38168fc5de9b29e59053e3ceaa52dd2d">SetMyFont</a> (const <a class="el" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a> &amp;sFont)</td></tr>
+<tr class="memdesc:a38168fc5de9b29e59053e3ceaa52dd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォント設定 <br /></td></tr>
+<tr class="separator:a38168fc5de9b29e59053e3ceaa52dd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c730fa009ecf7580b392fb622b86ab"><td class="memItemLeft" align="right" valign="top"><a id="ab0c730fa009ecf7580b392fb622b86ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMyFontBold</b> ()</td></tr>
+<tr class="separator:ab0c730fa009ecf7580b392fb622b86ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a52653df2e0e30006e9a79e9885ad0"><td class="memItemLeft" align="right" valign="top"><a id="a10a52653df2e0e30006e9a79e9885ad0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMyFontUnderline</b> ()</td></tr>
+<tr class="separator:a10a52653df2e0e30006e9a79e9885ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54eb896cd0e389d08f26c581513b875b"><td class="memItemLeft" align="right" valign="top"><a id="a54eb896cd0e389d08f26c581513b875b"></a>
+const <a class="el" href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMyFontAttr</b> ()</td></tr>
+<tr class="separator:a54eb896cd0e389d08f26c581513b875b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184988a70ee2c026d3a3bc5869b0af8f"><td class="memItemLeft" align="right" valign="top"><a id="a184988a70ee2c026d3a3bc5869b0af8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PushPen</b> (COLORREF color, int nPenWidth, int nStyle=PS_SOLID)</td></tr>
+<tr class="separator:a184988a70ee2c026d3a3bc5869b0af8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0de94d5418d3d2b92e8a1b15ea1ea8"><td class="memItemLeft" align="right" valign="top"><a id="aec0de94d5418d3d2b92e8a1b15ea1ea8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopPen</b> ()</td></tr>
+<tr class="separator:aec0de94d5418d3d2b92e8a1b15ea1ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e00cd321d8fe8bc8c84a19719c2064"><td class="memItemLeft" align="right" valign="top"><a id="a90e00cd321d8fe8bc8c84a19719c2064"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPen</b> (COLORREF color)</td></tr>
+<tr class="separator:a90e00cd321d8fe8bc8c84a19719c2064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0cb28292a3a7fc5a004da076b003376"><td class="memItemLeft" align="right" valign="top"><a id="ab0cb28292a3a7fc5a004da076b003376"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearPen</b> ()</td></tr>
+<tr class="separator:ab0cb28292a3a7fc5a004da076b003376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b47b6c74759b4d2cb11e74accac0d9"><td class="memItemLeft" align="right" valign="top"><a id="a28b47b6c74759b4d2cb11e74accac0d9"></a>
+COLORREF&#160;</td><td class="memItemRight" valign="bottom"><b>GetPenColor</b> () const</td></tr>
+<tr class="separator:a28b47b6c74759b4d2cb11e74accac0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59948a6662aa8f48464dd2893e09b79"><td class="memItemLeft" align="right" valign="top"><a id="af59948a6662aa8f48464dd2893e09b79"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_InitBrushColor</b> ()</td></tr>
+<tr class="separator:af59948a6662aa8f48464dd2893e09b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd73b00e686994dceada42aa765c88b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#abdd73b00e686994dceada42aa765c88b">PushBrushColor</a> (COLORREF color)</td></tr>
+<tr class="separator:abdd73b00e686994dceada42aa765c88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa9509ee0f8b94404844cd3750c7c3f"><td class="memItemLeft" align="right" valign="top"><a id="adfa9509ee0f8b94404844cd3750c7c3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopBrushColor</b> ()</td></tr>
+<tr class="separator:adfa9509ee0f8b94404844cd3750c7c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f482e83b765437178dffe2331cc429a"><td class="memItemLeft" align="right" valign="top"><a id="a1f482e83b765437178dffe2331cc429a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearBrush</b> ()</td></tr>
+<tr class="separator:a1f482e83b765437178dffe2331cc429a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab485e76a5fcdc1e5d191c29331ed382e"><td class="memItemLeft" align="right" valign="top"><a id="ab485e76a5fcdc1e5d191c29331ed382e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBrushColor</b> (COLORREF color)</td></tr>
+<tr class="separator:ab485e76a5fcdc1e5d191c29331ed382e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef12cbd748043b9229227f1f483a0ac"><td class="memItemLeft" align="right" valign="top"><a id="a6ef12cbd748043b9229227f1f483a0ac"></a>
+HBRUSH&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentBrush</b> () const</td></tr>
+<tr class="separator:a6ef12cbd748043b9229227f1f483a0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2294c71ddaf86743113268c062f840e7"><td class="memItemLeft" align="right" valign="top"><a id="a2294c71ddaf86743113268c062f840e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#a2294c71ddaf86743113268c062f840e7">DrawLine</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="memdesc:a2294c71ddaf86743113268c062f840e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">直線 <br /></td></tr>
+<tr class="separator:a2294c71ddaf86743113268c062f840e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3875317e1488ee6b9268806cb196c538"><td class="memItemLeft" align="right" valign="top"><a id="a3875317e1488ee6b9268806cb196c538"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDotLine</b> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:a3875317e1488ee6b9268806cb196c538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3418c562be5082cd0ed4ec240e872835"><td class="memItemLeft" align="right" valign="top"><a id="a3418c562be5082cd0ed4ec240e872835"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#a3418c562be5082cd0ed4ec240e872835">FillMyRect</a> (const RECT &amp;rc)</td></tr>
+<tr class="memdesc:a3418c562be5082cd0ed4ec240e872835"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形塗り潰し <br /></td></tr>
+<tr class="separator:a3418c562be5082cd0ed4ec240e872835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137ec8e38470e76f3efcd53dc128e8d5"><td class="memItemLeft" align="right" valign="top"><a id="a137ec8e38470e76f3efcd53dc128e8d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#a137ec8e38470e76f3efcd53dc128e8d5">FillSolidMyRect</a> (const RECT &amp;rc, COLORREF color)</td></tr>
+<tr class="memdesc:a137ec8e38470e76f3efcd53dc128e8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形塗り潰し <br /></td></tr>
+<tr class="separator:a137ec8e38470e76f3efcd53dc128e8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39acdd1b0e44923bc48c0a903bced386"><td class="memItemLeft" align="right" valign="top"><a id="a39acdd1b0e44923bc48c0a903bced386"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/class_c_graphics.html#a39acdd1b0e44923bc48c0a903bced386">FillMyRectTextBackColor</a> (const RECT &amp;rc)</td></tr>
+<tr class="memdesc:a39acdd1b0e44923bc48c0a903bced386"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形塗り潰し <br /></td></tr>
+<tr class="separator:a39acdd1b0e44923bc48c0a903bced386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50c06008b23a31fe6a8798c1a18c108"><td class="memItemLeft" align="right" valign="top"><a id="ad50c06008b23a31fe6a8798c1a18c108"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawRect</b> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:ad50c06008b23a31fe6a8798c1a18c108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19adaecaeb6ad57f4dd880770a9a124f"><td class="memItemLeft" align="right" valign="top"><a id="a19adaecaeb6ad57f4dd880770a9a124f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawRect</b> (const RECT &amp;rc)</td></tr>
+<tr class="separator:a19adaecaeb6ad57f4dd880770a9a124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab7fcb96c8a4a1c7db8ca4b12726ec0db"><td class="memItemLeft" align="right" valign="top"><a id="ab7fcb96c8a4a1c7db8ca4b12726ec0db"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDropRect</b> (LPCRECT lpRectNew, SIZE sizeNew, LPCRECT lpRectLast, SIZE sizeLast)</td></tr>
+<tr class="separator:ab7fcb96c8a4a1c7db8ca4b12726ec0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>描画管理 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="abdd73b00e686994dceada42aa765c88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd73b00e686994dceada42aa765c88b">&#9670;&nbsp;</a></span>PushBrushColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CGraphics::PushBrushColor </td>
+          <td>(</td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>ブラシの色。(COLORREF)-1 にすると、透明ブラシとなる。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/uiparts/<a class="el" href="../../d9/d51/_c_graphics_8h_source.html">CGraphics.h</a></li>
+<li>sakura_core/uiparts/<a class="el" href="../../d2/ddd/_c_graphics_8cpp.html">CGraphics.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

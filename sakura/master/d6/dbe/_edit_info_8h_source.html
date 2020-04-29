@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/EditInfo.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EditInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/dbe/_edit_info_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d86/charcode_8h.html">charset/charcode.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d38/_c_native_w_8h.html">mem/CNativeW.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/ddc/_c_type_8h.html">types/CType.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html">   42</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//ファイル</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a25bfa4500e147008e62dc892e06c978b">   44</a></span>&#160;    WCHAR       <a class="code" href="../../dc/dba/struct_edit_info.html#a25bfa4500e147008e62dc892e06c978b">m_szPath</a>[_MAX_PATH];                    </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a3b2678aa895a46ebcdcc377735ae6b45">   45</a></span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   <a class="code" href="../../dc/dba/struct_edit_info.html#a3b2678aa895a46ebcdcc377735ae6b45">m_nCharCode</a>;                            </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a07138fcdee2e0e9acac7cad9f660f720">   46</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../dc/dba/struct_edit_info.html#a07138fcdee2e0e9acac7cad9f660f720">m_bBom</a>;                                 </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#ad6611c3ab6550574d22ece7a6f675a8e">   47</a></span>&#160;    WCHAR       <a class="code" href="../../dc/dba/struct_edit_info.html#ad6611c3ab6550574d22ece7a6f675a8e">m_szDocType</a>[MAX_DOCTYPE_LEN + 1];       </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#aa0ace60251bd5a1d6f80958cf01c9aef">   48</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../dc/dba/struct_edit_info.html#aa0ace60251bd5a1d6f80958cf01c9aef">m_nTypeId</a>;                              </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//表示域</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#aee8ed562a4b9eabf802020dcb479218e">   51</a></span>&#160;    CLayoutInt  <a class="code" href="../../dc/dba/struct_edit_info.html#aee8ed562a4b9eabf802020dcb479218e">m_nViewTopLine</a>;                         </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a332b512f25264d587f9f69d771560a8d">   52</a></span>&#160;    CLayoutInt  <a class="code" href="../../dc/dba/struct_edit_info.html#a332b512f25264d587f9f69d771560a8d">m_nViewLeftCol</a>;                         </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//キャレット</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a6f50f6d7a13187fe8848057c3daa9b61">   55</a></span>&#160;    <a class="code" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a> <a class="code" href="../../dc/dba/struct_edit_info.html#a6f50f6d7a13187fe8848057c3daa9b61">m_ptCursor</a>;                             </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//各種状態</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a914b26954c07bcde9a19c39cfad2da4c">   58</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../dc/dba/struct_edit_info.html#a914b26954c07bcde9a19c39cfad2da4c">m_bIsModified</a>;                          </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//GREPモード</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a6d94e986a7d622645f9a7698a286799f">   61</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../dc/dba/struct_edit_info.html#a6d94e986a7d622645f9a7698a286799f">m_bIsGrep</a>;                              </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">wchar_t</span>     m_szGrepKey[1024];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//デバッグモニタ (アウトプットウィンドウ) モード</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#ace6f0b5f36166e4c9c2d56074e385d21">   65</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../dc/dba/struct_edit_info.html#ace6f0b5f36166e4c9c2d56074e385d21">m_bIsDebug</a>;                             </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//ブックマーク情報</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a6b989ae92974239863f6af079cfb2630">   68</a></span>&#160;    <span class="keywordtype">wchar_t</span>     <a class="code" href="../../dc/dba/struct_edit_info.html#a6b989ae92974239863f6af079cfb2630">m_szMarkLines</a>[MAX_MARKLINES_LEN + 1];   </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//ウィンドウ</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#ad011b527faec0e8b499981aad66e72c9">   71</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../dc/dba/struct_edit_info.html#ad011b527faec0e8b499981aad66e72c9">m_nWindowSizeX</a>;                         </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#acfa1ac9cf95180d32585c5b81a921ac4">   72</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../dc/dba/struct_edit_info.html#acfa1ac9cf95180d32585c5b81a921ac4">m_nWindowSizeY</a>;                         </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#ae20f5d2996e2f655a6ecf78ae3ce11e0">   73</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../dc/dba/struct_edit_info.html#ae20f5d2996e2f655a6ecf78ae3ce11e0">m_nWindowOriginX</a>;                       </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../dc/dba/struct_edit_info.html#a2bfc60d276c832b0cc417d3ca57571f6">   74</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../dc/dba/struct_edit_info.html#a2bfc60d276c832b0cc417d3ca57571f6">m_nWindowOriginY</a>;                       </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// コンストラクタ</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../dc/dba/struct_edit_info.html#a6a65f196e61568c3dd230937738e2679">EditInfo</a>() noexcept;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_edit_info_html_a6b989ae92974239863f6af079cfb2630"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a6b989ae92974239863f6af079cfb2630">EditInfo::m_szMarkLines</a></div><div class="ttdeci">wchar_t m_szMarkLines[MAX_MARKLINES_LEN+1]</div><div class="ttdoc">ブックマークの物理行リスト</div><div class="ttdef"><b>Definition:</b> EditInfo.h:68</div></div>
+<div class="ttc" id="a_c_native_w_8h_html"><div class="ttname"><a href="../../d8/d38/_c_native_w_8h.html">CNativeW.h</a></div></div>
+<div class="ttc" id="astruct_edit_info_html_a25bfa4500e147008e62dc892e06c978b"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a25bfa4500e147008e62dc892e06c978b">EditInfo::m_szPath</a></div><div class="ttdeci">WCHAR m_szPath[_MAX_PATH]</div><div class="ttdoc">ファイル名</div><div class="ttdef"><b>Definition:</b> EditInfo.h:44</div></div>
+<div class="ttc" id="astruct_edit_info_html_a07138fcdee2e0e9acac7cad9f660f720"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a07138fcdee2e0e9acac7cad9f660f720">EditInfo::m_bBom</a></div><div class="ttdeci">bool m_bBom</div><div class="ttdoc">BOM(GetFileInfo)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:46</div></div>
+<div class="ttc" id="astruct_edit_info_html_ad011b527faec0e8b499981aad66e72c9"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#ad011b527faec0e8b499981aad66e72c9">EditInfo::m_nWindowSizeX</a></div><div class="ttdeci">int m_nWindowSizeX</div><div class="ttdoc">ウィンドウ 幅(ピクセル数)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:71</div></div>
+<div class="ttc" id="astruct_edit_info_html_ad6611c3ab6550574d22ece7a6f675a8e"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#ad6611c3ab6550574d22ece7a6f675a8e">EditInfo::m_szDocType</a></div><div class="ttdeci">WCHAR m_szDocType[MAX_DOCTYPE_LEN+1]</div><div class="ttdoc">文書タイプ</div><div class="ttdef"><b>Definition:</b> EditInfo.h:47</div></div>
+<div class="ttc" id="a_c_type_8h_html"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html">CType.h</a></div></div>
+<div class="ttc" id="astruct_edit_info_html_aa0ace60251bd5a1d6f80958cf01c9aef"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#aa0ace60251bd5a1d6f80958cf01c9aef">EditInfo::m_nTypeId</a></div><div class="ttdeci">int m_nTypeId</div><div class="ttdoc">文書タイプ(MRU)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:48</div></div>
+<div class="ttc" id="astruct_edit_info_html_a3b2678aa895a46ebcdcc377735ae6b45"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a3b2678aa895a46ebcdcc377735ae6b45">EditInfo::m_nCharCode</a></div><div class="ttdeci">ECodeType m_nCharCode</div><div class="ttdoc">文字コード種別</div><div class="ttdef"><b>Definition:</b> EditInfo.h:45</div></div>
+<div class="ttc" id="astruct_edit_info_html_aee8ed562a4b9eabf802020dcb479218e"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#aee8ed562a4b9eabf802020dcb479218e">EditInfo::m_nViewTopLine</a></div><div class="ttdeci">CLayoutInt m_nViewTopLine</div><div class="ttdoc">表示域の一番上の行(0開始)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:51</div></div>
+<div class="ttc" id="astruct_edit_info_html_a2bfc60d276c832b0cc417d3ca57571f6"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a2bfc60d276c832b0cc417d3ca57571f6">EditInfo::m_nWindowOriginY</a></div><div class="ttdeci">int m_nWindowOriginY</div><div class="ttdoc">ウィンドウ 物理位置(ピクセル数・マイナス値も有効)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:74</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLogicPoint, CLogicInt &gt;</a></div></div>
+<div class="ttc" id="astruct_edit_info_html_a6a65f196e61568c3dd230937738e2679"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a6a65f196e61568c3dd230937738e2679">EditInfo::EditInfo</a></div><div class="ttdeci">EditInfo() noexcept</div><div class="ttdef"><b>Definition:</b> EditInfo.cpp:34</div></div>
+<div class="ttc" id="astruct_edit_info_html_a6f50f6d7a13187fe8848057c3daa9b61"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a6f50f6d7a13187fe8848057c3daa9b61">EditInfo::m_ptCursor</a></div><div class="ttdeci">CLogicPoint m_ptCursor</div><div class="ttdoc">キャレット位置</div><div class="ttdef"><b>Definition:</b> EditInfo.h:55</div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="astruct_edit_info_html_a6d94e986a7d622645f9a7698a286799f"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a6d94e986a7d622645f9a7698a286799f">EditInfo::m_bIsGrep</a></div><div class="ttdeci">bool m_bIsGrep</div><div class="ttdoc">Grepのウィンドウか</div><div class="ttdef"><b>Definition:</b> EditInfo.h:61</div></div>
+<div class="ttc" id="astruct_edit_info_html_ace6f0b5f36166e4c9c2d56074e385d21"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#ace6f0b5f36166e4c9c2d56074e385d21">EditInfo::m_bIsDebug</a></div><div class="ttdeci">bool m_bIsDebug</div><div class="ttdoc">デバッグモニタモード (アウトプットウィンドウ) か</div><div class="ttdef"><b>Definition:</b> EditInfo.h:65</div></div>
+<div class="ttc" id="astruct_edit_info_html"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html">EditInfo</a></div><div class="ttdef"><b>Definition:</b> EditInfo.h:42</div></div>
+<div class="ttc" id="astruct_edit_info_html_a914b26954c07bcde9a19c39cfad2da4c"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a914b26954c07bcde9a19c39cfad2da4c">EditInfo::m_bIsModified</a></div><div class="ttdeci">bool m_bIsModified</div><div class="ttdoc">変更フラグ</div><div class="ttdef"><b>Definition:</b> EditInfo.h:58</div></div>
+<div class="ttc" id="astruct_edit_info_html_ae20f5d2996e2f655a6ecf78ae3ce11e0"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#ae20f5d2996e2f655a6ecf78ae3ce11e0">EditInfo::m_nWindowOriginX</a></div><div class="ttdeci">int m_nWindowOriginX</div><div class="ttdoc">ウィンドウ 物理位置(ピクセル数・マイナス値も有効)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:73</div></div>
+<div class="ttc" id="astruct_edit_info_html_acfa1ac9cf95180d32585c5b81a921ac4"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#acfa1ac9cf95180d32585c5b81a921ac4">EditInfo::m_nWindowSizeY</a></div><div class="ttdeci">int m_nWindowSizeY</div><div class="ttdoc">ウィンドウ 高さ(ピクセル数)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:72</div></div>
+<div class="ttc" id="astruct_edit_info_html_a332b512f25264d587f9f69d771560a8d"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html#a332b512f25264d587f9f69d771560a8d">EditInfo::m_nViewLeftCol</a></div><div class="ttdeci">CLayoutInt m_nViewLeftCol</div><div class="ttdoc">表示域の一番左の桁(0開始)</div><div class="ttdef"><b>Definition:</b> EditInfo.h:52</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<div class="ttc" id="acharcode_8h_html"><div class="ttname"><a href="../../d4/d86/charcode_8h.html">charcode.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

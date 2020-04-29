@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/MessageBoxF.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">MessageBoxF.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>MessageBox用関数  
+<a href="#details">[詳解]</a></p>
+
+<p><a href="../../db/d15/_message_box_f_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ac115fa2fbab3adc0794309cdf53b4424"><td class="memItemLeft" align="right" valign="top"><a id="ac115fa2fbab3adc0794309cdf53b4424"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MessageBox</b>&#160;&#160;&#160;Wrap_MessageBox</td></tr>
+<tr class="separator:ac115fa2fbab3adc0794309cdf53b4424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8849e94169387e7bb9565720a3bbf65"><td class="memItemLeft" align="right" valign="top"><a id="af8849e94169387e7bb9565720a3bbf65"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MYMESSAGEBOX</b>&#160;&#160;&#160;MessageBoxF</td></tr>
+<tr class="separator:af8849e94169387e7bb9565720a3bbf65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76491c14cd2be24bbe1304249e602354"><td class="memItemLeft" align="right" valign="top"><a id="a76491c14cd2be24bbe1304249e602354"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultBeep</b>()&#160;&#160;&#160;::MessageBeep(MB_OK)</td></tr>
+<tr class="separator:a76491c14cd2be24bbe1304249e602354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4594497249482d53b181a2c46be9fe4e"><td class="memItemLeft" align="right" valign="top"><a id="a4594497249482d53b181a2c46be9fe4e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorBeep</b>()&#160;&#160;&#160;::MessageBeep(MB_ICONSTOP)</td></tr>
+<tr class="separator:a4594497249482d53b181a2c46be9fe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f784ff27e05cc44a64f95c786bde56f"><td class="memItemLeft" align="right" valign="top"><a id="a2f784ff27e05cc44a64f95c786bde56f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WarningBeep</b>()&#160;&#160;&#160;::MessageBeep(MB_ICONEXCLAMATION)</td></tr>
+<tr class="separator:a2f784ff27e05cc44a64f95c786bde56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf7ff6a48cbd288ed7709049ab450a2"><td class="memItemLeft" align="right" valign="top"><a id="afdf7ff6a48cbd288ed7709049ab450a2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>InfoBeep</b>()&#160;&#160;&#160;::MessageBeep(MB_ICONINFORMATION)</td></tr>
+<tr class="separator:afdf7ff6a48cbd288ed7709049ab450a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569dd1ab07a05f9e888b50cec7bf7364"><td class="memItemLeft" align="right" valign="top"><a id="a569dd1ab07a05f9e888b50cec7bf7364"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ConfirmBeep</b>()&#160;&#160;&#160;::MessageBeep(MB_ICONQUESTION)</td></tr>
+<tr class="separator:a569dd1ab07a05f9e888b50cec7bf7364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5c141de9560e35e7d14a2c73b17107c4"><td class="memItemLeft" align="right" valign="top"><a id="a5c141de9560e35e7d14a2c73b17107c4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Wrap_MessageBox</b> (HWND hWnd, LPCWSTR lpText, LPCWSTR lpCaption, UINT uType)</td></tr>
+<tr class="separator:a5c141de9560e35e7d14a2c73b17107c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d5340eae2b639322b7d48280ce226"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d15/_message_box_f_8h.html#aaa3d5340eae2b639322b7d48280ce226">VMessageBoxF</a> (HWND hwndOwner, UINT uType, LPCWSTR lpCaption, LPCWSTR lpText, va_list &amp;v)</td></tr>
+<tr class="separator:aaa3d5340eae2b639322b7d48280ce226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5520d97763402369773185b34e9c23d"><td class="memItemLeft" align="right" valign="top"><a id="af5520d97763402369773185b34e9c23d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>MessageBoxF</b> (HWND hwndOwner, UINT uType, LPCWSTR lpCaption, LPCWSTR lpText,...)</td></tr>
+<tr class="separator:af5520d97763402369773185b34e9c23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c95d2a14ed9b4b35f6ac514bb365e6"><td class="memItemLeft" align="right" valign="top"><a id="a23c95d2a14ed9b4b35f6ac514bb365e6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a23c95d2a14ed9b4b35f6ac514bb365e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab000fed7ea0330ce782148edf34c4e78"><td class="memItemLeft" align="right" valign="top"><a id="ab000fed7ea0330ce782148edf34c4e78"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopErrorMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:ab000fed7ea0330ce782148edf34c4e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc781c1ad77787d8b0824f2b89948d3"><td class="memItemLeft" align="right" valign="top"><a id="a8fc781c1ad77787d8b0824f2b89948d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>WarningMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a8fc781c1ad77787d8b0824f2b89948d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fccb8c43a1abab24b8cb79833eb69b9"><td class="memItemLeft" align="right" valign="top"><a id="a0fccb8c43a1abab24b8cb79833eb69b9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopWarningMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a0fccb8c43a1abab24b8cb79833eb69b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e764feb24826edb91a24fc77452b9a4"><td class="memItemLeft" align="right" valign="top"><a id="a3e764feb24826edb91a24fc77452b9a4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>InfoMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a3e764feb24826edb91a24fc77452b9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6cf55451b9bdb21606a33c0937c922"><td class="memItemLeft" align="right" valign="top"><a id="a3f6cf55451b9bdb21606a33c0937c922"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopInfoMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a3f6cf55451b9bdb21606a33c0937c922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcac8ee3b4043118661e11a2a0fd7022"><td class="memItemLeft" align="right" valign="top"><a id="adcac8ee3b4043118661e11a2a0fd7022"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ConfirmMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:adcac8ee3b4043118661e11a2a0fd7022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215a7e1a280d70edbba5ac17555a4605"><td class="memItemLeft" align="right" valign="top"><a id="a215a7e1a280d70edbba5ac17555a4605"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopConfirmMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a215a7e1a280d70edbba5ac17555a4605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6934dc157c362ac8fd229853c9ea0ed2"><td class="memItemLeft" align="right" valign="top"><a id="a6934dc157c362ac8fd229853c9ea0ed2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Select3Message</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a6934dc157c362ac8fd229853c9ea0ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f76cb978adbe7aa4efc8680e02e293"><td class="memItemLeft" align="right" valign="top"><a id="a17f76cb978adbe7aa4efc8680e02e293"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopSelect3Message</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a17f76cb978adbe7aa4efc8680e02e293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e95de5781659a3904ebc9672a205692"><td class="memItemLeft" align="right" valign="top"><a id="a3e95de5781659a3904ebc9672a205692"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>OkMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a3e95de5781659a3904ebc9672a205692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd71980efcfe0ac705866f0c0d49c34d"><td class="memItemLeft" align="right" valign="top"><a id="abd71980efcfe0ac705866f0c0d49c34d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopOkMessage</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:abd71980efcfe0ac705866f0c0d49c34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f9dba411493c29a3ff49cb4a924cf9"><td class="memItemLeft" align="right" valign="top"><a id="a04f9dba411493c29a3ff49cb4a924cf9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CustomMessage</b> (HWND hwnd, UINT uType, LPCWSTR format,...)</td></tr>
+<tr class="separator:a04f9dba411493c29a3ff49cb4a924cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfa5914b6e988a264434bcbe3118a2f"><td class="memItemLeft" align="right" valign="top"><a id="a4bfa5914b6e988a264434bcbe3118a2f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TopCustomMessage</b> (HWND hwnd, UINT uType, LPCWSTR format,...)</td></tr>
+<tr class="separator:a4bfa5914b6e988a264434bcbe3118a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2779d3b4f79525fca7f6ffcfe2020718"><td class="memItemLeft" align="right" valign="top"><a id="a2779d3b4f79525fca7f6ffcfe2020718"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>PleaseReportToAuthor</b> (HWND hwnd, LPCWSTR format,...)</td></tr>
+<tr class="separator:a2779d3b4f79525fca7f6ffcfe2020718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>MessageBox用関数 </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2013/03/03 Uchi Debug1.hから分離 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aaa3d5340eae2b639322b7d48280ce226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3d5340eae2b639322b7d48280ce226">&#9670;&nbsp;</a></span>VMessageBoxF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VMessageBoxF </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndOwner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpCaption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>書式付きメッセージボックス</p>
+<p>引数で与えられた情報をダイアログボックスで表示する． デバッグ目的以外でも使用できる． </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

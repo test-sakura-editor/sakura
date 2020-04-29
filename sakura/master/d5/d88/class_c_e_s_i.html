@@ -1,0 +1,972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CESI クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d9/d7b/class_c_e_s_i-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CESI クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/d8f/_c_e_s_i_8h_source.html">CESI.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a20edbb59f2bd5eeb9fc17c91484be849"><td class="memItemLeft" align="right" valign="top"><a id="a20edbb59f2bd5eeb9fc17c91484be849"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CESI</b> (const <a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a> &amp;ref)</td></tr>
+<tr class="separator:a20edbb59f2bd5eeb9fc17c91484be849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efd21094cea35a2c488a7b6547b1540"><td class="memItemLeft" align="right" valign="top"><a id="a8efd21094cea35a2c488a7b6547b1540"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a8efd21094cea35a2c488a7b6547b1540">CheckKanjiCode</a> (const char *buff, size_t size) noexcept</td></tr>
+<tr class="memdesc:a8efd21094cea35a2c488a7b6547b1540"><td class="mdescLeft">&#160;</td><td class="mdescRight">日本語コードセット判定 <br /></td></tr>
+<tr class="separator:a8efd21094cea35a2c488a7b6547b1540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37136273693ea1ee3c23d0de45ee7442"><td class="memItemLeft" align="right" valign="top"><a id="a37136273693ea1ee3c23d0de45ee7442"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStatus</b> (DWORD inf)</td></tr>
+<tr class="separator:a37136273693ea1ee3c23d0de45ee7442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f069256eb4a940991cbdb452f55670"><td class="memItemLeft" align="right" valign="top"><a id="ae2f069256eb4a940991cbdb452f55670"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>GetStatus</b> (void) const</td></tr>
+<tr class="separator:ae2f069256eb4a940991cbdb452f55670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1ca677c6fc36ead8d71fd45343ef1f"><td class="memItemLeft" align="right" valign="top"><a id="aea1ca677c6fc36ead8d71fd45343ef1f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetDataLen</b> (void) const</td></tr>
+<tr class="separator:aea1ca677c6fc36ead8d71fd45343ef1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a99d17de3eb0b00e3e2f8105bc2f320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a1a99d17de3eb0b00e3e2f8105bc2f320">SortMBCInfo</a> (void)</td></tr>
+<tr class="memdesc:a1a99d17de3eb0b00e3e2f8105bc2f320"><td class="mdescLeft">&#160;</td><td class="mdescRight">マルチバイト系の捜査結果を、ポイントが大きい順にソート。 ソートした結果は、m_apMbcInfo に格納  <a href="../../d5/d88/class_c_e_s_i.html#a1a99d17de3eb0b00e3e2f8105bc2f320">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a99d17de3eb0b00e3e2f8105bc2f320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ddebd1691be7b6e30ad58a6d800be42"><td class="memItemLeft" align="right" valign="top"><a id="a1ddebd1691be7b6e30ad58a6d800be42"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a1ddebd1691be7b6e30ad58a6d800be42">IsAmbiguousEucAndSjis</a> (void)</td></tr>
+<tr class="memdesc:a1ddebd1691be7b6e30ad58a6d800be42"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUC と SJIS が候補のトップ２に上がっているかどうか <br /></td></tr>
+<tr class="separator:a1ddebd1691be7b6e30ad58a6d800be42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f8b966f3abb66dcc84b7aff450d5a6"><td class="memItemLeft" align="right" valign="top"><a id="ac4f8b966f3abb66dcc84b7aff450d5a6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#ac4f8b966f3abb66dcc84b7aff450d5a6">IsAmbiguousUtf8AndCesu8</a> (void)</td></tr>
+<tr class="memdesc:ac4f8b966f3abb66dcc84b7aff450d5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS と UTF-8 が候補のトップ2に上がっているかどうか <br /></td></tr>
+<tr class="separator:ac4f8b966f3abb66dcc84b7aff450d5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b80169f6f376496bf37acf508cd03a"><td class="memItemLeft" align="right" valign="top"><a id="a02b80169f6f376496bf37acf508cd03a"></a>
+EBOMType&#160;</td><td class="memItemRight" valign="bottom"><b>GetBOMType</b> (void) const</td></tr>
+<tr class="separator:a02b80169f6f376496bf37acf508cd03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee06d930fe3a2b6ace6a985dd494427b"><td class="memItemLeft" align="right" valign="top"><a id="aee06d930fe3a2b6ace6a985dd494427b"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetMetaName</b> () const</td></tr>
+<tr class="separator:aee06d930fe3a2b6ace6a985dd494427b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a4731082c42703039670f93605698179f"><td class="memItemLeft" align="right" valign="top"><a id="a4731082c42703039670f93605698179f"></a>
+<a class="el" href="../../df/dd2/structtag_encoding_info.html">MBCODE_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a4731082c42703039670f93605698179f">m_aMbcInfo</a> [NUM_OF_MBCODE]</td></tr>
+<tr class="memdesc:a4731082c42703039670f93605698179f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS, JIS, EUCJP, UTF8, UTF7 情報（優先度に従って格納される） <br /></td></tr>
+<tr class="separator:a4731082c42703039670f93605698179f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4549d4446719d58f6a777d7dff189e92"><td class="memItemLeft" align="right" valign="top"><a id="a4549d4446719d58f6a777d7dff189e92"></a>
+<a class="el" href="../../df/dd2/structtag_encoding_info.html">MBCODE_INFO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a> [NUM_OF_MBCODE]</td></tr>
+<tr class="memdesc:a4549d4446719d58f6a777d7dff189e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">評価順にソートされた SJIS, JIS, EUCJP, UTF8, UTF7, CESU8 の情報 <br /></td></tr>
+<tr class="separator:a4549d4446719d58f6a777d7dff189e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68193b9a9a44eaddecc703f7783fc18a"><td class="memItemLeft" align="right" valign="top"><a id="a68193b9a9a44eaddecc703f7783fc18a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a68193b9a9a44eaddecc703f7783fc18a">m_nMbcSjisHankata</a></td></tr>
+<tr class="memdesc:a68193b9a9a44eaddecc703f7783fc18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS 半角カタカナのバイト数 <br /></td></tr>
+<tr class="separator:a68193b9a9a44eaddecc703f7783fc18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e97701c75b205ecb246a9f0f129de4d"><td class="memItemLeft" align="right" valign="top"><a id="a2e97701c75b205ecb246a9f0f129de4d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a2e97701c75b205ecb246a9f0f129de4d">m_nMbcEucZenHirakata</a></td></tr>
+<tr class="memdesc:a2e97701c75b205ecb246a9f0f129de4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUC 全角ひらがなカタカナのバイト数 <br /></td></tr>
+<tr class="separator:a2e97701c75b205ecb246a9f0f129de4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd99567b7f33db2b774b128e9f57509"><td class="memItemLeft" align="right" valign="top"><a id="aacd99567b7f33db2b774b128e9f57509"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#aacd99567b7f33db2b774b128e9f57509">m_nMbcEucZen</a></td></tr>
+<tr class="memdesc:aacd99567b7f33db2b774b128e9f57509"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUC 全角のバイト数 <br /></td></tr>
+<tr class="separator:aacd99567b7f33db2b774b128e9f57509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf69a81cc3a08527c5803838a34cb93f"><td class="memItemLeft" align="right" valign="top"><a id="acf69a81cc3a08527c5803838a34cb93f"></a>
+<a class="el" href="../../df/dd2/structtag_encoding_info.html">WCCODE_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#acf69a81cc3a08527c5803838a34cb93f">m_aWcInfo</a> [ESI_WCIDX_MAX]</td></tr>
+<tr class="memdesc:acf69a81cc3a08527c5803838a34cb93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-16 LE/BE 情報 <br /></td></tr>
+<tr class="separator:acf69a81cc3a08527c5803838a34cb93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d4d959c7e734644c0b822e4da8e387"><td class="memItemLeft" align="right" valign="top"><a id="a26d4d959c7e734644c0b822e4da8e387"></a>
+EBOMType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a26d4d959c7e734644c0b822e4da8e387">m_eWcBomType</a></td></tr>
+<tr class="memdesc:a26d4d959c7e734644c0b822e4da8e387"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_pWcInfo から推測される BOM の種類 <br /></td></tr>
+<tr class="separator:a26d4d959c7e734644c0b822e4da8e387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2724c9d166b5e4b43441e7054363b6dc"><td class="memItemLeft" align="right" valign="top"><a id="a2724c9d166b5e4b43441e7054363b6dc"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">m_eMetaName</a></td></tr>
+<tr class="memdesc:a2724c9d166b5e4b43441e7054363b6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコーディング名からの種類判別 <br /></td></tr>
+<tr class="separator:a2724c9d166b5e4b43441e7054363b6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da1eb8f036ac3aec8d9fe2fc71c5fed"><td class="memItemLeft" align="right" valign="top"><a id="a2da1eb8f036ac3aec8d9fe2fc71c5fed"></a>
+const <a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pEncodingConfig</b></td></tr>
+<tr class="separator:a2da1eb8f036ac3aec8d9fe2fc71c5fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a198ccca386f30aa2c34ec3bf829cb848"><td class="memItemLeft" align="right" valign="top"><a id="a198ccca386f30aa2c34ec3bf829cb848"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_OF_MBCODE</b> = (CODE_CODEMAX - 2)</td></tr>
+<tr class="separator:a198ccca386f30aa2c34ec3bf829cb848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:accd2262ecc89371d72f4be001b3f3103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#accd2262ecc89371d72f4be001b3f3103">DetectUnicodeBom</a> (const char *pS, size_t nLen) noexcept</td></tr>
+<tr class="separator:accd2262ecc89371d72f4be001b3f3103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b0b2b2bdb576c01dcc3aa2a818b580"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#ae7b0b2b2bdb576c01dcc3aa2a818b580">SetInformation</a> (const char *pS, const int nLen)</td></tr>
+<tr class="memdesc:ae7b0b2b2bdb576c01dcc3aa2a818b580"><td class="mdescLeft">&#160;</td><td class="mdescRight">調査結果の情報を格納  <a href="../../d5/d88/class_c_e_s_i.html#ae7b0b2b2bdb576c01dcc3aa2a818b580">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7b0b2b2bdb576c01dcc3aa2a818b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dbbfef6b1aa130ee14c0f01ba18e2cc"><td class="memItemLeft" align="right" valign="top"><a id="a3dbbfef6b1aa130ee14c0f01ba18e2cc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a3dbbfef6b1aa130ee14c0f01ba18e2cc">InitPriorityTable</a> (void)</td></tr>
+<tr class="memdesc:a3dbbfef6b1aa130ee14c0f01ba18e2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">添え字に使われる優先順位表を作成 <br /></td></tr>
+<tr class="separator:a3dbbfef6b1aa130ee14c0f01ba18e2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52a32d39e302be520ba97f099b48526"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#ad52a32d39e302be520ba97f099b48526">GetIndexById</a> (const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeType) const</td></tr>
+<tr class="memdesc:ad52a32d39e302be520ba97f099b48526"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字コードID から情報格納先インデックスを生成  <a href="../../d5/d88/class_c_e_s_i.html#ad52a32d39e302be520ba97f099b48526">[詳解]</a><br /></td></tr>
+<tr class="separator:ad52a32d39e302be520ba97f099b48526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7dd632ae4443edd3454e77b8600e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#afd7dd632ae4443edd3454e77b8600e46">SetEvaluation</a> (const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeId, const int v1, const int v2)</td></tr>
+<tr class="separator:afd7dd632ae4443edd3454e77b8600e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186e8f75ce16f503117b348d61729088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a186e8f75ce16f503117b348d61729088">GetEvaluation</a> (const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeId, int *pv1, int *pv2) const</td></tr>
+<tr class="separator:a186e8f75ce16f503117b348d61729088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b31bdfb01961e2ff34f9e8b4f4616e3"><td class="memItemLeft" align="right" valign="top"><a id="a1b31bdfb01961e2ff34f9e8b4f4616e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDataLen</b> (const int n)</td></tr>
+<tr class="separator:a1b31bdfb01961e2ff34f9e8b4f4616e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3a5c0e87c97998d669b4b110d7fbc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a0a3a5c0e87c97998d669b4b110d7fbc2">ScanCode</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a0a3a5c0e87c97998d669b4b110d7fbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e35dd02409947888c771b73a93e6afa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a2e35dd02409947888c771b73a93e6afa">GetEncodingInfo_sjis</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a2e35dd02409947888c771b73a93e6afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c617f990b677bea2bef33c18a62c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#ad5c617f990b677bea2bef33c18a62c51">GetEncodingInfo_jis</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:ad5c617f990b677bea2bef33c18a62c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5186f79ace1a9125e540d89b194f0cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#ac5186f79ace1a9125e540d89b194f0cc">GetEncodingInfo_eucjp</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:ac5186f79ace1a9125e540d89b194f0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9942095ace87ee1002ae1977cb774871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a9942095ace87ee1002ae1977cb774871">GetEncodingInfo_utf8</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a9942095ace87ee1002ae1977cb774871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd90beaa0dfffa8efb0d1ce7360ec3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a5fd90beaa0dfffa8efb0d1ce7360ec3e">GetEncodingInfo_utf7</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a5fd90beaa0dfffa8efb0d1ce7360ec3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a24bc5799cebdd86bb7630f35b9f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a27a24bc5799cebdd86bb7630f35b9f2a">GetEncodingInfo_cesu8</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a27a24bc5799cebdd86bb7630f35b9f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff02598efb02e0cb36d1f68261a9c7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#aff02598efb02e0cb36d1f68261a9c7e1">GetEncodingInfo_uni</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:aff02598efb02e0cb36d1f68261a9c7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75527ac223559aecb9d06284811b4bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a75527ac223559aecb9d06284811b4bf4">GetEncodingInfo_latin1</a> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a75527ac223559aecb9d06284811b4bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca52337533f03bfd6c72dcf1134d683"><td class="memItemLeft" align="right" valign="top"><a id="a4ca52337533f03bfd6c72dcf1134d683"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetEncodingInfo_meta</b> (const char *pS, const int nLen)</td></tr>
+<tr class="separator:a4ca52337533f03bfd6c72dcf1134d683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9669e96779335fa4d8a3997fd0636fe7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a9669e96779335fa4d8a3997fd0636fe7">_CheckUtf16Eol</a> (const char *pS, const int nLen, const bool bbig_endian)</td></tr>
+<tr class="separator:a9669e96779335fa4d8a3997fd0636fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e35595a52b4f4477a87bed0f6c7a69"><td class="memItemLeft" align="right" valign="top"><a id="a41e35595a52b4f4477a87bed0f6c7a69"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_CheckUtf16EolLE</b> (const char *p, const int n)</td></tr>
+<tr class="separator:a41e35595a52b4f4477a87bed0f6c7a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad494aa31387f21c2c24f5b1ecf2f1da2"><td class="memItemLeft" align="right" valign="top"><a id="ad494aa31387f21c2c24f5b1ecf2f1da2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_CheckUtf16EolBE</b> (const char *p, const int n)</td></tr>
+<tr class="separator:ad494aa31387f21c2c24f5b1ecf2f1da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e84a7847d1cd2f742ccd75b72f97d9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a5e84a7847d1cd2f742ccd75b72f97d9a">GuessEucOrSjis</a> (void)</td></tr>
+<tr class="memdesc:a5e84a7847d1cd2f742ccd75b72f97d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUC か SJIS かを判定  <a href="../../d5/d88/class_c_e_s_i.html#a5e84a7847d1cd2f742ccd75b72f97d9a">[詳解]</a><br /></td></tr>
+<tr class="separator:a5e84a7847d1cd2f742ccd75b72f97d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff74355a0d7711891633d727ff33db54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#aff74355a0d7711891633d727ff33db54">GuessUtf8OrCesu8</a> (void)</td></tr>
+<tr class="memdesc:aff74355a0d7711891633d727ff33db54"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 か CESU-8 かを判定  <a href="../../d5/d88/class_c_e_s_i.html#aff74355a0d7711891633d727ff33db54">[詳解]</a><br /></td></tr>
+<tr class="separator:aff74355a0d7711891633d727ff33db54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af585d14042b899ee6781a1cbbaf08417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#af585d14042b899ee6781a1cbbaf08417">GuessUtf16Bom</a> (void)</td></tr>
+<tr class="memdesc:af585d14042b899ee6781a1cbbaf08417"><td class="mdescLeft">&#160;</td><td class="mdescRight">BOMの種類を推測して m_eWcBomType を設定  <a href="../../d5/d88/class_c_e_s_i.html#af585d14042b899ee6781a1cbbaf08417">[詳解]</a><br /></td></tr>
+<tr class="separator:af585d14042b899ee6781a1cbbaf08417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478343cd6fb1854ff0ac0c959d4c962e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a478343cd6fb1854ff0ac0c959d4c962e">AutoDetectByXML</a> (const char *pBuf, int nSize)</td></tr>
+<tr class="separator:a478343cd6fb1854ff0ac0c959d4c962e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c58db4707ad027c71bbf886d7aaa863"><td class="memItemLeft" align="right" valign="top"><a id="a5c58db4707ad027c71bbf886d7aaa863"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AutoDetectByHTML</b> (const char *pBuf, int nSize)</td></tr>
+<tr class="separator:a5c58db4707ad027c71bbf886d7aaa863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2134de992ac945ed1f07c1f5814a76d"><td class="memItemLeft" align="right" valign="top"><a id="aa2134de992ac945ed1f07c1f5814a76d"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AutoDetectByCoding</b> (const char *pBuf, int nSize)</td></tr>
+<tr class="separator:aa2134de992ac945ed1f07c1f5814a76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a86536320951894559521cdfbdaa29547"><td class="memItemLeft" align="right" valign="top"><a id="a86536320951894559521cdfbdaa29547"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a></td></tr>
+<tr class="memdesc:a86536320951894559521cdfbdaa29547"><td class="mdescLeft">&#160;</td><td class="mdescRight">調査対象となったデータの長さ（8bit 単位） <br /></td></tr>
+<tr class="separator:a86536320951894559521cdfbdaa29547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64adac503b79ecfa0d0e563d811d8d31"><td class="memItemLeft" align="right" valign="top"><a id="a64adac503b79ecfa0d0e563d811d8d31"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">m_dwStatus</a></td></tr>
+<tr class="memdesc:a64adac503b79ecfa0d0e563d811d8d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">判定結果を格納するもの <br /></td></tr>
+<tr class="separator:a64adac503b79ecfa0d0e563d811d8d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文字コードを調査する時に生じる情報格納クラス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a9669e96779335fa4d8a3997fd0636fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9669e96779335fa4d8a3997fd0636fe7">&#9670;&nbsp;</a></span>_CheckUtf16Eol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CESI::_CheckUtf16Eol </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bbig_endian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-16 チェッカ内で使う改行コード確認関数 </p>
+
+</div>
+</div>
+<a id="a478343cd6fb1854ff0ac0c959d4c962e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478343cd6fb1854ff0ac0c959d4c962e">&#9670;&nbsp;</a></span>AutoDetectByXML()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> CESI::AutoDetectByXML </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ファイル中のエンコーディング指定を利用した文字コード自動選択 </p><dl class="section return"><dt>戻り値</dt><dd>決定した文字コード。 未決定は-1を返す </dd></dl>
+
+</div>
+</div>
+<a id="accd2262ecc89371d72f4be001b3f3103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd2262ecc89371d72f4be001b3f3103">&#9670;&nbsp;</a></span>DetectUnicodeBom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> CESI::DetectUnicodeBom </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文字列の先頭にUnicode系BOMが付いているか？</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CODE_UNICODE</td><td>UTF-16 LE </td></tr>
+    <tr><td class="paramname">CODE_UTF8</td><td>UTF-8 </td></tr>
+    <tr><td class="paramname">CODE_UNICODEBE</td><td>UTF-16 BE </td></tr>
+    <tr><td class="paramname">CODE_NONE</td><td>未検出</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.08.11 <a class="el" href="../../d8/dcc/charcode_8cpp.html">charcode.cpp</a> から移動 </dd>
+<dd>
+2015.03.05 Moca UTF-7 BOMは無効に変更 </dd></dl>
+
+</div>
+</div>
+<a id="a27a24bc5799cebdd86bb7630f35b9f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a24bc5799cebdd86bb7630f35b9f2a">&#9670;&nbsp;</a></span>GetEncodingInfo_cesu8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_cesu8 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>CESU-8 の文字コード判定情報を収集する </p>
+
+</div>
+</div>
+<a id="ac5186f79ace1a9125e540d89b194f0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5186f79ace1a9125e540d89b194f0cc">&#9670;&nbsp;</a></span>GetEncodingInfo_eucjp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_eucjp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>EUC-JP の文字コード判定情報を収集する </p>
+
+</div>
+</div>
+<a id="ad5c617f990b677bea2bef33c18a62c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c617f990b677bea2bef33c18a62c51">&#9670;&nbsp;</a></span>GetEncodingInfo_jis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_jis </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>JIS の文字コード判定情報を収集する </p>
+
+</div>
+</div>
+<a id="a75527ac223559aecb9d06284811b4bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75527ac223559aecb9d06284811b4bf4">&#9670;&nbsp;</a></span>GetEncodingInfo_latin1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_latin1 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Latin1(欧文, Windows-1252)の文字コード判定情報を収集する</p>
+<dl class="section note"><dt>覚え書き</dt><dd>　必ずFalse。 </dd></dl>
+
+</div>
+</div>
+<a id="a2e35dd02409947888c771b73a93e6afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e35dd02409947888c771b73a93e6afa">&#9670;&nbsp;</a></span>GetEncodingInfo_sjis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_sjis </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>SJIS の文字コード判定情報を収集する </p>
+
+</div>
+</div>
+<a id="aff02598efb02e0cb36d1f68261a9c7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff02598efb02e0cb36d1f68261a9c7e1">&#9670;&nbsp;</a></span>GetEncodingInfo_uni()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_uni </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-16 LE/BE の文字コード判定情報を収集する</p>
+<dl class="section note"><dt>覚え書き</dt><dd>改行文字を数える。ついでに ASCII 版の改行コードも数える。 　nLen は２で割り切れるものが入ってくることを仮定。 </dd></dl>
+
+</div>
+</div>
+<a id="a5fd90beaa0dfffa8efb0d1ce7360ec3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd90beaa0dfffa8efb0d1ce7360ec3e">&#9670;&nbsp;</a></span>GetEncodingInfo_utf7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_utf7 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-7 の文字コード判定情報を収集する</p>
+<dl class="section note"><dt>覚え書き</dt><dd>　1 バイト以上のエラー（いわゆる ill-formed）が見つかれば UTF-7 と判定されない。 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2015.03.05 Moca 「+G10)」のような、-がない場合ポイントに加算しないようにする </dd></dl>
+
+</div>
+</div>
+<a id="a9942095ace87ee1002ae1977cb774871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9942095ace87ee1002ae1977cb774871">&#9670;&nbsp;</a></span>GetEncodingInfo_utf8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEncodingInfo_utf8 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-8 の文字コード判定情報を収集する </p>
+
+</div>
+</div>
+<a id="a186e8f75ce16f503117b348d61729088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186e8f75ce16f503117b348d61729088">&#9670;&nbsp;</a></span>GetEvaluation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GetEvaluation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>eCodeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pv1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pv2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>収集した評価値を取得</p>
+<dl class="section return"><dt>戻り値</dt><dd>　nCodeType が CODE_UNICODE, CODE_UNICODEBE の場合は m_pWcInfo から， それ以外の場合は m_pMbInfo から値が取得されることに注意。 </dd></dl>
+
+</div>
+</div>
+<a id="ad52a32d39e302be520ba97f099b48526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52a32d39e302be520ba97f099b48526">&#9670;&nbsp;</a></span>GetIndexById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CESI::GetIndexById </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>eCodeType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字コードID から情報格納先インデックスを生成 </p>
+<p>文字コード ID から情報格納配列 m_pMbInfo または m_pWcInfo の添え字を取得</p>
+<dl class="section return"><dt>戻り値</dt><dd>　nCodeType が CODE_UNICODE, CODE_UNICODEBE の場合は m_pWcInfo 用の添え字が， それ以外の場合は m_pMbInfo 用の添え字が返却される。 </dd></dl>
+
+</div>
+</div>
+<a id="a5e84a7847d1cd2f742ccd75b72f97d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e84a7847d1cd2f742ccd75b72f97d9a">&#9670;&nbsp;</a></span>GuessEucOrSjis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GuessEucOrSjis </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>EUC か SJIS かを判定 </p>
+<p>SJIS と EUC の紛らわしさを解消する</p>
+<p>m_bEucFlag が TRUE のとき EUC, FALSE のとき SJIS </p>
+
+</div>
+</div>
+<a id="af585d14042b899ee6781a1cbbaf08417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af585d14042b899ee6781a1cbbaf08417">&#9670;&nbsp;</a></span>GuessUtf16Bom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GuessUtf16Bom </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BOMの種類を推測して m_eWcBomType を設定 </p>
+<p>UTF-16 の BOM の種類を推測</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CESI_BOMTYPE_UTF16LE</td><td>Little-Endian(LE) </td></tr>
+    <tr><td class="paramname">CESI_BOMTYPE_UTF16BE</td><td>Big-Endian(BE) </td></tr>
+    <tr><td class="paramname">CESI_BOMTYPE_UNKNOWN</td><td>不明 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff74355a0d7711891633d727ff33db54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff74355a0d7711891633d727ff33db54">&#9670;&nbsp;</a></span>GuessUtf8OrCesu8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::GuessUtf8OrCesu8 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UTF-8 か CESU-8 かを判定 </p>
+<p>UTF-8 と CESU-8 の紛らわしさを解消する</p>
+<p>m_bCesu8Flag が TRUE のとき CESU-8, FALSE のとき UTF-8 </p>
+
+</div>
+</div>
+<a id="a0a3a5c0e87c97998d669b4b110d7fbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3a5c0e87c97998d669b4b110d7fbc2">&#9670;&nbsp;</a></span>ScanCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::ScanCode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>テキストの文字コードを収集して整理する．</p>
+<dl class="section return"><dt>戻り値</dt><dd>入力データがない時に false </dd></dl>
+
+</div>
+</div>
+<a id="afd7dd632ae4443edd3454e77b8600e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7dd632ae4443edd3454e77b8600e46">&#9670;&nbsp;</a></span>SetEvaluation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::SetEvaluation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>eCodeId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>収集した評価値を格納</p>
+<dl class="section return"><dt>戻り値</dt><dd>　nCodeType が CODE_UNICODE, CODE_UNICODEBE の場合は m_pWcInfo へ， それ以外の場合は m_pMbInfo へ値が格納されることに注意。 </dd></dl>
+
+</div>
+</div>
+<a id="ae7b0b2b2bdb576c01dcc3aa2a818b580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b0b2b2bdb576c01dcc3aa2a818b580">&#9670;&nbsp;</a></span>SetInformation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::SetInformation </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>調査結果の情報を格納 </p>
+<p>デフォルトコンストラクタ </p>
+
+</div>
+</div>
+<a id="a1a99d17de3eb0b00e3e2f8105bc2f320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a99d17de3eb0b00e3e2f8105bc2f320">&#9670;&nbsp;</a></span>SortMBCInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CESI::SortMBCInfo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マルチバイト系の捜査結果を、ポイントが大きい順にソート。 ソートした結果は、m_apMbcInfo に格納 </p>
+<p>配列 m_pMbInfo の要素へのポインタを評価順にソートして m_ppMbInfo にセット</p>
+<p>m_pMbInfo に格納される文字コード情報の元々の順番は、m_pMbPriority[] テーブルの添え字に従う。 バブルソートは、元あった順序を比較的変更しない。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/charset/<a class="el" href="../../da/d8f/_c_e_s_i_8h_source.html">CESI.h</a></li>
+<li>sakura_core/charset/<a class="el" href="../../da/d04/_c_e_s_i_8cpp.html">CESI.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

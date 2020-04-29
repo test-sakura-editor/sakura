@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CAppNodeGroupHandle クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../de/d7f/class_c_app_node_group_handle-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CAppNodeGroupHandle クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>グループアクセサ  
+ <a href="../../d6/d03/class_c_app_node_group_handle.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/d33/_c_app_node_manager_8h_source.html">CAppNodeManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5c6ce9c6e57ffd1518a7ab2dc6363f87"><td class="memItemLeft" align="right" valign="top"><a id="a5c6ce9c6e57ffd1518a7ab2dc6363f87"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CAppNodeGroupHandle</b> (int nGroupId)</td></tr>
+<tr class="separator:a5c6ce9c6e57ffd1518a7ab2dc6363f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1b409844b27424ca72cc16bf12edd1"><td class="memItemLeft" align="right" valign="top"><a id="a7c1b409844b27424ca72cc16bf12edd1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CAppNodeGroupHandle</b> (HWND hwnd)</td></tr>
+<tr class="separator:a7c1b409844b27424ca72cc16bf12edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1fff7fc798fed8531e9fcbb4c332cc3"><td class="memItemLeft" align="right" valign="top"><a id="ae1fff7fc798fed8531e9fcbb4c332cc3"></a>
+<a class="el" href="../../d1/df4/struct_edit_node.html">EditNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTopEditNode</b> ()</td></tr>
+<tr class="separator:ae1fff7fc798fed8531e9fcbb4c332cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7722e1f79050d0a9eb6dba6c2d41dc8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/df4/struct_edit_node.html">EditNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#a7722e1f79050d0a9eb6dba6c2d41dc8b">GetEditNodeAt</a> (int nIndex)</td></tr>
+<tr class="memdesc:a7722e1f79050d0a9eb6dba6c2d41dc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定位置の編集ウィンドウ情報を取得する  <a href="../../d6/d03/class_c_app_node_group_handle.html#a7722e1f79050d0a9eb6dba6c2d41dc8b">[詳解]</a><br /></td></tr>
+<tr class="separator:a7722e1f79050d0a9eb6dba6c2d41dc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79f32e45c68883b41a44557d5ae5497"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#aa79f32e45c68883b41a44557d5ae5497">AddEditWndList</a> (HWND hWnd)</td></tr>
+<tr class="memdesc:aa79f32e45c68883b41a44557d5ae5497"><td class="mdescLeft">&#160;</td><td class="mdescRight">編集ウィンドウの登録 // 2007.06.26 ryoji nGroup引数追加  <a href="../../d6/d03/class_c_app_node_group_handle.html#aa79f32e45c68883b41a44557d5ae5497">[詳解]</a><br /></td></tr>
+<tr class="separator:aa79f32e45c68883b41a44557d5ae5497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75acdb841d6499fab5ce36a36b2863c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#a75acdb841d6499fab5ce36a36b2863c6">DeleteEditWndList</a> (HWND hWnd)</td></tr>
+<tr class="memdesc:a75acdb841d6499fab5ce36a36b2863c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">編集ウィンドウリストからの削除  <a href="../../d6/d03/class_c_app_node_group_handle.html#a75acdb841d6499fab5ce36a36b2863c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a75acdb841d6499fab5ce36a36b2863c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22ddaeaefdd9276727558cf5e6bb249"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#ab22ddaeaefdd9276727558cf5e6bb249">RequestCloseEditor</a> (<a class="el" href="../../d1/df4/struct_edit_node.html">EditNode</a> *pWndArr, int nArrCnt, BOOL bExit, BOOL bCheckConfirm, HWND hWndFrom)</td></tr>
+<tr class="memdesc:ab22ddaeaefdd9276727558cf5e6bb249"><td class="mdescLeft">&#160;</td><td class="mdescRight">いくつかのウィンドウへ終了要求を出す // 2007.02.13 ryoji 「編集の全終了」を示す引数(bExit)を追加 // 2007.06.20 ryoji nGroup引数追加  <a href="../../d6/d03/class_c_app_node_group_handle.html#ab22ddaeaefdd9276727558cf5e6bb249">[詳解]</a><br /></td></tr>
+<tr class="separator:ab22ddaeaefdd9276727558cf5e6bb249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df09629ff35f139fc660b52b50872f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#a6df09629ff35f139fc660b52b50872f9">GetEditorWindowsNum</a> (bool bExcludeClosing=true)</td></tr>
+<tr class="separator:a6df09629ff35f139fc660b52b50872f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d551d1975e912e5c61ea699a15d670"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#ab9d551d1975e912e5c61ea699a15d670">PostMessageToAllEditors</a> (UINT uMsg, WPARAM wParam, LPARAM lParam, HWND hWndLast)</td></tr>
+<tr class="separator:ab9d551d1975e912e5c61ea699a15d670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94522cbef70a2d81984d0d88ba1d3e74"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d03/class_c_app_node_group_handle.html#a94522cbef70a2d81984d0d88ba1d3e74">SendMessageToAllEditors</a> (UINT uMsg, WPARAM wParam, LPARAM lParam, HWND hWndLast)</td></tr>
+<tr class="separator:a94522cbef70a2d81984d0d88ba1d3e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4055d57e4e1a3b319e547bce2e7b5d"><td class="memItemLeft" align="right" valign="top"><a id="a0a4055d57e4e1a3b319e547bce2e7b5d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d6/d03/class_c_app_node_group_handle.html">CAppNodeGroupHandle</a> &amp;rhs) const</td></tr>
+<tr class="separator:a0a4055d57e4e1a3b319e547bce2e7b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef95979f81d12562b4c1dc97344c84a"><td class="memItemLeft" align="right" valign="top"><a id="a7ef95979f81d12562b4c1dc97344c84a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsValidGroup</b> () const</td></tr>
+<tr class="separator:a7ef95979f81d12562b4c1dc97344c84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156ada4b9e0aa72c9d2fe532e43b9c1d"><td class="memItemLeft" align="right" valign="top"><a id="a156ada4b9e0aa72c9d2fe532e43b9c1d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator int</b> () const</td></tr>
+<tr class="separator:a156ada4b9e0aa72c9d2fe532e43b9c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>グループアクセサ </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa79f32e45c68883b41a44557d5ae5497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79f32e45c68883b41a44557d5ae5497">&#9670;&nbsp;</a></span>AddEditWndList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CAppNodeGroupHandle::AddEditWndList </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>編集ウィンドウの登録 // 2007.06.26 ryoji nGroup引数追加 </p>
+<p>編集ウィンドウリストへの登録</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hWnd</td><td>[in] 登録する編集ウィンドウのハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003.06.28 MIK CRecent利用で書き換え </dd>
+<dd>
+2007.06.20 ryoji 新規ウィンドウにはグループIDを付与する </dd></dl>
+
+</div>
+</div>
+<a id="a75acdb841d6499fab5ce36a36b2863c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75acdb841d6499fab5ce36a36b2863c6">&#9670;&nbsp;</a></span>DeleteEditWndList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CAppNodeGroupHandle::DeleteEditWndList </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>編集ウィンドウリストからの削除 </p>
+<p>編集ウィンドウリストからの削除</p>
+<dl class="section date"><dt>日付</dt><dd>2003.06.28 MIK CRecent利用で書き換え </dd>
+<dd>
+2007.07.05 ryoji mutexで保護 </dd></dl>
+
+</div>
+</div>
+<a id="a7722e1f79050d0a9eb6dba6c2d41dc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7722e1f79050d0a9eb6dba6c2d41dc8b">&#9670;&nbsp;</a></span>GetEditNodeAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/df4/struct_edit_node.html">EditNode</a> * CAppNodeGroupHandle::GetEditNodeAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定位置の編集ウィンドウ情報を取得する </p>
+<p>指定位置の編集ウィンドウ情報を取得する</p>
+<dl class="section date"><dt>日付</dt><dd>2007.06.20 ryoji </dd></dl>
+
+</div>
+</div>
+<a id="a6df09629ff35f139fc660b52b50872f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df09629ff35f139fc660b52b50872f9">&#9670;&nbsp;</a></span>GetEditorWindowsNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CAppNodeGroupHandle::GetEditorWindowsNum </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bExcludeClosing</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>現在の編集ウィンドウの数を調べる</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bExcludeClosing</td><td>[in] 終了中の編集ウィンドウはカウントしない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.06.22 ryoji nGroup引数を追加 </dd>
+<dd>
+2008.04.19 ryoji bExcludeClosing引数を追加 </dd></dl>
+
+</div>
+</div>
+<a id="ab9d551d1975e912e5c61ea699a15d670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d551d1975e912e5c61ea699a15d670">&#9670;&nbsp;</a></span>PostMessageToAllEditors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CAppNodeGroupHandle::PostMessageToAllEditors </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndLast</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>全編集ウィンドウへメッセージをポストする</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.24 genta hWndLast == NULLのとき全くメッセージが送られなかった </dd>
+<dd>
+2007.06.22 ryoji nGroup引数を追加、グループ単位で順番に送る </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uMsg</td><td>ポストするメッセージ </td></tr>
+    <tr><td class="paramname">wParam</td><td>第1メッセージ パラメータ </td></tr>
+    <tr><td class="paramname">lParam</td><td>第2メッセージ パラメータ </td></tr>
+    <tr><td class="paramname">hWndLast</td><td>最後に送りたいウィンドウ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab22ddaeaefdd9276727558cf5e6bb249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22ddaeaefdd9276727558cf5e6bb249">&#9670;&nbsp;</a></span>RequestCloseEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CAppNodeGroupHandle::RequestCloseEditor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/df4/struct_edit_node.html">EditNode</a> *&#160;</td>
+          <td class="paramname"><em>pWndArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nArrCnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bExit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bCheckConfirm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndFrom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>いくつかのウィンドウへ終了要求を出す // 2007.02.13 ryoji 「編集の全終了」を示す引数(bExit)を追加 // 2007.06.20 ryoji nGroup引数追加 </p>
+<p>いくつかのウィンドウへ終了要求を出す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pWndArr</td><td>[in] EditNodeの配列。m_hWndがNULLの要素は処理しない </td></tr>
+    <tr><td class="paramname">nArrCnt</td><td>[in] pWndArrの長さ </td></tr>
+    <tr><td class="paramname">bExit</td><td>[in] TRUE: 編集の全終了 / FALSE: すべて閉じる </td></tr>
+    <tr><td class="paramname">bCheckConfirm</td><td>[in] FALSE:複数ウィンドウを閉じるときの警告を出さない / TRUE:警告を出す（設定による） </td></tr>
+    <tr><td class="paramname">hWndFrom</td><td>[in] 終了要求元のウィンドウ（警告メッセージの親となる）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.02.13 ryoji 「編集の全終了」を示す引数(bExit)を追加 </dd>
+<dd>
+2007.06.22 ryoji nGroup引数を追加 </dd>
+<dd>
+2008.11.22 syat 全て→いくつかに変更。複数ウィンドウを閉じる時の警告メッセージを追加 </dd></dl>
+
+</div>
+</div>
+<a id="a94522cbef70a2d81984d0d88ba1d3e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94522cbef70a2d81984d0d88ba1d3e74">&#9670;&nbsp;</a></span>SendMessageToAllEditors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CAppNodeGroupHandle::SendMessageToAllEditors </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndLast</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>全編集ウィンドウへメッセージを送る</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.24 genta m_hWndLast == NULLのとき全くメッセージが送られなかった </dd>
+<dd>
+2007.06.22 ryoji nGroup引数を追加、グループ単位で順番に送る </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/env/<a class="el" href="../../d4/d33/_c_app_node_manager_8h_source.html">CAppNodeManager.h</a></li>
+<li>sakura_core/env/<a class="el" href="../../d2/df6/_c_app_node_manager_8cpp.html">CAppNodeManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

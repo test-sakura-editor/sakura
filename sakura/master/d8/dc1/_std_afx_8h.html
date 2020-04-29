@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/StdAfx.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">StdAfx.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d2/d49/global_8h_source.html">_main/global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d2b/build__config_8h_source.html">config/build_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d43/maxdata_8h_source.html">config/maxdata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d9d/system__constants_8h_source.html">config/system_constants.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/df2/app__constants_8h_source.html">config/app_constants.h</a>&quot;</code><br />
+<code>#include &lt;CommCtrl.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;wchar.h&gt;</code><br />
+<code>#include &lt;HtmlHelp.h&gt;</code><br />
+<code>#include &lt;ObjIdl.h&gt;</code><br />
+<code>#include &lt;ShlObj.h&gt;</code><br />
+<code>#include &lt;ShellAPI.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;io.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d58/_debug1_8h_source.html">debug/Debug1.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/dc0/_debug2_8h_source.html">debug/Debug2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dd7/_debug3_8h_source.html">debug/Debug3.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d71/primitive_8h_source.html">basis/primitive.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dec/std__macro_8h_source.html">util/std_macro.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d33/_c_my_string_8h_source.html">basis/CMyString.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d64/_c_my_rect_8h_source.html">basis/CMyRect.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/df1/_c_my_point_8h_source.html">basis/CMyPoint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d20/_c_my_size_8h_source.html">basis/CMySize.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/db9/_sakura_basis_8h_source.html">basis/SakuraBasis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">mem/CNativeW.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d6b/_c_native_a_8h_source.html">mem/CNativeA.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d92/string__ex_8h_source.html">util/string_ex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d15/_message_box_f_8h_source.html">util/MessageBoxF.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/db9/_c_select_lang_8h_source.html">CSelectLang.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dc5/_string__define_8h_source.html">String_define.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d4a/_std_control_8h_source.html">apiwrap/StdControl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d44/_common_control_8h_source.html">apiwrap/CommonControl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/df5/_std_api_8h_source.html">apiwrap/StdApi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/ddb/tchar__convert_8h_source.html">util/tchar_convert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dbd/codechecker_8h_source.html">charset/codechecker.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h_source.html">env/DLLSHAREDATA.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d8/dc1/_std_afx_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a8a7c30a576d5706b6c0821834d01cbbc"><td class="memItemLeft" align="right" valign="top"><a id="a8a7c30a576d5706b6c0821834d01cbbc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STRICT</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a8a7c30a576d5706b6c0821834d01cbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f918755b601cf4bffca775992e6fb90"><td class="memItemLeft" align="right" valign="top"><a id="a9f918755b601cf4bffca775992e6fb90"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOMINMAX</b></td></tr>
+<tr class="separator:a9f918755b601cf4bffca775992e6fb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08ec37a8c99d747fb60fa15bc28678b"><td class="memItemLeft" align="right" valign="top"><a id="af08ec37a8c99d747fb60fa15bc28678b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_CRT_SECURE_NO_WARNINGS</b></td></tr>
+<tr class="separator:af08ec37a8c99d747fb60fa15bc28678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da9a141c9a2e0739d60cce66b64c9b0"><td class="memItemLeft" align="right" valign="top"><a id="a7da9a141c9a2e0739d60cce66b64c9b0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_char</b>&#160;&#160;&#160;(char*)malloc</td></tr>
+<tr class="separator:a7da9a141c9a2e0739d60cce66b64c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4676f115b23cc7e15421bdf616ef471e"><td class="memItemLeft" align="right" valign="top"><a id="a4676f115b23cc7e15421bdf616ef471e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalLockChar</b>&#160;&#160;&#160;(char*)::GlobalLock</td></tr>
+<tr class="separator:a4676f115b23cc7e15421bdf616ef471e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb1af42182ba6829895e8f797e2d9fb"><td class="memItemLeft" align="right" valign="top"><a id="a3bb1af42182ba6829895e8f797e2d9fb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalLockUChar</b>&#160;&#160;&#160;(unsigned char*)::GlobalLock</td></tr>
+<tr class="separator:a3bb1af42182ba6829895e8f797e2d9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7858f7e9eaa71ac25fb1b01f50d00c8e"><td class="memItemLeft" align="right" valign="top"><a id="a7858f7e9eaa71ac25fb1b01f50d00c8e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalLockWChar</b>&#160;&#160;&#160;(wchar_t*)::GlobalLock</td></tr>
+<tr class="separator:a7858f7e9eaa71ac25fb1b01f50d00c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e05812ba63b34231ab2760c08b11a81"><td class="memItemLeft" align="right" valign="top"><a id="a7e05812ba63b34231ab2760c08b11a81"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalLockBYTE</b>&#160;&#160;&#160;(BYTE*)::GlobalLock</td></tr>
+<tr class="separator:a7e05812ba63b34231ab2760c08b11a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0464f630a65a3fe49f644d3b970e4b9"><td class="memItemLeft" align="right" valign="top"><a id="ad0464f630a65a3fe49f644d3b970e4b9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SAKURA_PCH_MODE_DLLSHARE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ad0464f630a65a3fe49f644d3b970e4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

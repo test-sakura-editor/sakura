@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/colors/CColor_Found.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li><li class="navelem"><a class="el" href="../../dir_a0464b42309a0d60a8707e10cc2a754c.html">colors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CColor_Found.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d8f/_c_color___found_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d82/_c_color_strategy_8h.html">view/colors/CColorStrategy.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_c_color___select.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d3b/class_c_color___select.html">CColor_Select</a> final : <span class="keyword">public</span> <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_c_color___select.html#ae9df61aef2dd9ebb190fbc6eab926c64">   31</a></span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> <a class="code" href="../../d2/d3b/class_c_color___select.html#ae9df61aef2dd9ebb190fbc6eab926c64">GetStrategyColor</a>()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a46d7706aa855d6acc952945433ae910d">COLORIDX_SELECT</a>; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//色替え</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d2/d3b/class_c_color___select.html#ac99a74ca221ea2fd96051610a9a72fce">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d3b/class_c_color___select.html#ac99a74ca221ea2fd96051610a9a72fce">InitStrategyStatus</a>()<span class="keyword"> override</span>{ }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> BeginColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> Disp()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> EndColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> BeginColorEx(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos, CLayoutInt, <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>*);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//イベント</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> OnStartScanLogic() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    CLayoutInt      m_nSelectLine;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    CLogicInt       m_nSelectStart;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    CLogicInt       m_nSelectEnd;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../dc/d64/class_c_color___found.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d64/class_c_color___found.html">CColor_Found</a> final : <span class="keyword">public</span> <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../dc/d64/class_c_color___found.html">CColor_Found</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d64/class_c_color___found.html#ad2fbc6d6834bd35813a7095196c3ea55">   52</a></span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> <a class="code" href="../../dc/d64/class_c_color___found.html#ad2fbc6d6834bd35813a7095196c3ea55">GetStrategyColor</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> this-&gt;validColorNum != 0 ? this-&gt;highlightColors[ (m_nSearchResult - 1) % this-&gt;validColorNum ] : <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3ab91fcfe1f6d018e826a58a4ebde89251">COLORIDX_DEFAULT</a>; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//色替え</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d64/class_c_color___found.html#ac417e8145d9080c801938865f9244096">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d64/class_c_color___found.html#ac417e8145d9080c801938865f9244096">InitStrategyStatus</a>()<span class="keyword"> override</span>{ } <span class="comment">//############要検証</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> BeginColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> Disp()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> EndColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//イベント</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> OnStartScanLogic() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span>             m_nSearchResult;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    CLogicInt       m_nSearchStart;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    CLogicInt       m_nSearchEnd;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> highlightColors[ COLORIDX_SEARCHTAIL - <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a644dbb4c76d890c9fd5af004eea2024a">COLORIDX_SEARCH</a> + 1 ]; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">unsigned</span> validColorNum; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a></div><div class="ttdeci">EColorIndexType</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:41</div></div>
+<div class="ttc" id="aclass_c_color___found_html_ad2fbc6d6834bd35813a7095196c3ea55"><div class="ttname"><a href="../../dc/d64/class_c_color___found.html#ad2fbc6d6834bd35813a7095196c3ea55">CColor_Found::GetStrategyColor</a></div><div class="ttdeci">EColorIndexType GetStrategyColor() const override</div><div class="ttdoc">色定義</div><div class="ttdef"><b>Definition:</b> CColor_Found.h:52</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_color___select_html_ae9df61aef2dd9ebb190fbc6eab926c64"><div class="ttname"><a href="../../d2/d3b/class_c_color___select.html#ae9df61aef2dd9ebb190fbc6eab926c64">CColor_Select::GetStrategyColor</a></div><div class="ttdeci">EColorIndexType GetStrategyColor() const override</div><div class="ttdoc">色定義</div><div class="ttdef"><b>Definition:</b> CColor_Found.h:31</div></div>
+<div class="ttc" id="aclass_c_color___select_html"><div class="ttname"><a href="../../d2/d3b/class_c_color___select.html">CColor_Select</a></div><div class="ttdef"><b>Definition:</b> CColor_Found.h:29</div></div>
+<div class="ttc" id="aclass_c_color___select_html_ac99a74ca221ea2fd96051610a9a72fce"><div class="ttname"><a href="../../d2/d3b/class_c_color___select.html#ac99a74ca221ea2fd96051610a9a72fce">CColor_Select::InitStrategyStatus</a></div><div class="ttdeci">void InitStrategyStatus() override</div><div class="ttdoc">色切り替え開始を検出したら、その直前までの描画を行い、さらに色設定を行う。</div><div class="ttdef"><b>Definition:</b> CColor_Found.h:33</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3a46d7706aa855d6acc952945433ae910d"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a46d7706aa855d6acc952945433ae910d">COLORIDX_SELECT</a></div><div class="ttdeci">@ COLORIDX_SELECT</div><div class="ttdoc">選択範囲</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:63</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3a644dbb4c76d890c9fd5af004eea2024a"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a644dbb4c76d890c9fd5af004eea2024a">COLORIDX_SEARCH</a></div><div class="ttdeci">@ COLORIDX_SEARCH</div><div class="ttdoc">検索文字列</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:64</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3ab91fcfe1f6d018e826a58a4ebde89251"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3ab91fcfe1f6d018e826a58a4ebde89251">COLORIDX_DEFAULT</a></div><div class="ttdeci">@ COLORIDX_DEFAULT</div><div class="ttdoc">デフォルト</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:112</div></div>
+<div class="ttc" id="aclass_c_color_strategy_html"><div class="ttname"><a href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a></div><div class="ttdef"><b>Definition:</b> CColorStrategy.h:135</div></div>
+<div class="ttc" id="a_c_color_strategy_8h_html"><div class="ttname"><a href="../../d7/d82/_c_color_strategy_8h.html">CColorStrategy.h</a></div></div>
+<div class="ttc" id="aclass_c_color___found_html_ac417e8145d9080c801938865f9244096"><div class="ttname"><a href="../../dc/d64/class_c_color___found.html#ac417e8145d9080c801938865f9244096">CColor_Found::InitStrategyStatus</a></div><div class="ttdeci">void InitStrategyStatus() override</div><div class="ttdoc">色切り替え開始を検出したら、その直前までの描画を行い、さらに色設定を行う。</div><div class="ttdef"><b>Definition:</b> CColor_Found.h:55</div></div>
+<div class="ttc" id="aclass_c_layout_html"><div class="ttname"><a href="../../db/d1c/class_c_layout.html">CLayout</a></div><div class="ttdef"><b>Definition:</b> CLayout.h:32</div></div>
+<div class="ttc" id="aclass_c_color___found_html"><div class="ttname"><a href="../../dc/d64/class_c_color___found.html">CColor_Found</a></div><div class="ttdef"><b>Definition:</b> CColor_Found.h:49</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

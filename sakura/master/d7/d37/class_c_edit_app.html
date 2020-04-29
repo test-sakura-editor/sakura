@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CEditApp クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d1/dd0/class_c_edit_app-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CEditApp クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>エディタ部分アプリケーションクラス。CNormalProcess1個につき、1個存在。  
+ <a href="../../d7/d37/class_c_edit_app.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&gt;</code></p>
+<div class="dynheader">
+CEditApp の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d37/class_c_edit_app.png" usemap="#CEditApp_map" alt=""/>
+  <map id="CEditApp_map" name="CEditApp_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CEditApp &gt;" shape="rect" coords="0,0,148,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2e34ba90923ed1ba93e961a51ba302fb"><td class="memItemLeft" align="right" valign="top"><a id="a2e34ba90923ed1ba93e961a51ba302fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HINSTANCE hInst, int)</td></tr>
+<tr class="separator:a2e34ba90923ed1ba93e961a51ba302fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889ec73b3d5f0902e882632992f7e42f"><td class="memItemLeft" align="right" valign="top"><a id="a889ec73b3d5f0902e882632992f7e42f"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/class_c_edit_app.html#a889ec73b3d5f0902e882632992f7e42f">GetAppInstance</a> () const</td></tr>
+<tr class="memdesc:a889ec73b3d5f0902e882632992f7e42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスハンドル取得 <br /></td></tr>
+<tr class="separator:a889ec73b3d5f0902e882632992f7e42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c70bf13fc8e8dbf45f4b4a484e86d1"><td class="memItemLeft" align="right" valign="top"><a id="a08c70bf13fc8e8dbf45f4b4a484e86d1"></a>
+<a class="el" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/class_c_edit_app.html#a08c70bf13fc8e8dbf45f4b4a484e86d1">GetEditWindow</a> ()</td></tr>
+<tr class="memdesc:a08c70bf13fc8e8dbf45f4b4a484e86d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ取得 <br /></td></tr>
+<tr class="separator:a08c70bf13fc8e8dbf45f4b4a484e86d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aedb83dda2a3f9083a8227deb3ab80e"><td class="memItemLeft" align="right" valign="top"><a id="a4aedb83dda2a3f9083a8227deb3ab80e"></a>
+<a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDocument</b> ()</td></tr>
+<tr class="separator:a4aedb83dda2a3f9083a8227deb3ab80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2b493c57f8d381acc97c79ff22a42c"><td class="memItemLeft" align="right" valign="top"><a id="aca2b493c57f8d381acc97c79ff22a42c"></a>
+<a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetIcons</b> ()</td></tr>
+<tr class="separator:aca2b493c57f8d381acc97c79ff22a42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c15c2c65fb02a0da9c341da2287015"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/class_c_edit_app.html#a39c15c2c65fb02a0da9c341da2287015">OpenPropertySheet</a> (int nPageNum)</td></tr>
+<tr class="separator:a39c15c2c65fb02a0da9c341da2287015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f387b0d9baddbf7780b51bd4a02fd97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/class_c_edit_app.html#a4f387b0d9baddbf7780b51bd4a02fd97">OpenPropertySheetTypes</a> (int nPageNum, <a class="el" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> nSettingType)</td></tr>
+<tr class="separator:a4f387b0d9baddbf7780b51bd4a02fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d7/d37/class_c_edit_app.html">CEditApp</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a91f8957b5f63839a9d746a6eeebc78b4"><td class="memItemLeft" align="right" valign="top"><a id="a91f8957b5f63839a9d746a6eeebc78b4"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hInst</b></td></tr>
+<tr class="separator:a91f8957b5f63839a9d746a6eeebc78b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a15341441f84de490c6ee4725e1bfad"><td class="memItemLeft" align="right" valign="top"><a id="a3a15341441f84de490c6ee4725e1bfad"></a>
+<a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcEditDoc</b></td></tr>
+<tr class="separator:a3a15341441f84de490c6ee4725e1bfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4b5fcce20aa4e499e595624aa78121"><td class="memItemLeft" align="right" valign="top"><a id="a1b4b5fcce20aa4e499e595624aa78121"></a>
+<a class="el" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcEditWnd</b></td></tr>
+<tr class="separator:a1b4b5fcce20aa4e499e595624aa78121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf137b1e0fab3a616a5cb6e9c9f12340"><td class="memItemLeft" align="right" valign="top"><a id="adf137b1e0fab3a616a5cb6e9c9f12340"></a>
+<a class="el" href="../../d2/d76/class_c_load_agent.html">CLoadAgent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcLoadAgent</b></td></tr>
+<tr class="separator:adf137b1e0fab3a616a5cb6e9c9f12340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2134d94ce5cf6ebdae874a0060c25a9b"><td class="memItemLeft" align="right" valign="top"><a id="a2134d94ce5cf6ebdae874a0060c25a9b"></a>
+<a class="el" href="../../d4/d7d/class_c_save_agent.html">CSaveAgent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcSaveAgent</b></td></tr>
+<tr class="separator:a2134d94ce5cf6ebdae874a0060c25a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee70ecf691650f9e2bea2b7ad4be64e"><td class="memItemLeft" align="right" valign="top"><a id="a2ee70ecf691650f9e2bea2b7ad4be64e"></a>
+<a class="el" href="../../d2/dc2/class_c_visual_progress.html">CVisualProgress</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcVisualProgress</b></td></tr>
+<tr class="separator:a2ee70ecf691650f9e2bea2b7ad4be64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ceee619d30001fd51898d8b8bd0aa8"><td class="memItemLeft" align="right" valign="top"><a id="aa3ceee619d30001fd51898d8b8bd0aa8"></a>
+<a class="el" href="../../d5/d6f/class_c_mru_listener.html">CMruListener</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcMruListener</b></td></tr>
+<tr class="separator:aa3ceee619d30001fd51898d8b8bd0aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4e75044fba301cb5da4fc3bf88fec0"><td class="memItemLeft" align="right" valign="top"><a id="a0b4e75044fba301cb5da4fc3bf88fec0"></a>
+<a class="el" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcSMacroMgr</b></td></tr>
+<tr class="separator:a0b4e75044fba301cb5da4fc3bf88fec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3660f867ffd1d8a9b711a56606f1458e"><td class="memItemLeft" align="right" valign="top"><a id="a3660f867ffd1d8a9b711a56606f1458e"></a>
+<a class="el" href="../../d5/df9/class_c_grep_agent.html">CGrepAgent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcGrepAgent</b></td></tr>
+<tr class="separator:a3660f867ffd1d8a9b711a56606f1458e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933a866e573c34f4d081bc72baf833fd"><td class="memItemLeft" align="right" valign="top"><a id="a933a866e573c34f4d081bc72baf833fd"></a>
+<a class="el" href="../../d0/ddd/class_c_sound_set.html">CSoundSet</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cSoundSet</b></td></tr>
+<tr class="separator:a933a866e573c34f4d081bc72baf833fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48009ba26a4111d2726e14cdea4cb2f"><td class="memItemLeft" align="right" valign="top"><a id="aa48009ba26a4111d2726e14cdea4cb2f"></a>
+<a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d37/class_c_edit_app.html#aa48009ba26a4111d2726e14cdea4cb2f">m_cIcons</a></td></tr>
+<tr class="memdesc:aa48009ba26a4111d2726e14cdea4cb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image List <br /></td></tr>
+<tr class="separator:aa48009ba26a4111d2726e14cdea4cb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a8f0ce9543170ca07f3c0200d443211b9"><td class="memItemLeft" align="right" valign="top"><a id="a8f0ce9543170ca07f3c0200d443211b9"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CEditApp &gt;</b></td></tr>
+<tr class="separator:a8f0ce9543170ca07f3c0200d443211b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>エディタ部分アプリケーションクラス。CNormalProcess1個につき、1個存在。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a39c15c2c65fb02a0da9c341da2287015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c15c2c65fb02a0da9c341da2287015">&#9670;&nbsp;</a></span>OpenPropertySheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CEditApp::OpenPropertySheet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPageNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>共通設定 プロパティシート </p>
+
+</div>
+</div>
+<a id="a4f387b0d9baddbf7780b51bd4a02fd97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f387b0d9baddbf7780b51bd4a02fd97">&#9670;&nbsp;</a></span>OpenPropertySheetTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CEditApp::OpenPropertySheetTypes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPageNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a>&#160;</td>
+          <td class="paramname"><em>nSettingType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>タイプ別設定 プロパティシート </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a></li>
+<li>sakura_core/<a class="el" href="../../d8/dda/_c_edit_app_8cpp.html">CEditApp.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

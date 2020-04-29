@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CUxTheme クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../da/dac/class_c_ux_theme-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CUxTheme クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>UxTheme 動的ロード  
+ <a href="../../dc/d12/class_c_ux_theme.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/d62/_c_ux_theme_8h_source.html">CUxTheme.h</a>&gt;</code></p>
+<div class="dynheader">
+CUxTheme の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d12/class_c_ux_theme.png" usemap="#CUxTheme_map" alt=""/>
+  <map id="CUxTheme_map" name="CUxTheme_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CUxTheme &gt;" shape="rect" coords="0,0,155,24"/>
+<area href="../../da/dc8/class_c_dll_imp.html" title="DLLの動的なLoad/Unloadを行うためのクラス" alt="CDllImp" shape="rect" coords="165,0,320,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a12b90b2b36e87c948173e9217dc57ff4"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a12b90b2b36e87c948173e9217dc57ff4">IsThemeActive</a> (VOID)</td></tr>
+<tr class="separator:a12b90b2b36e87c948173e9217dc57ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b86872f77a65e83c74504c246c2d72"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a61b86872f77a65e83c74504c246c2d72">SetWindowTheme</a> (HWND hwnd, LPCWSTR pszSubAppName, LPCWSTR pszSubIdList)</td></tr>
+<tr class="separator:a61b86872f77a65e83c74504c246c2d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2559b81ec218394dc7b70799eae3299"><td class="memItemLeft" align="right" valign="top">HTHEME&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#ab2559b81ec218394dc7b70799eae3299">OpenThemeData</a> (HWND hwnd, LPCWSTR pszClassList)</td></tr>
+<tr class="separator:ab2559b81ec218394dc7b70799eae3299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daa203d15b873c19051f828de215ca8"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a2daa203d15b873c19051f828de215ca8">DrawThemeBackground</a> (HTHEME htheme, HDC hdc, int iPartId, int iStateId, RECT *prc, RECT *prcClip)</td></tr>
+<tr class="separator:a2daa203d15b873c19051f828de215ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c66ef315aca2ceb6b38a1c971c75be"><td class="memItemLeft" align="right" valign="top">HRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a96c66ef315aca2ceb6b38a1c971c75be">DrawThemeParentBackground</a> (HWND hwnd, HDC hdc, RECT *prc)</td></tr>
+<tr class="separator:a96c66ef315aca2ceb6b38a1c971c75be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b72f16d634059c2fa68a588873696a"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a52b72f16d634059c2fa68a588873696a">IsThemeBackgroundPartiallyTransparent</a> (HTHEME htheme, int iPartId, int iStateId)</td></tr>
+<tr class="separator:a52b72f16d634059c2fa68a588873696a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memItemLeft" align="right" valign="top"><a id="a89601f2b3b9578c93a7d4b8d3368a1e8"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a> () const</td></tr>
+<tr class="memdesc:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの関数を呼び出せるか状態どうか <br /></td></tr>
+<tr class="separator:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbb9983cd44701e32e45f12449fae2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">InitDll</a> (LPCWSTR pszSpecifiedDllName=NULL)</td></tr>
+<tr class="memdesc:a9dbb9983cd44701e32e45f12449fae2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLロードと初期処理  <a href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dbb9983cd44701e32e45f12449fae2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89342932a0061f0460eb665addfc3379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">DeinitDll</a> (bool force=false)</td></tr>
+<tr class="memdesc:a89342932a0061f0460eb665addfc3379"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理とDLLアンロード  <a href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">[詳解]</a><br /></td></tr>
+<tr class="separator:a89342932a0061f0460eb665addfc3379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memItemLeft" align="right" valign="top"><a id="ab7c2f0c5505877f58d19dce62ae69ab1"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">GetInstance</a> () const</td></tr>
+<tr class="memdesc:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスハンドルの取得 <br /></td></tr>
+<tr class="separator:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15922171bb90c760b36830f6277a9cd5"><td class="memItemLeft" align="right" valign="top"><a id="a15922171bb90c760b36830f6277a9cd5"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">GetLoadedDllName</a> () const</td></tr>
+<tr class="memdesc:a15922171bb90c760b36830f6277a9cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード済みDLLファイル名の取得。ロードされていない (またはロードに失敗した) 場合は NULL を返す。 <br /></td></tr>
+<tr class="separator:a15922171bb90c760b36830f6277a9cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../dc/d12/class_c_ux_theme.html">CUxTheme</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a40e2d981e4a2a3d8ec00a0ae7525cf8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a40e2d981e4a2a3d8ec00a0ae7525cf8e">InitThemeDll</a> (WCHAR *str=NULL)</td></tr>
+<tr class="separator:a40e2d981e4a2a3d8ec00a0ae7525cf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bad2900e9abc82c3c1a494534f884fd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a0bad2900e9abc82c3c1a494534f884fd">InitDllImp</a> ()</td></tr>
+<tr class="memdesc:a0bad2900e9abc82c3c1a494534f884fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの初期化  <a href="../../dc/d12/class_c_ux_theme.html#a0bad2900e9abc82c3c1a494534f884fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a0bad2900e9abc82c3c1a494534f884fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9ed134309d8936dbccd4d9fddad868"><td class="memItemLeft" align="right" valign="top">virtual LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d12/class_c_ux_theme.html#a0e9ed134309d8936dbccd4d9fddad868">GetDllNameImp</a> (int nIndex)</td></tr>
+<tr class="separator:a0e9ed134309d8936dbccd4d9fddad868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ab535418983d1d6c8e68ae08a9c72c"><td class="memItemLeft" align="right" valign="top"><a id="a53ab535418983d1d6c8e68ae08a9c72c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOL</b> (WINAPI *m_pfnIsThemeActive)(VOID)</td></tr>
+<tr class="separator:a53ab535418983d1d6c8e68ae08a9c72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7aafc83c7341909a71824817ac4619"><td class="memItemLeft" align="right" valign="top"><a id="a5c7aafc83c7341909a71824817ac4619"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HRESULT</b> (WINAPI *m_pfnSetWindowTheme)(HWND hwnd</td></tr>
+<tr class="separator:a5c7aafc83c7341909a71824817ac4619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00783f6e9144414a84a10b9d227de2c1"><td class="memItemLeft" align="right" valign="top"><a id="a00783f6e9144414a84a10b9d227de2c1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HTHEME</b> (WINAPI *m_pfnOpenThemeData)(HWND hwnd</td></tr>
+<tr class="separator:a00783f6e9144414a84a10b9d227de2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d59645c434752b2ce9df937d660c7"><td class="memItemLeft" align="right" valign="top"><a id="a6c0d59645c434752b2ce9df937d660c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HRESULT</b> (WINAPI *m_pfnDrawThemeBackground)(HTHEME htheme</td></tr>
+<tr class="separator:a6c0d59645c434752b2ce9df937d660c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4917ca97f45921d2517d6bd01ba5c5ed"><td class="memItemLeft" align="right" valign="top"><a id="a4917ca97f45921d2517d6bd01ba5c5ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HRESULT</b> (WINAPI *m_pfnDrawThemeParentBackground)(HWND hwnd</td></tr>
+<tr class="separator:a4917ca97f45921d2517d6bd01ba5c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961ee1fe296285ba7277b2cd409008fa"><td class="memItemLeft" align="right" valign="top"><a id="a961ee1fe296285ba7277b2cd409008fa"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BOOL</b> (WINAPI *m_pfnIsThemeBackgroundPartiallyTransparent)(HTHEME htheme</td></tr>
+<tr class="separator:a961ee1fe296285ba7277b2cd409008fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a992c613d9648deffdc65c5f79409c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">DeinitDllImp</a> ()</td></tr>
+<tr class="memdesc:ab1a992c613d9648deffdc65c5f79409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数の初期化  <a href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1a992c613d9648deffdc65c5f79409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacac64e6dda58142e17ddc09d91e213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">RegisterEntries</a> (const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a> table[])</td></tr>
+<tr class="separator:aaacac64e6dda58142e17ddc09d91e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:aa5e06b06a03ef9ad10d5f345bc33d386"><td class="memItemLeft" align="right" valign="top"><a id="aa5e06b06a03ef9ad10d5f345bc33d386"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bInitialized</b></td></tr>
+<tr class="separator:aa5e06b06a03ef9ad10d5f345bc33d386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33a78f109262759d924b2c65c5e5554"><td class="memItemLeft" align="right" valign="top"><a id="ac33a78f109262759d924b2c65c5e5554"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><b>pszSubAppName</b></td></tr>
+<tr class="separator:ac33a78f109262759d924b2c65c5e5554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586051ec051f6a82ef617980137f37ec"><td class="memItemLeft" align="right" valign="top"><a id="a586051ec051f6a82ef617980137f37ec"></a>
+LPCWSTR LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><b>pszSubIdList</b></td></tr>
+<tr class="separator:a586051ec051f6a82ef617980137f37ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2fd0f912b6b3a9fd3314e1e986ff45"><td class="memItemLeft" align="right" valign="top"><a id="afa2fd0f912b6b3a9fd3314e1e986ff45"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><b>pszClassList</b></td></tr>
+<tr class="separator:afa2fd0f912b6b3a9fd3314e1e986ff45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac549e5a9594ff20e6a0bf91b56c6ceb9"><td class="memItemLeft" align="right" valign="top"><a id="ac549e5a9594ff20e6a0bf91b56c6ceb9"></a>
+HDC&#160;</td><td class="memItemRight" valign="bottom"><b>hdc</b></td></tr>
+<tr class="separator:ac549e5a9594ff20e6a0bf91b56c6ceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33ff88e86a28a8d99207886d4872f85"><td class="memItemLeft" align="right" valign="top"><a id="af33ff88e86a28a8d99207886d4872f85"></a>
+HDC int&#160;</td><td class="memItemRight" valign="bottom"><b>iPartId</b></td></tr>
+<tr class="separator:af33ff88e86a28a8d99207886d4872f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bdb8d53933acce349721b197ae4582"><td class="memItemLeft" align="right" valign="top"><a id="a54bdb8d53933acce349721b197ae4582"></a>
+HDC int int&#160;</td><td class="memItemRight" valign="bottom"><b>iStateId</b></td></tr>
+<tr class="separator:a54bdb8d53933acce349721b197ae4582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320754a989957d0d3b7cea8e5dc7089c"><td class="memItemLeft" align="right" valign="top"><a id="a320754a989957d0d3b7cea8e5dc7089c"></a>
+HDC int int RECT *&#160;</td><td class="memItemRight" valign="bottom"><b>prc</b></td></tr>
+<tr class="separator:a320754a989957d0d3b7cea8e5dc7089c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdf199ec750acea27f1abfa0a410f50"><td class="memItemLeft" align="right" valign="top"><a id="a9cdf199ec750acea27f1abfa0a410f50"></a>
+HDC int int RECT RECT *&#160;</td><td class="memItemRight" valign="bottom"><b>prcClip</b></td></tr>
+<tr class="separator:a9cdf199ec750acea27f1abfa0a410f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1988e02de0130fb3c33be66ef7ab8afd"><td class="memItemLeft" align="right" valign="top"><a id="a1988e02de0130fb3c33be66ef7ab8afd"></a>
+HDC RECT *&#160;</td><td class="memItemRight" valign="bottom"><b>prc</b></td></tr>
+<tr class="separator:a1988e02de0130fb3c33be66ef7ab8afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41074e98fc0e3fc1dfe7e686f5cfc2a6"><td class="memItemLeft" align="right" valign="top"><a id="a41074e98fc0e3fc1dfe7e686f5cfc2a6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>iPartId</b></td></tr>
+<tr class="separator:a41074e98fc0e3fc1dfe7e686f5cfc2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35c8194176ffd0c84ba779b44a86ffe"><td class="memItemLeft" align="right" valign="top"><a id="aa35c8194176ffd0c84ba779b44a86ffe"></a>
+int int&#160;</td><td class="memItemRight" valign="bottom"><b>iStateId</b></td></tr>
+<tr class="separator:aa35c8194176ffd0c84ba779b44a86ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a30616483858e87812ce706651233c3ea"><td class="memItemLeft" align="right" valign="top"><a id="a30616483858e87812ce706651233c3ea"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CUxTheme &gt;</b></td></tr>
+<tr class="separator:a30616483858e87812ce706651233c3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>UxTheme 動的ロード </p>
+<p>UxTheme コンポーネントの動的ロードをサポートするクラス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a89342932a0061f0460eb665addfc3379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89342932a0061f0460eb665addfc3379">&#9670;&nbsp;</a></span>DeinitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理とDLLアンロード </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>[in] 終了処理に失敗してもDLLを解放するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1a992c613d9648deffdc65c5f79409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a992c613d9648deffdc65c5f79409c">&#9670;&nbsp;</a></span>DeinitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関数の初期化 </p>
+<p>DLLのアンロードを行う直前に呼び出される．メモリの解放などを 行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返したときはDLLのUnloadは行われない． </dd></dl>
+<dl class="section user"><dt>注意</dt><dd>デストラクタからDeinitDll及びDeinitDllImpが呼び出されたときは ポリモーフィズムが行われないためにサブクラスのDeinitDllImpが呼び出されない。 そのため、サブクラスのデストラクタではDeinitDllImpを明示的に呼び出す必要がある。</dd></dl>
+<p>DeinitDllがデストラクタ以外から呼び出される場合はDeinitDllImpは仮想関数として サブクラスのものが呼び出され、デストラクタは当然呼び出されないので DeinitDllImpそのものは必要である。</p>
+<p>デストラクタからDeinitDllImpを呼ぶときは、初期化されているという保証がないので 呼び出し前にIsAvailableによる確認を必ず行うこと。</p>
+<dl class="section date"><dt>日付</dt><dd>2002.04.15 genta 注意書き追加</dd></dl>
+<p>実装を省略できるようにするため、空の関数を用意しておく </p>
+
+<p><a class="el" href="../../da/deb/class_c_migemo.html#af837903bc4bbdaef81f7e5ba14dafdf5">CMigemo</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a2daa203d15b873c19051f828de215ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2daa203d15b873c19051f828de215ca8">&#9670;&nbsp;</a></span>DrawThemeBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CUxTheme::DrawThemeBackground </td>
+          <td>(</td>
+          <td class="paramtype">HTHEME&#160;</td>
+          <td class="paramname"><em>htheme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HDC&#160;</td>
+          <td class="paramname"><em>hdc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPartId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStateId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RECT *&#160;</td>
+          <td class="paramname"><em>prc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RECT *&#160;</td>
+          <td class="paramname"><em>prcClip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SetWindowTheme API Wrapper </p>
+
+</div>
+</div>
+<a id="a96c66ef315aca2ceb6b38a1c971c75be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c66ef315aca2ceb6b38a1c971c75be">&#9670;&nbsp;</a></span>DrawThemeParentBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CUxTheme::DrawThemeParentBackground </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HDC&#160;</td>
+          <td class="paramname"><em>hdc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RECT *&#160;</td>
+          <td class="paramname"><em>prc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SetWindowTheme API Wrapper </p>
+
+</div>
+</div>
+<a id="a0e9ed134309d8936dbccd4d9fddad868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9ed134309d8936dbccd4d9fddad868">&#9670;&nbsp;</a></span>GetDllNameImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR CUxTheme::GetDllNameImp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UxTheme のファイル名を渡す </p>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a9dbb9983cd44701e32e45f12449fae2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb9983cd44701e32e45f12449fae2a">&#9670;&nbsp;</a></span>InitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a> CDllImp::InitDll </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSpecifiedDllName</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLロードと初期処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSpecifiedDllName</td><td>[in] クラスが定義しているDLL名以外のDLLを読み込みたいときに、そのDLL名を指定。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bad2900e9abc82c3c1a494534f884fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bad2900e9abc82c3c1a494534f884fd">&#9670;&nbsp;</a></span>InitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CUxTheme::InitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLの初期化 </p>
+<p>DLLのロードに成功した直後に呼び出される．エントリポイントの 確認などを行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返した場合は、読み込んだDLLを解放する． </dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a40e2d981e4a2a3d8ec00a0ae7525cf8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e2d981e4a2a3d8ec00a0ae7525cf8e">&#9670;&nbsp;</a></span>InitThemeDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CUxTheme::InitThemeDll </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>str</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>DLL のロード</p>
+<p>一度しか LoadLibrary() 実行しないこと以外は CDllImp::Init() と同じ （UxTheme 未対応 OS での LoadLibrary() 失敗の繰返しを防ぐ）</p>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.04.01 ryoji 新規 </dd></dl>
+
+</div>
+</div>
+<a id="a12b90b2b36e87c948173e9217dc57ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b90b2b36e87c948173e9217dc57ff4">&#9670;&nbsp;</a></span>IsThemeActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CUxTheme::IsThemeActive </td>
+          <td>(</td>
+          <td class="paramtype">VOID&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>IsThemeActive API Wrapper </p>
+
+</div>
+</div>
+<a id="a52b72f16d634059c2fa68a588873696a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b72f16d634059c2fa68a588873696a">&#9670;&nbsp;</a></span>IsThemeBackgroundPartiallyTransparent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CUxTheme::IsThemeBackgroundPartiallyTransparent </td>
+          <td>(</td>
+          <td class="paramtype">HTHEME&#160;</td>
+          <td class="paramname"><em>htheme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPartId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStateId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SetWindowTheme API Wrapper </p>
+
+</div>
+</div>
+<a id="ab2559b81ec218394dc7b70799eae3299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2559b81ec218394dc7b70799eae3299">&#9670;&nbsp;</a></span>OpenThemeData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HTHEME CUxTheme::OpenThemeData </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszClassList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SetWindowTheme API Wrapper </p>
+
+</div>
+</div>
+<a id="aaacac64e6dda58142e17ddc09d91e213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacac64e6dda58142e17ddc09d91e213">&#9670;&nbsp;</a></span>RegisterEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::RegisterEntries </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a>&#160;</td>
+          <td class="paramname"><em>table</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>テーブルで与えられたエントリポインタアドレスを入れる場所に 対応する文字列から調べたエントリポインタを設定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>[in] 名前とアドレスの対応表。最後は{NULL,0}で終わること。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>全てのアドレスが設定された。 </td></tr>
+    <tr><td class="paramname">false</td><td>アドレスの取得に失敗した関数があった。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61b86872f77a65e83c74504c246c2d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b86872f77a65e83c74504c246c2d72">&#9670;&nbsp;</a></span>SetWindowTheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HRESULT CUxTheme::SetWindowTheme </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSubAppName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSubIdList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SetWindowTheme API Wrapper </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/extmodule/<a class="el" href="../../d8/d62/_c_ux_theme_8h_source.html">CUxTheme.h</a></li>
+<li>sakura_core/extmodule/<a class="el" href="../../dd/d8d/_c_ux_theme_8cpp.html">CUxTheme.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

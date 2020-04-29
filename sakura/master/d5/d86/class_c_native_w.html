@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CNativeW クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../dd/d68/class_c_native_w-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CNativeW クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>UNICODE文字列管理クラス  
+ <a href="../../d5/d86/class_c_native_w.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">CNativeW.h</a>&gt;</code></p>
+<div class="dynheader">
+CNativeW の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d86/class_c_native_w.png" usemap="#CNativeW_map" alt=""/>
+  <map id="CNativeW_map" name="CNativeW_map">
+<area href="../../d7/d74/class_c_native.html" alt="CNative" shape="rect" coords="0,56,68,80"/>
+<area href="../../d6/d31/class_c_memory.html" title="メモリバッファクラス" alt="CMemory" shape="rect" coords="0,0,68,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8de523a1e18ea9bb164515a3e22b1cc6"><td class="memItemLeft" align="right" valign="top"><a id="a8de523a1e18ea9bb164515a3e22b1cc6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CNativeW</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs)</td></tr>
+<tr class="separator:a8de523a1e18ea9bb164515a3e22b1cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e08457fb6877dade24d6728a88895c8"><td class="memItemLeft" align="right" valign="top"><a id="a7e08457fb6877dade24d6728a88895c8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CNativeW</b> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a7e08457fb6877dade24d6728a88895c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2768fb8f4df152659d3e6a13bf5cadd6"><td class="memItemLeft" align="right" valign="top"><a id="a2768fb8f4df152659d3e6a13bf5cadd6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a2768fb8f4df152659d3e6a13bf5cadd6">CNativeW</a> (const wchar_t *pData, int nDataLen)</td></tr>
+<tr class="memdesc:a2768fb8f4df152659d3e6a13bf5cadd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">nDataLenは文字単位。 <br /></td></tr>
+<tr class="separator:a2768fb8f4df152659d3e6a13bf5cadd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6259be8721a9df65fc24fb169303c740"><td class="memItemLeft" align="right" valign="top"><a id="a6259be8721a9df65fc24fb169303c740"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CNativeW</b> (const wchar_t *pData)</td></tr>
+<tr class="separator:a6259be8721a9df65fc24fb169303c740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16fe5ae4299988cb52423e203d8a9db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#ac16fe5ae4299988cb52423e203d8a9db">IsValid</a> () const noexcept</td></tr>
+<tr class="separator:ac16fe5ae4299988cb52423e203d8a9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7187ca39754901cd5e32e49d2ad54e1e"><td class="memItemLeft" align="right" valign="top"><a id="a7187ca39754901cd5e32e49d2ad54e1e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a7187ca39754901cd5e32e49d2ad54e1e">AllocStringBuffer</a> (int nDataLen)</td></tr>
+<tr class="memdesc:a7187ca39754901cd5e32e49d2ad54e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(重要：nDataLenは文字単位) バッファサイズの調整。必要に応じて拡大する。 <br /></td></tr>
+<tr class="separator:a7187ca39754901cd5e32e49d2ad54e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adacc10cca397e75c611bd2562668ed30"><td class="memItemLeft" align="right" valign="top"><a id="adacc10cca397e75c611bd2562668ed30"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#adacc10cca397e75c611bd2562668ed30">SetString</a> (const wchar_t *pData, int nDataLen)</td></tr>
+<tr class="memdesc:adacc10cca397e75c611bd2562668ed30"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える。nDataLenは文字単位。 <br /></td></tr>
+<tr class="separator:adacc10cca397e75c611bd2562668ed30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2a16ece41b90c8cda2c8ffb2055d79"><td class="memItemLeft" align="right" valign="top"><a id="a2c2a16ece41b90c8cda2c8ffb2055d79"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a2c2a16ece41b90c8cda2c8ffb2055d79">SetString</a> (const wchar_t *pszData)</td></tr>
+<tr class="memdesc:a2c2a16ece41b90c8cda2c8ffb2055d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える。NULL 指定時はメモリ解放を行い、文字列長はゼロになる <br /></td></tr>
+<tr class="separator:a2c2a16ece41b90c8cda2c8ffb2055d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52e21096939b5a087076f9d0827b33e"><td class="memItemLeft" align="right" valign="top"><a id="ae52e21096939b5a087076f9d0827b33e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStringHoldBuffer</b> (const wchar_t *pData, int nDataLen)</td></tr>
+<tr class="separator:ae52e21096939b5a087076f9d0827b33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd0cce4ed2d6fb088a6f29e50201400"><td class="memItemLeft" align="right" valign="top"><a id="afbd0cce4ed2d6fb088a6f29e50201400"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#afbd0cce4ed2d6fb088a6f29e50201400">AppendString</a> (const wchar_t *pszData)</td></tr>
+<tr class="memdesc:afbd0cce4ed2d6fb088a6f29e50201400"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する <br /></td></tr>
+<tr class="separator:afbd0cce4ed2d6fb088a6f29e50201400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f6977c618256bb95f1119aec4c2c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a12f6977c618256bb95f1119aec4c2c94">AppendString</a> (const wchar_t *pszData, int nLength)</td></tr>
+<tr class="memdesc:a12f6977c618256bb95f1119aec4c2c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する。nLengthは文字単位。成功すればtrue。メモリ確保に失敗したらfalseを返す。  <a href="../../d5/d86/class_c_native_w.html#a12f6977c618256bb95f1119aec4c2c94">[詳解]</a><br /></td></tr>
+<tr class="separator:a12f6977c618256bb95f1119aec4c2c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479b7baf7151b91a485dbac597db45c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a479b7baf7151b91a485dbac597db45c3">AppendStringF</a> (const wchar_t *pszData,...)</td></tr>
+<tr class="memdesc:a479b7baf7151b91a485dbac597db45c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する (フォーマット機能付き)  <a href="../../d5/d86/class_c_native_w.html#a479b7baf7151b91a485dbac597db45c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a479b7baf7151b91a485dbac597db45c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2dd835c984b731876b1960394ff39f"><td class="memItemLeft" align="right" valign="top"><a id="a7b2dd835c984b731876b1960394ff39f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a7b2dd835c984b731876b1960394ff39f">SetNativeData</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;pcNative)</td></tr>
+<tr class="memdesc:a7b2dd835c984b731876b1960394ff39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える <br /></td></tr>
+<tr class="separator:a7b2dd835c984b731876b1960394ff39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e506d1b55b80fcab1c4b7fa4608dcdb"><td class="memItemLeft" align="right" valign="top"><a id="a4e506d1b55b80fcab1c4b7fa4608dcdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a4e506d1b55b80fcab1c4b7fa4608dcdb">AppendNativeData</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;)</td></tr>
+<tr class="memdesc:a4e506d1b55b80fcab1c4b7fa4608dcdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する <br /></td></tr>
+<tr class="separator:a4e506d1b55b80fcab1c4b7fa4608dcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3cd805daa009351bbc09474693ba7d"><td class="memItemLeft" align="right" valign="top"><a id="a4f3cd805daa009351bbc09474693ba7d"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs)</td></tr>
+<tr class="separator:a4f3cd805daa009351bbc09474693ba7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd142d529f8fc4736fb332254d53f5fb"><td class="memItemLeft" align="right" valign="top"><a id="acd142d529f8fc4736fb332254d53f5fb"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:acd142d529f8fc4736fb332254d53f5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d802cd175144080d04d76f5990f87c9"><td class="memItemLeft" align="right" valign="top"><a id="a1d802cd175144080d04d76f5990f87c9"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs) const</td></tr>
+<tr class="separator:a1d802cd175144080d04d76f5990f87c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf22cccd34f48d65cc8d07501322b1d"><td class="memItemLeft" align="right" valign="top"><a id="abaf22cccd34f48d65cc8d07501322b1d"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs)</td></tr>
+<tr class="separator:abaf22cccd34f48d65cc8d07501322b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56094ed1d7ece5b3688acf4994b54c54"><td class="memItemLeft" align="right" valign="top"><a id="a56094ed1d7ece5b3688acf4994b54c54"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (wchar_t ch)</td></tr>
+<tr class="separator:a56094ed1d7ece5b3688acf4994b54c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b001ddfed13232557650becb488d8bf"><td class="memItemLeft" align="right" valign="top"><a id="a9b001ddfed13232557650becb488d8bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs) const noexcept</td></tr>
+<tr class="separator:a9b001ddfed13232557650becb488d8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258446c36a001751835b7066283fc4c2"><td class="memItemLeft" align="right" valign="top"><a id="a258446c36a001751835b7066283fc4c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs) const noexcept</td></tr>
+<tr class="separator:a258446c36a001751835b7066283fc4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccad0d26eada01c4cc8d5f8eee56ab4"><td class="memItemLeft" align="right" valign="top"><a id="a6ccad0d26eada01c4cc8d5f8eee56ab4"></a>
+wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a6ccad0d26eada01c4cc8d5f8eee56ab4">operator[]</a> (int nIndex) const</td></tr>
+<tr class="memdesc:a6ccad0d26eada01c4cc8d5f8eee56ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意位置の文字取得。nIndexは文字単位。 <br /></td></tr>
+<tr class="separator:a6ccad0d26eada01c4cc8d5f8eee56ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c3013ef8a4d729bfae780ae3afaa44"><td class="memItemLeft" align="right" valign="top"><a id="af5c3013ef8a4d729bfae780ae3afaa44"></a>
+CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#af5c3013ef8a4d729bfae780ae3afaa44">GetStringLength</a> () const</td></tr>
+<tr class="memdesc:af5c3013ef8a4d729bfae780ae3afaa44"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 文字列長を返す。文字単位。 <br /></td></tr>
+<tr class="separator:af5c3013ef8a4d729bfae780ae3afaa44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058620979412d22d51a811c291011a00"><td class="memItemLeft" align="right" valign="top"><a id="a058620979412d22d51a811c291011a00"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetStringPtr</b> () const</td></tr>
+<tr class="separator:a058620979412d22d51a811c291011a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0499f509a8befa16aa9655a27bacdac"><td class="memItemLeft" align="right" valign="top"><a id="ad0499f509a8befa16aa9655a27bacdac"></a>
+wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetStringPtr</b> ()</td></tr>
+<tr class="separator:ad0499f509a8befa16aa9655a27bacdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f7876dc8fe0de195bf23fe81605571"><td class="memItemLeft" align="right" valign="top"><a id="a68f7876dc8fe0de195bf23fe81605571"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetStringLength</b> (int nLength)</td></tr>
+<tr class="separator:a68f7876dc8fe0de195bf23fe81605571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342969864270c7c506bc7117f45a0a2f"><td class="memItemLeft" align="right" valign="top"><a id="a342969864270c7c506bc7117f45a0a2f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Chop</b> ()</td></tr>
+<tr class="separator:a342969864270c7c506bc7117f45a0a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9027fa4dc3dddd21870c1cd0afd239c"><td class="memItemLeft" align="right" valign="top"><a id="ae9027fa4dc3dddd21870c1cd0afd239c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;left)</td></tr>
+<tr class="separator:ae9027fa4dc3dddd21870c1cd0afd239c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b86e627064d0347b52d2416fd22271e"><td class="memItemLeft" align="right" valign="top"><a id="a6b86e627064d0347b52d2416fd22271e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const noexcept</td></tr>
+<tr class="separator:a6b86e627064d0347b52d2416fd22271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f49257eb4d52f36bf92e7216838fcd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#af5f49257eb4d52f36bf92e7216838fcd">Compare</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs) const noexcept</td></tr>
+<tr class="separator:af5f49257eb4d52f36bf92e7216838fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2c66bfef6070e22c50b2de0941cc50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a7b2c66bfef6070e22c50b2de0941cc50">Compare</a> (const wchar_t *rhs) const noexcept</td></tr>
+<tr class="separator:a7b2c66bfef6070e22c50b2de0941cc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f95b51a1488d678c640511c4c39048e"><td class="memItemLeft" align="right" valign="top"><a id="a3f95b51a1488d678c640511c4c39048e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Equals</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;rhs) const noexcept</td></tr>
+<tr class="separator:a3f95b51a1488d678c640511c4c39048e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeeb9dd45111b46ca95c28c107b42469"><td class="memItemLeft" align="right" valign="top"><a id="aeeeb9dd45111b46ca95c28c107b42469"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Equals</b> (const wchar_t *rhs) const noexcept</td></tr>
+<tr class="separator:aeeeb9dd45111b46ca95c28c107b42469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc092a47dbc812a705bc6aaf2bdb3d3c"><td class="memItemLeft" align="right" valign="top"><a id="abc092a47dbc812a705bc6aaf2bdb3d3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#abc092a47dbc812a705bc6aaf2bdb3d3c">Replace</a> (const wchar_t *pszFrom, const wchar_t *pszTo)</td></tr>
+<tr class="memdesc:abc092a47dbc812a705bc6aaf2bdb3d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列置換 <br /></td></tr>
+<tr class="separator:abc092a47dbc812a705bc6aaf2bdb3d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba2ddf25f61d2f76e642bdb7b6df660"><td class="memItemLeft" align="right" valign="top"><a id="a1ba2ddf25f61d2f76e642bdb7b6df660"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a1ba2ddf25f61d2f76e642bdb7b6df660">Replace</a> (const wchar_t *pszFrom, int nFromLen, const wchar_t *pszTo, int nToLen)</td></tr>
+<tr class="memdesc:a1ba2ddf25f61d2f76e642bdb7b6df660"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列置換 <br /></td></tr>
+<tr class="separator:a1ba2ddf25f61d2f76e642bdb7b6df660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf03a1d972c3afb24ea0c704975e77d"><td class="memItemLeft" align="right" valign="top"><a id="a8bf03a1d972c3afb24ea0c704975e77d"></a>
+<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_GetMemory</b> ()</td></tr>
+<tr class="separator:a8bf03a1d972c3afb24ea0c704975e77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2e9e32bc040282c056ce651c15aa37"><td class="memItemLeft" align="right" valign="top"><a id="acd2e9e32bc040282c056ce651c15aa37"></a>
+const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_GetMemory</b> () const</td></tr>
+<tr class="separator:acd2e9e32bc040282c056ce651c15aa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67beb7cbd321a298aae88b02a0671eb"><td class="memItemLeft" align="right" valign="top"><a id="ab67beb7cbd321a298aae88b02a0671eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d74/class_c_native.html#ab67beb7cbd321a298aae88b02a0671eb">Clear</a> ()</td></tr>
+<tr class="memdesc:ab67beb7cbd321a298aae88b02a0671eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">空っぽにする <br /></td></tr>
+<tr class="separator:ab67beb7cbd321a298aae88b02a0671eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7060dee89cdc6e9ee9bbdb141678fd2"><td class="memItemLeft" align="right" valign="top"><a id="ae7060dee89cdc6e9ee9bbdb141678fd2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;left) noexcept</td></tr>
+<tr class="separator:ae7060dee89cdc6e9ee9bbdb141678fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a410327931694ac418fd998fa9cb447f5"><td class="memItemLeft" align="right" valign="top"><a id="a410327931694ac418fd998fa9cb447f5"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a410327931694ac418fd998fa9cb447f5">IsEqual</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cmem1, const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cmem2)</td></tr>
+<tr class="memdesc:a410327931694ac418fd998fa9cb447f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">同一の文字列ならtrue <br /></td></tr>
+<tr class="separator:a410327931694ac418fd998fa9cb447f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd3229b7083c2d99c18f3a96c0c7c57"><td class="memItemLeft" align="right" valign="top"><a id="a7fd3229b7083c2d99c18f3a96c0c7c57"></a>
+static CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a7fd3229b7083c2d99c18f3a96c0c7c57">GetSizeOfChar</a> (const wchar_t *pData, int nDataLen, int nIdx)</td></tr>
+<tr class="memdesc:a7fd3229b7083c2d99c18f3a96c0c7c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した位置の文字がwchar_t何個分かを返す <br /></td></tr>
+<tr class="separator:a7fd3229b7083c2d99c18f3a96c0c7c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e106efb194d4bca9d874179e6aa7f8"><td class="memItemLeft" align="right" valign="top"><a id="aa6e106efb194d4bca9d874179e6aa7f8"></a>
+static CHabaXInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#aa6e106efb194d4bca9d874179e6aa7f8">GetHabaOfChar</a> (const wchar_t *pData, int nDataLen, int nIdx)</td></tr>
+<tr class="memdesc:aa6e106efb194d4bca9d874179e6aa7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した位置の文字の文字幅を返す <br /></td></tr>
+<tr class="separator:aa6e106efb194d4bca9d874179e6aa7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39458d640443461c185ca3483e4abc4f"><td class="memItemLeft" align="right" valign="top"><a id="a39458d640443461c185ca3483e4abc4f"></a>
+static CKetaXInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a39458d640443461c185ca3483e4abc4f">GetKetaOfChar</a> (const wchar_t *pData, int nDataLen, int nIdx)</td></tr>
+<tr class="memdesc:a39458d640443461c185ca3483e4abc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した位置の文字が半角何個分かを返す <br /></td></tr>
+<tr class="separator:a39458d640443461c185ca3483e4abc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef991bd26305f1441ac4a948275b6fd"><td class="memItemLeft" align="right" valign="top"><a id="acef991bd26305f1441ac4a948275b6fd"></a>
+static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#acef991bd26305f1441ac4a948275b6fd">GetCharNext</a> (const wchar_t *pData, int nDataLen, const wchar_t *pDataCurrent)</td></tr>
+<tr class="memdesc:acef991bd26305f1441ac4a948275b6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタで示した文字の次にある文字の位置を返します <br /></td></tr>
+<tr class="separator:acef991bd26305f1441ac4a948275b6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad6a6c9d9d0af62ed9d100184961f6f"><td class="memItemLeft" align="right" valign="top"><a id="a3ad6a6c9d9d0af62ed9d100184961f6f"></a>
+static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a3ad6a6c9d9d0af62ed9d100184961f6f">GetCharPrev</a> (const wchar_t *pData, int nDataLen, const wchar_t *pDataCurrent)</td></tr>
+<tr class="memdesc:a3ad6a6c9d9d0af62ed9d100184961f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ポインタで示した文字の直前にある文字の位置を返します <br /></td></tr>
+<tr class="separator:a3ad6a6c9d9d0af62ed9d100184961f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9cf178b32fdd81a1dfbf1980556ed2"><td class="memItemLeft" align="right" valign="top">static CKetaXInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a4e9cf178b32fdd81a1dfbf1980556ed2">GetKetaOfChar</a> (const <a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a> &amp;cStr, int nIdx)</td></tr>
+<tr class="separator:a4e9cf178b32fdd81a1dfbf1980556ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46236c6965a4f5faaf43b2309ac15771"><td class="memItemLeft" align="right" valign="top"><a id="a46236c6965a4f5faaf43b2309ac15771"></a>
+static CLayoutXInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetColmOfChar</b> (const wchar_t *pData, int nDataLen, int nIdx)</td></tr>
+<tr class="separator:a46236c6965a4f5faaf43b2309ac15771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4da953ec1380fef9e82e399d8fb888"><td class="memItemLeft" align="right" valign="top"><a id="a2c4da953ec1380fef9e82e399d8fb888"></a>
+static CLayoutXInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetColmOfChar</b> (const <a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a> &amp;cStr, int nIdx)</td></tr>
+<tr class="separator:a2c4da953ec1380fef9e82e399d8fb888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1002947d1573d03a365a2c5a2a076c"><td class="memItemLeft" align="right" valign="top"><a id="a9d1002947d1573d03a365a2c5a2a076c"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>IsEqual</b> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;cmem1, const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;cmem2)</td></tr>
+<tr class="separator:a9d1002947d1573d03a365a2c5a2a076c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a45ac645730356a5023c3b0327f6313d5"><td class="memItemLeft" align="right" valign="top"><a id="a45ac645730356a5023c3b0327f6313d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a45ac645730356a5023c3b0327f6313d5">AllocBuffer</a> (int nNewDataLen)</td></tr>
+<tr class="memdesc:a45ac645730356a5023c3b0327f6313d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファサイズの調整。必要に応じて拡大する。 <br /></td></tr>
+<tr class="separator:a45ac645730356a5023c3b0327f6313d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7c07886da05c46ab5ba6637782dca5"><td class="memItemLeft" align="right" valign="top"><a id="a7c7c07886da05c46ab5ba6637782dca5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a7c7c07886da05c46ab5ba6637782dca5">SetRawData</a> (const void *pData, int nDataLen)</td></tr>
+<tr class="memdesc:a7c7c07886da05c46ab5ba6637782dca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える <br /></td></tr>
+<tr class="separator:a7c7c07886da05c46ab5ba6637782dca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a47f8cc21944ac850b2dfe0de4eaf9"><td class="memItemLeft" align="right" valign="top"><a id="a25a47f8cc21944ac850b2dfe0de4eaf9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a25a47f8cc21944ac850b2dfe0de4eaf9">SetRawData</a> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;pcmemData)</td></tr>
+<tr class="memdesc:a25a47f8cc21944ac850b2dfe0de4eaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える <br /></td></tr>
+<tr class="separator:a25a47f8cc21944ac850b2dfe0de4eaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c297b1ac279d02ec951d09ccbc721f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a7c297b1ac279d02ec951d09ccbc721f9">SetRawDataHoldBuffer</a> (const void *pData, int nDataLen)</td></tr>
+<tr class="memdesc:a7c297b1ac279d02ec951d09ccbc721f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える(バッファを保持)  <a href="../../d6/d31/class_c_memory.html#a7c297b1ac279d02ec951d09ccbc721f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c297b1ac279d02ec951d09ccbc721f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7461e6c228f0512a20950b404b0c4522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a7461e6c228f0512a20950b404b0c4522">SetRawDataHoldBuffer</a> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;pcmemData)</td></tr>
+<tr class="memdesc:a7461e6c228f0512a20950b404b0c4522"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの内容を置き換える(バッファを保持)  <a href="../../d6/d31/class_c_memory.html#a7461e6c228f0512a20950b404b0c4522">[詳解]</a><br /></td></tr>
+<tr class="separator:a7461e6c228f0512a20950b404b0c4522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4507c2558ca84e7876a799f5276acc07"><td class="memItemLeft" align="right" valign="top"><a id="a4507c2558ca84e7876a799f5276acc07"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a4507c2558ca84e7876a799f5276acc07">AppendRawData</a> (const void *pData, int nDataLen)</td></tr>
+<tr class="memdesc:a4507c2558ca84e7876a799f5276acc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する <br /></td></tr>
+<tr class="separator:a4507c2558ca84e7876a799f5276acc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63356e3dc8f152a4e96c464713df1a43"><td class="memItemLeft" align="right" valign="top"><a id="a63356e3dc8f152a4e96c464713df1a43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a63356e3dc8f152a4e96c464713df1a43">AppendRawData</a> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcmemData)</td></tr>
+<tr class="memdesc:a63356e3dc8f152a4e96c464713df1a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファの最後にデータを追加する <br /></td></tr>
+<tr class="separator:a63356e3dc8f152a4e96c464713df1a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317eed7e629f4533c1a2e65a79efa31d"><td class="memItemLeft" align="right" valign="top"><a id="a317eed7e629f4533c1a2e65a79efa31d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Clean</b> ()</td></tr>
+<tr class="separator:a317eed7e629f4533c1a2e65a79efa31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0b8c81a8542f871c7283bac7618a61"><td class="memItemLeft" align="right" valign="top"><a id="a2a0b8c81a8542f871c7283bac7618a61"></a>
+const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a2a0b8c81a8542f871c7283bac7618a61">GetRawPtr</a> () const</td></tr>
+<tr class="memdesc:a2a0b8c81a8542f871c7283bac7618a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">データへのポインタを返す <br /></td></tr>
+<tr class="separator:a2a0b8c81a8542f871c7283bac7618a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab857099ed63ce1a5a48dffea0ba93711"><td class="memItemLeft" align="right" valign="top"><a id="ab857099ed63ce1a5a48dffea0ba93711"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#ab857099ed63ce1a5a48dffea0ba93711">GetRawPtr</a> ()</td></tr>
+<tr class="memdesc:ab857099ed63ce1a5a48dffea0ba93711"><td class="mdescLeft">&#160;</td><td class="mdescRight">データへのポインタを返す <br /></td></tr>
+<tr class="separator:ab857099ed63ce1a5a48dffea0ba93711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe3315681b41c76e2f8d3a9d142527a"><td class="memItemLeft" align="right" valign="top"><a id="a4fe3315681b41c76e2f8d3a9d142527a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a4fe3315681b41c76e2f8d3a9d142527a">GetRawLength</a> () const</td></tr>
+<tr class="memdesc:a4fe3315681b41c76e2f8d3a9d142527a"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ長を返す。バイト単位。 <br /></td></tr>
+<tr class="separator:a4fe3315681b41c76e2f8d3a9d142527a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad243355270a5c2c734bd59ad44e88551"><td class="memItemLeft" align="right" valign="top"><a id="ad243355270a5c2c734bd59ad44e88551"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SwapHLByte</b> ()</td></tr>
+<tr class="separator:ad243355270a5c2c734bd59ad44e88551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c5580bb78d93d5e46cb43618c1b6a3"><td class="memItemLeft" align="right" valign="top"><a id="a10c5580bb78d93d5e46cb43618c1b6a3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SwabHLByte</b> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;mem)</td></tr>
+<tr class="separator:a10c5580bb78d93d5e46cb43618c1b6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322681cb079ededdb2fd0d17541138eb"><td class="memItemLeft" align="right" valign="top"><a id="a322681cb079ededdb2fd0d17541138eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_c_memory.html#a322681cb079ededdb2fd0d17541138eb">_Empty</a> (void)</td></tr>
+<tr class="memdesc:a322681cb079ededdb2fd0d17541138eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">解放する。m_pRawDataはNULLになる。 <br /></td></tr>
+<tr class="separator:a322681cb079ededdb2fd0d17541138eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e37bb530182ac47c3e11d3f5d5a516"><td class="memItemLeft" align="right" valign="top"><a id="ab4e37bb530182ac47c3e11d3f5d5a516"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_AddData</b> (const void *pData, int nDataLen)</td></tr>
+<tr class="separator:ab4e37bb530182ac47c3e11d3f5d5a516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae9dc42861f0cec631bcacfd73bbd50"><td class="memItemLeft" align="right" valign="top"><a id="a0ae9dc42861f0cec631bcacfd73bbd50"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_AppendSz</b> (const char *str)</td></tr>
+<tr class="separator:a0ae9dc42861f0cec631bcacfd73bbd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfca07302a85ffe0a9606c92eb6bbe00"><td class="memItemLeft" align="right" valign="top"><a id="abfca07302a85ffe0a9606c92eb6bbe00"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetRawLength</b> (int nLength)</td></tr>
+<tr class="separator:abfca07302a85ffe0a9606c92eb6bbe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a407034646cea2a698013d2a51a301c4d"><td class="memItemLeft" align="right" valign="top"><a id="a407034646cea2a698013d2a51a301c4d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SwapHLByte</b> (char *pData, const int nDataLen)</td></tr>
+<tr class="separator:a407034646cea2a698013d2a51a301c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a2175d925d2a4e425c8e119d9d3a6a06d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d86/class_c_native_w.html#a2175d925d2a4e425c8e119d9d3a6a06d">operator==</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;lhs, const wchar_t *rhs) noexcept</td></tr>
+<tr class="separator:a2175d925d2a4e425c8e119d9d3a6a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>UNICODE文字列管理クラス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a12f6977c618256bb95f1119aec4c2c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f6977c618256bb95f1119aec4c2c94">&#9670;&nbsp;</a></span>AppendString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CNativeW::AppendString </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バッファの最後にデータを追加する。nLengthは文字単位。成功すればtrue。メモリ確保に失敗したらfalseを返す。 </p>
+<p>バッファの最後にデータを追加する。nLengthは文字単位。 </p>
+
+</div>
+</div>
+<a id="a479b7baf7151b91a485dbac597db45c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479b7baf7151b91a485dbac597db45c3">&#9670;&nbsp;</a></span>AppendStringF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CNativeW::AppendStringF </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バッファの最後にデータを追加する (フォーマット機能付き) </p>
+<p>バッファの最後にデータを追加する (フォーマット機能付き)</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszFormat</td><td>フォーマット書式文字列 </td></tr>
+    <tr><td class="paramname">va_args</td><td>C-style の可変長引数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>例外</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>pszFormatがNULL </td></tr>
+    <tr><td class="paramname">std::bad_alloc</td><td>メモリ確保に失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>注釈</dt><dd>不正なフォーマットを指定すると無効なパラメータ例外で即死します。 </dd></dl>
+
+</div>
+</div>
+<a id="af5f49257eb4d52f36bf92e7216838fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f49257eb4d52f36bf92e7216838fcd">&#9670;&nbsp;</a></span>Compare() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CNativeW::Compare </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>同型との比較</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>比較対象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&lt;</td><td>0 自身がメモリ未確保、かつ、比較対象はメモリ確保済み </td></tr>
+    <tr><td class="paramname">&lt;</td><td>0 データ値が比較対象より小さい </td></tr>
+    <tr><td class="paramname">&lt;</td><td>0 データが比較対象の先頭部分と一致する、かつ、データ長が比較対象より小さい </td></tr>
+    <tr><td class="paramname">==</td><td>0 比較対象が自分自身の参照 </td></tr>
+    <tr><td class="paramname">==</td><td>0 比較対象と等しい </td></tr>
+    <tr><td class="paramname">==</td><td>0 自身がメモリ未確保、かつ、比較対象がメモリ未確保 </td></tr>
+    <tr><td class="paramname">&gt;</td><td>0 自身が確保済み、かつ、比較対象がメモリ未確保 </td></tr>
+    <tr><td class="paramname">&gt;</td><td>0 データ値が比較対象より大きい </td></tr>
+    <tr><td class="paramname">&gt;</td><td>0 データの先頭部分が比較対象と一致する、かつ、データ長が比較対象より大きい </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b2c66bfef6070e22c50b2de0941cc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2c66bfef6070e22c50b2de0941cc50">&#9670;&nbsp;</a></span>Compare() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CNativeW::Compare </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文字列ポインタ型との比較</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>比較対象(C string) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&lt;</td><td>0 自身がメモリ未確保、かつ、比較対象がnullptr以外 </td></tr>
+    <tr><td class="paramname">&lt;</td><td>0 文字列値が比較対象より小さい </td></tr>
+    <tr><td class="paramname">==</td><td>0 比較対象と等しい </td></tr>
+    <tr><td class="paramname">==</td><td>0 自身がメモリ未確保、かつ、比較対象がnullptr </td></tr>
+    <tr><td class="paramname">&gt;</td><td>0 自身がメモリ確保済み、かつ、比較対象がnullptr </td></tr>
+    <tr><td class="paramname">&gt;</td><td>0 文字列値が比較対象より大きい </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e9cf178b32fdd81a1dfbf1980556ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9cf178b32fdd81a1dfbf1980556ed2">&#9670;&nbsp;</a></span>GetKetaOfChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static CKetaXInt CNativeW::GetKetaOfChar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a> &amp;&#160;</td>
+          <td class="paramname"><em>cStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>指定した位置の文字が半角何個分かを返す </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac16fe5ae4299988cb52423e203d8a9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16fe5ae4299988cb52423e203d8a9db">&#9670;&nbsp;</a></span>IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CNativeW::IsValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>メモリ確保済みかどうか </p>
+
+</div>
+</div>
+<a id="a7461e6c228f0512a20950b404b0c4522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7461e6c228f0512a20950b404b0c4522">&#9670;&nbsp;</a></span>SetRawDataHoldBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMemory::SetRawDataHoldBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;&#160;</td>
+          <td class="paramname"><em>pcmemData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バッファの内容を置き換える(バッファを保持) </p>
+<p>バッファの内容を置き換える </p>
+
+</div>
+</div>
+<a id="a7c297b1ac279d02ec951d09ccbc721f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c297b1ac279d02ec951d09ccbc721f9">&#9670;&nbsp;</a></span>SetRawDataHoldBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMemory::SetRawDataHoldBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDataLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バッファの内容を置き換える(バッファを保持) </p>
+<p>バッファの内容を置き換える </p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a2175d925d2a4e425c8e119d9d3a6a06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2175d925d2a4e425c8e119d9d3a6a06d">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文字列ポインタ型との等価比較</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>比較対象(CNativeW) </td></tr>
+    <tr><td class="paramname">rhs</td><td>比較対象(C string) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>等しい </td></tr>
+    <tr><td class="paramname">false</td><td>等しくない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/mem/<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">CNativeW.h</a></li>
+<li>sakura_core/mem/<a class="el" href="../../d6/d28/_c_native_w_8cpp.html">CNativeW.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

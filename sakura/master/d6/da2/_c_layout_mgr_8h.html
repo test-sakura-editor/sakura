@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/layout/CLayoutMgr.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li><li class="navelem"><a class="el" href="../../dir_0a9e8ca9d1b8a1a82b907d1edd418175.html">layout</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a>  </div>
+  <div class="headertitle">
+<div class="title">CLayoutMgr.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>テキストのレイアウト情報管理  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;memory_resource&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">doc/CDocListener.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d49/global_8h_source.html">_main/global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/db9/_sakura_basis_8h_source.html">basis/SakuraBasis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/ddc/_c_type_8h_source.html">types/CType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dfc/_c_layout_ex_info_8h_source.html">CLayoutExInfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d7a/_c_memory_iterator_8h_source.html">mem/CMemoryIterator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/df6/_c_tsv_mode_info_8h_source.html">CTsvModeInfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/dc2/_e_color_index_type_8h_source.html">view/colors/EColorIndexType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d89/_c_ope_8h_source.html">COpe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/ddd/container_8h_source.html">util/container.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d78/design__template_8h_source.html">util/design_template.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d6/da2/_c_layout_mgr_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/da8/struct_layout_replace_arg.html">LayoutReplaceArg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de9/struct_cal_text_width_arg.html">CalTextWidthArg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_c_logic_point_ex.html">CLogicPointEx</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストのレイアウト情報管理  <a href="../../da/d25/class_c_layout_mgr.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d02/struct_c_layout_mgr_1_1_s_layout_work.html">CLayoutMgr::SLayoutWork</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ae55a425b1044908a7fc32242d058d1e8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8">EKinsokuType</a> { <br />
+&#160;&#160;<a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8a381ae3852b8d739bda72470e97e83e0d">KINSOKU_TYPE_NONE</a> = 0, 
+<a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8aca947423ef8c449d6d40c7709d3968ab">KINSOKU_TYPE_WORDWRAP</a>, 
+<a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8a7334d2e0079886e8ba0d2e7ac331d547">KINSOKU_TYPE_KINSOKU_HEAD</a>, 
+<a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8a48b83f05fe3b6e13975fc7ffb4109c67">KINSOKU_TYPE_KINSOKU_TAIL</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8a4dfac0db264ceab1c845d654c782dea6">KINSOKU_TYPE_KINSOKU_KUTO</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ae55a425b1044908a7fc32242d058d1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">レイアウト中の禁則タイプ //@@ 2002.04.20 MIK  <a href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8">[詳解]</a><br /></td></tr>
+<tr class="separator:ae55a425b1044908a7fc32242d058d1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>テキストのレイアウト情報管理 </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/03/06 新規作成 </dd>
+<dd>
+1998/04/14 データの削除を実装 </dd>
+<dd>
+1999/12/20 データの置換を実装 </dd>
+<dd>
+2009/08/28 nasukoji CalTextWidthArg定義追加、DoLayout_Range()の引数変更 </dd></dl>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="ae55a425b1044908a7fc32242d058d1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55a425b1044908a7fc32242d058d1e8">&#9670;&nbsp;</a></span>EKinsokuType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d6/da2/_c_layout_mgr_8h.html#ae55a425b1044908a7fc32242d058d1e8">EKinsokuType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レイアウト中の禁則タイプ //@@ 2002.04.20 MIK </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae55a425b1044908a7fc32242d058d1e8a381ae3852b8d739bda72470e97e83e0d"></a>KINSOKU_TYPE_NONE&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae55a425b1044908a7fc32242d058d1e8aca947423ef8c449d6d40c7709d3968ab"></a>KINSOKU_TYPE_WORDWRAP&#160;</td><td class="fielddoc"><p>英文ワードラップ中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae55a425b1044908a7fc32242d058d1e8a7334d2e0079886e8ba0d2e7ac331d547"></a>KINSOKU_TYPE_KINSOKU_HEAD&#160;</td><td class="fielddoc"><p>行頭禁則中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae55a425b1044908a7fc32242d058d1e8a48b83f05fe3b6e13975fc7ffb4109c67"></a>KINSOKU_TYPE_KINSOKU_TAIL&#160;</td><td class="fielddoc"><p>行末禁則中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae55a425b1044908a7fc32242d058d1e8a4dfac0db264ceab1c845d654c782dea6"></a>KINSOKU_TYPE_KINSOKU_KUTO&#160;</td><td class="fielddoc"><p>句読点ぶら下げ中 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

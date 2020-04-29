@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CMarkMgr クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../dd/d6c/class_c_mark_mgr-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CMarkMgr クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d3/db8/_c_mark_mgr_8h_source.html">CMarkMgr.h</a>&gt;</code></p>
+<div class="dynheader">
+CMarkMgr の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d1e/class_c_mark_mgr.png" usemap="#CMarkMgr_map" alt=""/>
+  <map id="CMarkMgr_map" name="CMarkMgr_map">
+<area href="../../de/d0c/class_c_auto_mark_mgr.html" title="移動履歴の管理クラス" alt="CAutoMarkMgr" shape="rect" coords="0,56,99,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:aa8bb0e264447c029061c978bfb48829a"><td class="memItemLeft" align="right" valign="top"><a id="aa8bb0e264447c029061c978bfb48829a"></a>
+typedef std::vector&lt; <a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CMarkChain</b></td></tr>
+<tr class="separator:aa8bb0e264447c029061c978bfb48829a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b9a0a9d23926d517127f1e85320b3e"><td class="memItemLeft" align="right" valign="top"><a id="a00b9a0a9d23926d517127f1e85320b3e"></a>
+typedef std::vector&lt; <a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>CMarkIterator</b></td></tr>
+<tr class="separator:a00b9a0a9d23926d517127f1e85320b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a99ce6bd15d0a52e1936c12c9b2900912"><td class="memItemLeft" align="right" valign="top"><a id="a99ce6bd15d0a52e1936c12c9b2900912"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a99ce6bd15d0a52e1936c12c9b2900912">Count</a> (void) const</td></tr>
+<tr class="memdesc:a99ce6bd15d0a52e1936c12c9b2900912"><td class="mdescLeft">&#160;</td><td class="mdescRight">項目数を返す <br /></td></tr>
+<tr class="separator:a99ce6bd15d0a52e1936c12c9b2900912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe817bf9c07f3d7e7ee6c9e1fe08b973"><td class="memItemLeft" align="right" valign="top"><a id="afe817bf9c07f3d7e7ee6c9e1fe08b973"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#afe817bf9c07f3d7e7ee6c9e1fe08b973">GetMax</a> (void) const</td></tr>
+<tr class="memdesc:afe817bf9c07f3d7e7ee6c9e1fe08b973"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大項目数を返す <br /></td></tr>
+<tr class="separator:afe817bf9c07f3d7e7ee6c9e1fe08b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851eecc02bbe8977f21957bfc44436a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a851eecc02bbe8977f21957bfc44436a3">SetMax</a> (int max)</td></tr>
+<tr class="memdesc:a851eecc02bbe8977f21957bfc44436a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大項目数を設定  <a href="../../dc/d1e/class_c_mark_mgr.html#a851eecc02bbe8977f21957bfc44436a3">[詳解]</a><br /></td></tr>
+<tr class="separator:a851eecc02bbe8977f21957bfc44436a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe92e7a2296179c50922112b8f69cf5"><td class="memItemLeft" align="right" valign="top"><a id="abfe92e7a2296179c50922112b8f69cf5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#abfe92e7a2296179c50922112b8f69cf5">Add</a> (const <a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a> &amp;m)=0</td></tr>
+<tr class="memdesc:abfe92e7a2296179c50922112b8f69cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の追加 <br /></td></tr>
+<tr class="separator:abfe92e7a2296179c50922112b8f69cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3706c47084ed551229450e7cb5a51c21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a3706c47084ed551229450e7cb5a51c21">Flush</a> (void)</td></tr>
+<tr class="memdesc:a3706c47084ed551229450e7cb5a51c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の全消去  <a href="../../dc/d1e/class_c_mark_mgr.html#a3706c47084ed551229450e7cb5a51c21">[詳解]</a><br /></td></tr>
+<tr class="separator:a3706c47084ed551229450e7cb5a51c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08be540664dfa1977b8d2c5945b5b261"><td class="memItemLeft" align="right" valign="top"><a id="a08be540664dfa1977b8d2c5945b5b261"></a>
+const <a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a08be540664dfa1977b8d2c5945b5b261">GetCurrent</a> (void) const</td></tr>
+<tr class="memdesc:a08be540664dfa1977b8d2c5945b5b261"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の取得 <br /></td></tr>
+<tr class="separator:a08be540664dfa1977b8d2c5945b5b261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02312698b1228f32a4683d8ddac5f4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#aa02312698b1228f32a4683d8ddac5f4a">CheckCurrent</a> (void) const</td></tr>
+<tr class="memdesc:aa02312698b1228f32a4683d8ddac5f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置の要素が有効かどうかの判定  <a href="../../dc/d1e/class_c_mark_mgr.html#aa02312698b1228f32a4683d8ddac5f4a">[詳解]</a><br /></td></tr>
+<tr class="separator:aa02312698b1228f32a4683d8ddac5f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346b3ab8509661bb24b7de1c25c70187"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a346b3ab8509661bb24b7de1c25c70187">CheckPrev</a> (void) const</td></tr>
+<tr class="memdesc:a346b3ab8509661bb24b7de1c25c70187"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置の前に有効な要素があるかどうかを調べる  <a href="../../dc/d1e/class_c_mark_mgr.html#a346b3ab8509661bb24b7de1c25c70187">[詳解]</a><br /></td></tr>
+<tr class="separator:a346b3ab8509661bb24b7de1c25c70187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaeeb228833a1c86951f258a07c928c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#aeaeeb228833a1c86951f258a07c928c0">CheckNext</a> (void) const</td></tr>
+<tr class="memdesc:aeaeeb228833a1c86951f258a07c928c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置の後に有効な要素があるかどうかを調べる  <a href="../../dc/d1e/class_c_mark_mgr.html#aeaeeb228833a1c86951f258a07c928c0">[詳解]</a><br /></td></tr>
+<tr class="separator:aeaeeb228833a1c86951f258a07c928c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7def55d16f9ec65e8f6b8653975c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#a7a7def55d16f9ec65e8f6b8653975c33">NextValid</a> (void)</td></tr>
+<tr class="memdesc:a7a7def55d16f9ec65e8f6b8653975c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置を後の有効な位置まで進める  <a href="../../dc/d1e/class_c_mark_mgr.html#a7a7def55d16f9ec65e8f6b8653975c33">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a7def55d16f9ec65e8f6b8653975c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff26f30a7300e1a76188cd686697419"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#aaff26f30a7300e1a76188cd686697419">PrevValid</a> (void)</td></tr>
+<tr class="memdesc:aaff26f30a7300e1a76188cd686697419"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置を前の有効な位置まで進める  <a href="../../dc/d1e/class_c_mark_mgr.html#aaff26f30a7300e1a76188cd686697419">[詳解]</a><br /></td></tr>
+<tr class="separator:aaff26f30a7300e1a76188cd686697419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6551018a3d7ea8b56a4f62c3f70475ce"><td class="memItemLeft" align="right" valign="top"><a id="a6551018a3d7ea8b56a4f62c3f70475ce"></a>
+const <a class="el" href="../../df/d68/class_c_mark_mgr_1_1_c_mark.html">CMark</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int index) const</td></tr>
+<tr class="separator:a6551018a3d7ea8b56a4f62c3f70475ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3bc0437d1b52ac37ee73bedaaf580ea0"><td class="memItemLeft" align="right" valign="top"><a id="a3bc0437d1b52ac37ee73bedaaf580ea0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Expire</b> (void)=0</td></tr>
+<tr class="separator:a3bc0437d1b52ac37ee73bedaaf580ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a72bb816bdc4287d964d47ebf056d7d9d"><td class="memItemLeft" align="right" valign="top"><a id="a72bb816bdc4287d964d47ebf056d7d9d"></a>
+CMarkChain&#160;</td><td class="memItemRight" valign="bottom"><b>m_cMarkChain</b></td></tr>
+<tr class="separator:a72bb816bdc4287d964d47ebf056d7d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ab165415905bb7e6128bc630fd1666"><td class="memItemLeft" align="right" valign="top"><a id="a40ab165415905bb7e6128bc630fd1666"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nCurpos</b></td></tr>
+<tr class="separator:a40ab165415905bb7e6128bc630fd1666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c34716b783d1a644e60943c296ae74"><td class="memItemLeft" align="right" valign="top"><a id="af8c34716b783d1a644e60943c296ae74"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nMaxitem</b></td></tr>
+<tr class="separator:af8c34716b783d1a644e60943c296ae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>行マークを管理するクラス。 純粋仮想関数を含むので、実際にはサブクラスを作って使う。</p>
+<dl class="section user"><dt>通常操作（共通）</dt><dd><a class="el" href="../../dc/d1e/class_c_mark_mgr.html#abfe92e7a2296179c50922112b8f69cf5" title="要素の追加">Add()</a>で追加．場所と名前を登録できる．操作そのものはカスタマイズ可能． [番号]で該当番号の要素を取得できる．</dd></dl>
+<dl class="section user"><dt>内部動作</dt><dd>最大値を超えた場合はprotectedな関数で処理する．（カスタマイズ可能） <a class="el" href="../../dc/d1e/class_c_mark_mgr.html#abfe92e7a2296179c50922112b8f69cf5" title="要素の追加">Add()</a>の処理はサブクラスに任せる．</dd></dl>
+<dl class="section user"><dt>現在位置の管理</dt><dd>現在位置はManager内で管理する．</dd></dl>
+<p>削除操作はサブクラスにまかせる </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa02312698b1228f32a4683d8ddac5f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02312698b1228f32a4683d8ddac5f4a">&#9670;&nbsp;</a></span>CheckCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMarkMgr::CheckCurrent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在位置の要素が有効かどうかの判定 </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>有効 </td></tr>
+    <tr><td class="paramname">false</td><td>無効 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeaeeb228833a1c86951f258a07c928c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaeeb228833a1c86951f258a07c928c0">&#9670;&nbsp;</a></span>CheckNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMarkMgr::CheckNext </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在位置の後に有効な要素があるかどうかを調べる </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>有る </td></tr>
+    <tr><td class="paramname">false</td><td>無い </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a346b3ab8509661bb24b7de1c25c70187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346b3ab8509661bb24b7de1c25c70187">&#9670;&nbsp;</a></span>CheckPrev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMarkMgr::CheckPrev </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在位置の前に有効な要素があるかどうかを調べる </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>有る </td></tr>
+    <tr><td class="paramname">false</td><td>無い </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3706c47084ed551229450e7cb5a51c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3706c47084ed551229450e7cb5a51c21">&#9670;&nbsp;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMarkMgr::Flush </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素の全消去 </p>
+<p>現在のデータを全て消去し、現在位置のポインタをリセットする。</p>
+<dl class="section user"><dt>history</dt><dd>Apr. 1, 2001 genta 新規追加 </dd></dl>
+
+</div>
+</div>
+<a id="a7a7def55d16f9ec65e8f6b8653975c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7def55d16f9ec65e8f6b8653975c33">&#9670;&nbsp;</a></span>NextValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMarkMgr::NextValid </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在位置を後の有効な位置まで進める </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了。現在位置は1つ後の有効な要素に移動した。 </td></tr>
+    <tr><td class="paramname">false</td><td>有効な要素が見つからなかった。現在位置は移動していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaff26f30a7300e1a76188cd686697419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff26f30a7300e1a76188cd686697419">&#9670;&nbsp;</a></span>PrevValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMarkMgr::PrevValid </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在位置を前の有効な位置まで進める </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了。現在位置は1つ前の有効な要素に移動した。 </td></tr>
+    <tr><td class="paramname">false</td><td>有効な要素が見つからなかった。現在位置は移動していない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a851eecc02bbe8977f21957bfc44436a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851eecc02bbe8977f21957bfc44436a3">&#9670;&nbsp;</a></span>SetMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMarkMgr::SetMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大項目数を設定 </p>
+<p>保管する最大件数を指定する。</p>
+<p>現在より小さい値を設定したときは余分な要素は削除される。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>設定する最大件数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d3/db8/_c_mark_mgr_8h_source.html">CMarkMgr.h</a></li>
+<li>sakura_core/<a class="el" href="../../d7/d9f/_c_mark_mgr_8cpp.html">CMarkMgr.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

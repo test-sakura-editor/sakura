@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CShareData クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../de/de5/class_c_share_data-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CShareData クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>共有データの管理  
+ <a href="../../d7/d5d/class_c_share_data.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">CShareData.h</a>&gt;</code></p>
+<div class="dynheader">
+CShareData の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d5d/class_c_share_data.png" usemap="#CShareData_map" alt=""/>
+  <map id="CShareData_map" name="CShareData_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CShareData &gt;" shape="rect" coords="0,0,164,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4a747207c6d96c2c2695fb81b209697e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a4a747207c6d96c2c2695fb81b209697e">InitShareData</a> ()</td></tr>
+<tr class="memdesc:a4a747207c6d96c2c2695fb81b209697e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CShareDataクラスの初期化処理  <a href="../../d7/d5d/class_c_share_data.html#a4a747207c6d96c2c2695fb81b209697e">[詳解]</a><br /></td></tr>
+<tr class="separator:a4a747207c6d96c2c2695fb81b209697e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fd572aae7761dea40c30a23180fb5f"><td class="memItemLeft" align="right" valign="top"><a id="ac7fd572aae7761dea40c30a23180fb5f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RefreshString</b> ()</td></tr>
+<tr class="separator:ac7fd572aae7761dea40c30a23180fb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3be3197afa9bd395a4b63256213e30b"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#aa3be3197afa9bd395a4b63256213e30b">IsPathOpened</a> (const WCHAR *pszPath, HWND *phwndOwner)</td></tr>
+<tr class="memdesc:aa3be3197afa9bd395a4b63256213e30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルが開かれているか調べる  <a href="../../d7/d5d/class_c_share_data.html#aa3be3197afa9bd395a4b63256213e30b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3be3197afa9bd395a4b63256213e30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2900132a19095f56ffe3e499a9a8c7c7"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a2900132a19095f56ffe3e499a9a8c7c7">ActiveAlreadyOpenedWindow</a> (const WCHAR *pszPath, HWND *phwndOwner, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode)</td></tr>
+<tr class="memdesc:a2900132a19095f56ffe3e499a9a8c7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ファイルが開かれているか調べつつ、多重オープン時の文字コード衝突も確認  <a href="../../d7/d5d/class_c_share_data.html#a2900132a19095f56ffe3e499a9a8c7c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a2900132a19095f56ffe3e499a9a8c7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d1f7bc6c27a971575721bfe0fcff9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#ab2d1f7bc6c27a971575721bfe0fcff9c">TraceOut</a> (LPCWSTR lpFmt,...)</td></tr>
+<tr class="separator:ab2d1f7bc6c27a971575721bfe0fcff9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51901b61b000433bad83bf631b23fff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a51901b61b000433bad83bf631b23fff6">TraceOutString</a> (const wchar_t *pszStr, int len=-1)</td></tr>
+<tr class="separator:a51901b61b000433bad83bf631b23fff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad720b6178cdf6e17f593944cc96b35e4"><td class="memItemLeft" align="right" valign="top"><a id="ad720b6178cdf6e17f593944cc96b35e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTraceOutSource</b> (HWND hwnd)</td></tr>
+<tr class="separator:ad720b6178cdf6e17f593944cc96b35e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78586a47fac985e63d19716eb89a4bc0"><td class="memItemLeft" align="right" valign="top"><a id="a78586a47fac985e63d19716eb89a4bc0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a78586a47fac985e63d19716eb89a4bc0">OpenDebugWindow</a> (HWND hwnd, bool bAllwaysActive)</td></tr>
+<tr class="memdesc:a78586a47fac985e63d19716eb89a4bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグウィンドウを開く <br /></td></tr>
+<tr class="separator:a78586a47fac985e63d19716eb89a4bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c0318689b97305691340a740e0d355"><td class="memItemLeft" align="right" valign="top"><a id="ab5c0318689b97305691340a740e0d355"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>IsPrivateSettings</b> (void)</td></tr>
+<tr class="separator:ab5c0318689b97305691340a740e0d355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d501caf9ca42c3cb8ce8fabc7a54938"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a1d501caf9ca42c3cb8ce8fabc7a54938">GetMacroFilename</a> (int idx, WCHAR *pszPath, int nBufLen)</td></tr>
+<tr class="separator:a1d501caf9ca42c3cb8ce8fabc7a54938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fbdaceffb0cbd0c2f6f877376766e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a74fbdaceffb0cbd0c2f6f877376766e6">BeReloadWhenExecuteMacro</a> (int idx)</td></tr>
+<tr class="separator:a74fbdaceffb0cbd0c2f6f877376766e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8ef60c533edf01f330c4b193efa498"><td class="memItemLeft" align="right" valign="top"><a id="a5b8ef60c533edf01f330c4b193efa498"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateTypeSettings</b> ()</td></tr>
+<tr class="separator:a5b8ef60c533edf01f330c4b193efa498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc61b8cd8b00d270a7e67a042c167e8"><td class="memItemLeft" align="right" valign="top"><a id="adfc61b8cd8b00d270a7e67a042c167e8"></a>
+std::vector&lt; <a class="el" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeSettings</b> ()</td></tr>
+<tr class="separator:adfc61b8cd8b00d270a7e67a042c167e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37a43c5d5b7c402ec39f6ae12e55dec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#ad37a43c5d5b7c402ec39f6ae12e55dec">ConvertLangValues</a> (std::vector&lt; std::wstring &gt; &amp;values, bool bSetValues)</td></tr>
+<tr class="separator:ad37a43c5d5b7c402ec39f6ae12e55dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab7bc5218d957e0c31d3537bea7f1cd79"><td class="memItemLeft" align="right" valign="top"><a id="ab7bc5218d957e0c31d3537bea7f1cd79"></a>
+static <a class="el" href="../../d3/d0d/class_c_mutex.html">CMutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMutexShareWork</b> ()</td></tr>
+<tr class="separator:ab7bc5218d957e0c31d3537bea7f1cd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc55abca5dd894299215db646037f0d4"><td class="memItemLeft" align="right" valign="top"><a id="acc55abca5dd894299215db646037f0d4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>InitFileTree</b> (<a class="el" href="../../dd/d16/struct_s_file_tree.html">SFileTree</a> *)</td></tr>
+<tr class="separator:acc55abca5dd894299215db646037f0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d7/d5d/class_c_share_data.html">CShareData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a83adcb8f48e0e79b15cc9d85fcdb029e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a83adcb8f48e0e79b15cc9d85fcdb029e">InitKeyword</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData)</td></tr>
+<tr class="memdesc:a83adcb8f48e0e79b15cc9d85fcdb029e"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有メモリ初期化/強調キーワード  <a href="../../d7/d5d/class_c_share_data.html#a83adcb8f48e0e79b15cc9d85fcdb029e">[詳解]</a><br /></td></tr>
+<tr class="separator:a83adcb8f48e0e79b15cc9d85fcdb029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce164d8fe2d16e63a99ae8e9bfb01e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a3ce164d8fe2d16e63a99ae8e9bfb01e3">InitKeyAssign</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData)</td></tr>
+<tr class="memdesc:a3ce164d8fe2d16e63a99ae8e9bfb01e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有メモリ初期化/キー割り当て  <a href="../../d7/d5d/class_c_share_data.html#a3ce164d8fe2d16e63a99ae8e9bfb01e3">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ce164d8fe2d16e63a99ae8e9bfb01e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf37c3aa333c0f60b7e59bc31739d10b"><td class="memItemLeft" align="right" valign="top"><a id="aaf37c3aa333c0f60b7e59bc31739d10b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#aaf37c3aa333c0f60b7e59bc31739d10b">RefreshKeyAssignString</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData)</td></tr>
+<tr class="memdesc:aaf37c3aa333c0f60b7e59bc31739d10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">言語選択後の文字列更新処理 <br /></td></tr>
+<tr class="separator:aaf37c3aa333c0f60b7e59bc31739d10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f13d16dbf082d5a0c19382b931fc9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#af2f13d16dbf082d5a0c19382b931fc9a">InitToolButtons</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData)</td></tr>
+<tr class="memdesc:af2f13d16dbf082d5a0c19382b931fc9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有メモリ初期化/ツールバー  <a href="../../d7/d5d/class_c_share_data.html#af2f13d16dbf082d5a0c19382b931fc9a">[詳解]</a><br /></td></tr>
+<tr class="separator:af2f13d16dbf082d5a0c19382b931fc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18586e37bad9ea9660cb03b60f215d2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#a18586e37bad9ea9660cb03b60f215d2c">InitTypeConfigs</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData, std::vector&lt; <a class="el" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> * &gt; &amp;types)</td></tr>
+<tr class="memdesc:a18586e37bad9ea9660cb03b60f215d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有メモリ初期化/タイプ別設定  <a href="../../d7/d5d/class_c_share_data.html#a18586e37bad9ea9660cb03b60f215d2c">[詳解]</a><br /></td></tr>
+<tr class="separator:a18586e37bad9ea9660cb03b60f215d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a0b9e786fe58854e9a74f4ef6c9473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5d/class_c_share_data.html#ab2a0b9e786fe58854e9a74f4ef6c9473">InitPopupMenu</a> (<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData)</td></tr>
+<tr class="memdesc:ab2a0b9e786fe58854e9a74f4ef6c9473"><td class="mdescLeft">&#160;</td><td class="mdescRight">共有メモリ初期化/ポップアップメニュー  <a href="../../d7/d5d/class_c_share_data.html#ab2a0b9e786fe58854e9a74f4ef6c9473">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2a0b9e786fe58854e9a74f4ef6c9473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:aa122b070be90efa78d932104944c1a53"><td class="memItemLeft" align="right" valign="top"><a id="aa122b070be90efa78d932104944c1a53"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CShareData &gt;</b></td></tr>
+<tr class="separator:aa122b070be90efa78d932104944c1a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>共有データの管理 </p>
+<p>CShareDataはCProcessのメンバであるため，両者の寿命は同一です． 本来はCProcessオブジェクトを通じてアクセスするべきですが， CProcess内のデータ領域へのポインタをstatic変数に保存することで Singletonのようにどこからでもアクセスできる構造になっています．</p>
+<p>共有メモリへのポインタをm_pShareDataに保持します．このメンバは 公開されていますが，CShareDataによってMap/Unmapされるために ChareDataの消滅によってポインタm_pShareDataも無効になることに 注意してください．</p>
+<dl class="section date"><dt>日付</dt><dd>2002.01.03 YAZAKI m_tbMyButtonなどをCShareDataからCMenuDrawerへ移動したことによる修正。 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2900132a19095f56ffe3e499a9a8c7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2900132a19095f56ffe3e499a9a8c7c7">&#9670;&nbsp;</a></span>ActiveAlreadyOpenedWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CShareData::ActiveAlreadyOpenedWindow </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND *&#160;</td>
+          <td class="paramname"><em>phwndOwner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>nCharCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ファイルが開かれているか調べつつ、多重オープン時の文字コード衝突も確認 </p>
+<p>もしすでに開いていればアクティブにして、ウィンドウのハンドルを返す。 さらに、文字コードが異なるときのワーニングも処理する。 あちこちに散らばった多重オープン処理を集結させるのが目的。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">開かれている場合は開いているウィンドウのハンドル</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>CEditDoc::FileLoadに先立って実行されることもあるが、 CEditDoc::FileLoadからも実行される必要があることに注意。 (フォルダ指定の場合やCEditDoc::FileLoadが直接実行される場合もあるため)</dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>すでに開いていた </td></tr>
+    <tr><td class="paramname">FALSE</td><td>開いていなかった</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.03.12 maru 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a74fbdaceffb0cbd0c2f6f877376766e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74fbdaceffb0cbd0c2f6f877376766e6">&#9670;&nbsp;</a></span>BeReloadWhenExecuteMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CShareData::BeReloadWhenExecuteMacro </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>idxで指定したマクロのm_bReloadWhenExecuteを取得する。 idxは正確なものでなければならない。 YAZAKI </p>
+
+</div>
+</div>
+<a id="ad37a43c5d5b7c402ec39f6ae12e55dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37a43c5d5b7c402ec39f6ae12e55dec">&#9670;&nbsp;</a></span>ConvertLangValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::ConvertLangValues </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::wstring &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSetValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>国際化対応のための文字列を変更する</p>
+<ol type="1">
+<li>1回目呼び出し、setValuesをtrueにして、valuesに旧設定の言語文字列を読み込み</li>
+<li>SelectLang呼び出し</li>
+<li>2回目呼び出し、valuesを使って新設定の言語に書き換え </li>
+</ol>
+
+</div>
+</div>
+<a id="a1d501caf9ca42c3cb8ce8fabc7a54938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d501caf9ca42c3cb8ce8fabc7a54938">&#9670;&nbsp;</a></span>GetMacroFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CShareData::GetMacroFilename </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nBufLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>idxで指定したマクロファイル名（フルパス）を取得する．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszPath</td><td>[in] パス名の出力先．長さのみを知りたいときはNULLを入れる． </td></tr>
+    <tr><td class="paramname">idx</td><td>[in] マクロ番号 </td></tr>
+    <tr><td class="paramname">nBufLen</td><td>[in] pszPathで指定されたバッファのバッファサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;0</td><td>: パス名の長さ． </td></tr>
+    <tr><td class="paramname">0</td><td>: エラー，そのマクロは使えない，ファイル名が指定されていない． </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>: バッファ不足．必要なバッファサイズは -(戻り値)+1</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>YAZAKI </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003.06.08 Moca ローカル変数へのポインタを返さないように仕様変更 </dd>
+<dd>
+2003.06.14 genta 文字列長，ポインタのチェックを追加 </dd>
+<dd>
+2003.06.24 Moca idxが-1のとき、キーマクロのフルパスを返す.</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>idxは正確なものでなければならない。(内部で正当性チェックを行っていない) </dd></dl>
+
+</div>
+</div>
+<a id="a3ce164d8fe2d16e63a99ae8e9bfb01e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce164d8fe2d16e63a99ae8e9bfb01e3">&#9670;&nbsp;</a></span>InitKeyAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CShareData::InitKeyAssign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td>
+          <td class="paramname"><em>pShareData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共有メモリ初期化/キー割り当て </p>
+<p>デフォルトキー割り当て関連の初期化処理</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.30 genta CShareData::Init()から分離 </dd>
+<dd>
+2007.11.04 genta キー設定数がDLLSHAREの領域を超えたら起動できないように </dd></dl>
+
+</div>
+</div>
+<a id="a83adcb8f48e0e79b15cc9d85fcdb029e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83adcb8f48e0e79b15cc9d85fcdb029e">&#9670;&nbsp;</a></span>InitKeyword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::InitKeyword </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td>
+          <td class="paramname"><em>pShareData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共有メモリ初期化/強調キーワード </p>
+<p>強調キーワード関連の初期化処理</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.30 genta CShareData::Init()から分離． キーワード定義を関数の外に出し，登録をマクロ化して簡潔に． </dd></dl>
+
+</div>
+</div>
+<a id="ab2a0b9e786fe58854e9a74f4ef6c9473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a0b9e786fe58854e9a74f4ef6c9473">&#9670;&nbsp;</a></span>InitPopupMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::InitPopupMenu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td>
+          <td class="paramname"><em>pShareData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共有メモリ初期化/ポップアップメニュー </p>
+<p>ポップアップメニューの初期化処理</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.30 genta CShareData::Init()から分離． </dd></dl>
+
+</div>
+</div>
+<a id="a4a747207c6d96c2c2695fb81b209697e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a747207c6d96c2c2695fb81b209697e">&#9670;&nbsp;</a></span>InitShareData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CShareData::InitShareData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CShareDataクラスの初期化処理 </p>
+<p>CShareDataクラスを利用する前に必ず呼び出すこと。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>初期化成功 </td></tr>
+    <tr><td class="paramname">false</td><td>初期化失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>既に存在する共有メモリのバージョンがこのエディタが使うものと 異なる場合は致命的エラーを防ぐためにfalseを返します。CProcess::Initialize() でInit()に失敗するとメッセージを出してエディタの起動を中止します。</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2018/06/01 仕様変更 <a href="https://github.com/sakura-editor/sakura/issues/29">https://github.com/sakura-editor/sakura/issues/29</a> </dd></dl>
+
+</div>
+</div>
+<a id="af2f13d16dbf082d5a0c19382b931fc9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f13d16dbf082d5a0c19382b931fc9a">&#9670;&nbsp;</a></span>InitToolButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::InitToolButtons </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td>
+          <td class="paramname"><em>pShareData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共有メモリ初期化/ツールバー </p>
+<p>ツールバー関連の初期化処理</p>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2005.01.30 genta CShareData::Init()から分離． 一つずつ設定しないで一気にデータ転送するように． </dd></dl>
+
+</div>
+</div>
+<a id="a18586e37bad9ea9660cb03b60f215d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18586e37bad9ea9660cb03b60f215d2c">&#9670;&nbsp;</a></span>InitTypeConfigs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::InitTypeConfigs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td>
+          <td class="paramname"><em>pShareData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共有メモリ初期化/タイプ別設定 </p>
+<p>タイプ別設定の初期化処理</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.30 genta CShareData::Init()から分離． </dd></dl>
+
+</div>
+</div>
+<a id="aa3be3197afa9bd395a4b63256213e30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3be3197afa9bd395a4b63256213e30b">&#9670;&nbsp;</a></span>IsPathOpened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CShareData::IsPathOpened </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND *&#160;</td>
+          <td class="paramname"><em>phwndOwner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ファイルが開かれているか調べる </p>
+<p>指定のファイルが開かれている場合は開いているウィンドウのハンドルを返す</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>すでに開いていた </td></tr>
+    <tr><td class="paramname">FALSE</td><td>開いていなかった </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab2d1f7bc6c27a971575721bfe0fcff9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d1f7bc6c27a971575721bfe0fcff9c">&#9670;&nbsp;</a></span>TraceOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::TraceOut </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpFmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アウトプットウインドウに出力(書式付)</p>
+<p>アウトプットウインドウが無ければオープンする </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lpFmt</td><td>[in] 書式指定文字列(wchar_t版) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2010.02.22 Moca auto_vsprintfから tchar_vsnprintf_s に変更.長すぎるときは切り詰められる </dd></dl>
+
+</div>
+</div>
+<a id="a51901b61b000433bad83bf631b23fff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51901b61b000433bad83bf631b23fff6">&#9670;&nbsp;</a></span>TraceOutString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CShareData::TraceOutString </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アウトプットウインドウに出力(文字列指定)</p>
+<p>長い場合は分割して送る アウトプットウインドウが無ければオープンする </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStr</td><td>出力する文字列 </td></tr>
+    <tr><td class="paramname">len</td><td>pStrの文字数(終端NULを含まない) -1で自動計算 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2010.05.11 Moca 新設 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/env/<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">CShareData.h</a></li>
+<li>sakura_core/env/<a class="el" href="../../d0/d64/_c_share_data_8cpp.html">CShareData.cpp</a></li>
+<li>sakura_core/func/<a class="el" href="../../d2/d2a/_c_key_bind_8cpp.html">CKeyBind.cpp</a></li>
+<li>sakura_core/types/<a class="el" href="../../de/d03/_c_type_8cpp.html">CType.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

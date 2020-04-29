@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CSMacroMgr クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="../../d2/dcb/class_c_s_macro_mgr-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CSMacroMgr クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae4983273c68ab306ebd30f8546cb9a0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#ae4983273c68ab306ebd30f8546cb9a0f">CSMacroMgr</a> ()</td></tr>
+<tr class="separator:ae4983273c68ab306ebd30f8546cb9a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8be1a5eb3801896a50c294267b89ae8"><td class="memItemLeft" align="right" valign="top"><a id="ab8be1a5eb3801896a50c294267b89ae8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> (int idx)</td></tr>
+<tr class="separator:ab8be1a5eb3801896a50c294267b89ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa91c39aecfc3c08590b13b086fd6419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#afa91c39aecfc3c08590b13b086fd6419">ClearAll</a> (void)</td></tr>
+<tr class="separator:afa91c39aecfc3c08590b13b086fd6419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147834b54187e2251ae1e91e85af4ea2"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a147834b54187e2251ae1e91e85af4ea2">Exec</a> (int idx, HINSTANCE hInstance, <a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pcEditView, int flags)</td></tr>
+<tr class="memdesc:a147834b54187e2251ae1e91e85af4ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーボードマクロの実行  <a href="../../d0/d94/class_c_s_macro_mgr.html#a147834b54187e2251ae1e91e85af4ea2">[詳解]</a><br /></td></tr>
+<tr class="separator:a147834b54187e2251ae1e91e85af4ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f45d708589c22af0e6186fb906ec3a9"><td class="memItemLeft" align="right" valign="top"><a id="a2f45d708589c22af0e6186fb906ec3a9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a2f45d708589c22af0e6186fb906ec3a9">IsEnabled</a> (int idx) const</td></tr>
+<tr class="memdesc:a2f45d708589c22af0e6186fb906ec3a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行可能か？CShareDataに問い合わせ <br /></td></tr>
+<tr class="separator:a2f45d708589c22af0e6186fb906ec3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bb97a3db3bc9692911c7a6ebe94c63"><td class="memItemLeft" align="right" valign="top"><a id="ab2bb97a3db3bc9692911c7a6ebe94c63"></a>
+const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#ab2bb97a3db3bc9692911c7a6ebe94c63">GetTitle</a> (int idx) const</td></tr>
+<tr class="memdesc:ab2bb97a3db3bc9692911c7a6ebe94c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示する名前の取得 <br /></td></tr>
+<tr class="separator:ab2bb97a3db3bc9692911c7a6ebe94c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11087eb4d0c296bd529fae9376fb72aa"><td class="memItemLeft" align="right" valign="top"><a id="a11087eb4d0c296bd529fae9376fb72aa"></a>
+const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a11087eb4d0c296bd529fae9376fb72aa">GetName</a> (int idx) const</td></tr>
+<tr class="memdesc:a11087eb4d0c296bd529fae9376fb72aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示名の取得 <br /></td></tr>
+<tr class="separator:a11087eb4d0c296bd529fae9376fb72aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae22c68dd23caa0f5f04c124def2373"><td class="memItemLeft" align="right" valign="top">const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a6ae22c68dd23caa0f5f04c124def2373">GetFile</a> (int idx) const</td></tr>
+<tr class="memdesc:a6ae22c68dd23caa0f5f04c124def2373"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名の取得  <a href="../../d0/d94/class_c_s_macro_mgr.html#a6ae22c68dd23caa0f5f04c124def2373">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ae22c68dd23caa0f5f04c124def2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb887ef2736d448fbb1eae2150bf9ac"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#adfb887ef2736d448fbb1eae2150bf9ac">Load</a> (int idx, HINSTANCE hInstance, const WCHAR *pszPath, const WCHAR *pszType)</td></tr>
+<tr class="separator:adfb887ef2736d448fbb1eae2150bf9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a7c99a252acdb43e686d5171760afe"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a43a7c99a252acdb43e686d5171760afe">Save</a> (int idx, HINSTANCE hInstance, const WCHAR *pszPath)</td></tr>
+<tr class="separator:a43a7c99a252acdb43e686d5171760afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ca3656991d08c2fb192c589960ce8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#ab3ca3656991d08c2fb192c589960ce8a">UnloadAll</a> (void)</td></tr>
+<tr class="separator:ab3ca3656991d08c2fb192c589960ce8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2f54e7f2c08c4d1c2e399af19fdd72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#afa2f54e7f2c08c4d1c2e399af19fdd72">Append</a> (int idx, EFunctionCode nFuncID, const LPARAM *lParams, <a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pcEditView)</td></tr>
+<tr class="memdesc:afa2f54e7f2c08c4d1c2e399af19fdd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーマクロのバッファにデータ追加  <a href="../../d0/d94/class_c_s_macro_mgr.html#afa2f54e7f2c08c4d1c2e399af19fdd72">[詳解]</a><br /></td></tr>
+<tr class="separator:afa2f54e7f2c08c4d1c2e399af19fdd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5593e9149a398b3fc75e30d0f237f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#aae5593e9149a398b3fc75e30d0f237f1">IsSaveOk</a> (void)</td></tr>
+<tr class="separator:aae5593e9149a398b3fc75e30d0f237f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f3819d4615beae9e0ba5c4c8212e7c"><td class="memItemLeft" align="right" valign="top"><a id="a42f3819d4615beae9e0ba5c4c8212e7c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentIdx</b> (void) const</td></tr>
+<tr class="separator:a42f3819d4615beae9e0ba5c4c8212e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f84b89cb2b1ff7cad5077df2fcf0af"><td class="memItemLeft" align="right" valign="top"><a id="a93f84b89cb2b1ff7cad5077df2fcf0af"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SetCurrentIdx</b> (int idx)</td></tr>
+<tr class="separator:a93f84b89cb2b1ff7cad5077df2fcf0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5a8b67c79d08a8bb671cef24ac500e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a8a5a8b67c79d08a8bb671cef24ac500e">SetTempMacro</a> (<a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *newMacro)</td></tr>
+<tr class="separator:a8a5a8b67c79d08a8bb671cef24ac500e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8623ae8aa8c47d1868405d7fcfa2eff"><td class="memItemLeft" align="right" valign="top"><a id="ad8623ae8aa8c47d1868405d7fcfa2eff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a>)</td></tr>
+<tr class="separator:ad8623ae8aa8c47d1868405d7fcfa2eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5d2eb343ab40f5fc23d80f267c36ba92"><td class="memItemLeft" align="right" valign="top">static WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a5d2eb343ab40f5fc23d80f267c36ba92">GetFuncInfoByID</a> (HINSTANCE hInstance, int nFuncID, WCHAR *pszFuncName, WCHAR *pszFuncNameJapanese)</td></tr>
+<tr class="separator:a5d2eb343ab40f5fc23d80f267c36ba92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e2751b566734ab2733589a6455d6cf"><td class="memItemLeft" align="right" valign="top">static EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#ac9e2751b566734ab2733589a6455d6cf">GetFuncInfoByName</a> (HINSTANCE hInstance, const WCHAR *pszFuncName, WCHAR *pszFuncNameJapanese)</td></tr>
+<tr class="separator:ac9e2751b566734ab2733589a6455d6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2df872fd08c8a3082b297d1b595b7b"><td class="memItemLeft" align="right" valign="top">static BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d94/class_c_s_macro_mgr.html#a1c2df872fd08c8a3082b297d1b595b7b">CanFuncIsKeyMacro</a> (int nFuncID)</td></tr>
+<tr class="separator:a1c2df872fd08c8a3082b297d1b595b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f125ddfa747de38743e135dcc8e852b"><td class="memItemLeft" align="right" valign="top"><a id="a8f125ddfa747de38743e135dcc8e852b"></a>
+static const <a class="el" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetFuncInfoByID</b> (int nFuncID)</td></tr>
+<tr class="separator:a8f125ddfa747de38743e135dcc8e852b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ad84b4f780f10a45d4f5f2e60e7ae5fd1"><td class="memItemLeft" align="right" valign="top"><a id="ad84b4f780f10a45d4f5f2e60e7ae5fd1"></a>
+static <a class="el" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_MacroFuncInfoCommandArr</b> []</td></tr>
+<tr class="separator:ad84b4f780f10a45d4f5f2e60e7ae5fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fdb78012ac4192e6f5b8b0e9380b8dd"><td class="memItemLeft" align="right" valign="top"><a id="a7fdb78012ac4192e6f5b8b0e9380b8dd"></a>
+static <a class="el" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_MacroFuncInfoArr</b> []</td></tr>
+<tr class="separator:a7fdb78012ac4192e6f5b8b0e9380b8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="ae4983273c68ab306ebd30f8546cb9a0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4983273c68ab306ebd30f8546cb9a0f">&#9670;&nbsp;</a></span>CSMacroMgr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSMacroMgr::CSMacroMgr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section date"><dt>日付</dt><dd>2002.02.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd>
+<dd>
+2002.04.29 genta オブジェクトの実体は実行時まで生成しない。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="afa2f54e7f2c08c4d1c2e399af19fdd72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa2f54e7f2c08c4d1c2e399af19fdd72">&#9670;&nbsp;</a></span>Append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CSMacroMgr::Append </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EFunctionCode&#160;</td>
+          <td class="paramname"><em>nFuncID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LPARAM *&#160;</td>
+          <td class="paramname"><em>lParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *&#160;</td>
+          <td class="paramname"><em>pcEditView</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーマクロのバッファにデータ追加 </p>
+<p>キーマクロのバッファにデータ追加</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mbuf</td><td>[in] 読み込み先マクロバッファ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002.06.16 genta キーマクロの多種対応のため変更 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nFuncID</td><td>[in] 機能番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lParams</td><td>[in] パラメータ。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1c2df872fd08c8a3082b297d1b595b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2df872fd08c8a3082b297d1b595b7b">&#9670;&nbsp;</a></span>CanFuncIsKeyMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CSMacroMgr::CanFuncIsKeyMacro </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>case F_BROWSE ://ブラウズ</p>
+
+</div>
+</div>
+<a id="afa91c39aecfc3c08590b13b086fd6419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa91c39aecfc3c08590b13b086fd6419">&#9670;&nbsp;</a></span>ClearAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSMacroMgr::ClearAll </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーマクロのバッファをクリアする </p>
+
+</div>
+</div>
+<a id="a147834b54187e2251ae1e91e85af4ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147834b54187e2251ae1e91e85af4ea2">&#9670;&nbsp;</a></span>Exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CSMacroMgr::Exec </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *&#160;</td>
+          <td class="paramname"><em>pcEditView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーボードマクロの実行 </p>
+<p>CShareDataからファイル名を取得し、実行する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] インスタンス </td></tr>
+    <tr><td class="paramname">hwndParent</td><td>[in] 親ウィンドウの </td></tr>
+    <tr><td class="paramname">pViewClass</td><td>[in] macro実行対象のView </td></tr>
+    <tr><td class="paramname">idx</td><td>[in] マクロ番号。 </td></tr>
+    <tr><td class="paramname">flags</td><td>[in] マクロ実行フラグ．HandleCommandに渡すオプション．</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.07.16 genta flags追加 </dd></dl>
+
+</div>
+</div>
+<a id="a6ae22c68dd23caa0f5f04c124def2373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae22c68dd23caa0f5f04c124def2373">&#9670;&nbsp;</a></span>GetFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const WCHAR* CSMacroMgr::GetFile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名の取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>[in] マクロ番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d2eb343ab40f5fc23d80f267c36ba92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d2eb343ab40f5fc23d80f267c36ba92">&#9670;&nbsp;</a></span>GetFuncInfoByID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WCHAR * CSMacroMgr::GetFuncInfoByID </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncNameJapanese</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>機能番号から関数名と機能名日本語を取得</p>
+<dl class="section return"><dt>戻り値</dt><dd>成功したときはpszFuncName．見つからなかったときはNULL．</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>それぞれ，文字列格納領域の指す先がNULLの時は文字列を格納しない． ただし，pszFuncNameをNULLにしてしまうと戻り値が常にNULLになって 成功判定が行えなくなる． 各国語メッセージリソース対応により機能名が日本語でない場合がある <br  />
+</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.06.16 genta 新設のGetFuncInfoById(int)を内部で使うように． </dd>
+<dd>
+2011.04.10 nasukoji 各国語メッセージリソース対応 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hInstance</td><td>[in] リソース取得のためのInstance Handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nFuncID</td><td>[in] 機能番号 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszFuncName</td><td>[out] 関数名．この先には最長関数名＋1バイトのメモリが必要． </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszFuncNameJapanese</td><td>[out] 機能名日本語．NULL許容. この先には256バイトのメモリが必要． </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9e2751b566734ab2733589a6455d6cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e2751b566734ab2733589a6455d6cf">&#9670;&nbsp;</a></span>GetFuncInfoByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode CSMacroMgr::GetFuncInfoByName </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncNameJapanese</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>関数名（S_xxxx）から機能番号と機能名日本語を取得． 関数名はS_で始まる場合と始まらない場合の両方に対応．</p>
+<dl class="section return"><dt>戻り値</dt><dd>成功したときは機能番号．見つからなかったときは-1．</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>pszFuncNameJapanese の指す先がNULLの時は日本語名を格納しない．</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.06.16 genta ループ内の文字列コピーを排除 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hInstance</td><td>[in] リソース取得のためのInstance Handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszFuncName</td><td>[in] 関数名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszFuncNameJapanese</td><td>[out] 機能名日本語．この先には256バイトのメモリが必要． </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae5593e9149a398b3fc75e30d0f237f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5593e9149a398b3fc75e30d0f237f1">&#9670;&nbsp;</a></span>IsSaveOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSMacroMgr::IsSaveOk </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーボードマクロの保存が可能かどうか</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>保存可能 </td></tr>
+    <tr><td class="paramname">false</td><td>保存不可 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adfb887ef2736d448fbb1eae2150bf9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb887ef2736d448fbb1eae2150bf9ac">&#9670;&nbsp;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CSMacroMgr::Load </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーボードマクロの読み込み</p>
+<p>キーボードマクロの読み込み</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>[in] 読み込み先マクロバッファ番号 </td></tr>
+    <tr><td class="paramname">pszPath</td><td>[in] マクロファイル名、またはコード文字列 </td></tr>
+    <tr><td class="paramname">pszType</td><td>[in] 種別。NULLの場合ファイルから読み込む。NULL以外の場合は言語の拡張子</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>読み込みに失敗したときはマクロバッファのオブジェクトは解放され， NULLが設定される．</p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani, YAZAKI, genta </dd></dl>
+
+</div>
+</div>
+<a id="a43a7c99a252acdb43e686d5171760afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a7c99a252acdb43e686d5171760afe">&#9670;&nbsp;</a></span>Save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CSMacroMgr::Save </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーボードマクロの保存</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>[in] 読み込み先マクロバッファ番号 </td></tr>
+    <tr><td class="paramname">pszPath</td><td>[in] マクロファイル名 </td></tr>
+    <tr><td class="paramname">hInstance</td><td>[in] インスタンスハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>YAZAKI </dd></dl>
+
+</div>
+</div>
+<a id="a8a5a8b67c79d08a8bb671cef24ac500e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5a8b67c79d08a8bb671cef24ac500e">&#9670;&nbsp;</a></span>SetTempMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> * CSMacroMgr::SetTempMacro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *&#160;</td>
+          <td class="paramname"><em>newMacro</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>一時マクロを交換する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newMacro</td><td>[in] 新しいマクロバッファのポインタ． </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>前の一時マクロバッファのポインタ． </dd></dl>
+
+</div>
+</div>
+<a id="ab3ca3656991d08c2fb192c589960ce8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ca3656991d08c2fb192c589960ce8a">&#9670;&nbsp;</a></span>UnloadAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSMacroMgr::UnloadAll </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>マクロオブジェクトをすべて破棄する(キーボードマクロ以外)</p>
+<p>マクロの登録を変更した場合に，変更前のマクロが 引き続き実行されてしまうのを防ぐ．</p>
+<dl class="section date"><dt>日付</dt><dd>2007.10.19 genta 新規作成 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/macro/<a class="el" href="../../df/de7/_c_s_macro_mgr_8h_source.html">CSMacroMgr.h</a></li>
+<li>sakura_core/macro/<a class="el" href="../../d3/dfb/_c_s_macro_mgr_8cpp.html">CSMacroMgr.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

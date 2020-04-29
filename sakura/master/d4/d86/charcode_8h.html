@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/charcode.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">charcode.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d8f/_c_word_parse_8h_source.html">parse/CWordParse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dec/std__macro_8h_source.html">util/std_macro.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d4/d86/charcode_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/struct_s_char_width_cache.html">SCharWidthCache</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a406f17e7931ca7061127c6d557099763"><td class="memItemLeft" align="right" valign="top"><a id="a406f17e7931ca7061127c6d557099763"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CP_SJIS</b>&#160;&#160;&#160;932</td></tr>
+<tr class="separator:a406f17e7931ca7061127c6d557099763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20d5371850e48b3f66ae4010a8fa9ca"><td class="memItemLeft" align="right" valign="top"><a id="ac20d5371850e48b3f66ae4010a8fa9ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TAB_</b>&#160;&#160;&#160;'\t'</td></tr>
+<tr class="separator:ac20d5371850e48b3f66ae4010a8fa9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af965e6067a0de034178ea71c3ddaa2b3"><td class="memItemLeft" align="right" valign="top"><a id="af965e6067a0de034178ea71c3ddaa2b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPACE_</b>&#160;&#160;&#160;' '</td></tr>
+<tr class="separator:af965e6067a0de034178ea71c3ddaa2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fa7d15439a25700846455689790227"><td class="memItemLeft" align="right" valign="top"><a id="aa3fa7d15439a25700846455689790227"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CR_</b>&#160;&#160;&#160;'\015'</td></tr>
+<tr class="separator:aa3fa7d15439a25700846455689790227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7194a38c3299dcfe9e731506ef93953"><td class="memItemLeft" align="right" valign="top"><a id="af7194a38c3299dcfe9e731506ef93953"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LF_</b>&#160;&#160;&#160;'\012'</td></tr>
+<tr class="separator:af7194a38c3299dcfe9e731506ef93953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751a8e0e4eec6466e8c255ff2aff55ec"><td class="memItemLeft" align="right" valign="top"><a id="a751a8e0e4eec6466e8c255ff2aff55ec"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ESC_</b>&#160;&#160;&#160;'\x1b'</td></tr>
+<tr class="separator:a751a8e0e4eec6466e8c255ff2aff55ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a6b58f9a41dd261c77ebf6e6c8d362"><td class="memItemLeft" align="right" valign="top"><a id="a27a6b58f9a41dd261c77ebf6e6c8d362"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRLF_</b>&#160;&#160;&#160;&quot;\015\012&quot;</td></tr>
+<tr class="separator:a27a6b58f9a41dd261c77ebf6e6c8d362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ae5d920fc56e9941136b5908fe42ff4cd"><td class="memItemLeft" align="right" valign="top"><a id="ae5d920fc56e9941136b5908fe42ff4cd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ECharWidthFontMode</b> { <b>CWM_FONT_EDIT</b>, 
+<b>CWM_FONT_PRINT</b>, 
+<b>CWM_FONT_MINIMAP</b>, 
+<b>CWM_FONT_MAX</b>
+ }</td></tr>
+<tr class="separator:ae5d920fc56e9941136b5908fe42ff4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4298ae53ac0557e663f73bce0c4bc039"><td class="memItemLeft" align="right" valign="top"><a id="a4298ae53ac0557e663f73bce0c4bc039"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ECharWidthCacheMode</b> { <b>CWM_CACHE_NEUTRAL</b>, 
+<b>CWM_CACHE_SHARE</b>, 
+<b>CWM_CACHE_LOCAL</b>
+ }</td></tr>
+<tr class="separator:a4298ae53ac0557e663f73bce0c4bc039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aee31d6a5efe7f284862c6eaed351485f"><td class="memItemLeft" align="right" valign="top"><a id="aee31d6a5efe7f284862c6eaed351485f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IS_KEYWORD_CHAR</b> (wchar_t wc)</td></tr>
+<tr class="separator:aee31d6a5efe7f284862c6eaed351485f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0116c2da4ce06f8bfa3e00ad0124f6"><td class="memItemLeft" align="right" valign="top"><a id="ace0116c2da4ce06f8bfa3e00ad0124f6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::IsAZ</b> (wchar_t wc)</td></tr>
+<tr class="separator:ace0116c2da4ce06f8bfa3e00ad0124f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce55a26f701cb268113874e268273a0"><td class="memItemLeft" align="right" valign="top"><a id="a0ce55a26f701cb268113874e268273a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::Is09</b> (wchar_t wc)</td></tr>
+<tr class="separator:a0ce55a26f701cb268113874e268273a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa41f7df21eee583a12b4649097b69285"><td class="memItemLeft" align="right" valign="top"><a id="aa41f7df21eee583a12b4649097b69285"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::IsInRange</b> (wchar_t c, wchar_t front, wchar_t back)</td></tr>
+<tr class="separator:aa41f7df21eee583a12b4649097b69285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7428063558a82a9670b9ad5fe227ba6"><td class="memItemLeft" align="right" valign="top"><a id="ae7428063558a82a9670b9ad5fe227ba6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#ae7428063558a82a9670b9ad5fe227ba6">WCODE::IsHankaku</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:ae7428063558a82a9670b9ad5fe227ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字(縦長長方形)かどうか判定 <br /></td></tr>
+<tr class="separator:ae7428063558a82a9670b9ad5fe227ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267c7d64f65edfa2ea28dd13ad9cd083"><td class="memItemLeft" align="right" valign="top"><a id="a267c7d64f65edfa2ea28dd13ad9cd083"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a267c7d64f65edfa2ea28dd13ad9cd083">WCODE::IsZenkaku</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a267c7d64f65edfa2ea28dd13ad9cd083"><td class="mdescLeft">&#160;</td><td class="mdescRight">全角文字(正方形)かどうか判定 <br /></td></tr>
+<tr class="separator:a267c7d64f65edfa2ea28dd13ad9cd083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987afde0d0830487eeaa52af946d0a51"><td class="memItemLeft" align="right" valign="top"><a id="a987afde0d0830487eeaa52af946d0a51"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#a987afde0d0830487eeaa52af946d0a51">WCODE::GetFontNo</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a987afde0d0830487eeaa52af946d0a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用フォント番号を返す <br /></td></tr>
+<tr class="separator:a987afde0d0830487eeaa52af946d0a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a80b82e9bf46261b7380a16cc0e7825"><td class="memItemLeft" align="right" valign="top"><a id="a0a80b82e9bf46261b7380a16cc0e7825"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::GetFontNo2</b> (wchar_t wc1, wchar_t wc2)</td></tr>
+<tr class="separator:a0a80b82e9bf46261b7380a16cc0e7825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85feac7ec5644bbc9e198a8ba76962fc"><td class="memItemLeft" align="right" valign="top"><a id="a85feac7ec5644bbc9e198a8ba76962fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a85feac7ec5644bbc9e198a8ba76962fc">WCODE::IsZenkakuSpace</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a85feac7ec5644bbc9e198a8ba76962fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">全角スペースかどうか判定 <br /></td></tr>
+<tr class="separator:a85feac7ec5644bbc9e198a8ba76962fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1016cc089aacbcbf2a7dd4dfa5b3f28c"><td class="memItemLeft" align="right" valign="top"><a id="a1016cc089aacbcbf2a7dd4dfa5b3f28c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#a1016cc089aacbcbf2a7dd4dfa5b3f28c">WCODE::IsControlCode</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a1016cc089aacbcbf2a7dd4dfa5b3f28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">制御文字であるかどうか <br /></td></tr>
+<tr class="separator:a1016cc089aacbcbf2a7dd4dfa5b3f28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd919f13f44483d6586013b66daf1b3"><td class="memItemLeft" align="right" valign="top"><a id="aacd919f13f44483d6586013b66daf1b3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#aacd919f13f44483d6586013b66daf1b3">WCODE::IsLineDelimiter</a> (wchar_t wc, bool ext)</td></tr>
+<tr class="memdesc:aacd919f13f44483d6586013b66daf1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">改行文字であるかどうか <br /></td></tr>
+<tr class="separator:aacd919f13f44483d6586013b66daf1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7507643e08f877b7002d9061daf55f3e"><td class="memItemLeft" align="right" valign="top"><a id="a7507643e08f877b7002d9061daf55f3e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::IsLineDelimiterBasic</b> (wchar_t wc)</td></tr>
+<tr class="separator:a7507643e08f877b7002d9061daf55f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b0402751fe2a26bbca8a8e1aca8acf"><td class="memItemLeft" align="right" valign="top"><a id="a86b0402751fe2a26bbca8a8e1aca8acf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WCODE::IsLineDelimiterExt</b> (wchar_t wc)</td></tr>
+<tr class="separator:a86b0402751fe2a26bbca8a8e1aca8acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616a9f4d9e9fcae03bd2d03a5a6cbe1b"><td class="memItemLeft" align="right" valign="top"><a id="a616a9f4d9e9fcae03bd2d03a5a6cbe1b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a616a9f4d9e9fcae03bd2d03a5a6cbe1b">WCODE::IsWordDelimiter</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a616a9f4d9e9fcae03bd2d03a5a6cbe1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">単語の区切り文字であるかどうか <br /></td></tr>
+<tr class="separator:a616a9f4d9e9fcae03bd2d03a5a6cbe1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346e35bd1f379ab4eaf2a8306af462c3"><td class="memItemLeft" align="right" valign="top"><a id="a346e35bd1f379ab4eaf2a8306af462c3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a346e35bd1f379ab4eaf2a8306af462c3">WCODE::IsIndentChar</a> (wchar_t wc, bool bAcceptZenSpace)</td></tr>
+<tr class="memdesc:a346e35bd1f379ab4eaf2a8306af462c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデント構成要素であるかどうか。bAcceptZenSpace: 全角スペースを含めるかどうか <br /></td></tr>
+<tr class="separator:a346e35bd1f379ab4eaf2a8306af462c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3237343eacadc6a21f4cb16adc1a6d72"><td class="memItemLeft" align="right" valign="top"><a id="a3237343eacadc6a21f4cb16adc1a6d72"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a3237343eacadc6a21f4cb16adc1a6d72">WCODE::IsBlank</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a3237343eacadc6a21f4cb16adc1a6d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">空白かどうか <br /></td></tr>
+<tr class="separator:a3237343eacadc6a21f4cb16adc1a6d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed69d954ac93a001546724c8d0fe068c"><td class="memItemLeft" align="right" valign="top"><a id="aed69d954ac93a001546724c8d0fe068c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#aed69d954ac93a001546724c8d0fe068c">WCODE::IsValidFilenameChar</a> (const wchar_t wc)</td></tr>
+<tr class="memdesc:aed69d954ac93a001546724c8d0fe068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名に使える文字であるかどうか <br /></td></tr>
+<tr class="separator:aed69d954ac93a001546724c8d0fe068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bbd07bc3476612264cda9d26a01bbd"><td class="memItemLeft" align="right" valign="top"><a id="a05bbd07bc3476612264cda9d26a01bbd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a05bbd07bc3476612264cda9d26a01bbd">WCODE::IsTabAvailableCode</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:a05bbd07bc3476612264cda9d26a01bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブ表示に使える文字かどうか <br /></td></tr>
+<tr class="separator:a05bbd07bc3476612264cda9d26a01bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2882f19209f52a0ecf5c396b6130ae"><td class="memItemLeft" align="right" valign="top"><a id="a1f2882f19209f52a0ecf5c396b6130ae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a1f2882f19209f52a0ecf5c396b6130ae">WCODE::IsHankakuKatakana</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a1f2882f19209f52a0ecf5c396b6130ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角カナかどうか <br /></td></tr>
+<tr class="separator:a1f2882f19209f52a0ecf5c396b6130ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c26ee0a00422c54095c6c9a314be34d"><td class="memItemLeft" align="right" valign="top"><a id="a2c26ee0a00422c54095c6c9a314be34d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a2c26ee0a00422c54095c6c9a314be34d">WCODE::IsZenkakuKigou</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a2c26ee0a00422c54095c6c9a314be34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全角記号かどうか <br /></td></tr>
+<tr class="separator:a2c26ee0a00422c54095c6c9a314be34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260f7fe041674265f2c9ceab0cfa4b49"><td class="memItemLeft" align="right" valign="top"><a id="a260f7fe041674265f2c9ceab0cfa4b49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a260f7fe041674265f2c9ceab0cfa4b49">WCODE::IsHiragana</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a260f7fe041674265f2c9ceab0cfa4b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">ひらがなかどうか <br /></td></tr>
+<tr class="separator:a260f7fe041674265f2c9ceab0cfa4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece9211cc64c99b2b8f8746630852c0b"><td class="memItemLeft" align="right" valign="top"><a id="aece9211cc64c99b2b8f8746630852c0b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#aece9211cc64c99b2b8f8746630852c0b">WCODE::IsZenkakuKatakana</a> (wchar_t c)</td></tr>
+<tr class="memdesc:aece9211cc64c99b2b8f8746630852c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">カタカナかどうか <br /></td></tr>
+<tr class="separator:aece9211cc64c99b2b8f8746630852c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065e8a28b12298fc2a490fc81264a2b0"><td class="memItemLeft" align="right" valign="top"><a id="a065e8a28b12298fc2a490fc81264a2b0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a065e8a28b12298fc2a490fc81264a2b0">WCODE::IsGreek</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a065e8a28b12298fc2a490fc81264a2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ギリシャ文字かどうか <br /></td></tr>
+<tr class="separator:a065e8a28b12298fc2a490fc81264a2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299f176644f6b5e1ae31ef1d75fe01b1"><td class="memItemLeft" align="right" valign="top"><a id="a299f176644f6b5e1ae31ef1d75fe01b1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a299f176644f6b5e1ae31ef1d75fe01b1">WCODE::IsCyrillic</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a299f176644f6b5e1ae31ef1d75fe01b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">キリル文字かどうか <br /></td></tr>
+<tr class="separator:a299f176644f6b5e1ae31ef1d75fe01b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1434c70ed2883e900f0ddb5f8482f097"><td class="memItemLeft" align="right" valign="top"><a id="a1434c70ed2883e900f0ddb5f8482f097"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a1434c70ed2883e900f0ddb5f8482f097">WCODE::IsBoxDrawing</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a1434c70ed2883e900f0ddb5f8482f097"><td class="mdescLeft">&#160;</td><td class="mdescRight">BOX DRAWING 文字 かどうか <br /></td></tr>
+<tr class="separator:a1434c70ed2883e900f0ddb5f8482f097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec76f2039b5b07bbb964561e49e7177"><td class="memItemLeft" align="right" valign="top"><a id="a3ec76f2039b5b07bbb964561e49e7177"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#a3ec76f2039b5b07bbb964561e49e7177">WCODE::CalcHankakuByFont</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a3ec76f2039b5b07bbb964561e49e7177"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字が半角かどうかを取得(DLLSHARE/フォント依存) <br /></td></tr>
+<tr class="separator:a3ec76f2039b5b07bbb964561e49e7177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf19409c477edf6fab94be5c6288ccd3"><td class="memItemLeft" align="right" valign="top"><a id="adf19409c477edf6fab94be5c6288ccd3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#adf19409c477edf6fab94be5c6288ccd3">WCODE::CalcPxWidthByFont</a> (wchar_t c)</td></tr>
+<tr class="memdesc:adf19409c477edf6fab94be5c6288ccd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字のpx幅を取得(DLLSHARE/フォント依存) <br /></td></tr>
+<tr class="separator:adf19409c477edf6fab94be5c6288ccd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7158203e456773609a0bfac278aa16"><td class="memItemLeft" align="right" valign="top"><a id="a5d7158203e456773609a0bfac278aa16"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcc/charcode_8cpp.html#a5d7158203e456773609a0bfac278aa16">WCODE::CalcPxWidthByFont2</a> (const wchar_t *c)</td></tr>
+<tr class="memdesc:a5d7158203e456773609a0bfac278aa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字のpx幅を取得(DLLSHARE/フォント依存) <br /></td></tr>
+<tr class="separator:a5d7158203e456773609a0bfac278aa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5127ff85a18b4773df9c58833148d08e"><td class="memItemLeft" align="right" valign="top"><a id="a5127ff85a18b4773df9c58833148d08e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ACODE::IsAZ</b> (char c)</td></tr>
+<tr class="separator:a5127ff85a18b4773df9c58833148d08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21d945e0665a2c631cd06a221aa67d7"><td class="memItemLeft" align="right" valign="top"><a id="af21d945e0665a2c631cd06a221aa67d7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#af21d945e0665a2c631cd06a221aa67d7">ACODE::IsControlCode</a> (char c)</td></tr>
+<tr class="memdesc:af21d945e0665a2c631cd06a221aa67d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">制御文字であるかどうか <br /></td></tr>
+<tr class="separator:af21d945e0665a2c631cd06a221aa67d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67e01524d5a0d0804e820554ecfad3a"><td class="memItemLeft" align="right" valign="top"><a id="af67e01524d5a0d0804e820554ecfad3a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#af67e01524d5a0d0804e820554ecfad3a">ACODE::IsTabAvailableCode</a> (char c)</td></tr>
+<tr class="memdesc:af67e01524d5a0d0804e820554ecfad3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブ表示に使える文字かどうか <br /></td></tr>
+<tr class="separator:af67e01524d5a0d0804e820554ecfad3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25da35d50162fef46223bdbd83a0bc1"><td class="memItemLeft" align="right" valign="top"><a id="ab25da35d50162fef46223bdbd83a0bc1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#ab25da35d50162fef46223bdbd83a0bc1">ACODE::IsValidFilenameChar</a> (const char c)</td></tr>
+<tr class="memdesc:ab25da35d50162fef46223bdbd83a0bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名に使える文字であるかどうか <br /></td></tr>
+<tr class="separator:ab25da35d50162fef46223bdbd83a0bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423c64d12536dde4637681391ac6c1be"><td class="memItemLeft" align="right" valign="top"><a id="a423c64d12536dde4637681391ac6c1be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a423c64d12536dde4637681391ac6c1be">SelectCharWidthCache</a> (ECharWidthFontMode fMode, ECharWidthCacheMode cMode)</td></tr>
+<tr class="memdesc:a423c64d12536dde4637681391ac6c1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">モードを変更したいとき <br /></td></tr>
+<tr class="separator:a423c64d12536dde4637681391ac6c1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542bee6b77dcb4bf54044a5f66264308"><td class="memItemLeft" align="right" valign="top"><a id="a542bee6b77dcb4bf54044a5f66264308"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#a542bee6b77dcb4bf54044a5f66264308">InitCharWidthCache</a> (const LOGFONT &amp;lf, ECharWidthFontMode fMode=CWM_FONT_EDIT)</td></tr>
+<tr class="memdesc:a542bee6b77dcb4bf54044a5f66264308"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントを変更したとき <br /></td></tr>
+<tr class="separator:a542bee6b77dcb4bf54044a5f66264308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa557228588311fc6289e0ef02d7b4582"><td class="memItemLeft" align="right" valign="top"><a id="aa557228588311fc6289e0ef02d7b4582"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitCharWidthCacheFromDC</b> (const LOGFONT *lfs, ECharWidthFontMode fMode, HDC hdcOrg)</td></tr>
+<tr class="separator:aa557228588311fc6289e0ef02d7b4582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ad6db241c36f16088fa068c7138368477"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d86/charcode_8h.html#ad6db241c36f16088fa068c7138368477">gm_keyword_char</a> [128]</td></tr>
+<tr class="separator:ad6db241c36f16088fa068c7138368477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ad6db241c36f16088fa068c7138368477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6db241c36f16088fa068c7138368477">&#9670;&nbsp;</a></span>gm_keyword_char</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char gm_keyword_char[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードキャラクタ </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

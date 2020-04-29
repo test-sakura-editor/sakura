@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/module.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">module.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &lt;Shlwapi.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d81/struct_v_s___v_e_r_s_i_o_n___i_n_f_o___h_e_a_d.html">VS_VERSION_INFO_HEAD</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9594d5429e951e765f392ace8724a09f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/module_8cpp.html#a9594d5429e951e765f392ace8724a09f">ChangeCurrentDirectoryToExeDir</a> ()</td></tr>
+<tr class="separator:a9594d5429e951e765f392ace8724a09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e854ca50b3ce66bed96f3bb72a74a94"><td class="memItemLeft" align="right" valign="top">HMODULE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/module_8cpp.html#a2e854ca50b3ce66bed96f3bb72a74a94">LoadLibraryExedir</a> (LPCWSTR pszDll)</td></tr>
+<tr class="memdesc:a2e854ca50b3ce66bed96f3bb72a74a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">カレントディレクトリ移動機能付LoadLibrary  <a href="../../dd/d30/module_8cpp.html#a2e854ca50b3ce66bed96f3bb72a74a94">[詳解]</a><br /></td></tr>
+<tr class="separator:a2e854ca50b3ce66bed96f3bb72a74a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1701d5822e93a0b7342590bf732053"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/module_8cpp.html#abb1701d5822e93a0b7342590bf732053">GetDllVersion</a> (LPCWSTR lpszDllName)</td></tr>
+<tr class="separator:abb1701d5822e93a0b7342590bf732053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53d093cefab06a1442c488bbdce435b"><td class="memItemLeft" align="right" valign="top">HICON&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/module_8cpp.html#aa53d093cefab06a1442c488bbdce435b">GetAppIcon</a> (HINSTANCE hInst, int nResource, const WCHAR *szFile, bool bSmall)</td></tr>
+<tr class="memdesc:aa53d093cefab06a1442c488bbdce435b"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションアイコンの取得  <a href="../../dd/d30/module_8cpp.html#aa53d093cefab06a1442c488bbdce435b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa53d093cefab06a1442c488bbdce435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19584a0e3f8ccd75ee9835f3b80736ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d30/module_8cpp.html#a19584a0e3f8ccd75ee9835f3b80736ed">GetAppVersionInfo</a> (HINSTANCE hInstance, int nVersionResourceID, DWORD *pdwProductVersionMS, DWORD *pdwProductVersionLS)</td></tr>
+<tr class="separator:a19584a0e3f8ccd75ee9835f3b80736ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a9594d5429e951e765f392ace8724a09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9594d5429e951e765f392ace8724a09f">&#9670;&nbsp;</a></span>ChangeCurrentDirectoryToExeDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChangeCurrentDirectoryToExeDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>カレントディレクトリを実行ファイルの場所に移動 </p><dl class="section date"><dt>日付</dt><dd>2010.08.28 Moca 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="aa53d093cefab06a1442c488bbdce435b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53d093cefab06a1442c488bbdce435b">&#9670;&nbsp;</a></span>GetAppIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HICON GetAppIcon </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nResource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>szFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSmall</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションアイコンの取得 </p>
+<p>アイコンファイルが存在する場合はそこから，無い場合は リソースファイルから取得する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInst</td><td>[in] Instance Handle </td></tr>
+    <tr><td class="paramname">nResource</td><td>[in] デフォルトアイコン用Resource ID </td></tr>
+    <tr><td class="paramname">szFile</td><td>[in] アイコンファイル名 </td></tr>
+    <tr><td class="paramname">bSmall</td><td>[in] true: small icon (SM_CXSMICON) / false: large icon (SM_CXICON)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アイコンハンドル．失敗した場合はNULL．</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.12.02 genta 新規作成 </dd>
+<dd>
+2007.05.20 ryoji iniファイルパスを優先 </dd></dl>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+
+</div>
+</div>
+<a id="a19584a0e3f8ccd75ee9835f3b80736ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19584a0e3f8ccd75ee9835f3b80736ed">&#9670;&nbsp;</a></span>GetAppVersionInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetAppVersionInfo </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nVersionResourceID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>pdwProductVersionMS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>pdwProductVersionLS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>リソースから製品バージョンの取得 </p><dl class="section date"><dt>日付</dt><dd>2004.05.13 Moca 一度取得したらキャッシュする </dd></dl>
+
+</div>
+</div>
+<a id="abb1701d5822e93a0b7342590bf732053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1701d5822e93a0b7342590bf732053">&#9670;&nbsp;</a></span>GetDllVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DWORD GetDllVersion </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpszDllName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>シェルやコモンコントロール DLL のバージョン番号を取得</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpszDllName</td><td>DLL ファイルのパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>DLL のバージョン番号（失敗時は 0）</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>? (from MSDN Library document) </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.06.17 ryoji MSDNライブラリから引用 </dd></dl>
+
+</div>
+</div>
+<a id="a2e854ca50b3ce66bed96f3bb72a74a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e854ca50b3ce66bed96f3bb72a74a94">&#9670;&nbsp;</a></span>LoadLibraryExedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HMODULE LoadLibraryExedir </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszDll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カレントディレクトリ移動機能付LoadLibrary </p>
+<dl class="section date"><dt>日付</dt><dd>2010.08.28 Moca 新規作成 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

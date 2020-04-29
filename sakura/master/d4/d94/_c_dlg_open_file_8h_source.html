@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgOpenFile.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgOpenFile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d94/_c_dlg_open_file_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2001, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI, Moca</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2003, ryoji</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2004, genta, MIK</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2005, ryoji</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2006, Moca, ryoji</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>;   <span class="comment">// doc/CDocListener.h</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>;   <span class="comment">// doc/CDocListener.h</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">   29</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa0b5adad7ea31b66cf7955778ffcd2b6a">   30</a></span>&#160;    <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa0b5adad7ea31b66cf7955778ffcd2b6a">EFITER_NONE</a>,        </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">   31</a></span>&#160;    <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a>,        </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa26b072faad574a4e630a2d302644d6f2">   32</a></span>&#160;    <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa26b072faad574a4e630a2d302644d6f2">EFITER_MACRO</a>,       </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    EFITER_MAX,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d5a/class_i_dlg_open_file.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d5a/class_i_dlg_open_file.html">IDlgOpenFile</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Create(</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        HINSTANCE                   hInstance,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        HWND                        hwndParent,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> WCHAR*                pszUserWildCard,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> WCHAR*                pszDefaultPath,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">const</span> std::vector&lt;LPCWSTR&gt;&amp; vMRU            = std::vector&lt;LPCWSTR&gt;(),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">const</span> std::vector&lt;LPCWSTR&gt;&amp; vOPENFOLDER     = std::vector&lt;LPCWSTR&gt;()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ) = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// 操作</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../dd/d5a/class_i_dlg_open_file.html#a5d0e7b7f2856e28139c5c37441b371fe">   56</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d5a/class_i_dlg_open_file.html#a5d0e7b7f2856e28139c5c37441b371fe">DoModal_GetOpenFileName</a>(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        WCHAR* pszPath,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> eAddFilter</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ) = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../dd/d5a/class_i_dlg_open_file.html#a133496a9b374c858d7a73ba45228952e">   64</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d5a/class_i_dlg_open_file.html#a133496a9b374c858d7a73ba45228952e">DoModal_GetSaveFileName</a>(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        WCHAR* pszPath</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ) = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/* 開くダイアログ モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> DoModalOpenDlg(</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>* pLoadInfo,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::vector&lt;std::wstring&gt;* pFilenames,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">bool</span> bOptions</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ) = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">/* 保存ダイアログ モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> DoModalSaveDlg(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>*  pSaveInfo,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">bool</span> bSimpleMode</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ) = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../de/d3c/class_c_dlg_open_file.html">   85</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/d5a/class_i_dlg_open_file.html">IDlgOpenFile</a></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    ~<a class="code" href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a>() {}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> Create(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        HINSTANCE                   hInstance,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        HWND                        hwndParent,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">const</span> WCHAR*                pszUserWildCard,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> WCHAR*                pszDefaultPath,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">const</span> std::vector&lt;LPCWSTR&gt;&amp; vMRU            = std::vector&lt;LPCWSTR&gt;(),</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> std::vector&lt;LPCWSTR&gt;&amp; vOPENFOLDER     = std::vector&lt;LPCWSTR&gt;()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">//操作</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../de/d3c/class_c_dlg_open_file.html#a4f4dd88bc54ad99b982041bf2cac5260">DoModal_GetOpenFileName</a>(WCHAR* pszPath, <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> eAddFileter = <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../de/d3c/class_c_dlg_open_file.html#ad66f102f06e5401ca62a6f7c61e4d50f">DoModal_GetSaveFileName</a>(WCHAR* pszPath) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> DoModalOpenDlg(<a class="code" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>* pLoadInfo,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        std::vector&lt;std::wstring&gt;* pFilenames,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">bool</span> bOptions = <span class="keyword">true</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> DoModalSaveDlg(<a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>*   pSaveInfo, <span class="keywordtype">bool</span> bSimpleMode) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// 設定フォルダ相対ファイル選択(共有データ,ini位置依存)</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">static</span> BOOL <a class="code" href="../../de/d3c/class_c_dlg_open_file.html#aca455e1700d5b8e341594a91bb488b57">SelectFile</a>(HWND parent, HWND hwndCtl, <span class="keyword">const</span> WCHAR* filter,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                           <span class="keywordtype">bool</span> resolvePath, <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> eAddFilter = <a class="code" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::shared_ptr&lt;IDlgOpenFile&gt; m_pImpl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_dlg_open_file_html_ad66f102f06e5401ca62a6f7c61e4d50f"><div class="ttname"><a href="../../de/d3c/class_c_dlg_open_file.html#ad66f102f06e5401ca62a6f7c61e4d50f">CDlgOpenFile::DoModal_GetSaveFileName</a></div><div class="ttdeci">bool DoModal_GetSaveFileName(WCHAR *pszPath) override</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.cpp:54</div></div>
+<div class="ttc" id="a_c_dlg_open_file_8h_html_a2d172a3456797ad7625ab93b6c85d33f"><div class="ttname"><a href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a></div><div class="ttdeci">EFilter</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:29</div></div>
+<div class="ttc" id="a_c_dlg_open_file_8h_html_a2d172a3456797ad7625ab93b6c85d33fa0b5adad7ea31b66cf7955778ffcd2b6a"><div class="ttname"><a href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa0b5adad7ea31b66cf7955778ffcd2b6a">EFITER_NONE</a></div><div class="ttdeci">@ EFITER_NONE</div><div class="ttdoc">なし</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:30</div></div>
+<div class="ttc" id="aclass_i_dlg_open_file_html_a133496a9b374c858d7a73ba45228952e"><div class="ttname"><a href="../../dd/d5a/class_i_dlg_open_file.html#a133496a9b374c858d7a73ba45228952e">IDlgOpenFile::DoModal_GetSaveFileName</a></div><div class="ttdeci">virtual bool DoModal_GetSaveFileName(WCHAR *pszPath)=0</div></div>
+<div class="ttc" id="aclass_c_dlg_open_file_html_a4f4dd88bc54ad99b982041bf2cac5260"><div class="ttname"><a href="../../de/d3c/class_c_dlg_open_file.html#a4f4dd88bc54ad99b982041bf2cac5260">CDlgOpenFile::DoModal_GetOpenFileName</a></div><div class="ttdeci">bool DoModal_GetOpenFileName(WCHAR *pszPath, EFilter eAddFileter=EFITER_TEXT) override</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.cpp:47</div></div>
+<div class="ttc" id="aclass_c_dlg_open_file_html_aca455e1700d5b8e341594a91bb488b57"><div class="ttname"><a href="../../de/d3c/class_c_dlg_open_file.html#aca455e1700d5b8e341594a91bb488b57">CDlgOpenFile::SelectFile</a></div><div class="ttdeci">static BOOL SelectFile(HWND parent, HWND hwndCtl, const WCHAR *filter, bool resolvePath, EFilter eAddFilter=EFITER_TEXT)</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.cpp:78</div></div>
+<div class="ttc" id="astruct_s_load_info_html"><div class="ttname"><a href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:71</div></div>
+<div class="ttc" id="a_c_dlg_open_file_8h_html_a2d172a3456797ad7625ab93b6c85d33fa26b072faad574a4e630a2d302644d6f2"><div class="ttname"><a href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fa26b072faad574a4e630a2d302644d6f2">EFITER_MACRO</a></div><div class="ttdeci">@ EFITER_MACRO</div><div class="ttdoc">マクロ</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:32</div></div>
+<div class="ttc" id="astruct_s_save_info_html"><div class="ttname"><a href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:110</div></div>
+<div class="ttc" id="a_c_dlg_open_file_8h_html_a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c"><div class="ttname"><a href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a></div><div class="ttdeci">@ EFITER_TEXT</div><div class="ttdoc">テキスト</div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:31</div></div>
+<div class="ttc" id="aclass_i_dlg_open_file_html_a5d0e7b7f2856e28139c5c37441b371fe"><div class="ttname"><a href="../../dd/d5a/class_i_dlg_open_file.html#a5d0e7b7f2856e28139c5c37441b371fe">IDlgOpenFile::DoModal_GetOpenFileName</a></div><div class="ttdeci">virtual bool DoModal_GetOpenFileName(WCHAR *pszPath, EFilter eAddFilter)=0</div></div>
+<div class="ttc" id="aclass_c_dlg_open_file_html"><div class="ttname"><a href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a></div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:86</div></div>
+<div class="ttc" id="aclass_i_dlg_open_file_html"><div class="ttname"><a href="../../dd/d5a/class_i_dlg_open_file.html">IDlgOpenFile</a></div><div class="ttdef"><b>Definition:</b> CDlgOpenFile.h:37</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

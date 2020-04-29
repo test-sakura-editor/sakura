@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/CDocListener.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CDocListener.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">doc/CDocListener.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d69/_c_edit_doc_8h_source.html">doc/CEditDoc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af9fe84734d510fc0bad5908ba8000dd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEF_NOTIFY</b>(NAME)</td></tr>
+<tr class="separator:af9fe84734d510fc0bad5908ba8000dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6904b8a7883325c5679a7b1424bc9266"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEF_NOTIFY2</b>(NAME,  ARGTYPE)</td></tr>
+<tr class="separator:a6904b8a7883325c5679a7b1424bc9266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0416095502a88586816540ad85ed7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>VOID_NOTIFY</b>(NAME)</td></tr>
+<tr class="separator:a2e0416095502a88586816540ad85ed7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8448dadd0b8cc7950707a10752ea85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>VOID_NOTIFY2</b>(NAME,  ARGTYPE)</td></tr>
+<tr class="separator:afe8448dadd0b8cc7950707a10752ea85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a8de3a969adbdbd30985eb0d41af00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>CORE_NOTIFY2</b>(NAME,  ARGTYPE)</td></tr>
+<tr class="separator:a35a8de3a969adbdbd30985eb0d41af00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a35a8de3a969adbdbd30985eb0d41af00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a8de3a969adbdbd30985eb0d41af00">&#9670;&nbsp;</a></span>CORE_NOTIFY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CORE_NOTIFY2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARGTYPE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code" href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1">ELoadResult</a> CDocSubject::Notify##NAME(ARGTYPE a) \</div>
+<div class="line">{ \</div>
+<div class="line">    int n = GetListenerCount(); \</div>
+<div class="line">    ELoadResult eRet = LOADED_FAILURE; \</div>
+<div class="line">    for(<span class="keywordtype">int</span> i=0;i&lt;n;i++){ \</div>
+<div class="line">        ELoadResult e = GetListener(i)-&gt;On##NAME(a); \</div>
+<div class="line">        if(e==<a class="code" href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1aa6b0dd08a8ce87991c6f1590c672e407">LOADED_NOIMPLEMENT</a>)<span class="keywordflow">continue</span>; \</div>
+<div class="line">        if(e==LOADED_FAILURE)<span class="keywordflow">return</span> e; \</div>
+<div class="line">        eRet = e; \</div>
+<div class="line">    } \</div>
+<div class="line">    return eRet; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9fe84734d510fc0bad5908ba8000dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9fe84734d510fc0bad5908ba8000dd2">&#9670;&nbsp;</a></span>DEF_NOTIFY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_NOTIFY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a> CDocSubject::Notify##NAME() \</div>
+<div class="line">{ \</div>
+<div class="line">    int n = GetListenerCount(); \</div>
+<div class="line">    for(<span class="keywordtype">int</span> i=0;i&lt;n;i++){ \</div>
+<div class="line">        ECallbackResult eRet = GetListener(i)-&gt;On##NAME(); \</div>
+<div class="line">        if(eRet!=<a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31">CALLBACK_CONTINUE</a>)<span class="keywordflow">return</span> eRet; \</div>
+<div class="line">    } \</div>
+<div class="line">    return <a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31">CALLBACK_CONTINUE</a>; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6904b8a7883325c5679a7b1424bc9266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6904b8a7883325c5679a7b1424bc9266">&#9670;&nbsp;</a></span>DEF_NOTIFY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_NOTIFY2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARGTYPE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a> CDocSubject::Notify##NAME(ARGTYPE a) \</div>
+<div class="line">{ \</div>
+<div class="line">    int n = GetListenerCount(); \</div>
+<div class="line">    for(<span class="keywordtype">int</span> i=0;i&lt;n;i++){ \</div>
+<div class="line">        ECallbackResult eRet = GetListener(i)-&gt;On##NAME(a); \</div>
+<div class="line">        if(eRet!=<a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31">CALLBACK_CONTINUE</a>)<span class="keywordflow">return</span> eRet; \</div>
+<div class="line">    } \</div>
+<div class="line">    return <a class="code" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31">CALLBACK_CONTINUE</a>; \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e0416095502a88586816540ad85ed7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0416095502a88586816540ad85ed7f">&#9670;&nbsp;</a></span>VOID_NOTIFY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VOID_NOTIFY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordtype">void</span> CDocSubject::Notify##NAME() \</div>
+<div class="line">{ \</div>
+<div class="line">    int n = GetListenerCount(); \</div>
+<div class="line">    for(<span class="keywordtype">int</span> i=0;i&lt;n;i++){ \</div>
+<div class="line">        GetListener(i)-&gt;On##NAME(); \</div>
+<div class="line">    } \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afe8448dadd0b8cc7950707a10752ea85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8448dadd0b8cc7950707a10752ea85">&#9670;&nbsp;</a></span>VOID_NOTIFY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VOID_NOTIFY2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARGTYPE&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordtype">void</span> CDocSubject::Notify##NAME(ARGTYPE a) \</div>
+<div class="line">{ \</div>
+<div class="line">    int n = GetListenerCount(); \</div>
+<div class="line">    for(<span class="keywordtype">int</span> i=0;i&lt;n;i++){ \</div>
+<div class="line">        GetListener(i)-&gt;On##NAME(a); \</div>
+<div class="line">    } \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="a_c_doc_listener_8h_html_a90a6914b1b4f031273b196c12f8127f1"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1">ELoadResult</a></div><div class="ttdeci">ELoadResult</div><div class="ttdef"><b>Definition:</b> CDocListener.h:53</div></div>
+<div class="ttc" id="a_c_doc_listener_8h_html_add15cacee55dd6634030d9479cc66362"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a></div><div class="ttdeci">ECallbackResult</div><div class="ttdef"><b>Definition:</b> CDocListener.h:64</div></div>
+<div class="ttc" id="a_c_doc_listener_8h_html_a90a6914b1b4f031273b196c12f8127f1aa6b0dd08a8ce87991c6f1590c672e407"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1aa6b0dd08a8ce87991c6f1590c672e407">LOADED_NOIMPLEMENT</a></div><div class="ttdeci">@ LOADED_NOIMPLEMENT</div><div class="ttdoc">実装無し</div><div class="ttdef"><b>Definition:</b> CDocListener.h:60</div></div>
+<div class="ttc" id="a_c_doc_listener_8h_html_add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362a1391b8d38faad8e7c14321a446d5df31">CALLBACK_CONTINUE</a></div><div class="ttdeci">@ CALLBACK_CONTINUE</div><div class="ttdoc">続ける</div><div class="ttdef"><b>Definition:</b> CDocListener.h:65</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

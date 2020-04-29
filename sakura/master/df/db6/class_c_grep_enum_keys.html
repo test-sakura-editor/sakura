@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CGrepEnumKeys クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d5/dff/class_c_grep_enum_keys-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CGrepEnumKeys クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a904ee2aa69f737a1226b543170bd59ed"><td class="memItemLeft" align="right" valign="top"><a id="a904ee2aa69f737a1226b543170bd59ed"></a>
+typedef std::basic_string&lt; WCHAR &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>wstring</b></td></tr>
+<tr class="separator:a904ee2aa69f737a1226b543170bd59ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:acad819e9a193de007f7c205d061736c8"><td class="memItemLeft" align="right" valign="top"><a id="acad819e9a193de007f7c205d061736c8"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetExcludeFiles</b> () const -&gt; std::list&lt; decltype(m_vecExceptFileKeys)::value_type &gt;</td></tr>
+<tr class="separator:acad819e9a193de007f7c205d061736c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78ab27273551b5417cd1f4a526fd1c8"><td class="memItemLeft" align="right" valign="top"><a id="ae78ab27273551b5417cd1f4a526fd1c8"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetExcludeFolders</b> () const -&gt; std::list&lt; decltype(m_vecExceptFolderKeys)::value_type &gt;</td></tr>
+<tr class="separator:ae78ab27273551b5417cd1f4a526fd1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936748918754c72b823d0950dd06aadf"><td class="memItemLeft" align="right" valign="top"><a id="a936748918754c72b823d0950dd06aadf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SetFileKeys</b> (LPCWSTR lpKeys)</td></tr>
+<tr class="separator:a936748918754c72b823d0950dd06aadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb8d6f9e2a5f0777d004b0147d7ccc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db6/class_c_grep_enum_keys.html#abdb8d6f9e2a5f0777d004b0147d7ccc6">AddExceptFile</a> (LPCWSTR lpKeys)</td></tr>
+<tr class="memdesc:abdb8d6f9e2a5f0777d004b0147d7ccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">除外ファイルパターンを追加する  <a href="../../df/db6/class_c_grep_enum_keys.html#abdb8d6f9e2a5f0777d004b0147d7ccc6">[詳解]</a><br /></td></tr>
+<tr class="separator:abdb8d6f9e2a5f0777d004b0147d7ccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7f8a75caa97f9a0f8debaa54800402"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db6/class_c_grep_enum_keys.html#a1a7f8a75caa97f9a0f8debaa54800402">AddExceptFolder</a> (LPCWSTR lpKeys)</td></tr>
+<tr class="memdesc:a1a7f8a75caa97f9a0f8debaa54800402"><td class="mdescLeft">&#160;</td><td class="mdescRight">除外フォルダパターンを追加する  <a href="../../df/db6/class_c_grep_enum_keys.html#a1a7f8a75caa97f9a0f8debaa54800402">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a7f8a75caa97f9a0f8debaa54800402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:abbbce90a2af67889670c6ea5081add35"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; wstring &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db6/class_c_grep_enum_keys.html#abbbce90a2af67889670c6ea5081add35">SplitPattern</a> (LPCWSTR lpKeys)</td></tr>
+<tr class="memdesc:abbbce90a2af67889670c6ea5081add35"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパターンを解析して、要素ごとに分離して返す  <a href="../../df/db6/class_c_grep_enum_keys.html#abbbce90a2af67889670c6ea5081add35">[詳解]</a><br /></td></tr>
+<tr class="separator:abbbce90a2af67889670c6ea5081add35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aea7e72badb9859b87a81cc6cd4fd7fb4"><td class="memItemLeft" align="right" valign="top"><a id="aea7e72badb9859b87a81cc6cd4fd7fb4"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecSearchFileKeys</b></td></tr>
+<tr class="separator:aea7e72badb9859b87a81cc6cd4fd7fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcea0dcb2600ac7b37d89fcee956722e"><td class="memItemLeft" align="right" valign="top"><a id="abcea0dcb2600ac7b37d89fcee956722e"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecSearchFolderKeys</b></td></tr>
+<tr class="separator:abcea0dcb2600ac7b37d89fcee956722e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad908cd17819416142821538172c5b9e5"><td class="memItemLeft" align="right" valign="top"><a id="ad908cd17819416142821538172c5b9e5"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecExceptFileKeys</b></td></tr>
+<tr class="separator:ad908cd17819416142821538172c5b9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c602a0be7b6fdb3223f5a933253f1fb"><td class="memItemLeft" align="right" valign="top"><a id="a7c602a0be7b6fdb3223f5a933253f1fb"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecExceptFolderKeys</b></td></tr>
+<tr class="separator:a7c602a0be7b6fdb3223f5a933253f1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e473bcdecef0370f7c54128bc0f7d8b"><td class="memItemLeft" align="right" valign="top"><a id="a5e473bcdecef0370f7c54128bc0f7d8b"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecExceptAbsFileKeys</b></td></tr>
+<tr class="separator:a5e473bcdecef0370f7c54128bc0f7d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3330b2d8c19841e149712f3bb43b8f54"><td class="memItemLeft" align="right" valign="top"><a id="a3330b2d8c19841e149712f3bb43b8f54"></a>
+VGrepEnumKeys&#160;</td><td class="memItemRight" valign="bottom"><b>m_vecExceptAbsFolderKeys</b></td></tr>
+<tr class="separator:a3330b2d8c19841e149712f3bb43b8f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abdb8d6f9e2a5f0777d004b0147d7ccc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb8d6f9e2a5f0777d004b0147d7ccc6">&#9670;&nbsp;</a></span>AddExceptFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CGrepEnumKeys::AddExceptFile </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpKeys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除外ファイルパターンを追加する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpKeys</td><td>除外ファイルパターン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a7f8a75caa97f9a0f8debaa54800402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7f8a75caa97f9a0f8debaa54800402">&#9670;&nbsp;</a></span>AddExceptFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CGrepEnumKeys::AddExceptFolder </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpKeys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>除外フォルダパターンを追加する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpKeys</td><td>除外フォルダパターン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbbce90a2af67889670c6ea5081add35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbce90a2af67889670c6ea5081add35">&#9670;&nbsp;</a></span>SplitPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; wstring &gt; CGrepEnumKeys::SplitPattern </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpKeys</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイルパターンを解析して、要素ごとに分離して返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpKeys</td><td>ファイルパターン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d6/ddb/_c_grep_enum_keys_8h_source.html">CGrepEnumKeys.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/CLatin1.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CLatin1.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d85/_c_latin1_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 20010, Uchi</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../da/d58/class_c_latin1.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d58/class_c_latin1.html">CLatin1</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d84/class_c_code_base.html">CCodeBase</a>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//CCodeBaseインターフェース</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../da/d58/class_c_latin1.html#a35794258e5dd3c858bb19df4efe8ad33">   38</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../da/d58/class_c_latin1.html#a35794258e5dd3c858bb19df4efe8ad33">CodeToUnicode</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> Latin1ToUnicode(cSrc, pDst); }   </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../da/d58/class_c_latin1.html#a2e92452446d95011cf4992cd623356e8">   39</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../da/d58/class_c_latin1.html#a2e92452446d95011cf4992cd623356e8">UnicodeToCode</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> UnicodeToLatin1(cSrc, pDst); }   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../da/d58/class_c_latin1.html#af9913fb2e4d27889b40c81b2688f7815">UnicodeToHex</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* cSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> iSLen, WCHAR* pDst, <span class="keyword">const</span> <a class="code" href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a>* psStatusbar) <span class="keyword">override</span>;            </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//実装</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> Latin1ToUnicode(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDstMem);      <span class="comment">// Latin1   → Unicodeコード変換</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> UnicodeToLatin1(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDstMem);      <span class="comment">// Unicode  → Latin1コード変換</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d58/class_c_latin1.html#aaec89d3c868e4b3d1d7678f96bea779b">GetSizeOfChar</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pData, <span class="keywordtype">int</span> nDataLen, <span class="keywordtype">int</span> nIdx ); </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// 実装</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d58/class_c_latin1.html#afec108268c48d316ebed14b29c08c911">Latin1ToUni</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span> *pDst, <span class="keywordtype">bool</span>* pbError );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d58/class_c_latin1.html#ad3d55eaf73425c2fa6915e271cd0d0cb">_UniToLatin1_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> UniToLatin1( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">bool</span> *pbError );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../da/d58/class_c_latin1.html#ad3d55eaf73425c2fa6915e271cd0d0cb">   62</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d58/class_c_latin1.html#ad3d55eaf73425c2fa6915e271cd0d0cb">CLatin1::_UniToLatin1_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> nret;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> berror = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    BOOL blost;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>( eCharset == <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01">CHARSET_UNI_NORMAL</a> ){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> ((pSrc[0] &gt;= 0 &amp;&amp; pSrc[0] &lt;= 0x7f) || (pSrc[0] &gt;= 0xa0 &amp;&amp; pSrc[0] &lt;= 0xff)) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// ISO 58859-1の範囲</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            pDst[0] = (<span class="keywordtype">unsigned</span> char)pSrc[0];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            nret = 1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// ISO 8859-1以外</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            nret = ::WideCharToMultiByte( 1252, 0, <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">wchar_t</span>*<span class="keyword">&gt;</span>(pSrc), 1, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(pDst), 4, NULL, &amp;blost );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span>( blost != FALSE ){</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="comment">// Uni -&gt; CLatin1 変換に失敗</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                nret = 1;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>( eCharset == <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36">CHARSET_UNI_SURROG</a> ){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">// サロゲートペアは CLatin1 に変換できない。</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        nret = 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// 保護コード</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        nret = 1;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>( pbError ){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        *pbError = berror;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> nret;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_common_setting___statusbar_html"><div class="ttname"><a href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a></div><div class="ttdef"><b>Definition:</b> CommonSetting.h:644</div></div>
+<div class="ttc" id="aclass_c_latin1_html_afec108268c48d316ebed14b29c08c911"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#afec108268c48d316ebed14b29c08c911">CLatin1::Latin1ToUni</a></div><div class="ttdeci">static int Latin1ToUni(const char *pSrc, const int nSrcLen, wchar_t *pDst, bool *pbError)</div><div class="ttdef"><b>Definition:</b> CLatin1.cpp:61</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a></div><div class="ttdeci">ECharSet</div><div class="ttdef"><b>Definition:</b> codechecker.h:77</div></div>
+<div class="ttc" id="a_c_code_base_8h_html"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a></div></div>
+<div class="ttc" id="aclass_c_memory_html"><div class="ttname"><a href="../../d6/d31/class_c_memory.html">CMemory</a></div><div class="ttdoc">メモリバッファクラス</div><div class="ttdef"><b>Definition:</b> CMemory.h:43</div></div>
+<div class="ttc" id="aclass_c_latin1_html_af9913fb2e4d27889b40c81b2688f7815"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#af9913fb2e4d27889b40c81b2688f7815">CLatin1::UnicodeToHex</a></div><div class="ttdeci">EConvertResult UnicodeToHex(const wchar_t *cSrc, const int iSLen, WCHAR *pDst, const CommonSetting_Statusbar *psStatusbar) override</div><div class="ttdoc">UNICODE → Hex 変換</div><div class="ttdef"><b>Definition:</b> CLatin1.cpp:222</div></div>
+<div class="ttc" id="aclass_c_code_base_html"><div class="ttname"><a href="../../d6/d84/class_c_code_base.html">CCodeBase</a></div><div class="ttdef"><b>Definition:</b> CCodeBase.h:45</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01">CHARSET_UNI_NORMAL</a></div><div class="ttdeci">@ CHARSET_UNI_NORMAL</div><div class="ttdoc">サロゲート領域を除いたユニコード文字</div><div class="ttdef"><b>Definition:</b> codechecker.h:83</div></div>
+<div class="ttc" id="aclass_c_latin1_html_a2e92452446d95011cf4992cd623356e8"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#a2e92452446d95011cf4992cd623356e8">CLatin1::UnicodeToCode</a></div><div class="ttdeci">EConvertResult UnicodeToCode(const CNativeW &amp;cSrc, CMemory *pDst) override</div><div class="ttdoc">UNICODE → 特定コード 変換</div><div class="ttdef"><b>Definition:</b> CLatin1.h:39</div></div>
+<div class="ttc" id="a_c_code_base_8h_html_aaf5b9c8cb800b2a36198d4f1c4d07c84"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a></div><div class="ttdeci">EConvertResult</div><div class="ttdef"><b>Definition:</b> CCodeBase.h:28</div></div>
+<div class="ttc" id="aclass_c_latin1_html_a35794258e5dd3c858bb19df4efe8ad33"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#a35794258e5dd3c858bb19df4efe8ad33">CLatin1::CodeToUnicode</a></div><div class="ttdeci">EConvertResult CodeToUnicode(const CMemory &amp;cSrc, CNativeW *pDst) override</div><div class="ttdoc">特定コード → UNICODE 変換</div><div class="ttdef"><b>Definition:</b> CLatin1.h:38</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36">CHARSET_UNI_SURROG</a></div><div class="ttdeci">@ CHARSET_UNI_SURROG</div><div class="ttdoc">ユニコードのサロゲート領域にある文字</div><div class="ttdef"><b>Definition:</b> codechecker.h:84</div></div>
+<div class="ttc" id="aclass_c_latin1_html"><div class="ttname"><a href="../../da/d58/class_c_latin1.html">CLatin1</a></div><div class="ttdef"><b>Definition:</b> CLatin1.h:34</div></div>
+<div class="ttc" id="aclass_c_latin1_html_aaec89d3c868e4b3d1d7678f96bea779b"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#aaec89d3c868e4b3d1d7678f96bea779b">CLatin1::GetSizeOfChar</a></div><div class="ttdeci">static int GetSizeOfChar(const char *pData, int nDataLen, int nIdx)</div><div class="ttdoc">指定した位置の文字が何バイト文字かを返す</div><div class="ttdef"><b>Definition:</b> CLatin1.cpp:50</div></div>
+<div class="ttc" id="aclass_c_latin1_html_ad3d55eaf73425c2fa6915e271cd0d0cb"><div class="ttname"><a href="../../da/d58/class_c_latin1.html#ad3d55eaf73425c2fa6915e271cd0d0cb">CLatin1::_UniToLatin1_char</a></div><div class="ttdeci">static int _UniToLatin1_char(const unsigned short *pSrc, unsigned char *pDst, const ECharSet eCharset, bool *pbError)</div><div class="ttdef"><b>Definition:</b> CLatin1.h:62</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

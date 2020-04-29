@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CSearchAgent クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../dc/dcd/class_c_search_agent-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CSearchAgent クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:adbaee7dab01ff3b0abe348c4dab47ce5"><td class="memItemLeft" align="right" valign="top"><a id="adbaee7dab01ff3b0abe348c4dab47ce5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CSearchAgent</b> (<a class="el" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a> *pcDocLineMgr)</td></tr>
+<tr class="separator:adbaee7dab01ff3b0abe348c4dab47ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aececadb79d842815e0590046860e0b1f"><td class="memItemLeft" align="right" valign="top"><a id="aececadb79d842815e0590046860e0b1f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WhereCurrentWord</b> (CLogicInt nLineNum, CLogicInt nIdx, CLogicInt *pnIdxFrom, CLogicInt *pnIdxTo, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmcmWord, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmcmWordLeft)</td></tr>
+<tr class="separator:aececadb79d842815e0590046860e0b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb79810b8b500165a0281fcdd2ea8ade"><td class="memItemLeft" align="right" valign="top"><a id="adb79810b8b500165a0281fcdd2ea8ade"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PrevOrNextWord</b> (CLogicInt nLineNum, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bLEFT, BOOL bStopsBothEnds)</td></tr>
+<tr class="separator:adb79810b8b500165a0281fcdd2ea8ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fc78fa3528d845b40ad760265413f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/class_c_search_agent.html#a08fc78fa3528d845b40ad760265413f4">SearchWord</a> (<a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a> ptSerachBegin, <a class="el" href="../../d2/d49/global_8h.html#a5e7c4f0f6befd491b7d7324c366dfff8">ESearchDirection</a> eDirection, <a class="el" href="../../db/dfa/class_c_range_base.html">CLogicRange</a> *pMatchRange, const <a class="el" href="../../dc/da0/class_c_search_string_pattern.html">CSearchStringPattern</a> &amp;pattern)</td></tr>
+<tr class="separator:a08fc78fa3528d845b40ad760265413f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310bded3f275d220253ebf938c8fbc48"><td class="memItemLeft" align="right" valign="top"><a id="a310bded3f275d220253ebf938c8fbc48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReplaceData</b> (<a class="el" href="../../d8/de2/struct_doc_line_replace_arg.html">DocLineReplaceArg</a> *pArg)</td></tr>
+<tr class="separator:a310bded3f275d220253ebf938c8fbc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7a0fce73c3c800eb412bed9a45b91122"><td class="memItemLeft" align="right" valign="top">static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/class_c_search_agent.html#a7a0fce73c3c800eb412bed9a45b91122">SearchString</a> (const wchar_t *pLine, int nLineLen, int nIdxPos, const <a class="el" href="../../dc/da0/class_c_search_string_pattern.html">CSearchStringPattern</a> &amp;pattern)</td></tr>
+<tr class="separator:a7a0fce73c3c800eb412bed9a45b91122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa43aa0f25f9e0e4ddd7c158e95b718a"><td class="memItemLeft" align="right" valign="top">static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/class_c_search_agent.html#aaa43aa0f25f9e0e4ddd7c158e95b718a">SearchStringWord</a> (const wchar_t *pLine, int nLineLen, int nIdxPos, const std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;searchWords, bool bLoHiCase, int *pnMatchLen)</td></tr>
+<tr class="separator:aaa43aa0f25f9e0e4ddd7c158e95b718a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe499b2ee60316905c5277a19e110747"><td class="memItemLeft" align="right" valign="top"><a id="abe499b2ee60316905c5277a19e110747"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateCharCharsArr</b> (const wchar_t *pszPattern, int nSrcLen, int **ppnCharCharsArr)</td></tr>
+<tr class="separator:abe499b2ee60316905c5277a19e110747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc306c7884692e1e31be708205dda41"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbc/class_c_search_agent.html#affc306c7884692e1e31be708205dda41">CreateWordList</a> (std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;searchWords, const wchar_t *pszPattern, int nPatternLen)</td></tr>
+<tr class="separator:affc306c7884692e1e31be708205dda41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="affc306c7884692e1e31be708205dda41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc306c7884692e1e31be708205dda41">&#9670;&nbsp;</a></span>CreateWordList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSearchAgent::CreateWordList </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>searchWords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPatternLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>単語単位の単語リスト作成 </p>
+
+</div>
+</div>
+<a id="a7a0fce73c3c800eb412bed9a45b91122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0fce73c3c800eb412bed9a45b91122">&#9670;&nbsp;</a></span>SearchString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CSearchAgent::SearchString </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdxPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/da0/class_c_search_string_pattern.html">CSearchStringPattern</a> &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文字列検索 </p><dl class="section return"><dt>戻り値</dt><dd>見つかった場所のポインタ。見つからなかったらNULL。 </dd></dl>
+
+</div>
+</div>
+<a id="aaa43aa0f25f9e0e4ddd7c158e95b718a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa43aa0f25f9e0e4ddd7c158e95b718a">&#9670;&nbsp;</a></span>SearchStringWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CSearchAgent::SearchStringWord </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdxPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>searchWords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bLoHiCase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnMatchLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>単語単位検索 </p>
+
+</div>
+</div>
+<a id="a08fc78fa3528d845b40ad760265413f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fc78fa3528d845b40ad760265413f4">&#9670;&nbsp;</a></span>SearchWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CSearchAgent::SearchWord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a>&#160;</td>
+          <td class="paramname"><em>ptSerachBegin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d49/global_8h.html#a5e7c4f0f6befd491b7d7324c366dfff8">ESearchDirection</a>&#160;</td>
+          <td class="paramname"><em>eDirection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dfa/class_c_range_base.html">CLogicRange</a> *&#160;</td>
+          <td class="paramname"><em>pMatchRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/da0/class_c_search_string_pattern.html">CSearchStringPattern</a> &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>単語検索</p>
+<dl class="section date"><dt>日付</dt><dd>2003.05.22 かろと 行頭処理など見直し </dd>
+<dd>
+2005.11.26 かろと \rや.が\r<br  />
+にヒットしないように </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ptSerachBegin</td><td>検索開始位置 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">eDirection</td><td>検索方向 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pMatchRange</td><td>[out] マッチ範囲。ロジック単位。 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pattern</td><td>検索パターン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../df/d0b/_c_search_agent_8h_source.html">CSearchAgent.h</a></li>
+<li>sakura_core/<a class="el" href="../../da/dc4/_c_search_agent_8cpp.html">CSearchAgent.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

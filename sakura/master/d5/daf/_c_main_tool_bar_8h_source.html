@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/window/CMainToolBar.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_848eeabb30808a87d3d4a20b9241b9be.html">window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CMainToolBar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/daf/_c_main_tool_bar_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8d/_c_recent_8h.html">recent/CRecent.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../dd/d59/class_c_main_tool_bar.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d59/class_c_main_tool_bar.html">CMainToolBar</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dd/d59/class_c_main_tool_bar.html">CMainToolBar</a>(<a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>* pOwner);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> Create( <a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>* pcIcons );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//作成・破棄</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a173bfcf1671fdddc2d1ed7b3d15cf3a2">CreateToolBar</a>( <span class="keywordtype">void</span> );     </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a829464099821dfe93def793e5632c18d">DestroyToolBar</a>( <span class="keywordtype">void</span> );    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//メッセージ</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a2f51dba165588926e8d9937362ac5121">EatMessage</a>(MSG* msg);      </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a69540c130f9ad20f2851434ab927ede0">ProcSearchBox</a>( MSG* );     </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//イベント</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a725e81e0378a1b4624cacdc8a7bbc0b6">OnToolbarTimer</a>( <span class="keywordtype">void</span> );    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a58e44667939640817cf41a1697a2bce1">UpdateToolbar</a>( <span class="keywordtype">void</span> );     </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//描画</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    LPARAM <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#ab519883f8522576e0df6c0aba8e8bdba">ToolBarOwnerDraw</a>( LPNMCUSTOMDRAW pnmh );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//共有データとの同期</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> AcceptSharedSearchKey();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//取得</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    HWND GetToolbarHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndToolBar; }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    HWND GetRebarHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndReBar; }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    HWND GetSearchHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndSearchBox; }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#a68f903d858f6c60ce8f8e1fa36cef263">GetSearchKey</a>(std::wstring&amp;); </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//操作</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d59/class_c_main_tool_bar.html#aec4250b1258adf8d1ce59eabaeec313f">SetFocusSearchBox</a>( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;       <span class="comment">/* ツールバー検索ボックスへフォーカスを移動 */</span>  <span class="comment">// 2006.06.04 yukihane</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>*   m_pOwner;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    HWND        m_hwndToolBar;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//子ウィンドウ</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    HWND        m_hwndReBar;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    HWND        m_hwndSearchBox;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//フォント</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    HFONT       m_hFontSearchBox;   </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDel;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a>           m_cRecentSearch;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>*          m_pcIcons;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
+<div class="ttc" id="astruct_s_combo_box_item_deleter_html"><div class="ttname"><a href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a></div><div class="ttdef"><b>Definition:</b> CDialog.h:53</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a68f903d858f6c60ce8f8e1fa36cef263"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a68f903d858f6c60ce8f8e1fa36cef263">CMainToolBar::GetSearchKey</a></div><div class="ttdeci">int GetSearchKey(std::wstring &amp;)</div><div class="ttdoc">検索キーを取得。戻り値は検索キーの文字数。</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:596</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a725e81e0378a1b4624cacdc8a7bbc0b6"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a725e81e0378a1b4624cacdc8a7bbc0b6">CMainToolBar::OnToolbarTimer</a></div><div class="ttdeci">void OnToolbarTimer(void)</div><div class="ttdoc">タイマーの処理 20060128 aroka</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:511</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a2f51dba165588926e8d9937362ac5121"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a2f51dba165588926e8d9937362ac5121">CMainToolBar::EatMessage</a></div><div class="ttdeci">bool EatMessage(MSG *msg)</div><div class="ttdoc">メッセージ処理。なんか処理したなら true を返す。</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:430</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a173bfcf1671fdddc2d1ed7b3d15cf3a2"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a173bfcf1671fdddc2d1ed7b3d15cf3a2">CMainToolBar::CreateToolBar</a></div><div class="ttdeci">void CreateToolBar(void)</div><div class="ttdoc">ツールバー作成</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:122</div></div>
+<div class="ttc" id="a_c_recent_8h_html"><div class="ttname"><a href="../../d0/d8d/_c_recent_8h.html">CRecent.h</a></div><div class="ttdoc">最近使ったリスト</div></div>
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_recent_search_html"><div class="ttname"><a href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a></div><div class="ttdoc">検索の履歴を管理 (RECENT_FOR_SEARCH)</div><div class="ttdef"><b>Definition:</b> CRecentSearch.h:33</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a69540c130f9ad20f2851434ab927ede0"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a69540c130f9ad20f2851434ab927ede0">CMainToolBar::ProcSearchBox</a></div><div class="ttdeci">void ProcSearchBox(MSG *)</div><div class="ttdoc">検索コンボボックスのメッセージ処理</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:52</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_ab519883f8522576e0df6c0aba8e8bdba"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#ab519883f8522576e0df6c0aba8e8bdba">CMainToolBar::ToolBarOwnerDraw</a></div><div class="ttdeci">LPARAM ToolBarOwnerDraw(LPNMCUSTOMDRAW pnmh)</div><div class="ttdoc">ToolBarのOwnerDraw</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:451</div></div>
+<div class="ttc" id="aclass_c_image_list_mgr_html"><div class="ttname"><a href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a></div><div class="ttdoc">ImageListの管理</div><div class="ttdef"><b>Definition:</b> CImageListMgr.h:51</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a58e44667939640817cf41a1697a2bce1"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a58e44667939640817cf41a1697a2bce1">CMainToolBar::UpdateToolbar</a></div><div class="ttdeci">void UpdateToolbar(void)</div><div class="ttdoc">ツールバーの表示を更新する // 2008.09.23 nasukoji</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:525</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_aec4250b1258adf8d1ce59eabaeec313f"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#aec4250b1258adf8d1ce59eabaeec313f">CMainToolBar::SetFocusSearchBox</a></div><div class="ttdeci">void SetFocusSearchBox(void) const</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:613</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html_a829464099821dfe93def793e5632c18d"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html#a829464099821dfe93def793e5632c18d">CMainToolBar::DestroyToolBar</a></div><div class="ttdeci">void DestroyToolBar(void)</div><div class="ttdoc">ツールバー破棄</div><div class="ttdef"><b>Definition:</b> CMainToolBar.cpp:395</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html">CMainToolBar</a></div><div class="ttdef"><b>Definition:</b> CMainToolBar.h:33</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

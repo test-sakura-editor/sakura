@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CClipboard クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../d1/dcd/class_c_clipboard-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CClipboard クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>サクラエディタ用クリップボードクラス。後々はこの中で全てのクリップボードAPIを呼ばせたい。  
+ <a href="../../d0/dea/class_c_clipboard.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d60/_c_clipboard_8h_source.html">CClipboard.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:afc73d99293e38ddfdcdc513a7fb125a0"><td class="memItemLeft" align="right" valign="top"><a id="afc73d99293e38ddfdcdc513a7fb125a0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#afc73d99293e38ddfdcdc513a7fb125a0">CClipboard</a> (HWND hwnd)</td></tr>
+<tr class="memdesc:afc73d99293e38ddfdcdc513a7fb125a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ内でクリップボードが開かれる <br /></td></tr>
+<tr class="separator:afc73d99293e38ddfdcdc513a7fb125a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3f396dd804846d9c7f6942e3db7ad0"><td class="memItemLeft" align="right" valign="top"><a id="a2d3f396dd804846d9c7f6942e3db7ad0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a2d3f396dd804846d9c7f6942e3db7ad0">~CClipboard</a> ()</td></tr>
+<tr class="memdesc:a2d3f396dd804846d9c7f6942e3db7ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ内でCloseが呼ばれる <br /></td></tr>
+<tr class="separator:a2d3f396dd804846d9c7f6942e3db7ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb7cc62a698b98a426418e4fb044a40"><td class="memItemLeft" align="right" valign="top"><a id="a1cb7cc62a698b98a426418e4fb044a40"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a1cb7cc62a698b98a426418e4fb044a40">Empty</a> ()</td></tr>
+<tr class="memdesc:a1cb7cc62a698b98a426418e4fb044a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボードを空にする <br /></td></tr>
+<tr class="separator:a1cb7cc62a698b98a426418e4fb044a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acadb783b5fe8df195a2331608b7d3035"><td class="memItemLeft" align="right" valign="top"><a id="acadb783b5fe8df195a2331608b7d3035"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#acadb783b5fe8df195a2331608b7d3035">Close</a> ()</td></tr>
+<tr class="memdesc:acadb783b5fe8df195a2331608b7d3035"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボードを閉じる <br /></td></tr>
+<tr class="separator:acadb783b5fe8df195a2331608b7d3035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136a77c87f94112cfdeaeb7090b0ecb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a136a77c87f94112cfdeaeb7090b0ecb0">SetText</a> (const wchar_t *pData, int nDataLen, bool bColumnSelect, bool bLineSelect, UINT uFormat=(UINT) -1)</td></tr>
+<tr class="memdesc:a136a77c87f94112cfdeaeb7090b0ecb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストを設定する  <a href="../../d0/dea/class_c_clipboard.html#a136a77c87f94112cfdeaeb7090b0ecb0">[詳解]</a><br /></td></tr>
+<tr class="separator:a136a77c87f94112cfdeaeb7090b0ecb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69baa5409d24418b451e46f1c932fda6"><td class="memItemLeft" align="right" valign="top"><a id="a69baa5409d24418b451e46f1c932fda6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetHtmlText</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cmemBUf)</td></tr>
+<tr class="separator:a69baa5409d24418b451e46f1c932fda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77fd0ff1addf457f842644cd94fc93b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#ab77fd0ff1addf457f842644cd94fc93b">GetText</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *cmemBuf, bool *pbColumnSelect, bool *pbLineSelect, const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;cEol, UINT uGetFormat=(UINT) -1)</td></tr>
+<tr class="memdesc:ab77fd0ff1addf457f842644cd94fc93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキストを取得する  <a href="../../d0/dea/class_c_clipboard.html#ab77fd0ff1addf457f842644cd94fc93b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab77fd0ff1addf457f842644cd94fc93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac3ec7da2a12d0a3a8e0e8eb765e692"><td class="memItemLeft" align="right" valign="top"><a id="a0ac3ec7da2a12d0a3a8e0e8eb765e692"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsIncludeClipboradFormat</b> (const wchar_t *pFormatName)</td></tr>
+<tr class="separator:a0ac3ec7da2a12d0a3a8e0e8eb765e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36bed65d59071412e9626d721d0a1f83"><td class="memItemLeft" align="right" valign="top"><a id="a36bed65d59071412e9626d721d0a1f83"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetClipboradByFormat</b> (const <a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a> &amp;cstr, const wchar_t *pFormatName, int nMode, int nEndMode)</td></tr>
+<tr class="separator:a36bed65d59071412e9626d721d0a1f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a685d82382da0ff6b883252f30da2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a31a685d82382da0ff6b883252f30da2c">GetClipboradByFormat</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;mem, const wchar_t *pFormatName, int nMode, int nEndMode, const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;cEol)</td></tr>
+<tr class="separator:a31a685d82382da0ff6b883252f30da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799d170cfd0e7e150ba7e0a4a2cdd907"><td class="memItemLeft" align="right" valign="top"><a id="a799d170cfd0e7e150ba7e0a4a2cdd907"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a799d170cfd0e7e150ba7e0a4a2cdd907">operator bool</a> () const</td></tr>
+<tr class="memdesc:a799d170cfd0e7e150ba7e0a4a2cdd907"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボードを開けたならtrue <br /></td></tr>
+<tr class="separator:a799d170cfd0e7e150ba7e0a4a2cdd907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a90e741faf028adbeeb67dc7847c6f4e3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a90e741faf028adbeeb67dc7847c6f4e3">HasValidData</a> ()</td></tr>
+<tr class="memdesc:a90e741faf028adbeeb67dc7847c6f4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボード内に、サクラエディタで扱えるデータがあればtrue  <a href="../../d0/dea/class_c_clipboard.html#a90e741faf028adbeeb67dc7847c6f4e3">[詳解]</a><br /></td></tr>
+<tr class="separator:a90e741faf028adbeeb67dc7847c6f4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab236cc29708fbaa8805512d30aaea1c3"><td class="memItemLeft" align="right" valign="top">static CLIPFORMAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#ab236cc29708fbaa8805512d30aaea1c3">GetSakuraFormat</a> ()</td></tr>
+<tr class="memdesc:ab236cc29708fbaa8805512d30aaea1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">サクラエディタ独自のクリップボードデータ形式  <a href="../../d0/dea/class_c_clipboard.html#ab236cc29708fbaa8805512d30aaea1c3">[詳解]</a><br /></td></tr>
+<tr class="separator:ab236cc29708fbaa8805512d30aaea1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fca3c521cb0bdbef0abe33211e1ca9"><td class="memItemLeft" align="right" valign="top"><a id="a17fca3c521cb0bdbef0abe33211e1ca9"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dea/class_c_clipboard.html#a17fca3c521cb0bdbef0abe33211e1ca9">GetDataType</a> ()</td></tr>
+<tr class="memdesc:a17fca3c521cb0bdbef0abe33211e1ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボードデータ形式(CF_UNICODETEXT等)の取得 <br /></td></tr>
+<tr class="separator:a17fca3c521cb0bdbef0abe33211e1ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>サクラエディタ用クリップボードクラス。後々はこの中で全てのクリップボードAPIを呼ばせたい。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a31a685d82382da0ff6b883252f30da2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a685d82382da0ff6b883252f30da2c">&#9670;&nbsp;</a></span>GetClipboradByFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CClipboard::GetClipboradByFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pFormatName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nEndMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;&#160;</td>
+          <td class="paramname"><em>cEol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定のクリップボード形式で取得</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nMode</td><td>-2:通常のサクラの処理, -1:バイナリモード, それ以外:文字コード </td></tr>
+    <tr><td class="paramname">nEndMode</td><td>-1:文字コードに依存 0:GlobalSize 1:strlen 2:wcslen 4:wchar32_tの文字列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2013.06.12 Moca 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="ab236cc29708fbaa8805512d30aaea1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab236cc29708fbaa8805512d30aaea1c3">&#9670;&nbsp;</a></span>GetSakuraFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLIPFORMAT CClipboard::GetSakuraFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>サクラエディタ独自のクリップボードデータ形式 </p>
+<p>クリップボードデータ形式(CF_UNICODETEXT等)の取得 </p>
+
+</div>
+</div>
+<a id="ab77fd0ff1addf457f842644cd94fc93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77fd0ff1addf457f842644cd94fc93b">&#9670;&nbsp;</a></span>GetText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CClipboard::GetText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>cmemBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbColumnSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbLineSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;&#160;</td>
+          <td class="paramname"><em>cEol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uGetFormat</em> = <code>(UINT)-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テキストを取得する </p>
+<p>テキストを取得する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cmemBuf</td><td>取得したテキストの格納先 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pbColumnSelect</td><td>矩形選択形式 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pbLineSelect</td><td>行選択形式 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cEol</td><td>HDROP形式のときの改行コード </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uGetFormat</td><td>クリップボード形式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a90e741faf028adbeeb67dc7847c6f4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e741faf028adbeeb67dc7847c6f4e3">&#9670;&nbsp;</a></span>HasValidData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CClipboard::HasValidData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クリップボード内に、サクラエディタで扱えるデータがあればtrue </p>
+<p>サクラエディタ独自のクリップボードデータ形式 </p>
+
+</div>
+</div>
+<a id="a136a77c87f94112cfdeaeb7090b0ecb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136a77c87f94112cfdeaeb7090b0ecb0">&#9670;&nbsp;</a></span>SetText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CClipboard::SetText </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDataLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bColumnSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bLineSelect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uFormat</em> = <code>(UINT)-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テキストを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pData</td><td>コピーするUNICODE文字列 </td></tr>
+    <tr><td class="paramname">nDataLen</td><td>pDataの長さ（文字単位） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/_os/<a class="el" href="../../de/d60/_c_clipboard_8h_source.html">CClipboard.h</a></li>
+<li>sakura_core/_os/<a class="el" href="../../d7/da8/_c_clipboard_8cpp.html">CClipboard.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

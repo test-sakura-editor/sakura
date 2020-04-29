@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CCaret クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../dc/d2b/class_c_caret-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CCaret クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abc7916b08f818adeb634fc726f6a0b4d"><td class="memItemLeft" align="right" valign="top"><a id="abc7916b08f818adeb634fc726f6a0b4d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CCaret</b> (<a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pEditView, const <a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *pEditDoc)</td></tr>
+<tr class="separator:abc7916b08f818adeb634fc726f6a0b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8814ab61337752f748e75a6719a9654"><td class="memItemLeft" align="right" valign="top"><a id="ab8814ab61337752f748e75a6719a9654"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetHankakuDx</b> () const</td></tr>
+<tr class="separator:ab8814ab61337752f748e75a6719a9654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1f01765f91e83a183a25cc90618c31"><td class="memItemLeft" align="right" valign="top"><a id="a2b1f01765f91e83a183a25cc90618c31"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetHankakuDy</b> () const</td></tr>
+<tr class="separator:a2b1f01765f91e83a183a25cc90618c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9516105918e514bd1b0c30aba70ab6ed"><td class="memItemLeft" align="right" valign="top"><a id="a9516105918e514bd1b0c30aba70ab6ed"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetHankakuHeight</b> () const</td></tr>
+<tr class="separator:a9516105918e514bd1b0c30aba70ab6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d7f8aa52761c1684295262ac59f909"><td class="memItemLeft" align="right" valign="top"><a id="a18d7f8aa52761c1684295262ac59f909"></a>
+const <a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDocument</b> () const</td></tr>
+<tr class="separator:a18d7f8aa52761c1684295262ac59f909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9809b074a99d9291fceaa430bafa1f07"><td class="memItemLeft" align="right" valign="top"><a id="a9809b074a99d9291fceaa430bafa1f07"></a>
+POINT&#160;</td><td class="memItemRight" valign="bottom"><b>CalcCaretDrawPos</b> (const <a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> &amp;ptCaretPos) const</td></tr>
+<tr class="separator:a9809b074a99d9291fceaa430bafa1f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f575f220ccd7f869f47873af614a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#ad3f575f220ccd7f869f47873af614a86">CreateEditCaret</a> (COLORREF crCaret, COLORREF crBack, int nWidth, int nHeight)</td></tr>
+<tr class="memdesc:ad3f575f220ccd7f869f47873af614a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットの作成。2006.12.07 ryoji  <a href="../../d3/d44/class_c_caret.html#ad3f575f220ccd7f869f47873af614a86">[詳解]</a><br /></td></tr>
+<tr class="separator:ad3f575f220ccd7f869f47873af614a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb47a6dd1884e23c4e296a753fd33412"><td class="memItemLeft" align="right" valign="top"><a id="afb47a6dd1884e23c4e296a753fd33412"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#afb47a6dd1884e23c4e296a753fd33412">DestroyCaret</a> ()</td></tr>
+<tr class="memdesc:afb47a6dd1884e23c4e296a753fd33412"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットを破棄する（内部的にも破棄） <br /></td></tr>
+<tr class="separator:afb47a6dd1884e23c4e296a753fd33412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9a42aa524b116c1e1cd690e9c9d654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a2e9a42aa524b116c1e1cd690e9c9d654">CopyCaretStatus</a> (<a class="el" href="../../d3/d44/class_c_caret.html">CCaret</a> *pDestCaret) const</td></tr>
+<tr class="memdesc:a2e9a42aa524b116c1e1cd690e9c9d654"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー  <a href="../../d3/d44/class_c_caret.html#a2e9a42aa524b116c1e1cd690e9c9d654">[詳解]</a><br /></td></tr>
+<tr class="separator:a2e9a42aa524b116c1e1cd690e9c9d654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb97f0ce7adecc83dbdd1ab812dcecb8"><td class="memItemLeft" align="right" valign="top"><a id="acb97f0ce7adecc83dbdd1ab812dcecb8"></a>
+CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#acb97f0ce7adecc83dbdd1ab812dcecb8">MoveCursorToClientPoint</a> (const POINT &amp;ptClientPos, bool=false, <a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> *=NULL)</td></tr>
+<tr class="memdesc:acb97f0ce7adecc83dbdd1ab812dcecb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス等による座標指定によるカーソル移動 <br /></td></tr>
+<tr class="separator:acb97f0ce7adecc83dbdd1ab812dcecb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa385d9c1fd8d8984e723731a904c80b6"><td class="memItemLeft" align="right" valign="top">CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#aa385d9c1fd8d8984e723731a904c80b6">Cursor_UPDOWN</a> (CLayoutInt nMoveLines, bool bSelect)</td></tr>
+<tr class="memdesc:aa385d9c1fd8d8984e723731a904c80b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーソル上下移動処理  <a href="../../d3/d44/class_c_caret.html#aa385d9c1fd8d8984e723731a904c80b6">[詳解]</a><br /></td></tr>
+<tr class="separator:aa385d9c1fd8d8984e723731a904c80b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0479c5f3be7d2572f65807adc8d6ba"><td class="memItemLeft" align="right" valign="top">CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a7b0479c5f3be7d2572f65807adc8d6ba">MoveCursor</a> (<a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> ptWk_CaretPos, bool bScroll, int nCaretMarginRate=_CARETMARGINRATE, bool bUnderlineDoNotOFF=false, bool bVertLineDoNotOFF=false)</td></tr>
+<tr class="memdesc:a7b0479c5f3be7d2572f65807adc8d6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">行桁指定によるカーソル移動  <a href="../../d3/d44/class_c_caret.html#a7b0479c5f3be7d2572f65807adc8d6ba">[詳解]</a><br /></td></tr>
+<tr class="separator:a7b0479c5f3be7d2572f65807adc8d6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa728f1beaaf0c9de1830e337cedfaf46"><td class="memItemLeft" align="right" valign="top">CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#aa728f1beaaf0c9de1830e337cedfaf46">MoveCursorFastMode</a> (const <a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a> &amp;pptWk_CaretPosLogic)</td></tr>
+<tr class="separator:aa728f1beaaf0c9de1830e337cedfaf46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005c1890fa9c7088b46a2df52ef2da36"><td class="memItemLeft" align="right" valign="top">CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a005c1890fa9c7088b46a2df52ef2da36">MoveCursorProperly</a> (<a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> ptNewXY, bool, bool=false, <a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> *=NULL, int=_CARETMARGINRATE, int=0)</td></tr>
+<tr class="separator:a005c1890fa9c7088b46a2df52ef2da36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac121db02dda4a81d3d84eb13afcd84e8"><td class="memItemLeft" align="right" valign="top"><a id="ac121db02dda4a81d3d84eb13afcd84e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#ac121db02dda4a81d3d84eb13afcd84e8">SetCaretLayoutPos</a> (const <a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> &amp;pt)</td></tr>
+<tr class="memdesc:ac121db02dda4a81d3d84eb13afcd84e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレット位置(レイアウト)を設定 <br /></td></tr>
+<tr class="separator:ac121db02dda4a81d3d84eb13afcd84e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617d2bdedf069c6a62e19baeffbff0ed"><td class="memItemLeft" align="right" valign="top"><a id="a617d2bdedf069c6a62e19baeffbff0ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a617d2bdedf069c6a62e19baeffbff0ed">SetCaretLogicPos</a> (const <a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a> &amp;pt)</td></tr>
+<tr class="memdesc:a617d2bdedf069c6a62e19baeffbff0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレット位置(ロジック)を設定 <br /></td></tr>
+<tr class="separator:a617d2bdedf069c6a62e19baeffbff0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7749c79b2ae725567e5bc7ecec2199bc"><td class="memItemLeft" align="right" valign="top"><a id="a7749c79b2ae725567e5bc7ecec2199bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a7749c79b2ae725567e5bc7ecec2199bc">SetCaretSize</a> (int nW, int nH)</td></tr>
+<tr class="memdesc:a7749c79b2ae725567e5bc7ecec2199bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットサイズを設定 <br /></td></tr>
+<tr class="separator:a7749c79b2ae725567e5bc7ecec2199bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874a0f1d9be9621ffb13cac721ca3b07"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a874a0f1d9be9621ffb13cac721ca3b07">GetAdjustCursorPos</a> (<a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> *pptPosXY)</td></tr>
+<tr class="memdesc:a874a0f1d9be9621ffb13cac721ca3b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">正しいカーソル位置を算出する  <a href="../../d3/d44/class_c_caret.html#a874a0f1d9be9621ffb13cac721ca3b07">[詳解]</a><br /></td></tr>
+<tr class="separator:a874a0f1d9be9621ffb13cac721ca3b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf64c74646d1ff33f201cb306f3c55a0"><td class="memItemLeft" align="right" valign="top"><a id="acf64c74646d1ff33f201cb306f3c55a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearCaretPosInfoCache</b> ()</td></tr>
+<tr class="separator:acf64c74646d1ff33f201cb306f3c55a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc10da541f3ff126c0ab6660c0d2872a"><td class="memItemLeft" align="right" valign="top"><a id="acc10da541f3ff126c0ab6660c0d2872a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#acc10da541f3ff126c0ab6660c0d2872a">ShowEditCaret</a> ()</td></tr>
+<tr class="memdesc:acc10da541f3ff126c0ab6660c0d2872a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットの表示・更新 <br /></td></tr>
+<tr class="separator:acc10da541f3ff126c0ab6660c0d2872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de57972c2e614a323a761ec7a16f7f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a3de57972c2e614a323a761ec7a16f7f4">ShowCaretPosInfo</a> ()</td></tr>
+<tr class="memdesc:a3de57972c2e614a323a761ec7a16f7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットの行桁位置を表示する  <a href="../../d3/d44/class_c_caret.html#a3de57972c2e614a323a761ec7a16f7f4">[詳解]</a><br /></td></tr>
+<tr class="separator:a3de57972c2e614a323a761ec7a16f7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52323625381cae43421fd3f4a5320488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a52323625381cae43421fd3f4a5320488">ShowCaret_</a> (HWND hwnd)</td></tr>
+<tr class="separator:a52323625381cae43421fd3f4a5320488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e50cdea1189ebd413e4c470a7ee8ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a35e50cdea1189ebd413e4c470a7ee8ae">HideCaret_</a> (HWND hwnd)</td></tr>
+<tr class="separator:a35e50cdea1189ebd413e4c470a7ee8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc80abdd0d549a4a50065339e526141a"><td class="memItemLeft" align="right" valign="top"><a id="acc80abdd0d549a4a50065339e526141a"></a>
+<a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#acc80abdd0d549a4a50065339e526141a">GetCaretLayoutPos</a> () const</td></tr>
+<tr class="memdesc:acc80abdd0d549a4a50065339e526141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレット位置(レイアウト)を取得 <br /></td></tr>
+<tr class="separator:acc80abdd0d549a4a50065339e526141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb243b4257898855f61ad7df2183a7ec"><td class="memItemLeft" align="right" valign="top"><a id="adb243b4257898855f61ad7df2183a7ec"></a>
+<a class="el" href="../../d0/d7f/class_c_my_size.html">CMySize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#adb243b4257898855f61ad7df2183a7ec">GetCaretSize</a> () const</td></tr>
+<tr class="memdesc:adb243b4257898855f61ad7df2183a7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットサイズを取得。※正確には高さは違うらしい (この半分のこともある？) <br /></td></tr>
+<tr class="separator:adb243b4257898855f61ad7df2183a7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6943feced8172fd5e726b2eace4eb65"><td class="memItemLeft" align="right" valign="top"><a id="ab6943feced8172fd5e726b2eace4eb65"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#ab6943feced8172fd5e726b2eace4eb65">ExistCaretFocus</a> () const</td></tr>
+<tr class="memdesc:ab6943feced8172fd5e726b2eace4eb65"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレットのフォーカスがあるか。※横幅値で判定してるらしい。 <br /></td></tr>
+<tr class="separator:ab6943feced8172fd5e726b2eace4eb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abfa1d385caa36594ee96679f489d71"><td class="memItemLeft" align="right" valign="top"><a id="a3abfa1d385caa36594ee96679f489d71"></a>
+<a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_c_caret.html#a3abfa1d385caa36594ee96679f489d71">GetCaretLogicPos</a> () const</td></tr>
+<tr class="memdesc:a3abfa1d385caa36594ee96679f489d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレット位置(ロジック)を取得 <br /></td></tr>
+<tr class="separator:a3abfa1d385caa36594ee96679f489d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6629e7d0668b8862183dbee72b749e"><td class="memItemLeft" align="right" valign="top"><a id="aba6629e7d0668b8862183dbee72b749e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCaretShowFlag</b> () const</td></tr>
+<tr class="separator:aba6629e7d0668b8862183dbee72b749e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ad5058a6e8ff687486752e16d263f9712"><td class="memItemLeft" align="right" valign="top"><a id="ad5058a6e8ff687486752e16d263f9712"></a>
+CLayoutInt&#160;</td><td class="memItemRight" valign="bottom"><b>m_nCaretPosX_Prev</b></td></tr>
+<tr class="separator:ad5058a6e8ff687486752e16d263f9712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a93048cf6293cd53e7cfc19237a5df"><td class="memItemLeft" align="right" valign="top"><a id="a97a93048cf6293cd53e7cfc19237a5df"></a>
+<a class="el" href="../../d0/d19/class_c_caret_under_line.html">CCaretUnderLine</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cUnderLine</b></td></tr>
+<tr class="separator:a97a93048cf6293cd53e7cfc19237a5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c36042fb93b9d84f63bf257c91cb49"><td class="memItemLeft" align="right" valign="top"><a id="a87c36042fb93b9d84f63bf257c91cb49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bClearStatus</b></td></tr>
+<tr class="separator:a87c36042fb93b9d84f63bf257c91cb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2e9a42aa524b116c1e1cd690e9c9d654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9a42aa524b116c1e1cd690e9c9d654">&#9670;&nbsp;</a></span>CopyCaretStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCaret::CopyCaretStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d44/class_c_caret.html">CCaret</a> *&#160;</td>
+          <td class="paramname"><em>pDestCaret</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピー </p>
+<p>自分の状態を他のCCaretにコピー </p>
+
+</div>
+</div>
+<a id="ad3f575f220ccd7f869f47873af614a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f575f220ccd7f869f47873af614a86">&#9670;&nbsp;</a></span>CreateEditCaret()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCaret::CreateEditCaret </td>
+          <td>(</td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>crCaret</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>crBack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キャレットの作成。2006.12.07 ryoji </p>
+<p>キャレットの作成</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nCaretColor</td><td>[in] キャレットの色種別 (0:通常, 1:IME ON) </td></tr>
+    <tr><td class="paramname">nWidth</td><td>[in] キャレット幅 </td></tr>
+    <tr><td class="paramname">nHeight</td><td>[in] キャレット高</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2006.12.07 ryoji 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="aa385d9c1fd8d8984e723731a904c80b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa385d9c1fd8d8984e723731a904c80b6">&#9670;&nbsp;</a></span>Cursor_UPDOWN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayoutInt CCaret::Cursor_UPDOWN </td>
+          <td>(</td>
+          <td class="paramtype">CLayoutInt&#160;</td>
+          <td class="paramname"><em>nMoveLines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSelect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カーソル上下移動処理 </p>
+<p>&lt; 何？</p>
+
+</div>
+</div>
+<a id="a874a0f1d9be9621ffb13cac721ca3b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874a0f1d9be9621ffb13cac721ca3b07">&#9670;&nbsp;</a></span>GetAdjustCursorPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CCaret::GetAdjustCursorPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> *&#160;</td>
+          <td class="paramname"><em>pptPosXY</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>正しいカーソル位置を算出する </p>
+<p>正しいカーソル位置を算出する(EOF以降のみ) </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pptPosXY</td><td>[in,out] カーソルのレイアウト座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>座標を修正した </td></tr>
+    <tr><td class="paramname">FALSE</td><td>座標は修正されなかった </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>EOFの直前が改行でない場合は、その行に限りEOF以降にも移動可能 EOFだけの行は、先頭位置のみ正しい。 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2004.04.02 Moca 関数化 </dd></dl>
+
+</div>
+</div>
+<a id="a35e50cdea1189ebd413e4c470a7ee8ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e50cdea1189ebd413e4c470a7ee8ae">&#9670;&nbsp;</a></span>HideCaret_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCaret::HideCaret_ </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キャレットの非表示 </p>
+
+</div>
+</div>
+<a id="a7b0479c5f3be7d2572f65807adc8d6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0479c5f3be7d2572f65807adc8d6ba">&#9670;&nbsp;</a></span>MoveCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayoutInt CCaret::MoveCursor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>&#160;</td>
+          <td class="paramname"><em>ptWk_CaretPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bScroll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCaretMarginRate</em> = <code>_CARETMARGINRATE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUnderLineDoNotOFF</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bVertLineDoNotOFF</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行桁指定によるカーソル移動 </p>
+<p>必要に応じて縦/横スクロールもする． 垂直スクロールをした場合はその行数を返す（正／負）．</p>
+<dl class="section return"><dt>戻り値</dt><dd>縦スクロール行数(負:上スクロール/正:下スクロール)</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>不正な位置が指定された場合には適切な座標値に 移動するため，引数で与えた座標と移動後の座標は 必ずしも一致しない．</dd>
+<dd>
+bScrollがfalseの場合にはカーソル位置のみ移動する． trueの場合にはスクロール位置があわせて変更される</dd>
+<dd>
+同じ行の左右移動はアンダーラインを一度消す必要が無いので bUnderlineDoNotOFFを指定すると高速化できる. 同様に同じ桁の上下移動はbVertLineDoNotOFFを指定すると カーソル位置縦線の消去を省いて高速化できる.</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2001.10.20 deleted by novice AdjustScrollBar()を呼ぶ位置を変更 </dd>
+<dd>
+2004.04.02 Moca 行だけ有効な座標に修正するのを厳密に処理する </dd>
+<dd>
+2004.09.11 genta bDrawスイッチは動作と名称が一致していないので 再描画スイッチ→画面位置調整スイッチと名称変更 </dd>
+<dd>
+2009.08.28 nasukoji テキスト折り返しの「折り返さない」対応 </dd>
+<dd>
+2010.11.27 syat アンダーライン、縦線を消去しないフラグを追加 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ptWk_CaretPos</td><td>行桁指定によるカーソル移動 [in] 移動先レイアウト位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bScroll</td><td>[in] true: 画面位置調整有り false: 画面位置調整無し </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nCaretMarginRate</td><td>[in] 縦スクロール開始位置を決める値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bUnderLineDoNotOFF</td><td>[in] アンダーラインを消去しない </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bVertLineDoNotOFF</td><td>[in] カーソル位置縦線を消去しない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa728f1beaaf0c9de1830e337cedfaf46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa728f1beaaf0c9de1830e337cedfaf46">&#9670;&nbsp;</a></span>MoveCursorFastMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayoutInt CCaret::MoveCursorFastMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>pptWk_CaretPosLogic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pptWk_CaretPosLogic</td><td>[in] 移動先ロジック位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a005c1890fa9c7088b46a2df52ef2da36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005c1890fa9c7088b46a2df52ef2da36">&#9670;&nbsp;</a></span>MoveCursorProperly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLayoutInt CCaret::MoveCursorProperly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>&#160;</td>
+          <td class="paramname"><em>ptNewXY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bScroll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>test</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a> *&#160;</td>
+          <td class="paramname"><em>ptNewXYNew</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCaretMarginRate</em> = <code>_CARETMARGINRATE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>行桁指定によるカーソル移動（座標調整付き）</p>
+<dl class="section return"><dt>戻り値</dt><dd>縦スクロール行数(負:上スクロール/正:下スクロール)</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>マウス等による移動で不適切な位置に行かないよう座標調整してカーソル移動する</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.08.23 ryoji 関数化（MoveCursorToPoint()から処理を抜き出し） </dd>
+<dd>
+2007.09.26 ryoji 半角文字でも中央で左右にカーソルを振り分ける </dd>
+<dd>
+2007.10.23 kobake 引数説明の誤りを修正 ([in,out]→[in]) </dd>
+<dd>
+2009.02.17 ryoji レイアウト行末以後のカラム位置指定なら末尾文字の前ではなく末尾文字の後に移動する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptNewXY</td><td>[in] カーソルのレイアウト座標X </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bScroll</td><td>[in] true: 画面位置調整有り/ false: 画面位置調整有り無し </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">test</td><td>[in] true: カーソル移動はしない </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ptNewXYNew</td><td>[out] 新しいレイアウト座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nCaretMarginRate</td><td>[in] 縦スクロール開始位置を決める値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>[in] ptNewXY.xとマウスカーソル位置との誤差(カラム幅未満のドット数) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a52323625381cae43421fd3f4a5320488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52323625381cae43421fd3f4a5320488">&#9670;&nbsp;</a></span>ShowCaret_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCaret::ShowCaret_ </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キャレットの表示 </p>
+
+</div>
+</div>
+<a id="a3de57972c2e614a323a761ec7a16f7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de57972c2e614a323a761ec7a16f7f4">&#9670;&nbsp;</a></span>ShowCaretPosInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCaret::ShowCaretPosInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キャレットの行桁位置を表示する </p>
+<p>キャレットの行桁位置およびステータスバーの状態表示の更新</p>
+<dl class="section note"><dt>覚え書き</dt><dd>ステータスバーの状態の並び方の変更はメッセージを受信する CEditWnd::DispatchEvent()のWM_NOTIFYにも影響があることに注意</dd>
+<dd>
+ステータスバーの出力内容の変更はCEditWnd::OnSize()の カラム幅計算に影響があることに注意 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/view/<a class="el" href="../../d6/d46/_c_caret_8h_source.html">CCaret.h</a></li>
+<li>sakura_core/view/<a class="el" href="../../d8/d05/_c_caret_8cpp.html">CCaret.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

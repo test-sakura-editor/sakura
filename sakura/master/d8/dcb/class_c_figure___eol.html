@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CFigure_Eol クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d0/d20/class_c_figure___eol-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CFigure_Eol クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>改行描画  
+ <a href="../../d8/dcb/class_c_figure___eol.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/deb/_c_figure___eol_8h_source.html">CFigure_Eol.h</a>&gt;</code></p>
+<div class="dynheader">
+CFigure_Eol の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/dcb/class_c_figure___eol.png" usemap="#CFigure_5FEol_map" alt=""/>
+  <map id="CFigure_5FEol_map" name="CFigure_5FEol_map">
+<area href="../../dd/d75/class_c_figure_space.html" title="各種空白（半角空白／全角空白／タブ／改行）描画用の基本クラス" alt="CFigureSpace" shape="rect" coords="0,56,94,80"/>
+<area href="../../d2/d65/class_c_figure.html" alt="CFigure" shape="rect" coords="0,0,94,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:addaa4a342ff89ba22a39af2130e1ec2d"><td class="memItemLeft" align="right" valign="top"><a id="addaa4a342ff89ba22a39af2130e1ec2d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Match</b> (const wchar_t *pText, int nTextLen) const</td></tr>
+<tr class="separator:addaa4a342ff89ba22a39af2130e1ec2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365c93f242a68a083d4098ec9bd12a55"><td class="memItemLeft" align="right" valign="top"><a id="a365c93f242a68a083d4098ec9bd12a55"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcb/class_c_figure___eol.html#a365c93f242a68a083d4098ec9bd12a55">Disp</a> (void) const</td></tr>
+<tr class="memdesc:a365c93f242a68a083d4098ec9bd12a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">色分け表示対象判定 <br /></td></tr>
+<tr class="separator:a365c93f242a68a083d4098ec9bd12a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11ebd11924fc4d5e7dc838fbb058d11"><td class="memItemLeft" align="right" valign="top"><a id="af11ebd11924fc4d5e7dc838fbb058d11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImp</b> (<a class="el" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a> *pInfo)</td></tr>
+<tr class="separator:af11ebd11924fc4d5e7dc838fbb058d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02d2ba544368cca508a1b2efdcba89b"><td class="memItemLeft" align="right" valign="top"><a id="ab02d2ba544368cca508a1b2efdcba89b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DispSpace</b> (<a class="el" href="../../dc/d90/class_c_graphics.html">CGraphics</a> &amp;gr, <a class="el" href="../../d8/d97/struct_disp_pos.html">DispPos</a> *pDispPos, <a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pcView, bool bTrans) const</td></tr>
+<tr class="separator:ab02d2ba544368cca508a1b2efdcba89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49bb42d7ad3b67db311f47c1a752f632"><td class="memItemLeft" align="right" valign="top"><a id="a49bb42d7ad3b67db311f47c1a752f632"></a>
+<a class="el" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetColorIdx</b> (void) const</td></tr>
+<tr class="separator:a49bb42d7ad3b67db311f47c1a752f632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4e9b7945862fba39451a611c68004e86"><td class="memItemLeft" align="right" valign="top"><a id="a4e9b7945862fba39451a611c68004e86"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d75/class_c_figure_space.html#a4e9b7945862fba39451a611c68004e86">Update</a> (void)</td></tr>
+<tr class="memdesc:a4e9b7945862fba39451a611c68004e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">設定更新 <br /></td></tr>
+<tr class="separator:a4e9b7945862fba39451a611c68004e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858fc76b6c58a0784a6f8c0b2ecd8bb1"><td class="memItemLeft" align="right" valign="top"><a id="a858fc76b6c58a0784a6f8c0b2ecd8bb1"></a>
+<a class="el" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetDispColorIdx</b> (void) const</td></tr>
+<tr class="separator:a858fc76b6c58a0784a6f8c0b2ecd8bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f31ed9693c90e8807b89226d2e7727c"><td class="memItemLeft" align="right" valign="top"><a id="a5f31ed9693c90e8807b89226d2e7727c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImp_StyleSelect</b> (<a class="el" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a> *pInfo)</td></tr>
+<tr class="separator:a5f31ed9693c90e8807b89226d2e7727c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748d227fd1ea09af59119f42b273f40a"><td class="memItemLeft" align="right" valign="top"><a id="a748d227fd1ea09af59119f42b273f40a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImp_StylePop</b> (<a class="el" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a> *pInfo)</td></tr>
+<tr class="separator:a748d227fd1ea09af59119f42b273f40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bc24e4079ba70c8fab4031ea16f982"><td class="memItemLeft" align="right" valign="top"><a id="a38bc24e4079ba70c8fab4031ea16f982"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImp_DrawUnderline</b> (<a class="el" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a> *pInfo, <a class="el" href="../../d8/d97/struct_disp_pos.html">DispPos</a> &amp;)</td></tr>
+<tr class="separator:a38bc24e4079ba70c8fab4031ea16f982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a6b5fbbcad21f8e6b8a92f4466f31e741"><td class="memItemLeft" align="right" valign="top"><a id="a6b5fbbcad21f8e6b8a92f4466f31e741"></a>
+<a class="el" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_nDispColorIndex</b></td></tr>
+<tr class="separator:a6b5fbbcad21f8e6b8a92f4466f31e741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9486f38ab83f56cb8ed927e9b423d6b"><td class="memItemLeft" align="right" valign="top"><a id="ab9486f38ab83f56cb8ed927e9b423d6b"></a>
+const <a class="el" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pTypeData</b></td></tr>
+<tr class="separator:ab9486f38ab83f56cb8ed927e9b423d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>改行描画 </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/view/figures/<a class="el" href="../../d8/deb/_c_figure___eol_8h_source.html">CFigure_Eol.h</a></li>
+<li>sakura_core/view/figures/<a class="el" href="../../df/d8c/_c_figure___eol_8cpp.html">CFigure_Eol.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

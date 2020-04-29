@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/os.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">os.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ObjIdl.h&gt;</code><br />
+</div>
+<p><a href="../../d0/dff/os_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dca/class_c_disable_wow64_fs_redirect.html">CDisableWow64FsRedirect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wow64 の ファイルシステムリダイレクションを一時的に無効にして、クラス破棄時に元に戻すクラス  <a href="../../da/dca/class_c_disable_wow64_fs_redirect.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d42/class_c_current_directory_backup_point.html">CCurrentDirectoryBackupPoint</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af350a8036d15c91cc372206271b0210e"><td class="memItemLeft" align="right" valign="top"><a id="af350a8036d15c91cc372206271b0210e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PACKVERSION</b>(major,  minor)&#160;&#160;&#160;MAKELONG( minor, major )</td></tr>
+<tr class="separator:af350a8036d15c91cc372206271b0210e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a1901466fddd74789636f16a91a593fe4"><td class="memItemLeft" align="right" valign="top"><a id="a1901466fddd74789636f16a91a593fe4"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>GetSystemResources</b> (int *pnSystemResources, int *pnUserResources, int *pnGDIResources)</td></tr>
+<tr class="separator:a1901466fddd74789636f16a91a593fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6ce74e8d252920ddc945f1611ad1a8"><td class="memItemLeft" align="right" valign="top"><a id="a6e6ce74e8d252920ddc945f1611ad1a8"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>CheckSystemResources</b> (const WCHAR *pszAppName)</td></tr>
+<tr class="separator:a6e6ce74e8d252920ddc945f1611ad1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975fa30543808dc8c77914aa85dc0768"><td class="memItemLeft" align="right" valign="top"><a id="a975fa30543808dc8c77914aa85dc0768"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#a975fa30543808dc8c77914aa85dc0768">SetClipboardText</a> (HWND hwnd, const WCHAR *pszText, int nLength)</td></tr>
+<tr class="memdesc:a975fa30543808dc8c77914aa85dc0768"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリープボードにText形式でコピーする。UNICODE版。nLengthは文字単位。 <br /></td></tr>
+<tr class="separator:a975fa30543808dc8c77914aa85dc0768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3158e6113cc54dbac6735a8242620f8a"><td class="memItemLeft" align="right" valign="top"><a id="a3158e6113cc54dbac6735a8242620f8a"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>IsDataAvailable</b> (LPDATAOBJECT pDataObject, CLIPFORMAT cfFormat)</td></tr>
+<tr class="separator:a3158e6113cc54dbac6735a8242620f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3b4e68045d675f1ded9993184602c9"><td class="memItemLeft" align="right" valign="top"><a id="a9d3b4e68045d675f1ded9993184602c9"></a>
+HGLOBAL&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalData</b> (LPDATAOBJECT pDataObject, CLIPFORMAT cfFormat)</td></tr>
+<tr class="separator:a9d3b4e68045d675f1ded9993184602c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a25a69957350449eafca2550cf020c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#ac1a25a69957350449eafca2550cf020c">ReadRegistry</a> (HKEY Hive, const WCHAR *Path, const WCHAR *Item, WCHAR *Buffer, unsigned BufferCount)</td></tr>
+<tr class="memdesc:ac1a25a69957350449eafca2550cf020c"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジストリから文字列を読み出す．  <a href="../../d0/dff/os_8h.html#ac1a25a69957350449eafca2550cf020c">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1a25a69957350449eafca2550cf020c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb195e506a53384f695b3ad0c5380da0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#abb195e506a53384f695b3ad0c5380da0">GetMonitorWorkRect</a> (HWND hWnd, LPRECT prcWork, LPRECT prcMonitor=NULL)</td></tr>
+<tr class="separator:abb195e506a53384f695b3ad0c5380da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6ac8ea8b9923d9b9db8f3855871440"><td class="memItemLeft" align="right" valign="top"><a id="a1b6ac8ea8b9923d9b9db8f3855871440"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMonitorWorkRect</b> (LPCRECT prc, LPRECT prcWork, LPRECT prcMonitor=NULL)</td></tr>
+<tr class="separator:a1b6ac8ea8b9923d9b9db8f3855871440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfafb054bf4de0fd4e93002932b1c0d2"><td class="memItemLeft" align="right" valign="top"><a id="acfafb054bf4de0fd4e93002932b1c0d2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMonitorWorkRect</b> (POINT pt, LPRECT prcWork, LPRECT prcMonitor=NULL)</td></tr>
+<tr class="separator:acfafb054bf4de0fd4e93002932b1c0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2fe472eef95208b1e2ce1c31b1c444"><td class="memItemLeft" align="right" valign="top"><a id="a3a2fe472eef95208b1e2ce1c31b1c444"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMonitorWorkRect</b> (HMONITOR hMon, LPRECT prcWork, LPRECT prcMonitor=NULL)</td></tr>
+<tr class="separator:a3a2fe472eef95208b1e2ce1c31b1c444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfb783f0ad0eb28dd7576944ca3b931"><td class="memItemLeft" align="right" valign="top"><a id="acbfb783f0ad0eb28dd7576944ca3b931"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>GetComctl32Version</b> ()</td></tr>
+<tr class="separator:acbfb783f0ad0eb28dd7576944ca3b931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97177212f739e3b638c6bf20ce18fce"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#ad97177212f739e3b638c6bf20ce18fce">IsVisualStyle</a> ()</td></tr>
+<tr class="separator:ad97177212f739e3b638c6bf20ce18fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58edc89689e3287f376b9a4fd42a761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#ac58edc89689e3287f376b9a4fd42a761">PreventVisualStyle</a> (HWND hWnd)</td></tr>
+<tr class="separator:ac58edc89689e3287f376b9a4fd42a761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e718fb8679634c0b38cc9a4bfe7c58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#a02e718fb8679634c0b38cc9a4bfe7c58">MyInitCommonControls</a> ()</td></tr>
+<tr class="separator:a02e718fb8679634c0b38cc9a4bfe7c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e31e6af11e38c0972ecbb387367f22d"><td class="memItemLeft" align="right" valign="top"><a id="a1e31e6af11e38c0972ecbb387367f22d"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>IsWow64</b> ()</td></tr>
+<tr class="separator:a1e31e6af11e38c0972ecbb387367f22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd5100395b8635f74fb0392a6c47bbe"><td class="memItemLeft" align="right" valign="top"><a id="a3fd5100395b8635f74fb0392a6c47bbe"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#a3fd5100395b8635f74fb0392a6c47bbe">IsPowerShellAvailable</a> (void)</td></tr>
+<tr class="memdesc:a3fd5100395b8635f74fb0392a6c47bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">PowerShell が利用可能か判定する <br /></td></tr>
+<tr class="separator:a3fd5100395b8635f74fb0392a6c47bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6970ed2fdf2ad11a2bf4fa806186bab9"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/os_8h.html#a6970ed2fdf2ad11a2bf4fa806186bab9">ImeSetOpen</a> (HWND hWnd, BOOL bOpen, BOOL *pBackup)</td></tr>
+<tr class="memdesc:a6970ed2fdf2ad11a2bf4fa806186bab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">IMEのオープン状態を設定する  <a href="../../d0/dff/os_8h.html#a6970ed2fdf2ad11a2bf4fa806186bab9">[詳解]</a><br /></td></tr>
+<tr class="separator:a6970ed2fdf2ad11a2bf4fa806186bab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abb195e506a53384f695b3ad0c5380da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb195e506a53384f695b3ad0c5380da0">&#9670;&nbsp;</a></span>GetMonitorWorkRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetMonitorWorkRect </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPRECT&#160;</td>
+          <td class="paramname"><em>prcWork</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPRECT&#160;</td>
+          <td class="paramname"><em>prcMonitor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定したウィンドウ／長方形領域／点／モニタに対応するモニタ作業領域を取得する</p>
+<p>モニタ作業領域：画面全体からシステムのタスクバーやアプリケーションのツールバーが占有する領域を除いた領域</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hWnd/prc/pt/hMon</td><td>[in] 目的のウィンドウ／長方形領域／点／モニタ </td></tr>
+    <tr><td class="paramname">prcWork</td><td>[out] モニタ作業領域 </td></tr>
+    <tr><td class="paramname">prcMonitor</td><td>[out] モニタ画面全体</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>対応するモニタはプライマリモニタ </td></tr>
+    <tr><td class="paramname">false</td><td>対応するモニタは非プライマリモニタ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>出力パラメータの prcWork や prcMonior に NULL を指定した場合、 該当する領域情報は出力しない。呼び出し元は欲しいものだけを指定すればよい。 </dd></dl>
+
+</div>
+</div>
+<a id="a6970ed2fdf2ad11a2bf4fa806186bab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6970ed2fdf2ad11a2bf4fa806186bab9">&#9670;&nbsp;</a></span>ImeSetOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL ImeSetOpen </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bOpen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL *&#160;</td>
+          <td class="paramname"><em>pBackup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IMEのオープン状態を設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hWnd</td><td>設定対象のウィンドウハンドル </td></tr>
+    <tr><td class="paramname">bOpen</td><td>設定するオープン状態 </td></tr>
+    <tr><td class="paramname">pBackup</td><td><code>nullptr</code> でなければ設定前のオープン状態を取得 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>手続きが成功したら true 失敗したら false </dd></dl>
+
+</div>
+</div>
+<a id="ad97177212f739e3b638c6bf20ce18fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97177212f739e3b638c6bf20ce18fce">&#9670;&nbsp;</a></span>IsVisualStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsVisualStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>自分が現在ビジュアルスタイル表示状態かどうかを示す Win32 API の IsAppThemed() はこれとは一致しない（IsAppThemed() と IsThemeActive() との差異は不明）</p>
+<dl class="section return"><dt>戻り値</dt><dd>ビジュアルスタイル表示状態(TRUE)／クラッシック表示状態(FALSE)</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.06.17 ryoji 新規 </dd></dl>
+
+</div>
+</div>
+<a id="a02e718fb8679634c0b38cc9a4bfe7c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e718fb8679634c0b38cc9a4bfe7c58">&#9670;&nbsp;</a></span>MyInitCommonControls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyInitCommonControls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>コモンコントロールを初期化する</p>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.06.21 ryoji 新規 </dd></dl>
+
+</div>
+</div>
+<a id="ac58edc89689e3287f376b9a4fd42a761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58edc89689e3287f376b9a4fd42a761">&#9670;&nbsp;</a></span>PreventVisualStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreventVisualStyle </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定ウィンドウでビジュアルスタイルを使わないようにする</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hWnd</td><td>ウィンドウ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.06.23 ryoji 新規 </dd></dl>
+
+</div>
+</div>
+<a id="ac1a25a69957350449eafca2550cf020c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a25a69957350449eafca2550cf020c">&#9670;&nbsp;</a></span>ReadRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadRegistry </td>
+          <td>(</td>
+          <td class="paramtype">HKEY&#160;</td>
+          <td class="paramname"><em>Hive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>Path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>Item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>Buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>BufferCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レジストリから文字列を読み出す． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Hive</td><td>[in] HIVE </td></tr>
+    <tr><td class="paramname">Path</td><td>[in] レジストリキーへのパス </td></tr>
+    <tr><td class="paramname">Item</td><td>[in] レジストリアイテム名．NULLで標準のアイテム． </td></tr>
+    <tr><td class="paramname">Buffer</td><td>[out] 取得文字列を格納する場所 </td></tr>
+    <tr><td class="paramname">BufferCount</td><td>[in] Bufferの指す領域のサイズ。文字単位。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>値の取得に成功 </td></tr>
+    <tr><td class="paramname">false</td><td>値の取得に失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>鬼 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.09.10 genta CWSH.cppから移動 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CTextMetrics クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../d4/d89/class_c_text_metrics-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CTextMetrics クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aebb7df6952379c660a422e0aa216796a"><td class="memItemLeft" align="right" valign="top"><a id="aebb7df6952379c660a422e0aa216796a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyTextMetricsStatus</b> (<a class="el" href="../../de/dbb/class_c_text_metrics.html">CTextMetrics</a> *pDst) const</td></tr>
+<tr class="separator:aebb7df6952379c660a422e0aa216796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d9061f56e945207b130c4b007e5123"><td class="memItemLeft" align="right" valign="top"><a id="a06d9061f56e945207b130c4b007e5123"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (HDC hdc, HFONT hFont, int nLineSpace, int nColmSpace)</td></tr>
+<tr class="separator:a06d9061f56e945207b130c4b007e5123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845a709fa2a2db0efd49d0cb3ca35b93"><td class="memItemLeft" align="right" valign="top"><a id="a845a709fa2a2db0efd49d0cb3ca35b93"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a845a709fa2a2db0efd49d0cb3ca35b93">GetHankakuWidth</a> () const</td></tr>
+<tr class="memdesc:a845a709fa2a2db0efd49d0cb3ca35b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字の横幅を取得。単位はピクセル。 <br /></td></tr>
+<tr class="separator:a845a709fa2a2db0efd49d0cb3ca35b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5121982553ac5ca7ee6a1b194dbcb6c"><td class="memItemLeft" align="right" valign="top"><a id="ac5121982553ac5ca7ee6a1b194dbcb6c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#ac5121982553ac5ca7ee6a1b194dbcb6c">GetHankakuHeight</a> () const</td></tr>
+<tr class="memdesc:ac5121982553ac5ca7ee6a1b194dbcb6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字の縦幅を取得。単位はピクセル。 <br /></td></tr>
+<tr class="separator:ac5121982553ac5ca7ee6a1b194dbcb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c539a72d7b6098d41dd44d5bb59594"><td class="memItemLeft" align="right" valign="top"><a id="a90c539a72d7b6098d41dd44d5bb59594"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a90c539a72d7b6098d41dd44d5bb59594">GetHankakuDx</a> () const</td></tr>
+<tr class="memdesc:a90c539a72d7b6098d41dd44d5bb59594"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字の文字間隔を取得。単位はピクセル。 <br /></td></tr>
+<tr class="separator:a90c539a72d7b6098d41dd44d5bb59594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80818c25e8e2e7d8c231cf78386e9341"><td class="memItemLeft" align="right" valign="top"><a id="a80818c25e8e2e7d8c231cf78386e9341"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a80818c25e8e2e7d8c231cf78386e9341">GetZenkakuDx</a> () const</td></tr>
+<tr class="memdesc:a80818c25e8e2e7d8c231cf78386e9341"><td class="mdescLeft">&#160;</td><td class="mdescRight">全角文字の文字間隔を取得。単位はピクセル。 <br /></td></tr>
+<tr class="separator:a80818c25e8e2e7d8c231cf78386e9341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02da10ec36ee7b0d62a3731622e72a2c"><td class="memItemLeft" align="right" valign="top"><a id="a02da10ec36ee7b0d62a3731622e72a2c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a02da10ec36ee7b0d62a3731622e72a2c">GetHankakuDy</a> () const</td></tr>
+<tr class="memdesc:a02da10ec36ee7b0d62a3731622e72a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y方向文字間隔。文字縦幅＋行間隔。単位はピクセル。 <br /></td></tr>
+<tr class="separator:a02da10ec36ee7b0d62a3731622e72a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f442d6c51762001b52d2087f4c3d95"><td class="memItemLeft" align="right" valign="top"><a id="aa8f442d6c51762001b52d2087f4c3d95"></a>
+CPixelXInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetCharSpacing</b> () const</td></tr>
+<tr class="separator:aa8f442d6c51762001b52d2087f4c3d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54dd5a1d1bb63fd1c8565c916595a1f"><td class="memItemLeft" align="right" valign="top"><a id="ac54dd5a1d1bb63fd1c8565c916595a1f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCharPxWidth</b> (CLayoutXInt col) const</td></tr>
+<tr class="separator:ac54dd5a1d1bb63fd1c8565c916595a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d1312adcb597f7bbdcfa119d136960"><td class="memItemLeft" align="right" valign="top"><a id="ac1d1312adcb597f7bbdcfa119d136960"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCharPxWidth</b> () const</td></tr>
+<tr class="separator:ac1d1312adcb597f7bbdcfa119d136960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ad3d7e35dc4925f7ca02e45224d67d"><td class="memItemLeft" align="right" valign="top"><a id="af3ad3d7e35dc4925f7ca02e45224d67d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCharHeightMarginByFontNo</b> (int n) const</td></tr>
+<tr class="separator:af3ad3d7e35dc4925f7ca02e45224d67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb378478b492cb892ab5c7653a0e10bc"><td class="memItemLeft" align="right" valign="top"><a id="adb378478b492cb892ab5c7653a0e10bc"></a>
+CLayoutXInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetLayoutXDefault</b> (CKetaXInt chars) const</td></tr>
+<tr class="separator:adb378478b492cb892ab5c7653a0e10bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511ae30e4afb437f3ec57ad907f15334"><td class="memItemLeft" align="right" valign="top"><a id="a511ae30e4afb437f3ec57ad907f15334"></a>
+CLayoutXInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetLayoutXDefault</b> () const</td></tr>
+<tr class="separator:a511ae30e4afb437f3ec57ad907f15334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040c4a88912207675044c3dd66b22b26"><td class="memItemLeft" align="right" valign="top"><a id="a040c4a88912207675044c3dd66b22b26"></a>
+const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a040c4a88912207675044c3dd66b22b26">GetDxArray_AllHankaku</a> () const</td></tr>
+<tr class="memdesc:a040c4a88912207675044c3dd66b22b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字列の文字間隔配列を取得。要素数は64。 <br /></td></tr>
+<tr class="separator:a040c4a88912207675044c3dd66b22b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66919f3c7cbd1547d3a217d53cae76a"><td class="memItemLeft" align="right" valign="top"><a id="af66919f3c7cbd1547d3a217d53cae76a"></a>
+const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#af66919f3c7cbd1547d3a217d53cae76a">GetDxArray_AllZenkaku</a> () const</td></tr>
+<tr class="memdesc:af66919f3c7cbd1547d3a217d53cae76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">半角文字列の文字間隔配列を取得。要素数は64。 <br /></td></tr>
+<tr class="separator:af66919f3c7cbd1547d3a217d53cae76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61227902a48ce0accbf783d512903814"><td class="memItemLeft" align="right" valign="top">const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a61227902a48ce0accbf783d512903814">GenerateDxArray2</a> (std::vector&lt; int &gt; *vResultArray, const wchar_t *pText, int nLength) const</td></tr>
+<tr class="separator:a61227902a48ce0accbf783d512903814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cc41d9c6d899ad323078d23a86c2d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#ab8cc41d9c6d899ad323078d23a86c2d2">CalcTextWidth3</a> (const wchar_t *pText, int nLength) const</td></tr>
+<tr class="separator:ab8cc41d9c6d899ad323078d23a86c2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a36c33a4d42904b53f6264a086f48d9de"><td class="memItemLeft" align="right" valign="top">static const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#a36c33a4d42904b53f6264a086f48d9de">GenerateDxArray</a> (std::vector&lt; int &gt; *vResultArray, const wchar_t *pText, int nLength, int nHankakuDx, int nTabSpace=8, int nIndent=0, int nCharSpacing=0)</td></tr>
+<tr class="memdesc:a36c33a4d42904b53f6264a086f48d9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した文字列により文字間隔配列を生成する。  <a href="../../de/dbb/class_c_text_metrics.html#a36c33a4d42904b53f6264a086f48d9de">[詳解]</a><br /></td></tr>
+<tr class="separator:a36c33a4d42904b53f6264a086f48d9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46bcd94c50f759ac370514d32076beb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#af46bcd94c50f759ac370514d32076beb">CalcTextWidth</a> (const wchar_t *pText, int nLength, const int *pnDx)</td></tr>
+<tr class="memdesc:af46bcd94c50f759ac370514d32076beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列のピクセル幅を返す。  <a href="../../de/dbb/class_c_text_metrics.html#af46bcd94c50f759ac370514d32076beb">[詳解]</a><br /></td></tr>
+<tr class="separator:af46bcd94c50f759ac370514d32076beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb180c805bbc2c764f1fda2c51853988"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_c_text_metrics.html#acb180c805bbc2c764f1fda2c51853988">CalcTextWidth2</a> (const wchar_t *pText, int nLength, int nHankakuDx, int nCharSpacing)</td></tr>
+<tr class="memdesc:acb180c805bbc2c764f1fda2c51853988"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列のピクセル幅を返す。  <a href="../../de/dbb/class_c_text_metrics.html#acb180c805bbc2c764f1fda2c51853988">[詳解]</a><br /></td></tr>
+<tr class="separator:acb180c805bbc2c764f1fda2c51853988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af46bcd94c50f759ac370514d32076beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46bcd94c50f759ac370514d32076beb">&#9670;&nbsp;</a></span>CalcTextWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CTextMetrics::CalcTextWidth </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>pnDx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列のピクセル幅を返す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pText</td><td>文字列 </td></tr>
+    <tr><td class="paramname">nLength</td><td>文字列長 </td></tr>
+    <tr><td class="paramname">pnDx</td><td>文字間隔の入った配列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb180c805bbc2c764f1fda2c51853988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb180c805bbc2c764f1fda2c51853988">&#9670;&nbsp;</a></span>CalcTextWidth2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CTextMetrics::CalcTextWidth2 </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nHankakuDx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCharSpacing</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列のピクセル幅を返す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pText</td><td>文字列 </td></tr>
+    <tr><td class="paramname">nLength</td><td>文字列長 </td></tr>
+    <tr><td class="paramname">nHankakuDx</td><td>半角文字の文字間隔 </td></tr>
+    <tr><td class="paramname">nCharSpacing</td><td>文字の隙間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab8cc41d9c6d899ad323078d23a86c2d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cc41d9c6d899ad323078d23a86c2d2">&#9670;&nbsp;</a></span>CalcTextWidth3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CTextMetrics::CalcTextWidth3 </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pText</td><td>文字列 </td></tr>
+    <tr><td class="paramname">nLength</td><td>文字列長 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36c33a4d42904b53f6264a086f48d9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c33a4d42904b53f6264a086f48d9de">&#9670;&nbsp;</a></span>GenerateDxArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int * CTextMetrics::GenerateDxArray </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; *&#160;</td>
+          <td class="paramname"><em>vResultArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nHankakuDx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nTabSpace</em> = <code>8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIndent</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCharSpacing</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した文字列により文字間隔配列を生成する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">vResultArray</td><td>[out] 文字間隔配列の受け取りコンテナ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pText</td><td>[in] 文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLength</td><td>[in] 文字列長 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nHankakuDx</td><td>[in] 半角文字の文字間隔 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nCharSpacing</td><td>[in] 文字隙間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61227902a48ce0accbf783d512903814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61227902a48ce0accbf783d512903814">&#9670;&nbsp;</a></span>GenerateDxArray2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int* CTextMetrics::GenerateDxArray2 </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; *&#160;</td>
+          <td class="paramname"><em>vResultArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">vResultArray</td><td>[out] 文字間隔配列の受け取りコンテナ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pText</td><td>[in] 文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLength</td><td>[in] 文字列長 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/view/<a class="el" href="../../dd/d08/_c_text_metrics_8h_source.html">CTextMetrics.h</a></li>
+<li>sakura_core/view/<a class="el" href="../../dc/df3/_c_text_metrics_8cpp.html">CTextMetrics.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

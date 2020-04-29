@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/CAutoReloadAgent.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CAutoReloadAgent.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d92/_c_auto_reload_agent_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db0/_c_doc_listener_8h.html">doc/CDocListener.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// ファイルが更新された場合に再読込を行うかどうかのフラグ</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401">   30</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401">WatchUpdate</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a63878d4826b9f7bd451124c1db7789a6">   31</a></span>&#160;    <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a63878d4826b9f7bd451124c1db7789a6">WU_QUERY</a>,   </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a86fa3008f908aeb4ef5f19eba7bb2a35">   32</a></span>&#160;    <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a86fa3008f908aeb4ef5f19eba7bb2a35">WU_NOTIFY</a>,  </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401ad3a5bd927051af63eec86955bafa7c52">   33</a></span>&#160;    <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401ad3a5bd927051af63eec86955bafa7c52">WU_NONE</a>,    </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401aae15cc4021705ae53fccbac101d56bbf">   34</a></span>&#160;    <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401aae15cc4021705ae53fccbac101d56bbf">WU_AUTOLOAD</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/d87/class_c_auto_reload_agent.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/d87/class_c_auto_reload_agent.html">CAutoReloadAgent</a> : <span class="keyword">public</span> <a class="code" href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html">CAutoReloadAgent</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html#aa0905004442dd66d847ab2ddb287619f">OnBeforeSave</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>&amp; sSaveInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html#a585cc24f45681e746db04b7738748765">OnAfterSave</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>&amp; sSaveInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html#a58049016f7093f4b63fb775a24ad4e15">OnAfterLoad</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>&amp; sLoadInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//監視の一時停止</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> PauseWatching(){ m_nPauseCount++; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> ResumeWatching()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        m_nPauseCount--;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        assert(m_nPauseCount&gt;=0);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> IsPausing()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_nPauseCount&gt;=1; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:<span class="comment">//#####仮</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> _ToDoChecking() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> _IsFileUpdatedByOther(FILETIME* pNewFileTime) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> CheckFileTimeStamp();  <span class="comment">// ファイルのタイムスタンプのチェック処理</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d8/d87/class_c_auto_reload_agent.html#a4826ab3b8116fa755a88d1f6806c06f2">   59</a></span>&#160;    <a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401">WatchUpdate</a>     <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html#a4826ab3b8116fa755a88d1f6806c06f2">m_eWatchUpdate</a>; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> m_nPauseCount;  <span class="comment">//これが1以上の場合は監視をしない</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> m_nDelayCount;  <span class="comment">//未編集で再ロード時の遅延カウンタ</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_auto_reload_agent_8h_html_a6ee2351f4a61538576e3f576f0ecb401"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401">WatchUpdate</a></div><div class="ttdeci">WatchUpdate</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:30</div></div>
+<div class="ttc" id="a_c_auto_reload_agent_8h_html_a6ee2351f4a61538576e3f576f0ecb401ad3a5bd927051af63eec86955bafa7c52"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401ad3a5bd927051af63eec86955bafa7c52">WU_NONE</a></div><div class="ttdeci">@ WU_NONE</div><div class="ttdoc">更新監視を行わない</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:33</div></div>
+<div class="ttc" id="a_c_auto_reload_agent_8h_html_a6ee2351f4a61538576e3f576f0ecb401a86fa3008f908aeb4ef5f19eba7bb2a35"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a86fa3008f908aeb4ef5f19eba7bb2a35">WU_NOTIFY</a></div><div class="ttdeci">@ WU_NOTIFY</div><div class="ttdoc">更新されたことをステータスバーで通知</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:32</div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html_a4826ab3b8116fa755a88d1f6806c06f2"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html#a4826ab3b8116fa755a88d1f6806c06f2">CAutoReloadAgent::m_eWatchUpdate</a></div><div class="ttdeci">WatchUpdate m_eWatchUpdate</div><div class="ttdoc">更新監視方法</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:59</div></div>
+<div class="ttc" id="aclass_c_doc_listener_ex_html"><div class="ttname"><a href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:203</div></div>
+<div class="ttc" id="astruct_s_load_info_html"><div class="ttname"><a href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:71</div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html_a585cc24f45681e746db04b7738748765"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html#a585cc24f45681e746db04b7738748765">CAutoReloadAgent::OnAfterSave</a></div><div class="ttdeci">void OnAfterSave(const SSaveInfo &amp;sSaveInfo) override</div><div class="ttdoc">セーブ事後処理</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.cpp:53</div></div>
+<div class="ttc" id="a_c_auto_reload_agent_8h_html_a6ee2351f4a61538576e3f576f0ecb401aae15cc4021705ae53fccbac101d56bbf"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401aae15cc4021705ae53fccbac101d56bbf">WU_AUTOLOAD</a></div><div class="ttdeci">@ WU_AUTOLOAD</div><div class="ttdoc">更新され未編集の場合に再ロード</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:34</div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html">CAutoReloadAgent</a></div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:37</div></div>
+<div class="ttc" id="astruct_s_save_info_html"><div class="ttname"><a href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:110</div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html_a58049016f7093f4b63fb775a24ad4e15"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html#a58049016f7093f4b63fb775a24ad4e15">CAutoReloadAgent::OnAfterLoad</a></div><div class="ttdeci">void OnAfterLoad(const SLoadInfo &amp;sLoadInfo) override</div><div class="ttdoc">ロード事後処理</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.cpp:69</div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html_aa0905004442dd66d847ab2ddb287619f"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html#aa0905004442dd66d847ab2ddb287619f">CAutoReloadAgent::OnBeforeSave</a></div><div class="ttdeci">void OnBeforeSave(const SSaveInfo &amp;sSaveInfo) override</div><div class="ttdoc">セーブ事前処理</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.cpp:46</div></div>
+<div class="ttc" id="a_c_auto_reload_agent_8h_html_a6ee2351f4a61538576e3f576f0ecb401a63878d4826b9f7bd451124c1db7789a6"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html#a6ee2351f4a61538576e3f576f0ecb401a63878d4826b9f7bd451124c1db7789a6">WU_QUERY</a></div><div class="ttdeci">@ WU_QUERY</div><div class="ttdoc">再読込を行うかどうかダイアログボックスで問い合わせる</div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:31</div></div>
+<div class="ttc" id="a_c_doc_listener_8h_html"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html">CDocListener.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

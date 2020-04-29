@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/parse/CWordParse.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_bbfabac4872e24227309ae4edd51df62.html">parse</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CWordParse.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d8f/_c_word_parse_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//2007.09.30 kobake CDocLineMgr から分離</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">   32</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec">   33</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec">CK_NULL</a>,            </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365">   34</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365">CK_TAB</a>,             </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb">   35</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb">CK_CR</a>,              </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1">   36</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1">CK_LF</a>,              </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15">   37</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15">CK_CTRL</a>,            </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273">   39</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273">CK_SPACE</a>,           </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca">   40</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca">CK_CSYM</a>,            </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009">   41</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009">CK_KATA</a>,            </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de">   42</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de">CK_LATIN</a>,           </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691">   43</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691">CK_UDEF</a>,            </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14">   44</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14">CK_ETC</a>,             </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407">   46</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407">CK_ZEN_SPACE</a>,       </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc">   47</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc">CK_ZEN_NOBASU</a>,      </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c">   48</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c">CK_ZEN_DAKU</a>,        </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043">   49</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043">CK_ZEN_CSYM</a>,        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7">   51</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7">CK_ZEN_KIGO</a>,        </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227">   52</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227">CK_HIRA</a>,            </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42">   53</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42">CK_ZEN_KATA</a>,        </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f">   54</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f">CK_GREEK</a>,           </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39">   55</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39">CK_ZEN_ROS</a>,         </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d">   56</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d">CK_ZEN_SKIGO</a>,       </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7">   57</a></span>&#160;    <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7">CK_ZEN_ETC</a>,         </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d3/d08/class_c_word_parse.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/d08/class_c_word_parse.html">CWordParse</a>{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//2001.06.23 N.Nakatani</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//2007.09.30 kobake     CDocLineMgrから移動</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d08/class_c_word_parse.html#a71a28ffeb40c534297fa69805abc2a92">WhereCurrentWord_2</a>(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pLine,          <span class="comment">//[in]  調べるメモリ全体の先頭アドレス</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        CLogicInt       nLineLen,       <span class="comment">//[in]  調べるメモリ全体の有効長</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        CLogicInt       nIdx,           <span class="comment">//[out] 調査開始地点:pLineからの相対的な位置</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        CLogicInt*      pnIdxFrom,      <span class="comment">//[out] 単語が見つかった場合は、単語の先頭インデックスを返す。</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        CLogicInt*      pnIdxTo,        <span class="comment">//[out] 単語が見つかった場合は、単語の終端の次のバイトの先頭インデックスを返す。</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>*       pcmcmWord,      <span class="comment">//[out] 単語が見つかった場合は、現在単語を切り出して指定されたCMemoryオブジェクトに格納する。情報が不要な場合はNULLを指定する。</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>*       pcmcmWordLeft   <span class="comment">//[out] 単語が見つかった場合は、現在単語の左に位置する単語を切り出して指定されたCMemoryオブジェクトに格納する。情報が不要な場合はNULLを指定する。</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> <a class="code" href="../../d3/d08/class_c_word_parse.html#aae8047249eb8077839c31214182ebecf">WhatKindOfChar</a>(</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pData,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">int</span>             pDataLen,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">int</span>             nIdx</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> <a class="code" href="../../d3/d08/class_c_word_parse.html#acf8fcfb0dbe1e5f288e5d47e2690502d">WhatKindOfTwoChars</a>(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>       kindPre,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>       kindCur</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> <a class="code" href="../../d3/d08/class_c_word_parse.html#ada637cc515363b57b1093838b145b333">WhatKindOfTwoChars4KW</a>(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>       kindPre,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>       kindCur</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//  pLine（長さ：nLineLen）の文字列から次の単語を探す。探し始める位置はnIdxで指定。</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d08/class_c_word_parse.html#adbf7585638708c44606c07716afa3316">SearchNextWordPosition</a>(</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pLine,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        CLogicInt       nLineLen,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        CLogicInt       nIdx,       <span class="comment">//  桁数</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        CLogicInt*      pnColumnNew,    <span class="comment">//  見つかった位置</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        BOOL            bStopsBothEnds  <span class="comment">//  単語の両端で止まる</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//  pLine（長さ：nLineLen）の文字列から次の単語を探す。探し始める位置はnIdxで指定。 for 強調キーワード</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d08/class_c_word_parse.html#a7fcc24338bd28335febbc49c7fc97785">SearchNextWordPosition4KW</a>(</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pLine,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        CLogicInt       nLineLen,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        CLogicInt       nIdx,       <span class="comment">//  桁数</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        CLogicInt*      pnColumnNew,    <span class="comment">//  見つかった位置</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        BOOL            bStopsBothEnds  <span class="comment">//  単語の両端で止まる</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">class</span> CHAR_TYPE &gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d08/class_c_word_parse.html#a98d3ce83a9c4df0c8b7338e6f8e7fa35">GetWord</a>( <span class="keyword">const</span> CHAR_TYPE* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen, <span class="keyword">const</span> CHAR_TYPE *pszSplitCharList,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        CHAR_TYPE **ppWordStart, <span class="keywordtype">int</span> *pnWordLen );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> _match_charlist( <span class="keyword">const</span> ACHAR c, <span class="keyword">const</span> ACHAR *pszList );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> _match_charlist( <span class="keyword">const</span> WCHAR c, <span class="keyword">const</span> WCHAR *pszList );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;};</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;BOOL <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszLine, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> nLineLen, <span class="keywordtype">int</span>* pnMatchLen);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">inline</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#a52ca1cb60952056af643b1946943d839">  140</a></span>&#160;BOOL <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszLine, <span class="keywordtype">int</span> nLineLen, <span class="keywordtype">int</span>* pnMatchLen)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a>(pszLine, 0, nLineLen, pnMatchLen);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;BOOL <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszBuf, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> nBufLen, <span class="keywordtype">int</span>* pnAddressLength);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">inline</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../dc/d8f/_c_word_parse_8h.html#aeaeb6e9c0416183bb33078926ab25fdc">  160</a></span>&#160;BOOL <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszBuf, <span class="keywordtype">int</span> nBufLen, <span class="keywordtype">int</span>* pnAddressLength)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dc/d8f/_c_word_parse_8h.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a>(pszBuf, 0, nBufLen, pnAddressLength);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">// ACHAR 版</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> CWordParse::_match_charlist( <span class="keyword">const</span> ACHAR c, <span class="keyword">const</span> ACHAR *pszList )</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; pszList[i] != <span class="charliteral">&#39;\0&#39;</span>; i++ ){</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">if</span>( pszList[i] == c ){ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">// WCHAR 版</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> CWordParse::_match_charlist( <span class="keyword">const</span> WCHAR c, <span class="keyword">const</span> WCHAR *pszList )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; pszList[i] != L<span class="charliteral">&#39;\0&#39;</span>; i++ ){</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>( pszList[i] == c ){ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> CHAR_TYPE &gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="../../d3/d08/class_c_word_parse.html#a98d3ce83a9c4df0c8b7338e6f8e7fa35">  192</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d3/d08/class_c_word_parse.html#a98d3ce83a9c4df0c8b7338e6f8e7fa35">CWordParse::GetWord</a>( <span class="keyword">const</span> CHAR_TYPE *pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen, <span class="keyword">const</span> CHAR_TYPE *pszSplitCharList,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    CHAR_TYPE **ppWordStart, <span class="keywordtype">int</span> *pnWordLen )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> CHAR_TYPE *pr = pS;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    CHAR_TYPE *pwordstart;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">int</span> nwordlen;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span>( nLen &lt; 1 ){</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        pwordstart = <span class="keyword">const_cast&lt;</span>CHAR_TYPE *<span class="keyword">&gt;</span>(pS);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        nwordlen = 0;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">goto</span> end_func;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">// 区切り文字をスキップ</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">for</span>( ; pr &lt; pS + nLen; pr++ ){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// 区切り文字でない文字の間ループ</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span>( !_match_charlist(*pr, pszSplitCharList) ){</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    pwordstart = <span class="keyword">const_cast&lt;</span>CHAR_TYPE*<span class="keyword">&gt;</span>(pr);   <span class="comment">// 単語の先頭位置を記録</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// 単語をスキップ</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">for</span>( ; pr &lt; pS + nLen; pr++ ){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// 区切り文字がくるまでループ</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">if</span>( _match_charlist(*pr, pszSplitCharList) ){</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    nwordlen = pr - pwordstart;  <span class="comment">// 単語の長さを記録</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;end_func:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">if</span>( ppWordStart ){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        *ppWordStart = pwordstart;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span>( pnWordLen ){</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        *pnWordLen = nwordlen;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> pr - pS;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d">CK_ZEN_SKIGO</a></div><div class="ttdeci">@ CK_ZEN_SKIGO</div><div class="ttdoc">全角の特殊記号</div><div class="ttdef"><b>Definition:</b> CWordParse.h:56</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f">CK_GREEK</a></div><div class="ttdeci">@ CK_GREEK</div><div class="ttdoc">ギリシャ文字</div><div class="ttdef"><b>Definition:</b> CWordParse.h:54</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_add6d06071c2e961a76f0d1165ac0601d"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a></div><div class="ttdeci">BOOL IsMailAddress(const wchar_t *pszBuf, int offset, int nBufLen, int *pnAddressLength)</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:432</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_adbf7585638708c44606c07716afa3316"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#adbf7585638708c44606c07716afa3316">CWordParse::SearchNextWordPosition</a></div><div class="ttdeci">static bool SearchNextWordPosition(const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bStopsBothEnds)</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:224</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c">CK_ZEN_DAKU</a></div><div class="ttdeci">@ CK_ZEN_DAKU</div><div class="ttdoc">全角濁点 0x309B&lt;=c&lt;=0x309C 「゛゜」</div><div class="ttdef"><b>Definition:</b> CWordParse.h:48</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a1e7012d2a48862bffc0eafd7b68b2d27"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a></div><div class="ttdeci">BOOL IsURL(const wchar_t *pszLine, int offset, int nLineLen, int *pnMatchLen)</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:344</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14">CK_ETC</a></div><div class="ttdeci">@ CK_ETC</div><div class="ttdoc">半角のその他</div><div class="ttdef"><b>Definition:</b> CWordParse.h:44</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7">CK_ZEN_KIGO</a></div><div class="ttdeci">@ CK_ZEN_KIGO</div><div class="ttdoc">全角の記号</div><div class="ttdef"><b>Definition:</b> CWordParse.h:51</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1">CK_LF</a></div><div class="ttdeci">@ CK_LF</div><div class="ttdoc">LF = 0x0a</div><div class="ttdef"><b>Definition:</b> CWordParse.h:36</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_aae8047249eb8077839c31214182ebecf"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#aae8047249eb8077839c31214182ebecf">CWordParse::WhatKindOfChar</a></div><div class="ttdeci">static ECharKind WhatKindOfChar(const wchar_t *pData, int pDataLen, int nIdx)</div><div class="ttdoc">現在位置の文字の種類を調べる</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:109</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39">CK_ZEN_ROS</a></div><div class="ttdeci">@ CK_ZEN_ROS</div><div class="ttdoc">ロシア文字:</div><div class="ttdef"><b>Definition:</b> CWordParse.h:55</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15">CK_CTRL</a></div><div class="ttdeci">@ CK_CTRL</div><div class="ttdoc">上記以外の c&lt;0x20</div><div class="ttdef"><b>Definition:</b> CWordParse.h:37</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009">CK_KATA</a></div><div class="ttdeci">@ CK_KATA</div><div class="ttdoc">半角のカタカナ 0xA1&lt;=c&lt;=0xFD</div><div class="ttdef"><b>Definition:</b> CWordParse.h:41</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691">CK_UDEF</a></div><div class="ttdeci">@ CK_UDEF</div><div class="ttdoc">ユーザ定義キーワード文字（#$\）</div><div class="ttdef"><b>Definition:</b> CWordParse.h:43</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec">CK_NULL</a></div><div class="ttdeci">@ CK_NULL</div><div class="ttdoc">NULL</div><div class="ttdef"><b>Definition:</b> CWordParse.h:33</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407">CK_ZEN_SPACE</a></div><div class="ttdeci">@ CK_ZEN_SPACE</div><div class="ttdoc">全角スペース</div><div class="ttdef"><b>Definition:</b> CWordParse.h:46</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca">CK_CSYM</a></div><div class="ttdeci">@ CK_CSYM</div><div class="ttdoc">識別子に使用可能な文字 (英数字、アンダースコア)</div><div class="ttdef"><b>Definition:</b> CWordParse.h:40</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc">CK_ZEN_NOBASU</a></div><div class="ttdeci">@ CK_ZEN_NOBASU</div><div class="ttdoc">伸ばす記号 0x815B&lt;=c&lt;=0x815B 'ー'</div><div class="ttdef"><b>Definition:</b> CWordParse.h:47</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb">CK_CR</a></div><div class="ttdeci">@ CK_CR</div><div class="ttdoc">CR = 0x0d</div><div class="ttdef"><b>Definition:</b> CWordParse.h:35</div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227">CK_HIRA</a></div><div class="ttdeci">@ CK_HIRA</div><div class="ttdoc">ひらがな</div><div class="ttdef"><b>Definition:</b> CWordParse.h:52</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_a7fcc24338bd28335febbc49c7fc97785"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#a7fcc24338bd28335febbc49c7fc97785">CWordParse::SearchNextWordPosition4KW</a></div><div class="ttdeci">static bool SearchNextWordPosition4KW(const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bStopsBothEnds)</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:270</div></div>
+<div class="ttc" id="aclass_c_word_parse_html"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html">CWordParse</a></div><div class="ttdef"><b>Definition:</b> CWordParse.h:60</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_a71a28ffeb40c534297fa69805abc2a92"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#a71a28ffeb40c534297fa69805abc2a92">CWordParse::WhereCurrentWord_2</a></div><div class="ttdeci">static bool WhereCurrentWord_2(const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnIdxFrom, CLogicInt *pnIdxTo, CNativeW *pcmcmWord, CNativeW *pcmcmWordLeft)</div><div class="ttdoc">現在位置の単語の範囲を調べる staticメンバ</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:13</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de">CK_LATIN</a></div><div class="ttdeci">@ CK_LATIN</div><div class="ttdoc">ラテン１補助、ラテン拡張のうちアルファベット風のもの 0x00C0&lt;=c&lt;0x0180</div><div class="ttdef"><b>Definition:</b> CWordParse.h:42</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_ada637cc515363b57b1093838b145b333"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#ada637cc515363b57b1093838b145b333">CWordParse::WhatKindOfTwoChars4KW</a></div><div class="ttdeci">static ECharKind WhatKindOfTwoChars4KW(ECharKind kindPre, ECharKind kindCur)</div><div class="ttdoc">二つの文字を結合したものの種類を調べる for 強調キーワード</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:195</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365">CK_TAB</a></div><div class="ttdeci">@ CK_TAB</div><div class="ttdoc">タブ 0x9&lt;=c&lt;=0x9</div><div class="ttdef"><b>Definition:</b> CWordParse.h:34</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043">CK_ZEN_CSYM</a></div><div class="ttdeci">@ CK_ZEN_CSYM</div><div class="ttdoc">全角版、識別子に使用可能な文字 (英数字、アンダースコア)</div><div class="ttdef"><b>Definition:</b> CWordParse.h:49</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a></div><div class="ttdeci">ECharKind</div><div class="ttdoc">文字種類識別子</div><div class="ttdef"><b>Definition:</b> CWordParse.h:32</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_a98d3ce83a9c4df0c8b7338e6f8e7fa35"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#a98d3ce83a9c4df0c8b7338e6f8e7fa35">CWordParse::GetWord</a></div><div class="ttdeci">static int GetWord(const CHAR_TYPE *pS, const int nLen, const CHAR_TYPE *pszSplitCharList, CHAR_TYPE **ppWordStart, int *pnWordLen)</div><div class="ttdef"><b>Definition:</b> CWordParse.h:192</div></div>
+<div class="ttc" id="aclass_c_word_parse_html_acf8fcfb0dbe1e5f288e5d47e2690502d"><div class="ttname"><a href="../../d3/d08/class_c_word_parse.html#acf8fcfb0dbe1e5f288e5d47e2690502d">CWordParse::WhatKindOfTwoChars</a></div><div class="ttdeci">static ECharKind WhatKindOfTwoChars(ECharKind kindPre, ECharKind kindCur)</div><div class="ttdoc">二つの文字を結合したものの種類を調べる</div><div class="ttdef"><b>Definition:</b> CWordParse.cpp:169</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7">CK_ZEN_ETC</a></div><div class="ttdeci">@ CK_ZEN_ETC</div><div class="ttdoc">全角のその他（漢字など）</div><div class="ttdef"><b>Definition:</b> CWordParse.h:57</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273">CK_SPACE</a></div><div class="ttdeci">@ CK_SPACE</div><div class="ttdoc">半角のスペース 0x20&lt;=c&lt;=0x20</div><div class="ttdef"><b>Definition:</b> CWordParse.h:39</div></div>
+<div class="ttc" id="a_c_word_parse_8h_html_a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42"><div class="ttname"><a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42">CK_ZEN_KATA</a></div><div class="ttdeci">@ CK_ZEN_KATA</div><div class="ttdoc">全角カタカナ</div><div class="ttdef"><b>Definition:</b> CWordParse.h:53</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

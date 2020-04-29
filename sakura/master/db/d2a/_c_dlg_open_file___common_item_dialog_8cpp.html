@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgOpenFile_CommonItemDialog.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgOpenFile_CommonItemDialog.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイルオープンダイアログボックス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;wrl.h&gt;</code><br />
+<code>#include &lt;shlwapi.h&gt;</code><br />
+<code>#include &lt;shobjidl.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/df3/_c_code_page_8h_source.html">charset/CCodePage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">dlg/CDlgOpenFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d35/_c_doc_type_manager_8h_source.html">env/CDocTypeManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">doc/CDocListener.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d31/_c_file_ext_8h_source.html">CFileExt.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9d/struct_c_dlg_open_file___common_item_dialog.html">CDlgOpenFile_CommonItemDialog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d81/struct_c_dlg_open_file___common_item_dialog_1_1_customize_setting.html">CDlgOpenFile_CommonItemDialog::CustomizeSetting</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a4a48c82f78a67ce931f76969e382f446"><td class="memItemLeft" align="right" valign="top"><a id="a4a48c82f78a67ce931f76969e382f446"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETURN_IF_FAILED</b>&#160;&#160;&#160;if (FAILED(hr)) { /* __debugbreak(); */ return hr; }</td></tr>
+<tr class="separator:a4a48c82f78a67ce931f76969e382f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a48c82f78a67ce931f76969e382f446"><td class="memItemLeft" align="right" valign="top"><a id="a4a48c82f78a67ce931f76969e382f446"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETURN_IF_FAILED</b>&#160;&#160;&#160;if (FAILED(hr)) { /* __debugbreak(); */ return hr; }</td></tr>
+<tr class="separator:a4a48c82f78a67ce931f76969e382f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a48c82f78a67ce931f76969e382f446"><td class="memItemLeft" align="right" valign="top"><a id="a4a48c82f78a67ce931f76969e382f446"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETURN_IF_FAILED</b>&#160;&#160;&#160;if (FAILED(hr)) { /* __debugbreak(); */ return false; }</td></tr>
+<tr class="separator:a4a48c82f78a67ce931f76969e382f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a48c82f78a67ce931f76969e382f446"><td class="memItemLeft" align="right" valign="top"><a id="a4a48c82f78a67ce931f76969e382f446"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETURN_IF_FAILED</b>&#160;&#160;&#160;if (FAILED(hr)) { /* __debugbreak(); */ return hr; }</td></tr>
+<tr class="separator:a4a48c82f78a67ce931f76969e382f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a48c82f78a67ce931f76969e382f446"><td class="memItemLeft" align="right" valign="top"><a id="a4a48c82f78a67ce931f76969e382f446"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETURN_IF_FAILED</b>&#160;&#160;&#160;if (FAILED(hr)) { /* __debugbreak(); */ return false; }</td></tr>
+<tr class="separator:a4a48c82f78a67ce931f76969e382f446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a25f1504e966d11d165135fcc9375261f"><td class="memItemLeft" align="right" valign="top"><a id="a25f1504e966d11d165135fcc9375261f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CtrlId</b> { <br />
+&#160;&#160;<b>CHECK_READONLY</b> = 2000, 
+<b>LABEL_CODE</b>, 
+<b>COMBO_CODE</b>, 
+<b>CHECK_BOM</b>, 
+<br />
+&#160;&#160;<b>CHECK_CP</b>, 
+<b>LABEL_EOL</b>, 
+<b>COMBO_EOL</b>, 
+<b>LABEL_MRU</b>, 
+<br />
+&#160;&#160;<b>COMBO_MRU</b>, 
+<b>LABEL_OPENFOLDER</b>, 
+<b>COMBO_OPENFOLDER</b>
+<br />
+ }</td></tr>
+<tr class="separator:a25f1504e966d11d165135fcc9375261f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a17049e17dc2e429e3811280c609c5891"><td class="memItemLeft" align="right" valign="top"><a id="a17049e17dc2e429e3811280c609c5891"></a>
+std::shared_ptr&lt; <a class="el" href="../../dd/d5a/class_i_dlg_open_file.html">IDlgOpenFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>New_CDlgOpenFile_CommonItemDialog</b> ()</td></tr>
+<tr class="separator:a17049e17dc2e429e3811280c609c5891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイルオープンダイアログボックス </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/08/10 作成 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

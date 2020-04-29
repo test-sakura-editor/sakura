@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CBregexpDll2 クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="../../dd/d07/class_c_bregexp_dll2-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CBregexpDll2 クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>BREGONIG.DLLをラップしたもの。  
+ <a href="../../d4/dc5/class_c_bregexp_dll2.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d0/d90/_c_bregexp_dll2_8h_source.html">CBregexpDll2.h</a>&gt;</code></p>
+<div class="dynheader">
+CBregexpDll2 の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/dc5/class_c_bregexp_dll2.png" usemap="#CBregexpDll2_map" alt=""/>
+  <map id="CBregexpDll2_map" name="CBregexpDll2_map">
+<area href="../../da/dc8/class_c_dll_imp.html" title="DLLの動的なLoad/Unloadを行うためのクラス" alt="CDllImp" shape="rect" coords="0,0,106,24"/>
+<area href="../../d7/da1/class_c_bregexp.html" title="Perl互換正規表現 BREGEXP.DLL をサポートするクラス" alt="CBregexp" shape="rect" coords="0,112,106,136"/>
+<area href="../../dc/dd3/class_c_regex_keyword.html" title="正規表現キーワードクラス" alt="CRegexKeyword" shape="rect" coords="0,168,106,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac282b7bcbe752f02f5961d277433f1be"><td class="memItemLeft" align="right" valign="top"><a id="ac282b7bcbe752f02f5961d277433f1be"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BMatch</b> (const wchar_t *str, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:ac282b7bcbe752f02f5961d277433f1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58c3cdddf8e61eac633f4940d95c0ac"><td class="memItemLeft" align="right" valign="top"><a id="ad58c3cdddf8e61eac633f4940d95c0ac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BSubst</b> (const wchar_t *str, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:ad58c3cdddf8e61eac633f4940d95c0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8398c6e137b0676278306fa67f442ad7"><td class="memItemLeft" align="right" valign="top"><a id="a8398c6e137b0676278306fa67f442ad7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BTrans</b> (const wchar_t *str, wchar_t *target, wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:a8398c6e137b0676278306fa67f442ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de943f37f7318adcae4e23a13b16fa3"><td class="memItemLeft" align="right" valign="top"><a id="a4de943f37f7318adcae4e23a13b16fa3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BSplit</b> (const wchar_t *str, wchar_t *target, wchar_t *targetendp, int limit, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:a4de943f37f7318adcae4e23a13b16fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6157b93d3e306a254093395d5d9ad5bb"><td class="memItemLeft" align="right" valign="top"><a id="a6157b93d3e306a254093395d5d9ad5bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BRegfree</b> (<a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> *rx)</td></tr>
+<tr class="separator:a6157b93d3e306a254093395d5d9ad5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6b3becb25f6f95294ce8d08b5fbb30"><td class="memItemLeft" align="right" valign="top"><a id="a1e6b3becb25f6f95294ce8d08b5fbb30"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>BRegexpVersion</b> (void)</td></tr>
+<tr class="separator:a1e6b3becb25f6f95294ce8d08b5fbb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae278e364bae5a650c3d1277b3915d541"><td class="memItemLeft" align="right" valign="top"><a id="ae278e364bae5a650c3d1277b3915d541"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BMatchEx</b> (const wchar_t *str, const wchar_t *targetbeg, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:ae278e364bae5a650c3d1277b3915d541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac080c5e763282f9c0a18fe7a048ba570"><td class="memItemLeft" align="right" valign="top"><a id="ac080c5e763282f9c0a18fe7a048ba570"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>BSubstEx</b> (const wchar_t *str, const wchar_t *targetbeg, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:ac080c5e763282f9c0a18fe7a048ba570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944351dd9343a7e646d48ae9ea7acfd5"><td class="memItemLeft" align="right" valign="top"><a id="a944351dd9343a7e646d48ae9ea7acfd5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExistBMatchEx</b> () const</td></tr>
+<tr class="separator:a944351dd9343a7e646d48ae9ea7acfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593eb7e0c5f89916828e8c1106372424"><td class="memItemLeft" align="right" valign="top"><a id="a593eb7e0c5f89916828e8c1106372424"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExistBSubstEx</b> () const</td></tr>
+<tr class="separator:a593eb7e0c5f89916828e8c1106372424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memItemLeft" align="right" valign="top"><a id="a89601f2b3b9578c93a7d4b8d3368a1e8"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a> () const</td></tr>
+<tr class="memdesc:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの関数を呼び出せるか状態どうか <br /></td></tr>
+<tr class="separator:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbb9983cd44701e32e45f12449fae2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">InitDll</a> (LPCWSTR pszSpecifiedDllName=NULL)</td></tr>
+<tr class="memdesc:a9dbb9983cd44701e32e45f12449fae2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLロードと初期処理  <a href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dbb9983cd44701e32e45f12449fae2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89342932a0061f0460eb665addfc3379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">DeinitDll</a> (bool force=false)</td></tr>
+<tr class="memdesc:a89342932a0061f0460eb665addfc3379"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理とDLLアンロード  <a href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">[詳解]</a><br /></td></tr>
+<tr class="separator:a89342932a0061f0460eb665addfc3379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memItemLeft" align="right" valign="top"><a id="ab7c2f0c5505877f58d19dce62ae69ab1"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">GetInstance</a> () const</td></tr>
+<tr class="memdesc:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスハンドルの取得 <br /></td></tr>
+<tr class="separator:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15922171bb90c760b36830f6277a9cd5"><td class="memItemLeft" align="right" valign="top"><a id="a15922171bb90c760b36830f6277a9cd5"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">GetLoadedDllName</a> () const</td></tr>
+<tr class="memdesc:a15922171bb90c760b36830f6277a9cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード済みDLLファイル名の取得。ロードされていない (またはロードに失敗した) 場合は NULL を返す。 <br /></td></tr>
+<tr class="separator:a15922171bb90c760b36830f6277a9cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a605c1a464433d859e26d5f3e2eb00ce0"><td class="memItemLeft" align="right" valign="top"><a id="a605c1a464433d859e26d5f3e2eb00ce0"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BMatchW2</b>) (const wchar_t *str, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:a605c1a464433d859e26d5f3e2eb00ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ccc3075773de7a5f7cd75fd649ccdf"><td class="memItemLeft" align="right" valign="top"><a id="ac8ccc3075773de7a5f7cd75fd649ccdf"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BSubstW2</b>) (const wchar_t *str, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:ac8ccc3075773de7a5f7cd75fd649ccdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1798f8e9936bf116d179769f0f9fa78e"><td class="memItemLeft" align="right" valign="top"><a id="a1798f8e9936bf116d179769f0f9fa78e"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BTransW2</b>) (const wchar_t *str, wchar_t *target, wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:a1798f8e9936bf116d179769f0f9fa78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c6425a3001584cffdd72f3baf20cb9"><td class="memItemLeft" align="right" valign="top"><a id="a98c6425a3001584cffdd72f3baf20cb9"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BSplitW2</b>) (const wchar_t *str, wchar_t *target, wchar_t *targetendp, int limit, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:a98c6425a3001584cffdd72f3baf20cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1388d8c4d77935ec0b64c6231e156e95"><td class="memItemLeft" align="right" valign="top"><a id="a1388d8c4d77935ec0b64c6231e156e95"></a>
+typedef void(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BRegfreeW2</b>) (<a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> *rx)</td></tr>
+<tr class="separator:a1388d8c4d77935ec0b64c6231e156e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdeeb71273025866100b458bd46e8682"><td class="memItemLeft" align="right" valign="top"><a id="afdeeb71273025866100b458bd46e8682"></a>
+typedef const wchar_t *(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BRegexpVersionW2</b>) (void)</td></tr>
+<tr class="separator:afdeeb71273025866100b458bd46e8682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addec719fc23cd75665be25e6accda17a"><td class="memItemLeft" align="right" valign="top"><a id="addec719fc23cd75665be25e6accda17a"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BMatchExW2</b>) (const wchar_t *str, const wchar_t *targetbeg, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:addec719fc23cd75665be25e6accda17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc973bc7c2d61206f8f42809642fcd56"><td class="memItemLeft" align="right" valign="top"><a id="afc973bc7c2d61206f8f42809642fcd56"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>BREGEXP_BSubstExW2</b>) (const wchar_t *str, const wchar_t *targetbeg, const wchar_t *target, const wchar_t *targetendp, <a class="el" href="../../db/d44/structbregexp.html">BREGEXP_W</a> **rxp, wchar_t *msg)</td></tr>
+<tr class="separator:afc973bc7c2d61206f8f42809642fcd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a337343b92cb7757d4ce02bfb7dd3cb8f"><td class="memItemLeft" align="right" valign="top">virtual LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc5/class_c_bregexp_dll2.html#a337343b92cb7757d4ce02bfb7dd3cb8f">GetDllNameImp</a> (int nIndex)</td></tr>
+<tr class="separator:a337343b92cb7757d4ce02bfb7dd3cb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0738ecc64963335e9f94ef0596a61929"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc5/class_c_bregexp_dll2.html#a0738ecc64963335e9f94ef0596a61929">InitDllImp</a> ()</td></tr>
+<tr class="separator:a0738ecc64963335e9f94ef0596a61929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a992c613d9648deffdc65c5f79409c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">DeinitDllImp</a> ()</td></tr>
+<tr class="memdesc:ab1a992c613d9648deffdc65c5f79409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数の初期化  <a href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1a992c613d9648deffdc65c5f79409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacac64e6dda58142e17ddc09d91e213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">RegisterEntries</a> (const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a> table[])</td></tr>
+<tr class="separator:aaacac64e6dda58142e17ddc09d91e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>BREGONIG.DLLをラップしたもの。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a89342932a0061f0460eb665addfc3379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89342932a0061f0460eb665addfc3379">&#9670;&nbsp;</a></span>DeinitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理とDLLアンロード </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>[in] 終了処理に失敗してもDLLを解放するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1a992c613d9648deffdc65c5f79409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a992c613d9648deffdc65c5f79409c">&#9670;&nbsp;</a></span>DeinitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関数の初期化 </p>
+<p>DLLのアンロードを行う直前に呼び出される．メモリの解放などを 行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返したときはDLLのUnloadは行われない． </dd></dl>
+<dl class="section user"><dt>注意</dt><dd>デストラクタからDeinitDll及びDeinitDllImpが呼び出されたときは ポリモーフィズムが行われないためにサブクラスのDeinitDllImpが呼び出されない。 そのため、サブクラスのデストラクタではDeinitDllImpを明示的に呼び出す必要がある。</dd></dl>
+<p>DeinitDllがデストラクタ以外から呼び出される場合はDeinitDllImpは仮想関数として サブクラスのものが呼び出され、デストラクタは当然呼び出されないので DeinitDllImpそのものは必要である。</p>
+<p>デストラクタからDeinitDllImpを呼ぶときは、初期化されているという保証がないので 呼び出し前にIsAvailableによる確認を必ず行うこと。</p>
+<dl class="section date"><dt>日付</dt><dd>2002.04.15 genta 注意書き追加</dd></dl>
+<p>実装を省略できるようにするため、空の関数を用意しておく </p>
+
+<p><a class="el" href="../../da/deb/class_c_migemo.html#af837903bc4bbdaef81f7e5ba14dafdf5">CMigemo</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a337343b92cb7757d4ce02bfb7dd3cb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337343b92cb7757d4ce02bfb7dd3cb8f">&#9670;&nbsp;</a></span>GetDllNameImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR CBregexpDll2::GetDllNameImp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section date"><dt>日付</dt><dd>2001.07.05 genta 引数追加。ただし、ここでは使わない。 </dd>
+<dd>
+2007.06.25 genta 複数のDLL名に対応 </dd>
+<dd>
+2007.09.13 genta サーチルールを変更 <ul>
+<li>指定有りの場合はそれのみを返す </li>
+<li>指定無し(NULLまたは空文字列)の場合はBREGONIG, BREGEXPの順で試みる </li>
+</ul>
+</dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a9dbb9983cd44701e32e45f12449fae2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb9983cd44701e32e45f12449fae2a">&#9670;&nbsp;</a></span>InitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a> CDllImp::InitDll </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSpecifiedDllName</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLロードと初期処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSpecifiedDllName</td><td>[in] クラスが定義しているDLL名以外のDLLを読み込みたいときに、そのDLL名を指定。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0738ecc64963335e9f94ef0596a61929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0738ecc64963335e9f94ef0596a61929">&#9670;&nbsp;</a></span>InitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CBregexpDll2::InitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>DLLの初期化</p>
+<p>関数のアドレスを取得してメンバに保管する．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>アドレス取得に失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="aaacac64e6dda58142e17ddc09d91e213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacac64e6dda58142e17ddc09d91e213">&#9670;&nbsp;</a></span>RegisterEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::RegisterEntries </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a>&#160;</td>
+          <td class="paramname"><em>table</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>テーブルで与えられたエントリポインタアドレスを入れる場所に 対応する文字列から調べたエントリポインタを設定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>[in] 名前とアドレスの対応表。最後は{NULL,0}で終わること。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>全てのアドレスが設定された。 </td></tr>
+    <tr><td class="paramname">false</td><td>アドレスの取得に失敗した関数があった。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/extmodule/<a class="el" href="../../d0/d90/_c_bregexp_dll2_8h_source.html">CBregexpDll2.h</a></li>
+<li>sakura_core/extmodule/<a class="el" href="../../d0/dbc/_c_bregexp_dll2_8cpp.html">CBregexpDll2.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

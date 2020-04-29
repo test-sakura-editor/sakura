@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/apiwrap/CommonControl.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_91e391275ce155d63b5eb01c4bf28a00.html">apiwrap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CommonControl.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;CommCtrl.h&gt;</code><br />
+</div>
+<p><a href="../../dc/d44/_common_control_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a91d3ca28d71c909ca2aad3efe366ad6f"><td class="memItemLeft" align="right" valign="top"><a id="a91d3ca28d71c909ca2aad3efe366ad6f"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::StatusBar_SetText</b> (HWND hwndStatus, WPARAM opt, const WCHAR *str)</td></tr>
+<tr class="separator:a91d3ca28d71c909ca2aad3efe366ad6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6fc2b2e38a0fe6fc71864b7022483e"><td class="memItemLeft" align="right" valign="top"><a id="a5a6fc2b2e38a0fe6fc71864b7022483e"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::StatusBar_GetText</b> (HWND hwndStatus, WPARAM opt, WCHAR *str)</td></tr>
+<tr class="separator:a5a6fc2b2e38a0fe6fc71864b7022483e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a1b4880b909dd55e32d9eddb544ebc"><td class="memItemLeft" align="right" valign="top"><a id="ad1a1b4880b909dd55e32d9eddb544ebc"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::StatusBar_GetTextLength</b> (HWND hwndStatus, WPARAM opt)</td></tr>
+<tr class="separator:ad1a1b4880b909dd55e32d9eddb544ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac392ca0b0a12d4c9f6dfd1ada53c531"><td class="memItemLeft" align="right" valign="top"><a id="aac392ca0b0a12d4c9f6dfd1ada53c531"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::StatusBar_SetParts</b> (HWND hwndCtl, int num, int *positions)</td></tr>
+<tr class="separator:aac392ca0b0a12d4c9f6dfd1ada53c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d44c467d52d9462213c77d261f90755"><td class="memItemLeft" align="right" valign="top"><a id="a7d44c467d52d9462213c77d261f90755"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::HotKey_GetHotKey</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a7d44c467d52d9462213c77d261f90755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a757ae738d3831f79f2f5b168d491aa"><td class="memItemLeft" align="right" valign="top"><a id="a3a757ae738d3831f79f2f5b168d491aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::HotKey_SetHotKey</b> (HWND hwndCtl, DWORD vk_code, DWORD modifier)</td></tr>
+<tr class="separator:a3a757ae738d3831f79f2f5b168d491aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac431057fc21d0a55166fa1dc70341c22"><td class="memItemLeft" align="right" valign="top"><a id="ac431057fc21d0a55166fa1dc70341c22"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Progress_SetRange</b> (HWND hwndCtl, int minimum, int maximum)</td></tr>
+<tr class="separator:ac431057fc21d0a55166fa1dc70341c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d6a6a16aa3de0a64d289246a1e1c16"><td class="memItemLeft" align="right" valign="top"><a id="aa8d6a6a16aa3de0a64d289246a1e1c16"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Progress_SetPos</b> (HWND hwndCtl, int position)</td></tr>
+<tr class="separator:aa8d6a6a16aa3de0a64d289246a1e1c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f93c5f044e8e4f0eff85026c4bc22ae"><td class="memItemLeft" align="right" valign="top"><a id="a1f93c5f044e8e4f0eff85026c4bc22ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Progress_SetMarquee</b> (HWND hwndCtl, BOOL mode, int updateTime)</td></tr>
+<tr class="separator:a1f93c5f044e8e4f0eff85026c4bc22ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3920d66be26ec9d21e77af56c632d24c"><td class="memItemLeft" align="right" valign="top"><a id="a3920d66be26ec9d21e77af56c632d24c"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::UpDown_SetRange</b> (HWND hwndCtl, int upper, int lower)</td></tr>
+<tr class="separator:a3920d66be26ec9d21e77af56c632d24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6222869694aa63d9ec8deccc100325"><td class="memItemLeft" align="right" valign="top"><a id="a7f6222869694aa63d9ec8deccc100325"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::UpDown_GetPos</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a7f6222869694aa63d9ec8deccc100325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46d91f9b0145d5e67dd84c87b250eed"><td class="memItemLeft" align="right" valign="top"><a id="ab46d91f9b0145d5e67dd84c87b250eed"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Rebar_InsertBand</b> (HWND hwndCtl, int index, REBARBANDINFO *info)</td></tr>
+<tr class="separator:ab46d91f9b0145d5e67dd84c87b250eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f12cb7b6789792388022b1919aca0bd"><td class="memItemLeft" align="right" valign="top"><a id="a7f12cb7b6789792388022b1919aca0bd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Rebar_SetbarInfo</b> (HWND hwndCtl, REBARINFO *info)</td></tr>
+<tr class="separator:a7f12cb7b6789792388022b1919aca0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e30948199065cdc59fd50b70e4e5e3"><td class="memItemLeft" align="right" valign="top"><a id="a14e30948199065cdc59fd50b70e4e5e3"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_AddButtons</b> (HWND hwndCtl, int num, TBBUTTON *buttons)</td></tr>
+<tr class="separator:a14e30948199065cdc59fd50b70e4e5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121500a3f25a5a720a1cb2f6471838b9"><td class="memItemLeft" align="right" valign="top"><a id="a121500a3f25a5a720a1cb2f6471838b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_ButtonStructSize</b> (HWND hwndCtl, int size)</td></tr>
+<tr class="separator:a121500a3f25a5a720a1cb2f6471838b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0999a9fae8875316d45b064f81afc2a5"><td class="memItemLeft" align="right" valign="top"><a id="a0999a9fae8875316d45b064f81afc2a5"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_CheckButton</b> (HWND hwndCtl, int id, BOOL enable)</td></tr>
+<tr class="separator:a0999a9fae8875316d45b064f81afc2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e3167e556fcc8c8ba09cfb61e204ce"><td class="memItemLeft" align="right" valign="top"><a id="ad0e3167e556fcc8c8ba09cfb61e204ce"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_EnableButton</b> (HWND hwndCtl, int id, BOOL enable)</td></tr>
+<tr class="separator:ad0e3167e556fcc8c8ba09cfb61e204ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dbefefaa61ac73eed7ed68dd61260a"><td class="memItemLeft" align="right" valign="top"><a id="a07dbefefaa61ac73eed7ed68dd61260a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_GetBitmap</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:a07dbefefaa61ac73eed7ed68dd61260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f83459b2c1eea8f57c67fe61ab4ff2"><td class="memItemLeft" align="right" valign="top"><a id="a89f83459b2c1eea8f57c67fe61ab4ff2"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_GetButtonSize</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a89f83459b2c1eea8f57c67fe61ab4ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae209243b810b0145b11a0269676220ec"><td class="memItemLeft" align="right" valign="top"><a id="ae209243b810b0145b11a0269676220ec"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_GetItemRect</b> (HWND hwndCtl, int index, RECT *rect)</td></tr>
+<tr class="separator:ae209243b810b0145b11a0269676220ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88d5a81583a9ea3f3d93858d58bd65d"><td class="memItemLeft" align="right" valign="top"><a id="ac88d5a81583a9ea3f3d93858d58bd65d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_GetRows</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:ac88d5a81583a9ea3f3d93858d58bd65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d70cbefa90ca58303a6d68aab325a70"><td class="memItemLeft" align="right" valign="top"><a id="a7d70cbefa90ca58303a6d68aab325a70"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_Hittest</b> (HWND hwndCtl, POINT *point)</td></tr>
+<tr class="separator:a7d70cbefa90ca58303a6d68aab325a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e9bb0ffa9293f77459eeeb42aecca4"><td class="memItemLeft" align="right" valign="top"><a id="a37e9bb0ffa9293f77459eeeb42aecca4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_SetButtonInfo</b> (HWND hwndCtl, int index, TBBUTTONINFO *info)</td></tr>
+<tr class="separator:a37e9bb0ffa9293f77459eeeb42aecca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3d2e6074d7a852262d0fdca1e63d50"><td class="memItemLeft" align="right" valign="top"><a id="aaa3d2e6074d7a852262d0fdca1e63d50"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_SetButtonSize</b> (HWND hwndCtl, int width, int height)</td></tr>
+<tr class="separator:aaa3d2e6074d7a852262d0fdca1e63d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa40b8d7c25201a5d6d12ff4e1f533e77"><td class="memItemLeft" align="right" valign="top"><a id="aa40b8d7c25201a5d6d12ff4e1f533e77"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_SetExtendedStyle</b> (HWND hwndCtl, DWORD styles)</td></tr>
+<tr class="separator:aa40b8d7c25201a5d6d12ff4e1f533e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e650965871e358be9d1c474e6d6b3c"><td class="memItemLeft" align="right" valign="top"><a id="ab6e650965871e358be9d1c474e6d6b3c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_GetState</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:ab6e650965871e358be9d1c474e6d6b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf4e6e392c26e43817d49ce4f768410"><td class="memItemLeft" align="right" valign="top"><a id="afbf4e6e392c26e43817d49ce4f768410"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Toolbar_SetState</b> (HWND hwndCtl, int index, WORD state)</td></tr>
+<tr class="separator:afbf4e6e392c26e43817d49ce4f768410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc03d840deb0701ee9e82173786137f"><td class="memItemLeft" align="right" valign="top"><a id="adcc03d840deb0701ee9e82173786137f"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Tooltip_AddTool</b> (HWND hwndCtl, TOOLINFO *info)</td></tr>
+<tr class="separator:adcc03d840deb0701ee9e82173786137f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf18c1e462c6bb8e6634734be1b8b5b9"><td class="memItemLeft" align="right" valign="top"><a id="acf18c1e462c6bb8e6634734be1b8b5b9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Tooltip_SetMaxTipWidth</b> (HWND hwndCtl, int width)</td></tr>
+<tr class="separator:acf18c1e462c6bb8e6634734be1b8b5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab139ff4cd4d7d82b9b4b71ad3e12d9a2"><td class="memItemLeft" align="right" valign="top"><a id="ab139ff4cd4d7d82b9b4b71ad3e12d9a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Tooltip_UpdateTipText</b> (HWND hwndCtl, TOOLINFO *info)</td></tr>
+<tr class="separator:ab139ff4cd4d7d82b9b4b71ad3e12d9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4373d4507ee605e4dd0fcbabcdf497a9"><td class="memItemLeft" align="right" valign="top"><a id="a4373d4507ee605e4dd0fcbabcdf497a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Tooltip_Activate</b> (HWND hwndCtl, BOOL enable)</td></tr>
+<tr class="separator:a4373d4507ee605e4dd0fcbabcdf497a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

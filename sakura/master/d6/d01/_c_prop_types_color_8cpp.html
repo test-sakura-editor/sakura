@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CPropTypesColor.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CPropTypesColor.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>タイプ別設定 - カラー  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d7a/_c_prop_types_8h_source.html">CPropTypes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/dd7/_c_imp_exp_manager_8h_source.html">typeprop/CImpExpManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d9c/_c_dlg_same_color_8h_source.html">CDlgSameColor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d90/_c_dlg_keyword_select_8h_source.html">CDlgKeywordSelect.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/dc2/_e_color_index_type_8h_source.html">view/colors/EColorIndexType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d51/_c_graphics_8h_source.html">uiparts/CGraphics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d53/_c_prop_common_8h_source.html">prop/CPropCommon.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a0b9873220d6771697f546963c4b8031d"><td class="memItemLeft" align="right" valign="top"><a id="a0b9873220d6771697f546963c4b8031d"></a>
+LRESULT APIENTRY&#160;</td><td class="memItemRight" valign="bottom"><b>ColorList_SubclassProc</b> (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a0b9873220d6771697f546963c4b8031d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a53b31e4836ea52eb66d04de4aae88e66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; <a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51">EStringLiteralType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>StringLitteralArr</b> []</td></tr>
+<tr class="separator:a53b31e4836ea52eb66d04de4aae88e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af840c3539f09a10f1f2c79b56c5bcf37"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a692a90c7752c63c84ca62a1e9e6861cb"><td class="memItemLeft" >
+&#160;&#160;&#160;int&#160;&#160;&#160;<b>nEditID</b></td></tr>
+<tr class="separator:a692a90c7752c63c84ca62a1e9e6861cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108b6254a4372b58f429592cf243fe2a"><td class="memItemLeft" >
+&#160;&#160;&#160;int&#160;&#160;&#160;<b>nCheckBoxID</b></td></tr>
+<tr class="separator:a108b6254a4372b58f429592cf243fe2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9150f5baed7591e768cb44d061c55eed"><td class="memItemLeft" >
+&#160;&#160;&#160;int&#160;&#160;&#160;<b>nTextID</b></td></tr>
+<tr class="separator:a9150f5baed7591e768cb44d061c55eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af840c3539f09a10f1f2c79b56c5bcf37"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>cLineComment</b> [COMMENT_DELIMITER_NUM]</td></tr>
+<tr class="separator:af840c3539f09a10f1f2c79b56c5bcf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>タイプ別設定 - カラー </p>
+<dl class="section date"><dt>日付</dt><dd>2008.04.12 kobake CPropTypes.cppから分離 </dd>
+<dd>
+2009.02.22 ryoji </dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="af840c3539f09a10f1f2c79b56c5bcf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af840c3539f09a10f1f2c79b56c5bcf37">&#9670;&nbsp;</a></span>cLineComment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  cLineComment[COMMENT_DELIMITER_NUM]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { IDC_EDIT_LINECOMMENT  , IDC_CHECK_LCPOS , IDC_EDIT_LINECOMMENTPOS },</div>
+<div class="line">    { IDC_EDIT_LINECOMMENT2 , IDC_CHECK_LCPOS2, IDC_EDIT_LINECOMMENTPOS2},</div>
+<div class="line">    { IDC_EDIT_LINECOMMENT3 , IDC_CHECK_LCPOS3, IDC_EDIT_LINECOMMENTPOS3}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53b31e4836ea52eb66d04de4aae88e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b31e4836ea52eb66d04de4aae88e66">&#9670;&nbsp;</a></span>StringLitteralArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51">EStringLiteralType</a>&gt; StringLitteralArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a2184d32fd1336a3a21b4f3f96be917c5">STRING_LITERAL_CPP</a>,    STR_STRINGESC_CPP },</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a1ca1d4240dd46693e278b60ec77a017d">STRING_LITERAL_PLSQL</a>,  STR_STRINGESC_PLSQL },</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a9ca4514448365528fc0aba064a3630fc">STRING_LITERAL_HTML</a>,   STR_STRINGESC_HTML },</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51ab30f4b0910111bccd90b9fd9bd1dfc23">STRING_LITERAL_CSHARP</a>, STR_STRINGESC_CSHARP },</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a5e9cd47d0e6a0b141702ff976f528a55">STRING_LITERAL_PYTHON</a>, STR_STRINGESC_PYTHON },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="a_c_type_8h_html_a8dcd6434b49bbfb5247441ce61d4fb51a5e9cd47d0e6a0b141702ff976f528a55"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a5e9cd47d0e6a0b141702ff976f528a55">STRING_LITERAL_PYTHON</a></div><div class="ttdeci">@ STRING_LITERAL_PYTHON</div><div class="ttdoc">Python風</div><div class="ttdef"><b>Definition:</b> CType.h:114</div></div>
+<div class="ttc" id="a_c_type_8h_html_a8dcd6434b49bbfb5247441ce61d4fb51a1ca1d4240dd46693e278b60ec77a017d"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a1ca1d4240dd46693e278b60ec77a017d">STRING_LITERAL_PLSQL</a></div><div class="ttdeci">@ STRING_LITERAL_PLSQL</div><div class="ttdoc">PL/SQL風</div><div class="ttdef"><b>Definition:</b> CType.h:111</div></div>
+<div class="ttc" id="a_c_type_8h_html_a8dcd6434b49bbfb5247441ce61d4fb51a2184d32fd1336a3a21b4f3f96be917c5"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a2184d32fd1336a3a21b4f3f96be917c5">STRING_LITERAL_CPP</a></div><div class="ttdeci">@ STRING_LITERAL_CPP</div><div class="ttdoc">C/C++言語風</div><div class="ttdef"><b>Definition:</b> CType.h:110</div></div>
+<div class="ttc" id="a_c_type_8h_html_a8dcd6434b49bbfb5247441ce61d4fb51a9ca4514448365528fc0aba064a3630fc"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a9ca4514448365528fc0aba064a3630fc">STRING_LITERAL_HTML</a></div><div class="ttdeci">@ STRING_LITERAL_HTML</div><div class="ttdoc">HTML/XML風</div><div class="ttdef"><b>Definition:</b> CType.h:112</div></div>
+<div class="ttc" id="a_c_type_8h_html_a8dcd6434b49bbfb5247441ce61d4fb51ab30f4b0910111bccd90b9fd9bd1dfc23"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51ab30f4b0910111bccd90b9fd9bd1dfc23">STRING_LITERAL_CSHARP</a></div><div class="ttdeci">@ STRING_LITERAL_CSHARP</div><div class="ttdoc">C::風</div><div class="ttdef"><b>Definition:</b> CType.h:113</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

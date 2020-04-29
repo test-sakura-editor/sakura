@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/CCodePage.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CCodePage.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/df3/_c_code_page_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    Copyright (C) 2010-2012 Moca</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/db0/_c_shift_jis_8h.html">CShiftJis.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">enum</span> EEncodingTrait</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ENCODING_TRAIT_ERROR, <span class="comment">// error</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ENCODING_TRAIT_ASCII,<span class="comment">// ASCII comportible 1byte</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ENCODING_TRAIT_UTF16LE,<span class="comment">// UTF-16LE</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ENCODING_TRAIT_UTF16BE,<span class="comment">// UTF-16BE</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ENCODING_TRAIT_UTF32LE,<span class="comment">// UTF-32LE 0123</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ENCODING_TRAIT_UTF32BE,<span class="comment">// UTF-32BE 3210</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ENCODING_TRAIT_EBCDIC_CRLF,<span class="comment">// EBCDIC/CR,LF</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ENCODING_TRAIT_EBCDIC,<span class="comment">// EBCDIC/CR,LF,NEL</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    システムコードページによる文字コード変換</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d0/d24/class_c_code_page.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d24/class_c_code_page.html">CCodePage</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d84/class_c_code_base.html">CCodeBase</a>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d0/d24/class_c_code_page.html">CCodePage</a>(<span class="keywordtype">int</span> codepageEx) : m_nCodePageEx(codepageEx) { }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//CCodeBaseインターフェース</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d0/d24/class_c_code_page.html#af470b5d84e99d6dea4e9ddf4186b77fa">   57</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d0/d24/class_c_code_page.html#af470b5d84e99d6dea4e9ddf4186b77fa">CodeToUnicode</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> <a class="code" href="../../d0/d24/class_c_code_page.html#ac239ae386533bc0ba36b80f649f1958f">CPToUnicode</a>(cSrc, pDst, m_nCodePageEx); }    </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d0/d24/class_c_code_page.html#a1bc0ed2e602af6e17b9d0aa428b2db8d">   58</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d0/d24/class_c_code_page.html#a1bc0ed2e602af6e17b9d0aa428b2db8d">UnicodeToCode</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> UnicodeToCP(cSrc, pDst, m_nCodePageEx); }    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d24/class_c_code_page.html#ab5ff2c004025c0cf07f17c45c551a775">GetEol</a>(<a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pcmemEol, <a class="code" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a> eEolType) <span class="keyword">override</span>; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d24/class_c_code_page.html#afd33b51dfbb0e8981d8c83cdd0757e25">GetBom</a>(<a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pcmemBom) <span class="keyword">override</span>;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d0/d24/class_c_code_page.html#a3e5b5711ebf839e324d72466eafd9209">UnicodeToHex</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* cSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> iSLen, WCHAR* pDst, <span class="keyword">const</span> <a class="code" href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a>* psStatusbar);         </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//実装</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d0/d24/class_c_code_page.html#ac239ae386533bc0ba36b80f649f1958f">CPToUnicode</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDst, <span class="keywordtype">int</span> codepageEx);     <span class="comment">// CodePage  → Unicodeコード変換 </span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> UnicodeToCP(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDst, <span class="keywordtype">int</span> codepageEx);     <span class="comment">// Unicode   → CodePageコード変換</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;std::pair&lt;int, std::wstring&gt; &gt; CodePageList;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//GUI用補助関数</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">static</span> CCodePage::CodePageList&amp; GetCodePageList();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> GetNameNormal(LPWSTR outName, <span class="keywordtype">int</span> charcodeEx);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> GetNameShort(LPWSTR outName, <span class="keywordtype">int</span> charcodeEx);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> GetNameLong(LPWSTR outName, <span class="keywordtype">int</span> charcodeEx);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> GetNameBracket(LPWSTR outName, <span class="keywordtype">int</span> charcodeEx);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> AddComboCodePages(HWND hwnd, HWND combo, <span class="keywordtype">int</span> nSelCode);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//CP補助情報</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">static</span> EEncodingTrait GetEncodingTrait(<span class="keywordtype">int</span> charcodeEx);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// 実装</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d0/d24/class_c_code_page.html#a82045a76821d098f4814c5371ded0f34">CPToUni</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span>* pDst, <span class="keywordtype">int</span> nDstCchLen, <span class="keywordtype">int</span>&amp; nRetLen, UINT codepage );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> UniToCP( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">int</span> nDstByteLen, <span class="keywordtype">int</span>&amp; nRetLen, UINT codepage );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> m_nCodePageEx;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> BOOL CALLBACK CallBackEnumCodePages( LPCWSTR );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> MultiByteToWideChar2(UINT codepage, <span class="keywordtype">int</span> flags, <span class="keyword">const</span> <span class="keywordtype">char</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> WideCharToMultiByte2(UINT codepage, <span class="keywordtype">int</span> flags, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> S_UTF32LEToUnicode(<span class="keyword">const</span> <span class="keywordtype">char</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> S_UTF32BEToUnicode(<span class="keyword">const</span> <span class="keywordtype">char</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> S_UnicodeToUTF32LE(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> S_UnicodeToUTF32BE(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">int</span> nDstLen);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_common_setting___statusbar_html"><div class="ttname"><a href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a></div><div class="ttdef"><b>Definition:</b> CommonSetting.h:644</div></div>
+<div class="ttc" id="aclass_c_code_page_html_afd33b51dfbb0e8981d8c83cdd0757e25"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#afd33b51dfbb0e8981d8c83cdd0757e25">CCodePage::GetBom</a></div><div class="ttdeci">void GetBom(CMemory *pcmemBom) override</div><div class="ttdoc">BOMデータ取得</div><div class="ttdef"><b>Definition:</b> CCodePage.cpp:230</div></div>
+<div class="ttc" id="aclass_c_code_page_html_ac239ae386533bc0ba36b80f649f1958f"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#ac239ae386533bc0ba36b80f649f1958f">CCodePage::CPToUnicode</a></div><div class="ttdeci">static EConvertResult CPToUnicode(const CMemory &amp;cSrc, CNativeW *pDst, int codepageEx)</div><div class="ttdef"><b>Definition:</b> CCodePage.cpp:110</div></div>
+<div class="ttc" id="a_c_code_base_8h_html"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a></div></div>
+<div class="ttc" id="aclass_c_memory_html"><div class="ttname"><a href="../../d6/d31/class_c_memory.html">CMemory</a></div><div class="ttdoc">メモリバッファクラス</div><div class="ttdef"><b>Definition:</b> CMemory.h:43</div></div>
+<div class="ttc" id="aclass_c_code_base_html"><div class="ttname"><a href="../../d6/d84/class_c_code_base.html">CCodeBase</a></div><div class="ttdef"><b>Definition:</b> CCodeBase.h:45</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="a_c_shift_jis_8h_html"><div class="ttname"><a href="../../d6/db0/_c_shift_jis_8h.html">CShiftJis.h</a></div></div>
+<div class="ttc" id="aclass_c_code_page_html_a3e5b5711ebf839e324d72466eafd9209"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#a3e5b5711ebf839e324d72466eafd9209">CCodePage::UnicodeToHex</a></div><div class="ttdeci">EConvertResult UnicodeToHex(const wchar_t *cSrc, const int iSLen, WCHAR *pDst, const CommonSetting_Statusbar *psStatusbar)</div><div class="ttdoc">UNICODE → Hex 変換</div><div class="ttdef"><b>Definition:</b> CCodePage.cpp:243</div></div>
+<div class="ttc" id="aclass_c_code_page_html"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html">CCodePage</a></div><div class="ttdef"><b>Definition:</b> CCodePage.h:52</div></div>
+<div class="ttc" id="aclass_c_code_page_html_a82045a76821d098f4814c5371ded0f34"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#a82045a76821d098f4814c5371ded0f34">CCodePage::CPToUni</a></div><div class="ttdeci">static EConvertResult CPToUni(const char *pSrc, const int nSrcLen, wchar_t *pDst, int nDstCchLen, int &amp;nRetLen, UINT codepage)</div><div class="ttdef"><b>Definition:</b> CCodePage.cpp:91</div></div>
+<div class="ttc" id="a_c_eol_8h_html_a0b30ff82888baa8eedd03857bf43c9b1"><div class="ttname"><a href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a></div><div class="ttdeci">EEolType</div><div class="ttdef"><b>Definition:</b> CEol.h:38</div></div>
+<div class="ttc" id="aclass_c_code_page_html_ab5ff2c004025c0cf07f17c45c551a775"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#ab5ff2c004025c0cf07f17c45c551a775">CCodePage::GetEol</a></div><div class="ttdeci">void GetEol(CMemory *pcmemEol, EEolType eEolType) override</div><div class="ttdoc">改行データ取得</div><div class="ttdef"><b>Definition:</b> CCodePage.cpp:217</div></div>
+<div class="ttc" id="a_c_code_base_8h_html_aaf5b9c8cb800b2a36198d4f1c4d07c84"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a></div><div class="ttdeci">EConvertResult</div><div class="ttdef"><b>Definition:</b> CCodeBase.h:28</div></div>
+<div class="ttc" id="aclass_c_code_page_html_af470b5d84e99d6dea4e9ddf4186b77fa"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#af470b5d84e99d6dea4e9ddf4186b77fa">CCodePage::CodeToUnicode</a></div><div class="ttdeci">EConvertResult CodeToUnicode(const CMemory &amp;cSrc, CNativeW *pDst) override</div><div class="ttdoc">特定コード → UNICODE 変換</div><div class="ttdef"><b>Definition:</b> CCodePage.h:57</div></div>
+<div class="ttc" id="aclass_c_code_page_html_a1bc0ed2e602af6e17b9d0aa428b2db8d"><div class="ttname"><a href="../../d0/d24/class_c_code_page.html#a1bc0ed2e602af6e17b9d0aa428b2db8d">CCodePage::UnicodeToCode</a></div><div class="ttdeci">EConvertResult UnicodeToCode(const CNativeW &amp;cSrc, CMemory *pDst) override</div><div class="ttdoc">UNICODE → 特定コード 変換</div><div class="ttdef"><b>Definition:</b> CCodePage.h:58</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CBookmarkManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../db/d0b/class_c_bookmark_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CBookmarkManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>行全体のブックマーク情報の管理  
+ <a href="../../db/d8a/class_c_bookmark_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d3d/_c_bookmark_manager_8h_source.html">CBookmarkManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0cb70cd15ef295e0837c7e738dafe012"><td class="memItemLeft" align="right" valign="top"><a id="a0cb70cd15ef295e0837c7e738dafe012"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CBookmarkManager</b> (<a class="el" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a> *pcDocLineMgr)</td></tr>
+<tr class="separator:a0cb70cd15ef295e0837c7e738dafe012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5238dc7c6a7c185a45337aafb7a5fa"><td class="memItemLeft" align="right" valign="top"><a id="aff5238dc7c6a7c185a45337aafb7a5fa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8a/class_c_bookmark_manager.html#aff5238dc7c6a7c185a45337aafb7a5fa">ResetAllBookMark</a> ()</td></tr>
+<tr class="memdesc:aff5238dc7c6a7c185a45337aafb7a5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブックマークの全解除 <br /></td></tr>
+<tr class="separator:aff5238dc7c6a7c185a45337aafb7a5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a06682f344f232eacee91505444576"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8a/class_c_bookmark_manager.html#a17a06682f344f232eacee91505444576">SearchBookMark</a> (CLogicInt nLineNum, <a class="el" href="../../d2/d49/global_8h.html#a5e7c4f0f6befd491b7d7324c366dfff8">ESearchDirection</a>, CLogicInt *pnLineNum)</td></tr>
+<tr class="memdesc:a17a06682f344f232eacee91505444576"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブックマーク検索  <a href="../../db/d8a/class_c_bookmark_manager.html#a17a06682f344f232eacee91505444576">[詳解]</a><br /></td></tr>
+<tr class="separator:a17a06682f344f232eacee91505444576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0818be68081fd12e7ed654349caf6d1b"><td class="memItemLeft" align="right" valign="top"><a id="a0818be68081fd12e7ed654349caf6d1b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8a/class_c_bookmark_manager.html#a0818be68081fd12e7ed654349caf6d1b">SetBookMarks</a> (wchar_t *pMarkLines)</td></tr>
+<tr class="memdesc:a0818be68081fd12e7ed654349caf6d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理行番号のリストからまとめて行マーク <br /></td></tr>
+<tr class="separator:a0818be68081fd12e7ed654349caf6d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6b842376d5e1b3a231e7a01b63b239"><td class="memItemLeft" align="right" valign="top"><a id="aff6b842376d5e1b3a231e7a01b63b239"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8a/class_c_bookmark_manager.html#aff6b842376d5e1b3a231e7a01b63b239">GetBookMarks</a> ()</td></tr>
+<tr class="memdesc:aff6b842376d5e1b3a231e7a01b63b239"><td class="mdescLeft">&#160;</td><td class="mdescRight">行マークされてる物理行番号のリストを作る <br /></td></tr>
+<tr class="separator:aff6b842376d5e1b3a231e7a01b63b239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4a3096068d677c0a741b37fbcec233"><td class="memItemLeft" align="right" valign="top"><a id="a2c4a3096068d677c0a741b37fbcec233"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d8a/class_c_bookmark_manager.html#a2c4a3096068d677c0a741b37fbcec233">MarkSearchWord</a> (const <a class="el" href="../../dc/da0/class_c_search_string_pattern.html">CSearchStringPattern</a> &amp;)</td></tr>
+<tr class="memdesc:a2c4a3096068d677c0a741b37fbcec233"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索条件に該当する行にブックマークをセットする <br /></td></tr>
+<tr class="separator:a2c4a3096068d677c0a741b37fbcec233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>行全体のブックマーク情報の管理 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a17a06682f344f232eacee91505444576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a06682f344f232eacee91505444576">&#9670;&nbsp;</a></span>SearchBookMark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CBookmarkManager::SearchBookMark </td>
+          <td>(</td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nLineNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d49/global_8h.html#a5e7c4f0f6befd491b7d7324c366dfff8">ESearchDirection</a>&#160;</td>
+          <td class="paramname"><em>bPrevOrNext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt *&#160;</td>
+          <td class="paramname"><em>pnLineNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ブックマーク検索 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nLineNum</td><td>検索開始行 </td></tr>
+    <tr><td class="paramname">bPrevOrNext</td><td>検索方向 </td></tr>
+    <tr><td class="paramname">pnLineNum</td><td>マッチ行 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/docplus/<a class="el" href="../../d5/d3d/_c_bookmark_manager_8h_source.html">CBookmarkManager.h</a></li>
+<li>sakura_core/docplus/<a class="el" href="../../df/d84/_c_bookmark_manager_8cpp.html">CBookmarkManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

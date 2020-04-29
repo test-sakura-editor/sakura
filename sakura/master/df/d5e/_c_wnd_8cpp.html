@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/window/CWnd.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_848eeabb30808a87d3d4a20b9241b9be.html">window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CWnd.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ウィンドウの基本クラス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d0d/_c_wnd_8h_source.html">CWnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:d0/d8d/namespace_c_window_creation_hook"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8d/namespace_c_window_creation_hook.html">CWindowCreationHook</a></td></tr>
+<tr class="memdesc:d0/d8d/namespace_c_window_creation_hook"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windowsフック(CBT) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a13cb6a4f49a189c135303b7c8c8ed2ab"><td class="memItemLeft" align="right" valign="top"><a id="a13cb6a4f49a189c135303b7c8c8ed2ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CALLH</b>(message,  method)&#160;&#160;&#160;case message: return method( hwnd, msg, wp, lp )</td></tr>
+<tr class="separator:a13cb6a4f49a189c135303b7c8c8ed2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9ff82548d49af42fbe2d4cc94c150dc3"><td class="memItemLeft" align="right" valign="top"><a id="a9ff82548d49af42fbe2d4cc94c150dc3"></a>
+LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><b>CWndProc</b> (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a9ff82548d49af42fbe2d4cc94c150dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcffce8a87acf355592adf71c6fb786"><td class="memItemLeft" align="right" valign="top"><a id="a9dcffce8a87acf355592adf71c6fb786"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8d/namespace_c_window_creation_hook.html#a9dcffce8a87acf355592adf71c6fb786">CWindowCreationHook::Use</a> ()</td></tr>
+<tr class="memdesc:a9dcffce8a87acf355592adf71c6fb786"><td class="mdescLeft">&#160;</td><td class="mdescRight">フック開始 <br /></td></tr>
+<tr class="separator:a9dcffce8a87acf355592adf71c6fb786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf364886baf20a254db23657a5cd68eb"><td class="memItemLeft" align="right" valign="top"><a id="acf364886baf20a254db23657a5cd68eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8d/namespace_c_window_creation_hook.html#acf364886baf20a254db23657a5cd68eb">CWindowCreationHook::Unuse</a> ()</td></tr>
+<tr class="memdesc:acf364886baf20a254db23657a5cd68eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">フック終了 <br /></td></tr>
+<tr class="separator:acf364886baf20a254db23657a5cd68eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a603c48af88c38cf0772b16728a9ef099"><td class="memItemLeft" align="right" valign="top"><a id="a603c48af88c38cf0772b16728a9ef099"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CWindowCreationHook::g_nCnt</b> = 0</td></tr>
+<tr class="separator:a603c48af88c38cf0772b16728a9ef099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b1d7ca154359499773fb06d7d27ae1"><td class="memItemLeft" align="right" valign="top"><a id="a42b1d7ca154359499773fb06d7d27ae1"></a>
+HHOOK&#160;</td><td class="memItemRight" valign="bottom"><b>CWindowCreationHook::g_hHook</b> = NULL</td></tr>
+<tr class="separator:a42b1d7ca154359499773fb06d7d27ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ウィンドウの基本クラス </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2000/01/11 新規作成 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: SShare_History 構造体</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d0/d66/struct_s_share___history-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">SShare_History 構造体</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a2e0628db9bedd96f8ea3f16d49f11654"><td class="memItemLeft" align="right" valign="top"><a id="a2e0628db9bedd96f8ea3f16d49f11654"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nMRUArrNum</b></td></tr>
+<tr class="separator:a2e0628db9bedd96f8ea3f16d49f11654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00aaffb557310a13f431cd167e51bd4"><td class="memItemLeft" align="right" valign="top"><a id="af00aaffb557310a13f431cd167e51bd4"></a>
+<a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_fiMRUArr</b> [MAX_MRU]</td></tr>
+<tr class="separator:af00aaffb557310a13f431cd167e51bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5732e58736005c9f714728df3fb2929f"><td class="memItemLeft" align="right" valign="top"><a id="a5732e58736005c9f714728df3fb2929f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bMRUArrFavorite</b> [MAX_MRU]</td></tr>
+<tr class="separator:a5732e58736005c9f714728df3fb2929f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58876cd66cc8c521e6c90405c76b921"><td class="memItemLeft" align="right" valign="top"><a id="af58876cd66cc8c521e6c90405c76b921"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nOPENFOLDERArrNum</b></td></tr>
+<tr class="separator:af58876cd66cc8c521e6c90405c76b921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9757d8db46ba3515d2428d6516c166"><td class="memItemLeft" align="right" valign="top"><a id="a2a9757d8db46ba3515d2428d6516c166"></a>
+<a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; TCHAR, _MAX_PATH &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_szOPENFOLDERArr</b> [MAX_OPENFOLDER]</td></tr>
+<tr class="separator:a2a9757d8db46ba3515d2428d6516c166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6920feca3205c4eeb5e443a25066e67b"><td class="memItemLeft" align="right" valign="top"><a id="a6920feca3205c4eeb5e443a25066e67b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bOPENFOLDERArrFavorite</b> [MAX_OPENFOLDER]</td></tr>
+<tr class="separator:a6920feca3205c4eeb5e443a25066e67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074633aeacdda91674aa3efbc1b312de"><td class="memItemLeft" align="right" valign="top"><a id="a074633aeacdda91674aa3efbc1b312de"></a>
+<a class="el" href="../../d8/de0/class_static_vector.html">StaticVector</a>&lt; <a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; TCHAR, _MAX_PATH &gt;, MAX_MRU, const TCHAR * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_aExceptMRU</b></td></tr>
+<tr class="separator:a074633aeacdda91674aa3efbc1b312de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc230dc5d3c658282d99b719b54e4801"><td class="memItemLeft" align="right" valign="top"><a id="acc230dc5d3c658282d99b719b54e4801"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePath</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_szIMPORTFOLDER</b></td></tr>
+<tr class="separator:acc230dc5d3c658282d99b719b54e4801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c879cd20af7d668316d4b071c3b096"><td class="memItemLeft" align="right" valign="top"><a id="ae1c879cd20af7d668316d4b071c3b096"></a>
+<a class="el" href="../../d8/de0/class_static_vector.html">StaticVector</a>&lt; <a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; TCHAR, MAX_CMDLEN &gt;, MAX_CMDARR &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_aCommands</b></td></tr>
+<tr class="separator:ae1c879cd20af7d668316d4b071c3b096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732d6818009c0822387e25b971d4634e"><td class="memItemLeft" align="right" valign="top"><a id="a732d6818009c0822387e25b971d4634e"></a>
+<a class="el" href="../../d8/de0/class_static_vector.html">StaticVector</a>&lt; <a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; TCHAR, _MAX_PATH &gt;, MAX_CMDARR &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_aCurDirs</b></td></tr>
+<tr class="separator:a732d6818009c0822387e25b971d4634e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/recent/<a class="el" href="../../da/daa/_s_share___history_8h_source.html">SShare_History.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

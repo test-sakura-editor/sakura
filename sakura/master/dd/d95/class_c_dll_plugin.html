@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDllPlugin クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d2/d06/class_c_dll_plugin-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDllPlugin クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CDllPlugin の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d95/class_c_dll_plugin.png" usemap="#CDllPlugin_map" alt=""/>
+  <map id="CDllPlugin_map" name="CDllPlugin_map">
+<area href="../../d9/d51/class_c_plugin.html" alt="CPlugin" shape="rect" coords="0,0,71,24"/>
+<area href="../../da/dc8/class_c_dll_imp.html" title="DLLの動的なLoad/Unloadを行うためのクラス" alt="CDllImp" shape="rect" coords="81,0,152,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ab6016ba2b93a7d7690078754d1b0ab6e"><td class="memItemLeft" align="right" valign="top"><a id="ab6016ba2b93a7d7690078754d1b0ab6e"></a>
+typedef std::list&lt; <a class="el" href="../../d9/d51/class_c_plugin.html">CPlugin</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>List</b></td></tr>
+<tr class="separator:ab6016ba2b93a7d7690078754d1b0ab6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af866e8e51d8c4dc64cd74dd12e320373"><td class="memItemLeft" align="right" valign="top"><a id="af866e8e51d8c4dc64cd74dd12e320373"></a>
+typedef List::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>ListIter</b></td></tr>
+<tr class="separator:af866e8e51d8c4dc64cd74dd12e320373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1ba3f4df497b104f1f390b02f9f047c6"><td class="memItemLeft" align="right" valign="top"><a id="a1ba3f4df497b104f1f390b02f9f047c6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CDllPlugin</b> (const wstring &amp;sBaseDir)</td></tr>
+<tr class="separator:a1ba3f4df497b104f1f390b02f9f047c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110db5405b63c3aed6574f583e7103b1"><td class="memItemLeft" align="right" valign="top"><a id="a110db5405b63c3aed6574f583e7103b1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginDef</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang) override</td></tr>
+<tr class="separator:a110db5405b63c3aed6574f583e7103b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9712acf00b16e6f053c5076a4e742347"><td class="memItemLeft" align="right" valign="top"><a id="a9712acf00b16e6f053c5076a4e742347"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginOption</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile) override</td></tr>
+<tr class="separator:a9712acf00b16e6f053c5076a4e742347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbef9fbe148a6abb399cb8c19281ff52"><td class="memItemLeft" align="right" valign="top"><a id="acbef9fbe148a6abb399cb8c19281ff52"></a>
+<a class="el" href="../../dd/d13/class_c_plug.html">CPlug</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>CreatePlug</b> (<a class="el" href="../../d9/d51/class_c_plugin.html">CPlugin</a> &amp;plugin, <a class="el" href="../../d2/d03/_c_plugin_8h.html#a9636f924ea13dcaa4991a87f07ee2ed6">PlugId</a> id, wstring sJack, wstring sHandler, wstring sLabel) override</td></tr>
+<tr class="separator:acbef9fbe148a6abb399cb8c19281ff52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf4ff96b0844a34ae7414aa1b30b57e"><td class="memItemLeft" align="right" valign="top"><a id="aebf4ff96b0844a34ae7414aa1b30b57e"></a>
+<a class="el" href="../../dd/d13/class_c_plug.html#a6d556414732034cebea4b84ed9197279">CPlug::Array</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlugs</b> () const override</td></tr>
+<tr class="separator:aebf4ff96b0844a34ae7414aa1b30b57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1323fc5c963798f411592e03173dd2b9"><td class="memItemLeft" align="right" valign="top"><a id="a1323fc5c963798f411592e03173dd2b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InvokePlug</b> (<a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *view, <a class="el" href="../../dd/d13/class_c_plug.html">CPlug</a> &amp;plug, CWSHIfObj::List &amp;params) override</td></tr>
+<tr class="separator:a1323fc5c963798f411592e03173dd2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8068c08d23b8d9930b82013b16aa5844"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d95/class_c_dll_plugin.html#a8068c08d23b8d9930b82013b16aa5844">InitDllImp</a> ()</td></tr>
+<tr class="memdesc:a8068c08d23b8d9930b82013b16aa5844"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの初期化  <a href="../../dd/d95/class_c_dll_plugin.html#a8068c08d23b8d9930b82013b16aa5844">[詳解]</a><br /></td></tr>
+<tr class="separator:a8068c08d23b8d9930b82013b16aa5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d02bc73edba15347d55d55cc64dad80"><td class="memItemLeft" align="right" valign="top">LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d95/class_c_dll_plugin.html#a5d02bc73edba15347d55d55cc64dad80">GetDllNameImp</a> (int nIndex)</td></tr>
+<tr class="memdesc:a5d02bc73edba15347d55d55cc64dad80"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLファイル名の取得(複数を順次)  <a href="../../dd/d95/class_c_dll_plugin.html#a5d02bc73edba15347d55d55cc64dad80">[詳解]</a><br /></td></tr>
+<tr class="separator:a5d02bc73edba15347d55d55cc64dad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c3b236268a1d683aef25506160d95e"><td class="memItemLeft" align="right" valign="top"><a id="a94c3b236268a1d683aef25506160d95e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>AddCommand</b> (const WCHAR *handler, const WCHAR *label, const WCHAR *icon, bool doRegister)</td></tr>
+<tr class="separator:a94c3b236268a1d683aef25506160d95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03eba10adf2088b5a91e4f0058656c0"><td class="memItemLeft" align="right" valign="top"><a id="ad03eba10adf2088b5a91e4f0058656c0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCommandCount</b> ()</td></tr>
+<tr class="separator:ad03eba10adf2088b5a91e4f0058656c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c71b883d134b6ea7ce4dd5980263543"><td class="memItemLeft" align="right" valign="top"><a id="a8c71b883d134b6ea7ce4dd5980263543"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFilePath</b> (const wstring &amp;sFileName) const</td></tr>
+<tr class="separator:a8c71b883d134b6ea7ce4dd5980263543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9aa9ccfcd05dd45f51e75b9bafef73e"><td class="memItemLeft" align="right" valign="top"><a id="aa9aa9ccfcd05dd45f51e75b9bafef73e"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginDefPath</b> () const</td></tr>
+<tr class="separator:aa9aa9ccfcd05dd45f51e75b9bafef73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4081c597db49e080d02c62f258db81"><td class="memItemLeft" align="right" valign="top"><a id="a6c4081c597db49e080d02c62f258db81"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetOptionPath</b> () const</td></tr>
+<tr class="separator:a6c4081c597db49e080d02c62f258db81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d48c6f327ab4b216a54da1255be467c"><td class="memItemLeft" align="right" valign="top"><a id="a2d48c6f327ab4b216a54da1255be467c"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFolderName</b> () const</td></tr>
+<tr class="separator:a2d48c6f327ab4b216a54da1255be467c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memItemLeft" align="right" valign="top"><a id="a89601f2b3b9578c93a7d4b8d3368a1e8"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a> () const</td></tr>
+<tr class="memdesc:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの関数を呼び出せるか状態どうか <br /></td></tr>
+<tr class="separator:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbb9983cd44701e32e45f12449fae2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">InitDll</a> (LPCWSTR pszSpecifiedDllName=NULL)</td></tr>
+<tr class="memdesc:a9dbb9983cd44701e32e45f12449fae2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLロードと初期処理  <a href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dbb9983cd44701e32e45f12449fae2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89342932a0061f0460eb665addfc3379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">DeinitDll</a> (bool force=false)</td></tr>
+<tr class="memdesc:a89342932a0061f0460eb665addfc3379"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理とDLLアンロード  <a href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">[詳解]</a><br /></td></tr>
+<tr class="separator:a89342932a0061f0460eb665addfc3379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memItemLeft" align="right" valign="top"><a id="ab7c2f0c5505877f58d19dce62ae69ab1"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">GetInstance</a> () const</td></tr>
+<tr class="memdesc:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスハンドルの取得 <br /></td></tr>
+<tr class="separator:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15922171bb90c760b36830f6277a9cd5"><td class="memItemLeft" align="right" valign="top"><a id="a15922171bb90c760b36830f6277a9cd5"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">GetLoadedDllName</a> () const</td></tr>
+<tr class="memdesc:a15922171bb90c760b36830f6277a9cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード済みDLLファイル名の取得。ロードされていない (またはロードに失敗した) 場合は NULL を返す。 <br /></td></tr>
+<tr class="separator:a15922171bb90c760b36830f6277a9cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a0bd28f54de513cfd5eedd9a9d8472d47"><td class="memItemLeft" align="right" valign="top"><a id="a0bd28f54de513cfd5eedd9a9d8472d47"></a>
+<a class="el" href="../../d2/d03/_c_plugin_8h.html#aa1800e496768ad6a1099308177d8e92f">PluginId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a0bd28f54de513cfd5eedd9a9d8472d47">m_id</a></td></tr>
+<tr class="memdesc:a0bd28f54de513cfd5eedd9a9d8472d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">プラグイン番号（エディタがふる0～MAX_PLUGIN-1の番号） <br /></td></tr>
+<tr class="separator:a0bd28f54de513cfd5eedd9a9d8472d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d9c6f868f4c0d7941f7de5afcbeb4f"><td class="memItemLeft" align="right" valign="top"><a id="ab6d9c6f868f4c0d7941f7de5afcbeb4f"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#ab6d9c6f868f4c0d7941f7de5afcbeb4f">m_sId</a></td></tr>
+<tr class="memdesc:ab6d9c6f868f4c0d7941f7de5afcbeb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">プラグインID <br /></td></tr>
+<tr class="separator:ab6d9c6f868f4c0d7941f7de5afcbeb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d278577c5e3bf13333e0dafa80da183"><td class="memItemLeft" align="right" valign="top"><a id="a1d278577c5e3bf13333e0dafa80da183"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a1d278577c5e3bf13333e0dafa80da183">m_sName</a></td></tr>
+<tr class="memdesc:a1d278577c5e3bf13333e0dafa80da183"><td class="mdescLeft">&#160;</td><td class="mdescRight">プラグイン和名 <br /></td></tr>
+<tr class="separator:a1d278577c5e3bf13333e0dafa80da183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83dc670e874efbfb4798b14d63f9546f"><td class="memItemLeft" align="right" valign="top"><a id="a83dc670e874efbfb4798b14d63f9546f"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a83dc670e874efbfb4798b14d63f9546f">m_sDescription</a></td></tr>
+<tr class="memdesc:a83dc670e874efbfb4798b14d63f9546f"><td class="mdescLeft">&#160;</td><td class="mdescRight">プラグインについての簡単な記述 <br /></td></tr>
+<tr class="separator:a83dc670e874efbfb4798b14d63f9546f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ebf18c5b7b099f966def30a95cf978"><td class="memItemLeft" align="right" valign="top"><a id="a51ebf18c5b7b099f966def30a95cf978"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a51ebf18c5b7b099f966def30a95cf978">m_sAuthor</a></td></tr>
+<tr class="memdesc:a51ebf18c5b7b099f966def30a95cf978"><td class="mdescLeft">&#160;</td><td class="mdescRight">作者 <br /></td></tr>
+<tr class="separator:a51ebf18c5b7b099f966def30a95cf978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541782a40cdc0ea1b8a0eb9fa9e4ab00"><td class="memItemLeft" align="right" valign="top"><a id="a541782a40cdc0ea1b8a0eb9fa9e4ab00"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a541782a40cdc0ea1b8a0eb9fa9e4ab00">m_sVersion</a></td></tr>
+<tr class="memdesc:a541782a40cdc0ea1b8a0eb9fa9e4ab00"><td class="mdescLeft">&#160;</td><td class="mdescRight">バージョン <br /></td></tr>
+<tr class="separator:a541782a40cdc0ea1b8a0eb9fa9e4ab00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a89f079989045d0a4a735382e1721d1"><td class="memItemLeft" align="right" valign="top"><a id="a2a89f079989045d0a4a735382e1721d1"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a2a89f079989045d0a4a735382e1721d1">m_sUrl</a></td></tr>
+<tr class="memdesc:a2a89f079989045d0a4a735382e1721d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">配布URL <br /></td></tr>
+<tr class="separator:a2a89f079989045d0a4a735382e1721d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d39bb2fa980924a63e611920936ad6"><td class="memItemLeft" align="right" valign="top"><a id="a93d39bb2fa980924a63e611920936ad6"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sBaseDir</b></td></tr>
+<tr class="separator:a93d39bb2fa980924a63e611920936ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f3088ca6a316f9ba66215dbac72815"><td class="memItemLeft" align="right" valign="top"><a id="ad8f3088ca6a316f9ba66215dbac72815"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sOptionDir</b></td></tr>
+<tr class="separator:ad8f3088ca6a316f9ba66215dbac72815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedde2a11120d8a0244bb21b11e076ac2"><td class="memItemLeft" align="right" valign="top"><a id="aedde2a11120d8a0244bb21b11e076ac2"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#aedde2a11120d8a0244bb21b11e076ac2">m_sLangName</a></td></tr>
+<tr class="memdesc:aedde2a11120d8a0244bb21b11e076ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">言語名 <br /></td></tr>
+<tr class="separator:aedde2a11120d8a0244bb21b11e076ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd622e65475b6b727f4e88d45c1c0f3"><td class="memItemLeft" align="right" valign="top"><a id="a1cd622e65475b6b727f4e88d45c1c0f3"></a>
+CPluginOption::Array&#160;</td><td class="memItemRight" valign="bottom"><b>m_options</b></td></tr>
+<tr class="separator:a1cd622e65475b6b727f4e88d45c1c0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3d2743650b92d5765b0b1a674245b3"><td class="memItemLeft" align="right" valign="top"><a id="a3a3d2743650b92d5765b0b1a674245b3"></a>
+std::vector&lt; std::wstring &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_aStrings</b></td></tr>
+<tr class="separator:a3a3d2743650b92d5765b0b1a674245b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a1ebda137117abb2d2eca487c569337dc"><td class="memItemLeft" align="right" valign="top"><a id="a1ebda137117abb2d2eca487c569337dc"></a>
+typedef std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>wstring</b></td></tr>
+<tr class="separator:a1ebda137117abb2d2eca487c569337dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1bf1cd04a67f0c1cf8e35ae9e781299"><td class="memItemLeft" align="right" valign="top"><a id="ab1bf1cd04a67f0c1cf8e35ae9e781299"></a>
+typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><b>string</b></td></tr>
+<tr class="separator:ab1bf1cd04a67f0c1cf8e35ae9e781299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a32b8ba28227e4a510d80fa8fe996b40e"><td class="memItemLeft" align="right" valign="top"><a id="a32b8ba28227e4a510d80fa8fe996b40e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginDefCommon</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang)</td></tr>
+<tr class="separator:a32b8ba28227e4a510d80fa8fe996b40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a01bbc3ac725a5ac67835c9ec67225"><td class="memItemLeft" align="right" valign="top"><a id="a39a01bbc3ac725a5ac67835c9ec67225"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginDefPlug</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang)</td></tr>
+<tr class="separator:a39a01bbc3ac725a5ac67835c9ec67225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a11276d48ac717733c585d59e521832"><td class="memItemLeft" align="right" valign="top"><a id="a4a11276d48ac717733c585d59e521832"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginDefCommand</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang)</td></tr>
+<tr class="separator:a4a11276d48ac717733c585d59e521832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e67311bb22120fff0791a84444d57ad"><td class="memItemLeft" align="right" valign="top"><a id="a9e67311bb22120fff0791a84444d57ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadPluginDefOption</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang)</td></tr>
+<tr class="separator:a9e67311bb22120fff0791a84444d57ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530f2f668fc4533394e3be16531d46de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d51/class_c_plugin.html#a530f2f668fc4533394e3be16531d46de">ReadPluginDefString</a> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfile, <a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *cProfileMlang)</td></tr>
+<tr class="separator:a530f2f668fc4533394e3be16531d46de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a992c613d9648deffdc65c5f79409c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">DeinitDllImp</a> ()</td></tr>
+<tr class="memdesc:ab1a992c613d9648deffdc65c5f79409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数の初期化  <a href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1a992c613d9648deffdc65c5f79409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacac64e6dda58142e17ddc09d91e213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">RegisterEntries</a> (const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a> table[])</td></tr>
+<tr class="separator:aaacac64e6dda58142e17ddc09d91e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:aea76fa12665bbafdc51521b04523f190"><td class="memItemLeft" align="right" valign="top"><a id="aea76fa12665bbafdc51521b04523f190"></a>
+<a class="el" href="../../dd/d13/class_c_plug.html#a6d556414732034cebea4b84ed9197279">CPlug::Array</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_plugs</b></td></tr>
+<tr class="separator:aea76fa12665bbafdc51521b04523f190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfaa18d7295a458280c77b6752aac13b"><td class="memItemLeft" align="right" valign="top"><a id="acfaa18d7295a458280c77b6752aac13b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nCommandCount</b></td></tr>
+<tr class="separator:acfaa18d7295a458280c77b6752aac13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a89342932a0061f0460eb665addfc3379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89342932a0061f0460eb665addfc3379">&#9670;&nbsp;</a></span>DeinitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理とDLLアンロード </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>[in] 終了処理に失敗してもDLLを解放するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1a992c613d9648deffdc65c5f79409c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a992c613d9648deffdc65c5f79409c">&#9670;&nbsp;</a></span>DeinitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関数の初期化 </p>
+<p>DLLのアンロードを行う直前に呼び出される．メモリの解放などを 行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返したときはDLLのUnloadは行われない． </dd></dl>
+<dl class="section user"><dt>注意</dt><dd>デストラクタからDeinitDll及びDeinitDllImpが呼び出されたときは ポリモーフィズムが行われないためにサブクラスのDeinitDllImpが呼び出されない。 そのため、サブクラスのデストラクタではDeinitDllImpを明示的に呼び出す必要がある。</dd></dl>
+<p>DeinitDllがデストラクタ以外から呼び出される場合はDeinitDllImpは仮想関数として サブクラスのものが呼び出され、デストラクタは当然呼び出されないので DeinitDllImpそのものは必要である。</p>
+<p>デストラクタからDeinitDllImpを呼ぶときは、初期化されているという保証がないので 呼び出し前にIsAvailableによる確認を必ず行うこと。</p>
+<dl class="section date"><dt>日付</dt><dd>2002.04.15 genta 注意書き追加</dd></dl>
+<p>実装を省略できるようにするため、空の関数を用意しておく </p>
+
+<p><a class="el" href="../../da/deb/class_c_migemo.html#af837903bc4bbdaef81f7e5ba14dafdf5">CMigemo</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a5d02bc73edba15347d55d55cc64dad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d02bc73edba15347d55d55cc64dad80">&#9670;&nbsp;</a></span>GetDllNameImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR CDllPlugin::GetDllNameImp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLファイル名の取得(複数を順次) </p>
+<p>DLLファイル名として複数の可能性があり，そのうちの一つでも 見つかったものを使用する場合に対応する．</p>
+<p>番号に応じてそれぞれ異なるファイル名を返すことができる． LoadLibrary()からはcounterを0から1ずつ増加させて順に呼びだされる． それはDLLのロードに成功する(成功)か，戻り値としてNULLを返す(失敗) まで続けられる．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIndex</td><td>インデックス．(0～)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>引数に応じてDLL名(LoadLibraryに渡す文字列)，またはNULL． </dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a9dbb9983cd44701e32e45f12449fae2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb9983cd44701e32e45f12449fae2a">&#9670;&nbsp;</a></span>InitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a> CDllImp::InitDll </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSpecifiedDllName</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLロードと初期処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSpecifiedDllName</td><td>[in] クラスが定義しているDLL名以外のDLLを読み込みたいときに、そのDLL名を指定。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8068c08d23b8d9930b82013b16aa5844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8068c08d23b8d9930b82013b16aa5844">&#9670;&nbsp;</a></span>InitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllPlugin::InitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLの初期化 </p>
+<p>DLLのロードに成功した直後に呼び出される．エントリポイントの 確認などを行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返した場合は、読み込んだDLLを解放する． </dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a530f2f668fc4533394e3be16531d46de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530f2f668fc4533394e3be16531d46de">&#9670;&nbsp;</a></span>ReadPluginDefString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CPlugin::ReadPluginDefString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *&#160;</td>
+          <td class="paramname"><em>cProfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> *&#160;</td>
+          <td class="paramname"><em>cProfileMlang</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>プラグイン定義ファイルのStringセクションを読み込む </p>
+
+</div>
+</div>
+<a id="aaacac64e6dda58142e17ddc09d91e213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacac64e6dda58142e17ddc09d91e213">&#9670;&nbsp;</a></span>RegisterEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::RegisterEntries </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a>&#160;</td>
+          <td class="paramname"><em>table</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>テーブルで与えられたエントリポインタアドレスを入れる場所に 対応する文字列から調べたエントリポインタを設定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>[in] 名前とアドレスの対応表。最後は{NULL,0}で終わること。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>全てのアドレスが設定された。 </td></tr>
+    <tr><td class="paramname">false</td><td>アドレスの取得に失敗した関数があった。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/plugin/<a class="el" href="../../d7/dea/_c_dll_plugin_8h_source.html">CDllPlugin.h</a></li>
+<li>sakura_core/plugin/<a class="el" href="../../db/db3/_c_dll_plugin_8cpp.html">CDllPlugin.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDocFileOperation クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d8/d59/class_c_doc_file_operation-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDocFileOperation クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5577270c4f69c13d7c34e193088645ce"><td class="memItemLeft" align="right" valign="top"><a id="a5577270c4f69c13d7c34e193088645ce"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CDocFileOperation</b> (<a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *pcDoc)</td></tr>
+<tr class="separator:a5577270c4f69c13d7c34e193088645ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6733943c8e63c0cdfabc968de9352a0f"><td class="memItemLeft" align="right" valign="top"><a id="a6733943c8e63c0cdfabc968de9352a0f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_ToDoLock</b> () const</td></tr>
+<tr class="separator:a6733943c8e63c0cdfabc968de9352a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9120d5ee15b06bbdd8cc25be9d54a5a4"><td class="memItemLeft" align="right" valign="top"><a id="a9120d5ee15b06bbdd8cc25be9d54a5a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoFileLock</b> (bool bMsg=true)</td></tr>
+<tr class="separator:a9120d5ee15b06bbdd8cc25be9d54a5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae544efcdecad3d3821c7942b923aaa13"><td class="memItemLeft" align="right" valign="top"><a id="ae544efcdecad3d3821c7942b923aaa13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoFileUnlock</b> ()</td></tr>
+<tr class="separator:ae544efcdecad3d3821c7942b923aaa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca37c8d793206ff655968791372949c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a6ca37c8d793206ff655968791372949c">OpenFileDialog</a> (HWND hwndParent, const WCHAR *pszOpenFolder, <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo, std::vector&lt; std::wstring &gt; &amp;files)</td></tr>
+<tr class="separator:a6ca37c8d793206ff655968791372949c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5b1be68e6d9b12c7f5cf73f8facfb4"><td class="memItemLeft" align="right" valign="top"><a id="aec5b1be68e6d9b12c7f5cf73f8facfb4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DoLoadFlow</b> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo)</td></tr>
+<tr class="separator:aec5b1be68e6d9b12c7f5cf73f8facfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac910cd15ae2db14736b6daf3fd7339ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#ac910cd15ae2db14736b6daf3fd7339ab">FileLoad</a> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo)</td></tr>
+<tr class="memdesc:ac910cd15ae2db14736b6daf3fd7339ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを開く  <a href="../../dd/db0/class_c_doc_file_operation.html#ac910cd15ae2db14736b6daf3fd7339ab">[詳解]</a><br /></td></tr>
+<tr class="separator:ac910cd15ae2db14736b6daf3fd7339ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df5efecc9db26da73df917ecca82f6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a5df5efecc9db26da73df917ecca82f6d">FileLoadWithoutAutoMacro</a> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo)</td></tr>
+<tr class="memdesc:a5df5efecc9db26da73df917ecca82f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを開く（自動実行マクロを実行しない）  <a href="../../dd/db0/class_c_doc_file_operation.html#a5df5efecc9db26da73df917ecca82f6d">[詳解]</a><br /></td></tr>
+<tr class="separator:a5df5efecc9db26da73df917ecca82f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a649b8281b0b6e62eb346840a092f93f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a649b8281b0b6e62eb346840a092f93f0">ReloadCurrentFile</a> (<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode)</td></tr>
+<tr class="memdesc:a649b8281b0b6e62eb346840a092f93f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">同一ファイルの再オープン  <a href="../../dd/db0/class_c_doc_file_operation.html#a649b8281b0b6e62eb346840a092f93f0">[詳解]</a><br /></td></tr>
+<tr class="separator:a649b8281b0b6e62eb346840a092f93f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070ab65382d4a7dc7844491f932e5b61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a070ab65382d4a7dc7844491f932e5b61">SaveFileDialog</a> (<a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *pSaveInfo)</td></tr>
+<tr class="memdesc:a070ab65382d4a7dc7844491f932e5b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">「ファイル名を付けて保存」ダイアログ  <a href="../../dd/db0/class_c_doc_file_operation.html#a070ab65382d4a7dc7844491f932e5b61">[詳解]</a><br /></td></tr>
+<tr class="separator:a070ab65382d4a7dc7844491f932e5b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1572fdf6eb780e4d57112f3930ca7ce"><td class="memItemLeft" align="right" valign="top"><a id="aa1572fdf6eb780e4d57112f3930ca7ce"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#aa1572fdf6eb780e4d57112f3930ca7ce">SaveFileDialog</a> (LPWSTR szPath)</td></tr>
+<tr class="memdesc:aa1572fdf6eb780e4d57112f3930ca7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">「ファイル名を付けて保存」ダイアログ <br /></td></tr>
+<tr class="separator:aa1572fdf6eb780e4d57112f3930ca7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7af79c913feed03c3be0e255cac618"><td class="memItemLeft" align="right" valign="top"><a id="a9a7af79c913feed03c3be0e255cac618"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DoSaveFlow</b> (<a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *pSaveInfo)</td></tr>
+<tr class="separator:a9a7af79c913feed03c3be0e255cac618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a514963f3bc2f770087a22c1ab1035e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a5a514963f3bc2f770087a22c1ab1035e">FileSaveAs</a> (const WCHAR *filename=NULL, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeType=<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>, <a class="el" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a> eEolType=EOL_NONE, bool bDialog=true)</td></tr>
+<tr class="memdesc:a5a514963f3bc2f770087a22c1ab1035e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログでファイル名を入力させ、保存。 // 2006.12.30 ryoji  <a href="../../dd/db0/class_c_doc_file_operation.html#a5a514963f3bc2f770087a22c1ab1035e">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a514963f3bc2f770087a22c1ab1035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443d40019e588b14ecfccf1b9961f120"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a443d40019e588b14ecfccf1b9961f120">FileSave</a> ()</td></tr>
+<tr class="memdesc:a443d40019e588b14ecfccf1b9961f120"><td class="mdescLeft">&#160;</td><td class="mdescRight">上書き保存。ファイル名が指定されていなかったらダイアログで入力を促す。 // 2006.12.30 ryoji  <a href="../../dd/db0/class_c_doc_file_operation.html#a443d40019e588b14ecfccf1b9961f120">[詳解]</a><br /></td></tr>
+<tr class="separator:a443d40019e588b14ecfccf1b9961f120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09d1d472b98c995b1477a3b79dcf7b1"><td class="memItemLeft" align="right" valign="top"><a id="aa09d1d472b98c995b1477a3b79dcf7b1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#aa09d1d472b98c995b1477a3b79dcf7b1">FileClose</a> ()</td></tr>
+<tr class="memdesc:aa09d1d472b98c995b1477a3b79dcf7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">閉じて(無題) // 2006.12.30 ryoji <br /></td></tr>
+<tr class="separator:aa09d1d472b98c995b1477a3b79dcf7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43439b982adf3b5d3477f57cae843925"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db0/class_c_doc_file_operation.html#a43439b982adf3b5d3477f57cae843925">FileCloseOpen</a> (const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;sLoadInfo=<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>(L&quot;&quot;, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60af3b38acf197fbe97d494ac6eaa8e11ab">CODE_AUTODETECT</a>, false))</td></tr>
+<tr class="separator:a43439b982adf3b5d3477f57cae843925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a43439b982adf3b5d3477f57cae843925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43439b982adf3b5d3477f57cae843925">&#9670;&nbsp;</a></span>FileCloseOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDocFileOperation::FileCloseOpen </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>sLoadInfo</em> = <code><a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>(L&quot;&quot;,&#160;<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60af3b38acf197fbe97d494ac6eaa8e11ab">CODE_AUTODETECT</a>,&#160;false)</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sLoadInfo</td><td>閉じて開く // 2006.12.30 ryoji </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac910cd15ae2db14736b6daf3fd7339ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac910cd15ae2db14736b6daf3fd7339ab">&#9670;&nbsp;</a></span>FileLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::FileLoad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *&#160;</td>
+          <td class="paramname"><em>pLoadInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルを開く </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pLoadInfo</td><td>[in,out] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5df5efecc9db26da73df917ecca82f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df5efecc9db26da73df917ecca82f6d">&#9670;&nbsp;</a></span>FileLoadWithoutAutoMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::FileLoadWithoutAutoMacro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *&#160;</td>
+          <td class="paramname"><em>pLoadInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルを開く（自動実行マクロを実行しない） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pLoadInfo</td><td>[in,out] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a443d40019e588b14ecfccf1b9961f120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a443d40019e588b14ecfccf1b9961f120">&#9670;&nbsp;</a></span>FileSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::FileSave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上書き保存。ファイル名が指定されていなかったらダイアログで入力を促す。 // 2006.12.30 ryoji </p>
+<p>上書き保存</p>
+<dl class="section return"><dt>戻り値</dt><dd>保存が行われたor保存不要のため何も行わなかったときにtrueを返す</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2004.06.05 genta ビューモードのチェックをCEditDocから上書き保存処理に移動 </dd>
+<dd>
+2006.12.30 ryoji CEditView::Command_FILESAVE()から処理本体を切り出し </dd>
+<dd>
+2008.03.20 kobake 戻り値の仕様を定義 </dd></dl>
+
+</div>
+</div>
+<a id="a5a514963f3bc2f770087a22c1ab1035e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a514963f3bc2f770087a22c1ab1035e">&#9670;&nbsp;</a></span>FileSaveAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::FileSaveAs </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>eCodeType</em> = <code><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a>&#160;</td>
+          <td class="paramname"><em>eEolType</em> = <code>EOL_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bDialog</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ダイアログでファイル名を入力させ、保存。 // 2006.12.30 ryoji </p>
+<p>名前を付けて保存フロー</p>
+<dl class="section date"><dt>日付</dt><dd>2006.12.30 ryoji CEditView::Command_FILESAVEAS_DIALOG()から処理本体を切り出し </dd></dl>
+
+</div>
+</div>
+<a id="a6ca37c8d793206ff655968791372949c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca37c8d793206ff655968791372949c">&#9670;&nbsp;</a></span>OpenFileDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::OpenFileDialog </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszOpenFolder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *&#160;</td>
+          <td class="paramname"><em>pLoadInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::wstring &gt; &amp;&#160;</td>
+          <td class="paramname"><em>files</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hwndParent</td><td>[in] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszOpenFolder</td><td>[in] NULL以外を指定すると初期フォルダを指定できる </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pLoadInfo</td><td>[in,out] ロード情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a649b8281b0b6e62eb346840a092f93f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649b8281b0b6e62eb346840a092f93f0">&#9670;&nbsp;</a></span>ReloadCurrentFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDocFileOperation::ReloadCurrentFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>nCharCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同一ファイルの再オープン </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nCharCode</td><td>同一ファイルの再オープン Jul. 26, 2003 ryoji BOMオプション追加 [in] 文字コード種別 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a070ab65382d4a7dc7844491f932e5b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070ab65382d4a7dc7844491f932e5b61">&#9670;&nbsp;</a></span>SaveFileDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDocFileOperation::SaveFileDialog </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *&#160;</td>
+          <td class="paramname"><em>pSaveInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>「ファイル名を付けて保存」ダイアログ </p>
+<p>「ファイル名を付けて保存」ダイアログ </p><dl class="section date"><dt>日付</dt><dd>2001.02.09 genta 改行コードを示す引数追加 </dd>
+<dd>
+2003.03.30 genta ファイル名未定時の初期ディレクトリをカレントフォルダに </dd>
+<dd>
+2003.07.20 ryoji BOMの有無を示す引数追加 </dd>
+<dd>
+2006.11.10 ryoji ユーザー指定の拡張子を状況依存で変化させる </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pSaveInfo</td><td>[out] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/doc/<a class="el" href="../../d3/d97/_c_doc_file_operation_8h_source.html">CDocFileOperation.h</a></li>
+<li>sakura_core/doc/<a class="el" href="../../dc/db1/_c_doc_file_operation_8cpp.html">CDocFileOperation.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

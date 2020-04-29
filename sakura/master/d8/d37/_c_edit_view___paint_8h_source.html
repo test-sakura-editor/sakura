@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/CEditView_Paint.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CEditView_Paint.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d37/_c_edit_view___paint_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5">   30</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5">EPaintArea</a>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a323c190b62265645c4a6db59335c2dd5">   31</a></span>&#160;    <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a323c190b62265645c4a6db59335c2dd5">PAINT_LINENUMBER</a> = (1&lt;&lt;0), </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a81c8cc6a0ce916062a538c1e3b5fc075">   32</a></span>&#160;    <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a81c8cc6a0ce916062a538c1e3b5fc075">PAINT_RULER</a>      = (1&lt;&lt;1), </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a57dcc230a85ae4c05f21a00e99be3fd3">   33</a></span>&#160;    <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a57dcc230a85ae4c05f21a00e99be3fd3">PAINT_BODY</a>       = (1&lt;&lt;2), </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//特殊</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a01e973162deb387451763f66344d388c">   36</a></span>&#160;    <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a01e973162deb387451763f66344d388c">PAINT_ALL</a>        = <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a323c190b62265645c4a6db59335c2dd5">PAINT_LINENUMBER</a> | <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a81c8cc6a0ce916062a538c1e3b5fc075">PAINT_RULER</a> | <a class="code" href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a57dcc230a85ae4c05f21a00e99be3fd3">PAINT_BODY</a>, </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d4/d95/class_c_edit_view___paint.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d95/class_c_edit_view___paint.html">CEditView_Paint</a>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* GetEditView()=0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d4/d95/class_c_edit_view___paint.html">CEditView_Paint</a>(){}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d95/class_c_edit_view___paint.html#ada80bd1bb238abbac4777c7d1f995d29">Call_OnPaint</a>(</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> nPaintFlag,   </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">bool</span> bUseMemoryDC </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_edit_view___paint_8h_html_a535a53aeb9a0a77ed11c00ab5d7857e5"><div class="ttname"><a href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5">EPaintArea</a></div><div class="ttdeci">EPaintArea</div><div class="ttdoc">クリッピング領域を計算する際のフラグ</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:30</div></div>
+<div class="ttc" id="aclass_c_edit_view___paint_html_ada80bd1bb238abbac4777c7d1f995d29"><div class="ttname"><a href="../../d4/d95/class_c_edit_view___paint.html#ada80bd1bb238abbac4777c7d1f995d29">CEditView_Paint::Call_OnPaint</a></div><div class="ttdeci">void Call_OnPaint(int nPaintFlag, bool bUseMemoryDC)</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.cpp:59</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="aclass_c_edit_view___paint_html"><div class="ttname"><a href="../../d4/d95/class_c_edit_view___paint.html">CEditView_Paint</a></div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:39</div></div>
+<div class="ttc" id="a_c_edit_view___paint_8h_html_a535a53aeb9a0a77ed11c00ab5d7857e5a57dcc230a85ae4c05f21a00e99be3fd3"><div class="ttname"><a href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a57dcc230a85ae4c05f21a00e99be3fd3">PAINT_BODY</a></div><div class="ttdeci">@ PAINT_BODY</div><div class="ttdoc">本文</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:33</div></div>
+<div class="ttc" id="a_c_edit_view___paint_8h_html_a535a53aeb9a0a77ed11c00ab5d7857e5a01e973162deb387451763f66344d388c"><div class="ttname"><a href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a01e973162deb387451763f66344d388c">PAINT_ALL</a></div><div class="ttdeci">@ PAINT_ALL</div><div class="ttdoc">ぜんぶ</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:36</div></div>
+<div class="ttc" id="a_c_edit_view___paint_8h_html_a535a53aeb9a0a77ed11c00ab5d7857e5a81c8cc6a0ce916062a538c1e3b5fc075"><div class="ttname"><a href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a81c8cc6a0ce916062a538c1e3b5fc075">PAINT_RULER</a></div><div class="ttdeci">@ PAINT_RULER</div><div class="ttdoc">ルーラー</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:32</div></div>
+<div class="ttc" id="a_c_edit_view___paint_8h_html_a535a53aeb9a0a77ed11c00ab5d7857e5a323c190b62265645c4a6db59335c2dd5"><div class="ttname"><a href="../../d8/d37/_c_edit_view___paint_8h.html#a535a53aeb9a0a77ed11c00ab5d7857e5a323c190b62265645c4a6db59335c2dd5">PAINT_LINENUMBER</a></div><div class="ttdeci">@ PAINT_LINENUMBER</div><div class="ttdoc">行番号</div><div class="ttdef"><b>Definition:</b> CEditView_Paint.h:31</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

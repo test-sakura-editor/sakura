@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/config/system_constants.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_7f6cbd855a2b261331a8a59f37cc8874.html">config</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">system_constants.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d9d/system__constants_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//                       定数命名補助                          //</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//数値定数の文字列化 2009.02.11 ryoji</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define _NUM_TO_STR(n) #n</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define NUM_TO_STR(n) _NUM_TO_STR(n)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    #define _DEBUG_SUFFIX_ &quot;_DEBUG&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    #define _DEBUG_SUFFIX_ &quot;&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa270e8a41eee5d6d22f8f9d84cd22c2e">   49</a></span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define _CODE_SUFFIX_ &quot;WP&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#abc375bb81f2ef230a9bb5087a5009b03">   53</a></span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifdef _WIN64</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    #define CON_SKR_MACHINE_SUFFIX_ &quot;M64&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">    #define CON_SKR_MACHINE_SUFFIX_ &quot;&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a7884674b64a20b71287d4b3ab8fa5255">   59</a></span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//                        共有メモリ                           //</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;<span class="preprocessor">#define N_SHAREDATA_VERSION     176</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a15537ec8641def1bcc85a03e52dd2284">  553</a></span>&#160;<span class="preprocessor">#define STR_SHAREDATA_VERSION   NUM_TO_STR(N_SHAREDATA_VERSION)</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="preprocessor">#define GSTR_SHAREDATA  (L&quot;SakuraShareData&quot; _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_) _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<span class="comment">//                      ミューテックス                         //</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA                   L&quot;MutexSakuraEditor&quot;</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a8a6519d32b3c1d16024a8cb7ca186597">  562</a></span>&#160; </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_CP                (L&quot;MutexSakuraEditorCP&quot;             _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a7505dcb253392b5e4b2dee7ae451ee4b">  565</a></span>&#160; </div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_INIT              (L&quot;MutexSakuraEditorInit&quot;           _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#afebdb1964c16c8ab715313436fac32b1">  568</a></span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_EDITARR           (L&quot;MutexSakuraEditorEditArr&quot;            _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#ac9a155b452edbc4b26012e0bf2ff0381">  571</a></span>&#160; </div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment">//DLLSHARE Work操作同期</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_SHAREWORK         (L&quot;MutexSakuraEditorShareWork&quot;      _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_KEYWORD           (L&quot;MutexSakuraEditorKeyword&quot;            _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a32fcbb94be7209c9ab169786920635bf">  577</a></span>&#160; </div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="comment">//タイプ別設定転送用</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;<span class="preprocessor">#define GSTR_MUTEX_SAKURA_DOCTYPE           (L&quot;MutexSakuraEditorDocType&quot;            _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">//                         イベント                            //</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="preprocessor">#define GSTR_EVENT_SAKURA_CP_INITIALIZED    (L&quot;EventSakuraEditorCPInitialized&quot;  _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)    _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a62bd32f99bbf9a7e9bba4f9d84519910">  587</a></span>&#160; </div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;<span class="comment">//                     ウィンドウクラス                        //</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="preprocessor">#define GSTR_CEDITAPP       (L&quot;CControlTray&quot; _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)       _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a518d0e7dacc68fee87113cd3ece52db0">  594</a></span>&#160; </div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="preprocessor">#define GSTR_EDITWINDOWNAME (L&quot;TextEditorWindow&quot; _T(CON_SKR_MACHINE_SUFFIX_) _T(_CODE_SUFFIX_) _T(_DEBUG_SUFFIX_)   _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00597"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a4ea82c754d2f71e68c3d3e734cc5537a">  597</a></span>&#160; </div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="preprocessor">#define GSTR_VIEWNAME       (L&quot;SakuraView&quot;                                              _T(STR_SHAREDATA_VERSION))</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a30abc58b2d71ecae7b44a191afdb89fd">  600</a></span>&#160; </div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="comment">//                         リソース                            //</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;<span class="comment">//  Dec. 2, 2002 genta</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="comment">//  固定ファイル名</span></div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="preprocessor">#define FN_APP_ICON  L&quot;my_appicon.ico&quot;</span></div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="preprocessor">#define FN_GREP_ICON L&quot;my_grepicon.ico&quot;</span></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="preprocessor">#define FN_TOOL_BMP  L&quot;my_icons.bmp&quot;</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;<span class="comment">//  標準アプリケーションアイコンリソース名</span></div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="preprocessor">#define ICON_DEFAULT_APP IDI_ICON_STD</span></div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="preprocessor">#define ICON_DEFAULT_GREP IDI_ICON_GREP</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="comment">//                      パフォーマンス                         //</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="comment">//バッファサイズ</span></div>
+<div class="line"><a name="l00618"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#ab8d1b04b084b8b63d55d3bec80c11d67">  618</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../d1/d9d/system__constants_8h.html#ab8d1b04b084b8b63d55d3bec80c11d67">LINEREADBUFSIZE</a>   = 10240;    </div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="comment">//                          フラグ                             //</span></div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;<span class="preprocessor">#define _SHIFT  0x00000001</span></div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;<span class="preprocessor">#define _CTRL   0x00000002</span></div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">#define _ALT    0x00000004</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;<span class="comment">//                        メッセージ                           //</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="comment">//wParam: X</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;<span class="comment">//lParam: Y</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="preprocessor">#define MYWM_DOSPLIT        (WM_APP+1500)   </span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment">//wParam: なんかのインデックス</span></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="comment">//lParam: boolっぽい何か</span></div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="preprocessor">#define MYWM_SETACTIVEPANE  (WM_APP+1510)</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160; </div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="comment">//wParam:PM_CHANGESETTING_TYPEのとき、タイプ別設定Index。それ以外なし。</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<span class="preprocessor">#define MYWM_CHANGESETTING  (WM_APP+1520)</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a1fd20c21737c0bdcb88930f59cad940d">  643</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43c">e_PM_CHANGESETTING_SELECT</a> {</div>
+<div class="line"><a name="l00645"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8b152e73d04ef8dac0fdd0b60790cb31">  645</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8b152e73d04ef8dac0fdd0b60790cb31">PM_CHANGESETTING_ALL</a>        = 0, </div>
+<div class="line"><a name="l00646"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8907213040ddee697fd79e96da804910">  646</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8907213040ddee697fd79e96da804910">PM_CHANGESETTING_FONT</a>       = 1, </div>
+<div class="line"><a name="l00647"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca47df0bdefa9240407a93088859994690">  647</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca47df0bdefa9240407a93088859994690">PM_CHANGESETTING_FONTSIZE</a>   = 2, </div>
+<div class="line"><a name="l00648"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caebda79715b85750846fc76ccb1d1bc2a">  648</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caebda79715b85750846fc76ccb1d1bc2a">PM_CHANGESETTING_TYPE</a>       = 3, </div>
+<div class="line"><a name="l00649"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caa1a19b7f6f4f799bd6a4f8a43235d5ca">  649</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caa1a19b7f6f4f799bd6a4f8a43235d5ca">PM_CHANGESETTING_TYPE2</a>      = 4, </div>
+<div class="line"><a name="l00650"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca851a9bdd5a669f60cd8133ee1a1a1d12">  650</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca851a9bdd5a669f60cd8133ee1a1a1d12">PM_PRINTSETTING</a>             = 5, </div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;};</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="preprocessor">#define MYWM_SAVEEDITSTATE  (WM_APP+1521)</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a0cf02d0eee121e1ca95c199eb60955b6">  654</a></span>&#160; </div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="preprocessor">#define MYWM_NOTIFYICON     (WM_APP+100)</span></div>
+<div class="line"><a name="l00657"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a255be3b2e0d4ed68a0f5a35ed30ac9e2">  657</a></span>&#160; </div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="preprocessor">#define MYWM_CLOSE          (WM_APP+200)</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a9e1b48438b158b595443142504015bfa">  660</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487">e_PM_CLOSE_WPARAM</a> {</div>
+<div class="line"><a name="l00661"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a741edfc1d19c254b083bf5710a7ccbed">  661</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a741edfc1d19c254b083bf5710a7ccbed">PM_CLOSE_EXIT</a>               = 1, </div>
+<div class="line"><a name="l00662"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a640249cc00bc8ed3e274a58e974baaaa">  662</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a640249cc00bc8ed3e274a58e974baaaa">PM_CLOSE_GREPNOCONFIRM</a>      = 2, </div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;};</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;<span class="preprocessor">#define MYWM_ALLOWACTIVATE  (WM_APP+201)</span></div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;<span class="preprocessor">#define MYWM_GETFILEINFO    (WM_APP+203)</span></div>
+<div class="line"><a name="l00668"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a1deb8a538d24630e7dd122eb7e0d97e3">  668</a></span>&#160; </div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;<span class="preprocessor">#define MYWM_SETCARETPOS    (WM_APP+204)</span></div>
+<div class="line"><a name="l00671"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#af88531e35793566dcc264fff03ddfd2b">  671</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78d">e_PM_SETCARETPOS_SELECTSTATE</a> {</div>
+<div class="line"><a name="l00673"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daf6b91554bdd5f8d604140fb4ad1bd148">  673</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daf6b91554bdd5f8d604140fb4ad1bd148">PM_SETCARETPOS_NOSELECT</a>     = 0, </div>
+<div class="line"><a name="l00674"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daaef4427e278078c478b34ae8e66b30df">  674</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daaef4427e278078c478b34ae8e66b30df">PM_SETCARETPOS_SELECT</a>       = 1, </div>
+<div class="line"><a name="l00675"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78dac8b915ccbe23bbbe5cee027ca2aa62dd">  675</a></span>&#160;    <a class="code" href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78dac8b915ccbe23bbbe5cee027ca2aa62dd">PM_SETCARETPOS_KEEPSELECT</a>   = 2, </div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;};</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160; </div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="preprocessor">#define MYWM_GETCARETPOS    (WM_APP+205)</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a0475b85148f1dd3d95e91bd3b186ae32">  680</a></span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="comment">//wParam:未使用</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="comment">//lParam:未使用</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="preprocessor">#define MYWM_ADDSTRING      (WM_APP+206)</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a61e93eabcfc9dcad00f53e2bf040363e">  685</a></span>&#160; </div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<span class="preprocessor">#define MYWM_SETREFERER     (WM_APP+207)</span></div>
+<div class="line"><a name="l00688"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa29bb7f199679530a77678b885a5ae6e">  688</a></span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="preprocessor">#define MYWM_GETLINEDATA    (WM_APP+208)</span></div>
+<div class="line"><a name="l00699"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a43b8ad38b5c95ebf13503aa2cb8c7a96">  699</a></span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="preprocessor">#define MYWM_DELETE_ME      (WM_APP+209)</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#afe7dbf805c5322ecd97463db08607aba">  702</a></span>&#160; </div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="preprocessor">#define MYWM_OPENNEWEDITOR  (WM_APP+210)</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aafc231568018005ee91ac69e4e508afa">  705</a></span>&#160; </div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="comment">//ヘルプっぽい何か</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="preprocessor">#define MYWM_HTMLHELP           (WM_APP+212)</span></div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#define MYWM_TAB_WINDOW_NOTIFY  (WM_APP+213)    //@@@ 2003.05.31 MIK</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a0b1cc5cde6b27e80a5e45d4d03e2e81b">  711</a></span>&#160; </div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">#define MYWM_BAR_CHANGE_NOTIFY  (WM_APP+214)    //@@@ 2003.06.10 MIK</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#af111351f785bfa84267ea386c654d8e5">  714</a></span>&#160; </div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="preprocessor">#define MYWM_UIPI_CHECK (WM_APP+215)    //@@@ 2007.06.07 ryoji</span></div>
+<div class="line"><a name="l00717"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a433b458b7cc50275cf6e1d84f249c0df">  717</a></span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="preprocessor">#define MYWM_SHOWOWNEDPOPUPS (WM_APP+216)   //@@@ 2007.10.22 ryoji</span></div>
+<div class="line"><a name="l00720"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a0372dc9d8669e30da3a00fb850ec0572">  720</a></span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#define MYWM_FIRST_IDLE (WM_APP+217)    //@@@ 2008.04.19 ryoji</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a155825b876bd7888eca0ae3ebb75749c">  723</a></span>&#160; </div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">#define MYWM_DROPFILES (WM_APP+218) //@@@ 2008.06.18 ryoji</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a6d46a26f0ab8a238cfb1c2def15c68e6">  726</a></span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">// wParam:追加する文字数(WCHAR単位)</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">// lParam:未使用</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">// @2010.05.11 Moca メッセージ追加</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="preprocessor">#define MYWM_ADDSTRINGLEN_W (WM_APP+219)</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a1fc31865d0767d7e15f4d346a7191b6d">  732</a></span>&#160; </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="preprocessor">#define MYWM_OUTLINE_NOTIFY (WM_APP+220)    //@@@ 2010.06.06 ryoji</span></div>
+<div class="line"><a name="l00735"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#acec2112e7d72b29bdaa048e8d078b442">  735</a></span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="comment">// wParam:タイプ別番号</span></div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="preprocessor">#define MYWM_SET_TYPESETTING (WM_APP+221)</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#aa570c4eb5440a969ce6f23addcd237ac">  739</a></span>&#160;<span class="preprocessor">#define MYWM_GET_TYPESETTING (WM_APP+222)</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a84edc8224eeb62933505306949d0f7c5">  741</a></span>&#160; </div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="preprocessor">#define MYWM_ADD_TYPESETTING (WM_APP+223)</span></div>
+<div class="line"><a name="l00744"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#a7e1293bf8648f960ce76e24e2532fd20">  744</a></span>&#160;<span class="preprocessor">#define MYWM_DEL_TYPESETTING (WM_APP+224)</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno"><a class="line" href="../../d1/d9d/system__constants_8h.html#adf3a3c5fc28f378b7de094feb95c0101">  746</a></span>&#160; </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="preprocessor">#define MYWM_DLGWINLIST (WM_APP+225)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43ca8b152e73d04ef8dac0fdd0b60790cb31"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8b152e73d04ef8dac0fdd0b60790cb31">PM_CHANGESETTING_ALL</a></div><div class="ttdeci">@ PM_CHANGESETTING_ALL</div><div class="ttdoc">全部</div><div class="ttdef"><b>Definition:</b> system_constants.h:645</div></div>
+<div class="ttc" id="asystem__constants_8h_html_ab8d1b04b084b8b63d55d3bec80c11d67"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#ab8d1b04b084b8b63d55d3bec80c11d67">LINEREADBUFSIZE</a></div><div class="ttdeci">const int LINEREADBUFSIZE</div><div class="ttdoc">ファイルから1行分データを読み込むときのバッファサイズ</div><div class="ttdef"><b>Definition:</b> system_constants.h:618</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43c"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43c">e_PM_CHANGESETTING_SELECT</a></div><div class="ttdeci">e_PM_CHANGESETTING_SELECT</div><div class="ttdoc">MYWM_CHANGESETTINGメッセージのlParam</div><div class="ttdef"><b>Definition:</b> system_constants.h:644</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43caa1a19b7f6f4f799bd6a4f8a43235d5ca"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caa1a19b7f6f4f799bd6a4f8a43235d5ca">PM_CHANGESETTING_TYPE2</a></div><div class="ttdeci">@ PM_CHANGESETTING_TYPE2</div><div class="ttdoc">タイプ別設定(再読み込みなし)</div><div class="ttdef"><b>Definition:</b> system_constants.h:649</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43ca8907213040ddee697fd79e96da804910"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca8907213040ddee697fd79e96da804910">PM_CHANGESETTING_FONT</a></div><div class="ttdeci">@ PM_CHANGESETTING_FONT</div><div class="ttdoc">フォント変更</div><div class="ttdef"><b>Definition:</b> system_constants.h:646</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43caebda79715b85750846fc76ccb1d1bc2a"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43caebda79715b85750846fc76ccb1d1bc2a">PM_CHANGESETTING_TYPE</a></div><div class="ttdeci">@ PM_CHANGESETTING_TYPE</div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> system_constants.h:648</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a05f922f393402d5d33236c1e63a73487"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487">e_PM_CLOSE_WPARAM</a></div><div class="ttdeci">e_PM_CLOSE_WPARAM</div><div class="ttdef"><b>Definition:</b> system_constants.h:660</div></div>
+<div class="ttc" id="asystem__constants_8h_html_aa863d4863b4e35a420870cb9f19ce78daf6b91554bdd5f8d604140fb4ad1bd148"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daf6b91554bdd5f8d604140fb4ad1bd148">PM_SETCARETPOS_NOSELECT</a></div><div class="ttdeci">@ PM_SETCARETPOS_NOSELECT</div><div class="ttdoc">選択解除</div><div class="ttdef"><b>Definition:</b> system_constants.h:673</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a05f922f393402d5d33236c1e63a73487a640249cc00bc8ed3e274a58e974baaaa"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a640249cc00bc8ed3e274a58e974baaaa">PM_CLOSE_GREPNOCONFIRM</a></div><div class="ttdeci">@ PM_CLOSE_GREPNOCONFIRM</div><div class="ttdoc">Grepで終了確認しない</div><div class="ttdef"><b>Definition:</b> system_constants.h:662</div></div>
+<div class="ttc" id="asystem__constants_8h_html_aa863d4863b4e35a420870cb9f19ce78dac8b915ccbe23bbbe5cee027ca2aa62dd"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78dac8b915ccbe23bbbe5cee027ca2aa62dd">PM_SETCARETPOS_KEEPSELECT</a></div><div class="ttdeci">@ PM_SETCARETPOS_KEEPSELECT</div><div class="ttdoc">現在の選択状態を保って移動</div><div class="ttdef"><b>Definition:</b> system_constants.h:675</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43ca47df0bdefa9240407a93088859994690"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca47df0bdefa9240407a93088859994690">PM_CHANGESETTING_FONTSIZE</a></div><div class="ttdeci">@ PM_CHANGESETTING_FONTSIZE</div><div class="ttdoc">フォントサイズ変更(WPARAM タイプ別番号。-1で共通設定変更)</div><div class="ttdef"><b>Definition:</b> system_constants.h:647</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a35693892aa623db0385f05db920fb43ca851a9bdd5a669f60cd8133ee1a1a1d12"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a35693892aa623db0385f05db920fb43ca851a9bdd5a669f60cd8133ee1a1a1d12">PM_PRINTSETTING</a></div><div class="ttdeci">@ PM_PRINTSETTING</div><div class="ttdoc">プリント設定</div><div class="ttdef"><b>Definition:</b> system_constants.h:650</div></div>
+<div class="ttc" id="asystem__constants_8h_html_aa863d4863b4e35a420870cb9f19ce78daaef4427e278078c478b34ae8e66b30df"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78daaef4427e278078c478b34ae8e66b30df">PM_SETCARETPOS_SELECT</a></div><div class="ttdeci">@ PM_SETCARETPOS_SELECT</div><div class="ttdoc">選択開始・変更</div><div class="ttdef"><b>Definition:</b> system_constants.h:674</div></div>
+<div class="ttc" id="asystem__constants_8h_html_a05f922f393402d5d33236c1e63a73487a741edfc1d19c254b083bf5710a7ccbed"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#a05f922f393402d5d33236c1e63a73487a741edfc1d19c254b083bf5710a7ccbed">PM_CLOSE_EXIT</a></div><div class="ttdeci">@ PM_CLOSE_EXIT</div><div class="ttdoc">全終了</div><div class="ttdef"><b>Definition:</b> system_constants.h:661</div></div>
+<div class="ttc" id="asystem__constants_8h_html_aa863d4863b4e35a420870cb9f19ce78d"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html#aa863d4863b4e35a420870cb9f19ce78d">e_PM_SETCARETPOS_SELECTSTATE</a></div><div class="ttdeci">e_PM_SETCARETPOS_SELECTSTATE</div><div class="ttdoc">MYWM_SETCARETPOSメッセージのlParam</div><div class="ttdef"><b>Definition:</b> system_constants.h:672</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

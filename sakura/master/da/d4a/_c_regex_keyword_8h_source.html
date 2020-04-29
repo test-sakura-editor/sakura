@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/CRegexKeyword.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CRegexKeyword.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d4a/_c_regex_keyword_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2001, MIK</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//@@@ 2001.11.17 add start MIK</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/dbf/_c_bregexp_8h.html">extmodule/CBregexp.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span> <span class="comment">//MAX_REGEX_KEYWORD</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//@@@ 2001.11.17 add start MIK</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../da/d80/struct_regex_keyword_info.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../da/d80/struct_regex_keyword_info.html">RegexKeywordInfo</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> m_nColorIndex;      <span class="comment">//色指定番号</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//@@@ 2001.11.17 add end MIK</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d2/db7/struct_regex_info__t.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d2/db7/struct_regex_info__t.html">RegexInfo_t</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../db/d44/structbregexp.html">BREGEXP_W</a>   *pBregexp;  <span class="comment">//BREGEXP_W構造体</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span>    nStatus;     <span class="comment">//状態(EMPTY,CLOSE,OPEN,ACTIVE,ERROR)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span>    nMatch;      <span class="comment">//このキーワードのマッチ状態(EMPTY,MATCH,NOMATCH)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span>    nOffset;     <span class="comment">//マッチした位置</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span>    nLength;     <span class="comment">//マッチした長さ</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span>    nHead;       <span class="comment">//先頭のみチェックするか？</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span>    nFlag;           <span class="comment">//色指定のチェックが入っているか？ YES=RK_EMPTY, NO=RK_NOMATCH</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../da/d4a/_c_regex_keyword_8h.html#aa70f817959d800eb309d5e39f82d0562">   42</a></span>&#160;} <a class="code" href="../../da/d4a/_c_regex_keyword_8h.html#aa70f817959d800eb309d5e39f82d0562">REGEX_INFO</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dc/dd3/class_c_regex_keyword.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/dd3/class_c_regex_keyword.html">CRegexKeyword</a> : <span class="keyword">public</span> <a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a97e2359132e2ffb843309990dee9f8c4">CRegexKeyword</a>(LPCWSTR);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a46cb5a2ab14ec7ea35efab0a56059683">~CRegexKeyword</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a3b8de29dad6416655d1dbdcb587b0fc6">RegexKeyLineStart</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a266de3b64ff6269a440144337d6126d2">RegexIsKeyword</a>( <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos, <span class="keywordtype">int</span> *nMatchLen, <span class="keywordtype">int</span> *nMatchColor );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#ad256cd601b7bb68b27a29c55e9b9bf98">RegexKeySetTypes</a>( <span class="keyword">const</span> <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> *pTypesPtr );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">static</span> BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#ae5998039f82bff2fb5c3f3494ed20f9e">RegexKeyCheckSyntax</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *s );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">static</span> DWORD GetNewMagicNumber();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a88b485a3d1388b640eb3a6c12b4ca4ce">RegexKeyCompile</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    BOOL <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a449a9801c87da45cc2a77358cac6efa6">RegexKeyInit</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../dc/dd3/class_c_regex_keyword.html#aab5a504b702519e19a7ada2b1031689c">   72</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#aab5a504b702519e19a7ada2b1031689c">m_nTypeIndex</a>;               </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../dc/dd3/class_c_regex_keyword.html#a0fdc308da4d2bb0ff5dfe758f4c1fa45">   73</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../dc/dd3/class_c_regex_keyword.html#a0fdc308da4d2bb0ff5dfe758f4c1fa45">m_bUseRegexKeyword</a>;         </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>*  m_pTypes;               </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span>             m_nTypeId;                  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    DWORD           m_nCompiledMagicNumber;     </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span>             m_nRegexKeyCount;           </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d2/db7/struct_regex_info__t.html">REGEX_INFO</a>      m_sInfo[MAX_REGEX_KEYWORD]; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">wchar_t</span>         m_szMsg[256];               </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//@@@ 2001.11.17 add end MIK</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a266de3b64ff6269a440144337d6126d2"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a266de3b64ff6269a440144337d6126d2">CRegexKeyword::RegexIsKeyword</a></div><div class="ttdeci">BOOL RegexIsKeyword(const CStringRef &amp;cStr, int nPos, int *nMatchLen, int *nMatchColor)</div><div class="ttdoc">行検索</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:346</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a449a9801c87da45cc2a77358cac6efa6"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a449a9801c87da45cc2a77358cac6efa6">CRegexKeyword::RegexKeyInit</a></div><div class="ttdeci">BOOL RegexKeyInit(void)</div><div class="ttdoc">変数初期化</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:119</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_ad256cd601b7bb68b27a29c55e9b9bf98"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#ad256cd601b7bb68b27a29c55e9b9bf98">CRegexKeyword::RegexKeySetTypes</a></div><div class="ttdeci">BOOL RegexKeySetTypes(const STypeConfig *pTypesPtr)</div><div class="ttdoc">タイプ設定</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:149</div></div>
+<div class="ttc" id="a_c_bregexp_8h_html"><div class="ttname"><a href="../../d8/dbf/_c_bregexp_8h.html">CBregexp.h</a></div><div class="ttdoc">BREGEXP Library Handler</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a97e2359132e2ffb843309990dee9f8c4"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a97e2359132e2ffb843309990dee9f8c4">CRegexKeyword::CRegexKeyword</a></div><div class="ttdeci">CRegexKeyword(LPCWSTR)</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:76</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html">CRegexKeyword</a></div><div class="ttdoc">正規表現キーワードクラス</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.h:48</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a0fdc308da4d2bb0ff5dfe758f4c1fa45"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a0fdc308da4d2bb0ff5dfe758f4c1fa45">CRegexKeyword::m_bUseRegexKeyword</a></div><div class="ttdeci">bool m_bUseRegexKeyword</div><div class="ttdoc">正規表現キーワードを使用する・しない</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.h:73</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a3b8de29dad6416655d1dbdcb587b0fc6"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a3b8de29dad6416655d1dbdcb587b0fc6">CRegexKeyword::RegexKeyLineStart</a></div><div class="ttdeci">BOOL RegexKeyLineStart(void)</div><div class="ttdoc">行検索開始</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:312</div></div>
+<div class="ttc" id="a_c_regex_keyword_8h_html_aa70f817959d800eb309d5e39f82d0562"><div class="ttname"><a href="../../da/d4a/_c_regex_keyword_8h.html#aa70f817959d800eb309d5e39f82d0562">REGEX_INFO</a></div><div class="ttdeci">struct RegexInfo_t REGEX_INFO</div><div class="ttdoc">正規表現キーワード検索情報構造体</div></div>
+<div class="ttc" id="astruct_regex_keyword_info_html"><div class="ttname"><a href="../../da/d80/struct_regex_keyword_info.html">RegexKeywordInfo</a></div><div class="ttdef"><b>Definition:</b> CRegexKeyword.h:28</div></div>
+<div class="ttc" id="astructbregexp_html"><div class="ttname"><a href="../../db/d44/structbregexp.html">bregexp</a></div><div class="ttdef"><b>Definition:</b> CBregexpDll2.h:29</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a46cb5a2ab14ec7ea35efab0a56059683"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a46cb5a2ab14ec7ea35efab0a56059683">CRegexKeyword::~CRegexKeyword</a></div><div class="ttdeci">~CRegexKeyword()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:93</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="astruct_regex_info__t_html"><div class="ttname"><a href="../../d2/db7/struct_regex_info__t.html">RegexInfo_t</a></div><div class="ttdoc">正規表現キーワード検索情報構造体</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.h:34</div></div>
+<div class="ttc" id="aclass_c_bregexp_html"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html">CBregexp</a></div><div class="ttdoc">Perl互換正規表現 BREGEXP.DLL をサポートするクラス</div><div class="ttdef"><b>Definition:</b> CBregexp.h:64</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_ae5998039f82bff2fb5c3f3494ed20f9e"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#ae5998039f82bff2fb5c3f3494ed20f9e">CRegexKeyword::RegexKeyCheckSyntax</a></div><div class="ttdeci">static BOOL RegexKeyCheckSyntax(const wchar_t *s)</div><div class="ttdoc">書式(囲み)チェック</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:424</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_aab5a504b702519e19a7ada2b1031689c"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#aab5a504b702519e19a7ada2b1031689c">CRegexKeyword::m_nTypeIndex</a></div><div class="ttdeci">int m_nTypeIndex</div><div class="ttdoc">現在のタイプ設定番号</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.h:72</div></div>
+<div class="ttc" id="aclass_c_regex_keyword_html_a88b485a3d1388b640eb3a6c12b4ca4ce"><div class="ttname"><a href="../../dc/dd3/class_c_regex_keyword.html#a88b485a3d1388b640eb3a6c12b4ca4ce">CRegexKeyword::RegexKeyCompile</a></div><div class="ttdeci">BOOL RegexKeyCompile(void)</div><div class="ttdoc">コンパイル</div><div class="ttdef"><b>Definition:</b> CRegexKeyword.cpp:196</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

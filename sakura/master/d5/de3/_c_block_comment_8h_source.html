@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/CBlockComment.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CBlockComment.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/de3/_c_block_comment_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, Yazaki</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2005, Moca</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  sakura</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">enum</span> ECommentType{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    COMMENT_TYPE_0  = 0,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    COMMENT_TYPE_1  = 1,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define BLOCKCOMMENT_NUM    2</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d5/de3/_c_block_comment_8h.html#ac50f91888fba9d6edbeb4b791fe93df7">   33</a></span>&#160;<span class="preprocessor">#define BLOCKCOMMENT_BUFFERSIZE 16</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//  2005.11.10 Moca アクセス関数追加</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../de/da9/class_c_block_comment.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/da9/class_c_block_comment.html">CBlockComment</a>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//生成と破棄</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../de/da9/class_c_block_comment.html">CBlockComment</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/da9/class_c_block_comment.html#a6feb0c1773d1f6e53e02b1a0cd6e77ad">SetBlockCommentRule</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszFrom, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszTo );   <span class="comment">//  行コメントデリミタをコピーする</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//判定</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../de/da9/class_c_block_comment.html#a7dba1b248ee87b0b03d47eadbd345c35">Match_CommentFrom</a>( <span class="keywordtype">int</span> nPos, <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr ) <span class="keyword">const</span>;   <span class="comment">//  行コメントに値するか確認する</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../de/da9/class_c_block_comment.html#acab331f4efc5495ea2b60b113a468ead">Match_CommentTo</a>( <span class="keywordtype">int</span> nPos, <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr ) <span class="keyword">const</span>;  <span class="comment">//  行コメントに値するか確認する</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//取得</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* getBlockCommentFrom()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_szBlockCommentFrom; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* getBlockCommentTo()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_szBlockCommentTo; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> getBlockFromLen()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nBlockFromLen; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> getBlockToLen()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nBlockToLen; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">wchar_t</span> m_szBlockCommentFrom[BLOCKCOMMENT_BUFFERSIZE]; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">wchar_t</span> m_szBlockCommentTo[BLOCKCOMMENT_BUFFERSIZE];   </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span>     m_nBlockFromLen;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span>     m_nBlockToLen;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_block_comment_html_a6feb0c1773d1f6e53e02b1a0cd6e77ad"><div class="ttname"><a href="../../de/da9/class_c_block_comment.html#a6feb0c1773d1f6e53e02b1a0cd6e77ad">CBlockComment::SetBlockCommentRule</a></div><div class="ttdeci">void SetBlockCommentRule(const wchar_t *pszFrom, const wchar_t *pszTo)</div><div class="ttdef"><b>Definition:</b> CBlockComment.cpp:30</div></div>
+<div class="ttc" id="aclass_c_block_comment_html_acab331f4efc5495ea2b60b113a468ead"><div class="ttname"><a href="../../de/da9/class_c_block_comment.html#acab331f4efc5495ea2b60b113a468ead">CBlockComment::Match_CommentTo</a></div><div class="ttdeci">int Match_CommentTo(int nPos, const CStringRef &amp;cStr) const</div><div class="ttdef"><b>Definition:</b> CBlockComment.cpp:87</div></div>
+<div class="ttc" id="aclass_c_block_comment_html_a7dba1b248ee87b0b03d47eadbd345c35"><div class="ttname"><a href="../../de/da9/class_c_block_comment.html#a7dba1b248ee87b0b03d47eadbd345c35">CBlockComment::Match_CommentFrom</a></div><div class="ttdeci">bool Match_CommentFrom(int nPos, const CStringRef &amp;cStr) const</div><div class="ttdef"><b>Definition:</b> CBlockComment.cpp:61</div></div>
+<div class="ttc" id="aclass_c_block_comment_html"><div class="ttname"><a href="../../de/da9/class_c_block_comment.html">CBlockComment</a></div><div class="ttdef"><b>Definition:</b> CBlockComment.h:36</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

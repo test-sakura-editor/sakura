@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CModifyManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d6/d2c/class_c_modify_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CModifyManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Modified管理  
+ <a href="../../d4/d7f/class_c_modify_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d42/_c_modify_manager_8h_source.html">CModifyManager.h</a>&gt;</code></p>
+<div class="dynheader">
+CModifyManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d7f/class_c_modify_manager.png" usemap="#CModifyManager_map" alt=""/>
+  <map id="CModifyManager_map" name="CModifyManager_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CModifyManager &gt;" shape="rect" coords="0,168,194,192"/>
+<area href="../../d6/de5/class_c_doc_listener_ex.html" alt="CDocListenerEx" shape="rect" coords="204,168,398,192"/>
+<area href="../../d0/d43/class_c_doc_listener.html" alt="CDocListener" shape="rect" coords="204,112,398,136"/>
+<area href="../../da/d9f/class_c_listener_t.html" alt="CListenerT&lt; CDocSubject &gt;" shape="rect" coords="204,56,398,80"/>
+<area href="../../d7/def/class_c_listener.html" title="1つのCSubjectをウォッチする" alt="CListener" shape="rect" coords="204,0,398,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac31ef4c4ce8609a4778d31830066d89f"><td class="memItemLeft" align="right" valign="top"><a id="ac31ef4c4ce8609a4778d31830066d89f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7f/class_c_modify_manager.html#ac31ef4c4ce8609a4778d31830066d89f">OnAfterSave</a> (const <a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> &amp;sSaveInfo) override</td></tr>
+<tr class="memdesc:ac31ef4c4ce8609a4778d31830066d89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブ事後処理 <br /></td></tr>
+<tr class="separator:ac31ef4c4ce8609a4778d31830066d89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f88d00745258563862ed19a0dd1d3b"><td class="memItemLeft" align="right" valign="top"><a id="a29f88d00745258563862ed19a0dd1d3b"></a>
+<a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListeningDoc</b> () const</td></tr>
+<tr class="separator:a29f88d00745258563862ed19a0dd1d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79297fc0104f0b2c8541ecef03488a9"><td class="memItemLeft" align="right" valign="top"><a id="ad79297fc0104f0b2c8541ecef03488a9"></a>
+virtual <a class="el" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#ad79297fc0104f0b2c8541ecef03488a9">OnCheckLoad</a> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo)</td></tr>
+<tr class="memdesc:ad79297fc0104f0b2c8541ecef03488a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">本当にロードを行うかの判定を行う <br /></td></tr>
+<tr class="separator:ad79297fc0104f0b2c8541ecef03488a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801c421a24f4fc6b388f5fa1a0728812"><td class="memItemLeft" align="right" valign="top"><a id="a801c421a24f4fc6b388f5fa1a0728812"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a801c421a24f4fc6b388f5fa1a0728812">OnBeforeLoad</a> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *sLoadInfo)</td></tr>
+<tr class="memdesc:a801c421a24f4fc6b388f5fa1a0728812"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード事前処理 <br /></td></tr>
+<tr class="separator:a801c421a24f4fc6b388f5fa1a0728812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4cbddc7480c94919832ecdd76422ae"><td class="memItemLeft" align="right" valign="top"><a id="a4b4cbddc7480c94919832ecdd76422ae"></a>
+virtual <a class="el" href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1">ELoadResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a4b4cbddc7480c94919832ecdd76422ae">OnLoad</a> (const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;sLoadInfo)</td></tr>
+<tr class="memdesc:a4b4cbddc7480c94919832ecdd76422ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード処理 <br /></td></tr>
+<tr class="separator:a4b4cbddc7480c94919832ecdd76422ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f338f223ae4ff7c8bf1b65b4a9153de"><td class="memItemLeft" align="right" valign="top"><a id="a2f338f223ae4ff7c8bf1b65b4a9153de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a2f338f223ae4ff7c8bf1b65b4a9153de">OnLoading</a> (int nPer)</td></tr>
+<tr class="memdesc:a2f338f223ae4ff7c8bf1b65b4a9153de"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード処理の経過情報を受信 <br /></td></tr>
+<tr class="separator:a2f338f223ae4ff7c8bf1b65b4a9153de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0964531d761223ff70321755fc13454"><td class="memItemLeft" align="right" valign="top"><a id="ae0964531d761223ff70321755fc13454"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#ae0964531d761223ff70321755fc13454">OnAfterLoad</a> (const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;sLoadInfo)</td></tr>
+<tr class="memdesc:ae0964531d761223ff70321755fc13454"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード事後処理 <br /></td></tr>
+<tr class="separator:ae0964531d761223ff70321755fc13454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3caeba2707f5fde73e595a8952986d8c"><td class="memItemLeft" align="right" valign="top"><a id="a3caeba2707f5fde73e595a8952986d8c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a3caeba2707f5fde73e595a8952986d8c">OnFinalLoad</a> (<a class="el" href="../../d3/db0/_c_doc_listener_8h.html#a90a6914b1b4f031273b196c12f8127f1">ELoadResult</a> eLoadResult)</td></tr>
+<tr class="memdesc:a3caeba2707f5fde73e595a8952986d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロードフローの最後に必ず呼ばれる <br /></td></tr>
+<tr class="separator:a3caeba2707f5fde73e595a8952986d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718a2698ec73ea2a1d0f06021fc165e4"><td class="memItemLeft" align="right" valign="top"><a id="a718a2698ec73ea2a1d0f06021fc165e4"></a>
+virtual <a class="el" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a718a2698ec73ea2a1d0f06021fc165e4">OnCheckSave</a> (<a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *pSaveInfo)</td></tr>
+<tr class="memdesc:a718a2698ec73ea2a1d0f06021fc165e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">本当にセーブを行うかの判定を行う <br /></td></tr>
+<tr class="separator:a718a2698ec73ea2a1d0f06021fc165e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0537553790616e00caf777e390e5b09"><td class="memItemLeft" align="right" valign="top"><a id="ae0537553790616e00caf777e390e5b09"></a>
+virtual <a class="el" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#ae0537553790616e00caf777e390e5b09">OnPreBeforeSave</a> (<a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *pSaveInfo)</td></tr>
+<tr class="memdesc:ae0537553790616e00caf777e390e5b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブ事前おまけ処理 ($$ 仮) <br /></td></tr>
+<tr class="separator:ae0537553790616e00caf777e390e5b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3509fb24db9fc7cde2fa258c4c7890e7"><td class="memItemLeft" align="right" valign="top"><a id="a3509fb24db9fc7cde2fa258c4c7890e7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a3509fb24db9fc7cde2fa258c4c7890e7">OnBeforeSave</a> (const <a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> &amp;sSaveInfo)</td></tr>
+<tr class="memdesc:a3509fb24db9fc7cde2fa258c4c7890e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブ事前処理 <br /></td></tr>
+<tr class="separator:a3509fb24db9fc7cde2fa258c4c7890e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7df6f1b89ddb4159ff86daa147d000"><td class="memItemLeft" align="right" valign="top"><a id="a0d7df6f1b89ddb4159ff86daa147d000"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a0d7df6f1b89ddb4159ff86daa147d000">OnSave</a> (const <a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> &amp;sSaveInfo)</td></tr>
+<tr class="memdesc:a0d7df6f1b89ddb4159ff86daa147d000"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブ処理 <br /></td></tr>
+<tr class="separator:a0d7df6f1b89ddb4159ff86daa147d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad013aa9107b45353b4bd8d970b3f2628"><td class="memItemLeft" align="right" valign="top"><a id="ad013aa9107b45353b4bd8d970b3f2628"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#ad013aa9107b45353b4bd8d970b3f2628">OnSaving</a> (int nPer)</td></tr>
+<tr class="memdesc:ad013aa9107b45353b4bd8d970b3f2628"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブ処理の経過情報を受信 <br /></td></tr>
+<tr class="separator:ad013aa9107b45353b4bd8d970b3f2628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c85b73e1e472ef7d6248557ddb8a23"><td class="memItemLeft" align="right" valign="top"><a id="a66c85b73e1e472ef7d6248557ddb8a23"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d43/class_c_doc_listener.html#a66c85b73e1e472ef7d6248557ddb8a23">OnFinalSave</a> (<a class="el" href="../../d3/db0/_c_doc_listener_8h.html#a5e1597c079db64ef8d19c4dec2cac431">ESaveResult</a> eSaveResult)</td></tr>
+<tr class="memdesc:a66c85b73e1e472ef7d6248557ddb8a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">セーブフローの最後に必ず呼ばれる <br /></td></tr>
+<tr class="separator:a66c85b73e1e472ef7d6248557ddb8a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac854569dd57c0bf48115c168d0344ee0"><td class="memItemLeft" align="right" valign="top"><a id="ac854569dd57c0bf48115c168d0344ee0"></a>
+virtual <a class="el" href="../../d3/db0/_c_doc_listener_8h.html#add15cacee55dd6634030d9479cc66362">ECallbackResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnBeforeClose</b> ()</td></tr>
+<tr class="separator:ac854569dd57c0bf48115c168d0344ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57674aa3970a750130ee0194fb91f76"><td class="memItemLeft" align="right" valign="top"><a id="ac57674aa3970a750130ee0194fb91f76"></a>
+<a class="el" href="../../d9/da6/class_c_doc_subject.html">CDocSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Listen</b> (<a class="el" href="../../d9/da6/class_c_doc_subject.html">CDocSubject</a> *pcSubject)</td></tr>
+<tr class="separator:ac57674aa3970a750130ee0194fb91f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462c96166f483fba52156d0c9f996818"><td class="memItemLeft" align="right" valign="top"><a id="a462c96166f483fba52156d0c9f996818"></a>
+<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/def/class_c_listener.html#a462c96166f483fba52156d0c9f996818">Listen</a> (<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *pcSubject)</td></tr>
+<tr class="memdesc:a462c96166f483fba52156d0c9f996818"><td class="mdescLeft">&#160;</td><td class="mdescRight">直前にウォッチしていたサブジェクトを返す <br /></td></tr>
+<tr class="separator:a462c96166f483fba52156d0c9f996818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc21edce0a4f68fa5f1b061a1dd521c"><td class="memItemLeft" align="right" valign="top"><a id="a0cc21edce0a4f68fa5f1b061a1dd521c"></a>
+<a class="el" href="../../d9/da6/class_c_doc_subject.html">CDocSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListeningSubject</b> () const</td></tr>
+<tr class="separator:a0cc21edce0a4f68fa5f1b061a1dd521c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f531e60eacd26494384015ea920115"><td class="memItemLeft" align="right" valign="top"><a id="a56f531e60eacd26494384015ea920115"></a>
+<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListeningSubject</b> () const</td></tr>
+<tr class="separator:a56f531e60eacd26494384015ea920115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d4/d7f/class_c_modify_manager.html">CModifyManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a8f31d9aff0f8e91de11e719070f23ba4"><td class="memItemLeft" align="right" valign="top"><a id="a8f31d9aff0f8e91de11e719070f23ba4"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CModifyManager &gt;</b></td></tr>
+<tr class="separator:a8f31d9aff0f8e91de11e719070f23ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Modified管理 </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/docplus/<a class="el" href="../../d5/d42/_c_modify_manager_8h_source.html">CModifyManager.h</a></li>
+<li>sakura_core/docplus/<a class="el" href="../../da/d67/_c_modify_manager_8cpp.html">CModifyManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/GrepInfo.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GrepInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d52/_grep_info_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2018-2020 Sakura Editor Organization</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span>   <span class="comment">//SSearchOption</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d86/charcode_8h.html">charset/charcode.h</a>&quot;</span>   <span class="comment">//ECodeType</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d38/_c_native_w_8h.html">mem/CNativeW.h</a>&quot;</span>   <span class="comment">//CNativeW</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d7/d8b/struct_grep_info.html">GrepInfo</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a1579f11664749d1551981ff7dd7b0636">   40</a></span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>        <a class="code" href="../../d7/d8b/struct_grep_info.html#a1579f11664749d1551981ff7dd7b0636">cmGrepKey</a>;              </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a98b64cbfc193186b5b2e1cfc4423735c">   41</a></span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>        <a class="code" href="../../d7/d8b/struct_grep_info.html#a98b64cbfc193186b5b2e1cfc4423735c">cmGrepRep</a>;              </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a153e65ebc02909ea834d257d749b50f4">   42</a></span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>        <a class="code" href="../../d7/d8b/struct_grep_info.html#a153e65ebc02909ea834d257d749b50f4">cmGrepFile</a>;             </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a788a33b275b1548ac9101bf2a2ca3816">   43</a></span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>        <a class="code" href="../../d7/d8b/struct_grep_info.html#a788a33b275b1548ac9101bf2a2ca3816">cmGrepFolder</a>;           </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#ae0cfb5f71a120485eacaba98ceac8a85">   44</a></span>&#160;    <a class="code" href="../../d2/d18/struct_s_search_option.html">SSearchOption</a>   <a class="code" href="../../d7/d8b/struct_grep_info.html#ae0cfb5f71a120485eacaba98ceac8a85">sGrepSearchOption</a>;      </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a583ba1ba529bacc966dd376dd1e84ea1">   45</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a583ba1ba529bacc966dd376dd1e84ea1">bGrepCurFolder</a>;         </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#adba2a1ca6f323353a2a7e756124dc4fe">   46</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#adba2a1ca6f323353a2a7e756124dc4fe">bGrepStdout</a>;            </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a6fe2d30b88cd2478bf072ff1a29ded90">   47</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a6fe2d30b88cd2478bf072ff1a29ded90">bGrepHeader</a>;            </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a679885bbc471cf7ff571a9a24d434f34">   48</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a679885bbc471cf7ff571a9a24d434f34">bGrepSubFolder</a>;         </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a8904b454dab5a93517280c4e66e4dc2f">   49</a></span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>       <a class="code" href="../../d7/d8b/struct_grep_info.html#a8904b454dab5a93517280c4e66e4dc2f">nGrepCharSet</a>;           </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#acf08b7b7943f7ce40801a8a419194244">   50</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d7/d8b/struct_grep_info.html#acf08b7b7943f7ce40801a8a419194244">nGrepOutputStyle</a>;       </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a5f21647fef215ad9c93a3b3bd8110341">   51</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d7/d8b/struct_grep_info.html#a5f21647fef215ad9c93a3b3bd8110341">nGrepOutputLineType</a>;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a20f257dc47d42f802c8291ff4362baa2">   52</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a20f257dc47d42f802c8291ff4362baa2">bGrepOutputFileOnly</a>;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#af67768b4abcec6c3ab620decaf19bd66">   53</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#af67768b4abcec6c3ab620decaf19bd66">bGrepOutputBaseFolder</a>;  </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#abbc56668b79b6583fe1a639c650a6795">   54</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#abbc56668b79b6583fe1a639c650a6795">bGrepSeparateFolder</a>;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a1e2f71bc8387c7f660d8974d9f0b0ffe">   55</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a1e2f71bc8387c7f660d8974d9f0b0ffe">bGrepReplace</a>;           </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a9b2834d2794a733f0beb5726042748e7">   56</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a9b2834d2794a733f0beb5726042748e7">bGrepPaste</a>;             </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d8b/struct_grep_info.html#a45dd674fb2ba249a8a2a1f14e083c3b9">   57</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d7/d8b/struct_grep_info.html#a45dd674fb2ba249a8a2a1f14e083c3b9">bGrepBackup</a>;            </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// コンストラクタ</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d7/d8b/struct_grep_info.html#ae4547c6cf6fa0dfffb3d3cc9e0c1036b">GrepInfo</a>() noexcept;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="a_c_native_w_8h_html"><div class="ttname"><a href="../../d8/d38/_c_native_w_8h.html">CNativeW.h</a></div></div>
+<div class="ttc" id="astruct_grep_info_html_a153e65ebc02909ea834d257d749b50f4"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a153e65ebc02909ea834d257d749b50f4">GrepInfo::cmGrepFile</a></div><div class="ttdeci">CNativeW cmGrepFile</div><div class="ttdoc">検索対象ファイル</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:42</div></div>
+<div class="ttc" id="astruct_grep_info_html_abbc56668b79b6583fe1a639c650a6795"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#abbc56668b79b6583fe1a639c650a6795">GrepInfo::bGrepSeparateFolder</a></div><div class="ttdeci">bool bGrepSeparateFolder</div><div class="ttdoc">フォルダ毎に表示</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:54</div></div>
+<div class="ttc" id="astruct_grep_info_html_af67768b4abcec6c3ab620decaf19bd66"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#af67768b4abcec6c3ab620decaf19bd66">GrepInfo::bGrepOutputBaseFolder</a></div><div class="ttdeci">bool bGrepOutputBaseFolder</div><div class="ttdoc">ベースフォルダ表示</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:53</div></div>
+<div class="ttc" id="astruct_grep_info_html_a45dd674fb2ba249a8a2a1f14e083c3b9"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a45dd674fb2ba249a8a2a1f14e083c3b9">GrepInfo::bGrepBackup</a></div><div class="ttdeci">bool bGrepBackup</div><div class="ttdoc">置換でバックアップを保存</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:57</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="astruct_s_search_option_html"><div class="ttname"><a href="../../d2/d18/struct_s_search_option.html">SSearchOption</a></div><div class="ttdef"><b>Definition:</b> global.h:150</div></div>
+<div class="ttc" id="astruct_grep_info_html_adba2a1ca6f323353a2a7e756124dc4fe"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#adba2a1ca6f323353a2a7e756124dc4fe">GrepInfo::bGrepStdout</a></div><div class="ttdeci">bool bGrepStdout</div><div class="ttdoc">標準出力モード</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:46</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="astruct_grep_info_html_a1579f11664749d1551981ff7dd7b0636"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a1579f11664749d1551981ff7dd7b0636">GrepInfo::cmGrepKey</a></div><div class="ttdeci">CNativeW cmGrepKey</div><div class="ttdoc">検索キー</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:40</div></div>
+<div class="ttc" id="astruct_grep_info_html_a98b64cbfc193186b5b2e1cfc4423735c"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a98b64cbfc193186b5b2e1cfc4423735c">GrepInfo::cmGrepRep</a></div><div class="ttdeci">CNativeW cmGrepRep</div><div class="ttdoc">置換キー</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:41</div></div>
+<div class="ttc" id="astruct_grep_info_html_ae0cfb5f71a120485eacaba98ceac8a85"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#ae0cfb5f71a120485eacaba98ceac8a85">GrepInfo::sGrepSearchOption</a></div><div class="ttdeci">SSearchOption sGrepSearchOption</div><div class="ttdoc">検索オプション</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:44</div></div>
+<div class="ttc" id="astruct_grep_info_html_acf08b7b7943f7ce40801a8a419194244"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#acf08b7b7943f7ce40801a8a419194244">GrepInfo::nGrepOutputStyle</a></div><div class="ttdeci">int nGrepOutputStyle</div><div class="ttdoc">結果出力形式</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:50</div></div>
+<div class="ttc" id="astruct_grep_info_html_a8904b454dab5a93517280c4e66e4dc2f"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a8904b454dab5a93517280c4e66e4dc2f">GrepInfo::nGrepCharSet</a></div><div class="ttdeci">ECodeType nGrepCharSet</div><div class="ttdoc">文字コードセット</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:49</div></div>
+<div class="ttc" id="astruct_grep_info_html_a1e2f71bc8387c7f660d8974d9f0b0ffe"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a1e2f71bc8387c7f660d8974d9f0b0ffe">GrepInfo::bGrepReplace</a></div><div class="ttdeci">bool bGrepReplace</div><div class="ttdoc">Grep置換</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:55</div></div>
+<div class="ttc" id="astruct_grep_info_html_a788a33b275b1548ac9101bf2a2ca3816"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a788a33b275b1548ac9101bf2a2ca3816">GrepInfo::cmGrepFolder</a></div><div class="ttdeci">CNativeW cmGrepFolder</div><div class="ttdoc">検索対象フォルダ</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:43</div></div>
+<div class="ttc" id="astruct_grep_info_html"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html">GrepInfo</a></div><div class="ttdef"><b>Definition:</b> GrepInfo.h:39</div></div>
+<div class="ttc" id="astruct_grep_info_html_a20f257dc47d42f802c8291ff4362baa2"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a20f257dc47d42f802c8291ff4362baa2">GrepInfo::bGrepOutputFileOnly</a></div><div class="ttdeci">bool bGrepOutputFileOnly</div><div class="ttdoc">ファイル毎最初のみ検索</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:52</div></div>
+<div class="ttc" id="astruct_grep_info_html_a679885bbc471cf7ff571a9a24d434f34"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a679885bbc471cf7ff571a9a24d434f34">GrepInfo::bGrepSubFolder</a></div><div class="ttdeci">bool bGrepSubFolder</div><div class="ttdoc">サブフォルダを検索する</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:48</div></div>
+<div class="ttc" id="astruct_grep_info_html_a9b2834d2794a733f0beb5726042748e7"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a9b2834d2794a733f0beb5726042748e7">GrepInfo::bGrepPaste</a></div><div class="ttdeci">bool bGrepPaste</div><div class="ttdoc">クリップボードから貼り付け</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:56</div></div>
+<div class="ttc" id="astruct_grep_info_html_a6fe2d30b88cd2478bf072ff1a29ded90"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a6fe2d30b88cd2478bf072ff1a29ded90">GrepInfo::bGrepHeader</a></div><div class="ttdeci">bool bGrepHeader</div><div class="ttdoc">ヘッダ情報表示</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:47</div></div>
+<div class="ttc" id="astruct_grep_info_html_a5f21647fef215ad9c93a3b3bd8110341"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a5f21647fef215ad9c93a3b3bd8110341">GrepInfo::nGrepOutputLineType</a></div><div class="ttdeci">int nGrepOutputLineType</div><div class="ttdoc">結果出力：行を出力/該当部分/否マッチ行</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:51</div></div>
+<div class="ttc" id="astruct_grep_info_html_a583ba1ba529bacc966dd376dd1e84ea1"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#a583ba1ba529bacc966dd376dd1e84ea1">GrepInfo::bGrepCurFolder</a></div><div class="ttdeci">bool bGrepCurFolder</div><div class="ttdoc">カレントディレクトリを維持</div><div class="ttdef"><b>Definition:</b> GrepInfo.h:45</div></div>
+<div class="ttc" id="astruct_grep_info_html_ae4547c6cf6fa0dfffb3d3cc9e0c1036b"><div class="ttname"><a href="../../d7/d8b/struct_grep_info.html#ae4547c6cf6fa0dfffb3d3cc9e0c1036b">GrepInfo::GrepInfo</a></div><div class="ttdeci">GrepInfo() noexcept</div><div class="ttdef"><b>Definition:</b> GrepInfo.cpp:32</div></div>
+<div class="ttc" id="acharcode_8h_html"><div class="ttname"><a href="../../d4/d86/charcode_8h.html">charcode.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

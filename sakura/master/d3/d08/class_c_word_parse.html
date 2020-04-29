@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CWordParse クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="../../d2/d03/class_c_word_parse-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CWordParse クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a71a28ffeb40c534297fa69805abc2a92"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#a71a28ffeb40c534297fa69805abc2a92">WhereCurrentWord_2</a> (const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnIdxFrom, CLogicInt *pnIdxTo, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmcmWord, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmcmWordLeft)</td></tr>
+<tr class="memdesc:a71a28ffeb40c534297fa69805abc2a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置の単語の範囲を調べる staticメンバ  <a href="../../d3/d08/class_c_word_parse.html#a71a28ffeb40c534297fa69805abc2a92">[詳解]</a><br /></td></tr>
+<tr class="separator:a71a28ffeb40c534297fa69805abc2a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8047249eb8077839c31214182ebecf"><td class="memItemLeft" align="right" valign="top"><a id="aae8047249eb8077839c31214182ebecf"></a>
+static <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#aae8047249eb8077839c31214182ebecf">WhatKindOfChar</a> (const wchar_t *pData, int pDataLen, int nIdx)</td></tr>
+<tr class="memdesc:aae8047249eb8077839c31214182ebecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置の文字の種類を調べる <br /></td></tr>
+<tr class="separator:aae8047249eb8077839c31214182ebecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8fcfb0dbe1e5f288e5d47e2690502d"><td class="memItemLeft" align="right" valign="top"><a id="acf8fcfb0dbe1e5f288e5d47e2690502d"></a>
+static <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#acf8fcfb0dbe1e5f288e5d47e2690502d">WhatKindOfTwoChars</a> (<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> kindPre, <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> kindCur)</td></tr>
+<tr class="memdesc:acf8fcfb0dbe1e5f288e5d47e2690502d"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの文字を結合したものの種類を調べる <br /></td></tr>
+<tr class="separator:acf8fcfb0dbe1e5f288e5d47e2690502d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada637cc515363b57b1093838b145b333"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#ada637cc515363b57b1093838b145b333">WhatKindOfTwoChars4KW</a> (<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> kindPre, <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> kindCur)</td></tr>
+<tr class="memdesc:ada637cc515363b57b1093838b145b333"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの文字を結合したものの種類を調べる for 強調キーワード  <a href="../../d3/d08/class_c_word_parse.html#ada637cc515363b57b1093838b145b333">[詳解]</a><br /></td></tr>
+<tr class="separator:ada637cc515363b57b1093838b145b333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf7585638708c44606c07716afa3316"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#adbf7585638708c44606c07716afa3316">SearchNextWordPosition</a> (const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bStopsBothEnds)</td></tr>
+<tr class="separator:adbf7585638708c44606c07716afa3316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fcc24338bd28335febbc49c7fc97785"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#a7fcc24338bd28335febbc49c7fc97785">SearchNextWordPosition4KW</a> (const wchar_t *pLine, CLogicInt nLineLen, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bStopsBothEnds)</td></tr>
+<tr class="separator:a7fcc24338bd28335febbc49c7fc97785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d3ce83a9c4df0c8b7338e6f8e7fa35"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a98d3ce83a9c4df0c8b7338e6f8e7fa35"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html#a98d3ce83a9c4df0c8b7338e6f8e7fa35">GetWord</a> (const CHAR_TYPE *pS, const int nLen, const CHAR_TYPE *pszSplitCharList, CHAR_TYPE **ppWordStart, int *pnWordLen)</td></tr>
+<tr class="separator:a98d3ce83a9c4df0c8b7338e6f8e7fa35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3ecb9349004f4f607242c4ba2c13ccd3"><td class="memItemLeft" align="right" valign="top"><a id="a3ecb9349004f4f607242c4ba2c13ccd3"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>_match_charlist</b> (const ACHAR c, const ACHAR *pszList)</td></tr>
+<tr class="separator:a3ecb9349004f4f607242c4ba2c13ccd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb33f90ae8186080618187dc2a57188"><td class="memItemLeft" align="right" valign="top"><a id="a3eb33f90ae8186080618187dc2a57188"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>_match_charlist</b> (const WCHAR c, const WCHAR *pszList)</td></tr>
+<tr class="separator:a3eb33f90ae8186080618187dc2a57188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a98d3ce83a9c4df0c8b7338e6f8e7fa35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d3ce83a9c4df0c8b7338e6f8e7fa35">&#9670;&nbsp;</a></span>GetWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CWordParse::GetWord </td>
+          <td>(</td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pszSplitCharList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CHAR_TYPE **&#160;</td>
+          <td class="paramname"><em>ppWordStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnWordLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pS</td><td>文字列バッファ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLen</td><td>文字列バッファの長さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSplitCharList</td><td>区切り文字たち </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppWordStart</td><td>単語の開始位置 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnWordLen</td><td>単語の長さ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>読んだデータの長さ。 </dd></dl>
+
+</div>
+</div>
+<a id="adbf7585638708c44606c07716afa3316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf7585638708c44606c07716afa3316">&#9670;&nbsp;</a></span>SearchNextWordPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CWordParse::SearchNextWordPosition </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt *&#160;</td>
+          <td class="paramname"><em>pnColumnNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bStopsBothEnds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>次の単語の先頭を探す pLine（長さ：nLineLen）の文字列から単語を探す。 探し始める位置はnIdxで指定。方向は後方に限定。単語の両端で止まらない（関係ないから） </p>
+
+</div>
+</div>
+<a id="a7fcc24338bd28335febbc49c7fc97785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fcc24338bd28335febbc49c7fc97785">&#9670;&nbsp;</a></span>SearchNextWordPosition4KW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CWordParse::SearchNextWordPosition4KW </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt *&#160;</td>
+          <td class="paramname"><em>pnColumnNew</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bStopsBothEnds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>次の単語の先頭を探す pLine（長さ：nLineLen）の文字列から単語を探す。 探し始める位置はnIdxで指定。方向は後方に限定。単語の両端で止まらない（関係ないから） </p>
+
+</div>
+</div>
+<a id="ada637cc515363b57b1093838b145b333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada637cc515363b57b1093838b145b333">&#9670;&nbsp;</a></span>WhatKindOfTwoChars4KW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> CWordParse::WhatKindOfTwoChars4KW </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>&#160;</td>
+          <td class="paramname"><em>kindPre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a>&#160;</td>
+          <td class="paramname"><em>kindCur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>二つの文字を結合したものの種類を調べる for 強調キーワード </p>
+<p>二つの文字を結合したものの種類を調べる </p>
+
+</div>
+</div>
+<a id="a71a28ffeb40c534297fa69805abc2a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71a28ffeb40c534297fa69805abc2a92">&#9670;&nbsp;</a></span>WhereCurrentWord_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CWordParse::WhereCurrentWord_2 </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt *&#160;</td>
+          <td class="paramname"><em>pnIdxFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt *&#160;</td>
+          <td class="paramname"><em>pnIdxTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pcmcmWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pcmcmWordLeft</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在位置の単語の範囲を調べる staticメンバ </p>
+<dl class="section author"><dt>著者</dt><dd>N.Nakatani </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 現在位置のデータは「単語」と認識する。 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗 現在位置のデータは「単語」とは言いきれない気がする。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pLine</td><td>[in] 調べるメモリ全体の先頭アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLineLen</td><td>[in] 調べるメモリ全体の有効長 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIdx</td><td>[in] 調査開始地点:pLineからの相対的な位置 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnIdxFrom</td><td>[out] 単語が見つかった場合は、単語の先頭インデックスを返す。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnIdxTo</td><td>[out] 単語が見つかった場合は、単語の終端の次のバイトの先頭インデックスを返す。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcmcmWord</td><td>[out] 単語が見つかった場合は、現在単語を切り出して指定されたCMemoryオブジェクトに格納する。情報が不要な場合はNULLを指定する。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcmcmWordLeft</td><td>[out] 単語が見つかった場合は、現在単語の左に位置する単語を切り出して指定されたCMemoryオブジェクトに格納する。情報が不要な場合はNULLを指定する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/parse/<a class="el" href="../../dc/d8f/_c_word_parse_8h_source.html">CWordParse.h</a></li>
+<li>sakura_core/parse/<a class="el" href="../../da/d8e/_c_word_parse_8cpp.html">CWordParse.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

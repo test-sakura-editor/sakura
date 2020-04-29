@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgAbout.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgAbout.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/dc1/_c_dlg_about_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2000, genta</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d2/da3/class_c_url_wnd.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a>() { m_hWnd = NULL; m_hFont = NULL; m_bHilighted = FALSE; m_pOldProc = NULL; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a>() { ; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    BOOL SetSubclassWindow( HWND hWnd );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    HWND GetHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hWnd; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    HFONT GetFont()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_hFont; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> LRESULT CALLBACK UrlWndProc( HWND hWnd, UINT msg, WPARAM wp, LPARAM lp );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> OnSetText( _In_opt_z_ LPCWSTR pchText, _In_opt_ <span class="keywordtype">size_t</span> cchText = 0 ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    HWND m_hWnd;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    HFONT m_hFont;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    BOOL m_bHilighted;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    WNDPROC m_pOldProc;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d6/dcc/class_c_dlg_about.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/dcc/class_c_dlg_about.html">CDlgAbout</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/d09/class_c_dialog.html">CDialog</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> DoModal(HINSTANCE hInstance, HWND hwndParent);  <span class="comment">/* モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//  Nov. 7, 2000 genta  標準以外のメッセージを捕捉する</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    INT_PTR <a class="code" href="../../d6/dcc/class_c_dlg_about.html#a461fce909dd986fef10961b1d0540a72">DispatchEvent</a>( HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    BOOL <a class="code" href="../../d6/dcc/class_c_dlg_about.html#ac0a099e4d270338a4c02c25308238a40">OnInitDialog</a>(HWND hwndDlg, WPARAM wParam, LPARAM lParam) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    BOOL OnBnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    BOOL OnStnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    LPVOID GetHelpIdTable(<span class="keywordtype">void</span>) <span class="keyword">override</span>;   <span class="comment">//@@@ 2002.01.18 add</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlUrWnd;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlGitWnd;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlBuildLinkWnd;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlGitHubCommitWnd;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlGitHubPRWnd;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a> m_UrlOrgWnd;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_dlg_about_html"><div class="ttname"><a href="../../d6/dcc/class_c_dlg_about.html">CDlgAbout</a></div><div class="ttdef"><b>Definition:</b> CDlgAbout.h:47</div></div>
+<div class="ttc" id="aclass_c_url_wnd_html"><div class="ttname"><a href="../../d2/da3/class_c_url_wnd.html">CUrlWnd</a></div><div class="ttdoc">About Box管理</div><div class="ttdef"><b>Definition:</b> CDlgAbout.h:27</div></div>
+<div class="ttc" id="aclass_c_dialog_html"><div class="ttname"><a href="../../dd/d09/class_c_dialog.html">CDialog</a></div><div class="ttdoc">ダイアログウィンドウを扱うクラス</div><div class="ttdef"><b>Definition:</b> CDialog.h:73</div></div>
+<div class="ttc" id="aclass_c_dlg_about_html_ac0a099e4d270338a4c02c25308238a40"><div class="ttname"><a href="../../d6/dcc/class_c_dlg_about.html#ac0a099e4d270338a4c02c25308238a40">CDlgAbout::OnInitDialog</a></div><div class="ttdeci">BOOL OnInitDialog(HWND hwndDlg, WPARAM wParam, LPARAM lParam) override</div><div class="ttdef"><b>Definition:</b> CDlgAbout.cpp:151</div></div>
+<div class="ttc" id="aclass_c_dlg_about_html_a461fce909dd986fef10961b1d0540a72"><div class="ttname"><a href="../../d6/dcc/class_c_dlg_about.html#a461fce909dd986fef10961b1d0540a72">CDlgAbout::DispatchEvent</a></div><div class="ttdeci">INT_PTR DispatchEvent(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam) override</div><div class="ttdef"><b>Definition:</b> CDlgAbout.cpp:121</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

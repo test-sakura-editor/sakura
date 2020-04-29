@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/CShareData.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CShareData.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d26/_c_share_data_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2000, jepro, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2001, jepro, genta, asa-o, MIK, YAZAKI, hor</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2002, genta, aroka, Moca, MIK, YAZAKI, hor</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2003, Moca, aroka, MIK, genta</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2004, Moca, novice, genta</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2005, MIK, genta, ryoji, aroka, Moca</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Copyright (C) 2006, aroka, ryoji, D.S.Koba, fon</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji, maru</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Copyright (C) 2008, ryoji, Uchi</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    Copyright (C) 2011, nasukoji</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//2007.09.23 kobake m_nSEARCHKEYArrNum,      m_szSEARCHKEYArr      を m_aSearchKeys      にまとめました</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//2007.09.23 kobake m_nREPLACEKEYArrNum,     m_szREPLACEKEYArr     を m_aReplaceKeys     にまとめました</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//2007.09.23 kobake m_nGREPFILEArrNum,       m_szGREPFILEArr       を m_aGrepFiles       にまとめました</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//2007.09.23 kobake m_nGREPFOLDERArrNum,     m_szGREPFOLDERArr     を m_aGrepFolders     にまとめました</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//2007.09.23 kobake m_szCmdArr,              m_nCmdArrNum          を m_aCommands        にまとめました</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//2007.09.23 kobake m_nTagJumpKeywordArrNum, m_szTagJumpKeywordArr を m_aTagJumpKeywords にまとめました</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//2007.12.13 kobake DLLSHAREDATAへの簡易アクセサを用意</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/db9/_c_select_lang_8h.html">CSelectLang.h</a>&quot;</span>        <span class="comment">// 2011.04.10 nasukoji</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d5d/class_c_share_data.html">CShareData</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// 2010.04.19 Moca DLLSHAREDATA関連はDLLSHAREDATA.h等最低限必要な場所へ移動</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// CShareData.hは、自分のInterfaceしか提供しません。別にDLLSHAREDATA.hをincludeすること。</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/d0d/class_c_mutex.html">CMutex</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d5d/class_c_share_data.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d5d/class_c_share_data.html">CShareData</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;CShareData&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;<a class="code" href="../../d7/d5d/class_c_share_data.html">CShareData</a>&gt;;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d7/d5d/class_c_share_data.html">CShareData</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ~<a class="code" href="../../d7/d5d/class_c_share_data.html">CShareData</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a4a747207c6d96c2c2695fb81b209697e">InitShareData</a>();   <span class="comment">/* CShareDataクラスの初期化処理 */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> RefreshString();   <span class="comment">/* 言語選択後に共有メモリ内の文字列を更新する */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//MRU系</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    BOOL <a class="code" href="../../d7/d5d/class_c_share_data.html#aa3be3197afa9bd395a4b63256213e30b">IsPathOpened</a>( <span class="keyword">const</span> WCHAR* pszPath, HWND* phwndOwner ); <span class="comment">/* 指定ファイルが開かれているか調べる */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    BOOL <a class="code" href="../../d7/d5d/class_c_share_data.html#a2900132a19095f56ffe3e499a9a8c7c7">ActiveAlreadyOpenedWindow</a>( <span class="keyword">const</span> WCHAR* pszPath, HWND* phwndOwner, <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode );<span class="comment">/* 指定ファイルが開かれているか調べつつ、多重オープン時の文字コード衝突も確認 */</span>  <span class="comment">// 2007.03.16</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//デバッグ  今は主にマクロ・外部コマンド実行用</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#ab2d1f7bc6c27a971575721bfe0fcff9c">TraceOut</a>( LPCWSTR lpFmt, ...); <span class="comment">/* アウトプットウィンドウに出力(printfフォーマット) */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a51901b61b000433bad83bf631b23fff6">TraceOutString</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszStr, <span class="keywordtype">int</span> len = -1);  <span class="comment">/* アウトプットウィンドウに出力(未加工文字列) */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> SetTraceOutSource( HWND hwnd ){ m_hwndTraceOutSource = hwnd; } <span class="comment">/* TraceOut起動元ウィンドウの設定 */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a78586a47fac985e63d19716eb89a4bc0">OpenDebugWindow</a>( HWND hwnd, <span class="keywordtype">bool</span> bAllwaysActive ); </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    BOOL IsPrivateSettings( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//マクロ関連</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d7/d5d/class_c_share_data.html#a1d501caf9ca42c3cb8ce8fabc7a54938">GetMacroFilename</a>( <span class="keywordtype">int</span> idx, WCHAR* pszPath, <span class="keywordtype">int</span> nBufLen ); <span class="comment">// idxで指定したマクロファイル名（フルパス）を取得する    //  Jun. 14, 2003 genta 引数追加．書式変更</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d7/d5d/class_c_share_data.html#a74fbdaceffb0cbd0c2f6f877376766e6">BeReloadWhenExecuteMacro</a>( <span class="keywordtype">int</span> idx );    <span class="comment">//  idxで指定したマクロは、実行するたびにファイルを読み込む設定か？</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//タイプ別設定(コントロールプロセス専用)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> CreateTypeSettings();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;STypeConfig*&gt;&amp; GetTypeSettings();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// 国際化対応のための文字列を変更する(コントロールプロセス専用)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#ad37a43c5d5b7c402ec39f6ae12e55dec">ConvertLangValues</a>(std::vector&lt;std::wstring&gt;&amp; values, <span class="keywordtype">bool</span> bSetValues);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d3/d0d/class_c_mutex.html">CMutex</a>&amp; GetMutexShareWork();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    ||  実装ヘルパ関数</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">//  Jan. 30, 2005 genta 初期化関数の分割</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a83adcb8f48e0e79b15cc9d85fcdb029e">InitKeyword</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a3ce164d8fe2d16e63a99ae8e9bfb01e3">InitKeyAssign</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData); <span class="comment">// 2007.11.04 genta 起動中止のため値を返す</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#aaf37c3aa333c0f60b7e59bc31739d10b">RefreshKeyAssignString</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#af2f13d16dbf082d5a0c19382b931fc9a">InitToolButtons</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#a18586e37bad9ea9660cb03b60f215d2c">InitTypeConfigs</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData, std::vector&lt;STypeConfig*&gt;&amp; types);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d5d/class_c_share_data.html#ab2a0b9e786fe58854e9a74f4ef6c9473">InitPopupMenu</a>(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> InitFileTree(<a class="code" href="../../dd/d16/struct_s_file_tree.html">SFileTree</a>*);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../da/d69/class_c_select_lang.html">CSelectLang</a> m_cSelectLang;          <span class="comment">// メッセージリソースDLL読み込み用（プロセスに1個）     // 2011.04.10 nasukoji</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    HANDLE          m_hFileMap;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>*   m_pShareData;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::vector&lt;STypeConfig*&gt;*  m_pvTypeSettings;   <span class="comment">//  (コントロールプロセスのみ)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    HWND            m_hwndTraceOutSource;   <span class="comment">// TraceOutA()起動元ウィンドウ（いちいち起動元を指定しなくてすむように）</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_share_data_html_aaf37c3aa333c0f60b7e59bc31739d10b"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#aaf37c3aa333c0f60b7e59bc31739d10b">CShareData::RefreshKeyAssignString</a></div><div class="ttdeci">void RefreshKeyAssignString(DLLSHAREDATA *pShareData)</div><div class="ttdoc">言語選択後の文字列更新処理</div><div class="ttdef"><b>Definition:</b> CKeyBind.cpp:829</div></div>
+<div class="ttc" id="aclass_c_share_data_html_ab2a0b9e786fe58854e9a74f4ef6c9473"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#ab2a0b9e786fe58854e9a74f4ef6c9473">CShareData::InitPopupMenu</a></div><div class="ttdeci">void InitPopupMenu(DLLSHAREDATA *pShareData)</div><div class="ttdoc">共有メモリ初期化/ポップアップメニュー</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1262</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a3ce164d8fe2d16e63a99ae8e9bfb01e3"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a3ce164d8fe2d16e63a99ae8e9bfb01e3">CShareData::InitKeyAssign</a></div><div class="ttdeci">bool InitKeyAssign(DLLSHAREDATA *pShareData)</div><div class="ttdoc">共有メモリ初期化/キー割り当て</div><div class="ttdef"><b>Definition:</b> CKeyBind.cpp:791</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="aclass_c_mutex_html"><div class="ttname"><a href="../../d3/d0d/class_c_mutex.html">CMutex</a></div><div class="ttdef"><b>Definition:</b> CMutex.h:39</div></div>
+<div class="ttc" id="aclass_c_share_data_html_ad37a43c5d5b7c402ec39f6ae12e55dec"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#ad37a43c5d5b7c402ec39f6ae12e55dec">CShareData::ConvertLangValues</a></div><div class="ttdeci">void ConvertLangValues(std::vector&lt; std::wstring &gt; &amp;values, bool bSetValues)</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:781</div></div>
+<div class="ttc" id="aclass_c_share_data_html_ab2d1f7bc6c27a971575721bfe0fcff9c"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#ab2d1f7bc6c27a971575721bfe0fcff9c">CShareData::TraceOut</a></div><div class="ttdeci">void TraceOut(LPCWSTR lpFmt,...)</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:971</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a51901b61b000433bad83bf631b23fff6"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a51901b61b000433bad83bf631b23fff6">CShareData::TraceOutString</a></div><div class="ttdeci">void TraceOutString(const wchar_t *pszStr, int len=-1)</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1004</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a83adcb8f48e0e79b15cc9d85fcdb029e"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a83adcb8f48e0e79b15cc9d85fcdb029e">CShareData::InitKeyword</a></div><div class="ttdeci">void InitKeyword(DLLSHAREDATA *pShareData)</div><div class="ttdoc">共有メモリ初期化/強調キーワード</div><div class="ttdef"><b>Definition:</b> CType.cpp:111</div></div>
+<div class="ttc" id="aclass_c_select_lang_html"><div class="ttname"><a href="../../da/d69/class_c_select_lang.html">CSelectLang</a></div><div class="ttdef"><b>Definition:</b> CSelectLang.h:22</div></div>
+<div class="ttc" id="aclass_c_share_data_html"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html">CShareData</a></div><div class="ttdoc">共有データの管理</div><div class="ttdef"><b>Definition:</b> CShareData.h:58</div></div>
+<div class="ttc" id="aclass_t_singleton_html"><div class="ttname"><a href="../../d5/d1e/class_t_singleton.html">TSingleton</a></div><div class="ttdef"><b>Definition:</b> design_template.h:47</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a1d501caf9ca42c3cb8ce8fabc7a54938"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a1d501caf9ca42c3cb8ce8fabc7a54938">CShareData::GetMacroFilename</a></div><div class="ttdeci">int GetMacroFilename(int idx, WCHAR *pszPath, int nBufLen)</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1120</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a18586e37bad9ea9660cb03b60f215d2c"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a18586e37bad9ea9660cb03b60f215d2c">CShareData::InitTypeConfigs</a></div><div class="ttdeci">void InitTypeConfigs(DLLSHAREDATA *pShareData, std::vector&lt; STypeConfig * &gt; &amp;types)</div><div class="ttdoc">共有メモリ初期化/タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.cpp:67</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a2900132a19095f56ffe3e499a9a8c7c7"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a2900132a19095f56ffe3e499a9a8c7c7">CShareData::ActiveAlreadyOpenedWindow</a></div><div class="ttdeci">BOOL ActiveAlreadyOpenedWindow(const WCHAR *pszPath, HWND *phwndOwner, ECodeType nCharCode)</div><div class="ttdoc">指定ファイルが開かれているか調べつつ、多重オープン時の文字コード衝突も確認</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:917</div></div>
+<div class="ttc" id="aclass_c_share_data_html_af2f13d16dbf082d5a0c19382b931fc9a"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#af2f13d16dbf082d5a0c19382b931fc9a">CShareData::InitToolButtons</a></div><div class="ttdeci">void InitToolButtons(DLLSHAREDATA *pShareData)</div><div class="ttdoc">共有メモリ初期化/ツールバー</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1201</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a4a747207c6d96c2c2695fb81b209697e"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a4a747207c6d96c2c2695fb81b209697e">CShareData::InitShareData</a></div><div class="ttdeci">bool InitShareData()</div><div class="ttdoc">CShareDataクラスの初期化処理</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:106</div></div>
+<div class="ttc" id="astruct_s_file_tree_html"><div class="ttname"><a href="../../dd/d16/struct_s_file_tree.html">SFileTree</a></div><div class="ttdef"><b>Definition:</b> CommonSetting.h:568</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="a_c_select_lang_8h_html"><div class="ttname"><a href="../../dc/db9/_c_select_lang_8h.html">CSelectLang.h</a></div><div class="ttdoc">各国語メッセージリソース対応</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a74fbdaceffb0cbd0c2f6f877376766e6"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a74fbdaceffb0cbd0c2f6f877376766e6">CShareData::BeReloadWhenExecuteMacro</a></div><div class="ttdeci">bool BeReloadWhenExecuteMacro(int idx)</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1185</div></div>
+<div class="ttc" id="aclass_c_share_data_html_aa3be3197afa9bd395a4b63256213e30b"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#aa3be3197afa9bd395a4b63256213e30b">CShareData::IsPathOpened</a></div><div class="ttdeci">BOOL IsPathOpened(const WCHAR *pszPath, HWND *phwndOwner)</div><div class="ttdoc">指定ファイルが開かれているか調べる</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:865</div></div>
+<div class="ttc" id="aclass_c_share_data_html_a78586a47fac985e63d19716eb89a4bc0"><div class="ttname"><a href="../../d7/d5d/class_c_share_data.html#a78586a47fac985e63d19716eb89a4bc0">CShareData::OpenDebugWindow</a></div><div class="ttdeci">bool OpenDebugWindow(HWND hwnd, bool bAllwaysActive)</div><div class="ttdoc">デバッグウィンドウを開く</div><div class="ttdef"><b>Definition:</b> CShareData.cpp:1058</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

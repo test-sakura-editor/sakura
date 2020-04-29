@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/macro/CMacroManagerBase.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_614ccf2e7ca9e77c465d8296e7c03a2a.html">macro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CMacroManagerBase.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d96/_c_macro_manager_base_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d5/d3c/class_c_macro_before_after.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d3c/class_c_macro_before_after.html">CMacroBeforeAfter</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d5/d3c/class_c_macro_before_after.html">CMacroBeforeAfter</a>() : m_nOpeBlkCount(0), m_bDrawSwitchOld(<span class="keyword">true</span>){};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d5/d3c/class_c_macro_before_after.html">CMacroBeforeAfter</a>(){};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecKeyMacroBefore( <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecKeyMacroAfter( <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags, <span class="keywordtype">bool</span> bRet );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> m_nOpeBlkCount;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> m_bDrawSwitchOld;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> : <a class="code" href="../../d5/d3c/class_c_macro_before_after.html">CMacroBeforeAfter</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html#a867a5d1d3838d2c123ac82b9b17294dc">   61</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a867a5d1d3838d2c123ac82b9b17294dc">ExecKeyMacro</a>( <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecKeyMacro2( <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html#a209a039d3c571f21dff313e74021d13b">   69</a></span>&#160;    <span class="keyword">virtual</span> BOOL <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a209a039d3c571f21dff313e74021d13b">LoadKeyMacro</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszPath) = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html#a85fb8e109f7c4dfa429ed134640c863d">   76</a></span>&#160;    <span class="keyword">virtual</span> BOOL <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a85fb8e109f7c4dfa429ed134640c863d">LoadKeyMacroStr</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszCode ) = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//static CMacroManagerBase* Creator( const char* str );</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//純粋仮想クラスは実体化できないのでFactoryは不要。</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//継承先クラスでは必要。</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//  デストラクタのvirtualを忘れずに</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html#a87daf845a7b42df2a2d983a5ea45e790">   87</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a87daf845a7b42df2a2d983a5ea45e790">m_nReady</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../dd/d69/class_c_macro_manager_base.html#a54e3c25594666a33a4c05d5c66b7040e">   95</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a54e3c25594666a33a4c05d5c66b7040e">IsReady</a>(){ <span class="keywordflow">return</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html#a87daf845a7b42df2a2d983a5ea45e790">m_nReady</a>; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// Constructor</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_macro_manager_base_html_a867a5d1d3838d2c123ac82b9b17294dc"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html#a867a5d1d3838d2c123ac82b9b17294dc">CMacroManagerBase::ExecKeyMacro</a></div><div class="ttdeci">virtual bool ExecKeyMacro(class CEditView *pcEditView, int flags) const =0</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html_a54e3c25594666a33a4c05d5c66b7040e"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html#a54e3c25594666a33a4c05d5c66b7040e">CMacroManagerBase::IsReady</a></div><div class="ttdeci">bool IsReady()</div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:95</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html_a87daf845a7b42df2a2d983a5ea45e790"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html#a87daf845a7b42df2a2d983a5ea45e790">CMacroManagerBase::m_nReady</a></div><div class="ttdeci">bool m_nReady</div><div class="ttdoc">Load済みかどうかを表すフラグ true...Load済み、false...未Load。</div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:87</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a></div><div class="ttdoc">マクロを処理するエンジン部分の基底クラス</div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:51</div></div>
+<div class="ttc" id="aclass_c_macro_before_after_html"><div class="ttname"><a href="../../d5/d3c/class_c_macro_before_after.html">CMacroBeforeAfter</a></div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:36</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html_a85fb8e109f7c4dfa429ed134640c863d"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html#a85fb8e109f7c4dfa429ed134640c863d">CMacroManagerBase::LoadKeyMacroStr</a></div><div class="ttdeci">virtual BOOL LoadKeyMacroStr(HINSTANCE hInstance, const WCHAR *pszCode)=0</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html_a209a039d3c571f21dff313e74021d13b"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html#a209a039d3c571f21dff313e74021d13b">CMacroManagerBase::LoadKeyMacro</a></div><div class="ttdeci">virtual BOOL LoadKeyMacro(HINSTANCE hInstance, const WCHAR *pszPath)=0</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

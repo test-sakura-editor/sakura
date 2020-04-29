@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/shell.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">shell.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../df/d03/shell_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:af618e99252afff6fa40696a56f53878f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#af618e99252afff6fa40696a56f53878f">MyWinHelp</a> (HWND hwndCaller, UINT uCommand, DWORD_PTR dwData)</td></tr>
+<tr class="separator:af618e99252afff6fa40696a56f53878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fcaa06b7b04da2965a4a697b5a1f7e"><td class="memItemLeft" align="right" valign="top"><a id="a57fcaa06b7b04da2965a4a697b5a1f7e"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>SelectDir</b> (HWND hWnd, const WCHAR *pszTitle, const WCHAR *pszInitFolder, WCHAR *strFolderName)</td></tr>
+<tr class="separator:a57fcaa06b7b04da2965a4a697b5a1f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8523a3616531c130ba7d7a052d3272e1"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#a8523a3616531c130ba7d7a052d3272e1">ResolveShortcutLink</a> (HWND hwnd, LPCWSTR lpszLinkFile, LPWSTR lpszPath)</td></tr>
+<tr class="separator:a8523a3616531c130ba7d7a052d3272e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71bbfb6749cfe89ee9e9755079786e52"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#a71bbfb6749cfe89ee9e9755079786e52">OpenHtmlHelp</a> (HWND hWnd, LPCWSTR szFile, UINT uCmd, DWORD_PTR data, bool msgflag=true)</td></tr>
+<tr class="separator:a71bbfb6749cfe89ee9e9755079786e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adecd260c01f481ec4689541f3d7431e7"><td class="memItemLeft" align="right" valign="top"><a id="adecd260c01f481ec4689541f3d7431e7"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>NetConnect</b> (const WCHAR strNetWorkPass[])</td></tr>
+<tr class="separator:adecd260c01f481ec4689541f3d7431e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bd4b24bf8b30d5d9482218820e071e"><td class="memItemLeft" align="right" valign="top"><a id="a95bd4b24bf8b30d5d9482218820e071e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ShowWinHelpContents</b> (HWND hwnd)</td></tr>
+<tr class="separator:a95bd4b24bf8b30d5d9482218820e071e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fdf48bab5d0c84aad879b4e1c448e6"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#ab2fdf48bab5d0c84aad879b4e1c448e6">GetSpecialFolderPath</a> (int nFolder, LPWSTR pszPath)</td></tr>
+<tr class="separator:ab2fdf48bab5d0c84aad879b4e1c448e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbeaa8bab55819120feb233f74633211"><td class="memItemLeft" align="right" valign="top">INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#abbeaa8bab55819120feb233f74633211">MyPropertySheet</a> (LPPROPSHEETHEADER lppsph)</td></tr>
+<tr class="separator:abbeaa8bab55819120feb233f74633211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c45517eba8044a95fd49c3f40bf544"><td class="memItemLeft" align="right" valign="top"><a id="ae0c45517eba8044a95fd49c3f40bf544"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d03/shell_8h.html#ae0c45517eba8044a95fd49c3f40bf544">MySelectFont</a> (LOGFONT *plf, INT *piPointSize, HWND hwndDlgOwner, bool)</td></tr>
+<tr class="memdesc:ae0c45517eba8044a95fd49c3f40bf544"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォント選択ダイアログ <br /></td></tr>
+<tr class="separator:ae0c45517eba8044a95fd49c3f40bf544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab2fdf48bab5d0c84aad879b4e1c448e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fdf48bab5d0c84aad879b4e1c448e6">&#9670;&nbsp;</a></span>GetSpecialFolderPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL GetSpecialFolderPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFolder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>特殊フォルダのパスを取得する SHGetSpecialFolderPath API（shell32.dll version 4.71以上が必要）と同等の処理をする</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nFolder</td><td>CSIDL (constant special item ID list) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszPath</td><td>特殊フォルダのパス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.19 新規 </dd>
+<dd>
+2017.06.24 novice SHGetFolderLocation()に変更</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>SHGetFolderLocation()は、shell32.dll version 5.00以上が必要 </dd></dl>
+
+</div>
+</div>
+<a id="abbeaa8bab55819120feb233f74633211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbeaa8bab55819120feb233f74633211">&#9670;&nbsp;</a></span>MyPropertySheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR MyPropertySheet </td>
+          <td>(</td>
+          <td class="paramtype">LPPROPSHEETHEADER&#160;</td>
+          <td class="paramname"><em>lppsph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>独自拡張プロパティシート（共通設定／タイプ別設定画面用） </p><dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.25 新規 </dd></dl>
+
+</div>
+</div>
+<a id="af618e99252afff6fa40696a56f53878f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af618e99252afff6fa40696a56f53878f">&#9670;&nbsp;</a></span>MyWinHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL MyWinHelp </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCaller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uCommand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD_PTR&#160;</td>
+          <td class="paramname"><em>dwData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>WinHelp のかわりに HtmlHelp を呼び出す</p>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.07.22 ryoji 新規 </dd></dl>
+
+</div>
+</div>
+<a id="a71bbfb6749cfe89ee9e9755079786e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71bbfb6749cfe89ee9e9755079786e52">&#9670;&nbsp;</a></span>OpenHtmlHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND OpenHtmlHelp </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>szFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uCmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD_PTR&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>msgflag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>HTML Helpを開く HTML Helpが利用可能であれば引数をそのまま渡し、そうでなければメッセージを表示する。</p>
+<dl class="section return"><dt>戻り値</dt><dd>開いたヘルプウィンドウのウィンドウハンドル。開けなかったときはNULL。 </dd></dl>
+
+</div>
+</div>
+<a id="a8523a3616531c130ba7d7a052d3272e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8523a3616531c130ba7d7a052d3272e1">&#9670;&nbsp;</a></span>ResolveShortcutLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL ResolveShortcutLink </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>lpszLinkFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>lpszPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ショートカット(.lnk)の解決 </p><dl class="section date"><dt>日付</dt><dd>2009.01.08 ryoji CoInitialize/CoUninitializeを削除（WinMainにOleInitialize/OleUninitializeを追加） </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

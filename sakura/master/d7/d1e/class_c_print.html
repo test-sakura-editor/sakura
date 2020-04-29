@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CPrint クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="../../da/d57/class_c_print-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CPrint クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>印刷関連機能  
+ <a href="../../d7/d1e/class_c_print.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/d6c/_c_print_8h_source.html">CPrint.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a219204336b6e81ffa4e9f18477d057a0"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a219204336b6e81ffa4e9f18477d057a0">GetDefaultPrinter</a> (<a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pMYDEVMODE)</td></tr>
+<tr class="memdesc:a219204336b6e81ffa4e9f18477d057a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのプリンタを取得し、MYDEVMODE に設定  <a href="../../d7/d1e/class_c_print.html#a219204336b6e81ffa4e9f18477d057a0">[詳解]</a><br /></td></tr>
+<tr class="separator:a219204336b6e81ffa4e9f18477d057a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e185c8bc475ab340019fdd228775119"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a7e185c8bc475ab340019fdd228775119">PrintDlg</a> (PRINTDLG *pd, <a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pMYDEVMODE)</td></tr>
+<tr class="memdesc:a7e185c8bc475ab340019fdd228775119"><td class="mdescLeft">&#160;</td><td class="mdescRight">プリンタダイアログを表示して、プリンタを選択する  <a href="../../d7/d1e/class_c_print.html#a7e185c8bc475ab340019fdd228775119">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e185c8bc475ab340019fdd228775119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feb1178f2561557e0cbf220a4aa54cd"><td class="memItemLeft" align="right" valign="top"><a id="a1feb1178f2561557e0cbf220a4aa54cd"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrintMetrics</b> (<a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pMYDEVMODE, short *pnPaperAllWidth, short *pnPaperAllHeight, short *pnPaperWidth, short *pnPaperHeight, short *pnPaperOffsetLeft, short *pnPaperOffsetTop, WCHAR *pszErrMsg)</td></tr>
+<tr class="separator:a1feb1178f2561557e0cbf220a4aa54cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e11c02204d8728edad3850e27daaf83"><td class="memItemLeft" align="right" valign="top"><a id="a6e11c02204d8728edad3850e27daaf83"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>PrintOpen</b> (WCHAR *pszJobName, <a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pMYDEVMODE, HDC *phdc, WCHAR *pszErrMsg)</td></tr>
+<tr class="separator:a6e11c02204d8728edad3850e27daaf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b160acc11d0d54ff7f5b5bfe40c83c6"><td class="memItemLeft" align="right" valign="top"><a id="a6b160acc11d0d54ff7f5b5bfe40c83c6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintStartPage</b> (HDC hdc)</td></tr>
+<tr class="separator:a6b160acc11d0d54ff7f5b5bfe40c83c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105c4cad307e9a6195e19eaac127c9d3"><td class="memItemLeft" align="right" valign="top"><a id="a105c4cad307e9a6195e19eaac127c9d3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintEndPage</b> (HDC hdc)</td></tr>
+<tr class="separator:a105c4cad307e9a6195e19eaac127c9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34570b7df43dc12c35693c2806273b06"><td class="memItemLeft" align="right" valign="top"><a id="a34570b7df43dc12c35693c2806273b06"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintClose</b> (HDC hdc)</td></tr>
+<tr class="separator:a34570b7df43dc12c35693c2806273b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:afaac353e711a90970d04da4cea83595e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#afaac353e711a90970d04da4cea83595e">SettingInitialize</a> (<a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> &amp;, const WCHAR *settingName)</td></tr>
+<tr class="memdesc:afaac353e711a90970d04da4cea83595e"><td class="mdescLeft">&#160;</td><td class="mdescRight">PRINTSETTINGの初期化  <a href="../../d7/d1e/class_c_print.html#afaac353e711a90970d04da4cea83595e">[詳解]</a><br /></td></tr>
+<tr class="separator:afaac353e711a90970d04da4cea83595e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f8d52f3e883295903ad7f26f4fdde3"><td class="memItemLeft" align="right" valign="top"><a id="ab0f8d52f3e883295903ad7f26f4fdde3"></a>
+static WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPaperName</b> (int, WCHAR *)</td></tr>
+<tr class="separator:ab0f8d52f3e883295903ad7f26f4fdde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488de943437455939e6e7fbe60ef5d8c"><td class="memItemLeft" align="right" valign="top"><a id="a488de943437455939e6e7fbe60ef5d8c"></a>
+static BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>GetPaperSize</b> (short *pnPaperAllWidth, short *pnPaperAllHeight, <a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pDEVMODE)</td></tr>
+<tr class="separator:a488de943437455939e6e7fbe60ef5d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdbf689f3bf8223fa7ace9c6dfbd911"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a1bdbf689f3bf8223fa7ace9c6dfbd911">CalculatePrintableColumns</a> (<a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *, int width, int nLineNumberColumns)</td></tr>
+<tr class="separator:a1bdbf689f3bf8223fa7ace9c6dfbd911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7f9dd93ae5b99b61c5d882b583baa7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a6e7f9dd93ae5b99b61c5d882b583baa7">CalculatePrintableLines</a> (<a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *, int height)</td></tr>
+<tr class="separator:a6e7f9dd93ae5b99b61c5d882b583baa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2750d6c5ce0998e6c2b2bf25a0a8e121"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a2750d6c5ce0998e6c2b2bf25a0a8e121">CalcHeaderHeight</a> (<a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *)</td></tr>
+<tr class="separator:a2750d6c5ce0998e6c2b2bf25a0a8e121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c8fc6097f3c949b6e4214d2028a5ff"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#ac7c8fc6097f3c949b6e4214d2028a5ff">CalcFooterHeight</a> (<a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *)</td></tr>
+<tr class="separator:ac7c8fc6097f3c949b6e4214d2028a5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ace867dc6a850dd1117b8cf7ba71d3318"><td class="memItemLeft" align="right" valign="top"><a id="ace867dc6a850dd1117b8cf7ba71d3318"></a>
+static const <a class="el" href="../../dc/dcd/struct_p_a_p_e_r___i_n_f_o.html">PAPER_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#ace867dc6a850dd1117b8cf7ba71d3318">m_paperInfoArr</a> []</td></tr>
+<tr class="memdesc:ace867dc6a850dd1117b8cf7ba71d3318"><td class="mdescLeft">&#160;</td><td class="mdescRight">用紙情報一覧 <br /></td></tr>
+<tr class="separator:ace867dc6a850dd1117b8cf7ba71d3318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbfd5d86f81559c24276d94a199920b6"><td class="memItemLeft" align="right" valign="top"><a id="abbfd5d86f81559c24276d94a199920b6"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#abbfd5d86f81559c24276d94a199920b6">m_nPaperInfoArrNum</a> = _countof( <a class="el" href="../../d7/d1e/class_c_print.html#ace867dc6a850dd1117b8cf7ba71d3318">m_paperInfoArr</a> )</td></tr>
+<tr class="memdesc:abbfd5d86f81559c24276d94a199920b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">用紙情報一覧の要素数 <br /></td></tr>
+<tr class="separator:abbfd5d86f81559c24276d94a199920b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a190877a3547e0c55af2ee6dee86c3d8a"><td class="memItemLeft" align="right" valign="top"><a id="a190877a3547e0c55af2ee6dee86c3d8a"></a>
+HDC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a190877a3547e0c55af2ee6dee86c3d8a">CreateDC</a> (<a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *pMYDEVMODE, WCHAR *pszErrMsg)</td></tr>
+<tr class="memdesc:a190877a3547e0c55af2ee6dee86c3d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">プリンタをオープンし、hDCを作成する <br /></td></tr>
+<tr class="separator:a190877a3547e0c55af2ee6dee86c3d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a12ad3b58996405b9682a1dbfaec99fd0"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../dc/dcd/struct_p_a_p_e_r___i_n_f_o.html">PAPER_INFO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/class_c_print.html#a12ad3b58996405b9682a1dbfaec99fd0">FindPaperInfo</a> (int id)</td></tr>
+<tr class="separator:a12ad3b58996405b9682a1dbfaec99fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>印刷関連機能 </p>
+<p>オブジェクト指向でないクラス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac7c8fc6097f3c949b6e4214d2028a5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c8fc6097f3c949b6e4214d2028a5ff">&#9670;&nbsp;</a></span>CalcFooterHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CPrint::CalcFooterHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *&#160;</td>
+          <td class="paramname"><em>pPS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>フッタ高さの計算(行送り分こみ) </p><dl class="section date"><dt>日付</dt><dd>2013.05.16 Uchi 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a2750d6c5ce0998e6c2b2bf25a0a8e121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2750d6c5ce0998e6c2b2bf25a0a8e121">&#9670;&nbsp;</a></span>CalcHeaderHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CPrint::CalcHeaderHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *&#160;</td>
+          <td class="paramname"><em>pPS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ヘッダ高さの計算(行送り分こみ) </p><dl class="section date"><dt>日付</dt><dd>2013.05.16 Uchi 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a1bdbf689f3bf8223fa7ace9c6dfbd911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdbf689f3bf8223fa7ace9c6dfbd911">&#9670;&nbsp;</a></span>CalculatePrintableColumns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CPrint::CalculatePrintableColumns </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *&#160;</td>
+          <td class="paramname"><em>pPS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPaperAllWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineNumberColumns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>印字可能桁数の計算 </p><dl class="section date"><dt>日付</dt><dd>2013.05.10 aroka 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a6e7f9dd93ae5b99b61c5d882b583baa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7f9dd93ae5b99b61c5d882b583baa7">&#9670;&nbsp;</a></span>CalculatePrintableLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CPrint::CalculatePrintableLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> *&#160;</td>
+          <td class="paramname"><em>pPS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPaperAllHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>印字可能行数の計算 </p><dl class="section date"><dt>日付</dt><dd>2013.05.10 aroka 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a12ad3b58996405b9682a1dbfaec99fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ad3b58996405b9682a1dbfaec99fd0">&#9670;&nbsp;</a></span>FindPaperInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dc/dcd/struct_p_a_p_e_r___i_n_f_o.html">PAPER_INFO</a> * CPrint::FindPaperInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>用紙情報の取得 </p><dl class="section date"><dt>日付</dt><dd>2006.08.14 Moca 新規作成 用紙情報の統合 </dd></dl>
+
+</div>
+</div>
+<a id="a219204336b6e81ffa4e9f18477d057a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219204336b6e81ffa4e9f18477d057a0">&#9670;&nbsp;</a></span>GetDefaultPrinter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CPrint::GetDefaultPrinter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *&#160;</td>
+          <td class="paramname"><em>pMYDEVMODE</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトのプリンタを取得し、MYDEVMODE に設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pMYDEVMODE</td><td>[out] 印刷設定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7e185c8bc475ab340019fdd228775119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e185c8bc475ab340019fdd228775119">&#9670;&nbsp;</a></span>PrintDlg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CPrint::PrintDlg </td>
+          <td>(</td>
+          <td class="paramtype">PRINTDLG *&#160;</td>
+          <td class="paramname"><em>pPD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d97/struct_m_y_d_e_v_m_o_d_e.html">MYDEVMODE</a> *&#160;</td>
+          <td class="paramname"><em>pMYDEVMODE</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プリンタダイアログを表示して、プリンタを選択する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pPD</td><td>[i/o] プリンタダイアログ構造体 </td></tr>
+    <tr><td class="paramname">pMYDEVMODE</td><td>[i/o] 印刷設定</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>かろと </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003. </dd></dl>
+
+</div>
+</div>
+<a id="afaac353e711a90970d04da4cea83595e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaac353e711a90970d04da4cea83595e">&#9670;&nbsp;</a></span>SettingInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPrint::SettingInitialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a> &amp;&#160;</td>
+          <td class="paramname"><em>pPrintSetting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>settingName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PRINTSETTINGの初期化 </p>
+<p>ここではm_mdmDevModeの プリンタ設定は取得・初期化しない</p>
+<dl class="section date"><dt>日付</dt><dd>2006.08.14 Moca Initializeから名称変更。初期化単位をShareDate全てからPRINTSETTING単位に変更． 本関数からDLLSHAREDATAへアクセスする代わりに，CShareDataからPPRINTSETTING単位で逐一渡してもらう． </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/print/<a class="el" href="../../d4/d6c/_c_print_8h_source.html">CPrint.h</a></li>
+<li>sakura_core/print/<a class="el" href="../../de/d96/_c_print_8cpp.html">CPrint.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

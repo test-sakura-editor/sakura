@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CKeyWordSetMgr クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d7/d34/class_c_key_word_set_mgr-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CKeyWordSetMgr クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>強調キーワード管理  
+ <a href="../../d4/d32/class_c_key_word_set_mgr.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d7/df4/_c_key_word_set_mgr_8h_source.html">CKeyWordSetMgr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae165ff4a33fe7ce50e7ada978d9794e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ae165ff4a33fe7ce50e7ada978d9794e5">CKeyWordSetMgr</a> ()</td></tr>
+<tr class="separator:ae165ff4a33fe7ce50e7ada978d9794e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">キーワードセット操作</div></td></tr>
+<tr class="memitem:a4df2f30dabfc23933f9bc410eab18e4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a4df2f30dabfc23933f9bc410eab18e4b">AddKeyWordSet</a> (const wchar_t *pszSetName, bool bKEYWORDCASE, int nSize=-1)</td></tr>
+<tr class="memdesc:a4df2f30dabfc23933f9bc410eab18e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーワードセットの追加  <a href="../../d4/d32/class_c_key_word_set_mgr.html#a4df2f30dabfc23933f9bc410eab18e4b">[詳解]</a><br /></td></tr>
+<tr class="separator:a4df2f30dabfc23933f9bc410eab18e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fc941233a17dfff0edb4d23c958f2c"><td class="memItemLeft" align="right" valign="top"><a id="ad4fc941233a17dfff0edb4d23c958f2c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DelKeyWordSet</b> (int nIdx)</td></tr>
+<tr class="separator:ad4fc941233a17dfff0edb4d23c958f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebedb565a31c5cae6667622c5584e953"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aebedb565a31c5cae6667622c5584e953">GetTypeName</a> (int nIdx)</td></tr>
+<tr class="separator:aebedb565a31c5cae6667622c5584e953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca64560c05281b8f6d2389df712d90b7"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aca64560c05281b8f6d2389df712d90b7">SetTypeName</a> (int nIdx, const wchar_t *name)</td></tr>
+<tr class="memdesc:aca64560c05281b8f6d2389df712d90b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ｎ番目のセット名を設定する // 2005.01.26 Moca  <a href="../../d4/d32/class_c_key_word_set_mgr.html#aca64560c05281b8f6d2389df712d90b7">[詳解]</a><br /></td></tr>
+<tr class="separator:aca64560c05281b8f6d2389df712d90b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa310d59b9daa8fa8ca87d8a6cea3b8db"><td class="memItemLeft" align="right" valign="top"><a id="aa310d59b9daa8fa8ca87d8a6cea3b8db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetKeyWordCase</b> (int nIdx, int nCase)</td></tr>
+<tr class="separator:aa310d59b9daa8fa8ca87d8a6cea3b8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cab9a49f51538198322ea327911348d"><td class="memItemLeft" align="right" valign="top"><a id="a3cab9a49f51538198322ea327911348d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyWordCase</b> (int nIdx)</td></tr>
+<tr class="separator:a3cab9a49f51538198322ea327911348d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f622115fe76406324a317a58ef64a9a"><td class="memItemLeft" align="right" valign="top"><a id="a6f622115fe76406324a317a58ef64a9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SortKeyWord</b> (int nIdx)</td></tr>
+<tr class="separator:a6f622115fe76406324a317a58ef64a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac520281a2ee489d6f255b6fd81f4ad5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ac520281a2ee489d6f255b6fd81f4ad5b">SetKeyWordArr</a> (int nIdx, int nSize, const wchar_t *pszKeyWordArr)</td></tr>
+<tr class="memdesc:ac520281a2ee489d6f255b6fd81f4ad5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">iniからキーワードを設定する  <a href="../../d4/d32/class_c_key_word_set_mgr.html#ac520281a2ee489d6f255b6fd81f4ad5b">[詳解]</a><br /></td></tr>
+<tr class="separator:ac520281a2ee489d6f255b6fd81f4ad5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae278c14ea20ad24f70851e1bc6f2b145"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ae278c14ea20ad24f70851e1bc6f2b145">SetKeyWordArr</a> (int nIdx, int nSize, const wchar_t *ppszKeyWordArr[])</td></tr>
+<tr class="separator:ae278c14ea20ad24f70851e1bc6f2b145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">キーワード操作</div></td></tr>
+<tr class="memitem:abeae6f3c0ccb9b8f52dc4194219114f2"><td class="memItemLeft" align="right" valign="top"><a id="abeae6f3c0ccb9b8f52dc4194219114f2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyWordNum</b> (int nIdx)</td></tr>
+<tr class="separator:abeae6f3c0ccb9b8f52dc4194219114f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff4fd395a8ef41e4b133c0d39269a2e"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a7ff4fd395a8ef41e4b133c0d39269a2e">GetKeyWord</a> (int nIdx, int nIdx2)</td></tr>
+<tr class="separator:a7ff4fd395a8ef41e4b133c0d39269a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44653cf62241538c05003f255a61cc8f"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a44653cf62241538c05003f255a61cc8f">UpdateKeyWord</a> (int nIdx, int nIdx2, const WCHAR *pszKeyWord)</td></tr>
+<tr class="memdesc:a44653cf62241538c05003f255a61cc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ｎ番目のセットのｍ番目のキーワードを編集  <a href="../../d4/d32/class_c_key_word_set_mgr.html#a44653cf62241538c05003f255a61cc8f">[詳解]</a><br /></td></tr>
+<tr class="separator:a44653cf62241538c05003f255a61cc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309eb5da1aa99f3deb4ff19e0275e1e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a309eb5da1aa99f3deb4ff19e0275e1e5">AddKeyWord</a> (int nIdx, const wchar_t *pszKeyWord)</td></tr>
+<tr class="separator:a309eb5da1aa99f3deb4ff19e0275e1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b37ba38147447cffe0d73fb1515c34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#af2b37ba38147447cffe0d73fb1515c34">DelKeyWord</a> (int nIdx, int nIdx2)</td></tr>
+<tr class="separator:af2b37ba38147447cffe0d73fb1515c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af9cdfcc5f8f02b150ec0aa6871eb64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a6af9cdfcc5f8f02b150ec0aa6871eb64">CanAddKeyWord</a> (int nIdx)</td></tr>
+<tr class="memdesc:a6af9cdfcc5f8f02b150ec0aa6871eb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーワードが追加可能か  <a href="../../d4/d32/class_c_key_word_set_mgr.html#a6af9cdfcc5f8f02b150ec0aa6871eb64">[詳解]</a><br /></td></tr>
+<tr class="separator:a6af9cdfcc5f8f02b150ec0aa6871eb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+検索</h2></td></tr>
+<tr class="memitem:af9b77ea45f4ef2a5cf312a71a8c5c725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#af9b77ea45f4ef2a5cf312a71a8c5c725">m_nCurrentKeyWordSetIdx</a></td></tr>
+<tr class="memdesc:af9b77ea45f4ef2a5cf312a71a8c5c725"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のキーワードセット番号(GUI用)  <a href="../../d4/d32/class_c_key_word_set_mgr.html#af9b77ea45f4ef2a5cf312a71a8c5c725">[詳解]</a><br /></td></tr>
+<tr class="separator:af9b77ea45f4ef2a5cf312a71a8c5c725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab550f1f6d7dd2ce8abe555688cb96ed0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ab550f1f6d7dd2ce8abe555688cb96ed0">m_nKeyWordSetNum</a></td></tr>
+<tr class="separator:ab550f1f6d7dd2ce8abe555688cb96ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1cf85555315f3078777cb49d17e0f9"><td class="memItemLeft" align="right" valign="top">wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ada1cf85555315f3078777cb49d17e0f9">m_szSetNameArr</a> [MAX_SETNUM][MAX_SETNAMELEN+1]</td></tr>
+<tr class="separator:ada1cf85555315f3078777cb49d17e0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85a00070cf97ff9c9c8e0e4db5fa266"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aa85a00070cf97ff9c9c8e0e4db5fa266">m_bKEYWORDCASEArr</a> [MAX_SETNUM]</td></tr>
+<tr class="separator:aa85a00070cf97ff9c9c8e0e4db5fa266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6c009024bf227239f53f54a756b2b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a9e6c009024bf227239f53f54a756b2b2">m_nKeyWordNumArr</a> [MAX_SETNUM]</td></tr>
+<tr class="separator:a9e6c009024bf227239f53f54a756b2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa686b5ae1b747987de2d17f1f38e049b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aa686b5ae1b747987de2d17f1f38e049b">m_nStartIdx</a> [MAX_SETNUM+1]</td></tr>
+<tr class="separator:aa686b5ae1b747987de2d17f1f38e049b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d4ddcb1f68d3745d33d07f5da534ab"><td class="memItemLeft" align="right" valign="top"><a id="a36d4ddcb1f68d3745d33d07f5da534ab"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a36d4ddcb1f68d3745d33d07f5da534ab">m_nKeyWordMaxLenArr</a> [MAX_SETNUM]</td></tr>
+<tr class="memdesc:a36d4ddcb1f68d3745d33d07f5da534ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">一番長いキーワードの長さ(ソート後のみ有効)(INI未保存) <br /></td></tr>
+<tr class="separator:a36d4ddcb1f68d3745d33d07f5da534ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1f4ad8bb0f7bae6c90481f44f6cb74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a3c1f4ad8bb0f7bae6c90481f44f6cb74">SearchKeyWord2</a> (int nIdx, const wchar_t *pszKeyWord, int nKeyWordLen)</td></tr>
+<tr class="separator:a3c1f4ad8bb0f7bae6c90481f44f6cb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e00045f255d66e64ac8bafceeec34c3"><td class="memItemLeft" align="right" valign="top"><a id="a1e00045f255d66e64ac8bafceeec34c3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SearchKeyWordSet</b> (const wchar_t *pszKeyWord)</td></tr>
+<tr class="separator:a1e00045f255d66e64ac8bafceeec34c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b84135cc26bd0a30ce31cc16eb6b06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#a05b84135cc26bd0a30ce31cc16eb6b06">CleanKeyWords</a> (int nIdx)</td></tr>
+<tr class="memdesc:a05b84135cc26bd0a30ce31cc16eb6b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーワードの整頓・利用できないキーワードの削除  <a href="../../d4/d32/class_c_key_word_set_mgr.html#a05b84135cc26bd0a30ce31cc16eb6b06">[詳解]</a><br /></td></tr>
+<tr class="separator:a05b84135cc26bd0a30ce31cc16eb6b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea079dce5d2799ccd4ed30cac94d3961"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aea079dce5d2799ccd4ed30cac94d3961">GetAllocSize</a> (int nIdx) const</td></tr>
+<tr class="memdesc:aea079dce5d2799ccd4ed30cac94d3961"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保している数を返す  <a href="../../d4/d32/class_c_key_word_set_mgr.html#aea079dce5d2799ccd4ed30cac94d3961">[詳解]</a><br /></td></tr>
+<tr class="separator:aea079dce5d2799ccd4ed30cac94d3961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ca19d69af8ea2547a2b5550760b722"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ad2ca19d69af8ea2547a2b5550760b722">GetFreeSize</a> () const</td></tr>
+<tr class="memdesc:ad2ca19d69af8ea2547a2b5550760b722"><td class="mdescLeft">&#160;</td><td class="mdescRight">未割り当てブロックのキーワード数を返す  <a href="../../d4/d32/class_c_key_word_set_mgr.html#ad2ca19d69af8ea2547a2b5550760b722">[詳解]</a><br /></td></tr>
+<tr class="separator:ad2ca19d69af8ea2547a2b5550760b722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed27bb83c1d7bf18e12cb72858d1c26d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#aed27bb83c1d7bf18e12cb72858d1c26d">ResetAllKeyWordSet</a> (void)</td></tr>
+<tr class="memdesc:aed27bb83c1d7bf18e12cb72858d1c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全キーワードセットの削除と初期化  <a href="../../d4/d32/class_c_key_word_set_mgr.html#aed27bb83c1d7bf18e12cb72858d1c26d">[詳解]</a><br /></td></tr>
+<tr class="separator:aed27bb83c1d7bf18e12cb72858d1c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44e50336ae3ea182270e6190287131c"><td class="memItemLeft" align="right" valign="top"><a id="af44e50336ae3ea182270e6190287131c"></a>
+const <a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a> &amp;)</td></tr>
+<tr class="separator:af44e50336ae3ea182270e6190287131c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99fcdb9a39f0b11ceeabd8d750dac3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/class_c_key_word_set_mgr.html#ae99fcdb9a39f0b11ceeabd8d750dac3e">KeyWordReAlloc</a> (int nIdx, int nSize)</td></tr>
+<tr class="separator:ae99fcdb9a39f0b11ceeabd8d750dac3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1e9860284249c831908a5847310b0d"><td class="memItemLeft" align="right" valign="top"><a id="a9a1e9860284249c831908a5847310b0d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>KeywordMaxLen</b> (int nIdx)</td></tr>
+<tr class="separator:a9a1e9860284249c831908a5847310b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>強調キーワード管理 </p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.27 Moca キーワード数を可変に．</dd></dl>
+<dl class="section user"><dt>キーワード数可変について</dt><dd></dd></dl>
+<p>従来は各キーワードセット毎に固定サイズを割り当てていたが PHPキーワードなど多数のキーワードを登録できない一方で 少数のキーワード割り当てでは無駄が多かった．</p>
+<p>キーワードを全体で1つの配列に入れ，開始位置を別途管理することで キーワード総数を全体で管理するように変更した．</p>
+<p>セットが複数ある場合に前のセットにキーワードを登録していく場合に 保管場所が不足するとそれ以降を後ろにずらす必要がある． 頻繁にずらす操作が発生しないよう，nKeyWordSetBlockSize(50個)ずつの ブロック単位で場所を確保するようにしている． </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae165ff4a33fe7ce50e7ada978d9794e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae165ff4a33fe7ce50e7ada978d9794e5">&#9670;&nbsp;</a></span>CKeyWordSetMgr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CKeyWordSetMgr::CKeyWordSetMgr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>CKeyWordSetMgrは共有メモリ構造体に埋め込まれているため， そのままではコンストラクタが動かないことに注意． </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a309eb5da1aa99f3deb4ff19e0275e1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309eb5da1aa99f3deb4ff19e0275e1e5">&#9670;&nbsp;</a></span>AddKeyWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::AddKeyWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszKeyWord</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ｎ番目のセットにキーワードを追加</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] セット番号 </td></tr>
+    <tr><td class="paramname">pszKeyWord</td><td>[in] キーワード文字列</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>0: 成功, 1: セット番号エラー，2: メモリ確保エラー 3: キーワード不正，4: キーワード重複 </dd></dl>
+
+</div>
+</div>
+<a id="a4df2f30dabfc23933f9bc410eab18e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df2f30dabfc23933f9bc410eab18e4b">&#9670;&nbsp;</a></span>AddKeyWordSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyWordSetMgr::AddKeyWordSet </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszSetName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bKEYWORDCASE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーワードセットの追加 </p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.26 Moca 新規作成 </dd>
+<dd>
+2005.01.29 genta サイズ0で作成→reallocするように </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">pszSetName</td><td>セットの追加 [in] セット名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bKEYWORDCASE</td><td>[in] 大文字小文字の区別．true:あり, false:無し </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSize</td><td>[in] 最初に領域を確保するサイズ． </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6af9cdfcc5f8f02b150ec0aa6871eb64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af9cdfcc5f8f02b150ec0aa6871eb64">&#9670;&nbsp;</a></span>CanAddKeyWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyWordSetMgr::CanAddKeyWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーワードが追加可能か </p>
+<p>キーワード追加余地の問い合わせ</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true: もう1つ追加可能, false: 追加不可能</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2005.01.26 Moca 新規作成 </dd>
+<dd>
+2005.01.29 genta 割り当て済みの領域に空きがあれば拡張不能でも追加可能 </dd></dl>
+
+</div>
+</div>
+<a id="a05b84135cc26bd0a30ce31cc16eb6b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b84135cc26bd0a30ce31cc16eb6b06">&#9670;&nbsp;</a></span>CleanKeyWords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::CleanKeyWords </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キーワードの整頓・利用できないキーワードの削除 </p>
+<p>キーワードの整理</p>
+<p>重複や使用不可のキーワードを取り除く</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>削除したキーワード数 </dd></dl>
+<p>&lt; 削除キーワード数</p>
+<p>&lt; trueなら削除対象</p>
+
+</div>
+</div>
+<a id="af2b37ba38147447cffe0d73fb1515c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b37ba38147447cffe0d73fb1515c34">&#9670;&nbsp;</a></span>DelKeyWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::DelKeyWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ｎ番目のセットのｍ番目のキーワードを削除</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+    <tr><td class="paramname">nIdx2</td><td>[in] キーワード番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea079dce5d2799ccd4ed30cac94d3961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea079dce5d2799ccd4ed30cac94d3961">&#9670;&nbsp;</a></span>GetAllocSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::GetAllocSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>確保している数を返す </p>
+<p>割り当て済みキーワード数</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>キーワードセットに割り当て済みのキーワード数 </dd></dl>
+
+</div>
+</div>
+<a id="ad2ca19d69af8ea2547a2b5550760b722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2ca19d69af8ea2547a2b5550760b722">&#9670;&nbsp;</a></span>GetFreeSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::GetFreeSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>未割り当てブロックのキーワード数を返す </p>
+<p>共有空きスペース</p>
+<dl class="section date"><dt>日付</dt><dd>2004.07.29 Moca 新規作成</dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>共有空き領域(キーワード数) </dd></dl>
+
+</div>
+</div>
+<a id="a7ff4fd395a8ef41e4b133c0d39269a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff4fd395a8ef41e4b133c0d39269a2e">&#9670;&nbsp;</a></span>GetKeyWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CKeyWordSetMgr::GetKeyWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ｎ番目のセットのｍ番目のキーワードを返す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+    <tr><td class="paramname">nIdx2</td><td>[in] キーワード番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebedb565a31c5cae6667622c5584e953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebedb565a31c5cae6667622c5584e953">&#9670;&nbsp;</a></span>GetTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CKeyWordSetMgr::GetTypeName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ｎ番目のセットのセット名を返す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] セット番号 0～キーワードセット数-1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae99fcdb9a39f0b11ceeabd8d750dac3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99fcdb9a39f0b11ceeabd8d750dac3e">&#9670;&nbsp;</a></span>KeyWordReAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyWordSetMgr::KeyWordReAlloc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初期化済みのキーワードセットのキーワード領域の再割り当て、解放を行う</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+    <tr><td class="paramname">nSize</td><td>[in] 必要なキーワード数 (0～) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed27bb83c1d7bf18e12cb72858d1c26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed27bb83c1d7bf18e12cb72858d1c26d">&#9670;&nbsp;</a></span>ResetAllKeyWordSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CKeyWordSetMgr::ResetAllKeyWordSet </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全キーワードセットの削除と初期化 </p>
+<p>キーワードセットのインデックスを全て0とする．</p>
+<dl class="section date"><dt>日付</dt><dd>2004.07.29 Moca 可変長記憶 </dd></dl>
+
+</div>
+</div>
+<a id="a3c1f4ad8bb0f7bae6c90481f44f6cb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1f4ad8bb0f7bae6c90481f44f6cb74">&#9670;&nbsp;</a></span>SearchKeyWord2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::SearchKeyWord2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszKeyWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyWordLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>nIdx番目のキーワードセットから pszKeyWordを探す。 見つかれば 0以上を、見つからなければ負の数を返す。 </p><dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0以上</td><td>見つかった。 </td></tr>
+    <tr><td class="paramname">-1</td><td>見つからなかった。 </td></tr>
+    <tr><td class="paramname">-2</td><td>見つからなかったが、pszKeywordから始まるキーワードが存在している。 </td></tr>
+    <tr><td class="paramname">intmax</td><td>見つかったが、pszKeywordから始まる、より長いキーワードが存在している。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae278c14ea20ad24f70851e1bc6f2b145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae278c14ea20ad24f70851e1bc6f2b145">&#9670;&nbsp;</a></span>SetKeyWordArr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::SetKeyWordArr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>ppszKeyWordArr</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードリストを設定</p>
+<dl class="section return"><dt>戻り値</dt><dd>登録したキーワード数．0は失敗． </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">nIdx</td><td>キーワードの配列から設定する [in] キーワードセット番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSize</td><td>[in] ppszKeyWordArrの要素数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ppszKeyWordArr</td><td>[in] キーワードの配列(重複・長さ制限等、考慮済みであること) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac520281a2ee489d6f255b6fd81f4ad5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac520281a2ee489d6f255b6fd81f4ad5b">&#9670;&nbsp;</a></span>SetKeyWordArr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::SetKeyWordArr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszKeyWordArr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iniからキーワードを設定する </p>
+<p>\0またはTABで区切られた文字列からキーワードを設定</p>
+<dl class="section return"><dt>戻り値</dt><dd>登録に成功したキーワード数</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>Moca </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2004.07.29 Moca CShareData::ShareData_IO_2内のコードを元に移築・作成 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSize</td><td>[in] キーワード数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszKeyWordArr</td><td>[in]「key\tword\t\0」又は「key\0word\0\0」の形式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca64560c05281b8f6d2389df712d90b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca64560c05281b8f6d2389df712d90b7">&#9670;&nbsp;</a></span>SetTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CKeyWordSetMgr::SetTypeName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ｎ番目のセット名を設定する // 2005.01.26 Moca </p>
+<p>ｎ番目のセットのセット名を再設定</p>
+<dl class="section date"><dt>日付</dt><dd>2005.01.26 Moca 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a44653cf62241538c05003f255a61cc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44653cf62241538c05003f255a61cc8f">&#9670;&nbsp;</a></span>UpdateKeyWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * CKeyWordSetMgr::UpdateKeyWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIdx2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszKeyWord</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ｎ番目のセットのｍ番目のキーワードを編集 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIdx</td><td>[in] キーワードセット番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIdx2</td><td>[in] キーワード番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszKeyWord</td><td>[in] 設定するキーワード </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aa85a00070cf97ff9c9c8e0e4db5fa266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85a00070cf97ff9c9c8e0e4db5fa266">&#9670;&nbsp;</a></span>m_bKEYWORDCASEArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyWordSetMgr::m_bKEYWORDCASEArr[MAX_SETNUM]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードの英大文字小文字区別 </p>
+
+</div>
+</div>
+<a id="af9b77ea45f4ef2a5cf312a71a8c5c725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b77ea45f4ef2a5cf312a71a8c5c725">&#9670;&nbsp;</a></span>m_nCurrentKeyWordSetIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::m_nCurrentKeyWordSetIdx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のキーワードセット番号(GUI用) </p>
+<p>本来の処理とは無関係だが，あるウィンドウで選択したセットが 別のウィンドウの設定画面にも引き継がれるようにするため． </p>
+
+</div>
+</div>
+<a id="a9e6c009024bf227239f53f54a756b2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6c009024bf227239f53f54a756b2b2">&#9670;&nbsp;</a></span>m_nKeyWordNumArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::m_nKeyWordNumArr[MAX_SETNUM]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードセットに登録されているキーワード数 </p>
+
+</div>
+</div>
+<a id="ab550f1f6d7dd2ce8abe555688cb96ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab550f1f6d7dd2ce8abe555688cb96ed0">&#9670;&nbsp;</a></span>m_nKeyWordSetNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::m_nKeyWordSetNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードセット数 </p>
+
+</div>
+</div>
+<a id="aa686b5ae1b747987de2d17f1f38e049b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa686b5ae1b747987de2d17f1f38e049b">&#9670;&nbsp;</a></span>m_nStartIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyWordSetMgr::m_nStartIdx[MAX_SETNUM+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>キーワードセットの開始位置(INI未保存) 次の開始位置までが確保済みの領域． +1しているのは最後が0で終わるようにするため． </p>
+
+</div>
+</div>
+<a id="ada1cf85555315f3078777cb49d17e0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1cf85555315f3078777cb49d17e0f9">&#9670;&nbsp;</a></span>m_szSetNameArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wchar_t CKeyWordSetMgr::m_szSetNameArr[MAX_SETNUM][MAX_SETNAMELEN+1]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>キーワードセット名 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d7/df4/_c_key_word_set_mgr_8h_source.html">CKeyWordSetMgr.h</a></li>
+<li>sakura_core/<a class="el" href="../../d1/d1f/_c_key_word_set_mgr_8cpp.html">CKeyWordSetMgr.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

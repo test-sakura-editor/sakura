@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CWSHMacroManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../db/df3/class_c_w_s_h_macro_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CWSHMacroManager クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CWSHMacroManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d90/class_c_w_s_h_macro_manager.png" usemap="#CWSHMacroManager_map" alt=""/>
+  <map id="CWSHMacroManager_map" name="CWSHMacroManager_map">
+<area href="../../dd/d69/class_c_macro_manager_base.html" title="マクロを処理するエンジン部分の基底クラス" alt="CMacroManagerBase" shape="rect" coords="0,56,137,80"/>
+<area href="../../d5/d3c/class_c_macro_before_after.html" alt="CMacroBeforeAfter" shape="rect" coords="0,0,137,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2e8ff9107aa9a4d9f7ac656415202716"><td class="memItemLeft" align="right" valign="top"><a id="a2e8ff9107aa9a4d9f7ac656415202716"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CWSHMacroManager</b> (std::wstring const AEngineName)</td></tr>
+<tr class="separator:a2e8ff9107aa9a4d9f7ac656415202716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e829a9a3948461cb90d0bc9bd4c19f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d90/class_c_w_s_h_macro_manager.html#a21e829a9a3948461cb90d0bc9bd4c19f">ExecKeyMacro</a> (<a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *EditView, int flags) const override</td></tr>
+<tr class="separator:a21e829a9a3948461cb90d0bc9bd4c19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d37c2a1ce32f72ce63e95e86783d1d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d90/class_c_w_s_h_macro_manager.html#a82d37c2a1ce32f72ce63e95e86783d1d">LoadKeyMacro</a> (HINSTANCE hInstance, const WCHAR *pszPath) override</td></tr>
+<tr class="separator:a82d37c2a1ce32f72ce63e95e86783d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e61b79e82bc67c9403fc27a1523063d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d90/class_c_w_s_h_macro_manager.html#a1e61b79e82bc67c9403fc27a1523063d">LoadKeyMacroStr</a> (HINSTANCE hInstance, const WCHAR *pszCode) override</td></tr>
+<tr class="separator:a1e61b79e82bc67c9403fc27a1523063d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6832b837cd8cfa0559c0f1a3af2401b8"><td class="memItemLeft" align="right" valign="top"><a id="a6832b837cd8cfa0559c0f1a3af2401b8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddParam</b> (<a class="el" href="../../df/db6/class_c_w_s_h_if_obj.html">CWSHIfObj</a> *param)</td></tr>
+<tr class="separator:a6832b837cd8cfa0559c0f1a3af2401b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b54a99c2eecd251c8627f13b14dd0d9"><td class="memItemLeft" align="right" valign="top"><a id="a4b54a99c2eecd251c8627f13b14dd0d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddParam</b> (CWSHIfObj::List &amp;params)</td></tr>
+<tr class="separator:a4b54a99c2eecd251c8627f13b14dd0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e822e70ab34535161ab676aa05da40e"><td class="memItemLeft" align="right" valign="top"><a id="a2e822e70ab34535161ab676aa05da40e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearParam</b> ()</td></tr>
+<tr class="separator:a2e822e70ab34535161ab676aa05da40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b416c2d9984a64d65caf5b7d2cc373"><td class="memItemLeft" align="right" valign="top"><a id="af2b416c2d9984a64d65caf5b7d2cc373"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ExecKeyMacro2</b> (class <a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pcEditView, int flags)</td></tr>
+<tr class="separator:af2b416c2d9984a64d65caf5b7d2cc373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e3c25594666a33a4c05d5c66b7040e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d69/class_c_macro_manager_base.html#a54e3c25594666a33a4c05d5c66b7040e">IsReady</a> ()</td></tr>
+<tr class="separator:a54e3c25594666a33a4c05d5c66b7040e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab856ded3d075f6cef16575b68fe23c01"><td class="memItemLeft" align="right" valign="top"><a id="ab856ded3d075f6cef16575b68fe23c01"></a>
+static <a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Creator</b> (const WCHAR *FileExt)</td></tr>
+<tr class="separator:ab856ded3d075f6cef16575b68fe23c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4c7ce14a570effffb6c46d30fad9db"><td class="memItemLeft" align="right" valign="top"><a id="a8e4c7ce14a570effffb6c46d30fad9db"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>declare</b> ()</td></tr>
+<tr class="separator:a8e4c7ce14a570effffb6c46d30fad9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a336c2247cf2d2fa324b9a6e5b8edc340"><td class="memItemLeft" align="right" valign="top"><a id="a336c2247cf2d2fa324b9a6e5b8edc340"></a>
+std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_Source</b></td></tr>
+<tr class="separator:a336c2247cf2d2fa324b9a6e5b8edc340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057c8a41402a696a294c6f50b919d9a3"><td class="memItemLeft" align="right" valign="top"><a id="a057c8a41402a696a294c6f50b919d9a3"></a>
+std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_EngineName</b></td></tr>
+<tr class="separator:a057c8a41402a696a294c6f50b919d9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a950c966ea34d95d2f4a358835f8fde77"><td class="memItemLeft" align="right" valign="top"><a id="a950c966ea34d95d2f4a358835f8fde77"></a>
+CWSHIfObj::List&#160;</td><td class="memItemRight" valign="bottom"><b>m_Params</b></td></tr>
+<tr class="separator:a950c966ea34d95d2f4a358835f8fde77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87daf845a7b42df2a2d983a5ea45e790"><td class="memItemLeft" align="right" valign="top"><a id="a87daf845a7b42df2a2d983a5ea45e790"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d69/class_c_macro_manager_base.html#a87daf845a7b42df2a2d983a5ea45e790">m_nReady</a></td></tr>
+<tr class="memdesc:a87daf845a7b42df2a2d983a5ea45e790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load済みかどうかを表すフラグ true...Load済み、false...未Load。 <br /></td></tr>
+<tr class="separator:a87daf845a7b42df2a2d983a5ea45e790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a21e829a9a3948461cb90d0bc9bd4c19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e829a9a3948461cb90d0bc9bd4c19f">&#9670;&nbsp;</a></span>ExecKeyMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CWSHMacroManager::ExecKeyMacro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *&#160;</td>
+          <td class="paramname"><em>EditView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WSHマクロの実行</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EditView</td><td>[in] 操作対象EditView</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.07.20 genta : flags追加 </dd></dl>
+
+<p><a class="el" href="../../dd/d69/class_c_macro_manager_base.html#a867a5d1d3838d2c123ac82b9b17294dc">CMacroManagerBase</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a54e3c25594666a33a4c05d5c66b7040e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e3c25594666a33a4c05d5c66b7040e">&#9670;&nbsp;</a></span>IsReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMacroManagerBase::IsReady </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load済みかどうか</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Load済み </td></tr>
+    <tr><td class="paramname">false</td><td>未Load </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a82d37c2a1ce32f72ce63e95e86783d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d37c2a1ce32f72ce63e95e86783d1d">&#9670;&nbsp;</a></span>LoadKeyMacro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CWSHMacroManager::LoadKeyMacro </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WSHマクロの読み込み（ファイルから）</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] インスタンスハンドル(未使用) </td></tr>
+    <tr><td class="paramname">pszPath</td><td>[in] ファイルのパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d69/class_c_macro_manager_base.html#a209a039d3c571f21dff313e74021d13b">CMacroManagerBase</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a1e61b79e82bc67c9403fc27a1523063d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e61b79e82bc67c9403fc27a1523063d">&#9670;&nbsp;</a></span>LoadKeyMacroStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CWSHMacroManager::LoadKeyMacroStr </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WSHマクロの読み込み（文字列から）</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] インスタンスハンドル(未使用) </td></tr>
+    <tr><td class="paramname">pszCode</td><td>[in] マクロコード </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d69/class_c_macro_manager_base.html#a85fb8e109f7c4dfa429ed134640c863d">CMacroManagerBase</a>を実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/macro/<a class="el" href="../../db/dc2/_c_w_s_h_manager_8h_source.html">CWSHManager.h</a></li>
+<li>sakura_core/macro/<a class="el" href="../../d1/d80/_c_w_s_h_manager_8cpp.html">CWSHManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

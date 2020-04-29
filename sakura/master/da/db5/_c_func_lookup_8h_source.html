@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/func/CFuncLookup.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2a6206e6f7582fa6aff912a4cbda4187.html">func</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFuncLookup.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/db5/_c_func_lookup_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2001, genta</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2002, aroka</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d61/_funccode_8h.html">func/Funccode.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d4a/struct_macro_rec.html">MacroRec</a>;<span class="comment">// 2007.11.02 ryoji</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/d05/struct_common_setting.html">CommonSetting</a>;<span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d8/d4a/struct_macro_rec.html">   45</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d4a/struct_macro_rec.html">MacroRec</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">   46</a></span>&#160;    WCHAR   <a class="code" href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">m_szName</a>[MACRONAME_MAX];    </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">   47</a></span>&#160;    WCHAR   <a class="code" href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">m_szFile</a>[_MAX_PATH+1];  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span>    m_bReloadWhenExecute;   <span class="comment">//  実行時に読み込みなおすか（デフォルトon）</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> IsEnabled()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">m_szFile</a>[0] != L<span class="charliteral">&#39;\0&#39;</span>; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> WCHAR* GetTitle()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">m_szName</a>[0] == L<span class="charliteral">&#39;\0&#39;</span> ? <a class="code" href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">m_szFile</a>: <a class="code" href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">m_szName</a>; } <span class="comment">// 2007.11.02 ryoji 追加</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../df/dc4/class_c_func_lookup.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//  Oct. 15, 2001 genta 引数追加</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// 2007.11.02 ryoji 引数変更（CSMacroMgr-&gt;MacroRec）</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//  CFuncLookup( HINSTANCE hInst, MacroRec* pMacroRec, CommonSetting* pCom )</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//      : m_pMacroRec( pMacroRec ), m_pCommon( pCom ) {}</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a>() : m_pMacroRec( NULL ){}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> Init( <a class="code" href="../../d8/d4a/struct_macro_rec.html">MacroRec</a>* pMacroRec, <a class="code" href="../../d5/d05/struct_common_setting.html">CommonSetting</a>* pCom ){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        m_pMacroRec = pMacroRec;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        m_pCommon = pCom;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    EFunctionCode <a class="code" href="../../df/dc4/class_c_func_lookup.html#aff9c6ec6bbc9520a15e1d6065bcd5d2a">Pos2FuncCode</a>( <span class="keywordtype">int</span> category, <span class="keywordtype">int</span> position, <span class="keywordtype">bool</span> bGetUnavailable = <span class="keyword">true</span> ) <span class="keyword">const</span>;    <span class="comment">// 2007.10.31 ryoji bGetUnavailableパラメータ追加</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/dc4/class_c_func_lookup.html#a8d5097bd3b2be06d4b1e2c8d2ca309c0">Pos2FuncName</a>( <span class="keywordtype">int</span> category, <span class="keywordtype">int</span> position, WCHAR* ptr, <span class="keywordtype">int</span> bufsize ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/dc4/class_c_func_lookup.html#aa6f96b16c55d6eafc41e08ed9c8d205b">Funccode2Name</a>( <span class="keywordtype">int</span> funccode, WCHAR* ptr, <span class="keywordtype">int</span> bufsize ) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../df/dc4/class_c_func_lookup.html#a1291d23f6389108164a54c8f8fe8047e">Category2Name</a>( <span class="keywordtype">int</span> category ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../df/dc4/class_c_func_lookup.html#a7ad23be0486cf0970c44b2bbba96ede9">Custmenu2Name</a>( <span class="keywordtype">int</span> index, WCHAR buf[], <span class="keywordtype">int</span> bufSize ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/dc4/class_c_func_lookup.html#a3317d409220b016911e44b73de4a601d">SetCategory2Combo</a>( HWND hComboBox ) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/dc4/class_c_func_lookup.html#a6edbd623264ffa5306febe3024c3a2dc">SetListItem</a>( HWND hListBox, <span class="keywordtype">int</span> category ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> GetCategoryCount(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> nsFuncCode::nFuncKindNum + 3;    <span class="comment">//分類＋外部マクロ＋カスタムメニュー＋プラグイン</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/dc4/class_c_func_lookup.html#a15c937350d2caa9c1bf773a653c892ca">GetItemCount</a>(<span class="keywordtype">int</span> category) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d8/d4a/struct_macro_rec.html">MacroRec</a>* m_pMacroRec;  </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../d5/d05/struct_common_setting.html">CommonSetting</a>* m_pCommon;   </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/* [EOF] */</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a1291d23f6389108164a54c8f8fe8047e"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a1291d23f6389108164a54c8f8fe8047e">CFuncLookup::Category2Name</a></div><div class="ttdeci">const WCHAR * Category2Name(int category) const</div><div class="ttdoc">機能分類番号に対応する機能名称を返す．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:179</div></div>
+<div class="ttc" id="astruct_common_setting_html"><div class="ttname"><a href="../../d5/d05/struct_common_setting.html">CommonSetting</a></div><div class="ttdoc">共通設定</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:720</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a8d5097bd3b2be06d4b1e2c8d2ca309c0"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a8d5097bd3b2be06d4b1e2c8d2ca309c0">CFuncLookup::Pos2FuncName</a></div><div class="ttdeci">bool Pos2FuncName(int category, int position, WCHAR *ptr, int bufsize) const</div><div class="ttdoc">分類中の位置に対応する機能名称を返す．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:91</div></div>
+<div class="ttc" id="a_funccode_8h_html"><div class="ttname"><a href="../../de/d61/_funccode_8h.html">Funccode.h</a></div><div class="ttdoc">機能番号定義</div></div>
+<div class="ttc" id="astruct_macro_rec_html_ae0c063966b3bb2c6f4d5a90ff339d560"><div class="ttname"><a href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">MacroRec::m_szName</a></div><div class="ttdeci">WCHAR m_szName[MACRONAME_MAX]</div><div class="ttdoc">表示名</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:46</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_aa6f96b16c55d6eafc41e08ed9c8d205b"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#aa6f96b16c55d6eafc41e08ed9c8d205b">CFuncLookup::Funccode2Name</a></div><div class="ttdeci">bool Funccode2Name(int funccode, WCHAR *ptr, int bufsize) const</div><div class="ttdoc">機能番号に対応する機能名称を返す．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:113</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a6edbd623264ffa5306febe3024c3a2dc"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a6edbd623264ffa5306febe3024c3a2dc">CFuncLookup::SetListItem</a></div><div class="ttdeci">void SetListItem(HWND hListBox, int category) const</div><div class="ttdoc">指定された分類に属する機能リストをListBoxに登録する．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:230</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_aff9c6ec6bbc9520a15e1d6065bcd5d2a"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#aff9c6ec6bbc9520a15e1d6065bcd5d2a">CFuncLookup::Pos2FuncCode</a></div><div class="ttdeci">EFunctionCode Pos2FuncCode(int category, int position, bool bGetUnavailable=true) const</div><div class="ttdoc">分類中の位置に対応する機能番号を返す．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:54</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a></div><div class="ttdoc">表示用文字列等の取得</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:59</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a15c937350d2caa9c1bf773a653c892ca"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a15c937350d2caa9c1bf773a653c892ca">CFuncLookup::GetItemCount</a></div><div class="ttdeci">int GetItemCount(int category) const</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:253</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a3317d409220b016911e44b73de4a601d"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a3317d409220b016911e44b73de4a601d">CFuncLookup::SetCategory2Combo</a></div><div class="ttdeci">void SetCategory2Combo(HWND hComboBox) const</div><div class="ttdoc">ComboBoxに利用可能な機能分類一覧を登録する</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:203</div></div>
+<div class="ttc" id="astruct_macro_rec_html"><div class="ttname"><a href="../../d8/d4a/struct_macro_rec.html">MacroRec</a></div><div class="ttdoc">マクロ情報</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:45</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html_a7ad23be0486cf0970c44b2bbba96ede9"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html#a7ad23be0486cf0970c44b2bbba96ede9">CFuncLookup::Custmenu2Name</a></div><div class="ttdeci">const WCHAR * Custmenu2Name(int index, WCHAR buf[], int bufSize) const</div><div class="ttdoc">番号に対応するカスタムメニュー名称を返す．</div><div class="ttdef"><b>Definition:</b> CFuncLookup.cpp:282</div></div>
+<div class="ttc" id="astruct_macro_rec_html_ab6011055d3bffb46068ed4773621e92c"><div class="ttname"><a href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">MacroRec::m_szFile</a></div><div class="ttdeci">WCHAR m_szFile[_MAX_PATH+1]</div><div class="ttdoc">ファイル名(ディレクトリを含まない)</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:47</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
