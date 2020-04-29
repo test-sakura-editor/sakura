@@ -33,5 +33,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: html # The folder the action should deploy.
-          TARGET_FOLDER: master2
-          REPOSITORY_NAME: test-sakura-editor/doxygen
+          TARGET_FOLDER: sakura/master
