@@ -26,3 +26,12 @@ jobs:
       with:
           working-directory: '.'
           doxyfile-path: './doxygen.conf'
+
+    - name: Deploy doxygen
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: html # The folder the action should deploy.
+          TARGET_FOLDER: master
+          REPOSITORY_NAME: test-sakura-editor/doxygen
