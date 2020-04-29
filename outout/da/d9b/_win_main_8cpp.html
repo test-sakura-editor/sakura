@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/_main/WinMain.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_e3eabb1034bf36573937be9d2ebf3dc3.html">_main</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">WinMain.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Entry Point  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;Ole2.h&gt;</code><br />
+<code>#include &lt;locale.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d22/_c_process_factory_8h_source.html">CProcessFactory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d3c/_c_process_8h_source.html">CProcess.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d6f/_c_running_timer_8h_source.html">debug/CRunningTimer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dfc/version_8h_source.html">version.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ae3976f847c51079e7d54f900b9774ca5"><td class="memItemLeft" align="right" valign="top"><a id="ae3976f847c51079e7d54f900b9774ca5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_APP_NAME_</b>(TYPE)&#160;&#160;&#160;TYPE(&quot;sakura&quot;)</td></tr>
+<tr class="separator:ae3976f847c51079e7d54f900b9774ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f133fb440a446bcabadf1c76ee60ca"><td class="memItemLeft" align="right" valign="top"><a id="a17f133fb440a446bcabadf1c76ee60ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_APP_NAME_2_</b>(TYPE)&#160;&#160;&#160;TYPE(&quot;&quot;)</td></tr>
+<tr class="separator:a17f133fb440a446bcabadf1c76ee60ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac6273b56d3c8db44a6521f90e971e3"><td class="memItemLeft" align="right" valign="top"><a id="a4ac6273b56d3c8db44a6521f90e971e3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_APP_NAME_3_</b>(TYPE)&#160;&#160;&#160;TYPE(&quot;&quot;)</td></tr>
+<tr class="separator:a4ac6273b56d3c8db44a6521f90e971e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927ef9b37d6bbafb3ae20ce89c4f14fd"><td class="memItemLeft" align="right" valign="top"><a id="a927ef9b37d6bbafb3ae20ce89c4f14fd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_APP_NAME_DEV_</b>(TYPE)&#160;&#160;&#160;TYPE(&quot;&quot;)</td></tr>
+<tr class="separator:a927ef9b37d6bbafb3ae20ce89c4f14fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1d7fbfc4ddbe5a856ba143b1521964"><td class="memItemLeft" align="right" valign="top"><a id="a6a1d7fbfc4ddbe5a856ba143b1521964"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_GSTR_APPNAME_</b>(TYPE)&#160;&#160;&#160;_APP_NAME_(TYPE) _APP_NAME_2_(TYPE) _APP_NAME_DEV_(TYPE) _APP_NAME_3_(TYPE)</td></tr>
+<tr class="separator:a6a1d7fbfc4ddbe5a856ba143b1521964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a95f30eaeaff24b25b7f25dd24c71f104"><td class="memItemLeft" align="right" valign="top">int WINAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9b/_win_main_8cpp.html#a95f30eaeaff24b25b7f25dd24c71f104">wWinMain</a> (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)</td></tr>
+<tr class="separator:a95f30eaeaff24b25b7f25dd24c71f104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a172fe1f9d0c646fd5b6cf1524bd7728b"><td class="memItemLeft" align="right" valign="top"><a id="a172fe1f9d0c646fd5b6cf1524bd7728b"></a>
+const WCHAR&#160;</td><td class="memItemRight" valign="bottom"><b>g_szGStrAppName</b> [] = (_GSTR_APPNAME_(_T) )</td></tr>
+<tr class="separator:a172fe1f9d0c646fd5b6cf1524bd7728b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d41d6553f9f7a4bb529c4f885fcece9"><td class="memItemLeft" align="right" valign="top"><a id="a7d41d6553f9f7a4bb529c4f885fcece9"></a>
+const CHAR&#160;</td><td class="memItemRight" valign="bottom"><b>g_szGStrAppNameA</b> [] = (_GSTR_APPNAME_(ATEXT))</td></tr>
+<tr class="separator:a7d41d6553f9f7a4bb529c4f885fcece9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bcc899cc93a90457d967c9df2cac07"><td class="memItemLeft" align="right" valign="top"><a id="a99bcc899cc93a90457d967c9df2cac07"></a>
+const WCHAR&#160;</td><td class="memItemRight" valign="bottom"><b>g_szGStrAppNameW</b> [] = (_GSTR_APPNAME_(LTEXT))</td></tr>
+<tr class="separator:a99bcc899cc93a90457d967c9df2cac07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Entry Point </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/03/13 作成 </dd>
+<dd>
+2001/06/26 genta ワード単位のGrepのためのコマンドライン処理追加 </dd>
+<dd>
+2002/01/08 aroka 処理の流れを整理、未使用コードを削除 </dd>
+<dd>
+2002/01/18 aroka 虫取り＆リリース </dd>
+<dd>
+2009/01/07 ryoji WinMainにOleInitialize/OleUninitializeを追加 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a95f30eaeaff24b25b7f25dd24c71f104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f30eaeaff24b25b7f25dd24c71f104">&#9670;&nbsp;</a></span>wWinMain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WINAPI wWinMain </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hPrevInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>lpCmdLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCmdShow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Windows Entry point</p>
+<p>コマンドラインオプションで -NOWIN を指定するかどうかでプロセスのタイプが変わる。 +-------&mdash;+------------------------&mdash;+------------------------&mdash;+ |-NOWIN指定|どうなる？ |作成するProcessインスタンス| +-------&mdash;+------------------------&mdash;+------------------------&mdash;+ |有 |コントロールプロセスとなる |CControlProcessクラス | +-------&mdash;+------------------------&mdash;+------------------------&mdash;+ |無 |エディタプロセスとなる |CNormalProcessクラス | +-------&mdash;+------------------------&mdash;+------------------------&mdash;+ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>handle to current instance </td></tr>
+    <tr><td class="paramname">hPrevInstance</td><td>handle to previous instance </td></tr>
+    <tr><td class="paramname">lpCmdLine</td><td>pointer to command line </td></tr>
+    <tr><td class="paramname">nCmdShow</td><td>show state of window </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

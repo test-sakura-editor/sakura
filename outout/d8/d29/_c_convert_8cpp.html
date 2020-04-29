@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/convert/CConvert.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_aa5658efbe5ca02810aa883a8e8cac9d.html">convert</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CConvert.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d01/_c_convert_8h_source.html">CConvert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d61/_funccode_8h_source.html">func/Funccode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_c_eol_8h_source.html">CEol.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/_c_code_mediator_8h_source.html">charset/CCodeMediator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d98/_c_code_factory_8h_source.html">charset/CCodeFactory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/db0/_c_shift_jis_8h_source.html">charset/CShiftJis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d10/_c_jis_8h_source.html">charset/CJis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/da2/_c_euc_8h_source.html">charset/CEuc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/de8/_c_unicode_be_8h_source.html">charset/CUnicodeBe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dbc/_c_utf8_8h_source.html">charset/CUtf8.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dc5/_c_utf7_8h_source.html">charset/CUtf7.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/db2/_c_convert___to_lower_8h_source.html">CConvert_ToLower.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d3e/_c_convert___to_upper_8h_source.html">CConvert_ToUpper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d63/_c_convert___to_hankaku_8h_source.html">CConvert_ToHankaku.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/da9/_c_convert___tab_to_space_8h_source.html">CConvert_TabToSpace.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d00/_c_convert___space_to_tab_8h_source.html">CConvert_SpaceToTab.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d46/_c_convert___zenkata_to_hankata_8h_source.html">CConvert_ZenkataToHankata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dee/_c_convert___zeneisu_to_haneisu_8h_source.html">CConvert_ZeneisuToHaneisu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d5f/_c_convert___haneisu_to_zeneisu_8h_source.html">CConvert_HaneisuToZeneisu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/db5/_c_convert___hankata_to_zenkata_8h_source.html">CConvert_HankataToZenkata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dcc/_c_convert___hankata_to_zenhira_8h_source.html">CConvert_HankataToZenhira.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/df7/_c_convert___to_zenhira_8h_source.html">CConvert_ToZenhira.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/da4/_c_convert___to_zenkata_8h_source.html">CConvert_ToZenkata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d69/_c_convert___trim_8h_source.html">CConvert_Trim.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d14/_c_edit_wnd_8h_source.html">window/CEditWnd.h</a>&quot;</code><br />
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

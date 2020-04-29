@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/_main/CNormalProcess.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_e3eabb1034bf36573937be9d2ebf3dc3.html">_main</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CNormalProcess.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d5e/_c_normal_process_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, aroka 新規作成</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">global.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d3c/_c_process_8h.html">CProcess.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8b/_c_migemo_8h.html">extmodule/CMigemo.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/de1/_c_edit_app_8h.html">CEditApp.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d8/dec/class_c_normal_process.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/dec/class_c_normal_process.html">CNormalProcess</a> final : <span class="keyword">public</span> <a class="code" href="../../de/d56/class_c_process.html">CProcess</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d8/dec/class_c_normal_process.html">CNormalProcess</a>( HINSTANCE hInstance, LPCWSTR lpCmdLine );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ~<a class="code" href="../../d8/dec/class_c_normal_process.html">CNormalProcess</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//プロセスハンドラ</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/dec/class_c_normal_process.html#aa6f72e771fdf35d59cd0fdebb0a54b1c">InitializeProcess</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/dec/class_c_normal_process.html#a1069cec58e2c95693ddc7634972ea140">MainLoop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dec/class_c_normal_process.html#ab1904ce9fd5caccc5765dd19b1ea20dd">OnExitProcess</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//実装補助</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    HANDLE <a class="code" href="../../d8/dec/class_c_normal_process.html#a785651c02c71dd6c3a72511ee0c64a27">_GetInitializeMutex</a>() <span class="keyword">const</span>; <span class="comment">// 2002/2/8 aroka</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/dec/class_c_normal_process.html#ae563d08a544218f1b9d8bec2e7ae1d13">OpenFiles</a>(HWND hwnd);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d7/d37/class_c_edit_app.html">CEditApp</a>*   m_pcEditApp;    <span class="comment">//2007.10.23 kobake</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
+<div class="ttc" id="aclass_c_normal_process_html_a785651c02c71dd6c3a72511ee0c64a27"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html#a785651c02c71dd6c3a72511ee0c64a27">CNormalProcess::_GetInitializeMutex</a></div><div class="ttdeci">HANDLE _GetInitializeMutex() const</div><div class="ttdoc">Mutex(プロセス初期化の目印)を取得する</div><div class="ttdef"><b>Definition:</b> CNormalProcess.cpp:474</div></div>
+<div class="ttc" id="aclass_c_edit_app_html"><div class="ttname"><a href="../../d7/d37/class_c_edit_app.html">CEditApp</a></div><div class="ttdoc">エディタ部分アプリケーションクラス。CNormalProcess1個につき、1個存在。</div><div class="ttdef"><b>Definition:</b> CEditApp.h:44</div></div>
+<div class="ttc" id="aclass_c_normal_process_html_a1069cec58e2c95693ddc7634972ea140"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html#a1069cec58e2c95693ddc7634972ea140">CNormalProcess::MainLoop</a></div><div class="ttdeci">bool MainLoop() override</div><div class="ttdoc">エディタプロセスのメッセージループ</div><div class="ttdef"><b>Definition:</b> CNormalProcess.cpp:439</div></div>
+<div class="ttc" id="a_c_process_8h_html"><div class="ttname"><a href="../../d4/d3c/_c_process_8h.html">CProcess.h</a></div><div class="ttdoc">プロセス基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_normal_process_html_ae563d08a544218f1b9d8bec2e7ae1d13"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html#ae563d08a544218f1b9d8bec2e7ae1d13">CNormalProcess::OpenFiles</a></div><div class="ttdeci">void OpenFiles(HWND hwnd)</div><div class="ttdoc">複数ファイル読み込み</div><div class="ttdef"><b>Definition:</b> CNormalProcess.cpp:503</div></div>
+<div class="ttc" id="aclass_c_process_html"><div class="ttname"><a href="../../de/d56/class_c_process.html">CProcess</a></div><div class="ttdoc">プロセス基底クラス</div><div class="ttdef"><b>Definition:</b> CProcess.h:31</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="a_c_migemo_8h_html"><div class="ttname"><a href="../../d0/d8b/_c_migemo_8h.html">CMigemo.h</a></div><div class="ttdoc">Migemo関連</div></div>
+<div class="ttc" id="aclass_c_normal_process_html"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html">CNormalProcess</a></div><div class="ttdoc">エディタプロセスクラス</div><div class="ttdef"><b>Definition:</b> CNormalProcess.h:31</div></div>
+<div class="ttc" id="aclass_c_normal_process_html_aa6f72e771fdf35d59cd0fdebb0a54b1c"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html#aa6f72e771fdf35d59cd0fdebb0a54b1c">CNormalProcess::InitializeProcess</a></div><div class="ttdeci">bool InitializeProcess() override</div><div class="ttdoc">エディタプロセスを初期化する</div><div class="ttdef"><b>Definition:</b> CNormalProcess.cpp:69</div></div>
+<div class="ttc" id="aclass_c_normal_process_html_ab1904ce9fd5caccc5765dd19b1ea20dd"><div class="ttname"><a href="../../d8/dec/class_c_normal_process.html#ab1904ce9fd5caccc5765dd19b1ea20dd">CNormalProcess::OnExitProcess</a></div><div class="ttdeci">void OnExitProcess() override</div><div class="ttdoc">エディタプロセスを終了する</div><div class="ttdef"><b>Definition:</b> CNormalProcess.cpp:455</div></div>
+<div class="ttc" id="a_c_edit_app_8h_html"><div class="ttname"><a href="../../d5/de1/_c_edit_app_8h.html">CEditApp.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

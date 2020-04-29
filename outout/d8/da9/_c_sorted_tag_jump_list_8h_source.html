@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/CSortedTagJumpList.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CSortedTagJumpList.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/da9/_c_sorted_tag_jump_list_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2005, MIK, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define MAX_TAG_STRING_LENGTH _MAX_PATH //管理する文字列の最大長</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/d29/class_c_sorted_tag_jump_list.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d29/class_c_sorted_tag_jump_list.html">CSortedTagJumpList</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../da/d29/class_c_sorted_tag_jump_list.html#af06a46b1017ca1b9465a51944ff06d5f">CSortedTagJumpList</a>(<span class="keywordtype">int</span> max);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ~<a class="code" href="../../da/d29/class_c_sorted_tag_jump_list.html">CSortedTagJumpList</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> AddBaseDir( <span class="keyword">const</span> WCHAR* baseDir );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    BOOL AddParamA( <span class="keyword">const</span> ACHAR* keyword, <span class="keyword">const</span> ACHAR* filename, <span class="keywordtype">int</span> no, ACHAR type, <span class="keyword">const</span> ACHAR* note, <span class="keywordtype">int</span> depth, <span class="keyword">const</span> <span class="keywordtype">int</span> baseDirId );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    BOOL GetParam( <span class="keywordtype">int</span> index, WCHAR* keyword, WCHAR* filename, <span class="keywordtype">int</span>* no, WCHAR* type, WCHAR* note, <span class="keywordtype">int</span>* depth, WCHAR* baseDir );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> GetCount( <span class="keywordtype">void</span> ){ <span class="keywordflow">return</span> m_nCount; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> Empty( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> IsOverflow( <span class="keywordtype">void</span> ){ <span class="keywordflow">return</span> m_bOverflow; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">   52</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">tagjump_info_t</a> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a423d635179fdcf4516145f0c5fcf97c6">   53</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">tagjump_info_t</a>*  <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a423d635179fdcf4516145f0c5fcf97c6">next</a>;   </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#afd7eb53b61ff1474e62146edce325363">   54</a></span>&#160;        WCHAR*  <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#afd7eb53b61ff1474e62146edce325363">keyword</a>;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a47ef32264117513ea4d63ee610170f9c">   55</a></span>&#160;        WCHAR*  <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a47ef32264117513ea4d63ee610170f9c">filename</a>;   </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#aa60e875df2885fc4ca1b6cb9bb359fff">   56</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#aa60e875df2885fc4ca1b6cb9bb359fff">no</a>;         </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#ae28918d54a9748cd28105a7082bf670b">   57</a></span>&#160;        WCHAR   <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#ae28918d54a9748cd28105a7082bf670b">type</a>;       </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#af37b3fbf8038877d50f6f186e3f227d1">   58</a></span>&#160;        WCHAR*  <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#af37b3fbf8038877d50f6f186e3f227d1">note</a>;       </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a9a0ccec4080bda549853adb80fb07f0c">   59</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a9a0ccec4080bda549853adb80fb07f0c">depth</a>;      </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a4f7d5626a5ed0a56f7c81888c42f3ab2">   60</a></span>&#160;        <span class="keywordtype">int</span>     <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a4f7d5626a5ed0a56f7c81888c42f3ab2">baseDirId</a>;  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    } <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">TagJumpInfo</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">TagJumpInfo</a>* GetPtr( <span class="keywordtype">int</span> index );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../da/d29/class_c_sorted_tag_jump_list.html#a1b296e270ab83f9d1dba14abb4ab91b9">   69</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../da/d29/class_c_sorted_tag_jump_list.html#a1b296e270ab83f9d1dba14abb4ab91b9">GetCapacity</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_MAX_TAGJUMPLIST; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    TagJumpInfo*    m_pTagjump; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::vector&lt;std::wstring&gt; m_baseDirArr; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span>             m_nCount;   </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span>            m_bOverflow;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//  2005.04.22 genta 最大値を可変に</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>       m_MAX_TAGJUMPLIST;  </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> Free( TagJumpInfo* item );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../da/d29/class_c_sorted_tag_jump_list.html">CSortedTagJumpList</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_a423d635179fdcf4516145f0c5fcf97c6"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a423d635179fdcf4516145f0c5fcf97c6">CSortedTagJumpList::tagjump_info_t::next</a></div><div class="ttdeci">struct tagjump_info_t * next</div><div class="ttdoc">次のリスト</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:53</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_afd7eb53b61ff1474e62146edce325363"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#afd7eb53b61ff1474e62146edce325363">CSortedTagJumpList::tagjump_info_t::keyword</a></div><div class="ttdeci">WCHAR * keyword</div><div class="ttdoc">キーワード</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:54</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_a9a0ccec4080bda549853adb80fb07f0c"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a9a0ccec4080bda549853adb80fb07f0c">CSortedTagJumpList::tagjump_info_t::depth</a></div><div class="ttdeci">int depth</div><div class="ttdoc">(さかのぼる)階層</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:59</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html">CSortedTagJumpList::tagjump_info_t</a></div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:52</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_af37b3fbf8038877d50f6f186e3f227d1"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#af37b3fbf8038877d50f6f186e3f227d1">CSortedTagJumpList::tagjump_info_t::note</a></div><div class="ttdeci">WCHAR * note</div><div class="ttdoc">備考</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:58</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_a47ef32264117513ea4d63ee610170f9c"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a47ef32264117513ea4d63ee610170f9c">CSortedTagJumpList::tagjump_info_t::filename</a></div><div class="ttdeci">WCHAR * filename</div><div class="ttdoc">ファイル名</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:55</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_aa60e875df2885fc4ca1b6cb9bb359fff"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#aa60e875df2885fc4ca1b6cb9bb359fff">CSortedTagJumpList::tagjump_info_t::no</a></div><div class="ttdeci">int no</div><div class="ttdoc">行番号</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:56</div></div>
+<div class="ttc" id="aclass_c_sorted_tag_jump_list_html_af06a46b1017ca1b9465a51944ff06d5f"><div class="ttname"><a href="../../da/d29/class_c_sorted_tag_jump_list.html#af06a46b1017ca1b9465a51944ff06d5f">CSortedTagJumpList::CSortedTagJumpList</a></div><div class="ttdeci">CSortedTagJumpList(int max)</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.cpp:37</div></div>
+<div class="ttc" id="aclass_c_sorted_tag_jump_list_html"><div class="ttname"><a href="../../da/d29/class_c_sorted_tag_jump_list.html">CSortedTagJumpList</a></div><div class="ttdoc">ダイレクトタグジャンプ用検索結果をソートして保持する．</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:40</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_a4f7d5626a5ed0a56f7c81888c42f3ab2"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#a4f7d5626a5ed0a56f7c81888c42f3ab2">CSortedTagJumpList::tagjump_info_t::baseDirId</a></div><div class="ttdeci">int baseDirId</div><div class="ttdoc">ファイル名のベースディレクトリ</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:60</div></div>
+<div class="ttc" id="astruct_c_sorted_tag_jump_list_1_1tagjump__info__t_html_ae28918d54a9748cd28105a7082bf670b"><div class="ttname"><a href="../../de/d6e/struct_c_sorted_tag_jump_list_1_1tagjump__info__t.html#ae28918d54a9748cd28105a7082bf670b">CSortedTagJumpList::tagjump_info_t::type</a></div><div class="ttdeci">WCHAR type</div><div class="ttdoc">種類</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:57</div></div>
+<div class="ttc" id="aclass_c_sorted_tag_jump_list_html_a1b296e270ab83f9d1dba14abb4ab91b9"><div class="ttname"><a href="../../da/d29/class_c_sorted_tag_jump_list.html#a1b296e270ab83f9d1dba14abb4ab91b9">CSortedTagJumpList::GetCapacity</a></div><div class="ttdeci">int GetCapacity(void) const</div><div class="ttdoc">管理数の最大値を取得する</div><div class="ttdef"><b>Definition:</b> CSortedTagJumpList.h:69</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

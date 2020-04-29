@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CMigemo クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../df/d57/class_c_migemo-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CMigemo クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CMigemo の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/deb/class_c_migemo.png" usemap="#CMigemo_map" alt=""/>
+  <map id="CMigemo_map" name="CMigemo_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CMigemo &gt;" shape="rect" coords="0,0,148,24"/>
+<area href="../../da/dc8/class_c_dll_imp.html" title="DLLの動的なLoad/Unloadを行うためのクラス" alt="CDllImp" shape="rect" coords="158,0,306,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6c522d8b81b01da8a7c29c1d55544788"><td class="memItemLeft" align="right" valign="top"><a id="a6c522d8b81b01da8a7c29c1d55544788"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_open</b> (char *dict)</td></tr>
+<tr class="separator:a6c522d8b81b01da8a7c29c1d55544788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fa4c8ff2ce89515d3072709bec8eb0"><td class="memItemLeft" align="right" valign="top"><a id="ae0fa4c8ff2ce89515d3072709bec8eb0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_close</b> ()</td></tr>
+<tr class="separator:ae0fa4c8ff2ce89515d3072709bec8eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351e1ea5c4e81ede59635ea88eb708f8"><td class="memItemLeft" align="right" valign="top"><a id="a351e1ea5c4e81ede59635ea88eb708f8"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_query</b> (unsigned char *query)</td></tr>
+<tr class="separator:a351e1ea5c4e81ede59635ea88eb708f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9046afbe61c211c7cf225de7f09b43b9"><td class="memItemLeft" align="right" valign="top"><a id="a9046afbe61c211c7cf225de7f09b43b9"></a>
+std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_query_w</b> (const wchar_t *query)</td></tr>
+<tr class="separator:a9046afbe61c211c7cf225de7f09b43b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7165ab5dfdc1dc36e6c89d67323cbbd1"><td class="memItemLeft" align="right" valign="top"><a id="a7165ab5dfdc1dc36e6c89d67323cbbd1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_release</b> (unsigned char *str)</td></tr>
+<tr class="separator:a7165ab5dfdc1dc36e6c89d67323cbbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c4005babd9fc83bbb7c8b5d9531552"><td class="memItemLeft" align="right" valign="top"><a id="ad4c4005babd9fc83bbb7c8b5d9531552"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_set_operator</b> (int index, unsigned char *op)</td></tr>
+<tr class="separator:ad4c4005babd9fc83bbb7c8b5d9531552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff750b759c536db529b6c982f1a7493"><td class="memItemLeft" align="right" valign="top"><a id="a8ff750b759c536db529b6c982f1a7493"></a>
+const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_get_operator</b> (int index)</td></tr>
+<tr class="separator:a8ff750b759c536db529b6c982f1a7493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34132ac82d8c84dd9cb7620af78f99ec"><td class="memItemLeft" align="right" valign="top"><a id="a34132ac82d8c84dd9cb7620af78f99ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_setproc_char2int</b> (MIGEMO_PROC_CHAR2INT proc)</td></tr>
+<tr class="separator:a34132ac82d8c84dd9cb7620af78f99ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999d9becbc28f51cd095f2c9d50ed2b6"><td class="memItemLeft" align="right" valign="top"><a id="a999d9becbc28f51cd095f2c9d50ed2b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_setproc_int2char</b> (MIGEMO_PROC_INT2CHAR proc)</td></tr>
+<tr class="separator:a999d9becbc28f51cd095f2c9d50ed2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4996d1ebdff93c1444f17717f5b3ff64"><td class="memItemLeft" align="right" valign="top"><a id="a4996d1ebdff93c1444f17717f5b3ff64"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_load_a</b> (int dict_id, const char *dict_file)</td></tr>
+<tr class="separator:a4996d1ebdff93c1444f17717f5b3ff64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7d57fe98121a4fb62207fd50a19b85"><td class="memItemLeft" align="right" valign="top"><a id="a8a7d57fe98121a4fb62207fd50a19b85"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_load_w</b> (int dict_id, const wchar_t *dict_file)</td></tr>
+<tr class="separator:a8a7d57fe98121a4fb62207fd50a19b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c1265f409aebaa62692ded054f49dc"><td class="memItemLeft" align="right" valign="top"><a id="a82c1265f409aebaa62692ded054f49dc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_is_enable</b> ()</td></tr>
+<tr class="separator:a82c1265f409aebaa62692ded054f49dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af198cc332db38210bde1009169cbd44b"><td class="memItemLeft" align="right" valign="top"><a id="af198cc332db38210bde1009169cbd44b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>migemo_load_all</b> ()</td></tr>
+<tr class="separator:af198cc332db38210bde1009169cbd44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memItemLeft" align="right" valign="top"><a id="a89601f2b3b9578c93a7d4b8d3368a1e8"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a> () const</td></tr>
+<tr class="memdesc:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの関数を呼び出せるか状態どうか <br /></td></tr>
+<tr class="separator:a89601f2b3b9578c93a7d4b8d3368a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbb9983cd44701e32e45f12449fae2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">InitDll</a> (LPCWSTR pszSpecifiedDllName=NULL)</td></tr>
+<tr class="memdesc:a9dbb9983cd44701e32e45f12449fae2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLロードと初期処理  <a href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dbb9983cd44701e32e45f12449fae2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89342932a0061f0460eb665addfc3379"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">DeinitDll</a> (bool force=false)</td></tr>
+<tr class="memdesc:a89342932a0061f0460eb665addfc3379"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理とDLLアンロード  <a href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">[詳解]</a><br /></td></tr>
+<tr class="separator:a89342932a0061f0460eb665addfc3379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memItemLeft" align="right" valign="top"><a id="ab7c2f0c5505877f58d19dce62ae69ab1"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">GetInstance</a> () const</td></tr>
+<tr class="memdesc:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスハンドルの取得 <br /></td></tr>
+<tr class="separator:ab7c2f0c5505877f58d19dce62ae69ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15922171bb90c760b36830f6277a9cd5"><td class="memItemLeft" align="right" valign="top"><a id="a15922171bb90c760b36830f6277a9cd5"></a>
+LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">GetLoadedDllName</a> () const</td></tr>
+<tr class="memdesc:a15922171bb90c760b36830f6277a9cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ロード済みDLLファイル名の取得。ロードされていない (またはロードに失敗した) 場合は NULL を返す。 <br /></td></tr>
+<tr class="separator:a15922171bb90c760b36830f6277a9cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../da/deb/class_c_migemo.html">CMigemo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:aab0da883b95d05c8d962bf7109c56667"><td class="memItemLeft" align="right" valign="top"><a id="aab0da883b95d05c8d962bf7109c56667"></a>
+typedef <a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_open</b>) (char *dict)</td></tr>
+<tr class="separator:aab0da883b95d05c8d962bf7109c56667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eea64ea7c24bc5ca1454b44d66f35f1"><td class="memItemLeft" align="right" valign="top"><a id="a2eea64ea7c24bc5ca1454b44d66f35f1"></a>
+typedef void(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_close</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object)</td></tr>
+<tr class="separator:a2eea64ea7c24bc5ca1454b44d66f35f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3c472b9c31b2ceab4a825ba742aa76"><td class="memItemLeft" align="right" valign="top"><a id="a0d3c472b9c31b2ceab4a825ba742aa76"></a>
+typedef unsigned char *(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_query</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, unsigned char *query)</td></tr>
+<tr class="separator:a0d3c472b9c31b2ceab4a825ba742aa76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d2bf6a993a442d93cb5fa7408279f1"><td class="memItemLeft" align="right" valign="top"><a id="a63d2bf6a993a442d93cb5fa7408279f1"></a>
+typedef void(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_release</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, unsigned char *str)</td></tr>
+<tr class="separator:a63d2bf6a993a442d93cb5fa7408279f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae12836ddec157dad36531136c1d892"><td class="memItemLeft" align="right" valign="top"><a id="a6ae12836ddec157dad36531136c1d892"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_set_operator</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, int index, unsigned char *op)</td></tr>
+<tr class="separator:a6ae12836ddec157dad36531136c1d892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7507d2b67704b356c44735de552c79d"><td class="memItemLeft" align="right" valign="top"><a id="af7507d2b67704b356c44735de552c79d"></a>
+typedef const uchar_t *(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_get_operator</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, int index)</td></tr>
+<tr class="separator:af7507d2b67704b356c44735de552c79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903e96c89e3d3f4ffc1b85f46d605fab"><td class="memItemLeft" align="right" valign="top"><a id="a903e96c89e3d3f4ffc1b85f46d605fab"></a>
+typedef void(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_setproc_char2int</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, MIGEMO_PROC_CHAR2INT proc)</td></tr>
+<tr class="separator:a903e96c89e3d3f4ffc1b85f46d605fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cdcf7180a2870dce99d7f8d1b78803"><td class="memItemLeft" align="right" valign="top"><a id="a84cdcf7180a2870dce99d7f8d1b78803"></a>
+typedef void(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_setproc_int2char</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, MIGEMO_PROC_INT2CHAR proc)</td></tr>
+<tr class="separator:a84cdcf7180a2870dce99d7f8d1b78803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e65fd08e2a089949dfcaba8920699c6"><td class="memItemLeft" align="right" valign="top"><a id="a6e65fd08e2a089949dfcaba8920699c6"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_load</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *obj, int dict_id, const char *dict_file)</td></tr>
+<tr class="separator:a6e65fd08e2a089949dfcaba8920699c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342054e2ad1426b7b7291c863c7170ee"><td class="memItemLeft" align="right" valign="top"><a id="a342054e2ad1426b7b7291c863c7170ee"></a>
+typedef int(__cdecl *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_is_enable</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *obj)</td></tr>
+<tr class="separator:a342054e2ad1426b7b7291c863c7170ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c9b9ec9212fceac1c39143dfe182f2"><td class="memItemLeft" align="right" valign="top"><a id="a00c9b9ec9212fceac1c39143dfe182f2"></a>
+typedef <a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_open_s</b>) (char *dict)</td></tr>
+<tr class="separator:a00c9b9ec9212fceac1c39143dfe182f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e47d7261231d4ee242b0398efafcf8"><td class="memItemLeft" align="right" valign="top"><a id="aa3e47d7261231d4ee242b0398efafcf8"></a>
+typedef void(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_close_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object)</td></tr>
+<tr class="separator:aa3e47d7261231d4ee242b0398efafcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1735518b7eaae9abf91ff222b3cc80f5"><td class="memItemLeft" align="right" valign="top"><a id="a1735518b7eaae9abf91ff222b3cc80f5"></a>
+typedef unsigned char *(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_query_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, unsigned char *query)</td></tr>
+<tr class="separator:a1735518b7eaae9abf91ff222b3cc80f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fca718a8a0b3e7a17faa84c6591e3fa"><td class="memItemLeft" align="right" valign="top"><a id="a4fca718a8a0b3e7a17faa84c6591e3fa"></a>
+typedef void(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_release_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, unsigned char *str)</td></tr>
+<tr class="separator:a4fca718a8a0b3e7a17faa84c6591e3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719aba4110a9157380ece556feaa29eb"><td class="memItemLeft" align="right" valign="top"><a id="a719aba4110a9157380ece556feaa29eb"></a>
+typedef int(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_set_operator_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, int index, unsigned char *op)</td></tr>
+<tr class="separator:a719aba4110a9157380ece556feaa29eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40760fcbb7322f906febbdb14605a22"><td class="memItemLeft" align="right" valign="top"><a id="ad40760fcbb7322f906febbdb14605a22"></a>
+typedef const uchar_t *(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_get_operator_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, int index)</td></tr>
+<tr class="separator:ad40760fcbb7322f906febbdb14605a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503ed433ee522bf10e6ee032ee1ab8ee"><td class="memItemLeft" align="right" valign="top"><a id="a503ed433ee522bf10e6ee032ee1ab8ee"></a>
+typedef void(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_setproc_char2int_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, MIGEMO_PROC_CHAR2INT proc)</td></tr>
+<tr class="separator:a503ed433ee522bf10e6ee032ee1ab8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37e0e0d21a60ea5c01ed8d99fcd36a4"><td class="memItemLeft" align="right" valign="top"><a id="ad37e0e0d21a60ea5c01ed8d99fcd36a4"></a>
+typedef void(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_setproc_int2char_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *object, MIGEMO_PROC_INT2CHAR proc)</td></tr>
+<tr class="separator:ad37e0e0d21a60ea5c01ed8d99fcd36a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fdbb7103c3be455d14e4927879d93e"><td class="memItemLeft" align="right" valign="top"><a id="a38fdbb7103c3be455d14e4927879d93e"></a>
+typedef int(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_load_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *obj, int dict_id, const char *dict_file)</td></tr>
+<tr class="separator:a38fdbb7103c3be455d14e4927879d93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d4e882422349cbb87b3d663b29e45a"><td class="memItemLeft" align="right" valign="top"><a id="a13d4e882422349cbb87b3d663b29e45a"></a>
+typedef int(__stdcall *&#160;</td><td class="memItemRight" valign="bottom"><b>Proc_migemo_is_enable_s</b>) (<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *obj)</td></tr>
+<tr class="separator:a13d4e882422349cbb87b3d663b29e45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3ac0c0aacd49faf1eb4e8beac6dbcfb2"><td class="memItemLeft" align="right" valign="top">LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/deb/class_c_migemo.html#a3ac0c0aacd49faf1eb4e8beac6dbcfb2">GetDllNameImp</a> (int nIndex)</td></tr>
+<tr class="memdesc:a3ac0c0aacd49faf1eb4e8beac6dbcfb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLファイル名の取得(複数を順次)  <a href="../../da/deb/class_c_migemo.html#a3ac0c0aacd49faf1eb4e8beac6dbcfb2">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ac0c0aacd49faf1eb4e8beac6dbcfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bbd7dc098d7f197db00bc46d9ffadab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/deb/class_c_migemo.html#a8bbd7dc098d7f197db00bc46d9ffadab">InitDllImp</a> ()</td></tr>
+<tr class="memdesc:a8bbd7dc098d7f197db00bc46d9ffadab"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLの初期化  <a href="../../da/deb/class_c_migemo.html#a8bbd7dc098d7f197db00bc46d9ffadab">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bbd7dc098d7f197db00bc46d9ffadab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af837903bc4bbdaef81f7e5ba14dafdf5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/deb/class_c_migemo.html#af837903bc4bbdaef81f7e5ba14dafdf5">DeinitDllImp</a> (void)</td></tr>
+<tr class="memdesc:af837903bc4bbdaef81f7e5ba14dafdf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数の初期化  <a href="../../da/deb/class_c_migemo.html#af837903bc4bbdaef81f7e5ba14dafdf5">[詳解]</a><br /></td></tr>
+<tr class="separator:af837903bc4bbdaef81f7e5ba14dafdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacac64e6dda58142e17ddc09d91e213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">RegisterEntries</a> (const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a> table[])</td></tr>
+<tr class="separator:aaacac64e6dda58142e17ddc09d91e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:ae9116d5c8b470943417d7501e9c3a561"><td class="memItemLeft" align="right" valign="top"><a id="ae9116d5c8b470943417d7501e9c3a561"></a>
+Proc_migemo_open&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_open</b></td></tr>
+<tr class="separator:ae9116d5c8b470943417d7501e9c3a561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae925df39d90d67da377cee1d5f05e725"><td class="memItemLeft" align="right" valign="top"><a id="ae925df39d90d67da377cee1d5f05e725"></a>
+Proc_migemo_close&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_close</b></td></tr>
+<tr class="separator:ae925df39d90d67da377cee1d5f05e725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8378276fcbdfcf68ade1f2a6a65d38c2"><td class="memItemLeft" align="right" valign="top"><a id="a8378276fcbdfcf68ade1f2a6a65d38c2"></a>
+Proc_migemo_query&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_query</b></td></tr>
+<tr class="separator:a8378276fcbdfcf68ade1f2a6a65d38c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5687f2146993e6f87d7b43489ed1c7e1"><td class="memItemLeft" align="right" valign="top"><a id="a5687f2146993e6f87d7b43489ed1c7e1"></a>
+Proc_migemo_release&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_release</b></td></tr>
+<tr class="separator:a5687f2146993e6f87d7b43489ed1c7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bbceff5684fe0434956228c2aec2f0"><td class="memItemLeft" align="right" valign="top"><a id="a14bbceff5684fe0434956228c2aec2f0"></a>
+Proc_migemo_set_operator&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_set_operator</b></td></tr>
+<tr class="separator:a14bbceff5684fe0434956228c2aec2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a33f23f27e5d3d0b7bf23f6ccb51fe6"><td class="memItemLeft" align="right" valign="top"><a id="a3a33f23f27e5d3d0b7bf23f6ccb51fe6"></a>
+Proc_migemo_get_operator&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_get_operator</b></td></tr>
+<tr class="separator:a3a33f23f27e5d3d0b7bf23f6ccb51fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4714dea42883a55523bb3970044e067"><td class="memItemLeft" align="right" valign="top"><a id="aa4714dea42883a55523bb3970044e067"></a>
+Proc_migemo_setproc_char2int&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_setproc_char2int</b></td></tr>
+<tr class="separator:aa4714dea42883a55523bb3970044e067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba1a41ae97a00d4a892a16a2b24212b"><td class="memItemLeft" align="right" valign="top"><a id="a5ba1a41ae97a00d4a892a16a2b24212b"></a>
+Proc_migemo_setproc_int2char&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_setproc_int2char</b></td></tr>
+<tr class="separator:a5ba1a41ae97a00d4a892a16a2b24212b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef7438cf44d5993fb9b69804bbd3d59"><td class="memItemLeft" align="right" valign="top"><a id="a9ef7438cf44d5993fb9b69804bbd3d59"></a>
+Proc_migemo_load&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_load</b></td></tr>
+<tr class="separator:a9ef7438cf44d5993fb9b69804bbd3d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a523c9368fd28ecbfa4efbc20d74717c4"><td class="memItemLeft" align="right" valign="top"><a id="a523c9368fd28ecbfa4efbc20d74717c4"></a>
+Proc_migemo_is_enable&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_is_enable</b></td></tr>
+<tr class="separator:a523c9368fd28ecbfa4efbc20d74717c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f9cf52720bb224be5015c7404e2fa2"><td class="memItemLeft" align="right" valign="top"><a id="af5f9cf52720bb224be5015c7404e2fa2"></a>
+Proc_migemo_open_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_open_s</b></td></tr>
+<tr class="separator:af5f9cf52720bb224be5015c7404e2fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc651b577da00b5f30e7036e99d8784"><td class="memItemLeft" align="right" valign="top"><a id="a9bc651b577da00b5f30e7036e99d8784"></a>
+Proc_migemo_close_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_close_s</b></td></tr>
+<tr class="separator:a9bc651b577da00b5f30e7036e99d8784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cebb108ab7b101b5bd6d782aa053022"><td class="memItemLeft" align="right" valign="top"><a id="a1cebb108ab7b101b5bd6d782aa053022"></a>
+Proc_migemo_query_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_query_s</b></td></tr>
+<tr class="separator:a1cebb108ab7b101b5bd6d782aa053022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eef0c22eecf1a551155cd34f0bc8b0c"><td class="memItemLeft" align="right" valign="top"><a id="a6eef0c22eecf1a551155cd34f0bc8b0c"></a>
+Proc_migemo_release_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_release_s</b></td></tr>
+<tr class="separator:a6eef0c22eecf1a551155cd34f0bc8b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cc1bc7cdf25c6386c4c8cf074090ea"><td class="memItemLeft" align="right" valign="top"><a id="ab4cc1bc7cdf25c6386c4c8cf074090ea"></a>
+Proc_migemo_set_operator_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_set_operator_s</b></td></tr>
+<tr class="separator:ab4cc1bc7cdf25c6386c4c8cf074090ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99286d115abc6af85ed157916fda3410"><td class="memItemLeft" align="right" valign="top"><a id="a99286d115abc6af85ed157916fda3410"></a>
+Proc_migemo_get_operator_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_get_operator_s</b></td></tr>
+<tr class="separator:a99286d115abc6af85ed157916fda3410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d53ec355297b71bba057d4d60836b9"><td class="memItemLeft" align="right" valign="top"><a id="a81d53ec355297b71bba057d4d60836b9"></a>
+Proc_migemo_setproc_char2int_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_setproc_char2int_s</b></td></tr>
+<tr class="separator:a81d53ec355297b71bba057d4d60836b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdb63de43bf56094472bc8becf6aca7"><td class="memItemLeft" align="right" valign="top"><a id="a6fdb63de43bf56094472bc8becf6aca7"></a>
+Proc_migemo_setproc_int2char_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_setproc_int2char_s</b></td></tr>
+<tr class="separator:a6fdb63de43bf56094472bc8becf6aca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31b32589e16806e6198a1cdd1814007"><td class="memItemLeft" align="right" valign="top"><a id="aa31b32589e16806e6198a1cdd1814007"></a>
+Proc_migemo_load_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_load_s</b></td></tr>
+<tr class="separator:aa31b32589e16806e6198a1cdd1814007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd4377dd8ba0b2ff770e64de9b3fc4b"><td class="memItemLeft" align="right" valign="top"><a id="a2bd4377dd8ba0b2ff770e64de9b3fc4b"></a>
+Proc_migemo_is_enable_s&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo_is_enable_s</b></td></tr>
+<tr class="separator:a2bd4377dd8ba0b2ff770e64de9b3fc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae290702303e75275f03ed3fab8c8acf8"><td class="memItemLeft" align="right" valign="top"><a id="ae290702303e75275f03ed3fab8c8acf8"></a>
+<a class="el" href="../../d0/d8b/_c_migemo_8h.html#aea1baf024ba13bfc8c0910a289cf998d">migemo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_migemo</b></td></tr>
+<tr class="separator:ae290702303e75275f03ed3fab8c8acf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d105bfb2986cc81f647037340da0bc"><td class="memItemLeft" align="right" valign="top"><a id="ac2d105bfb2986cc81f647037340da0bc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bStdcall</b></td></tr>
+<tr class="separator:ac2d105bfb2986cc81f647037340da0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac423a34a117d6c82823a63e588ebf90f"><td class="memItemLeft" align="right" valign="top"><a id="ac423a34a117d6c82823a63e588ebf90f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bUtf8</b></td></tr>
+<tr class="separator:ac423a34a117d6c82823a63e588ebf90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a8f4c6e2a655e97b3406662d69d81ae2a"><td class="memItemLeft" align="right" valign="top"><a id="a8f4c6e2a655e97b3406662d69d81ae2a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CMigemo &gt;</b></td></tr>
+<tr class="separator:a8f4c6e2a655e97b3406662d69d81ae2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a89342932a0061f0460eb665addfc3379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89342932a0061f0460eb665addfc3379">&#9670;&nbsp;</a></span>DeinitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::DeinitDll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理とDLLアンロード </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>[in] 終了処理に失敗してもDLLを解放するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af837903bc4bbdaef81f7e5ba14dafdf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af837903bc4bbdaef81f7e5ba14dafdf5">&#9670;&nbsp;</a></span>DeinitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMigemo::DeinitDllImp </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関数の初期化 </p>
+<p>DLLのアンロードを行う直前に呼び出される．メモリの解放などを 行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返したときはDLLのUnloadは行われない． </dd></dl>
+<dl class="section user"><dt>注意</dt><dd>デストラクタからDeinitDll及びDeinitDllImpが呼び出されたときは ポリモーフィズムが行われないためにサブクラスのDeinitDllImpが呼び出されない。 そのため、サブクラスのデストラクタではDeinitDllImpを明示的に呼び出す必要がある。</dd></dl>
+<p>DeinitDllがデストラクタ以外から呼び出される場合はDeinitDllImpは仮想関数として サブクラスのものが呼び出され、デストラクタは当然呼び出されないので DeinitDllImpそのものは必要である。</p>
+<p>デストラクタからDeinitDllImpを呼ぶときは、初期化されているという保証がないので 呼び出し前にIsAvailableによる確認を必ず行うこと。</p>
+<dl class="section date"><dt>日付</dt><dd>2002.04.15 genta 注意書き追加</dd></dl>
+<p>実装を省略できるようにするため、空の関数を用意しておく </p>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">CDllImp</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a3ac0c0aacd49faf1eb4e8beac6dbcfb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac0c0aacd49faf1eb4e8beac6dbcfb2">&#9670;&nbsp;</a></span>GetDllNameImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR CMigemo::GetDllNameImp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLファイル名の取得(複数を順次) </p>
+<p>DLLファイル名として複数の可能性があり，そのうちの一つでも 見つかったものを使用する場合に対応する．</p>
+<p>番号に応じてそれぞれ異なるファイル名を返すことができる． LoadLibrary()からはcounterを0から1ずつ増加させて順に呼びだされる． それはDLLのロードに成功する(成功)か，戻り値としてNULLを返す(失敗) まで続けられる．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIndex</td><td>インデックス．(0～)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>引数に応じてDLL名(LoadLibraryに渡す文字列)，またはNULL． </dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="a9dbb9983cd44701e32e45f12449fae2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb9983cd44701e32e45f12449fae2a">&#9670;&nbsp;</a></span>InitDll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a> CDllImp::InitDll </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSpecifiedDllName</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLロードと初期処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSpecifiedDllName</td><td>[in] クラスが定義しているDLL名以外のDLLを読み込みたいときに、そのDLL名を指定。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8bbd7dc098d7f197db00bc46d9ffadab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbd7dc098d7f197db00bc46d9ffadab">&#9670;&nbsp;</a></span>InitDllImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMigemo::InitDllImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DLLの初期化 </p>
+<p>DLLのロードに成功した直後に呼び出される．エントリポイントの 確認などを行う．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">false</td><td>異常終了</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>falseを返した場合は、読み込んだDLLを解放する． </dd></dl>
+
+<p><a class="el" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">CDllImp</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="aaacac64e6dda58142e17ddc09d91e213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacac64e6dda58142e17ddc09d91e213">&#9670;&nbsp;</a></span>RegisterEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDllImp::RegisterEntries </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a>&#160;</td>
+          <td class="paramname"><em>table</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>テーブルで与えられたエントリポインタアドレスを入れる場所に 対応する文字列から調べたエントリポインタを設定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>[in] 名前とアドレスの対応表。最後は{NULL,0}で終わること。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>全てのアドレスが設定された。 </td></tr>
+    <tr><td class="paramname">false</td><td>アドレスの取得に失敗した関数があった。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/extmodule/<a class="el" href="../../d0/d8b/_c_migemo_8h_source.html">CMigemo.h</a></li>
+<li>sakura_core/extmodule/<a class="el" href="../../d3/dfc/_c_migemo_8cpp.html">CMigemo.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

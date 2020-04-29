@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CSakuraEnvironment クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../d2/dad/class_c_sakura_environment-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CSakuraEnvironment クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7eb16dca6a1ec6b492ed95fc1b514d35"><td class="memItemLeft" align="right" valign="top"><a id="a7eb16dca6a1ec6b492ed95fc1b514d35"></a>
+static <a class="el" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMainWindow</b> ()</td></tr>
+<tr class="separator:a7eb16dca6a1ec6b492ed95fc1b514d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80411cf4d7babe328c34d915c0b0d28"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/class_c_sakura_environment.html#ac80411cf4d7babe328c34d915c0b0d28">ExpandParameter</a> (const wchar_t *pszSource, wchar_t *pszBuffer, int nBufferLen)</td></tr>
+<tr class="separator:ac80411cf4d7babe328c34d915c0b0d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fd714a5d4defbd806a24802f32ce1b"><td class="memItemLeft" align="right" valign="top">static std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/class_c_sakura_environment.html#ab0fd714a5d4defbd806a24802f32ce1b">GetDlgInitialDir</a> (bool bControlProcess=false)</td></tr>
+<tr class="memdesc:ab0fd714a5d4defbd806a24802f32ce1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期フォルダ取得  <a href="../../d0/d19/class_c_sakura_environment.html#ab0fd714a5d4defbd806a24802f32ce1b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0fd714a5d4defbd806a24802f32ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5dbd2408a2cb0ae45db61c0f7fda94c"><td class="memItemLeft" align="right" valign="top"><a id="ad5dbd2408a2cb0ae45db61c0f7fda94c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/class_c_sakura_environment.html#ad5dbd2408a2cb0ae45db61c0f7fda94c">ResolvePath</a> (WCHAR *pszPath)</td></tr>
+<tr class="memdesc:ad5dbd2408a2cb0ae45db61c0f7fda94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ショートカットの解決とロングファイル名へ変換を行う。 <br /></td></tr>
+<tr class="separator:ad5dbd2408a2cb0ae45db61c0f7fda94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac80411cf4d7babe328c34d915c0b0d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80411cf4d7babe328c34d915c0b0d28">&#9670;&nbsp;</a></span>ExpandParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSakuraEnvironment::ExpandParameter </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>pszBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nBufferLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>$xの展開</p>
+<p>特殊文字は以下の通り </p><ul>
+<li>$ $自身 </li>
+<li>A アプリ名 </li>
+<li>F 開いているファイルのフルパス。名前がなければ(無題)。 </li>
+<li>f 開いているファイルの名前（ファイル名+拡張子のみ） </li>
+<li>g 開いているファイルの名前（拡張子除く） </li>
+<li>/ 開いているファイルの名前（フルパス。パスの区切りが/） </li>
+<li>N 開いているファイルの名前(簡易表示) </li>
+<li>n 無題の通し番号 </li>
+<li>E 開いているファイルのあるフォルダの名前(簡易表示) </li>
+<li>e 開いているファイルのあるフォルダの名前 </li>
+<li>B タイプ別設定の名前 </li>
+<li>b 開いているファイルの拡張子 </li>
+<li>Q 印刷ページ設定の名前 </li>
+<li>C 現在選択中のテキスト </li>
+<li>x 現在の物理桁位置(先頭からのバイト数1開始) </li>
+<li>y 現在の物理行位置(1開始) </li>
+<li>d 現在の日付(共通設定の日付書式) </li>
+<li>t 現在の時刻(共通設定の時刻書式) </li>
+<li>p 現在のページ </li>
+<li>P 総ページ </li>
+<li>D ファイルのタイムスタンプ(共通設定の日付書式) </li>
+<li>T ファイルのタイムスタンプ(共通設定の時刻書式) </li>
+<li>V エディタのバージョン文字列 </li>
+<li>h Grep検索キーの先頭32byte </li>
+<li>S サクラエディタのフルパス </li>
+<li>I iniファイルのフルパス </li>
+<li>M 現在実行しているマクロファイルパス </li>
+<li>&lt;profile&gt; プロファイル名</li>
+</ul>
+<dl class="section date"><dt>日付</dt><dd>2003.04.03 genta wcsncpy_ex導入によるfor文の削減 </dd>
+<dd>
+2005.09.15 FILE 特殊文字S, M追加 </dd>
+<dd>
+2007.09.21 kobake 特殊文字A(アプリ名)を追加 </dd>
+<dd>
+2008.05.05 novice GetModuleHandle(NULL)→NULLに変更 </dd>
+<dd>
+2012.10.11 Moca 特殊文字n追加 </dd></dl>
+
+</div>
+</div>
+<a id="ab0fd714a5d4defbd806a24802f32ce1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fd714a5d4defbd806a24802f32ce1b">&#9670;&nbsp;</a></span>GetDlgInitialDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring CSakuraEnvironment::GetDlgInitialDir </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bControlProcess</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期フォルダ取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bControlProcess</td><td>[in] trueのときはOPENDIALOGDIR_CUR-&gt;OPENDIALOGDIR_MRUに変更 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>初期フォルダ </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/env/<a class="el" href="../../d5/de2/_c_sakura_environment_8h_source.html">CSakuraEnvironment.h</a></li>
+<li>sakura_core/env/<a class="el" href="../../df/db1/_c_sakura_environment_8cpp.html">CSakuraEnvironment.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

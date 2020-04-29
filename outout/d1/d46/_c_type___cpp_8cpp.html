@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/types/CType_Cpp.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9bcd7d45e1814a3f6d4b84e4be8b1f83.html">types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CType_Cpp.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/ddc/_c_type_8h_source.html">CType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d45/_c_doc_outline_8h_source.html">doc/CDocOutline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d69/_c_edit_doc_8h_source.html">doc/CEditDoc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d31/_c_func_info_arr_8h_source.html">outline/CFuncInfoArr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d89/_c_ope_blk_8h_source.html">COpeBlk.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dcc/_c_view_commander__inline_8h_source.html">cmd/CViewCommander_inline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d8c/_c_edit_view_8h_source.html">view/CEditView.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/dc2/_e_color_index_type_8h_source.html">view/colors/EColorIndexType.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9e/class_c_cpp_preprocess_mng.html">CCppPreprocessMng</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d36/struct_s_comment_block.html">SCommentBlock</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/_c_type___cpp_8cpp.html#a3bf1d7aa571f09945d2f9478fa59fdc3">GetCLangOutlineType</a> (const wchar_t *pszFileName)</td></tr>
+<tr class="memdesc:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C/C++のファイル名による判定  <a href="../../d1/d46/_c_type___cpp_8cpp.html#a3bf1d7aa571f09945d2f9478fa59fdc3">[詳解]</a><br /></td></tr>
+<tr class="separator:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed6e07e6d3e9a76a08388ae13f9300f"><td class="memItemLeft" align="right" valign="top"><a id="abed6e07e6d3e9a76a08388ae13f9300f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/_c_type___cpp_8cpp.html#abed6e07e6d3e9a76a08388ae13f9300f">IsHeadCppKeyword</a> (const wchar_t *pData)</td></tr>
+<tr class="memdesc:abed6e07e6d3e9a76a08388ae13f9300f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPPキーワードで始まっていれば true <br /></td></tr>
+<tr class="separator:abed6e07e6d3e9a76a08388ae13f9300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf4aa31ba59fb4144754cc318dea823"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d46/_c_type___cpp_8cpp.html#a0cf4aa31ba59fb4144754cc318dea823">C_IsWordChar</a> (wchar_t c)</td></tr>
+<tr class="separator:a0cf4aa31ba59fb4144754cc318dea823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:af93212c70fe638a2aeda39da7731365b"><td class="memItemLeft" align="right" valign="top"><a id="af93212c70fe638a2aeda39da7731365b"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>g_ppszKeywordsCPP</b> []</td></tr>
+<tr class="separator:af93212c70fe638a2aeda39da7731365b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef21b8a46a3f11b7ff4757fb1f419adc"><td class="memItemLeft" align="right" valign="top"><a id="aef21b8a46a3f11b7ff4757fb1f419adc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>g_nKeywordsCPP</b> = _countof(g_ppszKeywordsCPP)</td></tr>
+<tr class="separator:aef21b8a46a3f11b7ff4757fb1f419adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0cf4aa31ba59fb4144754cc318dea823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf4aa31ba59fb4144754cc318dea823">&#9670;&nbsp;</a></span>C_IsWordChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool C_IsWordChar </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>関数に用いることができる文字かどうかの判定 </p>
+
+</div>
+</div>
+<a id="a3bf1d7aa571f09945d2f9478fa59fdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf1d7aa571f09945d2f9478fa59fdc3">&#9670;&nbsp;</a></span>GetCLangOutlineType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a> GetCLangOutlineType </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C/C++のファイル名による判定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszFileName</td><td>ファイル名(nullptr指定不可、NUL終端すること) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アウトライン種別</dd></dl>
+<p>@detail ファイル名(拡張子)に応じたアウトライン種別を取得する。 拡張子の一致判定は大文字小文字を区別しない。 現状、拡張子に対応するアウトライン種別はベタ書きで判定している。 一致する拡張子がない場合、OUTLINE_C_CPPになる。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

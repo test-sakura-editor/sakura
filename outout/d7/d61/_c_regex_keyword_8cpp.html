@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/CRegexKeyword.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CRegexKeyword.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../dc/dd3/class_c_regex_keyword.html" title="正規表現キーワードクラス">CRegexKeyword</a> Library  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d4a/_c_regex_keyword_8h_source.html">CRegexKeyword.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/dbf/_c_bregexp_8h_source.html">extmodule/CBregexp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/ddc/_c_type_8h_source.html">types/CType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/dc2/_e_color_index_type_8h_source.html">view/colors/EColorIndexType.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a179e9e7bca0e639d46348ffd0bb5cc34"><td class="memItemLeft" align="right" valign="top"><a id="a179e9e7bca0e639d46348ffd0bb5cc34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MYDBGMSG</b>(a)</td></tr>
+<tr class="separator:a179e9e7bca0e639d46348ffd0bb5cc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc20e04e4b0deb75b5dc1eb9abb384ab"><td class="memItemLeft" align="right" valign="top"><a id="acc20e04e4b0deb75b5dc1eb9abb384ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_EMPTY</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:acc20e04e4b0deb75b5dc1eb9abb384ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3ad01f676438c65c78c8731dc639bd"><td class="memItemLeft" align="right" valign="top"><a id="a6b3ad01f676438c65c78c8731dc639bd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_CLOSE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a6b3ad01f676438c65c78c8731dc639bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2df22f6f15eabdb641c885f51679475"><td class="memItemLeft" align="right" valign="top"><a id="aa2df22f6f15eabdb641c885f51679475"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_OPEN</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:aa2df22f6f15eabdb641c885f51679475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f44729125898ab42dcfe4e1c5a92a8"><td class="memItemLeft" align="right" valign="top"><a id="af2f44729125898ab42dcfe4e1c5a92a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_ACTIVE</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:af2f44729125898ab42dcfe4e1c5a92a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4bfdf6a5b8576e77ded2b58b69b647"><td class="memItemLeft" align="right" valign="top"><a id="a5b4bfdf6a5b8576e77ded2b58b69b647"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_ERROR</b>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:a5b4bfdf6a5b8576e77ded2b58b69b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12ad32aa0f9d50367eaa9508c7b147f"><td class="memItemLeft" align="right" valign="top"><a id="ab12ad32aa0f9d50367eaa9508c7b147f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_MATCH</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab12ad32aa0f9d50367eaa9508c7b147f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34048820a8ebd617c60145cb2856b17"><td class="memItemLeft" align="right" valign="top"><a id="ac34048820a8ebd617c60145cb2856b17"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_NOMATCH</b>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ac34048820a8ebd617c60145cb2856b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d0b31d4d5f4600154dbafdfc85da66"><td class="memItemLeft" align="right" valign="top"><a id="a83d0b31d4d5f4600154dbafdfc85da66"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_SIZE</b>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a83d0b31d4d5f4600154dbafdfc85da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed74122c0af49e260971f972758f504"><td class="memItemLeft" align="right" valign="top"><a id="abed74122c0af49e260971f972758f504"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_HEAD_STR1</b>&#160;&#160;&#160;L&quot;/^&quot;</td></tr>
+<tr class="separator:abed74122c0af49e260971f972758f504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bfc37d2f5c3e6504a2edb82823420b"><td class="memItemLeft" align="right" valign="top"><a id="a57bfc37d2f5c3e6504a2edb82823420b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_HEAD_STR2</b>&#160;&#160;&#160;L&quot;m#^&quot;</td></tr>
+<tr class="separator:a57bfc37d2f5c3e6504a2edb82823420b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5eed3f525aec5781d302328b03b285"><td class="memItemLeft" align="right" valign="top"><a id="a2b5eed3f525aec5781d302328b03b285"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_HEAD_STR3</b>&#160;&#160;&#160;L&quot;m/^&quot;</td></tr>
+<tr class="separator:a2b5eed3f525aec5781d302328b03b285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5304e62a59ce167fa3cbbbff1039eebb"><td class="memItemLeft" align="right" valign="top"><a id="a5304e62a59ce167fa3cbbbff1039eebb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_1_START</b>&#160;&#160;&#160;&quot;/&quot;</td></tr>
+<tr class="separator:a5304e62a59ce167fa3cbbbff1039eebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5812b21eda5b40a5e9639b1f34a8762"><td class="memItemLeft" align="right" valign="top"><a id="ac5812b21eda5b40a5e9639b1f34a8762"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_1_END</b>&#160;&#160;&#160;&quot;/k&quot;</td></tr>
+<tr class="separator:ac5812b21eda5b40a5e9639b1f34a8762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cd4dab3d4c2d4dd9075e293ef0ec5a"><td class="memItemLeft" align="right" valign="top"><a id="a33cd4dab3d4c2d4dd9075e293ef0ec5a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_2_START</b>&#160;&#160;&#160;&quot;m#&quot;</td></tr>
+<tr class="separator:a33cd4dab3d4c2d4dd9075e293ef0ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01af666cae9841882dc06fb701a3979"><td class="memItemLeft" align="right" valign="top"><a id="ab01af666cae9841882dc06fb701a3979"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_2_END</b>&#160;&#160;&#160;&quot;#k&quot;</td></tr>
+<tr class="separator:ab01af666cae9841882dc06fb701a3979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa72bcff7a7f547dfc64b6a8a0dcb99"><td class="memItemLeft" align="right" valign="top"><a id="a9fa72bcff7a7f547dfc64b6a8a0dcb99"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_3_START</b>&#160;&#160;&#160;&quot;m/&quot;</td></tr>
+<tr class="separator:a9fa72bcff7a7f547dfc64b6a8a0dcb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7fd178602189812b9fc374a9fcf40f"><td class="memItemLeft" align="right" valign="top"><a id="adc7fd178602189812b9fc374a9fcf40f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RK_KAKOMI_3_END</b>&#160;&#160;&#160;&quot;/k&quot;</td></tr>
+<tr class="separator:adc7fd178602189812b9fc374a9fcf40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p><a class="el" href="../../dc/dd3/class_c_regex_keyword.html" title="正規表現キーワードクラス">CRegexKeyword</a> Library </p>
+<p>正規表現キーワードを扱う。 BREGEXP.DLLを利用する。</p>
+<dl class="section author"><dt>著者</dt><dd>MIK </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>Nov. 17, 2001 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

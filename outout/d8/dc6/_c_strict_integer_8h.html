@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/basis/CStrictInteger.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_c37114f895bdef2cfdf71b4001a92272.html">basis</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CStrictInteger.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>厳格っぷりをカスタマイズ可能な整数クラス Integer class, which is static-type-checked strict and flexible at compile.  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d1/d71/primitive_8h_source.html">primitive.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d8/dc6/_c_strict_integer_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt; STRICT_ID, ALLOW_CMP_INT, ALLOW_ADDSUB_INT, ALLOW_CAST_INT, ALLOW_ASSIGNOP_INT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">暗黙の変換を許さない、整数クラス  <a href="../../dc/d10/class_c_strict_integer.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:acba52ad85856bf162cf08090fd4033f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>STRICTINT_OTHER_TYPE_AS_INT</b>(TYPE)</td></tr>
+<tr class="separator:acba52ad85856bf162cf08090fd4033f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b887dbb993448becda3723be743b586"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>STRICTINT_LEFT_INT_CMP</b>(TYPE)</td></tr>
+<tr class="separator:a9b887dbb993448becda3723be743b586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>厳格っぷりをカスタマイズ可能な整数クラス Integer class, which is static-type-checked strict and flexible at compile. </p>
+<dl class="section author"><dt>著者</dt><dd>kobake </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.10.16 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a9b887dbb993448becda3723be743b586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b887dbb993448becda3723be743b586">&#9670;&nbsp;</a></span>STRICTINT_LEFT_INT_CMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRICTINT_LEFT_INT_CMP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N,<span class="keywordtype">bool</span> B0,<span class="keywordtype">bool</span> B1,<span class="keywordtype">bool</span> B2,<span class="keywordtype">bool</span> B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &lt;  (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs&gt; lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &lt;= (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs&gt;=lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &gt;  (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs&lt; lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator &gt;= (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs&lt;=lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a2175d925d2a4e425c8e119d9d3a6a06d">operator == </a>(TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs==lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#af4420b055606ed039f26a281ade51fc6">operator != </a>(TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> rhs!=lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a0045d4dbe9225a51ab0ed85bccd52d11">operator + </a>(TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span>  rhs+lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a> operator - (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span> -rhs+lhs; } \</div>
+<div class="line">    template &lt;int N,bool B0,bool B1,bool B2,bool B3&gt; <span class="keyword">inline</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a> operator * (TYPE lhs, <span class="keyword">const</span> <a class="code" href="../../dc/d10/class_c_strict_integer.html">CStrictInteger&lt;N,B0,B1,B2,B3&gt;</a>&amp; rhs){ <span class="keywordflow">return</span>  rhs*lhs; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acba52ad85856bf162cf08090fd4033f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba52ad85856bf162cf08090fd4033f1">&#9670;&nbsp;</a></span>STRICTINT_OTHER_TYPE_AS_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRICTINT_OTHER_TYPE_AS_INT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    Me&amp; operator += (TYPE rhs)          { <span class="keywordflow">return</span> operator += ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    Me&amp; operator -= (TYPE rhs)          { <span class="keywordflow">return</span> operator -= ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    Me <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a0045d4dbe9225a51ab0ed85bccd52d11">operator + </a>(TYPE rhs)<span class="keyword">    const   </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a0045d4dbe9225a51ab0ed85bccd52d11">operator +  </a>((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    Me operator - (TYPE rhs)<span class="keyword">    const   </span>{ <span class="keywordflow">return</span> operator -  ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool operator &lt;  (TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> operator &lt;  ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool operator &lt;= (TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> operator &lt;= ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool operator &gt;  (TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> operator &gt;  ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool operator &gt;= (TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> operator &gt;= ((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a2175d925d2a4e425c8e119d9d3a6a06d">operator == </a>(TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#a2175d925d2a4e425c8e119d9d3a6a06d">operator == </a>((<span class="keywordtype">int</span>)rhs); } \</div>
+<div class="line">    bool <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#af4420b055606ed039f26a281ade51fc6">operator != </a>(TYPE rhs)<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d6/d28/_c_native_w_8cpp.html#af4420b055606ed039f26a281ade51fc6">operator != </a>((<span class="keywordtype">int</span>)rhs); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="a_c_native_w_8cpp_html_a2175d925d2a4e425c8e119d9d3a6a06d"><div class="ttname"><a href="../../d6/d28/_c_native_w_8cpp.html#a2175d925d2a4e425c8e119d9d3a6a06d">operator==</a></div><div class="ttdeci">bool operator==(const CNativeW &amp;lhs, const wchar_t *rhs) noexcept</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:255</div></div>
+<div class="ttc" id="aclass_c_strict_integer_html"><div class="ttname"><a href="../../dc/d10/class_c_strict_integer.html">CStrictInteger</a></div><div class="ttdoc">暗黙の変換を許さない、整数クラス</div><div class="ttdef"><b>Definition:</b> CStrictInteger.h:56</div></div>
+<div class="ttc" id="a_c_native_w_8cpp_html_af4420b055606ed039f26a281ade51fc6"><div class="ttname"><a href="../../d6/d28/_c_native_w_8cpp.html#af4420b055606ed039f26a281ade51fc6">operator!=</a></div><div class="ttdeci">bool operator!=(const CNativeW &amp;lhs, const wchar_t *rhs) noexcept</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:268</div></div>
+<div class="ttc" id="a_c_native_w_8cpp_html_a0045d4dbe9225a51ab0ed85bccd52d11"><div class="ttname"><a href="../../d6/d28/_c_native_w_8cpp.html#a0045d4dbe9225a51ab0ed85bccd52d11">operator+</a></div><div class="ttdeci">CNativeW operator+(const CNativeW &amp;lhs, const wchar_t *rhs) noexcept(false)</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:143</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

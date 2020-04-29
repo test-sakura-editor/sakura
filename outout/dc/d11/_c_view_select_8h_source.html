@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/CViewSelect.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CViewSelect.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d11/_c_view_select_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d5f/_c_layout_8h.html">doc/layout/CLayout.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/d3f/class_c_view_select.html">CViewSelect</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* GetEditView(){ <span class="keywordflow">return</span> m_pcEditView; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* GetEditView()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_pcEditView; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d8/d3f/class_c_view_select.html">CViewSelect</a>(<a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> CopySelectStatus(<a class="code" href="../../d8/d3f/class_c_view_select.html">CViewSelect</a>* pSelect) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//                      選択範囲の変更                         //</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a7fb5850cd86bc6d1def71b94a79a3739">DisableSelectArea</a>( <span class="keywordtype">bool</span> bDraw, <span class="keywordtype">bool</span> bDrawBracketCursorLine = <span class="keyword">true</span> ); </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a226d7ef29a16e9f2dbe42af821bf3a54">BeginSelectArea</a>( <span class="keyword">const</span> <a class="code" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>* po = NULL );                              <span class="comment">// 現在のカーソル位置から選択を開始する</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> ChangeSelectAreaByCurrentCursor( <span class="keyword">const</span> <a class="code" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>&amp; ptCaretPos );         <span class="comment">// 現在のカーソル位置によって選択範囲を変更</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> ChangeSelectAreaByCurrentCursorTEST( <span class="keyword">const</span> <a class="code" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>&amp; ptCaretPos, <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>* pSelect );<span class="comment">// 現在のカーソル位置によって選択範囲を変更</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// 2005.06.24 Moca</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#ae8675a92ff7ae0e9bbde9cd67c402487">   52</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#ae8675a92ff7ae0e9bbde9cd67c402487">SetSelectArea</a>( <span class="keyword">const</span> <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>&amp; sRange )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        m_sSelectBgn.Set(sRange.GetFrom());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        m_sSelect = sRange;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#aa3e0fe9d9d3de79fc7ac94117d530663">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#aa3e0fe9d9d3de79fc7ac94117d530663">SelectBeginWord</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        m_bBeginSelect     = <span class="keyword">true</span>;              <span class="comment">/* 範囲選択中 */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        m_bBeginBoxSelect  = <span class="keyword">false</span>;         <span class="comment">/* 矩形範囲選択中でない */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        m_bBeginLineSelect = <span class="keyword">false</span>;         <span class="comment">/* 行単位選択中 */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        m_bBeginWordSelect = <span class="keyword">true</span>;          <span class="comment">/* 単語単位選択中 */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#ab5acf4fa028b102d0824465cd2a816b9">   68</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#ab5acf4fa028b102d0824465cd2a816b9">SelectBeginBox</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        m_bBeginSelect     = <span class="keyword">true</span>;          <span class="comment">/* 範囲選択中 */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        m_bBeginBoxSelect  = <span class="keyword">true</span>;      <span class="comment">/* 矩形範囲選択中 */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        m_bBeginLineSelect = <span class="keyword">false</span>;     <span class="comment">/* 行単位選択中 */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        m_bBeginWordSelect = <span class="keyword">false</span>;     <span class="comment">/* 単語単位選択中 */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#a370b64ee0425224ea1ad8b8af6370b5b">   77</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a370b64ee0425224ea1ad8b8af6370b5b">SelectBeginNazo</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        m_bBeginSelect     = <span class="keyword">true</span>;          <span class="comment">/* 範囲選択中 */</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//      m_bBeginBoxSelect  = false;     /* 矩形範囲選択中でない */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        m_bBeginLineSelect = <span class="keyword">false</span>;     <span class="comment">/* 行単位選択中 */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        m_bBeginWordSelect = <span class="keyword">false</span>;     <span class="comment">/* 単語単位選択中 */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#ae1cba2e0e9e98378dda2083644d6c6ec">   86</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#ae1cba2e0e9e98378dda2083644d6c6ec">SelectEnd</a>()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        m_bBeginSelect = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#a73538c04841d5e1e08f923066e6f4568">   92</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a73538c04841d5e1e08f923066e6f4568">SetBoxSelect</a>(<span class="keywordtype">bool</span> b)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        m_bBeginBoxSelect = b;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">//                           描画                              //</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a8f8dcc1626a20af8611a160f0b315260">DrawSelectArea</a>(<span class="keywordtype">bool</span> bDrawBracketCursorLine = <span class="keyword">true</span>);        </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> DrawSelectArea2(HDC) <span class="keyword">const</span>;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> DrawSelectAreaLine(            </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        HDC                 hdc,        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        CLayoutInt          nLineNum,   </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>&amp; sRange      </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> GetSelectAreaLineFromRange(<a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>&amp; ret, CLayoutInt nLineNum, <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>* pcLayout, <span class="keyword">const</span> <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>&amp; sRange) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> GetSelectAreaLine(<a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a>&amp; ret, CLayoutInt nLineNum, <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>* pcLayout)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        GetSelectAreaLineFromRange(ret, nLineNum, pcLayout, m_sSelect);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a> GetSelectAreaLine(CLayoutInt nLineNum, <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>* pcLayout)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a> ret;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        GetSelectAreaLineFromRange(ret, nLineNum, pcLayout, m_sSelect);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a5e1c4e3ed90459a5cf3503364846cd54">PrintSelectionInfoMsg</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//                         状態取得                            //</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span>    <span class="comment">// 2002/03/29 Azumaiya インライン関数化</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#aea96380d0c87e2d1dc4909cb21b9a612">  126</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#aea96380d0c87e2d1dc4909cb21b9a612">IsTextSelected</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> m_sSelect.<a class="code" href="../../db/dfa/class_c_range_base.html#a58d0e81a8eb3c5b606b1dcf2aa612b63">IsValid</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">//      return 0!=(</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//          ~((DWORD)(m_sSelect.nLineFrom | m_sSelect.nLineTo | m_sSelect.nColumnFrom | m_sSelect.nColumnTo)) &gt;&gt; 31</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//          );</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">// 2002/03/29 Azumaiya インライン関数化</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#a549ea3c43d81e81535eaf1d5a51c3de8">  136</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a549ea3c43d81e81535eaf1d5a51c3de8">IsTextSelecting</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="comment">// ジャンプ回数を減らして、一気に判定。</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> m_bSelectingLock || <a class="code" href="../../d8/d3f/class_c_view_select.html#aea96380d0c87e2d1dc4909cb21b9a612">IsTextSelected</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#a6b45cc1cfd1fadcc55dd97010fc518d8">  143</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a6b45cc1cfd1fadcc55dd97010fc518d8">IsMouseSelecting</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> m_bBeginSelect;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../d8/d3f/class_c_view_select.html#a667185cba551ff505e0b637a7e1abd0c">  149</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d8/d3f/class_c_view_select.html#a667185cba551ff505e0b637a7e1abd0c">IsBoxSelecting</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> m_bBeginBoxSelect;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//参照</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*  m_pcEditView;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">bool</span>    m_bDrawSelectArea;      <span class="comment">// 選択範囲を描画したか // 02/12/13 ai</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// 選択状態</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span>    m_bSelectingLock;       <span class="comment">// 選択状態のロック</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span>    m_bBeginSelect;         <span class="comment">// 範囲選択中</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">bool</span>    m_bBeginBoxSelect;      <span class="comment">// 矩形範囲選択中</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">bool</span>    m_bSelectAreaChanging;  <span class="comment">// 選択範囲変更中</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span>     m_nLastSelectedByteLen; <span class="comment">// 前回選択時の選択バイト数</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span>    m_bBeginLineSelect;     <span class="comment">// 行単位選択中</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">bool</span>    m_bBeginWordSelect;     <span class="comment">// 単語単位選択中</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// 選択範囲を保持するための変数群</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// これらはすべて折り返し行と、折り返し桁を保持している。</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a> m_sSelectBgn; <span class="comment">//範囲選択(原点)</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a> m_sSelect;    <span class="comment">//範囲選択</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../db/dfa/class_c_range_base.html">CLayoutRange</a> m_sSelectOld; <span class="comment">//範囲選択Old</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="../../d2/de9/class_c_my_point.html">CMyPoint</a>    m_ptMouseRollPosOld;    <span class="comment">// マウス範囲選択前回位置(XY座標)</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;};</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">m_sSelectOldについて</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    DrawSelectArea()に現在の選択範囲を教えて差分のみ描画するためのもの</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">    現在の選択範囲をOldへコピーした上で新しい選択範囲をSelectに設定して</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">    DrawSelectArea()を呼びだすことで新しい範囲が描かれる．</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">*/</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_view_select_html_aea96380d0c87e2d1dc4909cb21b9a612"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#aea96380d0c87e2d1dc4909cb21b9a612">CViewSelect::IsTextSelected</a></div><div class="ttdeci">bool IsTextSelected() const</div><div class="ttdoc">テキストが選択されているか</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:126</div></div>
+<div class="ttc" id="aclass_c_my_point_html"><div class="ttname"><a href="../../d2/de9/class_c_my_point.html">CMyPoint</a></div><div class="ttdef"><b>Definition:</b> CMyPoint.h:29</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a226d7ef29a16e9f2dbe42af821bf3a54"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a226d7ef29a16e9f2dbe42af821bf3a54">CViewSelect::BeginSelectArea</a></div><div class="ttdeci">void BeginSelectArea(const CLayoutPoint *po=NULL)</div><div class="ttdoc">現在のカーソル位置から選択を開始する</div><div class="ttdef"><b>Definition:</b> CViewSelect.cpp:46</div></div>
+<div class="ttc" id="a_c_layout_8h_html"><div class="ttname"><a href="../../d4/d5f/_c_layout_8h.html">CLayout.h</a></div><div class="ttdoc">テキストのレイアウト情報</div></div>
+<div class="ttc" id="aclass_c_view_select_html_aa3e0fe9d9d3de79fc7ac94117d530663"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#aa3e0fe9d9d3de79fc7ac94117d530663">CViewSelect::SelectBeginWord</a></div><div class="ttdeci">void SelectBeginWord()</div><div class="ttdoc">単語選択開始</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:59</div></div>
+<div class="ttc" id="aclass_c_view_select_html_ae8675a92ff7ae0e9bbde9cd67c402487"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#ae8675a92ff7ae0e9bbde9cd67c402487">CViewSelect::SetSelectArea</a></div><div class="ttdeci">void SetSelectArea(const CLayoutRange &amp;sRange)</div><div class="ttdoc">選択範囲を指定する(原点未選択)</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:52</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a667185cba551ff505e0b637a7e1abd0c"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a667185cba551ff505e0b637a7e1abd0c">CViewSelect::IsBoxSelecting</a></div><div class="ttdeci">bool IsBoxSelecting() const</div><div class="ttdoc">矩形選択中か</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:149</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a8f8dcc1626a20af8611a160f0b315260"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a8f8dcc1626a20af8611a160f0b315260">CViewSelect::DrawSelectArea</a></div><div class="ttdeci">void DrawSelectArea(bool bDrawBracketCursorLine=true)</div><div class="ttdoc">指定行の選択領域の描画</div><div class="ttdef"><b>Definition:</b> CViewSelect.cpp:153</div></div>
+<div class="ttc" id="aclass_c_view_select_html"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html">CViewSelect</a></div><div class="ttdef"><b>Definition:</b> CViewSelect.h:32</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLayoutPoint, CLayoutInt &gt;</a></div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="aclass_c_view_select_html_a73538c04841d5e1e08f923066e6f4568"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a73538c04841d5e1e08f923066e6f4568">CViewSelect::SetBoxSelect</a></div><div class="ttdeci">void SetBoxSelect(bool b)</div><div class="ttdoc">m_bBeginBoxSelectを設定。</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:92</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a370b64ee0425224ea1ad8b8af6370b5b"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a370b64ee0425224ea1ad8b8af6370b5b">CViewSelect::SelectBeginNazo</a></div><div class="ttdeci">void SelectBeginNazo()</div><div class="ttdoc">謎の選択開始</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:77</div></div>
+<div class="ttc" id="aclass_c_view_select_html_ae1cba2e0e9e98378dda2083644d6c6ec"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#ae1cba2e0e9e98378dda2083644d6c6ec">CViewSelect::SelectEnd</a></div><div class="ttdeci">void SelectEnd()</div><div class="ttdoc">範囲選択終了</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:86</div></div>
+<div class="ttc" id="aclass_c_view_select_html_ab5acf4fa028b102d0824465cd2a816b9"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#ab5acf4fa028b102d0824465cd2a816b9">CViewSelect::SelectBeginBox</a></div><div class="ttdeci">void SelectBeginBox()</div><div class="ttdoc">矩形選択開始</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:68</div></div>
+<div class="ttc" id="aclass_c_layout_html"><div class="ttname"><a href="../../db/d1c/class_c_layout.html">CLayout</a></div><div class="ttdef"><b>Definition:</b> CLayout.h:32</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a5e1c4e3ed90459a5cf3503364846cd54"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a5e1c4e3ed90459a5cf3503364846cd54">CViewSelect::PrintSelectionInfoMsg</a></div><div class="ttdeci">void PrintSelectionInfoMsg() const</div><div class="ttdoc">選択情報データの作成 2005.07.09 genta</div><div class="ttdef"><b>Definition:</b> CViewSelect.cpp:630</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a6b45cc1cfd1fadcc55dd97010fc518d8"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a6b45cc1cfd1fadcc55dd97010fc518d8">CViewSelect::IsMouseSelecting</a></div><div class="ttdeci">bool IsMouseSelecting() const</div><div class="ttdoc">マウスで選択中か</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:143</div></div>
+<div class="ttc" id="aclass_c_range_base_html"><div class="ttname"><a href="../../db/dfa/class_c_range_base.html">CRangeBase&lt; CLayoutPoint &gt;</a></div></div>
+<div class="ttc" id="aclass_c_view_select_html_a7fb5850cd86bc6d1def71b94a79a3739"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a7fb5850cd86bc6d1def71b94a79a3739">CViewSelect::DisableSelectArea</a></div><div class="ttdeci">void DisableSelectArea(bool bDraw, bool bDrawBracketCursorLine=true)</div><div class="ttdoc">現在の選択範囲を非選択状態に戻す</div><div class="ttdef"><b>Definition:</b> CViewSelect.cpp:59</div></div>
+<div class="ttc" id="aclass_c_range_base_html_a58d0e81a8eb3c5b606b1dcf2aa612b63"><div class="ttname"><a href="../../db/dfa/class_c_range_base.html#a58d0e81a8eb3c5b606b1dcf2aa612b63">CRangeBase::IsValid</a></div><div class="ttdeci">bool IsValid() const</div><div class="ttdoc">有効な範囲ならtrue</div><div class="ttdef"><b>Definition:</b> CStrictRange.h:74</div></div>
+<div class="ttc" id="aclass_c_view_select_html_a549ea3c43d81e81535eaf1d5a51c3de8"><div class="ttname"><a href="../../d8/d3f/class_c_view_select.html#a549ea3c43d81e81535eaf1d5a51c3de8">CViewSelect::IsTextSelecting</a></div><div class="ttdeci">bool IsTextSelecting() const</div><div class="ttdoc">テキストの選択中か</div><div class="ttdef"><b>Definition:</b> CViewSelect.h:136</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

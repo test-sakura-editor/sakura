@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDataProfile クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d9/dae/class_c_data_profile-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDataProfile クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>各種データ変換付きCProfile  
+ <a href="../../df/dab/class_c_data_profile.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../df/d47/_c_data_profile_8h_source.html">CDataProfile.h</a>&gt;</code></p>
+<div class="dynheader">
+CDataProfile の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/dab/class_c_data_profile.png" usemap="#CDataProfile_map" alt=""/>
+  <map id="CDataProfile_map" name="CDataProfile_map">
+<area href="../../de/dd5/class_c_profile.html" title="INIファイル入出力" alt="CProfile" shape="rect" coords="0,0,84,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a350f9ff79d15adeeb3de88804f26103d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a350f9ff79d15adeeb3de88804f26103d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dab/class_c_data_profile.html#a350f9ff79d15adeeb3de88804f26103d">IOProfileData</a> (const WCHAR *pszSectionName, const WCHAR *pszEntryKey, T &amp;tEntryValue) noexcept</td></tr>
+<tr class="separator:a350f9ff79d15adeeb3de88804f26103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848c5ca825396afce1b092f113a91ed0"><td class="memTemplParams" colspan="2"><a id="a848c5ca825396afce1b092f113a91ed0"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a848c5ca825396afce1b092f113a91ed0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dab/class_c_data_profile.html#a848c5ca825396afce1b092f113a91ed0">IOProfileData_WrapInt</a> (const WCHAR *pszSectionName, const WCHAR *pszEntryKey, T &amp;nEntryValue)</td></tr>
+<tr class="memdesc:a848c5ca825396afce1b092f113a91ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">intを介して任意型の入出力を行う <br /></td></tr>
+<tr class="separator:a848c5ca825396afce1b092f113a91ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe0b704a694bae94fbc6f684c8c3e10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a4fe0b704a694bae94fbc6f684c8c3e10">Init</a> (void)</td></tr>
+<tr class="separator:a4fe0b704a694bae94fbc6f684c8c3e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c5ddff41153f16f28a700d7a89ff76"><td class="memItemLeft" align="right" valign="top"><a id="a37c5ddff41153f16f28a700d7a89ff76"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReadingMode</b> (void)</td></tr>
+<tr class="separator:a37c5ddff41153f16f28a700d7a89ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f04ca567fc6431fa04382362e28e29a"><td class="memItemLeft" align="right" valign="top"><a id="a4f04ca567fc6431fa04382362e28e29a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetReadingMode</b> (void)</td></tr>
+<tr class="separator:a4f04ca567fc6431fa04382362e28e29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94a965a61f71ee03e0c0bc54603ddb9"><td class="memItemLeft" align="right" valign="top"><a id="ae94a965a61f71ee03e0c0bc54603ddb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetWritingMode</b> (void)</td></tr>
+<tr class="separator:ae94a965a61f71ee03e0c0bc54603ddb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0037cdf39b346eb2e20a2078dd3f608e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a0037cdf39b346eb2e20a2078dd3f608e">ReadProfile</a> (const WCHAR *)</td></tr>
+<tr class="separator:a0037cdf39b346eb2e20a2078dd3f608e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60042548ea17e453c571c52fd450af98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a60042548ea17e453c571c52fd450af98">ReadProfileRes</a> (const WCHAR *, const WCHAR *, std::vector&lt; std::wstring &gt; *=NULL)</td></tr>
+<tr class="separator:a60042548ea17e453c571c52fd450af98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5977007521ace273de7700bcdd8ab3da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a5977007521ace273de7700bcdd8ab3da">WriteProfile</a> (const WCHAR *, const WCHAR *pszComment)</td></tr>
+<tr class="separator:a5977007521ace273de7700bcdd8ab3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd51c1d59370084ccf5c4e3ebb6c90b"><td class="memItemLeft" align="right" valign="top"><a id="a2fd51c1d59370084ccf5c4e3ebb6c90b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DUMP</b> (void)</td></tr>
+<tr class="separator:a2fd51c1d59370084ccf5c4e3ebb6c90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6dd51352fd5ef1c43f6a2184958b1939"><td class="memItemLeft" align="right" valign="top"><a id="a6dd51352fd5ef1c43f6a2184958b1939"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, bool *value)</td></tr>
+<tr class="separator:a6dd51352fd5ef1c43f6a2184958b1939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea7c79d44efc637563928e8f18dbbd6"><td class="memItemLeft" align="right" valign="top"><a id="a8ea7c79d44efc637563928e8f18dbbd6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>value_to_profile</b> (const bool &amp;value, wstring *profile)</td></tr>
+<tr class="separator:a8ea7c79d44efc637563928e8f18dbbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b54604d7c34bee293e3e119edcb79b"><td class="memItemLeft" align="right" valign="top"><a id="ad2b54604d7c34bee293e3e119edcb79b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, int *value)</td></tr>
+<tr class="separator:ad2b54604d7c34bee293e3e119edcb79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3155d28a395c5921ab0f3a3a89afa9d"><td class="memItemLeft" align="right" valign="top"><a id="ae3155d28a395c5921ab0f3a3a89afa9d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>value_to_profile</b> (const int &amp;value, wstring *profile)</td></tr>
+<tr class="separator:ae3155d28a395c5921ab0f3a3a89afa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027c9d8c1397988a4f3d8ca5d0f19aeb"><td class="memItemLeft" align="right" valign="top"><a id="a027c9d8c1397988a4f3d8ca5d0f19aeb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, ACHAR *value)</td></tr>
+<tr class="separator:a027c9d8c1397988a4f3d8ca5d0f19aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6be0ab360bf83c1f67f80b21161b89"><td class="memItemLeft" align="right" valign="top"><a id="a3c6be0ab360bf83c1f67f80b21161b89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>value_to_profile</b> (const ACHAR &amp;value, wstring *profile)</td></tr>
+<tr class="separator:a3c6be0ab360bf83c1f67f80b21161b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5544d9a274a603d56687e6ee5c7b2119"><td class="memItemLeft" align="right" valign="top"><a id="a5544d9a274a603d56687e6ee5c7b2119"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, WCHAR *value)</td></tr>
+<tr class="separator:a5544d9a274a603d56687e6ee5c7b2119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2dd5545b592831f90dd28aac766cda"><td class="memItemLeft" align="right" valign="top"><a id="a5e2dd5545b592831f90dd28aac766cda"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>value_to_profile</b> (const WCHAR &amp;value, wstring *profile)</td></tr>
+<tr class="separator:a5e2dd5545b592831f90dd28aac766cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2583e8835974af55f36b9b51883b6b"><td class="memItemLeft" align="right" valign="top"><a id="a4a2583e8835974af55f36b9b51883b6b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, <a class="el" href="../../d7/da8/struct_string_buffer_w__.html">StringBufferW</a> *value)</td></tr>
+<tr class="separator:a4a2583e8835974af55f36b9b51883b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24abf2c6b5bf230178275efd78bb3248"><td class="memItemLeft" align="right" valign="top"><a id="a24abf2c6b5bf230178275efd78bb3248"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>value_to_profile</b> (const <a class="el" href="../../d7/da8/struct_string_buffer_w__.html">StringBufferW</a> &amp;value, wstring *profile)</td></tr>
+<tr class="separator:a24abf2c6b5bf230178275efd78bb3248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25cb68aebfff35d7fcf9bc75d9c8a44"><td class="memTemplParams" colspan="2"><a id="ab25cb68aebfff35d7fcf9bc75d9c8a44"></a>
+template&lt;int N&gt; </td></tr>
+<tr class="memitem:ab25cb68aebfff35d7fcf9bc75d9c8a44"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>profile_to_value</b> (const wstring &amp;profile, <a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; WCHAR, N &gt; *value)</td></tr>
+<tr class="separator:ab25cb68aebfff35d7fcf9bc75d9c8a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a2338b785651b7f9f96303ee742cb7"><td class="memTemplParams" colspan="2"><a id="aa9a2338b785651b7f9f96303ee742cb7"></a>
+template&lt;int N&gt; </td></tr>
+<tr class="memitem:aa9a2338b785651b7f9f96303ee742cb7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>value_to_profile</b> (const <a class="el" href="../../db/d03/class_static_string.html">StaticString</a>&lt; WCHAR, N &gt; &amp;value, wstring *profile)</td></tr>
+<tr class="separator:aa9a2338b785651b7f9f96303ee742cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07df9ec66d3287bf85fce1ed35620050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a07df9ec66d3287bf85fce1ed35620050">ReadOneline</a> (const wstring &amp;line)</td></tr>
+<tr class="separator:a07df9ec66d3287bf85fce1ed35620050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e9b7b25061bc920274e73d555c5a2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a39e9b7b25061bc920274e73d555c5a2c">_WriteFile</a> (const wstring &amp;strFilename, const std::vector&lt; wstring &gt; &amp;vecLine)</td></tr>
+<tr class="separator:a39e9b7b25061bc920274e73d555c5a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60511f7a56ce808efaa4839f5253ca2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a60511f7a56ce808efaa4839f5253ca2b">GetProfileDataImp</a> (const wstring &amp;strSectionName, const wstring &amp;strEntryKey, wstring &amp;strEntryValue)</td></tr>
+<tr class="separator:a60511f7a56ce808efaa4839f5253ca2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a19c9dc7761b861a9010e5d6f0c4187"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a2a19c9dc7761b861a9010e5d6f0c4187">SetProfileDataImp</a> (const wstring &amp;strSectionName, const wstring &amp;strEntryKey, const wstring &amp;strEntryValue)</td></tr>
+<tr class="separator:a2a19c9dc7761b861a9010e5d6f0c4187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac1780b2b205de28f5c7af50c60ddb0ba"><td class="memItemLeft" align="right" valign="top"><a id="ac1780b2b205de28f5c7af50c60ddb0ba"></a>
+static const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>_work_itow</b> (int n)</td></tr>
+<tr class="separator:ac1780b2b205de28f5c7af50c60ddb0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a337a7eecbd0f9447445f218e463a6727"><td class="memItemLeft" align="right" valign="top"><a id="a337a7eecbd0f9447445f218e463a6727"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a337a7eecbd0f9447445f218e463a6727">m_strProfileName</a></td></tr>
+<tr class="memdesc:a337a7eecbd0f9447445f218e463a6727"><td class="mdescLeft">&#160;</td><td class="mdescRight">最後に読み書きしたファイル名 <br /></td></tr>
+<tr class="separator:a337a7eecbd0f9447445f218e463a6727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7dad3376620fbf818204fc320845abd"><td class="memItemLeft" align="right" valign="top"><a id="ab7dad3376620fbf818204fc320845abd"></a>
+std::vector&lt; Section &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_ProfileData</b></td></tr>
+<tr class="separator:ab7dad3376620fbf818204fc320845abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e45860d64be9a20eedcda970bcd489"><td class="memItemLeft" align="right" valign="top"><a id="a46e45860d64be9a20eedcda970bcd489"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd5/class_c_profile.html#a46e45860d64be9a20eedcda970bcd489">m_bRead</a></td></tr>
+<tr class="memdesc:a46e45860d64be9a20eedcda970bcd489"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード(true=読み込み/false=書き出し) <br /></td></tr>
+<tr class="separator:a46e45860d64be9a20eedcda970bcd489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>各種データ変換付きCProfile </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a39e9b7b25061bc920274e73d555c5a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e9b7b25061bc920274e73d555c5a2c">&#9670;&nbsp;</a></span>_WriteFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::_WriteFile </td>
+          <td>(</td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strFilename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; wstring &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vecLine</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ファイルへ書き込む</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2004-01-28 D.S.Koba <a class="el" href="../../de/dd5/class_c_profile.html#a5977007521ace273de7700bcdd8ab3da">WriteProfile()</a>から分離 </dd>
+<dd>
+2004-01-29 genta stream使用をやめてCライブラリ使用に． </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFilename</td><td>[in] ファイル名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vecLine</td><td>[out] 文字列格納先 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60511f7a56ce808efaa4839f5253ca2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60511f7a56ce808efaa4839f5253ca2b">&#9670;&nbsp;</a></span>GetProfileDataImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::GetProfileDataImp </td>
+          <td>(</td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strSectionName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strEntryKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wstring &amp;&#160;</td>
+          <td class="paramname"><em>strEntryValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>エントリ値をProfileから読み込む</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003-10-22 D.S.Koba 作成 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strSectionName</td><td>[in] セクション名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strEntryKey</td><td>[in] エントリ名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">strEntryValue</td><td>[out] エントリ値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4fe0b704a694bae94fbc6f684c8c3e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe0b704a694bae94fbc6f684c8c3e10">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CProfile::Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Profileを初期化</p>
+<dl class="section date"><dt>日付</dt><dd>2003-10-21 D.S.Koba STLで書き直す </dd></dl>
+
+</div>
+</div>
+<a id="a350f9ff79d15adeeb3de88804f26103d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350f9ff79d15adeeb3de88804f26103d">&#9670;&nbsp;</a></span>IOProfileData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDataProfile::IOProfileData </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszSectionName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszEntryKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>tEntryValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>設定値の入出力テンプレート</p>
+<p>標準stringを介して設定値の入出力を行う。 </p><dl class="section remark"><dt>注釈</dt><dd>StringBufferWはバッファが足りないとabortします。 </dd>
+<dd>
+StaticStringはバッファが足りないとabortします。 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszSectionName</td><td>[in] セクション名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszEntryKey</td><td>[in] エントリ名 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tEntryValue</td><td>[in,out] エントリ値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07df9ec66d3287bf85fce1ed35620050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07df9ec66d3287bf85fce1ed35620050">&#9670;&nbsp;</a></span>ReadOneline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CProfile::ReadOneline </td>
+          <td>(</td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>sakura.iniの1行を処理する．</p>
+<p>1行の読み込みが完了するごとに呼ばれる．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>[in] 読み込んだ行 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0037cdf39b346eb2e20a2078dd3f608e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0037cdf39b346eb2e20a2078dd3f608e">&#9670;&nbsp;</a></span>ReadProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::ReadProfile </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszProfileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Profileをファイルから読み出す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszProfileName</td><td>[in] ファイル名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003-10-21 D.S.Koba STLで書き直す </dd>
+<dd>
+2003-10-26 D.S.Koba <a class="el" href="../../de/dd5/class_c_profile.html#a0037cdf39b346eb2e20a2078dd3f608e">ReadProfile()</a>から分離 </dd>
+<dd>
+2004-01-29 genta stream使用をやめてCライブラリ使用に． </dd>
+<dd>
+2004-01-31 genta 行の解析の方を別関数にしてReadFileをReadProfileに </dd></dl>
+
+</div>
+</div>
+<a id="a60042548ea17e453c571c52fd450af98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60042548ea17e453c571c52fd450af98">&#9670;&nbsp;</a></span>ReadProfileRes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::ReadProfileRes </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::wstring &gt; *&#160;</td>
+          <td class="paramname"><em>pData</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Profileをリソースから読み出す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pName</td><td>[in] リソース名 </td></tr>
+    <tr><td class="paramname">pType</td><td>[in] リソースタイプ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2010/5/19 MainMenu用に作成</dd></dl>
+<p>1行300文字までに制限 </p>
+
+</div>
+</div>
+<a id="a2a19c9dc7761b861a9010e5d6f0c4187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a19c9dc7761b861a9010e5d6f0c4187">&#9670;&nbsp;</a></span>SetProfileDataImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::SetProfileDataImp </td>
+          <td>(</td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strSectionName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strEntryKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>strEntryValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>エントリをProfileへ書き込む</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗(処理を入れていないのでfalseは返らない)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003-10-21 D.S.Koba 作成 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strSectionName</td><td>[in] セクション名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strEntryKey</td><td>[in] エントリ名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strEntryValue</td><td>[in] エントリ値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5977007521ace273de7700bcdd8ab3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5977007521ace273de7700bcdd8ab3da">&#9670;&nbsp;</a></span>WriteProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CProfile::WriteProfile </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszProfileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszComment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Profileをファイルへ書き出す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszProfileName</td><td>[in] ファイル名(NULL=最後に読み書きしたファイル) </td></tr>
+    <tr><td class="paramname">pszComment</td><td>[in] コメント文(NULL=コメント省略)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003-10-21 D.S.Koba STLで書き直す </dd>
+<dd>
+2004-01-28 D.S.Koba ファイル書き込み部を分離 </dd>
+<dd>
+2009.06.24 ryoji 別ファイルに書き込んでから置き換える処理を追加 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../df/d47/_c_data_profile_8h_source.html">CDataProfile.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

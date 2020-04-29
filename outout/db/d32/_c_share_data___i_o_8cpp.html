@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/CShareData_IO.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CShareData_IO.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dc4/_c_share_data___i_o_8h_source.html">env/CShareData_IO.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/ddc/_c_doc_type_setting_8h_source.html">doc/CDocTypeSetting.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/da9/string__ex2_8h_source.html">util/string_ex2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d8c/_c_edit_view_8h_source.html">view/CEditView.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d82/_c_color_strategy_8h_source.html">view/colors/CColorStrategy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d03/_c_plugin_8h_source.html">plugin/CPlugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d74/_c_menu_drawer_8h_source.html">uiparts/CMenuDrawer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d0c/_c_command_line_8h_source.html">_main/CCommandLine.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d36/struct_s_main_menu_add_item_info.html">SMainMenuAddItemInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a6cc8fe66b6ae48fe51a077d3329190be"><td class="memItemLeft" align="right" valign="top"><a id="a6cc8fe66b6ae48fe51a077d3329190be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ShareData_IO_Sub_LogFont</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> &amp;cProfile, const WCHAR *pszSecName, const WCHAR *pszKeyLf, const WCHAR *pszKeyPointSize, const WCHAR *pszKeyFaceName, LOGFONT &amp;lf, INT &amp;nPointSize)</td></tr>
+<tr class="separator:a6cc8fe66b6ae48fe51a077d3329190be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b134438f40f6991304bc94f6689c1e"><td class="memTemplParams" colspan="2"><a id="ab9b134438f40f6991304bc94f6689c1e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab9b134438f40f6991304bc94f6689c1e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SetValueLimit</b> (T &amp;target, int minval, int maxval)</td></tr>
+<tr class="separator:ab9b134438f40f6991304bc94f6689c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64924421f13adc00fbc4d37ec2b79c5f"><td class="memTemplParams" colspan="2"><a id="a64924421f13adc00fbc4d37ec2b79c5f"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a64924421f13adc00fbc4d37ec2b79c5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SetValueLimit</b> (T &amp;target, int maxval)</td></tr>
+<tr class="separator:a64924421f13adc00fbc4d37ec2b79c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217eda6c714068021c36b56319de832b"><td class="memItemLeft" align="right" valign="top">EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d32/_c_share_data___i_o_8cpp.html#a217eda6c714068021c36b56319de832b">GetPlugCmdInfoByName</a> (const WCHAR *pszFuncName)</td></tr>
+<tr class="separator:a217eda6c714068021c36b56319de832b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd67a73956d9078f200f7c569069c85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d32/_c_share_data___i_o_8cpp.html#a9fd67a73956d9078f200f7c569069c85">GetPlugCmdInfoByFuncCode</a> (EFunctionCode eFuncCode, WCHAR *pszFuncName)</td></tr>
+<tr class="separator:a9fd67a73956d9078f200f7c569069c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a9fd67a73956d9078f200f7c569069c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd67a73956d9078f200f7c569069c85">&#9670;&nbsp;</a></span>GetPlugCmdInfoByFuncCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetPlugCmdInfoByFuncCode </td>
+          <td>(</td>
+          <td class="paramtype">EFunctionCode&#160;</td>
+          <td class="paramname"><em>eFuncCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">eFuncCode</td><td>[in] 機能コード </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszFuncName</td><td>[out] 機能名．この先にはMAX_PLUGIN_ID + 20文字のメモリが必要． </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a217eda6c714068021c36b56319de832b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217eda6c714068021c36b56319de832b">&#9670;&nbsp;</a></span>GetPlugCmdInfoByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode GetPlugCmdInfoByName </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFuncName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszFuncName</td><td>[in] プラグインコマンド名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

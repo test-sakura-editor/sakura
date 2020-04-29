@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CMenuDrawer クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="../../da/dea/class_c_menu_drawer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CMenuDrawer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>メニュー表示＆管理  
+ <a href="../../d5/d3f/class_c_menu_drawer.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d74/_c_menu_drawer_8h_source.html">CMenuDrawer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a612fe427c18b2a0b684b2d41228eafdc"><td class="memItemLeft" align="right" valign="top"><a id="a612fe427c18b2a0b684b2d41228eafdc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HINSTANCE hInstance, HWND hWndOwner, <a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a> *pcIcons)</td></tr>
+<tr class="separator:a612fe427c18b2a0b684b2d41228eafdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07de293f3da30898d54cafe478d5f1d6"><td class="memItemLeft" align="right" valign="top"><a id="a07de293f3da30898d54cafe478d5f1d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetContents</b> (void)</td></tr>
+<tr class="separator:a07de293f3da30898d54cafe478d5f1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881f3b73f49fa70e932262d01ff20405"><td class="memItemLeft" align="right" valign="top"><a id="a881f3b73f49fa70e932262d01ff20405"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MyAppendMenu</b> (HMENU hMenu, int nFlag, UINT_PTR nFuncId, const WCHAR *pszLabel, const WCHAR *pszKey, BOOL bAddKeyStr=TRUE, int nForceIconId=-1)</td></tr>
+<tr class="separator:a881f3b73f49fa70e932262d01ff20405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd4ad2cd0ee7eeb59be673ac2e0155b"><td class="memItemLeft" align="right" valign="top"><a id="afbd4ad2cd0ee7eeb59be673ac2e0155b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MyAppendMenuSep</b> (HMENU hMenu, int nFlag, int nFuncId, const WCHAR *pszLabel, BOOL bAddKeyStr=TRUE, int nForceIconId=-1)</td></tr>
+<tr class="separator:afbd4ad2cd0ee7eeb59be673ac2e0155b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6083b61de001a09249a3c5763855c31b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_c_menu_drawer.html#a6083b61de001a09249a3c5763855c31b">MeasureItem</a> (int nFuncID, int *pnItemHeight)</td></tr>
+<tr class="separator:a6083b61de001a09249a3c5763855c31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdda6527c67a3d53a89491d8437f893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_c_menu_drawer.html#a3bdda6527c67a3d53a89491d8437f893">DrawItem</a> (DRAWITEMSTRUCT *)</td></tr>
+<tr class="separator:a3bdda6527c67a3d53a89491d8437f893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002da9afa1d3c63a5eb1e393e58b7b3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_c_menu_drawer.html#a002da9afa1d3c63a5eb1e393e58b7b3d">EndDrawMenu</a> ()</td></tr>
+<tr class="separator:a002da9afa1d3c63a5eb1e393e58b7b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea913594371b2f56198464e9efc663df"><td class="memItemLeft" align="right" valign="top">LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_c_menu_drawer.html#aea913594371b2f56198464e9efc663df">OnMenuChar</a> (HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:aea913594371b2f56198464e9efc663df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d69e3377e1ba852f4455078b89ea1f"><td class="memItemLeft" align="right" valign="top"><a id="a00d69e3377e1ba852f4455078b89ea1f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FindToolbarNoFromCommandId</b> (int idCommand, bool bOnlyFunc=true) const</td></tr>
+<tr class="separator:a00d69e3377e1ba852f4455078b89ea1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebd798324e2dc8eff6243b5fd5be3d1"><td class="memItemLeft" align="right" valign="top"><a id="afebd798324e2dc8eff6243b5fd5be3d1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetIconIdByFuncId</b> (int nIndex) const</td></tr>
+<tr class="separator:afebd798324e2dc8eff6243b5fd5be3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b12bc9f4733d9135b0db860fb5f0890"><td class="memItemLeft" align="right" valign="top">TBBUTTON&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3f/class_c_menu_drawer.html#a9b12bc9f4733d9135b0db860fb5f0890">getButton</a> (int nToolBarNo) const</td></tr>
+<tr class="separator:a9b12bc9f4733d9135b0db860fb5f0890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f010d36667d96abf565c524a334984"><td class="memItemLeft" align="right" valign="top"><a id="a35f010d36667d96abf565c524a334984"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddToolButton</b> (int iBitmap, int iCommand)</td></tr>
+<tr class="separator:a35f010d36667d96abf565c524a334984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a542e226fe27193bef8a52031b50805e6"><td class="memItemLeft" align="right" valign="top"><a id="a542e226fe27193bef8a52031b50805e6"></a>
+<a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcIcons</b></td></tr>
+<tr class="separator:a542e226fe27193bef8a52031b50805e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:af8e9a2ce26405cb1d62966b42a20aeea"><td class="memItemLeft" align="right" valign="top"><a id="af8e9a2ce26405cb1d62966b42a20aeea"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TOOLBAR_ICON_MACRO_INTERNAL</b> = 384</td></tr>
+<tr class="separator:af8e9a2ce26405cb1d62966b42a20aeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bc0e819d51373b8ef6456c5f489a62"><td class="memItemLeft" align="right" valign="top"><a id="a65bc0e819d51373b8ef6456c5f489a62"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TOOLBAR_ICON_PLUGCOMMAND_DEFAULT</b> = 283</td></tr>
+<tr class="separator:a65bc0e819d51373b8ef6456c5f489a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fdcac2971266b78628a842bca53534"><td class="memItemLeft" align="right" valign="top"><a id="a46fdcac2971266b78628a842bca53534"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TOOLBAR_BUTTON_F_SEPARATOR</b> = 0</td></tr>
+<tr class="separator:a46fdcac2971266b78628a842bca53534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e86c13f185c08a70b4dbe7ef2cb69b1"><td class="memItemLeft" align="right" valign="top"><a id="a1e86c13f185c08a70b4dbe7ef2cb69b1"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TOOLBAR_BUTTON_F_TOOLBARWRAP</b> = 384</td></tr>
+<tr class="separator:a1e86c13f185c08a70b4dbe7ef2cb69b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a305da23df7b3a1164362d58bc1083f94"><td class="memItemLeft" align="right" valign="top"><a id="a305da23df7b3a1164362d58bc1083f94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTBBUTTONVal</b> (TBBUTTON *ptb, int iBitmap, int idCommand, BYTE fsState, BYTE fsStyle, DWORD_PTR dwData, INT_PTR iString) const</td></tr>
+<tr class="separator:a305da23df7b3a1164362d58bc1083f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>メニュー表示＆管理 </p>
+<dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd>
+<dd>
+20050809 aroka クラス外部からアクセスされないメンバはprivateにした。 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a3bdda6527c67a3d53a89491d8437f893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdda6527c67a3d53a89491d8437f893">&#9670;&nbsp;</a></span>DrawItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMenuDrawer::DrawItem </td>
+          <td>(</td>
+          <td class="paramtype">DRAWITEMSTRUCT *&#160;</td>
+          <td class="paramname"><em>lpdis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>メニューアイテム描画 </p><dl class="section date"><dt>日付</dt><dd>2001.12.21 YAZAKI デバッグモードでもメニューを選択したらハイライト。 </dd>
+<dd>
+2003.08.27 Moca システムカラーのブラシはCreateSolidBrushをやめGetSysColorBrushに </dd>
+<dd>
+2010.07.24 Moca アイコン部分をボタン色にしてフラット表示にするなどの変更 大きいフォント、黒背景対応 </dd></dl>
+
+</div>
+</div>
+<a id="a002da9afa1d3c63a5eb1e393e58b7b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002da9afa1d3c63a5eb1e393e58b7b3d">&#9670;&nbsp;</a></span>EndDrawMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMenuDrawer::EndDrawMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>作画終了 メニューループ終了時に呼び出すとリソース節約になる</p>
+<dl class="section date"><dt>日付</dt><dd>20100724 Moca バックサーフェス用に新設 </dd></dl>
+
+</div>
+</div>
+<a id="a9b12bc9f4733d9135b0db860fb5f0890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b12bc9f4733d9135b0db860fb5f0890">&#9670;&nbsp;</a></span>getButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TBBUTTON CMenuDrawer::getButton </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nToolbarNo</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>インデックスからボタン情報を得る</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nToolbarNo</td><td>[in] ボタン情報のツールバー番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ボタン情報</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.11.02 ryoji 範囲外の場合は未定義のボタン情報を返すように </dd>
+<dd>
+2010.06.24 Moca 引数をツールバー番号に変更 </dd></dl>
+
+</div>
+</div>
+<a id="a6083b61de001a09249a3c5763855c31b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6083b61de001a09249a3c5763855c31b">&#9670;&nbsp;</a></span>MeasureItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CMenuDrawer::MeasureItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnItemHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>メニューアイテムの描画サイズを計算 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnItemHeight</td><td>[out] 高さ。いつも高さを返す </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>機能がない場合 </td></tr>
+    <tr><td class="paramname">1</td><td>&lt;= val 機能のメニュー幅/セパレータの場合はダミーの値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea913594371b2f56198464e9efc663df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea913594371b2f56198464e9efc663df">&#9670;&nbsp;</a></span>OnMenuChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CMenuDrawer::OnMenuChar </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>メニューアクセスキー押下時の処理(WM_MENUCHAR処理) </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/uiparts/<a class="el" href="../../de/d74/_c_menu_drawer_8h_source.html">CMenuDrawer.h</a></li>
+<li>sakura_core/uiparts/<a class="el" href="../../dd/d8c/_c_menu_drawer_8cpp.html">CMenuDrawer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

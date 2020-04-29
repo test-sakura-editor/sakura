@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/convert/convert_util2.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_aa5658efbe5ca02810aa883a8e8cac9d.html">convert</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">convert_util2.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>変換ユーティリティ2 - BASE64 Ecode/Decode, UUDecode, Q-printable decode  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/da2/convert__util2_8h_source.html">convert/convert_util2.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:afa1a372f6ed5fe4ab1b29652dadf4161"><td class="memItemLeft" align="right" valign="top"><a id="afa1a372f6ed5fe4ab1b29652dadf4161"></a>
+const uchar_t&#160;</td><td class="memItemRight" valign="bottom"><b>cNA</b> = 0xff</td></tr>
+<tr class="separator:afa1a372f6ed5fe4ab1b29652dadf4161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2615d431c64cdb9de75f969301e1846"><td class="memItemLeft" align="right" valign="top">const uchar_t&#160;</td><td class="memItemRight" valign="bottom"><b>TABLE_BASE64CharToValue</b> []</td></tr>
+<tr class="separator:ad2615d431c64cdb9de75f969301e1846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28d3e7ed375b95490ddff8d23045189"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1e/convert__util2_8cpp.html#ab28d3e7ed375b95490ddff8d23045189">TABLE_ValueToBASE64Char</a> []</td></tr>
+<tr class="separator:ab28d3e7ed375b95490ddff8d23045189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>変換ユーティリティ2 - BASE64 Ecode/Decode, UUDecode, Q-printable decode </p>
+<dl class="section author"><dt>著者</dt><dd></dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="ad2615d431c64cdb9de75f969301e1846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2615d431c64cdb9de75f969301e1846">&#9670;&nbsp;</a></span>TABLE_BASE64CharToValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uchar_t TABLE_BASE64CharToValue[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    cNA, cNA, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA, cNA, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA, cNA, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA, cNA, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA, cNA, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA, cNA, cNA,  62, cNA, cNA, cNA,  63, </div>
+<div class="line">     52,  53,  54,  55,  56,  57,  58,  59, </div>
+<div class="line">     60,  61, cNA, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA,   0,   1,   2,   3,   4,   5,   6, </div>
+<div class="line">      7,   8,   9,  10,  11,  12,  13,  14, </div>
+<div class="line">     15,  16,  17,  18,  19,  20,  21,  22, </div>
+<div class="line">     23,  24,  25, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">    cNA,  26,  27,  28,  29,  30,  31,  32, </div>
+<div class="line">     33,  34,  35,  36,  37,  38,  39,  40, </div>
+<div class="line">     41,  42,  43,  44,  45,  46,  47,  48, </div>
+<div class="line">     49,  50,  51, cNA, cNA, cNA, cNA, cNA, </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab28d3e7ed375b95490ddff8d23045189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28d3e7ed375b95490ddff8d23045189">&#9670;&nbsp;</a></span>TABLE_ValueToBASE64Char</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char TABLE_ValueToBASE64Char[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;C&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;G&#39;</span>, <span class="charliteral">&#39;H&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;J&#39;</span>, <span class="charliteral">&#39;K&#39;</span>, <span class="charliteral">&#39;L&#39;</span>, <span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;N&#39;</span>, <span class="charliteral">&#39;O&#39;</span>, <span class="charliteral">&#39;P&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;Q&#39;</span>, <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;T&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;X&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;Z&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;f&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;m&#39;</span>, <span class="charliteral">&#39;n&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;v&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;z&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>,</div>
+<div class="line">    <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;+&#39;</span>, <span class="charliteral">&#39;/&#39;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>変換テーブル 数値 → Modified BASE64 文字 添え字の定義域：0 ～ 63 </p><dl class="section author"><dt>著者</dt><dd>D. S. Koba </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

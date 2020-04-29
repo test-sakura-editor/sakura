@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/macro/CSMacroMgr.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_614ccf2e7ca9e77c465d8296e7c03a2a.html">macro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CSMacroMgr.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>マクロ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/de7/_c_s_macro_mgr_8h_source.html">macro/CSMacroMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d80/_c_p_p_a_macro_mgr_8h_source.html">macro/CPPAMacroMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc2/_c_w_s_h_manager_8h_source.html">macro/CWSHManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/db0/_c_macro_factory_8h_source.html">macro/CMacroFactory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d8c/_c_edit_view_8h_source.html">view/CEditView.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d6f/_c_running_timer_8h_source.html">debug/CRunningTimer.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a87998be9bb7d14e1938891d42f69e400"><td class="memItemLeft" align="right" valign="top"><a id="a87998be9bb7d14e1938891d42f69e400"></a>
+VARTYPE&#160;</td><td class="memItemRight" valign="bottom"><b>s_MacroArgEx_i</b> [] = {VT_I4}</td></tr>
+<tr class="separator:a87998be9bb7d14e1938891d42f69e400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6cbb452d0b4c80051fe874252e6fb78"><td class="memItemLeft" align="right" valign="top"><a id="aa6cbb452d0b4c80051fe874252e6fb78"></a>
+<a class="el" href="../../d2/d71/struct_macro_func_info_ex.html">MacroFuncInfoEx</a>&#160;</td><td class="memItemRight" valign="bottom"><b>s_MacroInfoEx_i</b> = {5, 5, s_MacroArgEx_i}</td></tr>
+<tr class="separator:aa6cbb452d0b4c80051fe874252e6fb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd496c290917917aee15c7d35b596762"><td class="memItemLeft" align="right" valign="top"><a id="acd496c290917917aee15c7d35b596762"></a>
+VARTYPE&#160;</td><td class="memItemRight" valign="bottom"><b>s_MacroArgEx_ii</b> [] = {VT_I4, VT_I4}</td></tr>
+<tr class="separator:acd496c290917917aee15c7d35b596762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b285443c95747632a7f2f4aa544684f"><td class="memItemLeft" align="right" valign="top"><a id="a6b285443c95747632a7f2f4aa544684f"></a>
+<a class="el" href="../../d2/d71/struct_macro_func_info_ex.html">MacroFuncInfoEx</a>&#160;</td><td class="memItemRight" valign="bottom"><b>s_MacroInfoEx_ii</b> = {6, 6, s_MacroArgEx_ii}</td></tr>
+<tr class="separator:a6b285443c95747632a7f2f4aa544684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>マクロ </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd>
+<dd>
+genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>Sep. 29, 2001 作成 </dd>
+<dd>
+20011229 aroka バグ修正、コメント追加 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

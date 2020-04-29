@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDocLine クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d5/da1/class_c_doc_line-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDocLine クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文書データ1行  
+ <a href="../../d9/d35/class_c_doc_line.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/d31/_c_doc_line_8h_source.html">CDocLine.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d44/struct_c_doc_line_1_1_mark_type.html">MarkType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a60daac6faab4f1b47b45f9063add59cc"><td class="memItemLeft" align="right" valign="top"><a id="a60daac6faab4f1b47b45f9063add59cc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmptyLine</b> () const</td></tr>
+<tr class="separator:a60daac6faab4f1b47b45f9063add59cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c772fe973febec2e9ec75807d4d82a5"><td class="memItemLeft" align="right" valign="top"><a id="a2c772fe973febec2e9ec75807d4d82a5"></a>
+CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d35/class_c_doc_line.html#a2c772fe973febec2e9ec75807d4d82a5">GetLengthWithoutEOL</a> () const</td></tr>
+<tr class="memdesc:a2c772fe973febec2e9ec75807d4d82a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">戻り値は文字単位。 <br /></td></tr>
+<tr class="separator:a2c772fe973febec2e9ec75807d4d82a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf68b399673a9ce2fdd524978c8639b"><td class="memItemLeft" align="right" valign="top"><a id="aedf68b399673a9ce2fdd524978c8639b"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPtr</b> () const</td></tr>
+<tr class="separator:aedf68b399673a9ce2fdd524978c8639b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1504b91a73c08a036d72c749207257a"><td class="memItemLeft" align="right" valign="top"><a id="ab1504b91a73c08a036d72c749207257a"></a>
+CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetLengthWithEOL</b> () const</td></tr>
+<tr class="separator:ab1504b91a73c08a036d72c749207257a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efa2834746b2330d7c186f3f1bf2e12"><td class="memItemLeft" align="right" valign="top"><a id="a7efa2834746b2330d7c186f3f1bf2e12"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDocLineStrWithEOL</b> (CLogicInt *pnLen) const</td></tr>
+<tr class="separator:a7efa2834746b2330d7c186f3f1bf2e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad166b36ed6a80b14813d6eac6bbeafbb"><td class="memItemLeft" align="right" valign="top"><a id="ad166b36ed6a80b14813d6eac6bbeafbb"></a>
+<a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetStringRefWithEOL</b> () const</td></tr>
+<tr class="separator:ad166b36ed6a80b14813d6eac6bbeafbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fda5cf8471f54ba3455601d4a244a74"><td class="memItemLeft" align="right" valign="top"><a id="a3fda5cf8471f54ba3455601d4a244a74"></a>
+const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEol</b> () const</td></tr>
+<tr class="separator:a3fda5cf8471f54ba3455601d4a244a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d81ece09d0f832a2cef74e6b6e2e035"><td class="memItemLeft" align="right" valign="top"><a id="a6d81ece09d0f832a2cef74e6b6e2e035"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEol</b> (const <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> &amp;cEol, <a class="el" href="../../dc/d83/class_c_ope_blk.html">COpeBlk</a> *pcOpeBlk)</td></tr>
+<tr class="separator:a6d81ece09d0f832a2cef74e6b6e2e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54faba1c6b6ee596bd7ca43acebb535f"><td class="memItemLeft" align="right" valign="top"><a id="a54faba1c6b6ee596bd7ca43acebb535f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEol</b> ()</td></tr>
+<tr class="separator:a54faba1c6b6ee596bd7ca43acebb535f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa56712fe6836754831c9104a04c6a9"><td class="memItemLeft" align="right" valign="top"><a id="affa56712fe6836754831c9104a04c6a9"></a>
+const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_GetDocLineDataWithEOL</b> () const</td></tr>
+<tr class="separator:affa56712fe6836754831c9104a04c6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7506be3008b1ad819d1e74888191429"><td class="memItemLeft" align="right" valign="top"><a id="ac7506be3008b1ad819d1e74888191429"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_GetDocLineData</b> ()</td></tr>
+<tr class="separator:ac7506be3008b1ad819d1e74888191429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b0cd73fe75a9c978702d8f58622f8b"><td class="memItemLeft" align="right" valign="top"><a id="aa2b0cd73fe75a9c978702d8f58622f8b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDocLineString</b> (const wchar_t *pData, int nLength)</td></tr>
+<tr class="separator:aa2b0cd73fe75a9c978702d8f58622f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4844962e8c8a306bc26d7b1f46a29ec"><td class="memItemLeft" align="right" valign="top"><a id="ab4844962e8c8a306bc26d7b1f46a29ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDocLineString</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cData)</td></tr>
+<tr class="separator:ab4844962e8c8a306bc26d7b1f46a29ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ffaa4940d96f6d0131dcae95c57fd8f"><td class="memItemLeft" align="right" valign="top"><a id="a1ffaa4940d96f6d0131dcae95c57fd8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDocLineStringMove</b> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcData)</td></tr>
+<tr class="separator:a1ffaa4940d96f6d0131dcae95c57fd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1b8646740845c5812ae5503b9b1abb"><td class="memItemLeft" align="right" valign="top"><a id="afb1b8646740845c5812ae5503b9b1abb"></a>
+<a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrevLine</b> ()</td></tr>
+<tr class="separator:afb1b8646740845c5812ae5503b9b1abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7446df465535b4257201bed021fad9"><td class="memItemLeft" align="right" valign="top"><a id="ace7446df465535b4257201bed021fad9"></a>
+const <a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrevLine</b> () const</td></tr>
+<tr class="separator:ace7446df465535b4257201bed021fad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bc2ef15d3cb7519056a8ad1fe4c43c"><td class="memItemLeft" align="right" valign="top"><a id="a31bc2ef15d3cb7519056a8ad1fe4c43c"></a>
+<a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextLine</b> ()</td></tr>
+<tr class="separator:a31bc2ef15d3cb7519056a8ad1fe4c43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb3ac9d62b6da5b05b228eaa6691b44"><td class="memItemLeft" align="right" valign="top"><a id="a9eb3ac9d62b6da5b05b228eaa6691b44"></a>
+const <a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextLine</b> () const</td></tr>
+<tr class="separator:a9eb3ac9d62b6da5b05b228eaa6691b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200238ee09213e7d934fd26536cd61d1"><td class="memItemLeft" align="right" valign="top"><a id="a200238ee09213e7d934fd26536cd61d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetPrevLine</b> (<a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *pcDocLine)</td></tr>
+<tr class="separator:a200238ee09213e7d934fd26536cd61d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c2614e6a9bbc85a9fef360e0813d94"><td class="memItemLeft" align="right" valign="top"><a id="a62c2614e6a9bbc85a9fef360e0813d94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetNextLine</b> (<a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *pcDocLine)</td></tr>
+<tr class="separator:a62c2614e6a9bbc85a9fef360e0813d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aa5d71aeb9ea45cff2457232e21bff27d"><td class="memItemLeft" align="right" valign="top"><a id="aa5d71aeb9ea45cff2457232e21bff27d"></a>
+<a class="el" href="../../dc/d44/struct_c_doc_line_1_1_mark_type.html">MarkType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_sMark</b></td></tr>
+<tr class="separator:aa5d71aeb9ea45cff2457232e21bff27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:adaae34407a8f5e8a316f87b46cdb4e88"><td class="memItemLeft" align="right" valign="top"><a id="adaae34407a8f5e8a316f87b46cdb4e88"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>CDocLineMgr</b></td></tr>
+<tr class="separator:adaae34407a8f5e8a316f87b46cdb4e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文書データ1行 </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/doc/logic/<a class="el" href="../../d1/d31/_c_doc_line_8h_source.html">CDocLine.h</a></li>
+<li>sakura_core/doc/logic/<a class="el" href="../../d5/d40/_c_doc_line_8cpp.html">CDocLine.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

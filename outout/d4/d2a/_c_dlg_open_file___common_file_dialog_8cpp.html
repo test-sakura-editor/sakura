@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgOpenFile_CommonFileDialog.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgOpenFile_CommonFileDialog.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイルオープンダイアログボックス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;CdErr.h&gt;</code><br />
+<code>#include &lt;Dlgs.h&gt;</code><br />
+<code>#include &lt;CommDlg.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">dlg/CDlgOpenFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/da6/_c_dialog_8h_source.html">dlg/CDialog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d61/_funccode_8h_source.html">func/Funccode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d31/_c_file_ext_8h_source.html">CFileExt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d35/_c_doc_type_manager_8h_source.html">env/CDocTypeManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dc5/_c_eol_8h_source.html">CEol.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/df3/_c_code_page_8h_source.html">charset/CCodePage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">doc/CDocListener.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d8d/_c_recent_8h_source.html">recent/CRecent.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d78/design__template_8h_source.html">util/design_template.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d33/_c_my_string_8h_source.html">basis/CMyString.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d79/struct_c_dlg_open_file___common_file_dialog.html">CDlgOpenFile_CommonFileDialog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/class_c_dlg_open_file_data.html">CDlgOpenFileData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a42d4092ba45440eba07b81b86da3203c"><td class="memItemLeft" align="right" valign="top"><a id="a42d4092ba45440eba07b81b86da3203c"></a>
+LRESULT APIENTRY&#160;</td><td class="memItemRight" valign="bottom"><b>OFNHookProcMain</b> (HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a42d4092ba45440eba07b81b86da3203c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a47ae3d015f94dd35ba5b7fe0c2f3a"><td class="memItemLeft" align="right" valign="top">UINT_PTR CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/_c_dlg_open_file___common_file_dialog_8cpp.html#ac9a47ae3d015f94dd35ba5b7fe0c2f3a">OFNHookProc</a> (HWND hdlg, UINT uiMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ac9a47ae3d015f94dd35ba5b7fe0c2f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d010e83ec9ff3209c5dd7b0f69816a"><td class="memItemLeft" align="right" valign="top"><a id="a05d010e83ec9ff3209c5dd7b0f69816a"></a>
+std::shared_ptr&lt; <a class="el" href="../../dd/d5a/class_i_dlg_open_file.html">IDlgOpenFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>New_CDlgOpenFile_CommonFileDialog</b> ()</td></tr>
+<tr class="separator:a05d010e83ec9ff3209c5dd7b0f69816a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイルオープンダイアログボックス </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/08/10 作成 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac9a47ae3d015f94dd35ba5b7fe0c2f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a47ae3d015f94dd35ba5b7fe0c2f3a">&#9670;&nbsp;</a></span>OFNHookProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT_PTR CALLBACK OFNHookProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hdlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uiMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>開くダイアログのフックプロシージャ </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

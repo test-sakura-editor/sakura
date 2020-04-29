@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDlgOpenFile クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../da/dc4/class_c_dlg_open_file-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgOpenFile クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">CDlgOpenFile.h</a>&gt;</code></p>
+<div class="dynheader">
+CDlgOpenFile の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d3c/class_c_dlg_open_file.png" usemap="#CDlgOpenFile_map" alt=""/>
+  <map id="CDlgOpenFile_map" name="CDlgOpenFile_map">
+<area href="../../dd/d5a/class_i_dlg_open_file.html" alt="IDlgOpenFile" shape="rect" coords="0,0,92,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a243188d00f5dafcd8018e2eac5a6f6de"><td class="memItemLeft" align="right" valign="top"><a id="a243188d00f5dafcd8018e2eac5a6f6de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HINSTANCE hInstance, HWND hwndParent, const WCHAR *pszUserWildCard, const WCHAR *pszDefaultPath, const std::vector&lt; LPCWSTR &gt; &amp;vMRU=std::vector&lt; LPCWSTR &gt;(), const std::vector&lt; LPCWSTR &gt; &amp;vOPENFOLDER=std::vector&lt; LPCWSTR &gt;()) override</td></tr>
+<tr class="separator:a243188d00f5dafcd8018e2eac5a6f6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4dd88bc54ad99b982041bf2cac5260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3c/class_c_dlg_open_file.html#a4f4dd88bc54ad99b982041bf2cac5260">DoModal_GetOpenFileName</a> (WCHAR *pszPath, <a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> eAddFileter=<a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a>) override</td></tr>
+<tr class="separator:a4f4dd88bc54ad99b982041bf2cac5260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad66f102f06e5401ca62a6f7c61e4d50f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3c/class_c_dlg_open_file.html#ad66f102f06e5401ca62a6f7c61e4d50f">DoModal_GetSaveFileName</a> (WCHAR *pszPath) override</td></tr>
+<tr class="separator:ad66f102f06e5401ca62a6f7c61e4d50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9181ea367936ea5baced61636adcbaf"><td class="memItemLeft" align="right" valign="top"><a id="ad9181ea367936ea5baced61636adcbaf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DoModalOpenDlg</b> (<a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> *pLoadInfo, std::vector&lt; std::wstring &gt; *pFilenames, bool bOptions=true) override</td></tr>
+<tr class="separator:ad9181ea367936ea5baced61636adcbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af39eb5b9b6b0ea781bfbeb901a3dc7"><td class="memItemLeft" align="right" valign="top"><a id="a8af39eb5b9b6b0ea781bfbeb901a3dc7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DoModalSaveDlg</b> (<a class="el" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a> *pSaveInfo, bool bSimpleMode) override</td></tr>
+<tr class="separator:a8af39eb5b9b6b0ea781bfbeb901a3dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128eac507d2884a22134d1d9610612a8"><td class="memItemLeft" align="right" valign="top"><a id="a128eac507d2884a22134d1d9610612a8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../de/d3c/class_c_dlg_open_file.html">CDlgOpenFile</a>)</td></tr>
+<tr class="separator:a128eac507d2884a22134d1d9610612a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aca455e1700d5b8e341594a91bb488b57"><td class="memItemLeft" align="right" valign="top">static BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3c/class_c_dlg_open_file.html#aca455e1700d5b8e341594a91bb488b57">SelectFile</a> (HWND parent, HWND hwndCtl, const WCHAR *filter, bool resolvePath, <a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a> eAddFilter=<a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a>)</td></tr>
+<tr class="separator:aca455e1700d5b8e341594a91bb488b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイルオープンダイアログボックス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a4f4dd88bc54ad99b982041bf2cac5260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4dd88bc54ad99b982041bf2cac5260">&#9670;&nbsp;</a></span>DoModal_GetOpenFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDlgOpenFile::DoModal_GetOpenFileName </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a>&#160;</td>
+          <td class="paramname"><em>eAddFilter</em> = <code><a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>開くダイアログ モーダルダイアログの表示 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pszPath</td><td>初期ファイル名．選択されたファイル名の格納場所 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eAddFiler</td><td>フィルタ設定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ユーザーがファイル名を選択してOKした </td></tr>
+    <tr><td class="paramname">false</td><td>ダイアログをユーザーがキャンセル等で閉じたかもしくは開くのに失敗したか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d5a/class_i_dlg_open_file.html#a5d0e7b7f2856e28139c5c37441b371fe">IDlgOpenFile</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="ad66f102f06e5401ca62a6f7c61e4d50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad66f102f06e5401ca62a6f7c61e4d50f">&#9670;&nbsp;</a></span>DoModal_GetSaveFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDlgOpenFile::DoModal_GetSaveFileName </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>保存ダイアログ モーダルダイアログの表示 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszPath</td><td>[i/o] 初期ファイル名．選択されたファイル名の格納場所 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d5a/class_i_dlg_open_file.html#a133496a9b374c858d7a73ba45228952e">IDlgOpenFile</a>を実装しています。</p>
+
+</div>
+</div>
+<a id="aca455e1700d5b8e341594a91bb488b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca455e1700d5b8e341594a91bb488b57">&#9670;&nbsp;</a></span>SelectFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDlgOpenFile::SelectFile </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCtl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>resolvePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33f">EFilter</a>&#160;</td>
+          <td class="paramname"><em>eAddFilter</em> = <code><a class="el" href="../../d4/d94/_c_dlg_open_file_8h.html#a2d172a3456797ad7625ab93b6c85d33fab6aa791da63457c2cc3a567cd76df12c">EFITER_TEXT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ファイル選択 </p><dl class="section note"><dt>覚え書き</dt><dd>実行ファイルのパスor設定ファイルのパスが含まれる場合は相対パスに変換 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/dlg/<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">CDlgOpenFile.h</a></li>
+<li>sakura_core/dlg/<a class="el" href="../../de/d2c/_c_dlg_open_file_8cpp.html">CDlgOpenFile.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

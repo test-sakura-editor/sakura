@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/CSakuraEnvironment.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CSakuraEnvironment.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de2/_c_sakura_environment_8h_source.html">CSakuraEnvironment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h_source.html">env/DLLSHAREDATA.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d04/_c_format_manager_8h_source.html">env/CFormatManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/da4/_c_file_name_manager_8h_source.html">env/CFileNameManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d47/_c_app_mode_8h_source.html">_main/CAppMode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d0c/_c_command_line_8h_source.html">_main/CCommandLine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d69/_c_edit_doc_8h_source.html">doc/CEditDoc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d14/_c_edit_wnd_8h_source.html">window/CEditWnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d65/_c_print_preview_8h_source.html">print/CPrintPreview.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/de7/_c_s_macro_mgr_8h_source.html">macro/CSMacroMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d19/_c_grep_agent_8h_source.html">CGrepAgent.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d3e/_c_m_r_u_file_8h_source.html">recent/CMRUFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/de9/_c_m_r_u_folder_8h_source.html">recent/CMRUFolder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/da9/string__ex2_8h_source.html">util/string_ex2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d47/struct_s_exp_param_name.html">SExpParamName</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a5b368e62acdb7ef7003feff92a6a5366"><td class="memItemLeft" align="right" valign="top"><a id="a5b368e62acdb7ef7003feff92a6a5366"></a>
+typedef std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>wstring</b></td></tr>
+<tr class="separator:a5b368e62acdb7ef7003feff92a6a5366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:abda06061eb41d6dbbbb676a8259d3252"><td class="memItemLeft" align="right" valign="top"><a id="abda06061eb41d6dbbbb676a8259d3252"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>EExpParamName</b> { <b>EExpParamName_none</b> = -1, 
+<b>EExpParamName_begin</b> = 0, 
+<b>EExpParamName_profile</b> = 0, 
+<b>EExpParamName_end</b>
+ }</td></tr>
+<tr class="separator:abda06061eb41d6dbbbb676a8259d3252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aaeb48ad26748d43366239214cf591876"><td class="memItemLeft" align="right" valign="top">wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db1/_c_sakura_environment_8cpp.html#aaeb48ad26748d43366239214cf591876">ExParam_LongName</a> (wchar_t *q, wchar_t *q_max, EExpParamName eLongParam)</td></tr>
+<tr class="separator:aaeb48ad26748d43366239214cf591876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91814f75027e2133d91e65a98ed70600"><td class="memItemLeft" align="right" valign="top"><a id="a91814f75027e2133d91e65a98ed70600"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>IsSakuraMainWindow</b> (HWND hWnd)</td></tr>
+<tr class="separator:a91814f75027e2133d91e65a98ed70600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aaeb48ad26748d43366239214cf591876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb48ad26748d43366239214cf591876">&#9670;&nbsp;</a></span>ExParam_LongName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wchar_t * ExParam_LongName </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>q_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EExpParamName&#160;</td>
+          <td class="paramname"><em>eLongParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>長い名前の設定 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

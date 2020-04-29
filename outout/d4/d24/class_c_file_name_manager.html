@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CFileNameManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d4/d28/class_c_file_name_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CFileNameManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイル名管理  
+ <a href="../../d4/d24/class_c_file_name_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/da4/_c_file_name_manager_8h_source.html">CFileNameManager.h</a>&gt;</code></p>
+<div class="dynheader">
+CFileNameManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d24/class_c_file_name_manager.png" usemap="#CFileNameManager_map" alt=""/>
+  <map id="CFileNameManager_map" name="CFileNameManager_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CFileNameManager &gt;" shape="rect" coords="0,0,208,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4aa7de8ff8c24c30a0e5168b4f4478e0"><td class="memItemLeft" align="right" valign="top">LPWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#a4aa7de8ff8c24c30a0e5168b4f4478e0">GetTransformFileNameFast</a> (LPCWSTR, LPWSTR, int nDestLen, HDC hDC, bool bFitMode=true, int cchMaxWidth=0)</td></tr>
+<tr class="separator:a4aa7de8ff8c24c30a0e5168b4f4478e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba80a975477819789b389a3407694ba6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#aba80a975477819789b389a3407694ba6">TransformFileName_MakeCache</a> (void)</td></tr>
+<tr class="separator:aba80a975477819789b389a3407694ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4014de82de130fef145537517565ba16"><td class="memItemLeft" align="right" valign="top"><a id="a4014de82de130fef145537517565ba16"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel_WinList</b> (WCHAR *pszOutput, int nBuffSize, const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *editInfo, int id, int index, HDC hDC)</td></tr>
+<tr class="separator:a4014de82de130fef145537517565ba16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f77282659e08c748e5ae7941d49ef1a"><td class="memItemLeft" align="right" valign="top"><a id="a6f77282659e08c748e5ae7941d49ef1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel_MRU</b> (WCHAR *pszOutput, int nBuffSize, const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *editInfo, int id, bool bFavorite, int index, HDC hDC)</td></tr>
+<tr class="separator:a6f77282659e08c748e5ae7941d49ef1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9720414d606908e647e932f30e4739"><td class="memItemLeft" align="right" valign="top"><a id="a6b9720414d606908e647e932f30e4739"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel_WinListNoEscape</b> (WCHAR *pszOutput, int nBuffSize, const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *editInfo, int id, int index, HDC hDC)</td></tr>
+<tr class="separator:a6b9720414d606908e647e932f30e4739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d6c86e65e4b3931ac55a8d4f476a67"><td class="memItemLeft" align="right" valign="top"><a id="a59d6c86e65e4b3931ac55a8d4f476a67"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel_File</b> (WCHAR *pszOutput, int nBuffSize, const WCHAR *pszFile, int id, HDC hDC, bool bModified=false, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode=<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>)</td></tr>
+<tr class="separator:a59d6c86e65e4b3931ac55a8d4f476a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad648a2aab320cabf6302deeea3f91366"><td class="memItemLeft" align="right" valign="top"><a id="ad648a2aab320cabf6302deeea3f91366"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel_FileNoEscape</b> (WCHAR *pszOutput, int nBuffSize, const WCHAR *pszFile, int id, HDC hDC, bool bModified=false, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode=<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>)</td></tr>
+<tr class="separator:ad648a2aab320cabf6302deeea3f91366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b76508cf07ace04bb3cc6abcef9445"><td class="memItemLeft" align="right" valign="top"><a id="a08b76508cf07ace04bb3cc6abcef9445"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel</b> (WCHAR *pszOutput, int nBuffSize, bool bEspaceAmp, const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *editInfo, int id, bool bFavorite, int index, bool bAccKeyZeroOrigin, HDC hDC)</td></tr>
+<tr class="separator:a08b76508cf07ace04bb3cc6abcef9445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af632d51f65b311fb5599d4288d39cf35"><td class="memItemLeft" align="right" valign="top"><a id="af632d51f65b311fb5599d4288d39cf35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetMenuFullLabel</b> (WCHAR *pszOutput, int nBuffSize, bool bEspaceAmp, const WCHAR *pszFile, int id, bool bModified, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode, bool bFavorite, int index, bool bAccKeyZeroOrigin, HDC hDC)</td></tr>
+<tr class="separator:af632d51f65b311fb5599d4288d39cf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e23703b19bdfeb5455294a012f6f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#a01e23703b19bdfeb5455294a012f6f46">GetIniFileName</a> (LPWSTR pszIniFileName, LPCWSTR pszProfName, BOOL bRead=FALSE)</td></tr>
+<tr class="separator:a01e23703b19bdfeb5455294a012f6f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8f719d9265d87912a31ca994aeea1ee2"><td class="memItemLeft" align="right" valign="top">static LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#a8f719d9265d87912a31ca994aeea1ee2">GetFilePathFormat</a> (LPCWSTR, LPWSTR, int, LPCWSTR, LPCWSTR)</td></tr>
+<tr class="separator:a8f719d9265d87912a31ca994aeea1ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7d7d6485a78db9f5cfd5c9b7a771a7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#a0f7d7d6485a78db9f5cfd5c9b7a771a7">ExpandMetaToFolder</a> (LPCWSTR, LPWSTR, int)</td></tr>
+<tr class="separator:a0f7d7d6485a78db9f5cfd5c9b7a771a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1ffce66d8db54606593fd886cb50f5"><td class="memItemLeft" align="right" valign="top"><a id="a0a1ffce66d8db54606593fd886cb50f5"></a>
+static WCHAR&#160;</td><td class="memItemRight" valign="bottom"><b>GetAccessKeyByIndex</b> (int index, bool bZeroOrigin)</td></tr>
+<tr class="separator:a0a1ffce66d8db54606593fd886cb50f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af374a65e3d765317b3148331f9037f20"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/class_c_file_name_manager.html#af374a65e3d765317b3148331f9037f20">GetIniFileNameDirect</a> (LPWSTR pszPrivateIniFile, LPWSTR pszIniFile, LPCWSTR pszProfName)</td></tr>
+<tr class="separator:af374a65e3d765317b3148331f9037f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d4/d24/class_c_file_name_manager.html">CFileNameManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a8b6fb4f425e9847a31ca82dd713cc97a"><td class="memItemLeft" align="right" valign="top"><a id="a8b6fb4f425e9847a31ca82dd713cc97a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CFileNameManager &gt;</b></td></tr>
+<tr class="separator:a8b6fb4f425e9847a31ca82dd713cc97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイル名管理 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a0f7d7d6485a78db9f5cfd5c9b7a771a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7d7d6485a78db9f5cfd5c9b7a771a7">&#9670;&nbsp;</a></span>ExpandMetaToFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFileNameManager::ExpandMetaToFolder </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszDes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDesLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>MYDOCなどのパラメータ指定を実際のパス名に変換する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszSrc</td><td>[in] 変換前文字列 </td></tr>
+    <tr><td class="paramname">pszDes</td><td>[out] 変換後文字列 </td></tr>
+    <tr><td class="paramname">nDesLen</td><td>[in] pszDesのNULLを含むTCHAR単位の長さ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常に変換できた </td></tr>
+    <tr><td class="paramname">false</td><td>バッファが足りなかった，またはエラー。pszDesは不定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002.11.27 Moca 作成開始 </dd></dl>
+
+</div>
+</div>
+<a id="a8f719d9265d87912a31ca994aeea1ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f719d9265d87912a31ca994aeea1ee2">&#9670;&nbsp;</a></span>GetFilePathFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR CFileNameManager::GetFilePathFormat </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszDest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDestLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ファイル・フォルダ名を置換して、簡易表示名を取得する </p><dl class="section date"><dt>日付</dt><dd>2002.11.27 Moca 新規作成 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>大小文字を区別しない。nDestLenに達したときは後ろを切り捨てられる </dd></dl>
+
+</div>
+</div>
+<a id="a01e23703b19bdfeb5455294a012f6f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e23703b19bdfeb5455294a012f6f46">&#9670;&nbsp;</a></span>GetIniFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFileNameManager::GetIniFileName </td>
+          <td>(</td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszIniFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszProfName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bRead</em> = <code>FALSE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>iniファイル名の取得</p>
+<p>共有データからsakura.iniの格納フォルダを取得し、フルパス名を返す （共有データ未設定のときは共有データ設定を行う）</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszIniFileName</td><td>iniファイル名（フルパス） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bRead</td><td>true: 読み込み / false: 書き込み</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.19 ryoji 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="af374a65e3d765317b3148331f9037f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af374a65e3d765317b3148331f9037f20">&#9670;&nbsp;</a></span>GetIniFileNameDirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFileNameManager::GetIniFileNameDirect </td>
+          <td>(</td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszPrivateIniFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszIniFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszProfName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>構成設定ファイルからiniファイル名を取得する</p>
+<p>sakura.exe.iniからsakura.iniの格納フォルダを取得し、フルパス名を返す</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszPrivateIniFile</td><td>マルチユーザ用のiniファイルパス </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszIniFile</td><td>EXE基準のiniファイルパス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.09.04 ryoji 新規作成 </dd>
+<dd>
+2008.05.05 novice GetModuleHandle(NULL)→NULLに変更 </dd></dl>
+
+</div>
+</div>
+<a id="a4aa7de8ff8c24c30a0e5168b4f4478e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa7de8ff8c24c30a0e5168b4f4478e0">&#9670;&nbsp;</a></span>GetTransformFileNameFast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPWSTR CFileNameManager::GetTransformFileNameFast </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pszDest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDestLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HDC&#160;</td>
+          <td class="paramname"><em>hDC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFitMode</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cchMaxWidth</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>共有データの設定に従ってパスを縮小表記に変換する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszSrc</td><td>[in] ファイル名 </td></tr>
+    <tr><td class="paramname">pszDest</td><td>[out] 変換後のファイル名の格納先 </td></tr>
+    <tr><td class="paramname">nDestLen</td><td>[in] 終端のNULLを含むpszDestのTCHAR単位の長さ _MAX_PATH まで </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003.01.27 Moca 新規作成 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>連続して呼び出す場合のため、展開済みメタ文字列をキャッシュして高速化している。 </dd></dl>
+
+</div>
+</div>
+<a id="aba80a975477819789b389a3407694ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba80a975477819789b389a3407694ba6">&#9670;&nbsp;</a></span>TransformFileName_MakeCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CFileNameManager::TransformFileName_MakeCache </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>展開済みメタ文字列のキャッシュを作成・更新する </p><dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">有効な展開済み置換前文字列の数</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003.01.27 Moca 新規作成 </dd>
+<dd>
+2003.06.23 Moca 関数名変更 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/env/<a class="el" href="../../d4/da4/_c_file_name_manager_8h_source.html">CFileNameManager.h</a></li>
+<li>sakura_core/env/<a class="el" href="../../d6/ddf/_c_file_name_manager_8cpp.html">CFileNameManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

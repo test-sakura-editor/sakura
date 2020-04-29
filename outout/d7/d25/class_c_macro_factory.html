@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CMacroFactory クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../d4/dfb/class_c_macro_factory-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CMacroFactory クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>マクロHandler生成クラス  
+ <a href="../../d7/d25/class_c_macro_factory.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/db0/_c_macro_factory_8h_source.html">CMacroFactory.h</a>&gt;</code></p>
+<div class="dynheader">
+CMacroFactory の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d25/class_c_macro_factory.png" usemap="#CMacroFactory_map" alt=""/>
+  <map id="CMacroFactory_map" name="CMacroFactory_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CMacroFactory &gt;" shape="rect" coords="0,0,185,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:af70b6dbb6c73d83929375824631ce064"><td class="memItemLeft" align="right" valign="top"><a id="af70b6dbb6c73d83929375824631ce064"></a>
+typedef <a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><b>Creator</b>) (const WCHAR *)</td></tr>
+<tr class="separator:af70b6dbb6c73d83929375824631ce064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac675c1720e34df34dafd8c5754b6f52b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d25/class_c_macro_factory.html#ac675c1720e34df34dafd8c5754b6f52b">RegisterCreator</a> (Creator f)</td></tr>
+<tr class="separator:ac675c1720e34df34dafd8c5754b6f52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8d608964c90a870d78010890c0bcfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d25/class_c_macro_factory.html#a9b8d608964c90a870d78010890c0bcfa">Unregister</a> (Creator f)</td></tr>
+<tr class="separator:a9b8d608964c90a870d78010890c0bcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa23b0662e3b3c7cf2a4092bae8eba70"><td class="memItemLeft" align="right" valign="top"><a id="afa23b0662e3b3c7cf2a4092bae8eba70"></a>
+<a class="el" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (const WCHAR *ext)</td></tr>
+<tr class="separator:afa23b0662e3b3c7cf2a4092bae8eba70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d7/d25/class_c_macro_factory.html">CMacroFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a4071f7c9ce986931ee611d0f4360bfb4"><td class="memItemLeft" align="right" valign="top"><a id="a4071f7c9ce986931ee611d0f4360bfb4"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CMacroFactory &gt;</b></td></tr>
+<tr class="separator:a4071f7c9ce986931ee611d0f4360bfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>マクロHandler生成クラス </p>
+<dl class="section user"><dt>初期化</dt><dd>CMacroManagerBase::declare() により，MacroEngineのCreaterの登録 RegisterEngine() 及び 対応拡張子の登録 RegisterExt() が呼び出される．</dd></dl>
+<dl class="section user"><dt>呼び出し</dt><dd>CMacroFactory::Create()を拡張子を引数にして呼び出すと対応する マクロエンジンが返される．得られたEngineに対してLoadKeyMacro()及び ExecKeyMacro() を呼び出すことでマクロの読み込み・実行が行われる．</dd></dl>
+<p>Singleton </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac675c1720e34df34dafd8c5754b6f52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac675c1720e34df34dafd8c5754b6f52b">&#9670;&nbsp;</a></span>RegisterCreator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMacroFactory::RegisterCreator </td>
+          <td>(</td>
+          <td class="paramtype">Creator&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creatorの登録</p>
+<p>拡張子の対応を初期に登録しないCreatorを登録する． ただし，一旦対応がわかったら次回以降は対応表が使われる．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>[in] 登録するFactory関数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参照</dt><dd>CMacroFactory::RegisterExts</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.08.25 genta 追加 </dd></dl>
+
+</div>
+</div>
+<a id="a9b8d608964c90a870d78010890c0bcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8d608964c90a870d78010890c0bcfa">&#9670;&nbsp;</a></span>Unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMacroFactory::Unregister </td>
+          <td>(</td>
+          <td class="paramtype">Creator&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creatorの登録解除</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>[in] 登録解除するCreator </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/macro/<a class="el" href="../../de/db0/_c_macro_factory_8h_source.html">CMacroFactory.h</a></li>
+<li>sakura_core/macro/<a class="el" href="../../d9/d49/_c_macro_factory_8cpp.html">CMacroFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

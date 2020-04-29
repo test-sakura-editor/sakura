@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/macro/CWSH.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_614ccf2e7ca9e77c465d8296e7c03a2a.html">macro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CWSH.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d84/_c_w_s_h_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2002, 鬼, genta</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2009, syat</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;ActivScp.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//↑Microsoft Platform SDK より</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dad/_c_if_obj_8h.html">macro/CIfObj.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/* 2009.10.29 syat インタフェースオブジェクト部分をCWSHIfObj.hに分離</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">template&lt;class Base&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">class ImplementsIUnknown: public Base</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">class CInterfaceObject: public ImplementsIUnknown&lt;IDispatch&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">typedef</span> void (*ScriptErrorHandler)(BSTR Description, BSTR Source, <span class="keywordtype">void</span> *Data);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d9c/class_c_w_s_h_client.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d9c/class_c_w_s_h_client.html">CWSHClient</a> final : <a class="code" href="../../d8/dd5/class_i_w_s_h_client.html">IWSHClient</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// 型定義</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;CIfObj*&gt; List;      <span class="comment">// 所有しているインタフェースオブジェクトのリスト</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typedef</span> List::const_iterator ListIter;  <span class="comment">// そのイテレータ</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d1/d9c/class_c_w_s_h_client.html">CWSHClient</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *AEngine, ScriptErrorHandler AErrorHandler, <span class="keywordtype">void</span> *AData);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ~<a class="code" href="../../d1/d9c/class_c_w_s_h_client.html">CWSHClient</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// フィールド・アクセサ</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ScriptErrorHandler m_OnError;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> *m_Data;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d9c/class_c_w_s_h_client.html#aaecf83b3daa5c8ab8a6f7c0e9df62783">   47</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d1/d9c/class_c_w_s_h_client.html#aaecf83b3daa5c8ab8a6f7c0e9df62783">m_Valid</a>; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span>* GetData()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> this-&gt;m_Data; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> List&amp; GetInterfaceObjects() { <span class="keywordflow">return</span> this-&gt;m_IfObjArr; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// 操作</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> AddInterfaceObject( <a class="code" href="../../df/d52/class_c_if_obj.html">CIfObj</a>* obj );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> Execute(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *AScript);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d9c/class_c_w_s_h_client.html#abde020b2f59550908fd665eab3939647">Error</a>(BSTR Description, BSTR Source); </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d9c/class_c_w_s_h_client.html#abde020b2f59550908fd665eab3939647">Error</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* Description);          </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    IActiveScript *m_Engine;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    List m_IfObjArr;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_if_obj_8h_html"><div class="ttname"><a href="../../db/dad/_c_if_obj_8h.html">CIfObj.h</a></div><div class="ttdoc">WSHインタフェースオブジェクト基本クラス</div></div>
+<div class="ttc" id="aclass_c_w_s_h_client_html_abde020b2f59550908fd665eab3939647"><div class="ttname"><a href="../../d1/d9c/class_c_w_s_h_client.html#abde020b2f59550908fd665eab3939647">CWSHClient::Error</a></div><div class="ttdeci">void Error(BSTR Description, BSTR Source)</div><div class="ttdoc">ScriptErrorHandlerを呼び出す。</div><div class="ttdef"><b>Definition:</b> CWSH.cpp:425</div></div>
+<div class="ttc" id="aclass_c_if_obj_html"><div class="ttname"><a href="../../df/d52/class_c_if_obj.html">CIfObj</a></div><div class="ttdef"><b>Definition:</b> CIfObj.h:78</div></div>
+<div class="ttc" id="aclass_c_w_s_h_client_html"><div class="ttname"><a href="../../d1/d9c/class_c_w_s_h_client.html">CWSHClient</a></div><div class="ttdef"><b>Definition:</b> CWSH.h:34</div></div>
+<div class="ttc" id="aclass_c_w_s_h_client_html_aaecf83b3daa5c8ab8a6f7c0e9df62783"><div class="ttname"><a href="../../d1/d9c/class_c_w_s_h_client.html#aaecf83b3daa5c8ab8a6f7c0e9df62783">CWSHClient::m_Valid</a></div><div class="ttdeci">bool m_Valid</div><div class="ttdoc">trueの場合スクリプトエンジンが使用可能。falseになる場合は ScriptErrorHandlerにエラー内容が通知されている。</div><div class="ttdef"><b>Definition:</b> CWSH.h:47</div></div>
+<div class="ttc" id="aclass_i_w_s_h_client_html"><div class="ttname"><a href="../../d8/dd5/class_i_w_s_h_client.html">IWSHClient</a></div><div class="ttdef"><b>Definition:</b> CIfObj.h:69</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

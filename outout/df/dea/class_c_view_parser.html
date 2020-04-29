@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CViewParser クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../df/dd7/class_c_view_parser-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CViewParser クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>品詞解析クラス  
+ <a href="../../df/dea/class_c_view_parser.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dd/dc0/_c_view_parser_8h_source.html">CViewParser.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aceea3646e8ccdfce213bc9849fcf0321"><td class="memItemLeft" align="right" valign="top"><a id="aceea3646e8ccdfce213bc9849fcf0321"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CViewParser</b> (const <a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *pEditView)</td></tr>
+<tr class="separator:aceea3646e8ccdfce213bc9849fcf0321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195ca2390842fd0bac0755717718984c"><td class="memItemLeft" align="right" valign="top"><a id="a195ca2390842fd0bac0755717718984c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dea/class_c_view_parser.html#a195ca2390842fd0bac0755717718984c">GetLeftWord</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmemWord, int nMaxWordLen) const</td></tr>
+<tr class="memdesc:a195ca2390842fd0bac0755717718984c"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーソル直前の単語を取得 <br /></td></tr>
+<tr class="separator:a195ca2390842fd0bac0755717718984c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c59f1a047c237cb93c3268880373ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dea/class_c_view_parser.html#a34c59f1a047c237cb93c3268880373ac">GetCurrentWord</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmemWord) const</td></tr>
+<tr class="memdesc:a34c59f1a047c237cb93c3268880373ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャレット位置の単語を取得  <a href="../../df/dea/class_c_view_parser.html#a34c59f1a047c237cb93c3268880373ac">[詳解]</a><br /></td></tr>
+<tr class="separator:a34c59f1a047c237cb93c3268880373ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>品詞解析クラス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a34c59f1a047c237cb93c3268880373ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c59f1a047c237cb93c3268880373ac">&#9670;&nbsp;</a></span>GetCurrentWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CViewParser::GetCurrentWord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pcmemWord</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>キャレット位置の単語を取得 </p>
+<p>キャレット位置の単語を取得 単語区切り</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcmemWord</td><td>キャレット位置の単語 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true: 成功，false: 失敗</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.03.24 fon (CEditView::Command_SELECTWORDを流用) </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/view/<a class="el" href="../../dd/dc0/_c_view_parser_8h_source.html">CViewParser.h</a></li>
+<li>sakura_core/view/<a class="el" href="../../d5/ddb/_c_view_parser_8cpp.html">CViewParser.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

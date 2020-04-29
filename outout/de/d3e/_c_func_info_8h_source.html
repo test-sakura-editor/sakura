@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/outline/CFuncInfo.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_250ef5669067ed106f2ef55a4b95597b.html">outline</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFuncInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d3e/_c_func_info_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2003, Moca</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d33/class_c_func_info.html">CFuncInfo</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d5f/_c_memory_8h.html">mem/CMemory.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// CDlgFuncList::SetTree()用 m_Info</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define FUNCINFO_INFOMASK   0xFFFF</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//  2003.06.27 Moca</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define FUNCINFO_NOCLIPTEXT 0x10000</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//@date 2002.04.01 YAZAKI 深さ導入</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d33/class_c_func_info.html">CFuncInfo</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d1/d33/class_c_func_info.html#a78a42b02726c13787f15adb88740c381">CFuncInfo</a>( CLogicInt nFuncLineCRLF, CLogicInt nFuncColCRLF,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                   CLayoutInt nFuncLineLAYOUT, CLayoutInt nFuncColLAYOUT,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                   <span class="keyword">const</span> WCHAR* pszFuncName, <span class="keyword">const</span> WCHAR* pszFileName,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                   <span class="keywordtype">int</span> nInfo ); <span class="comment">/* CFuncInfoクラス構築 */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        ~<a class="code" href="../../d1/d33/class_c_func_info.html">CFuncInfo</a>();   <span class="comment">/* CFuncInfoクラス消滅 */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">//  2003.06.27 Moca</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#abe46c6271ad0ee155ab6c0eb346787a3">   39</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/d33/class_c_func_info.html#abe46c6271ad0ee155ab6c0eb346787a3">IsAddClipText</a>( <span class="keywordtype">void</span> )<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> ( FUNCINFO_NOCLIPTEXT != ( <a class="code" href="../../d1/d33/class_c_func_info.html#a748ba835e8baf32e947bbf517f47f175">m_nInfo</a> &amp; FUNCINFO_NOCLIPTEXT ) );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//  private:</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#af364dba344a4279e3c0ab7d85ccdec32">   44</a></span>&#160;        CLogicInt   <a class="code" href="../../d1/d33/class_c_func_info.html#af364dba344a4279e3c0ab7d85ccdec32">m_nFuncLineCRLF</a>;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#acc4b0d09b00e6f9e92c2e1647314b283">   45</a></span>&#160;        CLayoutInt  <a class="code" href="../../d1/d33/class_c_func_info.html#acc4b0d09b00e6f9e92c2e1647314b283">m_nFuncLineLAYOUT</a>;  </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#acaa0bb7ea506c0ddc03e55c820a7198e">   46</a></span>&#160;        CLogicInt   <a class="code" href="../../d1/d33/class_c_func_info.html#acaa0bb7ea506c0ddc03e55c820a7198e">m_nFuncColCRLF</a>;     </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#a684f29ca11ad51f90a05d3d5c041d156">   47</a></span>&#160;        CLayoutInt  <a class="code" href="../../d1/d33/class_c_func_info.html#a684f29ca11ad51f90a05d3d5c041d156">m_nFuncColLAYOUT</a>;   </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#a58965ad2bb3b96f426d8b9dbede2b27e">   48</a></span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>    <a class="code" href="../../d1/d33/class_c_func_info.html#a58965ad2bb3b96f426d8b9dbede2b27e">m_cmemFuncName</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#a2435e1e5ceeb217e4d6b57ca7f499172">   49</a></span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>    <a class="code" href="../../d1/d33/class_c_func_info.html#a2435e1e5ceeb217e4d6b57ca7f499172">m_cmemFileName</a>; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#a748ba835e8baf32e947bbf517f47f175">   50</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="../../d1/d33/class_c_func_info.html#a748ba835e8baf32e947bbf517f47f175">m_nInfo</a>;        </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d1/d33/class_c_func_info.html#a9fc9752faecc5e175e6aceb0fbce362e">   51</a></span>&#160;        <span class="keywordtype">int</span>         <a class="code" href="../../d1/d33/class_c_func_info.html#a9fc9752faecc5e175e6aceb0fbce362e">m_nDepth</a>;       </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_func_info_html_a58965ad2bb3b96f426d8b9dbede2b27e"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a58965ad2bb3b96f426d8b9dbede2b27e">CFuncInfo::m_cmemFuncName</a></div><div class="ttdeci">CNativeW m_cmemFuncName</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:48</div></div>
+<div class="ttc" id="aclass_c_func_info_html_acaa0bb7ea506c0ddc03e55c820a7198e"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#acaa0bb7ea506c0ddc03e55c820a7198e">CFuncInfo::m_nFuncColCRLF</a></div><div class="ttdeci">CLogicInt m_nFuncColCRLF</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:46</div></div>
+<div class="ttc" id="aclass_c_func_info_html_abe46c6271ad0ee155ab6c0eb346787a3"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#abe46c6271ad0ee155ab6c0eb346787a3">CFuncInfo::IsAddClipText</a></div><div class="ttdeci">bool IsAddClipText(void) const</div><div class="ttdoc">クリップボードに追加する要素か？</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:39</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="aclass_c_func_info_html_a78a42b02726c13787f15adb88740c381"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a78a42b02726c13787f15adb88740c381">CFuncInfo::CFuncInfo</a></div><div class="ttdeci">CFuncInfo(CLogicInt nFuncLineCRLF, CLogicInt nFuncColCRLF, CLayoutInt nFuncLineLAYOUT, CLayoutInt nFuncColLAYOUT, const WCHAR *pszFuncName, const WCHAR *pszFileName, int nInfo)</div><div class="ttdef"><b>Definition:</b> CFuncInfo.cpp:18</div></div>
+<div class="ttc" id="aclass_c_func_info_html_a684f29ca11ad51f90a05d3d5c041d156"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a684f29ca11ad51f90a05d3d5c041d156">CFuncInfo::m_nFuncColLAYOUT</a></div><div class="ttdeci">CLayoutInt m_nFuncColLAYOUT</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:47</div></div>
+<div class="ttc" id="aclass_c_func_info_html"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html">CFuncInfo</a></div><div class="ttdoc">アウトライン解析 データ要素</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:29</div></div>
+<div class="ttc" id="aclass_c_func_info_html_a9fc9752faecc5e175e6aceb0fbce362e"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a9fc9752faecc5e175e6aceb0fbce362e">CFuncInfo::m_nDepth</a></div><div class="ttdeci">int m_nDepth</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:51</div></div>
+<div class="ttc" id="a_c_memory_8h_html"><div class="ttname"><a href="../../dc/d5f/_c_memory_8h.html">CMemory.h</a></div><div class="ttdoc">メモリバッファクラス</div></div>
+<div class="ttc" id="aclass_c_func_info_html_a748ba835e8baf32e947bbf517f47f175"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a748ba835e8baf32e947bbf517f47f175">CFuncInfo::m_nInfo</a></div><div class="ttdeci">int m_nInfo</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:50</div></div>
+<div class="ttc" id="aclass_c_func_info_html_a2435e1e5ceeb217e4d6b57ca7f499172"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#a2435e1e5ceeb217e4d6b57ca7f499172">CFuncInfo::m_cmemFileName</a></div><div class="ttdeci">CNativeW m_cmemFileName</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:49</div></div>
+<div class="ttc" id="aclass_c_func_info_html_acc4b0d09b00e6f9e92c2e1647314b283"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#acc4b0d09b00e6f9e92c2e1647314b283">CFuncInfo::m_nFuncLineLAYOUT</a></div><div class="ttdeci">CLayoutInt m_nFuncLineLAYOUT</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:45</div></div>
+<div class="ttc" id="aclass_c_func_info_html_af364dba344a4279e3c0ab7d85ccdec32"><div class="ttname"><a href="../../d1/d33/class_c_func_info.html#af364dba344a4279e3c0ab7d85ccdec32">CFuncInfo::m_nFuncLineCRLF</a></div><div class="ttdeci">CLogicInt m_nFuncLineCRLF</div><div class="ttdef"><b>Definition:</b> CFuncInfo.h:44</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

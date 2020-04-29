@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/file.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">file.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d4d/file_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2002, SUI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a2bf60aba91c05cf3e7db2d87819ce4e0">fexist</a>(LPCWSTR pszPath); </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#aa990fabcd51cae6cea561afae725fc72">IsFilePath</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pLine, <span class="keywordtype">size_t</span>* pnBgn, <span class="keywordtype">size_t</span>* pnPathLen, <span class="keywordtype">bool</span> bFileOnly = <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a01bcf4e172facc265a4177c730c71289">IsFileExists</a>(<span class="keyword">const</span> WCHAR* path, <span class="keywordtype">bool</span> bFileOnly = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a2f28a17536f38511be48be84a97f1b33">IsDirectory</a>(LPCWSTR pszPath);  <span class="comment">// 2009.08.20 ryoji</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//  Apr. 30, 2003 genta</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//  ディレクトリの深さを調べる</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4d/file_8h.html#a8a276c93e857de071ef4fa9cd3be663d">CalcDirectoryDepth</a>(<span class="keyword">const</span> WCHAR* path);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// 2005.11.26 aroka</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a7acd578b14f54e3bd9ee8ea7c7a76a48">IsLocalDrive</a>( <span class="keyword">const</span> WCHAR* pszDrive );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//※サクラ依存</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;FILE *<a class="code" href="../../d2/d4d/file_8h.html#a91bcfa17af61ad606e38bd7d22c8e0c2">_wfopen_absexe</a>(LPCWSTR fname, LPCWSTR mode); <span class="comment">// 2003.06.23 Moca</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;FILE *<a class="code" href="../../d2/d4d/file_8h.html#af399da19dd7cd0c7b7f293e73cd8fc89">_wfopen_absini</a>(LPCWSTR fname, LPCWSTR mode, BOOL bOrExedir = TRUE); <span class="comment">// 2007.05.19 ryoji</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//パス文字列処理</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> CutLastYenFromDirectoryPath( WCHAR* pszFolder );           <span class="comment">/* フォルダの最後が半角かつ&#39;\\&#39;の場合は、取り除く &quot;c:\\&quot;等のルートは取り除かない*/</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> AddLastYenFromDirectoryPath( WCHAR* pszFolder );           <span class="comment">/* フォルダの最後が半角かつ&#39;\\&#39;でない場合は、付加する */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> SplitPath_FolderAndFile( <span class="keyword">const</span> WCHAR* pszFilePath, WCHAR* pszFolder, WCHAR* pszFile ); <span class="comment">/* ファイルのフルパスを、フォルダとファイル名に分割 */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> Concat_FolderAndFile( <span class="keyword">const</span> WCHAR* pszDir, <span class="keyword">const</span> WCHAR* pszTitle, WCHAR* pszPath );<span class="comment">/* フォルダ、ファイル名から、結合したパスを作成 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;BOOL <a class="code" href="../../d2/d4d/file_8h.html#ae37119bd501eaec68b89fd1367ab2767">GetLongFileName</a>( <span class="keyword">const</span> WCHAR* pszFilePathSrc, WCHAR* pszFilePathDes );                 <span class="comment">/* ロングファイル名を取得する */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;BOOL CheckEXT( <span class="keyword">const</span> WCHAR* pszPath, <span class="keyword">const</span> WCHAR* pszExt );                 <span class="comment">/* 拡張子を調べる */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">const</span> WCHAR* <a class="code" href="../../d2/d4d/file_8h.html#a27fca3d6dfd4e01806432c112452cb05">GetFileTitlePointer</a>(<span class="keyword">const</span> WCHAR* pszPath);                         </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a9fc831e30b5763c919d773e8e759144b">_IS_REL_PATH</a>(<span class="keyword">const</span> WCHAR* path);                                           </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//※サクラ依存</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4d/file_8h.html#ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e">GetExedir</a>( LPWSTR pDir, LPCWSTR szFile = NULL );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4d/file_8h.html#a0f20033bf3d2720a107cb842c0103f1b">GetInidir</a>( LPWSTR pDir, LPCWSTR szFile = NULL ); <span class="comment">// 2007.05.19 ryoji</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4d/file_8h.html#a51b62d771dd888ef97e1c7f06f356a1c">GetInidirOrExedir</a>( LPWSTR pDir, LPCWSTR szFile = NULL, BOOL bRetExedirIfFileEmpty = FALSE ); <span class="comment">// 2007.05.22 ryoji</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;LPCWSTR <a class="code" href="../../d2/d4d/file_8h.html#a0c3d79176978bef917fdd3d8c51ab974">GetRelPath</a>( LPCWSTR pszPath );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//ファイル時刻</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d4/d39/class_c_file_time.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>(){ ClearFILETIME(); }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>(<span class="keyword">const</span> FILETIME&amp; ftime){ SetFILETIME(ftime); }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> ClearFILETIME(){ m_ftime.dwLowDateTime = m_ftime.dwHighDateTime = 0; m_bModified = <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> SetFILETIME(<span class="keyword">const</span> FILETIME&amp; ftime){ m_ftime = ftime; m_bModified = <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//取得</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> FILETIME&amp; GetFILETIME()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_ftime; }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> SYSTEMTIME&amp; GetSYSTEMTIME()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//キャッシュ更新 -&gt; m_systime, m_bModified</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span>(m_bModified){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            m_bModified = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            FILETIME ftimeLocal;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span>(!::FileTimeToLocalFileTime( &amp;m_ftime, &amp;ftimeLocal ) || !::FileTimeToSystemTime( &amp;ftimeLocal, &amp;m_systime )){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                memset(&amp;m_systime,0,<span class="keyword">sizeof</span>(m_systime)); <span class="comment">//失敗時ゼロクリア</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> m_systime;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> SYSTEMTIME* operator-&gt;()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> &amp;GetSYSTEMTIME(); }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//判定</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> IsZero()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> m_ftime.dwLowDateTime == 0 &amp;&amp; m_ftime.dwHighDateTime == 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    FILETIME m_ftime;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//キャッシュ</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">mutable</span> SYSTEMTIME  m_systime;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">mutable</span> <span class="keywordtype">bool</span>        m_bModified;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4d/file_8h.html#a38951ec9e35547f303632f385ca3fbe9">GetLastWriteTimestamp</a>( <span class="keyword">const</span> WCHAR* filename, <a class="code" href="../../d4/d39/class_c_file_time.html">CFileTime</a>* pcFileTime ); <span class="comment">//  Oct. 22, 2005 genta</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//文字列分割</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> my_splitpath ( <span class="keyword">const</span> <span class="keywordtype">char</span> *comln , <span class="keywordtype">char</span> *drv,<span class="keywordtype">char</span> *dir,<span class="keywordtype">char</span> *fnm,<span class="keywordtype">char</span> *ext );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> my_splitpath_w ( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *comln , <span class="keywordtype">wchar_t</span> *drv,<span class="keywordtype">wchar_t</span> *dir,<span class="keywordtype">wchar_t</span> *fnm,<span class="keywordtype">wchar_t</span> *ext );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> my_splitpath_t ( <span class="keyword">const</span> WCHAR *comln , WCHAR *drv,WCHAR *dir,WCHAR *fnm,WCHAR *ext );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define my_splitpath_t my_splitpath_w</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">int</span> FileMatchScoreSepExt( <span class="keyword">const</span> WCHAR *file1, <span class="keyword">const</span> WCHAR *file2 );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4d/file_8h.html#acd9a184fbed6e7ec54edc10aa5e4e5a7">GetStrTrancateWidth</a>( WCHAR* dest, <span class="keywordtype">int</span> nSize, <span class="keyword">const</span> WCHAR* path, HDC hDC, <span class="keywordtype">int</span> nPxWidth );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> GetShortViewPath(WCHAR* dest, <span class="keywordtype">int</span> nSize, <span class="keyword">const</span> WCHAR* path, HDC hDC, <span class="keywordtype">int</span> nPxWidth, <span class="keywordtype">bool</span> bFitMode );</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="afile_8h_html_a2bf60aba91c05cf3e7db2d87819ce4e0"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a2bf60aba91c05cf3e7db2d87819ce4e0">fexist</a></div><div class="ttdeci">bool fexist(LPCWSTR pszPath)</div><div class="ttdoc">ファイルまたはディレクトリが存在すればtrue</div><div class="ttdef"><b>Definition:</b> file.cpp:38</div></div>
+<div class="ttc" id="afile_8h_html_af399da19dd7cd0c7b7f293e73cd8fc89"><div class="ttname"><a href="../../d2/d4d/file_8h.html#af399da19dd7cd0c7b7f293e73cd8fc89">_wfopen_absini</a></div><div class="ttdeci">FILE * _wfopen_absini(LPCWSTR fname, LPCWSTR mode, BOOL bOrExedir=TRUE)</div><div class="ttdef"><b>Definition:</b> file.cpp:219</div></div>
+<div class="ttc" id="afile_8h_html_a91bcfa17af61ad606e38bd7d22c8e0c2"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a91bcfa17af61ad606e38bd7d22c8e0c2">_wfopen_absexe</a></div><div class="ttdeci">FILE * _wfopen_absexe(LPCWSTR fname, LPCWSTR mode)</div><div class="ttdef"><b>Definition:</b> file.cpp:205</div></div>
+<div class="ttc" id="afile_8h_html_a7acd578b14f54e3bd9ee8ea7c7a76a48"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a7acd578b14f54e3bd9ee8ea7c7a76a48">IsLocalDrive</a></div><div class="ttdeci">bool IsLocalDrive(const WCHAR *pszDrive)</div><div class="ttdef"><b>Definition:</b> file.cpp:162</div></div>
+<div class="ttc" id="afile_8h_html_a0f20033bf3d2720a107cb842c0103f1b"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a0f20033bf3d2720a107cb842c0103f1b">GetInidir</a></div><div class="ttdeci">void GetInidir(LPWSTR pDir, LPCWSTR szFile=NULL)</div><div class="ttdoc">INIファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す．</div><div class="ttdef"><b>Definition:</b> file.cpp:482</div></div>
+<div class="ttc" id="afile_8h_html_a27fca3d6dfd4e01806432c112452cb05"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a27fca3d6dfd4e01806432c112452cb05">GetFileTitlePointer</a></div><div class="ttdeci">const WCHAR * GetFileTitlePointer(const WCHAR *pszPath)</div><div class="ttdoc">ファイルフルパス内のファイル名を指すポインタを取得。2007.09.20 kobake 作成</div><div class="ttdef"><b>Definition:</b> file.cpp:182</div></div>
+<div class="ttc" id="afile_8h_html_a51b62d771dd888ef97e1c7f06f356a1c"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a51b62d771dd888ef97e1c7f06f356a1c">GetInidirOrExedir</a></div><div class="ttdeci">void GetInidirOrExedir(LPWSTR pDir, LPCWSTR szFile=NULL, BOOL bRetExedirIfFileEmpty=FALSE)</div><div class="ttdoc">INIファイルまたはEXEファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す（INIを優先）．</div><div class="ttdef"><b>Definition:</b> file.cpp:511</div></div>
+<div class="ttc" id="afile_8h_html_a2f28a17536f38511be48be84a97f1b33"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a2f28a17536f38511be48be84a97f1b33">IsDirectory</a></div><div class="ttdeci">bool IsDirectory(LPCWSTR pszPath)</div><div class="ttdef"><b>Definition:</b> file.cpp:610</div></div>
+<div class="ttc" id="afile_8h_html_ae37119bd501eaec68b89fd1367ab2767"><div class="ttname"><a href="../../d2/d4d/file_8h.html#ae37119bd501eaec68b89fd1367ab2767">GetLongFileName</a></div><div class="ttdeci">BOOL GetLongFileName(const WCHAR *pszFilePathSrc, WCHAR *pszFilePathDes)</div><div class="ttdef"><b>Definition:</b> file.cpp:346</div></div>
+<div class="ttc" id="afile_8h_html_ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e"><div class="ttname"><a href="../../d2/d4d/file_8h.html#ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e">GetExedir</a></div><div class="ttdeci">void GetExedir(LPWSTR pDir, LPCWSTR szFile=NULL)</div><div class="ttdoc">exeファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す．</div><div class="ttdef"><b>Definition:</b> file.cpp:455</div></div>
+<div class="ttc" id="afile_8h_html_a9fc831e30b5763c919d773e8e759144b"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a9fc831e30b5763c919d773e8e759144b">_IS_REL_PATH</a></div><div class="ttdeci">bool _IS_REL_PATH(const WCHAR *path)</div><div class="ttdoc">相対パスか判定する。2003.06.23 Moca</div><div class="ttdef"><b>Definition:</b> file.cpp:386</div></div>
+<div class="ttc" id="afile_8h_html_aa990fabcd51cae6cea561afae725fc72"><div class="ttname"><a href="../../d2/d4d/file_8h.html#aa990fabcd51cae6cea561afae725fc72">IsFilePath</a></div><div class="ttdeci">bool IsFilePath(const wchar_t *pLine, size_t *pnBgn, size_t *pnPathLen, bool bFileOnly=true)</div><div class="ttdef"><b>Definition:</b> file.cpp:60</div></div>
+<div class="ttc" id="afile_8h_html_a0c3d79176978bef917fdd3d8c51ab974"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a0c3d79176978bef917fdd3d8c51ab974">GetRelPath</a></div><div class="ttdeci">LPCWSTR GetRelPath(LPCWSTR pszPath)</div><div class="ttdoc">INIファイルまたはEXEファイルのあるディレクトリの相対パスを返す（INIを優先）．</div><div class="ttdef"><b>Definition:</b> file.cpp:553</div></div>
+<div class="ttc" id="afile_8h_html_acd9a184fbed6e7ec54edc10aa5e4e5a7"><div class="ttname"><a href="../../d2/d4d/file_8h.html#acd9a184fbed6e7ec54edc10aa5e4e5a7">GetStrTrancateWidth</a></div><div class="ttdeci">void GetStrTrancateWidth(WCHAR *dest, int nSize, const WCHAR *path, HDC hDC, int nPxWidth)</div><div class="ttdef"><b>Definition:</b> file.cpp:1072</div></div>
+<div class="ttc" id="afile_8h_html_a38951ec9e35547f303632f385ca3fbe9"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a38951ec9e35547f303632f385ca3fbe9">GetLastWriteTimestamp</a></div><div class="ttdeci">bool GetLastWriteTimestamp(const WCHAR *filename, CFileTime *pcFileTime)</div><div class="ttdef"><b>Definition:</b> file.cpp:625</div></div>
+<div class="ttc" id="afile_8h_html_a01bcf4e172facc265a4177c730c71289"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a01bcf4e172facc265a4177c730c71289">IsFileExists</a></div><div class="ttdeci">bool IsFileExists(const WCHAR *path, bool bFileOnly=false)</div><div class="ttdef"><b>Definition:</b> file.cpp:586</div></div>
+<div class="ttc" id="afile_8h_html_a8a276c93e857de071ef4fa9cd3be663d"><div class="ttname"><a href="../../d2/d4d/file_8h.html#a8a276c93e857de071ef4fa9cd3be663d">CalcDirectoryDepth</a></div><div class="ttdeci">int CalcDirectoryDepth(const WCHAR *path)</div><div class="ttdoc">ディレクトリの深さを計算する</div><div class="ttdef"><b>Definition:</b> file.cpp:406</div></div>
+<div class="ttc" id="aclass_c_file_time_html"><div class="ttname"><a href="../../d4/d39/class_c_file_time.html">CFileTime</a></div><div class="ttdef"><b>Definition:</b> file.h:63</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

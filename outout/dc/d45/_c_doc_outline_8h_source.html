@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/CDocOutline.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDocOutline.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d45/_c_doc_outline_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/d8e/struct_s_one_rule.html">SOneRule</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d9/df4/class_c_doc_outline.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/df4/class_c_doc_outline.html">CDocOutline</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d9/df4/class_c_doc_outline.html">CDocOutline</a>(<a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>* pcDoc) : m_pcDocRef(pcDoc) { }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a4df74b61be1e72ad42475f2355f91f62">MakeFuncList_C</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            <a class="code" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a>&amp; nOutlineType,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                            <span class="keyword">const</span> WCHAR* pszFileName,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                            <span class="keywordtype">bool</span> bVisibleMemberFunc = <span class="keyword">true</span> );                   </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a37d5de1028ac7e974c6193053d812bf2">MakeFuncList_PLSQL</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#aa3263d019f4b95a6faa3c04f993ea247">MakeTopicList_txt</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a067da59e19e5b1418cfab0662f12bd18">MakeFuncList_Java</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                   </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a6051124cfa8c2b09764f157259c3c669">MakeTopicList_cobol</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                 </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a72dac5bb3488651a85966c175436993b">MakeTopicList_asm</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#ad401e6229bd153312b2188aad1810303">MakeFuncList_Perl</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                   </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a0f0bd082abb226538220074c34236040">MakeFuncList_VisualBasic</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );            </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#aba9e39d641252755fe7ee4effa8cbe87">MakeFuncList_python</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                 </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a37adffcf2879a65cf4a42546c9a1b98c">MakeFuncList_Erlang</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                 </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#aed50dcfac7fbed9bd691b1c3091f7b43">MakeTopicList_wztxt</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr );                 </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a18a284e63f2a4846e2430991ead13445">MakeTopicList_html</a>(<a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr, <span class="keywordtype">bool</span> bXml);         </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#a6f9a71e21a5b8fa44f5e244878afd5f7">MakeTopicList_tex</a>(<a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr);                     </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#afc49e7aa2464510568f8a03eefbee1ef">MakeFuncList_RuleFile</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* pcFuncInfoArr,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                   std::wstring&amp; sTitleOverride );              </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d9/df4/class_c_doc_outline.html#ac4e53b23d5b862544e5471468416ed39">ReadRuleFile</a>( <span class="keyword">const</span> WCHAR* pszFilename, <a class="code" href="../../dc/d8e/struct_s_one_rule.html">SOneRule</a>* pcOneRule,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                          <span class="keywordtype">int</span> nMaxCount, <span class="keywordtype">bool</span>&amp; bRegex, std::wstring&amp; title );   </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="../../d9/df4/class_c_doc_outline.html#ae446e760f543a77ee459bca83efa9c61">MakeFuncList_BookMark</a>( <a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>* );                             </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>* m_pcDocRef;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_doc_outline_html_afc49e7aa2464510568f8a03eefbee1ef"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#afc49e7aa2464510568f8a03eefbee1ef">CDocOutline::MakeFuncList_RuleFile</a></div><div class="ttdeci">void MakeFuncList_RuleFile(CFuncInfoArr *pcFuncInfoArr, std::wstring &amp;sTitleOverride)</div><div class="ttdoc">ルールファイルを使ってリスト作成 2002.04.01 YAZAKI</div><div class="ttdef"><b>Definition:</b> CDocOutline.cpp:214</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html">CDocOutline</a></div><div class="ttdef"><b>Definition:</b> CDocOutline.h:31</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a37adffcf2879a65cf4a42546c9a1b98c"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a37adffcf2879a65cf4a42546c9a1b98c">CDocOutline::MakeFuncList_Erlang</a></div><div class="ttdeci">void MakeFuncList_Erlang(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">Erlang アウトライン解析 // 2009.08.10 genta</div><div class="ttdef"><b>Definition:</b> CType_Erlang.cpp:419</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_aed50dcfac7fbed9bd691b1c3091f7b43"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#aed50dcfac7fbed9bd691b1c3091f7b43">CDocOutline::MakeTopicList_wztxt</a></div><div class="ttdeci">void MakeTopicList_wztxt(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">階層付きテキスト アウトライン解析 // 2003.05.20 zenryaku</div><div class="ttdef"><b>Definition:</b> CType_Text.cpp:247</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div><div class="ttdef"><b>Definition:</b> CEditDoc.h:77</div></div>
+<div class="ttc" id="astruct_s_one_rule_html"><div class="ttname"><a href="../../dc/d8e/struct_s_one_rule.html">SOneRule</a></div><div class="ttdef"><b>Definition:</b> CDocOutline.cpp:37</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_ac4e53b23d5b862544e5471468416ed39"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#ac4e53b23d5b862544e5471468416ed39">CDocOutline::ReadRuleFile</a></div><div class="ttdeci">int ReadRuleFile(const WCHAR *pszFilename, SOneRule *pcOneRule, int nMaxCount, bool &amp;bRegex, std::wstring &amp;title)</div><div class="ttdoc">ルールファイル読込 2002.04.01 YAZAKI</div><div class="ttdef"><b>Definition:</b> CDocOutline.cpp:54</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_ad401e6229bd153312b2188aad1810303"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#ad401e6229bd153312b2188aad1810303">CDocOutline::MakeFuncList_Perl</a></div><div class="ttdeci">void MakeFuncList_Perl(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">Perl関数リスト作成 // Sep. 8, 2000 genta</div><div class="ttdef"><b>Definition:</b> CType_Perl.cpp:68</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_ae446e760f543a77ee459bca83efa9c61"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#ae446e760f543a77ee459bca83efa9c61">CDocOutline::MakeFuncList_BookMark</a></div><div class="ttdeci">void MakeFuncList_BookMark(CFuncInfoArr *)</div><div class="ttdoc">ブックマークリスト作成 //2001.12.03 hor</div><div class="ttdef"><b>Definition:</b> CDocOutline.cpp:432</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_aba9e39d641252755fe7ee4effa8cbe87"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#aba9e39d641252755fe7ee4effa8cbe87">CDocOutline::MakeFuncList_python</a></div><div class="ttdeci">void MakeFuncList_python(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">Python アウトライン解析 // 2007.02.08 genta</div><div class="ttdef"><b>Definition:</b> CType_Python.cpp:399</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a6f9a71e21a5b8fa44f5e244878afd5f7"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a6f9a71e21a5b8fa44f5e244878afd5f7">CDocOutline::MakeTopicList_tex</a></div><div class="ttdeci">void MakeTopicList_tex(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">TeX アウトライン解析 // 2003.07.20 naoh</div><div class="ttdef"><b>Definition:</b> CType_Tex.cpp:269</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a6051124cfa8c2b09764f157259c3c669"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a6051124cfa8c2b09764f157259c3c669">CDocOutline::MakeTopicList_cobol</a></div><div class="ttdeci">void MakeTopicList_cobol(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">COBOL アウトライン解析</div><div class="ttdef"><b>Definition:</b> CType_Cobol.cpp:57</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a4df74b61be1e72ad42475f2355f91f62"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a4df74b61be1e72ad42475f2355f91f62">CDocOutline::MakeFuncList_C</a></div><div class="ttdeci">void MakeFuncList_C(CFuncInfoArr *pcFuncInfoArr, EOutlineType &amp;nOutlineType, const WCHAR *pszFileName, bool bVisibleMemberFunc=true)</div><div class="ttdoc">C/C++関数リスト作成</div><div class="ttdef"><b>Definition:</b> CType_Cpp.cpp:366</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a067da59e19e5b1418cfab0662f12bd18"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a067da59e19e5b1418cfab0662f12bd18">CDocOutline::MakeFuncList_Java</a></div><div class="ttdeci">void MakeFuncList_Java(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">Java関数リスト作成</div><div class="ttdef"><b>Definition:</b> CType_Java.cpp:64</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a18a284e63f2a4846e2430991ead13445"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a18a284e63f2a4846e2430991ead13445">CDocOutline::MakeTopicList_html</a></div><div class="ttdeci">void MakeTopicList_html(CFuncInfoArr *pcFuncInfoArr, bool bXml)</div><div class="ttdoc">HTML アウトライン解析 // 2003.05.20 zenryaku</div><div class="ttdef"><b>Definition:</b> CType_Html.cpp:62</div></div>
+<div class="ttc" id="a_c_type_8h_html_a16b5e596b70273cca152f2094e721e37"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a></div><div class="ttdeci">EOutlineType</div><div class="ttdoc">アウトライン解析の種類</div><div class="ttdef"><b>Definition:</b> CType.h:43</div></div>
+<div class="ttc" id="aclass_c_func_info_arr_html"><div class="ttname"><a href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a></div><div class="ttdoc">アウトライン解析 データ配列</div><div class="ttdef"><b>Definition:</b> CFuncInfoArr.h:36</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a72dac5bb3488651a85966c175436993b"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a72dac5bb3488651a85966c175436993b">CDocOutline::MakeTopicList_asm</a></div><div class="ttdeci">void MakeTopicList_asm(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">アセンブラ アウトライン解析</div><div class="ttdef"><b>Definition:</b> CType_Asm.cpp:54</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a37d5de1028ac7e974c6193053d812bf2"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a37d5de1028ac7e974c6193053d812bf2">CDocOutline::MakeFuncList_PLSQL</a></div><div class="ttdeci">void MakeFuncList_PLSQL(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">PL/SQL関数リスト作成</div><div class="ttdef"><b>Definition:</b> CType_Sql.cpp:50</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_a0f0bd082abb226538220074c34236040"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#a0f0bd082abb226538220074c34236040">CDocOutline::MakeFuncList_VisualBasic</a></div><div class="ttdeci">void MakeFuncList_VisualBasic(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">Visual Basic関数リスト作成 //June 23, 2001 N.Nakatani</div><div class="ttdef"><b>Definition:</b> CType_Vb.cpp:67</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html_aa3263d019f4b95a6faa3c04f993ea247"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html#aa3263d019f4b95a6faa3c04f993ea247">CDocOutline::MakeTopicList_txt</a></div><div class="ttdeci">void MakeTopicList_txt(CFuncInfoArr *pcFuncInfoArr)</div><div class="ttdoc">テキスト・トピックリスト作成</div><div class="ttdef"><b>Definition:</b> CType_Text.cpp:91</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDiffLineGetter クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../de/d91/class_c_diff_line_getter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDiffLineGetter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>行のDIFF情報取得  
+ <a href="../../d9/d58/class_c_diff_line_getter.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/dc1/_c_diff_manager_8h_source.html">CDiffManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2659e20ddc66e359f8bd8a544fc44ff6"><td class="memItemLeft" align="right" valign="top"><a id="a2659e20ddc66e359f8bd8a544fc44ff6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CDiffLineGetter</b> (const <a class="el" href="../../d9/d35/class_c_doc_line.html">CDocLine</a> *pcDocLine)</td></tr>
+<tr class="separator:a2659e20ddc66e359f8bd8a544fc44ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d4f66d434fe8322165b4670e4892db"><td class="memItemLeft" align="right" valign="top"><a id="ae3d4f66d434fe8322165b4670e4892db"></a>
+<a class="el" href="../../d6/dc1/_c_diff_manager_8h.html#a77508d642bc12ac21a60f9ba76043445">EDiffMark</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetLineDiffMark</b> () const</td></tr>
+<tr class="separator:ae3d4f66d434fe8322165b4670e4892db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e18b5cf8f2d5910509235a0143c35b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d58/class_c_diff_line_getter.html#a34e18b5cf8f2d5910509235a0143c35b">GetDiffColor</a> (<a class="el" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> *nColor) const</td></tr>
+<tr class="separator:a34e18b5cf8f2d5910509235a0143c35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad614d401968f56839a24289c65bab0e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d58/class_c_diff_line_getter.html#ad614d401968f56839a24289c65bab0e5">DrawDiffMark</a> (<a class="el" href="../../dc/d90/class_c_graphics.html">CGraphics</a> &amp;gr, int y, int nLineHeight, COLORREF color) const</td></tr>
+<tr class="separator:ad614d401968f56839a24289c65bab0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>行のDIFF情報取得 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ad614d401968f56839a24289c65bab0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad614d401968f56839a24289c65bab0e5">&#9670;&nbsp;</a></span>DrawDiffMark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDiffLineGetter::DrawDiffMark </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d90/class_c_graphics.html">CGraphics</a> &amp;&#160;</td>
+          <td class="paramname"><em>gr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DIFFマーク描画</p>
+<p>引数は仮。（無駄な引数ありそう） </p>
+
+</div>
+</div>
+<a id="a34e18b5cf8f2d5910509235a0143c35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e18b5cf8f2d5910509235a0143c35b">&#9670;&nbsp;</a></span>GetDiffColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDiffLineGetter::GetDiffColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> *&#160;</td>
+          <td class="paramname"><em>pnColorIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>行の差分マークに対応した色を返す -&gt; pnColorIndex</p>
+<p>色設定が無い場合は pnColorIndex を変更せずに false を返す。 <br  />
+</p>
+<dl class="section note"><dt>覚え書き</dt><dd>テスト </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/docplus/<a class="el" href="../../d6/dc1/_c_diff_manager_8h_source.html">CDiffManager.h</a></li>
+<li>sakura_core/docplus/<a class="el" href="../../d0/d9b/_c_diff_manager_8cpp.html">CDiffManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

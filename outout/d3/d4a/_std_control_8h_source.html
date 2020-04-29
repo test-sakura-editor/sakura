@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/apiwrap/StdControl.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_91e391275ce155d63b5eb01c4bf28a00.html">apiwrap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StdControl.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d4a/_std_control_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2007, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">2007.09.17 kobake</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">内部コードがWCHARなので、検索キーワードなどもWCHARで保持する。</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">そのため、検索ダイアログのコンボボックスなどに、WCHARを設定する場面が出てくる。</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">UNICODE版では問題無いが、ANSI版では設定の前にコード変換する必要がある。</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">呼び出し側で変換しても良いが、頻度が多いので、WCHARを直接受け取るAPIラップ関数を提供する。</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">また、SendMessageの直接呼び出しは、どうしてもWPARAM,LPARAMへの強制キャストが生じるため、</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">コンパイラの型チェックが働かず、wchar_t, charの混在するソースコードの中ではバグの温床になりやすい。</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">そういった意味でも、このファイル内のラップ関数を使うことを推奨する。</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;Commctrl.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d38/_c_native_w_8h.html">mem/CNativeW.h</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>ApiWrap{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//                      ウィンドウ共通                         //</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">inline</span> BOOL Wnd_SetText(HWND hwnd, <span class="keyword">const</span> WCHAR* str)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> SetWindowText(hwnd, str);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d3/d4a/_std_control_8h.html#acc7ad11faacb67ee75b1faa8b272f8bf">   59</a></span>&#160;    <span class="keyword">inline</span> BOOL Wnd_SetText(HWND hwnd, <span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; str)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> SetWindowText(hwnd, str.GetStringPtr());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d3/d4a/_std_control_8h.html#a2bd07f162fec2dcac649c82dcd9c0477">   71</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d4a/_std_control_8h.html#a2bd07f162fec2dcac649c82dcd9c0477">Wnd_GetText</a>(HWND hwnd, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; str)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// バッファをクリアしておく</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        str.<a class="code" href="../../d7/d74/class_c_native.html#ab67beb7cbd321a298aae88b02a0671eb">Clear</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// GetWindowTextLength() はウィンドウテキスト取得に必要なバッファサイズを返す。</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// 条件によっては必要なサイズより大きな値を返すことがある模様</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">// https://docs.microsoft.com/en-us/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> length = ::GetWindowTextLength(hwnd);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (length &lt; 0)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">// ドキュメントには失敗した場合、あるいはテキストが空の場合には 0 を返すとある。</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// 0 の場合はエラーかどうか判断できないのでテキストの取得処理を続行する。</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">// 仕様上は負の場合はありえないが、念の為エラーチェックしておく。</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// ドキュメントには NULL 文字に関して言及がないので念の為 +1 しておく</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> bufsize = length + 1;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// ウィンドウタイトルを設定するのに必要なバッファを確保する</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (str.capacity() &lt; bufsize)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            str.<a class="code" href="../../d5/d86/class_c_native_w.html#a7187ca39754901cd5e32e49d2ad54e1e">AllocStringBuffer</a>(bufsize);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">int</span> actualCount = ::GetWindowText(hwnd, str.GetStringPtr(), str.capacity());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (actualCount &lt; 0)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">// 仕様上は負の場合はありえないが、念の為エラーチェックしておく。</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (actualCount == 0)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">// GetWindowText はエラーの場合、またはテキストが空の場合は 0 を返す</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (GetLastError() != 0)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(actualCount &gt;= str.capacity())</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// GetWindowText() の仕様上はありえないはず</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">// Win32 API の GetWindowText() を呼んだだけでは CNativeW 内部の</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// データサイズが更新されないのでデータサイズを反映する</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        str._SetStringLength(actualCount);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// 正しく設定されているはず</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        assert(str.<a class="code" href="../../d5/d86/class_c_native_w.html#af5c3013ef8a4d729bfae780ae3afaa44">GetStringLength</a>() == actualCount);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//                      コンボボックス                         //</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">inline</span> LRESULT Combo_AddString(HWND hwndCombo, <span class="keyword">const</span> WCHAR* str)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        return ::SendMessage( hwndCombo, CB_ADDSTRING, 0, LPARAM(str) );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">inline</span> LRESULT Combo_GetLBText(HWND hwndCombo, <span class="keywordtype">int</span> nIndex, WCHAR* str)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        return ::SendMessage( hwndCombo, CB_GETLBTEXT, nIndex, LPARAM(str) );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">inline</span> LRESULT Combo_GetText(HWND hwndCombo, WCHAR* str, <span class="keywordtype">int</span> cchMax)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        return ::GetWindowText( hwndCombo, str, cchMax );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_DeleteString(HWND hwndCtl, <span class="keywordtype">int</span> index)              { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_DELETESTRING, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_FindStringExact(HWND hwndCtl, <span class="keywordtype">int</span> indexStart, <span class="keyword">const</span> WCHAR* lpszFind)   { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_FINDSTRINGEXACT, (WPARAM)indexStart, LPARAM(lpszFind) ); }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_GetCount(HWND hwndCtl)                             { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_GETCOUNT, 0L, 0L); }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_GetCurSel(HWND hwndCtl)                            { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_GETCURSEL, 0L, 0L); }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetCurSel(HWND hwndCtl, <span class="keywordtype">int</span> index)                 { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETCURSEL, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">inline</span> LRESULT Combo_GetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index)           { <span class="keywordflow">return</span> ((LRESULT)(ULONG_PTR)::SendMessage(hwndCtl, CB_GETITEMDATA, (WPARAM)index, 0L)); }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> data)     { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETITEMDATA, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">void</span>* data)   { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETITEMDATA, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_GetLBTextLen(HWND hwndCtl, <span class="keywordtype">int</span> index)              { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_GETLBTEXTLEN, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_InsertString(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keyword">const</span> WCHAR* lpsz)   { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_INSERTSTRING, (WPARAM)index, LPARAM(lpsz) ); }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_LimitText(HWND hwndCtl, <span class="keywordtype">int</span> cchLimit)              { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_LIMITTEXT, (WPARAM)cchLimit, 0L); }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_ResetContent(HWND hwndCtl)                         { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_RESETCONTENT, 0L, 0L); }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetEditSel(HWND hwndCtl, <span class="keywordtype">int</span> ichStart, <span class="keywordtype">int</span> ichEnd) { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETEDITSEL, 0L, MAKELPARAM(ichStart, ichEnd)); }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetExtendedUI(HWND hwndCtl, UINT flags)            { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETEXTENDEDUI, (WPARAM)flags, 0L); }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">inline</span> BOOL Combo_ShowDropdown(HWND hwndCtl, BOOL fShow)            { <span class="keywordflow">return</span> (BOOL)(DWORD)::SendMessage(hwndCtl, CB_SHOWDROPDOWN, (WPARAM)fShow, 0L); }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> Combo_SetDroppedWidth(HWND hwndCtl, <span class="keywordtype">int</span> width)           { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, CB_SETDROPPEDWIDTH, (WPARAM)width, 0L); }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">inline</span> BOOL Combo_GetDroppedState(HWND hwndCtl)                     { <span class="keywordflow">return</span> (BOOL)(DWORD)::SendMessage(hwndCtl, CB_GETDROPPEDSTATE, 0L, 0L ); }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//                      リストボックス                         //</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    LRESULT List_GetText(HWND hwndList, <span class="keywordtype">int</span> nIndex, WCHAR* pszText, <span class="keywordtype">size_t</span> cchText);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> cchText&gt;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    LRESULT List_GetText(HWND hwndList, <span class="keywordtype">int</span> nIndex, WCHAR(&amp;pszText)[cchText]) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> List_GetText(hwndList, nIndex, pszText, cchText);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">inline</span> LRESULT List_AddString(HWND hwndList, <span class="keyword">const</span> WCHAR* str)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        return ::SendMessage( hwndList, LB_ADDSTRING, 0, LPARAM(str) );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_AddItemData(HWND hwndCtl, <span class="keywordtype">int</span> data)                 { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_ADDSTRING, 0L, (LPARAM)data); }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_AddItemData(HWND hwndCtl, <span class="keywordtype">void</span>* data)               { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_ADDSTRING, 0L, (LPARAM)data); }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_DeleteString(HWND hwndCtl, <span class="keywordtype">int</span> index)               { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_DELETESTRING, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_FindStringExact(HWND hwndCtl, <span class="keywordtype">int</span> indexStart, WCHAR* lpszFind)  { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage( hwndCtl, LB_FINDSTRINGEXACT, WPARAM(indexStart), LPARAM(lpszFind) ); }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetCaretIndex(HWND hwndCtl)                         { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETCARETINDEX, 0L, 0L); }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetCount(HWND hwndCtl)                              { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETCOUNT, 0L, 0L); }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetCurSel(HWND hwndCtl)                             { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETCURSEL, 0L, 0L); }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetTextLen(HWND hwndCtl, <span class="keywordtype">int</span> nIndex)                { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETTEXTLEN, nIndex, 0L); }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_SetCurSel(HWND hwndCtl, <span class="keywordtype">int</span> index)                  { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_SETCURSEL, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">inline</span> LRESULT List_GetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index)            { <span class="keywordflow">return</span> (LRESULT)(ULONG_PTR)::SendMessage(hwndCtl, LB_GETITEMDATA, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_SetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> data)      { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_SETITEMDATA, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_SetItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">void</span>* data)    { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_SETITEMDATA, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetItemRect(HWND hwndCtl, <span class="keywordtype">int</span> index, RECT* lprc)    { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETITEMRECT, (WPARAM)index, (LPARAM)lprc); }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetTopIndex(HWND hwndCtl)                           { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETTOPINDEX, 0L, 0L); }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_InsertItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> data)   { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_INSERTSTRING, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_InsertItemData(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">void</span>* data) { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_INSERTSTRING, (WPARAM)index, (LPARAM)data); }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_InsertString(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keyword">const</span> WCHAR* lpsz)    { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_INSERTSTRING, (WPARAM)index, LPARAM(lpsz)); }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">inline</span> BOOL List_ResetContent(HWND hwndCtl)                         { <span class="keywordflow">return</span> (BOOL)(DWORD)::SendMessage(hwndCtl, LB_RESETCONTENT, 0L, 0L); }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> List_SetHorizontalExtent(HWND hwndCtl, <span class="keywordtype">int</span> cxExtent)    { ::SendMessage(hwndCtl, LB_SETHORIZONTALEXTENT, (WPARAM)cxExtent, 0L); }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_GetItemHeight(HWND hwndCtl, <span class="keywordtype">int</span> index)              { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_GETITEMHEIGHT, (WPARAM)index, 0L); }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_SetItemHeight(HWND hwndCtl, <span class="keywordtype">int</span> index, <span class="keywordtype">int</span> cy)      { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_SETITEMHEIGHT, (WPARAM)index, MAKELPARAM(cy, 0)); }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> List_SetTopIndex(HWND hwndCtl, <span class="keywordtype">int</span> indexTop)             { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, LB_SETTOPINDEX, (WPARAM)indexTop, 0L); }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">//                      エディット コントロール                //</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> EditCtl_LimitText(HWND hwndCtl, <span class="keywordtype">int</span> cchLimit)           { ::SendMessage(hwndCtl, EM_LIMITTEXT, (WPARAM)(cchLimit), 0L); }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> EditCtl_SetSel(HWND hwndCtl, <span class="keywordtype">int</span> ichStart, <span class="keywordtype">int</span> ichEnd)  { ::SendMessage(hwndCtl, EM_SETSEL, ichStart, ichEnd); }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> EditCtl_ReplaceSel(HWND hwndCtl, <span class="keyword">const</span> WCHAR* lpsz)     { ::SendMessage(hwndCtl, EM_REPLACESEL, 0, LPARAM(lpsz)); }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//                      ボタン コントロール                    //</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> BtnCtl_GetCheck(HWND hwndCtl)                            { <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(DWORD)::SendMessage(hwndCtl, BM_GETCHECK, 0L, 0L); }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> BtnCtl_SetCheck(HWND hwndCtl, <span class="keywordtype">int</span> check)                { ::SendMessage(hwndCtl, BM_SETCHECK, (WPARAM)check, 0L); }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">//                      スタティック コントロール              //</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">inline</span> HICON StCtl_SetIcon(HWND hwndCtl, HICON hIcon)               { <span class="keywordflow">return</span> (HICON)(UINT_PTR)::SendMessage(hwndCtl, STM_SETICON, (WPARAM)hIcon, 0L); }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">//                      スタティック コントロール              //</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> TrackBarCtl_SetRange(HWND hwndCtl, BOOL bRedraw, WORD minimum, WORD maximum)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        ::SendMessage(hwndCtl, TBM_SETRANGE, (WPARAM)bRedraw, (LPARAM)MAKELONG(minimum, maximum));</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> TrackBarCtl_SetPos(HWND hwndCtl, BOOL bRedraw, LPARAM pos)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        ::SendMessage(hwndCtl, TBM_SETPOS, (WPARAM)bRedraw, pos);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">inline</span> LRESULT TrackBarCtl_GetPos(HWND hwndCtl)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        return ::SendMessage(hwndCtl, TBM_GETPOS, (WPARAM)0, (LPARAM)0);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">//                       ダイアログ内                          //</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">inline</span> BOOL DlgItem_SetText(HWND hwndDlg, <span class="keywordtype">int</span> nIDDlgItem, <span class="keyword">const</span> WCHAR* str)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> SetDlgItemText(hwndDlg, nIDDlgItem, str);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    UINT DlgItem_GetText(HWND hwndDlg, <span class="keywordtype">int</span> nIDDlgItem, WCHAR* pszText, <span class="keywordtype">int</span> nMaxCount);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">bool</span> TreeView_GetItemTextVector(HWND hwndTree, TVITEM&amp; item, std::vector&lt;WCHAR&gt;&amp; vecStr);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> TreeView_ExpandAll( HWND, <span class="keywordtype">bool</span>, <span class="keywordtype">int</span> nMaxDepth = 100 );</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keyword">using namespace </span>ApiWrap;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_native_html_ab67beb7cbd321a298aae88b02a0671eb"><div class="ttname"><a href="../../d7/d74/class_c_native.html#ab67beb7cbd321a298aae88b02a0671eb">CNative::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">空っぽにする</div><div class="ttdef"><b>Definition:</b> CNative.cpp:6</div></div>
+<div class="ttc" id="a_c_native_w_8h_html"><div class="ttname"><a href="../../d8/d38/_c_native_w_8h.html">CNativeW.h</a></div></div>
+<div class="ttc" id="aclass_c_native_w_html_af5c3013ef8a4d729bfae780ae3afaa44"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html#af5c3013ef8a4d729bfae780ae3afaa44">CNativeW::GetStringLength</a></div><div class="ttdeci">CLogicInt GetStringLength() const</div><div class="ttdoc">&lt; 文字列長を返す。文字単位。</div><div class="ttdef"><b>Definition:</b> CNativeW.h:108</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="a_std_control_8h_html_a2bd07f162fec2dcac649c82dcd9c0477"><div class="ttname"><a href="../../d3/d4a/_std_control_8h.html#a2bd07f162fec2dcac649c82dcd9c0477">ApiWrap::Wnd_GetText</a></div><div class="ttdeci">bool Wnd_GetText(HWND hwnd, CNativeW &amp;str)</div><div class="ttdoc">Window テキストを取得する</div><div class="ttdef"><b>Definition:</b> StdControl.h:71</div></div>
+<div class="ttc" id="aclass_c_native_w_html_a7187ca39754901cd5e32e49d2ad54e1e"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html#a7187ca39754901cd5e32e49d2ad54e1e">CNativeW::AllocStringBuffer</a></div><div class="ttdeci">void AllocStringBuffer(int nDataLen)</div><div class="ttdoc">(重要：nDataLenは文字単位) バッファサイズの調整。必要に応じて拡大する。</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:69</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

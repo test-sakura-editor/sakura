@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/_main/CControlTray.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_e3eabb1034bf36573937be9d2ebf3dc3.html">_main</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CControlTray.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>常駐部  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;HtmlHelp.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d0e/_c_control_tray_8h_source.html">CControlTray.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d90/_c_property_manager_8h_source.html">CPropertyManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dec/_c_dlg_type_list_8h_source.html">typeprop/CDlgTypeList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d6f/_c_running_timer_8h_source.html">debug/CRunningTimer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">dlg/CDlgOpenFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dc1/_c_dlg_about_8h_source.html">dlg/CDlgAbout.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/dfa/_c_dlg_window_list_8h_source.html">dlg/CDlgWindowList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/de4/_c_plugin_manager_8h_source.html">plugin/CPluginManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df2/_c_jack_manager_8h_source.html">plugin/CJackManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d9f/_c_text_stream_8h_source.html">io/CTextStream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/da9/string__ex2_8h_source.html">util/string_ex2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dc4/_c_share_data___i_o_8h_source.html">env/CShareData_IO.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de2/_c_sakura_environment_8h_source.html">env/CSakuraEnvironment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/deb/_c_help_manager_8h_source.html">env/CHelpManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">doc/CDocListener.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d3e/_c_m_r_u_file_8h_source.html">recent/CMRUFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/de9/_c_m_r_u_folder_8h_source.html">recent/CMRUFolder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d0c/_c_command_line_8h_source.html">_main/CCommandLine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/ddb/_c_grep_enum_keys_8h_source.html">CGrepEnumKeys.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a048938b02101896934ae3c12994fe108"><td class="memItemLeft" align="right" valign="top"><a id="a048938b02101896934ae3c12994fe108"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ID_HOTKEY_TRAYMENU</b>&#160;&#160;&#160;0x1234</td></tr>
+<tr class="separator:a048938b02101896934ae3c12994fe108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03e93e13c7912e2efc0be7d83478576"><td class="memItemLeft" align="right" valign="top"><a id="aa03e93e13c7912e2efc0be7d83478576"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IDT_EDITCHECK</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:aa03e93e13c7912e2efc0be7d83478576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792cfc39ea1d75aa69bdf89375d0436a"><td class="memItemLeft" align="right" valign="top"><a id="a792cfc39ea1d75aa69bdf89375d0436a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IDT_EDITCHECK_INTERVAL</b>&#160;&#160;&#160;3000</td></tr>
+<tr class="separator:a792cfc39ea1d75aa69bdf89375d0436a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>常駐部 </p>
+<p>タスクトレイアイコンの管理，タスクトレイメニューのアクション， MRU、キー割り当て、共通設定、編集ウィンドウの管理など</p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/05/13 新規作成 </dd>
+<dd>
+2001/06/03 N.Nakatani grep単語単位で検索を実装するときのためにコマンドラインオプションの処理追加 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

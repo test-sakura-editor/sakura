@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgAbout.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgAbout.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>バージョン情報ダイアログ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;ShellAPI.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/dc1/_c_dlg_about_8h_source.html">dlg/CDlgAbout.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/de5/_hand_cursor_8h_source.html">uiparts/HandCursor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dfc/version_8h_source.html">version.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a7438918dab9bc2879a2f33abfb7711b5"><td class="memItemLeft" align="right" valign="top"><a id="a7438918dab9bc2879a2f33abfb7711b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TARGET_M_SUFFIX</b>&#160;&#160;&#160;&quot;&quot;</td></tr>
+<tr class="separator:a7438918dab9bc2879a2f33abfb7711b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f025293c87269c7ef7fabebecfc00fd"><td class="memItemLeft" align="right" valign="top"><a id="a6f025293c87269c7ef7fabebecfc00fd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_TYPE</b>&#160;&#160;&#160;&quot;U&quot;</td></tr>
+<tr class="separator:a6f025293c87269c7ef7fabebecfc00fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad217164d6e7dc9e8724ce4283d06d70b"><td class="memItemLeft" align="right" valign="top"><a id="ad217164d6e7dc9e8724ce4283d06d70b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_VER</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ad217164d6e7dc9e8724ce4283d06d70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee171ee6e9eccc81de4f43622f8ab86"><td class="memItemLeft" align="right" valign="top"><a id="a8ee171ee6e9eccc81de4f43622f8ab86"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TARGET_STRING_MODEL</b>&#160;&#160;&#160;&quot;WP&quot;</td></tr>
+<tr class="separator:a8ee171ee6e9eccc81de4f43622f8ab86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd4e1c9a47d3b176e0a7277e703d8b0"><td class="memItemLeft" align="right" valign="top"><a id="adcd4e1c9a47d3b176e0a7277e703d8b0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TARGET_DEBUG_MODE</b>&#160;&#160;&#160;&quot;R&quot;</td></tr>
+<tr class="separator:adcd4e1c9a47d3b176e0a7277e703d8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae058058d123d60aedab599bba1d89b03"><td class="memItemLeft" align="right" valign="top"><a id="ae058058d123d60aedab599bba1d89b03"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TSTR_TARGET_MODE</b>&#160;&#160;&#160;_T(TARGET_STRING_MODEL) _T(TARGET_DEBUG_MODE)</td></tr>
+<tr class="separator:ae058058d123d60aedab599bba1d89b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcaea45e8463c338e791699d1dbb75c"><td class="memItemLeft" align="right" valign="top"><a id="a8dcaea45e8463c338e791699d1dbb75c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MY_WIN32_WINDOWS</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a8dcaea45e8463c338e791699d1dbb75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053a944f07fc00bcc8e1543325300d67"><td class="memItemLeft" align="right" valign="top"><a id="a053a944f07fc00bcc8e1543325300d67"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MY_WIN32_WINNT</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a053a944f07fc00bcc8e1543325300d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a5d66618e7370973c97222087e2687c7e"><td class="memItemLeft" align="right" valign="top">const DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>p_helpids</b> []</td></tr>
+<tr class="separator:a5d66618e7370973c97222087e2687c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>バージョン情報ダイアログ </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/3/13 作成 </dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="a5d66618e7370973c97222087e2687c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d66618e7370973c97222087e2687c7e">&#9670;&nbsp;</a></span>p_helpids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DWORD p_helpids[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    IDOK,                   HIDOK_ABOUT,</div>
+<div class="line">    IDC_EDIT_ABOUT,         HIDC_ABOUT_EDIT_ABOUT,</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    0, 0</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

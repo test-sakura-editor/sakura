@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CTagJumpManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../dc/d18/class_c_tag_jump_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CTagJumpManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a591e980165e7ed534024b6361c2108c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d03/class_c_tag_jump_manager.html#a591e980165e7ed534024b6361c2108c5">PushTagJump</a> (const <a class="el" href="../../d1/d7e/struct_tag_jump.html">TagJump</a> *pTagJump)</td></tr>
+<tr class="memdesc:a591e980165e7ed534024b6361c2108c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグジャンプ情報の保存  <a href="../../d1/d03/class_c_tag_jump_manager.html#a591e980165e7ed534024b6361c2108c5">[詳解]</a><br /></td></tr>
+<tr class="separator:a591e980165e7ed534024b6361c2108c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1e37c5e6cb512675a9bd6c2bb45bb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d03/class_c_tag_jump_manager.html#a7c1e37c5e6cb512675a9bd6c2bb45bb8">PopTagJump</a> (<a class="el" href="../../d1/d7e/struct_tag_jump.html">TagJump</a> *pTagJump)</td></tr>
+<tr class="memdesc:a7c1e37c5e6cb512675a9bd6c2bb45bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">タグジャンプ情報の参照  <a href="../../d1/d03/class_c_tag_jump_manager.html#a7c1e37c5e6cb512675a9bd6c2bb45bb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c1e37c5e6cb512675a9bd6c2bb45bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7c1e37c5e6cb512675a9bd6c2bb45bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1e37c5e6cb512675a9bd6c2bb45bb8">&#9670;&nbsp;</a></span>PopTagJump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CTagJumpManager::PopTagJump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d7e/struct_tag_jump.html">TagJump</a> *&#160;</td>
+          <td class="paramname"><em>pTagJump</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タグジャンプ情報の参照 </p>
+<p>タグジャンプバックするときに、タグジャンプ元の情報を参照する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pTagJump</td><td>参照するタグジャンプ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>参照成功 </td></tr>
+    <tr><td class="paramname">false</td><td>参照失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2004/06/21 新規作成 </dd>
+<dd>
+2004/06/22 Moca SetTagJump変更による修正 </dd></dl>
+
+</div>
+</div>
+<a id="a591e980165e7ed534024b6361c2108c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591e980165e7ed534024b6361c2108c5">&#9670;&nbsp;</a></span>PushTagJump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTagJumpManager::PushTagJump </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d7e/struct_tag_jump.html">TagJump</a> *&#160;</td>
+          <td class="paramname"><em>pTagJump</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タグジャンプ情報の保存 </p>
+<p>タグジャンプするときに、タグジャンプ先の情報を保存する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pTagJump</td><td>保存するタグジャンプ情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>保存成功 </td></tr>
+    <tr><td class="paramname">false</td><td>保存失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2004/06/21 新規作成 </dd>
+<dd>
+2004/06/22 Moca 一杯になったら一番古い情報を削除しそこに新しい情報を入れる </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/env/<a class="el" href="../../d7/dee/_c_tag_jump_manager_8h_source.html">CTagJumpManager.h</a></li>
+<li>sakura_core/env/<a class="el" href="../../d4/db4/_c_tag_jump_manager_8cpp.html">CTagJumpManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

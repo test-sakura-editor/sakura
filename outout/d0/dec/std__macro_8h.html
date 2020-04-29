@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/std_macro.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">std_macro.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d0/dec/std__macro_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a9bbcd82e77c41df827c09759def05c9a"><td class="memItemLeft" align="right" valign="top"><a id="a9bbcd82e77c41df827c09759def05c9a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SAFE_DELETE</b>(p)&#160;&#160;&#160;{ delete p; p=0; }</td></tr>
+<tr class="separator:a9bbcd82e77c41df827c09759def05c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d71909d27637b256a333f1533a252f3"><td class="memItemLeft" align="right" valign="top"><a id="a9d71909d27637b256a333f1533a252f3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>sizeof_raw</b>(V)&#160;&#160;&#160;sizeof(V)</td></tr>
+<tr class="separator:a9d71909d27637b256a333f1533a252f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7aa56b081b9cb0660b570c4b4f9b3fe"><td class="memItemLeft" align="right" valign="top"><a id="ab7aa56b081b9cb0660b570c4b4f9b3fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>sizeof_type</b>(V)&#160;&#160;&#160;sizeof(V)</td></tr>
+<tr class="separator:ab7aa56b081b9cb0660b570c4b4f9b3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3b381532e29347e1ac7a89639ea985"><td class="memItemLeft" align="right" valign="top"><a id="acb3b381532e29347e1ac7a89639ea985"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__LTEXT</b>(A)&#160;&#160;&#160;L##A</td></tr>
+<tr class="separator:acb3b381532e29347e1ac7a89639ea985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5f6a7703638b2846ffc3d585fa7b24"><td class="memItemLeft" align="right" valign="top"><a id="acd5f6a7703638b2846ffc3d585fa7b24"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LTEXT</b>(A)&#160;&#160;&#160;__LTEXT(A)</td></tr>
+<tr class="separator:acd5f6a7703638b2846ffc3d585fa7b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a474a8fe42ff6d83df88cd13501b65"><td class="memItemLeft" align="right" valign="top"><a id="a60a474a8fe42ff6d83df88cd13501b65"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LCHAR</b>(A)&#160;&#160;&#160;__LTEXT(A)</td></tr>
+<tr class="separator:a60a474a8fe42ff6d83df88cd13501b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72af7a1515f4b48d1555e24a0fb4ef6e"><td class="memItemLeft" align="right" valign="top"><a id="a72af7a1515f4b48d1555e24a0fb4ef6e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ATEXT</b>(A)&#160;&#160;&#160;A</td></tr>
+<tr class="separator:a72af7a1515f4b48d1555e24a0fb4ef6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a81833720adb80eede7a8ba81f3cf3cba"><td class="memTemplParams" colspan="2"><a id="a81833720adb80eede7a8ba81f3cf3cba"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a81833720adb80eede7a8ba81f3cf3cba"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>t_min</b> (T t1, T t2)</td></tr>
+<tr class="separator:a81833720adb80eede7a8ba81f3cf3cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc8b55d77edfd9a3718b3e427a73022"><td class="memTemplParams" colspan="2"><a id="a8cc8b55d77edfd9a3718b3e427a73022"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8cc8b55d77edfd9a3718b3e427a73022"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>t_max</b> (T t1, T t2)</td></tr>
+<tr class="separator:a8cc8b55d77edfd9a3718b3e427a73022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96fcc39662cea3024f035026219100a"><td class="memTemplParams" colspan="2"><a id="af96fcc39662cea3024f035026219100a"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:af96fcc39662cea3024f035026219100a"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>t_abs</b> (T t)</td></tr>
+<tr class="separator:af96fcc39662cea3024f035026219100a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6f1b1457c7f8b0e6dfec6b48cf45e1"><td class="memTemplParams" colspan="2"><a id="a5f6f1b1457c7f8b0e6dfec6b48cf45e1"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5f6f1b1457c7f8b0e6dfec6b48cf45e1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>t_unit</b> (T t)</td></tr>
+<tr class="separator:a5f6f1b1457c7f8b0e6dfec6b48cf45e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

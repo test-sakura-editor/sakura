@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/io/CFile.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_8f863bb37653c962fb957559ba8a7e99.html">io</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d78/_c_file_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d33/_c_my_string_8h.html">basis/CMyString.h</a>&quot;</span> <span class="comment">//CFilePath</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d4d/file_8h.html">util/file.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">   31</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7ac67d363d08127ced1142429d9938b08f">   32</a></span>&#160;    <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7ac67d363d08127ced1142429d9938b08f">SHAREMODE_NOT_EXCLUSIVE</a>,    </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7af3a875152a70b6ae9fbfbdc359e178c5">   33</a></span>&#160;    <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7af3a875152a70b6ae9fbfbdc359e178c5">SHAREMODE_DENY_WRITE</a>,       </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7a6050c49c4c701e3e5d620ff410ce696e">   34</a></span>&#160;    <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7a6050c49c4c701e3e5d620ff410ce696e">SHAREMODE_DENY_READWRITE</a>,   </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../dd/d67/class_c_file.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d67/class_c_file.html">CFile</a>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../dd/d67/class_c_file.html">CFile</a>(LPCWSTR pszPath = NULL);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../dd/d67/class_c_file.html">CFile</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//パス</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/db3/class_c_file_path.html">CFilePath</a>&amp; GetFilePathClass()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szFilePath; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    LPCWSTR GetFilePath()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szFilePath; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> SetFilePath(LPCWSTR pszPath){ m_szFilePath.Assign(pszPath); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//各種判定</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> IsFileExist() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> HasWritablePermission() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> IsFileWritable() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> IsFileReadable() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//ロック</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/d67/class_c_file.html#a812a6cde9a32ac7a1bd887404fa0fa44">FileLock</a>(<a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a> eShareMode, <span class="keywordtype">bool</span> bMsg);    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d67/class_c_file.html#a09010f74e23c65c63cd6655a25b02320">FileUnlock</a>();                      </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> IsFileLocking()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hLockedFile!=INVALID_HANDLE_VALUE; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a> GetShareMode()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_nFileShareModeOld; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> SetShareMode(<a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a> eShareMode) { m_nFileShareModeOld = eShareMode; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../da/db3/class_c_file_path.html">CFilePath</a>   m_szFilePath;               </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    HANDLE      m_hLockedFile;              </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a>  m_nFileShareModeOld;        </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d5/d5b/class_c_tmp_file.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d5b/class_c_tmp_file.html">CTmpFile</a>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../d5/d5b/class_c_tmp_file.html">CTmpFile</a>(){ m_fp = tmpfile(); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ~<a class="code" href="../../d5/d5b/class_c_tmp_file.html">CTmpFile</a>(){ fclose(m_fp); }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    FILE* GetFilePointer()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_fp; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    FILE* m_fp;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_file_html"><div class="ttname"><a href="../../dd/d67/class_c_file.html">CFile</a></div><div class="ttdef"><b>Definition:</b> CFile.h:37</div></div>
+<div class="ttc" id="aclass_c_file_path_html"><div class="ttname"><a href="../../da/db3/class_c_file_path.html">CFilePath</a></div><div class="ttdef"><b>Definition:</b> CMyString.h:41</div></div>
+<div class="ttc" id="a_c_file_8h_html_a7d48e50be6e2ae87d3bd35fb29185fb7ac67d363d08127ced1142429d9938b08f"><div class="ttname"><a href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7ac67d363d08127ced1142429d9938b08f">SHAREMODE_NOT_EXCLUSIVE</a></div><div class="ttdeci">@ SHAREMODE_NOT_EXCLUSIVE</div><div class="ttdoc">排他制御しない</div><div class="ttdef"><b>Definition:</b> CFile.h:32</div></div>
+<div class="ttc" id="aclass_c_file_html_a812a6cde9a32ac7a1bd887404fa0fa44"><div class="ttname"><a href="../../dd/d67/class_c_file.html#a812a6cde9a32ac7a1bd887404fa0fa44">CFile::FileLock</a></div><div class="ttdeci">bool FileLock(EShareMode eShareMode, bool bMsg)</div><div class="ttdoc">ファイルの排他ロック</div><div class="ttdef"><b>Definition:</b> CFile.cpp:95</div></div>
+<div class="ttc" id="aclass_c_tmp_file_html"><div class="ttname"><a href="../../d5/d5b/class_c_tmp_file.html">CTmpFile</a></div><div class="ttdoc">一時ファイル</div><div class="ttdef"><b>Definition:</b> CFile.h:65</div></div>
+<div class="ttc" id="a_c_my_string_8h_html"><div class="ttname"><a href="../../d6/d33/_c_my_string_8h.html">CMyString.h</a></div></div>
+<div class="ttc" id="a_c_file_8h_html_a7d48e50be6e2ae87d3bd35fb29185fb7a6050c49c4c701e3e5d620ff410ce696e"><div class="ttname"><a href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7a6050c49c4c701e3e5d620ff410ce696e">SHAREMODE_DENY_READWRITE</a></div><div class="ttdeci">@ SHAREMODE_DENY_READWRITE</div><div class="ttdoc">他プロセスからの読み書きを禁止</div><div class="ttdef"><b>Definition:</b> CFile.h:34</div></div>
+<div class="ttc" id="afile_8h_html"><div class="ttname"><a href="../../d2/d4d/file_8h.html">file.h</a></div></div>
+<div class="ttc" id="a_c_file_8h_html_a7d48e50be6e2ae87d3bd35fb29185fb7af3a875152a70b6ae9fbfbdc359e178c5"><div class="ttname"><a href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7af3a875152a70b6ae9fbfbdc359e178c5">SHAREMODE_DENY_WRITE</a></div><div class="ttdeci">@ SHAREMODE_DENY_WRITE</div><div class="ttdoc">他プロセスからの上書きを禁止</div><div class="ttdef"><b>Definition:</b> CFile.h:33</div></div>
+<div class="ttc" id="a_c_file_8h_html_a7d48e50be6e2ae87d3bd35fb29185fb7"><div class="ttname"><a href="../../d9/d78/_c_file_8h.html#a7d48e50be6e2ae87d3bd35fb29185fb7">EShareMode</a></div><div class="ttdeci">EShareMode</div><div class="ttdoc">ファイルの排他制御モード 2007.10.11 kobake 作成</div><div class="ttdef"><b>Definition:</b> CFile.h:31</div></div>
+<div class="ttc" id="aclass_c_file_html_a09010f74e23c65c63cd6655a25b02320"><div class="ttname"><a href="../../dd/d67/class_c_file.html#a09010f74e23c65c63cd6655a25b02320">CFile::FileUnlock</a></div><div class="ttdeci">void FileUnlock()</div><div class="ttdoc">ファイルの排他ロック解除</div><div class="ttdef"><b>Definition:</b> CFile.cpp:85</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

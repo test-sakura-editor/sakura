@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/convert/convert_util2.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_aa5658efbe5ca02810aa883a8e8cac9d.html">convert</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">convert_util2.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>変換ユーティリティ2 - BASE64 Ecode/Decode, UUDecode, Q-printable decode  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d8f/_c_word_parse_8h_source.html">parse/CWordParse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5f/_c_memory_8h_source.html">mem/CMemory.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d9/da2/convert__util2_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a66b460e65ab197fe0838317c4d5e99f6"><td class="memItemLeft" align="right" valign="top"><a id="a66b460e65ab197fe0838317c4d5e99f6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>EEncodingMethod</b> { <b>EM_NONE</b>, 
+<b>EM_QP</b>, 
+<b>EM_BASE64</b>
+ }</td></tr>
+<tr class="separator:a66b460e65ab197fe0838317c4d5e99f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a2ee0c775c7f809206c66d8823a5521c4"><td class="memItemLeft" align="right" valign="top"><a id="a2ee0c775c7f809206c66d8823a5521c4"></a>
+ACHAR&#160;</td><td class="memItemRight" valign="bottom"><b>_GetHexChar</b> (ACHAR c)</td></tr>
+<tr class="separator:a2ee0c775c7f809206c66d8823a5521c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5862239bf9144e93413ae1c696ae0bd"><td class="memItemLeft" align="right" valign="top"><a id="aa5862239bf9144e93413ae1c696ae0bd"></a>
+WCHAR&#160;</td><td class="memItemRight" valign="bottom"><b>_GetHexChar</b> (WCHAR c)</td></tr>
+<tr class="separator:aa5862239bf9144e93413ae1c696ae0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9945414d0437f0027ffa1951dca91d40"><td class="memItemLeft" align="right" valign="top"><a id="a9945414d0437f0027ffa1951dca91d40"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_HexToInt</b> (ACHAR c)</td></tr>
+<tr class="separator:a9945414d0437f0027ffa1951dca91d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b29903b1641cf475e3eb853a3d485f8"><td class="memItemLeft" align="right" valign="top"><a id="a8b29903b1641cf475e3eb853a3d485f8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_HexToInt</b> (WCHAR c)</td></tr>
+<tr class="separator:a8b29903b1641cf475e3eb853a3d485f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b150d7a24b2d91e61243adb61b72d1"><td class="memTemplParams" colspan="2"><a id="a38b150d7a24b2d91e61243adb61b72d1"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a38b150d7a24b2d91e61243adb61b72d1"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_DecodeQP</b> (const CHAR_TYPE *pS, const int nLen, char *pDst)</td></tr>
+<tr class="separator:a38b150d7a24b2d91e61243adb61b72d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8b853c20116198cb81171e1d581707"><td class="memTemplParams" colspan="2"><a id="a4b8b853c20116198cb81171e1d581707"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a4b8b853c20116198cb81171e1d581707"><td class="memTemplItemLeft" align="right" valign="top">uchar_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Base64ToVal</b> (const CHAR_TYPE c)</td></tr>
+<tr class="separator:a4b8b853c20116198cb81171e1d581707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a951ce1b4fc0ba96561db1bdc025636"><td class="memTemplParams" colspan="2"><a id="a7a951ce1b4fc0ba96561db1bdc025636"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a7a951ce1b4fc0ba96561db1bdc025636"><td class="memTemplItemLeft" align="right" valign="top">CHAR_TYPE&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ValToBase64</b> (const char v)</td></tr>
+<tr class="separator:a7a951ce1b4fc0ba96561db1bdc025636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23867b4204c1b282f9a2c6e129fb0436"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a23867b4204c1b282f9a2c6e129fb0436"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#a23867b4204c1b282f9a2c6e129fb0436">_DecodeBase64</a> (const CHAR_TYPE *pSrc, const int nSrcLen, char *pDest)</td></tr>
+<tr class="separator:a23867b4204c1b282f9a2c6e129fb0436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b08d46788f6dbc06975fab937f0068"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a83b08d46788f6dbc06975fab937f0068"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#a83b08d46788f6dbc06975fab937f0068">_EncodeBase64</a> (const char *pSrc, const int nSrcLen, CHAR_TYPE *pDest)</td></tr>
+<tr class="separator:a83b08d46788f6dbc06975fab937f0068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc5f802673056ddbe780c06e694a7eb"><td class="memItemLeft" align="right" valign="top"><a id="a6cc5f802673056ddbe780c06e694a7eb"></a>
+BYTE&#160;</td><td class="memItemRight" valign="bottom"><b>_UUDECODE_CHAR</b> (WCHAR c)</td></tr>
+<tr class="separator:a6cc5f802673056ddbe780c06e694a7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338cccac0e3aa0cd45b8e3b6c1686b26"><td class="memItemLeft" align="right" valign="top"><a id="a338cccac0e3aa0cd45b8e3b6c1686b26"></a>
+BYTE&#160;</td><td class="memItemRight" valign="bottom"><b>_UUDECODE_CHAR</b> (ACHAR c)</td></tr>
+<tr class="separator:a338cccac0e3aa0cd45b8e3b6c1686b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82acb4f5d27c247af43340825ce0a437"><td class="memTemplParams" colspan="2"><a id="a82acb4f5d27c247af43340825ce0a437"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a82acb4f5d27c247af43340825ce0a437"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_DecodeUU_line</b> (const CHAR_TYPE *pSrc, const int nSrcLen, char *pDest)</td></tr>
+<tr class="separator:a82acb4f5d27c247af43340825ce0a437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8a209885bde441d6ccb27870f8b0bc"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:aaa8a209885bde441d6ccb27870f8b0bc"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#aaa8a209885bde441d6ccb27870f8b0bc">CheckUUHeader</a> (const CHAR_TYPE *pSrc, const int nLen, WCHAR *pszFilename)</td></tr>
+<tr class="separator:aaa8a209885bde441d6ccb27870f8b0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4029319b4a7a2a53574cee49f9632553"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a4029319b4a7a2a53574cee49f9632553"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#a4029319b4a7a2a53574cee49f9632553">CheckUUFooter</a> (const CHAR_TYPE *pS, const int nLen)</td></tr>
+<tr class="separator:a4029319b4a7a2a53574cee49f9632553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addecf0dfd7a104a460634d9e4a5f10d6"><td class="memTemplParams" colspan="2">template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:addecf0dfd7a104a460634d9e4a5f10d6"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#addecf0dfd7a104a460634d9e4a5f10d6">_DecodeMimeHeader</a> (const CHAR_TYPE *pSrc, const int nSrcLen, <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcMem_alt, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> *peCodetype)</td></tr>
+<tr class="separator:addecf0dfd7a104a460634d9e4a5f10d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ad2615d431c64cdb9de75f969301e1846"><td class="memItemLeft" align="right" valign="top"><a id="ad2615d431c64cdb9de75f969301e1846"></a>
+const uchar_t&#160;</td><td class="memItemRight" valign="bottom"><b>TABLE_BASE64CharToValue</b> []</td></tr>
+<tr class="separator:ad2615d431c64cdb9de75f969301e1846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28d3e7ed375b95490ddff8d23045189"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da2/convert__util2_8h.html#ab28d3e7ed375b95490ddff8d23045189">TABLE_ValueToBASE64Char</a> []</td></tr>
+<tr class="separator:ab28d3e7ed375b95490ddff8d23045189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>変換ユーティリティ2 - BASE64 Ecode/Decode, UUDecode, Q-printable decode </p>
+<dl class="section author"><dt>著者</dt><dd></dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a23867b4204c1b282f9a2c6e129fb0436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23867b4204c1b282f9a2c6e129fb0436">&#9670;&nbsp;</a></span>_DecodeBase64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int _DecodeBase64 </td>
+          <td>(</td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pDest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BASE64 デコード実行関数</p>
+<p>前の実装を参考に。 正しい BASE64 入力文字列を仮定している。 </p>
+
+</div>
+</div>
+<a id="addecf0dfd7a104a460634d9e4a5f10d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addecf0dfd7a104a460634d9e4a5f10d6">&#9670;&nbsp;</a></span>_DecodeMimeHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int _DecodeMimeHeader </td>
+          <td>(</td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *&#160;</td>
+          <td class="paramname"><em>pcMem_alt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> *&#160;</td>
+          <td class="paramname"><em>peCodetype</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MIMEヘッダーデコード補助関数</p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="../../d6/d31/class_c_memory.html" title="メモリバッファクラス">CMemory</a> と置き換えられる入力文字列長 (nSkipLen) </dd></dl>
+
+</div>
+</div>
+<a id="a83b08d46788f6dbc06975fab937f0068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b08d46788f6dbc06975fab937f0068">&#9670;&nbsp;</a></span>_EncodeBase64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int _EncodeBase64 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pDest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BASE64 エンコード実行関数</p>
+<p>前の実装を参考に。 パッド文字などは付加しない。エラーチェックなし。 </p>
+
+</div>
+</div>
+<a id="a4029319b4a7a2a53574cee49f9632553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4029319b4a7a2a53574cee49f9632553">&#9670;&nbsp;</a></span>CheckUUFooter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckUUFooter </td>
+          <td>(</td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UU フッターを確認 </p>
+
+</div>
+</div>
+<a id="aaa8a209885bde441d6ccb27870f8b0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8a209885bde441d6ccb27870f8b0bc">&#9670;&nbsp;</a></span>CheckUUHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CHAR_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckUUHeader </td>
+          <td>(</td>
+          <td class="paramtype">const CHAR_TYPE *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFilename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UUエンコードのヘッダー部分を解析 </p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ab28d3e7ed375b95490ddff8d23045189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28d3e7ed375b95490ddff8d23045189">&#9670;&nbsp;</a></span>TABLE_ValueToBASE64Char</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char TABLE_ValueToBASE64Char[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>変換テーブル 数値 → Modified BASE64 文字 添え字の定義域：0 ～ 63 </p><dl class="section author"><dt>著者</dt><dd>D. S. Koba </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CReadManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../dc/d6a/class_c_read_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CReadManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CReadManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/dc4/class_c_read_manager.png" usemap="#CReadManager_map" alt=""/>
+  <map id="CReadManager_map" name="CReadManager_map">
+<area href="../../d6/d70/class_c_progress_subject.html" title="複数のCProgressSubjectからウォッチされる" alt="CProgressSubject" shape="rect" coords="0,112,199,136"/>
+<area href="../../d9/d64/class_c_subject_t.html" alt="CSubjectT&lt; CProgressListener &gt;" shape="rect" coords="0,56,199,80"/>
+<area href="../../d6/d8b/class_c_subject.html" title="複数のCListenerからウォッチされる" alt="CSubject" shape="rect" coords="0,0,199,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a865c81e9ebd2ec96d6f6cd10784e5afe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc4/class_c_read_manager.html#a865c81e9ebd2ec96d6f6cd10784e5afe">ReadFile_To_CDocLineMgr</a> (<a class="el" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a> *pcDocLineMgr, const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;sLoadInfo, <a class="el" href="../../d8/d31/struct_s_file_info.html">SFileInfo</a> *pFileInfo)</td></tr>
+<tr class="separator:a865c81e9ebd2ec96d6f6cd10784e5afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60a2acddff85cb0a37aab6492bb85ad"><td class="memItemLeft" align="right" valign="top"><a id="ab60a2acddff85cb0a37aab6492bb85ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>NotifyProgress</b> (int nPer)</td></tr>
+<tr class="separator:ab60a2acddff85cb0a37aab6492bb85ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3201d17a8f544cf2d4f60f48d315ee19"><td class="memItemLeft" align="right" valign="top"><a id="a3201d17a8f544cf2d4f60f48d315ee19"></a>
+<a class="el" href="../../db/db2/class_c_progress_listener.html">CProgressListener</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListener</b> (int nIndex) const</td></tr>
+<tr class="separator:a3201d17a8f544cf2d4f60f48d315ee19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6bb2e8dab8e5e004c4ac94b44902fa"><td class="memItemLeft" align="right" valign="top"><a id="acb6bb2e8dab8e5e004c4ac94b44902fa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetListenerCount</b> () const</td></tr>
+<tr class="separator:acb6bb2e8dab8e5e004c4ac94b44902fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52da6446acc92e48cb6c1ea6a838066f"><td class="memItemLeft" align="right" valign="top"><a id="a52da6446acc92e48cb6c1ea6a838066f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_AddListener</b> (<a class="el" href="../../d7/def/class_c_listener.html">CListener</a> *pcListener)</td></tr>
+<tr class="separator:a52da6446acc92e48cb6c1ea6a838066f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c7e6e79e12154c2a4d82170ce967ad"><td class="memItemLeft" align="right" valign="top"><a id="a33c7e6e79e12154c2a4d82170ce967ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_RemoveListener</b> (<a class="el" href="../../d7/def/class_c_listener.html">CListener</a> *pcListener)</td></tr>
+<tr class="separator:a33c7e6e79e12154c2a4d82170ce967ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a865c81e9ebd2ec96d6f6cd10784e5afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865c81e9ebd2ec96d6f6cd10784e5afe">&#9670;&nbsp;</a></span>ReadFile_To_CDocLineMgr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> CReadManager::ReadFile_To_CDocLineMgr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a> *&#160;</td>
+          <td class="paramname"><em>pcDocLineMgr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>sLoadInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d31/struct_s_file_info.html">SFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>pFileInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイルを読み込んで格納する（分割読み込みテスト版） </p><dl class="section version"><dt>バージョン</dt><dd>2.0 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>Windows用にコーディングしてある </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>正常読み込み </td></tr>
+    <tr><td class="paramname">FALSE</td><td>エラー(またはユーザによるキャンセル?) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002/08/30 Moca 旧ReadFileを元に作成 ファイルアクセスに関する部分をCFileLoadで行う </dd>
+<dd>
+2003/07/26 ryoji BOMの状態の取得を追加 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcDocLineMgr</td><td>[out] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sLoadInfo</td><td>[in] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pFileInfo</td><td>[out] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d6/d6e/_c_read_manager_8h_source.html">CReadManager.h</a></li>
+<li>sakura_core/<a class="el" href="../../da/d1f/_c_read_manager_8cpp.html">CReadManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

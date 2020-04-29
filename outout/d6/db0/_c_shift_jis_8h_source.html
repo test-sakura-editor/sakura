@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/CShiftJis.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CShiftJis.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/db0/_c_shift_jis_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d8a/codeutil_8h.html">charset/codeutil.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d5/d57/class_c_shift_jis.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d57/class_c_shift_jis.html">CShiftJis</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d84/class_c_code_base.html">CCodeBase</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//CCodeBaseインターフェース</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d5/d57/class_c_shift_jis.html#aed08af784059648bc35091d3b558323f">   36</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d5/d57/class_c_shift_jis.html#aed08af784059648bc35091d3b558323f">CodeToUnicode</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> SJISToUnicode(cSrc, pDst); } </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d5/d57/class_c_shift_jis.html#a753171aa5f2fae59bb244c3c904456ca">   37</a></span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d5/d57/class_c_shift_jis.html#a753171aa5f2fae59bb244c3c904456ca">UnicodeToCode</a>(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDst)<span class="keyword"> override</span>{ <span class="keywordflow">return</span> UnicodeToSJIS(cSrc, pDst); } </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// GetEolはCCodeBaseに移動  2010/6/13 Uchi</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d5/d57/class_c_shift_jis.html#ae78c3fa3eb0a747cb2f33e09f01dbf96">UnicodeToHex</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* cSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> iSLen, WCHAR* pDst, <span class="keyword">const</span> <a class="code" href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a>* psStatusbar) <span class="keyword">override</span>;            </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//実装</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> SJISToUnicode(<span class="keyword">const</span> <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>&amp; cSrc, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pDstMem);        <span class="comment">// SJIS      → Unicodeコード変換</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> UnicodeToSJIS(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cSrc, <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>* pDstMem);        <span class="comment">// Unicode   → SJISコード変換</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//  S_GetEolはCCodeBaseに移動   2010/6/13 Uchi</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// 2005-09-02 D.S.Koba</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// 2007.08.14 kobake CMemoryからCShiftJisへ移動</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#a706e1006ec9457fc906d9010fa76221a">GetSizeOfChar</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pData, <span class="keywordtype">int</span> nDataLen, <span class="keywordtype">int</span> nIdx ); </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// 実装</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// 2008.11.10 変換ロジックを書き直す</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#a0d29470e4008618ef8fd84de008f6ac4">_SjisToUni_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> *pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#aa72aa5d1f8365dee018777df15514149">SjisToUni</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">wchar_t</span> *pDst, <span class="keywordtype">bool</span>* pbError );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#af8df3722068630f303de4d507f7ab633">_UniToSjis_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> UniToSjis( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pSrc, <span class="keyword">const</span> <span class="keywordtype">int</span> nSrcLen, <span class="keywordtype">char</span>* pDst, <span class="keywordtype">bool</span> *pbError );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d5/d57/class_c_shift_jis.html#a0d29470e4008618ef8fd84de008f6ac4">   66</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#a0d29470e4008618ef8fd84de008f6ac4">CShiftJis::_SjisToUni_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> *pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError )</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> nret;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> berror = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">switch</span>( eCharset ){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a0f7708b4f0efa1f95bb4cc6e4e1d0519">CHARSET_JIS_HANKATA</a>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// 半角カタカナを処理</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// エラーは起こらない。</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        nret = <a class="code" href="../../d5/d8a/codeutil_8h.html#abcff5a4ae1f288e3019b3b820c77a57e">MyMultiByteToWideChar_JP</a>( pSrc, 1, pDst );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// 保護コード</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span>( nret &lt; 1 ){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            nret = 1;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a4bc494815f593df20f57d61673af0bd4">CHARSET_JIS_ZENKAKU</a>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// 全角文字を処理</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        nret = <a class="code" href="../../d5/d8a/codeutil_8h.html#abcff5a4ae1f288e3019b3b820c77a57e">MyMultiByteToWideChar_JP</a>( pSrc, 2, pDst );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span>( nret &lt; 1 ){ <span class="comment">// SJIS -&gt; Unicode 変換に失敗</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            nret = <a class="code" href="../../d6/d84/class_c_code_base.html#af5cdec5c6797d849ae04c1ef256777e8">BinToText</a>( pSrc, 2, pDst );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// 致命的エラー回避コード</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        pDst[0] = L<span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        nret = 1;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>( pbError ){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        *pbError = berror;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> nret;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d5/d57/class_c_shift_jis.html#af8df3722068630f303de4d507f7ab633">  109</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d57/class_c_shift_jis.html#af8df3722068630f303de4d507f7ab633">CShiftJis::_UniToSjis_char</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* pSrc, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pDst, <span class="keyword">const</span> <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> eCharset, <span class="keywordtype">bool</span>* pbError )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> nret;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">bool</span> berror = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span>( eCharset == <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01">CHARSET_UNI_NORMAL</a> ){</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        nret = <a class="code" href="../../d5/d8a/codeutil_8h.html#a2382ec709e5e8ab2db2b76df3876c3e4">MyWideCharToMultiByte_JP</a>( pSrc, 1, pDst );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">if</span>( nret &lt; 1 ){</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">// Uni -&gt; SJIS 変換に失敗</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            nret = 1;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>( eCharset == <a class="code" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36">CHARSET_UNI_SURROG</a> ){</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// サロゲートペアは SJIS に変換できない。</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        nret = 1;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// 保護コード</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        berror = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        pDst[0] = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        nret = 1;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span>( pbError ){</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        *pbError = berror;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> nret;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_common_setting___statusbar_html"><div class="ttname"><a href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a></div><div class="ttdef"><b>Definition:</b> CommonSetting.h:644</div></div>
+<div class="ttc" id="acodeutil_8h_html_a2382ec709e5e8ab2db2b76df3876c3e4"><div class="ttname"><a href="../../d5/d8a/codeutil_8h.html#a2382ec709e5e8ab2db2b76df3876c3e4">MyWideCharToMultiByte_JP</a></div><div class="ttdeci">int MyWideCharToMultiByte_JP(const unsigned short *pSrc, const int nSrcLen, unsigned char *pDst)</div><div class="ttdef"><b>Definition:</b> codeutil.h:155</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a></div><div class="ttdeci">ECharSet</div><div class="ttdef"><b>Definition:</b> codechecker.h:77</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_af8df3722068630f303de4d507f7ab633"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#af8df3722068630f303de4d507f7ab633">CShiftJis::_UniToSjis_char</a></div><div class="ttdeci">static int _UniToSjis_char(const unsigned short *pSrc, unsigned char *pDst, const ECharSet eCharset, bool *pbError)</div><div class="ttdef"><b>Definition:</b> CShiftJis.h:109</div></div>
+<div class="ttc" id="a_c_code_base_8h_html"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a></div></div>
+<div class="ttc" id="aclass_c_memory_html"><div class="ttname"><a href="../../d6/d31/class_c_memory.html">CMemory</a></div><div class="ttdoc">メモリバッファクラス</div><div class="ttdef"><b>Definition:</b> CMemory.h:43</div></div>
+<div class="ttc" id="aclass_c_code_base_html"><div class="ttname"><a href="../../d6/d84/class_c_code_base.html">CCodeBase</a></div><div class="ttdef"><b>Definition:</b> CCodeBase.h:45</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a0f7708b4f0efa1f95bb4cc6e4e1d0519"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a0f7708b4f0efa1f95bb4cc6e4e1d0519">CHARSET_JIS_HANKATA</a></div><div class="ttdeci">@ CHARSET_JIS_HANKATA</div><div class="ttdoc">日本語の半角カタカナ文字 (JIS X 0201)</div><div class="ttdef"><b>Definition:</b> codechecker.h:80</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_aed08af784059648bc35091d3b558323f"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#aed08af784059648bc35091d3b558323f">CShiftJis::CodeToUnicode</a></div><div class="ttdeci">EConvertResult CodeToUnicode(const CMemory &amp;cSrc, CNativeW *pDst) override</div><div class="ttdoc">特定コード → UNICODE 変換</div><div class="ttdef"><b>Definition:</b> CShiftJis.h:36</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_a706e1006ec9457fc906d9010fa76221a"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#a706e1006ec9457fc906d9010fa76221a">CShiftJis::GetSizeOfChar</a></div><div class="ttdeci">static int GetSizeOfChar(const char *pData, int nDataLen, int nIdx)</div><div class="ttdoc">指定した位置の文字が何バイト文字かを返す</div><div class="ttdef"><b>Definition:</b> CShiftJis.cpp:27</div></div>
+<div class="ttc" id="aclass_c_code_base_html_af5cdec5c6797d849ae04c1ef256777e8"><div class="ttname"><a href="../../d6/d84/class_c_code_base.html#af5cdec5c6797d849ae04c1ef256777e8">CCodeBase::BinToText</a></div><div class="ttdeci">static int BinToText(const unsigned char *pSrc, const int nLen, unsigned short *pDst)</div><div class="ttdef"><b>Definition:</b> CCodeBase.h:80</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a4bc494815f593df20f57d61673af0bd4"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a4bc494815f593df20f57d61673af0bd4">CHARSET_JIS_ZENKAKU</a></div><div class="ttdeci">@ CHARSET_JIS_ZENKAKU</div><div class="ttdoc">日本語の全角文字 (JIS X 0208 ＋ MS 拡張文字)</div><div class="ttdef"><b>Definition:</b> codechecker.h:81</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html">CShiftJis</a></div><div class="ttdef"><b>Definition:</b> CShiftJis.h:32</div></div>
+<div class="ttc" id="acodeutil_8h_html_abcff5a4ae1f288e3019b3b820c77a57e"><div class="ttname"><a href="../../d5/d8a/codeutil_8h.html#abcff5a4ae1f288e3019b3b820c77a57e">MyMultiByteToWideChar_JP</a></div><div class="ttdeci">int MyMultiByteToWideChar_JP(const unsigned char *pSrc, const int nSrcLen, unsigned short *pDst, bool bKeepRt=true)</div><div class="ttdef"><b>Definition:</b> codeutil.h:185</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01">CHARSET_UNI_NORMAL</a></div><div class="ttdeci">@ CHARSET_UNI_NORMAL</div><div class="ttdoc">サロゲート領域を除いたユニコード文字</div><div class="ttdef"><b>Definition:</b> codechecker.h:83</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_aa72aa5d1f8365dee018777df15514149"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#aa72aa5d1f8365dee018777df15514149">CShiftJis::SjisToUni</a></div><div class="ttdeci">static int SjisToUni(const char *pSrc, const int nSrcLen, wchar_t *pDst, bool *pbError)</div><div class="ttdef"><b>Definition:</b> CShiftJis.cpp:45</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_a753171aa5f2fae59bb244c3c904456ca"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#a753171aa5f2fae59bb244c3c904456ca">CShiftJis::UnicodeToCode</a></div><div class="ttdeci">EConvertResult UnicodeToCode(const CNativeW &amp;cSrc, CMemory *pDst) override</div><div class="ttdoc">UNICODE → 特定コード 変換</div><div class="ttdef"><b>Definition:</b> CShiftJis.h:37</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_a0d29470e4008618ef8fd84de008f6ac4"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#a0d29470e4008618ef8fd84de008f6ac4">CShiftJis::_SjisToUni_char</a></div><div class="ttdeci">static int _SjisToUni_char(const unsigned char *pSrc, unsigned short *pDst, const ECharSet eCharset, bool *pbError)</div><div class="ttdef"><b>Definition:</b> CShiftJis.h:66</div></div>
+<div class="ttc" id="a_c_code_base_8h_html_aaf5b9c8cb800b2a36198d4f1c4d07c84"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a></div><div class="ttdeci">EConvertResult</div><div class="ttdef"><b>Definition:</b> CCodeBase.h:28</div></div>
+<div class="ttc" id="acodechecker_8h_html_a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36">CHARSET_UNI_SURROG</a></div><div class="ttdeci">@ CHARSET_UNI_SURROG</div><div class="ttdoc">ユニコードのサロゲート領域にある文字</div><div class="ttdef"><b>Definition:</b> codechecker.h:84</div></div>
+<div class="ttc" id="aclass_c_shift_jis_html_ae78c3fa3eb0a747cb2f33e09f01dbf96"><div class="ttname"><a href="../../d5/d57/class_c_shift_jis.html#ae78c3fa3eb0a747cb2f33e09f01dbf96">CShiftJis::UnicodeToHex</a></div><div class="ttdeci">EConvertResult UnicodeToHex(const wchar_t *cSrc, const int iSLen, WCHAR *pDst, const CommonSetting_Statusbar *psStatusbar) override</div><div class="ttdoc">UNICODE → Hex 変換</div><div class="ttdef"><b>Definition:</b> CShiftJis.cpp:248</div></div>
+<div class="ttc" id="acodeutil_8h_html"><div class="ttname"><a href="../../d5/d8a/codeutil_8h.html">codeutil.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/CFileNameManager.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFileNameManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/da4/_c_file_name_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    2008.05.18 kobake CShareData から分離</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// 要先行定義</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// #include &quot;DLLSHAREDATA.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d5a/struct_ini_folder.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d8/d5a/struct_ini_folder.html">IniFolder</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> m_bInit;                           <span class="comment">// 初期化済フラグ</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> m_bReadPrivate;                    <span class="comment">// マルチユーザ用iniからの読み出しフラグ</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> m_bWritePrivate;                   <span class="comment">// マルチユーザ用iniへの書き込みフラグ</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    WCHAR m_szIniFile[_MAX_PATH];           <span class="comment">// EXE基準のiniファイルパス</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    WCHAR m_szPrivateIniFile[_MAX_PATH];    <span class="comment">// マルチユーザ用のiniファイルパス</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};  <span class="comment">/* iniフォルダ設定 */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//共有メモリ内構造体</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../da/de3/struct_s_share___file_name_management.html">   48</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../da/de3/struct_s_share___file_name_management.html">SShare_FileNameManagement</a>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d8/d5a/struct_ini_folder.html">IniFolder</a>           m_IniFolder;    <span class="comment">/**** iniフォルダ設定 ****/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d4/d24/class_c_file_name_manager.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d24/class_c_file_name_manager.html">CFileNameManager</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;CFileNameManager&gt;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;<a class="code" href="../../d4/d24/class_c_file_name_manager.html">CFileNameManager</a>&gt;;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d4/d24/class_c_file_name_manager.html">CFileNameManager</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        m_pShareData = &amp;GetDllShareData();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        m_nTransformFileNameCount = -1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//ファイル名関連</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    LPWSTR <a class="code" href="../../d4/d24/class_c_file_name_manager.html#a4aa7de8ff8c24c30a0e5168b4f4478e0">GetTransformFileNameFast</a>( LPCWSTR, LPWSTR, <span class="keywordtype">int</span> nDestLen, HDC hDC, <span class="keywordtype">bool</span> bFitMode = <span class="keyword">true</span>, <span class="keywordtype">int</span> cchMaxWidth = 0 );   <span class="comment">// 2002.11.24 Moca Add</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d24/class_c_file_name_manager.html#aba80a975477819789b389a3407694ba6">TransformFileName_MakeCache</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> LPCWSTR <a class="code" href="../../d4/d24/class_c_file_name_manager.html#a8f719d9265d87912a31ca994aeea1ee2">GetFilePathFormat</a>( LPCWSTR, LPWSTR, <span class="keywordtype">int</span>, LPCWSTR, LPCWSTR );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d4/d24/class_c_file_name_manager.html#a0f7d7d6485a78db9f5cfd5c9b7a771a7">ExpandMetaToFolder</a>( LPCWSTR, LPWSTR, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//メニュー類のファイル名作成</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel_WinList(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keyword">const</span> <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>* editInfo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> index, HDC hDC){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> GetMenuFullLabel(pszOutput, nBuffSize, <span class="keyword">true</span>, editInfo, <span class="keywordtype">id</span>, <span class="keyword">false</span>, index, <span class="keyword">false</span>, hDC);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel_MRU(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keyword">const</span> <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>* editInfo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> bFavorite, <span class="keywordtype">int</span> index, HDC hDC){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> GetMenuFullLabel(pszOutput, nBuffSize, <span class="keyword">true</span>, editInfo, <span class="keywordtype">id</span>, bFavorite, index, <span class="keyword">true</span>, hDC);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel_WinListNoEscape(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keyword">const</span> <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>* editInfo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> index, HDC hDC){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> GetMenuFullLabel(pszOutput, nBuffSize, <span class="keyword">false</span>, editInfo, <span class="keywordtype">id</span>, <span class="keyword">false</span>, index, <span class="keyword">false</span>, hDC);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel_File(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keyword">const</span> WCHAR* pszFile, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, HDC hDC, <span class="keywordtype">bool</span> bModified = <span class="keyword">false</span>, <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode = <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> GetMenuFullLabel(pszOutput, nBuffSize, <span class="keyword">true</span>, pszFile, <span class="keywordtype">id</span>, <span class="keyword">false</span>, nCharCode, <span class="keyword">false</span>, -1, <span class="keyword">false</span>, hDC);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel_FileNoEscape(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keyword">const</span> WCHAR* pszFile, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, HDC hDC, <span class="keywordtype">bool</span> bModified = <span class="keyword">false</span>, <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode = <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> GetMenuFullLabel(pszOutput, nBuffSize, <span class="keyword">false</span>, pszFile, <span class="keywordtype">id</span>, <span class="keyword">false</span>, nCharCode, <span class="keyword">false</span>, -1, <span class="keyword">false</span>, hDC);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keywordtype">bool</span> bEspaceAmp, <span class="keyword">const</span> <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>* editInfo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> bFavorite, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> bAccKeyZeroOrigin, HDC hDC);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> GetMenuFullLabel(WCHAR* pszOutput, <span class="keywordtype">int</span> nBuffSize, <span class="keywordtype">bool</span> bEspaceAmp, <span class="keyword">const</span> WCHAR* pszFile, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> bModified, <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> nCharCode, <span class="keywordtype">bool</span> bFavorite, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> bAccKeyZeroOrigin, HDC hDC);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> WCHAR GetAccessKeyByIndex(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> bZeroOrigin);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d4/d24/class_c_file_name_manager.html#af374a65e3d765317b3148331f9037f20">GetIniFileNameDirect</a>( LPWSTR pszPrivateIniFile, LPWSTR pszIniFile, LPCWSTR pszProfName );   <span class="comment">/* 構成設定ファイルからiniファイル名を取得する */</span>   <span class="comment">// 2007.09.04 ryoji</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d24/class_c_file_name_manager.html#a01e23703b19bdfeb5455294a012f6f46">GetIniFileName</a>( LPWSTR pszIniFileName, LPCWSTR pszProfName, BOOL bRead = FALSE );  <span class="comment">/* iniファイル名の取得 */</span>   <span class="comment">// 2007.05.19 ryoji</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* m_pShareData;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// ファイル名簡易表示用キャッシュ</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span>     m_nTransformFileNameCount; <span class="comment">// 有効数</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    WCHAR   m_szTransformFileNameFromExp[MAX_TRANSFORM_FILENAME][_MAX_PATH];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span>     m_nTransformFileNameOrgId[MAX_TRANSFORM_FILENAME];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_file_name_manager_html_a01e23703b19bdfeb5455294a012f6f46"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#a01e23703b19bdfeb5455294a012f6f46">CFileNameManager::GetIniFileName</a></div><div class="ttdeci">void GetIniFileName(LPWSTR pszIniFileName, LPCWSTR pszProfName, BOOL bRead=FALSE)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:566</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html">CFileNameManager</a></div><div class="ttdoc">ファイル名管理</div><div class="ttdef"><b>Definition:</b> CFileNameManager.h:53</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html_af374a65e3d765317b3148331f9037f20"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#af374a65e3d765317b3148331f9037f20">CFileNameManager::GetIniFileNameDirect</a></div><div class="ttdeci">static void GetIniFileNameDirect(LPWSTR pszPrivateIniFile, LPWSTR pszIniFile, LPCWSTR pszProfName)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:497</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html_a0f7d7d6485a78db9f5cfd5c9b7a771a7"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#a0f7d7d6485a78db9f5cfd5c9b7a771a7">CFileNameManager::ExpandMetaToFolder</a></div><div class="ttdeci">static bool ExpandMetaToFolder(LPCWSTR, LPWSTR, int)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:179</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html_a8f719d9265d87912a31ca994aeea1ee2"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#a8f719d9265d87912a31ca994aeea1ee2">CFileNameManager::GetFilePathFormat</a></div><div class="ttdeci">static LPCWSTR GetFilePathFormat(LPCWSTR, LPWSTR, int, LPCWSTR, LPCWSTR)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:123</div></div>
+<div class="ttc" id="aclass_t_singleton_html"><div class="ttname"><a href="../../d5/d1e/class_t_singleton.html">TSingleton</a></div><div class="ttdef"><b>Definition:</b> design_template.h:47</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html_a4aa7de8ff8c24c30a0e5168b4f4478e0"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#a4aa7de8ff8c24c30a0e5168b4f4478e0">CFileNameManager::GetTransformFileNameFast</a></div><div class="ttdeci">LPWSTR GetTransformFileNameFast(LPCWSTR, LPWSTR, int nDestLen, HDC hDC, bool bFitMode=true, int cchMaxWidth=0)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:54</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="astruct_edit_info_html"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html">EditInfo</a></div><div class="ttdef"><b>Definition:</b> EditInfo.h:42</div></div>
+<div class="ttc" id="astruct_ini_folder_html"><div class="ttname"><a href="../../d8/d5a/struct_ini_folder.html">IniFolder</a></div><div class="ttdoc">iniフォルダ設定 // 2007.05.31 ryoji</div><div class="ttdef"><b>Definition:</b> CFileNameManager.h:39</div></div>
+<div class="ttc" id="aclass_c_file_name_manager_html_aba80a975477819789b389a3407694ba6"><div class="ttname"><a href="../../d4/d24/class_c_file_name_manager.html#aba80a975477819789b389a3407694ba6">CFileNameManager::TransformFileName_MakeCache</a></div><div class="ttdeci">int TransformFileName_MakeCache(void)</div><div class="ttdef"><b>Definition:</b> CFileNameManager.cpp:102</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a></div><div class="ttdeci">@ CODE_NONE</div><div class="ttdoc">未検出</div><div class="ttdef"><b>Definition:</b> charset.h:48</div></div>
+<div class="ttc" id="astruct_s_share___file_name_management_html"><div class="ttname"><a href="../../da/de3/struct_s_share___file_name_management.html">SShare_FileNameManagement</a></div><div class="ttdef"><b>Definition:</b> CFileNameManager.h:48</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

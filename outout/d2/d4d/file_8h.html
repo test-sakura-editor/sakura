@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/file.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">file.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d2/d4d/file_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d39/class_c_file_time.html">CFileTime</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a760c0e0a195dd6904836fbbe70f53dd6"><td class="memItemLeft" align="right" valign="top"><a id="a760c0e0a195dd6904836fbbe70f53dd6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>my_splitpath_t</b>&#160;&#160;&#160;my_splitpath_w</td></tr>
+<tr class="separator:a760c0e0a195dd6904836fbbe70f53dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a2bf60aba91c05cf3e7db2d87819ce4e0"><td class="memItemLeft" align="right" valign="top"><a id="a2bf60aba91c05cf3e7db2d87819ce4e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a2bf60aba91c05cf3e7db2d87819ce4e0">fexist</a> (LPCWSTR pszPath)</td></tr>
+<tr class="memdesc:a2bf60aba91c05cf3e7db2d87819ce4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルまたはディレクトリが存在すればtrue <br /></td></tr>
+<tr class="separator:a2bf60aba91c05cf3e7db2d87819ce4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa990fabcd51cae6cea561afae725fc72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#aa990fabcd51cae6cea561afae725fc72">IsFilePath</a> (const wchar_t *pLine, size_t *pnBgn, size_t *pnPathLen, bool bFileOnly=true)</td></tr>
+<tr class="separator:aa990fabcd51cae6cea561afae725fc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bcf4e172facc265a4177c730c71289"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a01bcf4e172facc265a4177c730c71289">IsFileExists</a> (const WCHAR *path, bool bFileOnly=false)</td></tr>
+<tr class="separator:a01bcf4e172facc265a4177c730c71289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f28a17536f38511be48be84a97f1b33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a2f28a17536f38511be48be84a97f1b33">IsDirectory</a> (LPCWSTR pszPath)</td></tr>
+<tr class="separator:a2f28a17536f38511be48be84a97f1b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a276c93e857de071ef4fa9cd3be663d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a8a276c93e857de071ef4fa9cd3be663d">CalcDirectoryDepth</a> (const WCHAR *path)</td></tr>
+<tr class="memdesc:a8a276c93e857de071ef4fa9cd3be663d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリの深さを計算する  <a href="../../d2/d4d/file_8h.html#a8a276c93e857de071ef4fa9cd3be663d">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a276c93e857de071ef4fa9cd3be663d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acd578b14f54e3bd9ee8ea7c7a76a48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a7acd578b14f54e3bd9ee8ea7c7a76a48">IsLocalDrive</a> (const WCHAR *pszDrive)</td></tr>
+<tr class="separator:a7acd578b14f54e3bd9ee8ea7c7a76a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bcfa17af61ad606e38bd7d22c8e0c2"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a91bcfa17af61ad606e38bd7d22c8e0c2">_wfopen_absexe</a> (LPCWSTR fname, LPCWSTR mode)</td></tr>
+<tr class="separator:a91bcfa17af61ad606e38bd7d22c8e0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af399da19dd7cd0c7b7f293e73cd8fc89"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#af399da19dd7cd0c7b7f293e73cd8fc89">_wfopen_absini</a> (LPCWSTR fname, LPCWSTR mode, BOOL bOrExedir=TRUE)</td></tr>
+<tr class="separator:af399da19dd7cd0c7b7f293e73cd8fc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec66ef46f19d07c2a2d7405b2fe40c04"><td class="memItemLeft" align="right" valign="top"><a id="aec66ef46f19d07c2a2d7405b2fe40c04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CutLastYenFromDirectoryPath</b> (WCHAR *pszFolder)</td></tr>
+<tr class="separator:aec66ef46f19d07c2a2d7405b2fe40c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0c18f2febe540ff64cc5363df1810e"><td class="memItemLeft" align="right" valign="top"><a id="a9a0c18f2febe540ff64cc5363df1810e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddLastYenFromDirectoryPath</b> (WCHAR *pszFolder)</td></tr>
+<tr class="separator:a9a0c18f2febe540ff64cc5363df1810e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58618c18a02f172c58235219ffb7add1"><td class="memItemLeft" align="right" valign="top"><a id="a58618c18a02f172c58235219ffb7add1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SplitPath_FolderAndFile</b> (const WCHAR *pszFilePath, WCHAR *pszFolder, WCHAR *pszFile)</td></tr>
+<tr class="separator:a58618c18a02f172c58235219ffb7add1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a85e3f423d1b4a12ccebb7aad28e084"><td class="memItemLeft" align="right" valign="top"><a id="a0a85e3f423d1b4a12ccebb7aad28e084"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Concat_FolderAndFile</b> (const WCHAR *pszDir, const WCHAR *pszTitle, WCHAR *pszPath)</td></tr>
+<tr class="separator:a0a85e3f423d1b4a12ccebb7aad28e084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37119bd501eaec68b89fd1367ab2767"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#ae37119bd501eaec68b89fd1367ab2767">GetLongFileName</a> (const WCHAR *pszFilePathSrc, WCHAR *pszFilePathDes)</td></tr>
+<tr class="separator:ae37119bd501eaec68b89fd1367ab2767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198dfda78c9141908b35bbbddda0bd86"><td class="memItemLeft" align="right" valign="top"><a id="a198dfda78c9141908b35bbbddda0bd86"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>CheckEXT</b> (const WCHAR *pszPath, const WCHAR *pszExt)</td></tr>
+<tr class="separator:a198dfda78c9141908b35bbbddda0bd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27fca3d6dfd4e01806432c112452cb05"><td class="memItemLeft" align="right" valign="top"><a id="a27fca3d6dfd4e01806432c112452cb05"></a>
+const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a27fca3d6dfd4e01806432c112452cb05">GetFileTitlePointer</a> (const WCHAR *pszPath)</td></tr>
+<tr class="memdesc:a27fca3d6dfd4e01806432c112452cb05"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルフルパス内のファイル名を指すポインタを取得。2007.09.20 kobake 作成 <br /></td></tr>
+<tr class="separator:a27fca3d6dfd4e01806432c112452cb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc831e30b5763c919d773e8e759144b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a9fc831e30b5763c919d773e8e759144b">_IS_REL_PATH</a> (const WCHAR *path)</td></tr>
+<tr class="memdesc:a9fc831e30b5763c919d773e8e759144b"><td class="mdescLeft">&#160;</td><td class="mdescRight">相対パスか判定する。2003.06.23 Moca  <a href="../../d2/d4d/file_8h.html#a9fc831e30b5763c919d773e8e759144b">[詳解]</a><br /></td></tr>
+<tr class="separator:a9fc831e30b5763c919d773e8e759144b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e">GetExedir</a> (LPWSTR pDir, LPCWSTR szFile=NULL)</td></tr>
+<tr class="memdesc:ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">exeファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す．  <a href="../../d2/d4d/file_8h.html#ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f20033bf3d2720a107cb842c0103f1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a0f20033bf3d2720a107cb842c0103f1b">GetInidir</a> (LPWSTR pDir, LPCWSTR szFile=NULL)</td></tr>
+<tr class="memdesc:a0f20033bf3d2720a107cb842c0103f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す．  <a href="../../d2/d4d/file_8h.html#a0f20033bf3d2720a107cb842c0103f1b">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f20033bf3d2720a107cb842c0103f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b62d771dd888ef97e1c7f06f356a1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a51b62d771dd888ef97e1c7f06f356a1c">GetInidirOrExedir</a> (LPWSTR pDir, LPCWSTR szFile=NULL, BOOL bRetExedirIfFileEmpty=FALSE)</td></tr>
+<tr class="memdesc:a51b62d771dd888ef97e1c7f06f356a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルまたはEXEファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す（INIを優先）．  <a href="../../d2/d4d/file_8h.html#a51b62d771dd888ef97e1c7f06f356a1c">[詳解]</a><br /></td></tr>
+<tr class="separator:a51b62d771dd888ef97e1c7f06f356a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3d79176978bef917fdd3d8c51ab974"><td class="memItemLeft" align="right" valign="top">LPCWSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a0c3d79176978bef917fdd3d8c51ab974">GetRelPath</a> (LPCWSTR pszPath)</td></tr>
+<tr class="memdesc:a0c3d79176978bef917fdd3d8c51ab974"><td class="mdescLeft">&#160;</td><td class="mdescRight">INIファイルまたはEXEファイルのあるディレクトリの相対パスを返す（INIを優先）．  <a href="../../d2/d4d/file_8h.html#a0c3d79176978bef917fdd3d8c51ab974">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c3d79176978bef917fdd3d8c51ab974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38951ec9e35547f303632f385ca3fbe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#a38951ec9e35547f303632f385ca3fbe9">GetLastWriteTimestamp</a> (const WCHAR *filename, <a class="el" href="../../d4/d39/class_c_file_time.html">CFileTime</a> *pcFileTime)</td></tr>
+<tr class="separator:a38951ec9e35547f303632f385ca3fbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafc6031083df47f9da1657f6acfb1d6"><td class="memItemLeft" align="right" valign="top"><a id="abafc6031083df47f9da1657f6acfb1d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>my_splitpath</b> (const char *comln, char *drv, char *dir, char *fnm, char *ext)</td></tr>
+<tr class="separator:abafc6031083df47f9da1657f6acfb1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa132cc2105539d1471dad5627b00bebe"><td class="memItemLeft" align="right" valign="top"><a id="aa132cc2105539d1471dad5627b00bebe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>my_splitpath_w</b> (const wchar_t *comln, wchar_t *drv, wchar_t *dir, wchar_t *fnm, wchar_t *ext)</td></tr>
+<tr class="separator:aa132cc2105539d1471dad5627b00bebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f149c2222c780b046a451a1efef2fb9"><td class="memItemLeft" align="right" valign="top"><a id="a4f149c2222c780b046a451a1efef2fb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>my_splitpath_t</b> (const WCHAR *comln, WCHAR *drv, WCHAR *dir, WCHAR *fnm, WCHAR *ext)</td></tr>
+<tr class="separator:a4f149c2222c780b046a451a1efef2fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f4fe6d72567de9fa05948bf8e2c086"><td class="memItemLeft" align="right" valign="top"><a id="aa5f4fe6d72567de9fa05948bf8e2c086"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FileMatchScoreSepExt</b> (const WCHAR *file1, const WCHAR *file2)</td></tr>
+<tr class="separator:aa5f4fe6d72567de9fa05948bf8e2c086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9a184fbed6e7ec54edc10aa5e4e5a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d4d/file_8h.html#acd9a184fbed6e7ec54edc10aa5e4e5a7">GetStrTrancateWidth</a> (WCHAR *dest, int nSize, const WCHAR *path, HDC hDC, int nPxWidth)</td></tr>
+<tr class="separator:acd9a184fbed6e7ec54edc10aa5e4e5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82df1afbf5074ba89ba5a1f7aff61689"><td class="memItemLeft" align="right" valign="top"><a id="a82df1afbf5074ba89ba5a1f7aff61689"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetShortViewPath</b> (WCHAR *dest, int nSize, const WCHAR *path, HDC hDC, int nPxWidth, bool bFitMode)</td></tr>
+<tr class="separator:a82df1afbf5074ba89ba5a1f7aff61689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a9fc831e30b5763c919d773e8e759144b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc831e30b5763c919d773e8e759144b">&#9670;&nbsp;</a></span>_IS_REL_PATH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _IS_REL_PATH </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相対パスか判定する。2003.06.23 Moca </p>
+<p>相対パスか判定する </p><dl class="section author"><dt>著者</dt><dd>Moca </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003.06.23 </dd></dl>
+
+</div>
+</div>
+<a id="a91bcfa17af61ad606e38bd7d22c8e0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bcfa17af61ad606e38bd7d22c8e0c2">&#9670;&nbsp;</a></span>_wfopen_absexe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* _wfopen_absexe </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>fnameが相対パスの場合は、実行ファイルのパスからの相対パスとして開く </p><dl class="section author"><dt>著者</dt><dd>Moca </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003.06.23 </dd>
+<dd>
+2007.05.20 ryoji 関数名変更（旧：fopen_absexe）、汎用テキストマッピング化 </dd></dl>
+
+</div>
+</div>
+<a id="af399da19dd7cd0c7b7f293e73cd8fc89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af399da19dd7cd0c7b7f293e73cd8fc89">&#9670;&nbsp;</a></span>_wfopen_absini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* _wfopen_absini </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bOrExedir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>fnameが相対パスの場合は、INIファイルのパスからの相対パスとして開く </p><dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.19 新規作成（_wfopen_absexeベース） </dd></dl>
+
+</div>
+</div>
+<a id="a8a276c93e857de071ef4fa9cd3be663d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a276c93e857de071ef4fa9cd3be663d">&#9670;&nbsp;</a></span>CalcDirectoryDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CalcDirectoryDepth </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ディレクトリの深さを計算する </p>
+<p>与えられたパス名からディレクトリの深さを計算する． パスの区切りは\．ルートディレクトリが深さ0で，サブディレクトリ毎に 深さが1ずつ上がっていく．</p>
+<dl class="section date"><dt>日付</dt><dd>2003.04.30 genta 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d8d0bdd5d53906d4c9ecf4fd5d4d2e">&#9670;&nbsp;</a></span>GetExedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetExedir </td>
+          <td>(</td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>szFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>exeファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す． </p>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.12.02 genta </dd>
+<dd>
+2007.05.20 ryoji 関数名変更（旧：GetExecutableDir）、汎用テキストマッピング化 </dd>
+<dd>
+2008.05.05 novice GetModuleHandle(NULL)→NULLに変更 </dd></dl>
+
+</div>
+</div>
+<a id="a0f20033bf3d2720a107cb842c0103f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f20033bf3d2720a107cb842c0103f1b">&#9670;&nbsp;</a></span>GetInidir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetInidir </td>
+          <td>(</td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>szFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す． </p>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.19 新規作成（GetExedirベース） </dd></dl>
+
+</div>
+</div>
+<a id="a51b62d771dd888ef97e1c7f06f356a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b62d771dd888ef97e1c7f06f356a1c">&#9670;&nbsp;</a></span>GetInidirOrExedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetInidirOrExedir </td>
+          <td>(</td>
+          <td class="paramtype">LPWSTR&#160;</td>
+          <td class="paramname"><em>pDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>szFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bRetExedirIfFileEmpty</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルまたはEXEファイルのあるディレクトリ，または指定されたファイル名のフルパスを返す（INIを優先）． </p>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.05.22 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a38951ec9e35547f303632f385ca3fbe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38951ec9e35547f303632f385ca3fbe9">&#9670;&nbsp;</a></span>GetLastWriteTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetLastWriteTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d39/class_c_file_time.html">CFileTime</a> *&#160;</td>
+          <td class="paramname"><em>pcFileTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイルの更新日時を取得</p>
+<dl class="section return"><dt>戻り値</dt><dd>true: 成功, false: 失敗 </dd></dl>
+
+</div>
+</div>
+<a id="ae37119bd501eaec68b89fd1367ab2767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37119bd501eaec68b89fd1367ab2767">&#9670;&nbsp;</a></span>GetLongFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL GetLongFileName </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFilePathSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszFilePathDes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ロングファイル名を取得する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszFilePathSrc</td><td>変換元パス名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pszFilePathDes</td><td>結果書き込み先 (長さMAX_PATHの領域が必要)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>Oct. 2, 2005 genta GetFilePath APIを使って書き換え </dd>
+<dd>
+Oct. 4, 2005 genta 相対パスが絶対パスに直されなかった </dd>
+<dd>
+Oct. 5, 2005 Moca 相対パスを絶対パスに変換するように </dd></dl>
+
+</div>
+</div>
+<a id="a0c3d79176978bef917fdd3d8c51ab974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3d79176978bef917fdd3d8c51ab974">&#9670;&nbsp;</a></span>GetRelPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCWSTR GetRelPath </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INIファイルまたはEXEファイルのあるディレクトリの相対パスを返す（INIを優先）． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszPath</td><td>[in] 対象パス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2013.06.26 novice 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="acd9a184fbed6e7ec54edc10aa5e4e5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9a184fbed6e7ec54edc10aa5e4e5a7">&#9670;&nbsp;</a></span>GetStrTrancateWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetStrTrancateWidth </td>
+          <td>(</td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HDC&#160;</td>
+          <td class="paramname"><em>hDC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPxWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定幅までに文字列を省略 </p><dl class="section date"><dt>日付</dt><dd>2014.06.12 新規作成 Moca </dd></dl>
+
+</div>
+</div>
+<a id="a2f28a17536f38511be48be84a97f1b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f28a17536f38511be48be84a97f1b33">&#9670;&nbsp;</a></span>IsDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsDirectory </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pszPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ディレクトリチェック</p>
+<p>指定されたパスがディレクトリかどうかを確認する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszPath</td><td>[in] 調べるパス名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ディレクトリ </td></tr>
+    <tr><td class="paramname">false</td><td>ディレクトリではない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2009.08.20 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a01bcf4e172facc265a4177c730c71289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01bcf4e172facc265a4177c730c71289">&#9670;&nbsp;</a></span>IsFileExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFileExists </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFileOnly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイルの存在チェック</p>
+<p>指定されたパスのファイルが存在するかどうかを確認する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>[in] 調べるパス名 </td></tr>
+    <tr><td class="paramname">bFileOnly</td><td>[in] true: ファイルのみ対象 / false: ディレクトリも対象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ファイルは存在する </td></tr>
+    <tr><td class="paramname">false</td><td>ファイルは存在しない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.01.04 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="aa990fabcd51cae6cea561afae725fc72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa990fabcd51cae6cea561afae725fc72">&#9670;&nbsp;</a></span>IsFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFilePath </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>pnBgn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>pnPathLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFileOnly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイル名の切り出し</p>
+<p>指定文字列からファイル名と認識される文字列を取り出し、 先頭Offset及び長さを返す。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ファイル名発見 </td></tr>
+    <tr><td class="paramname">false</td><td>ファイル名は見つからなかった</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002.01.04 genta ファイル存在確認方法変更 </dd>
+<dd>
+2002.01.04 genta ディレクトリを検査対象外にする機能を追加 </dd>
+<dd>
+2003.01.15 matsumo gccのエラーメッセージ(:区切り)でもファイルを検出可能に </dd>
+<dd>
+2004.05.29 genta C:\からファイルCが切り出されるのを防止 </dd>
+<dd>
+2004.11.13 genta/Moca ファイル名先頭の*?を考慮 </dd>
+<dd>
+2005.01.10 genta 変数名変更 j -&gt; cur_pos </dd>
+<dd>
+2005.01.23 genta 警告抑制のため，gotoをreturnに変更 </dd>
+<dd>
+2013.05.27 Moca 最長一致に変更 </dd></dl>
+
+</div>
+</div>
+<a id="a7acd578b14f54e3bd9ee8ea7c7a76a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acd578b14f54e3bd9ee8ea7c7a76a48">&#9670;&nbsp;</a></span>IsLocalDrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsLocalDrive </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszDrive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ローカルドライブの判定</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszDrive</td><td>ドライブ名を含むパス名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ローカルドライブ </td></tr>
+    <tr><td class="paramname">false</td><td>リムーバブルドライブ．ネットワークドライブ．</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>MIK </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2001.03.29 MIK 新規作成 </dd>
+<dd>
+2001.12.23 YAZAKI MRUの別クラス化に伴う関数化 </dd>
+<dd>
+2002.01.28 genta 戻り値の型をBOOLからboolに変更． </dd>
+<dd>
+2005.11.12 aroka 文字判定部変更 </dd>
+<dd>
+2006.01.08 genta CMRU::IsRemovableDriveとCEditDoc::IsLocalDriveが 実質的に同じものだった </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

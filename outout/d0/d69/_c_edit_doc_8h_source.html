@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/doc/CEditDoc.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_1765bad7995921fdb8ea4ac49f2445e1.html">doc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CEditDoc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d69/_c_edit_doc_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2000, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2001, genta, MIK, hor</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2002, genta, Moca, YAZAKI</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2003, genta, ryoji, zenryaku, naoh</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2004, Moca, novice, genta</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2005, Moca, genta, aroka</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Copyright (C) 2006, ryoji</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji, maru</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Copyright (C) 2008, ryoji, nasukoji</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d47/_c_app_mode_8h.html">_main/CAppMode.h</a>&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d4d/_c_doc_editor_8h.html">CDocEditor.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1b/_c_doc_file_8h.html">CDocFile.h</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d97/_c_doc_file_operation_8h.html">CDocFileOperation.h</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/dae/_c_doc_type_8h.html">CDocType.h</a>&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d45/_c_doc_outline_8h.html">CDocOutline.h</a>&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/da8/_c_doc_locker_8h.html">CDocLocker.h</a>&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/da2/_c_layout_mgr_8h.html">layout/CLayoutMgr.h</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d81/_c_doc_line_mgr_8h.html">logic/CDocLineMgr.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d50/_c_backup_agent_8h.html">CBackupAgent.h</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/da8/_c_auto_save_agent_8h.html">CAutoSaveAgent.h</a>&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d92/_c_auto_reload_agent_8h.html">CAutoReloadAgent.h</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/db5/_c_func_lookup_8h.html">func/CFuncLookup.h</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dc5/_c_eol_8h.html">CEol.h</a>&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d02/_c_cookie_manager_8h.html">macro/CCookieManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a>; <span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>; <span class="comment">// Sep. 10, 2002 genta</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>; <span class="comment">// 20050705 aroka</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">class </span><a class="code" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d37/class_c_edit_app.html">CEditApp</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../db/db7/class_c_edit_doc.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;: <span class="keyword">public</span> <a class="code" href="../../d9/da6/class_c_doc_subject.html">CDocSubject</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;, <span class="keyword">public</span> <a class="code" href="../../d0/d9c/class_t_instance_holder.html">TInstanceHolder</a>&lt;CEditDoc&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../db/db7/class_c_edit_doc.html#a74bd20a575213fc9dde6321eb19a67f0">CEditDoc</a>(<a class="code" href="../../d7/d37/class_c_edit_app.html">CEditApp</a>* pcApp);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ~<a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//初期化</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    BOOL <a class="code" href="../../db/db7/class_c_edit_doc.html#a2c8227588f2fed21754411a0dd39511c">Create</a>( <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>* pcEditWnd );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> InitDoc(); <span class="comment">/* 既存データのクリア */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> InitAllView(); <span class="comment">/* 全ビューの初期化：ファイルオープン/クローズ時等に、ビューを初期化する */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> Clear();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#af82ce2537bf418f528232bef9a37f748">SetFilePathAndIcon</a>(<span class="keyword">const</span> WCHAR* szFile);   <span class="comment">// Sep. 9, 2002 genta</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//属性</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   <a class="code" href="../../db/db7/class_c_edit_doc.html#a50632d4b31599e1b0d0e4ac697553cf9">GetDocumentEncoding</a>() <span class="keyword">const</span>;                </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../db/db7/class_c_edit_doc.html#aff375ce269f83a652d95c8c073cc43fc">GetDocumentBomExist</a>() <span class="keyword">const</span>;                </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span>        <a class="code" href="../../db/db7/class_c_edit_doc.html#a7e4d04734d5769527b1c9f8d32e94e9e">SetDocumentEncoding</a>(<a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCharCode, <span class="keywordtype">bool</span> bBom);    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#a5acea6fb958daeb28e955495b54dcc82">IsModificationForbidden</a>( EFunctionCode nCommand ) <span class="keyword">const</span>;   </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../db/db7/class_c_edit_doc.html#abc54805ca60ccc8fb6008261bb35d3c3">   97</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#abc54805ca60ccc8fb6008261bb35d3c3">IsEditable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !CAppMode::getInstance()-&gt;<a class="code" href="../../da/d2a/class_c_app_mode.html#a1c3132768e1bc975b7ede14fe848088c">IsViewMode</a>() &amp;&amp; !(!m_cDocLocker.IsDocWritable() &amp;&amp; GetDllShareData().m_Common.<a class="code" href="../../d5/d05/struct_common_setting.html#a1300b0c382e3d8d87d729e940b732bf2">m_sFile</a>.<a class="code" href="../../d0/d9b/struct_common_setting___file.html#ae6f5e525d9cf6c5438758726b33aa1bf">m_bUneditableIfUnwritable</a>); }  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#afc58192234b31d6153f441d7cf5f27c3">GetSaveInfo</a>(<a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>* pSaveInfo) <span class="keyword">const</span>;           </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">//状態</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#ae9bd3e3f97fa20d5bc984b88926524ed">GetEditInfo</a>( <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>* ) <span class="keyword">const</span>;    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#acac4119b7257d17675a9b96368c5f980">IsAcceptLoad</a>() <span class="keyword">const</span>;              </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//イベント</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    BOOL <a class="code" href="../../db/db7/class_c_edit_doc.html#af4ecf77f6e8d3ccc6dbfc8dbaeb84f28">HandleCommand</a>(EFunctionCode nCommand);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#a04c198903fe4f9d004b9b7dd1fda001f">OnChangeType</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#ac152e42276f397fc51fdbf2a77754ee7">OnChangeSetting</a>(<span class="keywordtype">bool</span> bDoLayout = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                         <span class="keywordtype">bool</span> bBlockingHook = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                         <span class="keywordtype">bool</span> bFromSetFontSize = <span class="keyword">false</span>);        <span class="comment">// ビューに設定変更を反映させる</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    BOOL <a class="code" href="../../db/db7/class_c_edit_doc.html#ab8f168da80039b64a92f247236510b9c">OnFileClose</a>(<span class="keywordtype">bool</span> bGrepNoConfirm);          <span class="comment">/* ファイルを閉じるときのMRU登録 &amp; 保存確認 ＆ 保存実行 */</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#aa8047129a7be752c1aa9c69bf7197b9a">RunAutoMacro</a>( <span class="keywordtype">int</span> idx, LPCWSTR pszSaveFilePath = NULL );   <span class="comment">// 2006.09.01 ryoji マクロ自動実行</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> SetBackgroundImage();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/db7/class_c_edit_doc.html#a876a350566c457c9e7413c01f6e418d7">SetCurDirNotitle</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//                       メンバ変数群                          //</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//参照</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>*       m_pcEditWnd;    <span class="comment">//  Sep. 10, 2002</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//データ構造</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a>     m_cDocLineMgr;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a>      m_cLayoutMgr;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//各種機能</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="../../d4/d9d/class_c_doc_file.html">CDocFile</a>            m_cDocFile;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../dd/db0/class_c_doc_file_operation.html">CDocFileOperation</a>   m_cDocFileOperation;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="../../d3/df4/class_c_doc_editor.html">CDocEditor</a>          m_cDocEditor;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="../../de/d22/class_c_doc_type.html">CDocType</a>            m_cDocType;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../d0/d3a/class_c_cookie_manager.html">CCookieManager</a>      m_cCookie;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//ヘルパ</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="../../d5/d5a/class_c_backup_agent.html">CBackupAgent</a>        m_cBackupAgent;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../db/db7/class_c_edit_doc.html#a0a3daafe73f77ece22fd6c42d071cef0">  140</a></span>&#160;    <a class="code" href="../../d5/d6a/class_c_auto_save_agent.html">CAutoSaveAgent</a>      <a class="code" href="../../db/db7/class_c_edit_doc.html#a0a3daafe73f77ece22fd6c42d071cef0">m_cAutoSaveAgent</a>;       </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="../../d8/d87/class_c_auto_reload_agent.html">CAutoReloadAgent</a>    m_cAutoReloadAgent;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="../../d9/df4/class_c_doc_outline.html">CDocOutline</a>         m_cDocOutline;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="../../d2/d99/class_c_doc_locker.html">CDocLocker</a>          m_cDocLocker;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">//動的状態</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../db/db7/class_c_edit_doc.html#a9ef5904a50959d8540045fd6da0f55dc">  147</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../db/db7/class_c_edit_doc.html#a9ef5904a50959d8540045fd6da0f55dc">m_nCommandExecNum</a>;          </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">//環境情報</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../db/db7/class_c_edit_doc.html#a042f44754f16553fa1bea53d6180eb0c">  151</a></span>&#160;    <a class="code" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a>     <a class="code" href="../../db/db7/class_c_edit_doc.html#a042f44754f16553fa1bea53d6180eb0c">m_cFuncLookup</a>;              </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//未整理変数</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span>             m_nTextWrapMethodCur;       <span class="comment">// 折り返し方法                 // 2008.05.30 nasukoji</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">bool</span>            m_bTextWrapMethodCurTemp;   <span class="comment">// 折り返し方法一時設定適用中   // 2008.05.30 nasukoji</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    LOGFONT         m_lfCur;                    <span class="comment">// 一時設定フォント</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span>             m_nPointSizeCur;            <span class="comment">// 一時設定フォントサイズ</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">bool</span>            m_blfCurTemp;               <span class="comment">// フォント設定適用中</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">int</span>             m_nPointSizeOrg;            <span class="comment">// 元のフォントサイズ</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">bool</span>            m_bTabSpaceCurTemp;         <span class="comment">// タブ幅一時設定適用中         // 2013.05.30 Moca</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    HBITMAP         m_hBackImg;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">int</span>             m_nBackImgWidth;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">int</span>             m_nBackImgHeight;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_doc_file_operation_html"><div class="ttname"><a href="../../dd/db0/class_c_doc_file_operation.html">CDocFileOperation</a></div><div class="ttdef"><b>Definition:</b> CDocFileOperation.h:32</div></div>
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="a_c_doc_file_8h_html"><div class="ttname"><a href="../../d4/d1b/_c_doc_file_8h.html">CDocFile.h</a></div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
+<div class="ttc" id="a_c_func_lookup_8h_html"><div class="ttname"><a href="../../da/db5/_c_func_lookup_8h.html">CFuncLookup.h</a></div><div class="ttdoc">表示用文字列等の取得</div></div>
+<div class="ttc" id="aclass_t_instance_holder_html"><div class="ttname"><a href="../../d0/d9c/class_t_instance_holder.html">TInstanceHolder</a></div><div class="ttdef"><b>Definition:</b> design_template.h:93</div></div>
+<div class="ttc" id="a_c_doc_locker_8h_html"><div class="ttname"><a href="../../dd/da8/_c_doc_locker_8h.html">CDocLocker.h</a></div></div>
+<div class="ttc" id="aclass_c_layout_mgr_html"><div class="ttname"><a href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a></div><div class="ttdoc">テキストのレイアウト情報管理</div><div class="ttdef"><b>Definition:</b> CLayoutMgr.h:92</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_af82ce2537bf418f528232bef9a37f748"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#af82ce2537bf418f528232bef9a37f748">CEditDoc::SetFilePathAndIcon</a></div><div class="ttdeci">void SetFilePathAndIcon(const WCHAR *szFile)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:448</div></div>
+<div class="ttc" id="aclass_c_doc_outline_html"><div class="ttname"><a href="../../d9/df4/class_c_doc_outline.html">CDocOutline</a></div><div class="ttdef"><b>Definition:</b> CDocOutline.h:31</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_acac4119b7257d17675a9b96368c5f980"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#acac4119b7257d17675a9b96368c5f980">CEditDoc::IsAcceptLoad</a></div><div class="ttdeci">bool IsAcceptLoad() const</div><div class="ttdoc">このウィンドウで(新しいウィンドウを開かずに)新しいファイルを開けるか</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:568</div></div>
+<div class="ttc" id="a_c_doc_line_mgr_8h_html"><div class="ttname"><a href="../../da/d81/_c_doc_line_mgr_8h.html">CDocLineMgr.h</a></div><div class="ttdoc">行データの管理</div></div>
+<div class="ttc" id="a_c_cookie_manager_8h_html"><div class="ttname"><a href="../../d9/d02/_c_cookie_manager_8h.html">CCookieManager.h</a></div><div class="ttdoc">Cookieマネージャ</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_aff375ce269f83a652d95c8c073cc43fc"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#aff375ce269f83a652d95c8c073cc43fc">CEditDoc::GetDocumentBomExist</a></div><div class="ttdeci">bool GetDocumentBomExist() const</div><div class="ttdoc">ドキュメントのBOM付加を取得</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:469</div></div>
+<div class="ttc" id="aclass_c_edit_app_html"><div class="ttname"><a href="../../d7/d37/class_c_edit_app.html">CEditApp</a></div><div class="ttdoc">エディタ部分アプリケーションクラス。CNormalProcess1個につき、1個存在。</div><div class="ttdef"><b>Definition:</b> CEditApp.h:44</div></div>
+<div class="ttc" id="aclass_c_doc_type_html"><div class="ttname"><a href="../../de/d22/class_c_doc_type.html">CDocType</a></div><div class="ttdef"><b>Definition:</b> CDocType.h:35</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div><div class="ttdef"><b>Definition:</b> CEditDoc.h:77</div></div>
+<div class="ttc" id="aclass_c_backup_agent_html"><div class="ttname"><a href="../../d5/d5a/class_c_backup_agent.html">CBackupAgent</a></div><div class="ttdef"><b>Definition:</b> CBackupAgent.h:29</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a50632d4b31599e1b0d0e4ac697553cf9"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a50632d4b31599e1b0d0e4ac697553cf9">CEditDoc::GetDocumentEncoding</a></div><div class="ttdeci">ECodeType GetDocumentEncoding() const</div><div class="ttdoc">ドキュメントの文字コードを取得</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:463</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_ab8f168da80039b64a92f247236510b9c"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#ab8f168da80039b64a92f247236510b9c">CEditDoc::OnFileClose</a></div><div class="ttdeci">BOOL OnFileClose(bool bGrepNoConfirm)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:854</div></div>
+<div class="ttc" id="astruct_common_setting_html_a1300b0c382e3d8d87d729e940b732bf2"><div class="ttname"><a href="../../d5/d05/struct_common_setting.html#a1300b0c382e3d8d87d729e940b732bf2">CommonSetting::m_sFile</a></div><div class="ttdeci">CommonSetting_File m_sFile</div><div class="ttdoc">ファイル</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:725</div></div>
+<div class="ttc" id="aclass_c_doc_editor_html"><div class="ttname"><a href="../../d3/df4/class_c_doc_editor.html">CDocEditor</a></div><div class="ttdef"><b>Definition:</b> CDocEditor.h:34</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a7e4d04734d5769527b1c9f8d32e94e9e"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a7e4d04734d5769527b1c9f8d32e94e9e">CEditDoc::SetDocumentEncoding</a></div><div class="ttdeci">void SetDocumentEncoding(ECodeType eCharCode, bool bBom)</div><div class="ttdoc">ドキュメントの文字コードを設定</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:475</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a042f44754f16553fa1bea53d6180eb0c"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a042f44754f16553fa1bea53d6180eb0c">CEditDoc::m_cFuncLookup</a></div><div class="ttdeci">CFuncLookup m_cFuncLookup</div><div class="ttdoc">機能名，機能番号などのresolve</div><div class="ttdef"><b>Definition:</b> CEditDoc.h:151</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a5acea6fb958daeb28e955495b54dcc82"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a5acea6fb958daeb28e955495b54dcc82">CEditDoc::IsModificationForbidden</a></div><div class="ttdeci">bool IsModificationForbidden(EFunctionCode nCommand) const</div><div class="ttdoc">指定コマンドによる書き換えが禁止されているかどうか //Aug. 14, 2000 genta</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:528</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a04c198903fe4f9d004b9b7dd1fda001f"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a04c198903fe4f9d004b9b7dd1fda001f">CEditDoc::OnChangeType</a></div><div class="ttdeci">void OnChangeType()</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:625</div></div>
+<div class="ttc" id="a_c_doc_outline_8h_html"><div class="ttname"><a href="../../dc/d45/_c_doc_outline_8h.html">CDocOutline.h</a></div></div>
+<div class="ttc" id="a_c_doc_editor_8h_html"><div class="ttname"><a href="../../d8/d4d/_c_doc_editor_8h.html">CDocEditor.h</a></div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_afc58192234b31d6153f441d7cf5f27c3"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#afc58192234b31d6153f441d7cf5f27c3">CEditDoc::GetSaveInfo</a></div><div class="ttdeci">void GetSaveInfo(SSaveInfo *pSaveInfo) const</div><div class="ttdoc">セーブ情報を取得</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:482</div></div>
+<div class="ttc" id="a_c_doc_file_operation_8h_html"><div class="ttname"><a href="../../d3/d97/_c_doc_file_operation_8h.html">CDocFileOperation.h</a></div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="a_c_layout_mgr_8h_html"><div class="ttname"><a href="../../d6/da2/_c_layout_mgr_8h.html">CLayoutMgr.h</a></div><div class="ttdoc">テキストのレイアウト情報管理</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a74bd20a575213fc9dde6321eb19a67f0"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a74bd20a575213fc9dde6321eb19a67f0">CEditDoc::CEditDoc</a></div><div class="ttdeci">CEditDoc(CEditApp *pcApp)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:165</div></div>
+<div class="ttc" id="a_c_auto_reload_agent_8h_html"><div class="ttname"><a href="../../d4/d92/_c_auto_reload_agent_8h.html">CAutoReloadAgent.h</a></div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="a_c_auto_save_agent_8h_html"><div class="ttname"><a href="../../de/da8/_c_auto_save_agent_8h.html">CAutoSaveAgent.h</a></div><div class="ttdoc">ファイルの自動保存</div></div>
+<div class="ttc" id="aclass_c_auto_save_agent_html"><div class="ttname"><a href="../../d5/d6a/class_c_auto_save_agent.html">CAutoSaveAgent</a></div><div class="ttdef"><b>Definition:</b> CAutoSaveAgent.h:71</div></div>
+<div class="ttc" id="a_c_backup_agent_8h_html"><div class="ttname"><a href="../../d0/d50/_c_backup_agent_8h.html">CBackupAgent.h</a></div></div>
+<div class="ttc" id="aclass_c_auto_reload_agent_html"><div class="ttname"><a href="../../d8/d87/class_c_auto_reload_agent.html">CAutoReloadAgent</a></div><div class="ttdef"><b>Definition:</b> CAutoReloadAgent.h:37</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a876a350566c457c9e7413c01f6e418d7"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a876a350566c457c9e7413c01f6e418d7">CEditDoc::SetCurDirNotitle</a></div><div class="ttdeci">void SetCurDirNotitle()</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:1001</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a0a3daafe73f77ece22fd6c42d071cef0"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a0a3daafe73f77ece22fd6c42d071cef0">CEditDoc::m_cAutoSaveAgent</a></div><div class="ttdeci">CAutoSaveAgent m_cAutoSaveAgent</div><div class="ttdoc">自動保存管理</div><div class="ttdef"><b>Definition:</b> CEditDoc.h:140</div></div>
+<div class="ttc" id="aclass_c_func_lookup_html"><div class="ttname"><a href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a></div><div class="ttdoc">表示用文字列等の取得</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:59</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_aa8047129a7be752c1aa9c69bf7197b9a"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#aa8047129a7be752c1aa9c69bf7197b9a">CEditDoc::RunAutoMacro</a></div><div class="ttdeci">void RunAutoMacro(int idx, LPCWSTR pszSaveFilePath=NULL)</div><div class="ttdoc">マクロ自動実行</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:975</div></div>
+<div class="ttc" id="aclass_c_cookie_manager_html"><div class="ttname"><a href="../../d0/d3a/class_c_cookie_manager.html">CCookieManager</a></div><div class="ttdef"><b>Definition:</b> CCookieManager.h:36</div></div>
+<div class="ttc" id="astruct_s_save_info_html"><div class="ttname"><a href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:110</div></div>
+<div class="ttc" id="a_c_eol_8h_html"><div class="ttname"><a href="../../db/dc5/_c_eol_8h.html">CEol.h</a></div><div class="ttdoc">End of Line種別の管理</div></div>
+<div class="ttc" id="astruct_edit_info_html"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html">EditInfo</a></div><div class="ttdef"><b>Definition:</b> EditInfo.h:42</div></div>
+<div class="ttc" id="aclass_c_func_info_arr_html"><div class="ttname"><a href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a></div><div class="ttdoc">アウトライン解析 データ配列</div><div class="ttdef"><b>Definition:</b> CFuncInfoArr.h:36</div></div>
+<div class="ttc" id="astruct_common_setting___file_html_ae6f5e525d9cf6c5438758726b33aa1bf"><div class="ttname"><a href="../../d0/d9b/struct_common_setting___file.html#ae6f5e525d9cf6c5438758726b33aa1bf">CommonSetting_File::m_bUneditableIfUnwritable</a></div><div class="ttdeci">bool m_bUneditableIfUnwritable</div><div class="ttdoc">上書き禁止検出時は編集禁止にする</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:275</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_abc54805ca60ccc8fb6008261bb35d3c3"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#abc54805ca60ccc8fb6008261bb35d3c3">CEditDoc::IsEditable</a></div><div class="ttdeci">bool IsEditable() const</div><div class="ttdoc">編集可能かどうか</div><div class="ttdef"><b>Definition:</b> CEditDoc.h:97</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_af4ecf77f6e8d3ccc6dbfc8dbaeb84f28"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#af4ecf77f6e8d3ccc6dbfc8dbaeb84f28">CEditDoc::HandleCommand</a></div><div class="ttdeci">BOOL HandleCommand(EFunctionCode nCommand)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:588</div></div>
+<div class="ttc" id="aclass_c_doc_subject_html"><div class="ttname"><a href="../../d9/da6/class_c_doc_subject.html">CDocSubject</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:145</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a></div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:75</div></div>
+<div class="ttc" id="aclass_c_doc_file_html"><div class="ttname"><a href="../../d4/d9d/class_c_doc_file.html">CDocFile</a></div><div class="ttdef"><b>Definition:</b> CDocFile.h:54</div></div>
+<div class="ttc" id="a_c_doc_type_8h_html"><div class="ttname"><a href="../../d8/dae/_c_doc_type_8h.html">CDocType.h</a></div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_ac152e42276f397fc51fdbf2a77754ee7"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#ac152e42276f397fc51fdbf2a77754ee7">CEditDoc::OnChangeSetting</a></div><div class="ttdeci">void OnChangeSetting(bool bDoLayout=true, bool bBlockingHook=true, bool bFromSetFontSize=false)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:656</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_ae9bd3e3f97fa20d5bc984b88926524ed"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#ae9bd3e3f97fa20d5bc984b88926524ed">CEditDoc::GetEditInfo</a></div><div class="ttdeci">void GetEditInfo(EditInfo *) const</div><div class="ttdoc">編集ファイル情報を取得 //2007.10.24 kobake 関数名変更: SetFileInfo→GetEditInfo</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:492</div></div>
+<div class="ttc" id="aclass_c_doc_line_mgr_html"><div class="ttname"><a href="../../d4/dc4/class_c_doc_line_mgr.html">CDocLineMgr</a></div><div class="ttdef"><b>Definition:</b> CDocLineMgr.h:47</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a9ef5904a50959d8540045fd6da0f55dc"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a9ef5904a50959d8540045fd6da0f55dc">CEditDoc::m_nCommandExecNum</a></div><div class="ttdeci">int m_nCommandExecNum</div><div class="ttdoc">コマンド実行回数</div><div class="ttdef"><b>Definition:</b> CEditDoc.h:147</div></div>
+<div class="ttc" id="a_c_app_mode_8h_html"><div class="ttname"><a href="../../d7/d47/_c_app_mode_8h.html">CAppMode.h</a></div></div>
+<div class="ttc" id="aclass_c_app_mode_html_a1c3132768e1bc975b7ede14fe848088c"><div class="ttname"><a href="../../da/d2a/class_c_app_mode.html#a1c3132768e1bc975b7ede14fe848088c">CAppMode::IsViewMode</a></div><div class="ttdeci">bool IsViewMode() const</div><div class="ttdoc">ビューモードを取得</div><div class="ttdef"><b>Definition:</b> CAppMode.h:41</div></div>
+<div class="ttc" id="aclass_c_doc_locker_html"><div class="ttname"><a href="../../d2/d99/class_c_doc_locker.html">CDocLocker</a></div><div class="ttdef"><b>Definition:</b> CDocLocker.h:29</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html_a2c8227588f2fed21754411a0dd39511c"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html#a2c8227588f2fed21754411a0dd39511c">CEditDoc::Create</a></div><div class="ttdeci">BOOL Create(CEditWnd *pcEditWnd)</div><div class="ttdef"><b>Definition:</b> CEditDoc.cpp:418</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

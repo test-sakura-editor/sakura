@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/apiwrap/StdApi.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_91e391275ce155d63b5eb01c4bf28a00.html">apiwrap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">StdApi.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/df5/_std_api_8h_source.html">StdApi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a99aba1a93e3a3c46f078c64e9011dd9e"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd6/_std_api_8cpp.html#a99aba1a93e3a3c46f078c64e9011dd9e">ApiWrap::MakeSureDirectoryPathExistsW</a> (LPCWSTR szDirPath)</td></tr>
+<tr class="separator:a99aba1a93e3a3c46f078c64e9011dd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40840b2b13d8e2f82477f99aed44103"><td class="memItemLeft" align="right" valign="top"><a id="ae40840b2b13d8e2f82477f99aed44103"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::SetPixelSurely</b> (HDC hdc, int x, int y, COLORREF c)</td></tr>
+<tr class="separator:ae40840b2b13d8e2f82477f99aed44103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a99aba1a93e3a3c46f078c64e9011dd9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99aba1a93e3a3c46f078c64e9011dd9e">&#9670;&nbsp;</a></span>MakeSureDirectoryPathExistsW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL ApiWrap::MakeSureDirectoryPathExistsW </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>szDirPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>MakeSureDirectoryPathExists の UNICODE 版。 szDirPath で指定されたすべてのディレクトリを作成します。 ディレクトリの記述は、ルートから開始します。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DirPath</td><td>有効なパス名を指定する、null で終わる文字列へのポインタを指定します。 パスの最後のコンポーネントがファイル名ではなくディレクトリである場合、 文字列の最後に円記号（\）を記述しなければなりません。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>関数が成功すると、TRUE が返ります。 関数が失敗すると、FALSE が返ります。</dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>指定された各ディレクトリがまだ存在しない場合、それらのディレクトリを順に作成します。 一部のディレクトリのみを作成した場合、この関数は FALSE を返します。</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>kobake</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.10.15 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

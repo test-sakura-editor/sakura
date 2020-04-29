@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/string_ex.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">string_ex.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d92/string__ex_8h_source.html">string_ex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dec/std__macro_8h_source.html">util/std_macro.h</a>&quot;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;locale.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a150e035f0c02fc4c697934e23305cfa5"><td class="memItemLeft" align="right" valign="top">int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#a150e035f0c02fc4c697934e23305cfa5">my_internal_icmp</a> (const char *s1, const char *s2, unsigned int n, unsigned int dcount, bool flag)</td></tr>
+<tr class="separator:a150e035f0c02fc4c697934e23305cfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888c6002610383acb9b2cbeb3f1111cd"><td class="memItemLeft" align="right" valign="top">int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#a888c6002610383acb9b2cbeb3f1111cd">my_stricmp</a> (const char *s1, const char *s2)</td></tr>
+<tr class="separator:a888c6002610383acb9b2cbeb3f1111cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe08ffea3ff2523173de8cf76e1a707b"><td class="memItemLeft" align="right" valign="top">int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#afe08ffea3ff2523173de8cf76e1a707b">my_strnicmp</a> (const char *s1, const char *s2, size_t n)</td></tr>
+<tr class="separator:afe08ffea3ff2523173de8cf76e1a707b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a5a54f31fb6c3722cf87c09caf06ed"><td class="memItemLeft" align="right" valign="top"><a id="a29a5a54f31fb6c3722cf87c09caf06ed"></a>
+LPWSTR&#160;</td><td class="memItemRight" valign="bottom"><b>wcscpyn</b> (LPWSTR lpString1, LPCWSTR lpString2, int iMaxLength)</td></tr>
+<tr class="separator:a29a5a54f31fb6c3722cf87c09caf06ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b2e931f391bb85e39ae707b52ba542"><td class="memItemLeft" align="right" valign="top"><a id="a25b2e931f391bb85e39ae707b52ba542"></a>
+ACHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>tcstostr</b> (ACHAR *dest, const WCHAR *src, size_t count)</td></tr>
+<tr class="separator:a25b2e931f391bb85e39ae707b52ba542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ccdf2919533c8ab1072b2f4c30389e3"><td class="memItemLeft" align="right" valign="top"><a id="a4ccdf2919533c8ab1072b2f4c30389e3"></a>
+WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>tcstostr</b> (WCHAR *dest, const WCHAR *src, size_t count)</td></tr>
+<tr class="separator:a4ccdf2919533c8ab1072b2f4c30389e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861593daded48224ca0a245ecdae6b47"><td class="memItemLeft" align="right" valign="top"><a id="a861593daded48224ca0a245ecdae6b47"></a>
+WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>strtotcs</b> (WCHAR *dest, const ACHAR *src, size_t count)</td></tr>
+<tr class="separator:a861593daded48224ca0a245ecdae6b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cfd6f83498d57b2e870817736eeb287"><td class="memItemLeft" align="right" valign="top"><a id="a9cfd6f83498d57b2e870817736eeb287"></a>
+WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>strtotcs</b> (WCHAR *dest, const WCHAR *src, size_t count)</td></tr>
+<tr class="separator:a9cfd6f83498d57b2e870817736eeb287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e1147f8e30c99df9e82d29e1b422c6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#a81e1147f8e30c99df9e82d29e1b422c6">strncpy_ex</a> (char *dst, size_t dst_count, const char *src, size_t src_count)</td></tr>
+<tr class="separator:a81e1147f8e30c99df9e82d29e1b422c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318a429ecc2dec0985ec27aac3c39c56"><td class="memItemLeft" align="right" valign="top"><a id="a318a429ecc2dec0985ec27aac3c39c56"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>wcsistr</b> (const wchar_t *s1, const wchar_t *s2)</td></tr>
+<tr class="separator:a318a429ecc2dec0985ec27aac3c39c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb42e52bc135b458a90e8ca95e8a48df"><td class="memItemLeft" align="right" valign="top"><a id="aeb42e52bc135b458a90e8ca95e8a48df"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>stristr</b> (const char *s1, const char *s2)</td></tr>
+<tr class="separator:aeb42e52bc135b458a90e8ca95e8a48df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2014775694ba9cf4de4b7c0fbb8b04b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#ac2014775694ba9cf4de4b7c0fbb8b04b">strichr_j</a> (const char *s1, char c2)</td></tr>
+<tr class="memdesc:ac2014775694ba9cf4de4b7c0fbb8b04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">strchr の大文字小文字同一視＆日本語対応版。  <a href="../../da/d6e/string__ex_8cpp.html#ac2014775694ba9cf4de4b7c0fbb8b04b">[詳解]</a><br /></td></tr>
+<tr class="separator:ac2014775694ba9cf4de4b7c0fbb8b04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50dbb72f094bc14b4cc023d447b23237"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#a50dbb72f094bc14b4cc023d447b23237">strchr_j</a> (const char *str, char c)</td></tr>
+<tr class="memdesc:a50dbb72f094bc14b4cc023d447b23237"><td class="mdescLeft">&#160;</td><td class="mdescRight">strchr の日本語対応版。  <a href="../../da/d6e/string__ex_8cpp.html#a50dbb72f094bc14b4cc023d447b23237">[詳解]</a><br /></td></tr>
+<tr class="separator:a50dbb72f094bc14b4cc023d447b23237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043796ee81af4c5d0f7a1e0daa5cdcbb"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#a043796ee81af4c5d0f7a1e0daa5cdcbb">strstr_j</a> (const char *s1, const char *s2)</td></tr>
+<tr class="memdesc:a043796ee81af4c5d0f7a1e0daa5cdcbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">strstr の日本語対応版。  <a href="../../da/d6e/string__ex_8cpp.html#a043796ee81af4c5d0f7a1e0daa5cdcbb">[詳解]</a><br /></td></tr>
+<tr class="separator:a043796ee81af4c5d0f7a1e0daa5cdcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdee90decd2158fd656ab1f5b3ea5014"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d6e/string__ex_8cpp.html#abdee90decd2158fd656ab1f5b3ea5014">stristr_j</a> (const char *s1, const char *s2)</td></tr>
+<tr class="memdesc:abdee90decd2158fd656ab1f5b3ea5014"><td class="mdescLeft">&#160;</td><td class="mdescRight">strstr の大文字小文字同一視＆日本語対応版。  <a href="../../da/d6e/string__ex_8cpp.html#abdee90decd2158fd656ab1f5b3ea5014">[詳解]</a><br /></td></tr>
+<tr class="separator:abdee90decd2158fd656ab1f5b3ea5014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a1ec0ad93440b62a26682dc1736c19"><td class="memItemLeft" align="right" valign="top"><a id="ac9a1ec0ad93440b62a26682dc1736c19"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs2</b> (wchar_t *dst, const char *src, size_t dst_count)</td></tr>
+<tr class="separator:ac9a1ec0ad93440b62a26682dc1736c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb2e222558ed0e2985c83f6b519c773"><td class="memItemLeft" align="right" valign="top"><a id="a9bb2e222558ed0e2985c83f6b519c773"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs2</b> (wchar_t *pDst, int nDstCount, const char *pSrc, int nSrcCount)</td></tr>
+<tr class="separator:a9bb2e222558ed0e2985c83f6b519c773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4ca683df80514c5624b0dd37506fae"><td class="memItemLeft" align="right" valign="top"><a id="a0c4ca683df80514c5624b0dd37506fae"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>wcstombs2</b> (char *dst, const wchar_t *src, size_t dst_count)</td></tr>
+<tr class="separator:a0c4ca683df80514c5624b0dd37506fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198034e8381b1bf09f26bbd4427d03fb"><td class="memItemLeft" align="right" valign="top"><a id="a198034e8381b1bf09f26bbd4427d03fb"></a>
+wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs_new</b> (const char *src)</td></tr>
+<tr class="separator:a198034e8381b1bf09f26bbd4427d03fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1684d903bd52535eb5422bc5d8abcc37"><td class="memItemLeft" align="right" valign="top"><a id="a1684d903bd52535eb5422bc5d8abcc37"></a>
+wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs_new</b> (const char *pSrc, int nSrcLen, int *pnDstLen)</td></tr>
+<tr class="separator:a1684d903bd52535eb5422bc5d8abcc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eac3597fa934963270304602834bd82"><td class="memItemLeft" align="right" valign="top"><a id="a7eac3597fa934963270304602834bd82"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>wcstombs_new</b> (const wchar_t *src)</td></tr>
+<tr class="separator:a7eac3597fa934963270304602834bd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ec4ec2b9537f10fd618f6447ca61db"><td class="memItemLeft" align="right" valign="top"><a id="a81ec4ec2b9537f10fd618f6447ca61db"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>wcstombs_new</b> (const wchar_t *pSrc, int nSrcLen)</td></tr>
+<tr class="separator:a81ec4ec2b9537f10fd618f6447ca61db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93811b2620f7bb4d975ed998a261c72"><td class="memItemLeft" align="right" valign="top"><a id="ab93811b2620f7bb4d975ed998a261c72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs_vector</b> (const char *src, std::vector&lt; wchar_t &gt; *ret)</td></tr>
+<tr class="separator:ab93811b2620f7bb4d975ed998a261c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa979d72381192851bc6ba595f65cd81b"><td class="memItemLeft" align="right" valign="top"><a id="aa979d72381192851bc6ba595f65cd81b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mbstowcs_vector</b> (const char *pSrc, int nSrcLen, std::vector&lt; wchar_t &gt; *ret)</td></tr>
+<tr class="separator:aa979d72381192851bc6ba595f65cd81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a64bdc17e1e25fbcce4a4ef929f2c2"><td class="memItemLeft" align="right" valign="top"><a id="a58a64bdc17e1e25fbcce4a4ef929f2c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wcstombs_vector</b> (const wchar_t *src, std::vector&lt; char &gt; *ret)</td></tr>
+<tr class="separator:a58a64bdc17e1e25fbcce4a4ef929f2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db4cf96b859a230627cb58da833451d"><td class="memItemLeft" align="right" valign="top"><a id="a3db4cf96b859a230627cb58da833451d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wcstombs_vector</b> (const wchar_t *pSrc, int nSrcLen, std::vector&lt; char &gt; *ret)</td></tr>
+<tr class="separator:a3db4cf96b859a230627cb58da833451d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56c2e44bad7f23b01f139755b42a221"><td class="memItemLeft" align="right" valign="top"><a id="ad56c2e44bad7f23b01f139755b42a221"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>wmemicmp</b> (const WCHAR *p1, const WCHAR *p2, size_t count)</td></tr>
+<tr class="separator:ad56c2e44bad7f23b01f139755b42a221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a0f7c1a4cc5cbd8882df14a3ba23d3"><td class="memItemLeft" align="right" valign="top"><a id="af3a0f7c1a4cc5cbd8882df14a3ba23d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>wmemicmp</b> (const WCHAR *p1, const WCHAR *p2)</td></tr>
+<tr class="separator:af3a0f7c1a4cc5cbd8882df14a3ba23d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdd2a635dfe6ab29afb41c8a8ec5a3f"><td class="memItemLeft" align="right" valign="top"><a id="aebdd2a635dfe6ab29afb41c8a8ec5a3f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>wmemicmp_ascii</b> (const WCHAR *p1, const WCHAR *p2, size_t count)</td></tr>
+<tr class="separator:aebdd2a635dfe6ab29afb41c8a8ec5a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7ea2450d71ae4363aab9e135f3cc85"><td class="memTemplParams" colspan="2"><a id="a1a7ea2450d71ae4363aab9e135f3cc85"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a1a7ea2450d71ae4363aab9e135f3cc85"><td class="memTemplItemLeft" align="right" valign="top">CHAR_TYPE *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>my_strtok</b> (CHAR_TYPE *pBuffer, int nLen, int *pnOffset, const CHAR_TYPE *pDelimiter)</td></tr>
+<tr class="separator:a1a7ea2450d71ae4363aab9e135f3cc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2974318e5ed0e281c3d71868de1862"><td class="memItemLeft" align="right" valign="top"><a id="a4d2974318e5ed0e281c3d71868de1862"></a>
+template ACHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>my_strtok</b> (ACHAR *, int, int *, const ACHAR *)</td></tr>
+<tr class="separator:a4d2974318e5ed0e281c3d71868de1862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c9b9303551b4649ac6611ab05b0be6"><td class="memItemLeft" align="right" valign="top"><a id="a84c9b9303551b4649ac6611ab05b0be6"></a>
+template WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>my_strtok</b> (WCHAR *, int, int *, const WCHAR *)</td></tr>
+<tr class="separator:a84c9b9303551b4649ac6611ab05b0be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbfb3e8d293471408268372dad7fd68"><td class="memItemLeft" align="right" valign="top"><a id="acdbfb3e8d293471408268372dad7fd68"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>skr_towupper</b> (int c)</td></tr>
+<tr class="separator:acdbfb3e8d293471408268372dad7fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222088ae5e72af1400b73c5bdc8363cc"><td class="memItemLeft" align="right" valign="top"><a id="a222088ae5e72af1400b73c5bdc8363cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>skr_towlower</b> (int c)</td></tr>
+<tr class="separator:a222088ae5e72af1400b73c5bdc8363cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a150e035f0c02fc4c697934e23305cfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150e035f0c02fc4c697934e23305cfa5">&#9670;&nbsp;</a></span>my_internal_icmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __cdecl my_internal_icmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>dcount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>大文字小文字を同一視する文字列長さ制限比較をする。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>[in] 文字列１ </td></tr>
+    <tr><td class="paramname">s2</td><td>[in] 文字列２ </td></tr>
+    <tr><td class="paramname">n</td><td>[in] 文字長 </td></tr>
+    <tr><td class="paramname">dcount</td><td>[in] ステップ値 (1=_strnicmp,_memicmp, 0=stricmp) </td></tr>
+    <tr><td class="paramname">flag</td><td>[in] 文字列終端チェック (true=stricmp,_strnicmp, false=_memicmp)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>一致 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002.11.29 Moca 0以外の時の戻り値を，「元の値の差」から「大文字としたときの差」に変更 </dd></dl>
+
+</div>
+</div>
+<a id="a888c6002610383acb9b2cbeb3f1111cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888c6002610383acb9b2cbeb3f1111cd">&#9670;&nbsp;</a></span>my_stricmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __cdecl my_stricmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>大文字小文字を同一視する文字列比較をする。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>[in] 文字列１ </td></tr>
+    <tr><td class="paramname">s2</td><td>[in] 文字列２</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>一致 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe08ffea3ff2523173de8cf76e1a707b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe08ffea3ff2523173de8cf76e1a707b">&#9670;&nbsp;</a></span>my_strnicmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __cdecl my_strnicmp </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>大文字小文字を同一視する文字列長さ制限比較をする。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>[in] 文字列１ </td></tr>
+    <tr><td class="paramname">s2</td><td>[in] 文字列２ </td></tr>
+    <tr><td class="paramname">n</td><td>[in] 文字長</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>一致 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50dbb72f094bc14b4cc023d447b23237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50dbb72f094bc14b4cc023d447b23237">&#9670;&nbsp;</a></span>strchr_j()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* strchr_j </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>strchr の日本語対応版。 </p>
+<dl class="section date"><dt>日付</dt><dd>2005.04.07 MIK 新規作成 </dd>
+<dd>
+2007.10.21 kobake 関数名変更: my_strchr→strchr_j </dd></dl>
+
+</div>
+</div>
+<a id="ac2014775694ba9cf4de4b7c0fbb8b04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2014775694ba9cf4de4b7c0fbb8b04b">&#9670;&nbsp;</a></span>strichr_j()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* strichr_j </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>strchr の大文字小文字同一視＆日本語対応版。 </p>
+<dl class="section date"><dt>日付</dt><dd>2005.04.07 MIK 新規作成 </dd>
+<dd>
+2007.10.21 kobake 関数名変更: my_strchri→strichr_j </dd></dl>
+
+</div>
+</div>
+<a id="abdee90decd2158fd656ab1f5b3ea5014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdee90decd2158fd656ab1f5b3ea5014">&#9670;&nbsp;</a></span>stristr_j()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* stristr_j </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>strstr の大文字小文字同一視＆日本語対応版。 </p>
+<p>strstr()の大文字小文字同一視版</p>
+<dl class="section note"><dt>覚え書き</dt><dd>Windows APIにあるStrStrIはIE4が入っていないPCでは使用不可のため 独自に作成</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2005.04.07 MIK 新規作成 </dd>
+<dd>
+2007.10.21 kobake 関数名変更: my_strstri→stristr_j </dd></dl>
+
+</div>
+</div>
+<a id="a81e1147f8e30c99df9e82d29e1b422c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e1147f8e30c99df9e82d29e1b422c6">&#9670;&nbsp;</a></span>strncpy_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* strncpy_ex </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dst_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>src_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>文字数制限機能付きstrncpy</p>
+<p>コピー先のバッファサイズから溢れないようにstrncpyする。 バッファが不足する場合には2バイト文字の切断もあり得る。 末尾の\0は付与されないが、コピーはコピー先バッファサイズ-1までにしておく。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>[in] コピー先領域へのポインタ </td></tr>
+    <tr><td class="paramname">dst_count</td><td>[in] コピー先領域のサイズ </td></tr>
+    <tr><td class="paramname">src</td><td>[in] コピー元 </td></tr>
+    <tr><td class="paramname">src_count</td><td>[in] コピーする文字列の末尾</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">実際にコピーされたコピー先領域の1つ後を指すポインタ</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003.04.03 genta </dd></dl>
+
+</div>
+</div>
+<a id="a043796ee81af4c5d0f7a1e0daa5cdcbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043796ee81af4c5d0f7a1e0daa5cdcbb">&#9670;&nbsp;</a></span>strstr_j()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* strstr_j </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>strstr の日本語対応版。 </p>
+<p>strstr()の2byte code対応版</p>
+<dl class="section date"><dt>日付</dt><dd>2005.04.07 MIK 新規作成 </dd>
+<dd>
+2007.10.21 kobake 関数名変更: my_strstr→strstr_j </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgGrep.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgGrep.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d2b/_c_dlg_grep_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2002, Moca</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8d/_c_recent_8h.html">recent/CRecent.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/df1/window_8h.html">util/window.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define DEFAULT_EXCLUDE_FILE_PATTERN    L&quot;*.msi;*.exe;*.obj;*.pdb;*.ilk;*.res;*.pch;*.iobj;*.ipdb&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define DEFAULT_EXCLUDE_FOLDER_PATTERN  L&quot;.git;.svn;.vs&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a> : <span class="keyword">public</span> <a class="code" href="../../dd/d09/class_c_dialog.html">CDialog</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a> <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a76163a913a974f165c37dd8867ceebb2">GetPackedGFileString</a>() <span class="keyword">const</span>;  </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    BOOL <a class="code" href="../../d8/ded/class_c_dlg_grep.html#aa052ceacab1932d4cc7ab589937d40a7">OnCbnDropDown</a>( HWND hwndCtl, <span class="keywordtype">int</span> wID ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> DoModal( HINSTANCE, HWND, <span class="keyword">const</span> WCHAR* );   <span class="comment">/* モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//  HWND DoModeless( HINSTANCE, HWND, const char* );    /* モードレスダイアログの表示 */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#ad707e200b7d224d7c20f61d80e4994b8">   42</a></span>&#160;    BOOL        <a class="code" href="../../d8/ded/class_c_dlg_grep.html#ad707e200b7d224d7c20f61d80e4994b8">m_bSubFolder</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#a967b916728ff445301867fdb5b05e759">   43</a></span>&#160;    BOOL        <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a967b916728ff445301867fdb5b05e759">m_bFromThisText</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#a06147cf4be98f85ed768d496fa28b6c7">   45</a></span>&#160;    <a class="code" href="../../d2/d18/struct_s_search_option.html">SSearchOption</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a06147cf4be98f85ed768d496fa28b6c7">m_sSearchOption</a>;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#adfb6391a95dc5737655fe6a086c25afd">   47</a></span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#adfb6391a95dc5737655fe6a086c25afd">m_nGrepCharSet</a>;         </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#aa9481b41abe3f982cb3d69245c28eefc">   48</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d8/ded/class_c_dlg_grep.html#aa9481b41abe3f982cb3d69245c28eefc">m_nGrepOutputStyle</a>;     </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#ab363293527897c16bb1c644c8e2c611c">   49</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d8/ded/class_c_dlg_grep.html#ab363293527897c16bb1c644c8e2c611c">m_nGrepOutputLineType</a>;      </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#a948d444c8915d530160b03d687a61bd2">   50</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a948d444c8915d530160b03d687a61bd2">m_bGrepOutputFileOnly</a>;      </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#ac4177bb3ff7486003ad10cab8e605984">   51</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d8/ded/class_c_dlg_grep.html#ac4177bb3ff7486003ad10cab8e605984">m_bGrepOutputBaseFolder</a>;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#aaf80000358cf88a82191d1bf76bfd171">   52</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d8/ded/class_c_dlg_grep.html#aaf80000358cf88a82191d1bf76bfd171">m_bGrepSeparateFolder</a>;      </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#a3d0a328bcc6c12e519c7d8abb499ddb4">   54</a></span>&#160;    std::wstring    <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a3d0a328bcc6c12e519c7d8abb499ddb4">m_strText</a>;              </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#ac730923cef610f12fa0bb11acedd33eb">   55</a></span>&#160;    <span class="keywordtype">bool</span>            <a class="code" href="../../d8/ded/class_c_dlg_grep.html#ac730923cef610f12fa0bb11acedd33eb">m_bSetText</a>;             </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#afd9c683063be899b3b1893ec180d88b9">   56</a></span>&#160;    <a class="code" href="../../db/d03/class_static_string.html">SFilePathLong</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#afd9c683063be899b3b1893ec180d88b9">m_szFile</a>;               </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#a2d27df9b01c996313d9170e6b3b574d0">   57</a></span>&#160;    <a class="code" href="../../db/d03/class_static_string.html">SFilePathLong</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#a2d27df9b01c996313d9170e6b3b574d0">m_szFolder</a>;             </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#aa5f865872cad8b5970a700506532194d">   58</a></span>&#160;    <a class="code" href="../../db/d03/class_static_string.html">SFilePathLong</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#aa5f865872cad8b5970a700506532194d">m_szExcludeFile</a>;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d8/ded/class_c_dlg_grep.html#adfd986f73eb4d8f85fed07d0aa563976">   59</a></span>&#160;    <a class="code" href="../../db/d03/class_static_string.html">SFilePathLong</a>   <a class="code" href="../../d8/ded/class_c_dlg_grep.html#adfd986f73eb4d8f85fed07d0aa563976">m_szExcludeFolder</a>;      </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../db/d03/class_static_string.html">SFilePath</a>   m_szCurrentFilePath;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelText;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a>           m_cRecentSearch;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelFile;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d7/d1f/class_c_recent_grep_file.html">CRecentGrepFile</a>         m_cRecentGrepFile;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelFolder;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../d8/d79/class_c_recent_grep_folder.html">CRecentGrepFolder</a>       m_cRecentGrepFolder;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelExcludeFile;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d9/d3a/class_c_recent_exclude_file.html">CRecentExcludeFile</a>      m_cRecentExcludeFile;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelExcludeFolder;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../de/daf/class_c_recent_exclude_folder.html">CRecentExcludeFolder</a>    m_cRecentExcludeFolder;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a>        m_cFontText;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    ||  実装ヘルパ関数</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    BOOL OnInitDialog(HWND hwndDlg, WPARAM wParam, LPARAM lParam) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    BOOL OnDestroy() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    BOOL OnBnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    LPVOID GetHelpIdTable(<span class="keywordtype">void</span>) <span class="keyword">override</span>;   <span class="comment">//@@@ 2002.01.18 add</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> SetData( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;  <span class="comment">/* ダイアログデータの設定 */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d8/ded/class_c_dlg_grep.html#ac69c4b9de59a6690f5a4df171b9a7f21">GetData</a>( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;   <span class="comment">/* ダイアログデータの取得 */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d8/ded/class_c_dlg_grep.html#aef4870ca62f1ec7543f380905d61f7ec">SetDataFromThisText</a>(<span class="keywordtype">bool</span> bChecked);    <span class="comment">/* 現在編集中ファイルから検索チェックでの設定 */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_recent_grep_file_html"><div class="ttname"><a href="../../d7/d1f/class_c_recent_grep_file.html">CRecentGrepFile</a></div><div class="ttdoc">GREPファイルの履歴を管理 (RECENT_FOR_GREP_FILE)</div><div class="ttdef"><b>Definition:</b> CRecentGrepFile.h:33</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_ac69c4b9de59a6690f5a4df171b9a7f21"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#ac69c4b9de59a6690f5a4df171b9a7f21">CDlgGrep::GetData</a></div><div class="ttdeci">int GetData(void) override</div><div class="ttdef"><b>Definition:</b> CDlgGrep.cpp:732</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_aa9481b41abe3f982cb3d69245c28eefc"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#aa9481b41abe3f982cb3d69245c28eefc">CDlgGrep::m_nGrepOutputStyle</a></div><div class="ttdeci">int m_nGrepOutputStyle</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:48</div></div>
+<div class="ttc" id="astruct_s_combo_box_item_deleter_html"><div class="ttname"><a href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a></div><div class="ttdef"><b>Definition:</b> CDialog.h:53</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a></div><div class="ttdoc">GREPダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:28</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_ab363293527897c16bb1c644c8e2c611c"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#ab363293527897c16bb1c644c8e2c611c">CDlgGrep::m_nGrepOutputLineType</a></div><div class="ttdeci">int m_nGrepOutputLineType</div><div class="ttdoc">結果出力：行を出力/該当部分/否マッチ行</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:49</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a967b916728ff445301867fdb5b05e759"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a967b916728ff445301867fdb5b05e759">CDlgGrep::m_bFromThisText</a></div><div class="ttdeci">BOOL m_bFromThisText</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:43</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a3d0a328bcc6c12e519c7d8abb499ddb4"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a3d0a328bcc6c12e519c7d8abb499ddb4">CDlgGrep::m_strText</a></div><div class="ttdeci">std::wstring m_strText</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:54</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a76163a913a974f165c37dd8867ceebb2"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a76163a913a974f165c37dd8867ceebb2">CDlgGrep::GetPackedGFileString</a></div><div class="ttdeci">CNativeW GetPackedGFileString() const</div><div class="ttdoc">除外ファイル、除外フォルダの設定を &quot;-GFILE=&quot; の設定に pack する</div><div class="ttdef"><b>Definition:</b> CDlgGrep.cpp:166</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="aclass_c_font_auto_deleter_html"><div class="ttname"><a href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a></div><div class="ttdef"><b>Definition:</b> window.h:153</div></div>
+<div class="ttc" id="a_c_recent_8h_html"><div class="ttname"><a href="../../d0/d8d/_c_recent_8h.html">CRecent.h</a></div><div class="ttdoc">最近使ったリスト</div></div>
+<div class="ttc" id="astruct_s_search_option_html"><div class="ttname"><a href="../../d2/d18/struct_s_search_option.html">SSearchOption</a></div><div class="ttdef"><b>Definition:</b> global.h:150</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_ac730923cef610f12fa0bb11acedd33eb"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#ac730923cef610f12fa0bb11acedd33eb">CDlgGrep::m_bSetText</a></div><div class="ttdeci">bool m_bSetText</div><div class="ttdoc">検索文字列を設定したか</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:55</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a2d27df9b01c996313d9170e6b3b574d0"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a2d27df9b01c996313d9170e6b3b574d0">CDlgGrep::m_szFolder</a></div><div class="ttdeci">SFilePathLong m_szFolder</div><div class="ttdoc">検索フォルダ</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:57</div></div>
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_recent_search_html"><div class="ttname"><a href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a></div><div class="ttdoc">検索の履歴を管理 (RECENT_FOR_SEARCH)</div><div class="ttdef"><b>Definition:</b> CRecentSearch.h:33</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_afd9c683063be899b3b1893ec180d88b9"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#afd9c683063be899b3b1893ec180d88b9">CDlgGrep::m_szFile</a></div><div class="ttdeci">SFilePathLong m_szFile</div><div class="ttdoc">検索ファイル</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:56</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_ad707e200b7d224d7c20f61d80e4994b8"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#ad707e200b7d224d7c20f61d80e4994b8">CDlgGrep::m_bSubFolder</a></div><div class="ttdeci">BOOL m_bSubFolder</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:42</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_recent_exclude_folder_html"><div class="ttname"><a href="../../de/daf/class_c_recent_exclude_folder.html">CRecentExcludeFolder</a></div><div class="ttdoc">Excludeフォルダの履歴を管理 (RECENT_FOR_Exclude_FOLDER)</div><div class="ttdef"><b>Definition:</b> CRecentExcludeFolder.h:32</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_aa5f865872cad8b5970a700506532194d"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#aa5f865872cad8b5970a700506532194d">CDlgGrep::m_szExcludeFile</a></div><div class="ttdeci">SFilePathLong m_szExcludeFile</div><div class="ttdoc">除外ファイル</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:58</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_adfd986f73eb4d8f85fed07d0aa563976"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#adfd986f73eb4d8f85fed07d0aa563976">CDlgGrep::m_szExcludeFolder</a></div><div class="ttdeci">SFilePathLong m_szExcludeFolder</div><div class="ttdoc">除外フォルダ</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:59</div></div>
+<div class="ttc" id="aclass_c_recent_exclude_file_html"><div class="ttname"><a href="../../d9/d3a/class_c_recent_exclude_file.html">CRecentExcludeFile</a></div><div class="ttdoc">Excludeファイルの履歴を管理 (RECENT_FOR_Exclude_FILE)</div><div class="ttdef"><b>Definition:</b> CRecentExcludeFile.h:32</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_aa052ceacab1932d4cc7ab589937d40a7"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#aa052ceacab1932d4cc7ab589937d40a7">CDlgGrep::OnCbnDropDown</a></div><div class="ttdeci">BOOL OnCbnDropDown(HWND hwndCtl, int wID) override</div><div class="ttdef"><b>Definition:</b> CDlgGrep.cpp:186</div></div>
+<div class="ttc" id="aclass_c_recent_grep_folder_html"><div class="ttname"><a href="../../d8/d79/class_c_recent_grep_folder.html">CRecentGrepFolder</a></div><div class="ttdoc">GREPフォルダの履歴を管理 (RECENT_FOR_GREP_FOLDER)</div><div class="ttdef"><b>Definition:</b> CRecentGrepFolder.h:33</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a06147cf4be98f85ed768d496fa28b6c7"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a06147cf4be98f85ed768d496fa28b6c7">CDlgGrep::m_sSearchOption</a></div><div class="ttdeci">SSearchOption m_sSearchOption</div><div class="ttdoc">検索オプション</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:45</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_ac4177bb3ff7486003ad10cab8e605984"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#ac4177bb3ff7486003ad10cab8e605984">CDlgGrep::m_bGrepOutputBaseFolder</a></div><div class="ttdeci">bool m_bGrepOutputBaseFolder</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:51</div></div>
+<div class="ttc" id="aclass_c_dialog_html"><div class="ttname"><a href="../../dd/d09/class_c_dialog.html">CDialog</a></div><div class="ttdoc">ダイアログウィンドウを扱うクラス</div><div class="ttdef"><b>Definition:</b> CDialog.h:73</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_aaf80000358cf88a82191d1bf76bfd171"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#aaf80000358cf88a82191d1bf76bfd171">CDlgGrep::m_bGrepSeparateFolder</a></div><div class="ttdeci">bool m_bGrepSeparateFolder</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:52</div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="../../d3/df1/window_8h.html">window.h</a></div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_a948d444c8915d530160b03d687a61bd2"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#a948d444c8915d530160b03d687a61bd2">CDlgGrep::m_bGrepOutputFileOnly</a></div><div class="ttdeci">bool m_bGrepOutputFileOnly</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:50</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_aef4870ca62f1ec7543f380905d61f7ec"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#aef4870ca62f1ec7543f380905d61f7ec">CDlgGrep::SetDataFromThisText</a></div><div class="ttdeci">void SetDataFromThisText(bool bChecked)</div><div class="ttdef"><b>Definition:</b> CDlgGrep.cpp:704</div></div>
+<div class="ttc" id="aclass_static_string_html"><div class="ttname"><a href="../../db/d03/class_static_string.html">StaticString&lt; WCHAR, MAX_GREP_PATH &gt;</a></div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html_adfb6391a95dc5737655fe6a086c25afd"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html#adfb6391a95dc5737655fe6a086c25afd">CDlgGrep::m_nGrepCharSet</a></div><div class="ttdeci">ECodeType m_nGrepCharSet</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:47</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

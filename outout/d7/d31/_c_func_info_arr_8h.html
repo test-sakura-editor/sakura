@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/outline/CFuncInfoArr.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_250ef5669067ed106f2ef55a4b95597b.html">outline</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CFuncInfoArr.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>アウトライン解析 データ配列  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d78/design__template_8h_source.html">util/design_template.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d7/d31/_c_func_info_arr_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db2/class_c_func_info_arr.html">CFuncInfoArr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">アウトライン解析 データ配列  <a href="../../da/db2/class_c_func_info_arr.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aa444f0d62f7fa90413aa52fb6488e80c"><td class="memItemLeft" align="right" valign="top"><a id="aa444f0d62f7fa90413aa52fb6488e80c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_DEFINITION</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa444f0d62f7fa90413aa52fb6488e80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5512750810b46c897aef3c040c4cee4d"><td class="memItemLeft" align="right" valign="top"><a id="a5512750810b46c897aef3c040c4cee4d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_DECLARE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5512750810b46c897aef3c040c4cee4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad74b1e2bbdd0343f4922a26a5e635b45"><td class="memItemLeft" align="right" valign="top"><a id="ad74b1e2bbdd0343f4922a26a5e635b45"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_FUNCTION</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ad74b1e2bbdd0343f4922a26a5e635b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ccc2726e60c8cce71e009599bd1eef"><td class="memItemLeft" align="right" valign="top"><a id="ae6ccc2726e60c8cce71e009599bd1eef"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_CLASS</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ae6ccc2726e60c8cce71e009599bd1eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fe344d152423a88d1d84b72a73d582"><td class="memItemLeft" align="right" valign="top"><a id="a85fe344d152423a88d1d84b72a73d582"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_STRUCT</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a85fe344d152423a88d1d84b72a73d582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c96e50af0e922d19bcc5cd9b001ba15"><td class="memItemLeft" align="right" valign="top"><a id="a3c96e50af0e922d19bcc5cd9b001ba15"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_ENUM</b>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a3c96e50af0e922d19bcc5cd9b001ba15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0bf1d186981d4d31a26f9a5dca4567b"><td class="memItemLeft" align="right" valign="top"><a id="aa0bf1d186981d4d31a26f9a5dca4567b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_UNION</b>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:aa0bf1d186981d4d31a26f9a5dca4567b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89349f5330548369115546880ed25ba8"><td class="memItemLeft" align="right" valign="top"><a id="a89349f5330548369115546880ed25ba8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_NAMESPACE</b>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a89349f5330548369115546880ed25ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee473f3e30ce6e95633b13c75b5f774"><td class="memItemLeft" align="right" valign="top"><a id="a1ee473f3e30ce6e95633b13c75b5f774"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_INTERFACE</b>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a1ee473f3e30ce6e95633b13c75b5f774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b2342ab28ef31663f49dfa34012ec9"><td class="memItemLeft" align="right" valign="top"><a id="af2b2342ab28ef31663f49dfa34012ec9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_GLOBAL</b>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:af2b2342ab28ef31663f49dfa34012ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561541857dd0133af5d161e072633a87"><td class="memItemLeft" align="right" valign="top"><a id="a561541857dd0133af5d161e072633a87"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FL_OBJ_ELEMENT_MAX</b>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:a561541857dd0133af5d161e072633a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>アウトライン解析 データ配列 </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/06/23 作成 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/figures/CFigureStrategy.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li><li class="navelem"><a class="el" href="../../dir_a2b7e12bfefe4dca0b66d70f4e127b13.html">figures</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFigureStrategy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d8c/_c_figure_strategy_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d82/_c_color_strategy_8h.html">view/colors/CColorStrategy.h</a>&quot;</span> <span class="comment">//SColorStrategyInfo</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//$$レイアウト構築フロー(DoLayout)も CFigure で行うと整理しやすい</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d65/class_c_figure.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d65/class_c_figure.html">CFigure</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d2/d65/class_c_figure.html">CFigure</a>(){}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> DrawImp(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo) = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Match(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pText, <span class="keywordtype">int</span> nTextLen) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d2/d65/class_c_figure.html#a3b56c2df17705a63f22bcf2db5f7939c">   38</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/d65/class_c_figure.html#a3b56c2df17705a63f22bcf2db5f7939c">Disp</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d65/class_c_figure.html#aa60e589522baaba20222b76a470e3ab9">   41</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d65/class_c_figure.html#aa60e589522baaba20222b76a470e3ab9">Update</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>* pCEditDoc = CEditDoc::GetInstance(0);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        m_pTypeData = &amp;pCEditDoc-&gt;m_cDocType.<a class="code" href="../../de/d22/class_c_doc_type.html#a1307af94f0c9de555167682fb699ff78">GetDocumentAttribute</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>* m_pTypeData;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d5/db2/class_c_figure___text.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/db2/class_c_figure___text.html">CFigure_Text</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d65/class_c_figure.html">CFigure</a>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> DrawImp(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> Match(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pText, <span class="keywordtype">int</span> nTextLen)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d5/db2/class_c_figure___text.html#a551016004c76c0a9087deb475500d62d">   60</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d5/db2/class_c_figure___text.html#a551016004c76c0a9087deb475500d62d">Disp</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../dd/d75/class_c_figure_space.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d75/class_c_figure_space.html">CFigureSpace</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d65/class_c_figure.html">CFigure</a>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> DrawImp(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> DispSpace(<a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>&amp; gr, <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>* pDispPos, <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcView, <span class="keywordtype">bool</span> bTrans) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> GetColorIdx(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../dd/d75/class_c_figure_space.html#a59710783f9de627d3f3b36ad03ce1e34">   75</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d75/class_c_figure_space.html#a59710783f9de627d3f3b36ad03ce1e34">Disp</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> nColorIndex = GetColorIdx();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> m_pTypeData-&gt;<a class="code" href="../../d5/d88/struct_s_type_config.html#abd679cc0dafe1855b4f1ad91c119759e">m_ColorInfoArr</a>[nColorIndex].<a class="code" href="../../de/d1a/struct_color_info_base.html#a341695d22866a2c190a1ca13b1d08ce4">m_bDisp</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../dd/d75/class_c_figure_space.html#a4e9b7945862fba39451a611c68004e86">   81</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d75/class_c_figure_space.html#a4e9b7945862fba39451a611c68004e86">Update</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d2/d65/class_c_figure.html#aa60e589522baaba20222b76a470e3ab9">CFigure::Update</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> nColorIndex = GetColorIdx();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">if</span>( m_pTypeData-&gt;<a class="code" href="../../d5/d88/struct_s_type_config.html#abd679cc0dafe1855b4f1ad91c119759e">m_ColorInfoArr</a>[nColorIndex].<a class="code" href="../../de/d1a/struct_color_info_base.html#a341695d22866a2c190a1ca13b1d08ce4">m_bDisp</a> ){</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            m_nDispColorIndex = nColorIndex;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            m_nDispColorIndex = <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3ab5dc33e505038e04d460432991734bd7">COLORIDX_TEXT</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> GetDispColorIdx(<span class="keywordtype">void</span>)<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_nDispColorIndex; }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// 実装補助</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> DrawImp_StyleSelect(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> DrawImp_StylePop(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> DrawImp_DrawUnderline(<a class="code" href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a>* pInfo, <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>&amp;);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> m_nDispColorIndex;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_graphics_html"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html">CGraphics</a></div><div class="ttdoc">描画管理</div><div class="ttdef"><b>Definition:</b> CGraphics.h:143</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a></div><div class="ttdeci">EColorIndexType</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:41</div></div>
+<div class="ttc" id="aclass_c_figure___text_html"><div class="ttname"><a href="../../d5/db2/class_c_figure___text.html">CFigure_Text</a></div><div class="ttdoc">通常テキスト描画</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:51</div></div>
+<div class="ttc" id="aclass_c_figure_space_html_a4e9b7945862fba39451a611c68004e86"><div class="ttname"><a href="../../dd/d75/class_c_figure_space.html#a4e9b7945862fba39451a611c68004e86">CFigureSpace::Update</a></div><div class="ttdeci">virtual void Update(void)</div><div class="ttdoc">設定更新</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:81</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div><div class="ttdef"><b>Definition:</b> CEditDoc.h:77</div></div>
+<div class="ttc" id="aclass_c_figure_space_html"><div class="ttname"><a href="../../dd/d75/class_c_figure_space.html">CFigureSpace</a></div><div class="ttdoc">各種空白（半角空白／全角空白／タブ／改行）描画用の基本クラス</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:67</div></div>
+<div class="ttc" id="aclass_c_figure___text_html_a551016004c76c0a9087deb475500d62d"><div class="ttname"><a href="../../d5/db2/class_c_figure___text.html#a551016004c76c0a9087deb475500d62d">CFigure_Text::Disp</a></div><div class="ttdeci">virtual bool Disp(void) const</div><div class="ttdoc">色分け表示対象判定</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:60</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="astruct_disp_pos_html"><div class="ttname"><a href="../../d8/d97/struct_disp_pos.html">DispPos</a></div><div class="ttdef"><b>Definition:</b> DispPos.h:31</div></div>
+<div class="ttc" id="aclass_c_doc_type_html_a1307af94f0c9de555167682fb699ff78"><div class="ttname"><a href="../../de/d22/class_c_doc_type.html#a1307af94f0c9de555167682fb699ff78">CDocType::GetDocumentAttribute</a></div><div class="ttdeci">const STypeConfig &amp; GetDocumentAttribute() const</div><div class="ttdoc">&lt; 文書種別の詳細情報</div><div class="ttdef"><b>Definition:</b> CDocType.h:52</div></div>
+<div class="ttc" id="aclass_c_figure_html_a3b56c2df17705a63f22bcf2db5f7939c"><div class="ttname"><a href="../../d2/d65/class_c_figure.html#a3b56c2df17705a63f22bcf2db5f7939c">CFigure::Disp</a></div><div class="ttdeci">virtual bool Disp(void) const =0</div><div class="ttdoc">色分け表示対象判定</div></div>
+<div class="ttc" id="a_c_color_strategy_8h_html"><div class="ttname"><a href="../../d7/d82/_c_color_strategy_8h.html">CColorStrategy.h</a></div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="aclass_c_figure_space_html_a59710783f9de627d3f3b36ad03ce1e34"><div class="ttname"><a href="../../dd/d75/class_c_figure_space.html#a59710783f9de627d3f3b36ad03ce1e34">CFigureSpace::Disp</a></div><div class="ttdeci">virtual bool Disp(void) const</div><div class="ttdoc">色分け表示対象判定</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:75</div></div>
+<div class="ttc" id="aclass_c_figure_html_aa60e589522baaba20222b76a470e3ab9"><div class="ttname"><a href="../../d2/d65/class_c_figure.html#aa60e589522baaba20222b76a470e3ab9">CFigure::Update</a></div><div class="ttdeci">virtual void Update(void)</div><div class="ttdoc">設定更新</div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:41</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3ab5dc33e505038e04d460432991734bd7"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3ab5dc33e505038e04d460432991734bd7">COLORIDX_TEXT</a></div><div class="ttdeci">@ COLORIDX_TEXT</div><div class="ttdoc">テキスト</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:42</div></div>
+<div class="ttc" id="astruct_color_info_base_html_a341695d22866a2c190a1ca13b1d08ce4"><div class="ttname"><a href="../../de/d1a/struct_color_info_base.html#a341695d22866a2c190a1ca13b1d08ce4">ColorInfoBase::m_bDisp</a></div><div class="ttdeci">bool m_bDisp</div><div class="ttdoc">表示</div><div class="ttdef"><b>Definition:</b> CDocTypeSetting.h:47</div></div>
+<div class="ttc" id="aclass_c_figure_html"><div class="ttname"><a href="../../d2/d65/class_c_figure.html">CFigure</a></div><div class="ttdef"><b>Definition:</b> CFigureStrategy.h:31</div></div>
+<div class="ttc" id="astruct_s_color_strategy_info_html"><div class="ttname"><a href="../../da/d4b/struct_s_color_strategy_info.html">SColorStrategyInfo</a></div><div class="ttdef"><b>Definition:</b> CColorStrategy.h:87</div></div>
+<div class="ttc" id="astruct_s_type_config_html_abd679cc0dafe1855b4f1ad91c119759e"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html#abd679cc0dafe1855b4f1ad91c119759e">STypeConfig::m_ColorInfoArr</a></div><div class="ttdeci">ColorInfo m_ColorInfoArr[64]</div><div class="ttdoc">色設定配列</div><div class="ttdef"><b>Definition:</b> CType.h:157</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

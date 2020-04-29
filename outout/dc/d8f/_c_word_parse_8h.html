@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/parse/CWordParse.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_bbfabac4872e24227309ae4edd51df62.html">parse</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CWordParse.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/db9/_sakura_basis_8h_source.html">basis/SakuraBasis.h</a>&quot;</code><br />
+</div>
+<p><a href="../../dc/d8f/_c_word_parse_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d08/class_c_word_parse.html">CWordParse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a198d0b445a439b02f5d558385019b0e8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec">CK_NULL</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365">CK_TAB</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb">CK_CR</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1">CK_LF</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15">CK_CTRL</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273">CK_SPACE</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca">CK_CSYM</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009">CK_KATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de">CK_LATIN</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691">CK_UDEF</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14">CK_ETC</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407">CK_ZEN_SPACE</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc">CK_ZEN_NOBASU</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c">CK_ZEN_DAKU</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043">CK_ZEN_CSYM</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7">CK_ZEN_KIGO</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227">CK_HIRA</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42">CK_ZEN_KATA</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f">CK_GREEK</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39">CK_ZEN_ROS</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d">CK_ZEN_SKIGO</a>, 
+<a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7">CK_ZEN_ETC</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a198d0b445a439b02f5d558385019b0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字種類識別子  <a href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">[詳解]</a><br /></td></tr>
+<tr class="separator:a198d0b445a439b02f5d558385019b0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a1e7012d2a48862bffc0eafd7b68b2d27"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a> (const wchar_t *pszLine, int offset, int nLineLen, int *pnMatchLen)</td></tr>
+<tr class="separator:a1e7012d2a48862bffc0eafd7b68b2d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ca1cb60952056af643b1946943d839"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a52ca1cb60952056af643b1946943d839">IsURL</a> (const wchar_t *pszLine, int nLineLen, int *pnMatchLen)</td></tr>
+<tr class="separator:a52ca1cb60952056af643b1946943d839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6d06071c2e961a76f0d1165ac0601d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a> (const wchar_t *pszBuf, int offset, int nBufLen, int *pnAddressLength)</td></tr>
+<tr class="separator:add6d06071c2e961a76f0d1165ac0601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaeb6e9c0416183bb33078926ab25fdc"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/_c_word_parse_8h.html#aeaeb6e9c0416183bb33078926ab25fdc">IsMailAddress</a> (const wchar_t *pszBuf, int nBufLen, int *pnAddressLength)</td></tr>
+<tr class="separator:aeaeb6e9c0416183bb33078926ab25fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a198d0b445a439b02f5d558385019b0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198d0b445a439b02f5d558385019b0e8">&#9670;&nbsp;</a></span>ECharKind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/d8f/_c_word_parse_8h.html#a198d0b445a439b02f5d558385019b0e8">ECharKind</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字種類識別子 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a68d3016897c746b69718f78c88ea72ec"></a>CK_NULL&#160;</td><td class="fielddoc"><p>NULL </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a765790f8942c69a1382e51d14d401365"></a>CK_TAB&#160;</td><td class="fielddoc"><p>タブ 0x9&lt;=c&lt;=0x9 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a39e9c4669218632df65929799957edcb"></a>CK_CR&#160;</td><td class="fielddoc"><p>CR = 0x0d </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a81d246fa5155e4bddaac8722a08f9be1"></a>CK_LF&#160;</td><td class="fielddoc"><p>LF = 0x0a </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a4b1b32d2a2549ecad06c7bb176d69f15"></a>CK_CTRL&#160;</td><td class="fielddoc"><p>上記以外の c&lt;0x20 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a697e4a4e40bafd3e27bae601ffe9c273"></a>CK_SPACE&#160;</td><td class="fielddoc"><p>半角のスペース 0x20&lt;=c&lt;=0x20 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a0053044fb14241c6990dc5ec225c81ca"></a>CK_CSYM&#160;</td><td class="fielddoc"><p>識別子に使用可能な文字 (英数字、アンダースコア) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a9ceae47beecc763109ded1b0449a7009"></a>CK_KATA&#160;</td><td class="fielddoc"><p>半角のカタカナ 0xA1&lt;=c&lt;=0xFD </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8ad742ec134b99b5d1cf03a7b12fe502de"></a>CK_LATIN&#160;</td><td class="fielddoc"><p>ラテン１補助、ラテン拡張のうちアルファベット風のもの 0x00C0&lt;=c&lt;0x0180 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a431086006ebb3a0a3a4403cdd62e5691"></a>CK_UDEF&#160;</td><td class="fielddoc"><p>ユーザ定義キーワード文字（#$\） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8ad1056f44adbd4b8bef950fb20b714b14"></a>CK_ETC&#160;</td><td class="fielddoc"><p>半角のその他 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8abd17dfd960b5a43e1a5e4fe77a199407"></a>CK_ZEN_SPACE&#160;</td><td class="fielddoc"><p>全角スペース </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a1aa6b2af7d5a0024e44327a1cfee93dc"></a>CK_ZEN_NOBASU&#160;</td><td class="fielddoc"><p>伸ばす記号 0x815B&lt;=c&lt;=0x815B 'ー' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8ac13aa1ea53fe554f94cb4ae69598e76c"></a>CK_ZEN_DAKU&#160;</td><td class="fielddoc"><p>全角濁点 0x309B&lt;=c&lt;=0x309C 「゛゜」 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8ace274b5d791dbf3d71a57f7151dae043"></a>CK_ZEN_CSYM&#160;</td><td class="fielddoc"><p>全角版、識別子に使用可能な文字 (英数字、アンダースコア) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a8437c70da688789a97277899d0db75c7"></a>CK_ZEN_KIGO&#160;</td><td class="fielddoc"><p>全角の記号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a9a2a263057c63a6e66f3005215906227"></a>CK_HIRA&#160;</td><td class="fielddoc"><p>ひらがな </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a415d313dd09df47e2cfa9294540abc42"></a>CK_ZEN_KATA&#160;</td><td class="fielddoc"><p>全角カタカナ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a65a7fbef32fa7f9336e9e2878df5fc4f"></a>CK_GREEK&#160;</td><td class="fielddoc"><p>ギリシャ文字 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8afb0e8429aa533eb1249730edc86a9c39"></a>CK_ZEN_ROS&#160;</td><td class="fielddoc"><p>ロシア文字: </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a629796c31790ab9cf467c594448d116d"></a>CK_ZEN_SKIGO&#160;</td><td class="fielddoc"><p>全角の特殊記号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a198d0b445a439b02f5d558385019b0e8a3948faf0b0253b65590a13a0541ddef7"></a>CK_ZEN_ETC&#160;</td><td class="fielddoc"><p>全角のその他（漢字など） </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aeaeb6e9c0416183bb33078926ab25fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaeb6e9c0416183bb33078926ab25fdc">&#9670;&nbsp;</a></span>IsMailAddress() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsMailAddress </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nBufLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnAddressLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000002">非推奨:</a></b></dt><dd>互換性のために残されています。offset 引数が追加されたものを使用してください。 </dd></dl>
+
+</div>
+</div>
+<a id="add6d06071c2e961a76f0d1165ac0601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6d06071c2e961a76f0d1165ac0601d">&#9670;&nbsp;</a></span>IsMailAddress() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsMailAddress </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nBufLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnAddressLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定アドレスがメールアドレスの先頭ならば TRUE とその長さを返す。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszBuf</td><td>文字列バッファの先頭アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>メールアドレス判定開始文字を示す、pszBuf からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nBufLen</td><td>メールアドレス判定最終文字の次を示す、pszBuf からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnAddressLength</td><td>メールアドレスの長さを受け取る変数のアドレス。NULL可。長さとは pszBuf + offset からの距離。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>正の offset が与えられた場合は、その場合に限り、判定開始位置直前の文字との間で境界判定を行います。 途中から切り出したメールアドレスの一部をメールアドレスであると誤って判定しないために pszBuf を固定し offset を０以上の範囲で変化させるのが望ましい使用方法です。 </p>
+
+</div>
+</div>
+<a id="a52ca1cb60952056af643b1946943d839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ca1cb60952056af643b1946943d839">&#9670;&nbsp;</a></span>IsURL() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsURL </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnMatchLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="../../da/d58/deprecated.html#_deprecated000001">非推奨:</a></b></dt><dd>互換性のために残されています。offset 引数が追加されたものを使用してください。 </dd></dl>
+
+</div>
+</div>
+<a id="a1e7012d2a48862bffc0eafd7b68b2d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7012d2a48862bffc0eafd7b68b2d27">&#9670;&nbsp;</a></span>IsURL() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsURL </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnMatchLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定アドレスが URL の先頭ならば TRUE とその長さを返す。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszLine</td><td>文字列バッファの先頭アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>URL 判定開始文字を示す、pszLine からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLineLen</td><td>URL 判定最終文字の次を示す、pszLine からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnMatchLen</td><td>URL の長さを受け取る変数のアドレス。NULL可。長さとは pszLine + offset からの距離。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>境界判定はメールアドレスの先頭でのみ行われ、URL の先頭ではこれまで通り行われません。</p>
+<p>文字列がURLかどうかを検査する。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>URLである </td></tr>
+    <tr><td class="paramname">FALSE</td><td>URLでない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>関数内に定義したテーブルは必ず static const 宣言にすること(性能に影響します)。 url_char の値は url_table の配列番号+1 になっています。 新しい URL を追加する場合は #define 値を修正してください。 url_table は頭文字がアルファベット順になるように並べてください。</dd></dl>
+<p>2007.10.23 kobake UNICODE対応。//$ wchar_t専用のテーブル(または判定ルーチン)を用意したほうが効率は上がるはずです。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

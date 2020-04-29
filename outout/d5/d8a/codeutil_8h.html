@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/codeutil.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">codeutil.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
+</div>
+<p><a href="../../d5/d8a/codeutil_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a73f1e03ff78bfe90f32642de522b36b4"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a73f1e03ff78bfe90f32642de522b36b4">SjisFilter_basis</a> (const unsigned int)</td></tr>
+<tr class="separator:a73f1e03ff78bfe90f32642de522b36b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e13f0876f43c3a1846405c7a7bab94"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a18e13f0876f43c3a1846405c7a7bab94">SjisFilter_ibm2nec</a> (const unsigned int)</td></tr>
+<tr class="separator:a18e13f0876f43c3a1846405c7a7bab94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066e67d942a74b9bd621723f58f027e6"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a066e67d942a74b9bd621723f58f027e6">SjisFilter_nec2ibm</a> (const unsigned int)</td></tr>
+<tr class="separator:a066e67d942a74b9bd621723f58f027e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4d5f81e109f843ca31959ffc41439a"><td class="memItemLeft" align="right" valign="top">wchar32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a7b4d5f81e109f843ca31959ffc41439a">DecodeUtf16Surrog</a> (const unsigned short wc_hi, const unsigned short wc_low)</td></tr>
+<tr class="separator:a7b4d5f81e109f843ca31959ffc41439a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a44e2b3f3ee4243efbec245554704f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#ae1a44e2b3f3ee4243efbec245554704f">EncodeUtf16Surrog</a> (wchar32_t wc32, unsigned short *pwc_dest)</td></tr>
+<tr class="separator:ae1a44e2b3f3ee4243efbec245554704f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9063deeb26a441b85ee92b52f4c1d9be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a9063deeb26a441b85ee92b52f4c1d9be">EncodeUtf8</a> (const wchar32_t wc32, unsigned char *pDst)</td></tr>
+<tr class="separator:a9063deeb26a441b85ee92b52f4c1d9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c0c6c6a2c6433fd02e8e404cc48f77"><td class="memItemLeft" align="right" valign="top">wchar32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#ae2c0c6c6a2c6433fd02e8e404cc48f77">DecodeUtf8</a> (const unsigned char *pSrc, const int nSrcLen)</td></tr>
+<tr class="separator:ae2c0c6c6a2c6433fd02e8e404cc48f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d31287ae6b70ea326601c32b4c35eda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a5d31287ae6b70ea326601c32b4c35eda">IsWctombcNonroundtrip</a> (const unsigned int wc)</td></tr>
+<tr class="separator:a5d31287ae6b70ea326601c32b4c35eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2382ec709e5e8ab2db2b76df3876c3e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a2382ec709e5e8ab2db2b76df3876c3e4">MyWideCharToMultiByte_JP</a> (const unsigned short *pSrc, const int nSrcLen, unsigned char *pDst)</td></tr>
+<tr class="separator:a2382ec709e5e8ab2db2b76df3876c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcff5a4ae1f288e3019b3b820c77a57e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#abcff5a4ae1f288e3019b3b820c77a57e">MyMultiByteToWideChar_JP</a> (const unsigned char *pSrc, const int nSrcLen, unsigned short *pDst, bool bKeepRt=true)</td></tr>
+<tr class="separator:abcff5a4ae1f288e3019b3b820c77a57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a20ba67a34f08dd73379d93bc770251cd"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8a/codeutil_8h.html#a20ba67a34f08dd73379d93bc770251cd">TABLE_WctombSpec</a> []</td></tr>
+<tr class="separator:a20ba67a34f08dd73379d93bc770251cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7b4d5f81e109f843ca31959ffc41439a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4d5f81e109f843ca31959ffc41439a">&#9670;&nbsp;</a></span>DecodeUtf16Surrog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wchar32_t DecodeUtf16Surrog </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned short&#160;</td>
+          <td class="paramname"><em>wc_hi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned short&#160;</td>
+          <td class="paramname"><em>wc_low</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-16 -&gt; UTF-32 </p>
+
+</div>
+</div>
+<a id="ae2c0c6c6a2c6433fd02e8e404cc48f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c0c6c6a2c6433fd02e8e404cc48f77">&#9670;&nbsp;</a></span>DecodeUtf8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wchar32_t DecodeUtf8 </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-8 -&gt; UTF-32 </p>
+
+</div>
+</div>
+<a id="ae1a44e2b3f3ee4243efbec245554704f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a44e2b3f3ee4243efbec245554704f">&#9670;&nbsp;</a></span>EncodeUtf16Surrog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EncodeUtf16Surrog </td>
+          <td>(</td>
+          <td class="paramtype">wchar32_t&#160;</td>
+          <td class="paramname"><em>wc32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short *&#160;</td>
+          <td class="paramname"><em>pwc_dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-32 -&gt; UTF-16 </p>
+
+</div>
+</div>
+<a id="a9063deeb26a441b85ee92b52f4c1d9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9063deeb26a441b85ee92b52f4c1d9be">&#9670;&nbsp;</a></span>EncodeUtf8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EncodeUtf8 </td>
+          <td>(</td>
+          <td class="paramtype">const wchar32_t&#160;</td>
+          <td class="paramname"><em>wc32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>UTF-32 -&gt; UTF-8 </p>
+
+</div>
+</div>
+<a id="a5d31287ae6b70ea326601c32b4c35eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d31287ae6b70ea326601c32b4c35eda">&#9670;&nbsp;</a></span>IsWctombcNonroundtrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsWctombcNonroundtrip </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>wc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WinAPI 関数 WideCharToMultiByte の特殊な変換を判別</p>
+<p>この関数が true を返す Unicode 文字は、 </p><div class="fragment"><div class="line">::WideCharToMultiByte( 932, 0, src, srclen, dest, destlen, NULL, &amp;bUsedDefaultChar );</div>
+</div><!-- fragment --><p> での変換処理に通過するものの、SJIS(CP 932) への適切な変換がなされない文字。</p>
+<p>Win98 から使える WC_NO_BEST_FIT_CHARS フラグの使用は避けて欲しいらしい。<br  />
+（http://blogs.msdn.com/shawnste/archive/2006/01/19/515047.aspx） </p>
+
+</div>
+</div>
+<a id="abcff5a4ae1f288e3019b3b820c77a57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcff5a4ae1f288e3019b3b820c77a57e">&#9670;&nbsp;</a></span>MyMultiByteToWideChar_JP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyMultiByteToWideChar_JP </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bKeepRt</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>MultiByteToWideChar のラッパー関数</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pbNonroundtrip</td><td>変換に成功したものの、相互変換性が失われた場合に true</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>nSrcLen は 1 か 2 </p>
+
+</div>
+</div>
+<a id="a2382ec709e5e8ab2db2b76df3876c3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2382ec709e5e8ab2db2b76df3876c3e4">&#9670;&nbsp;</a></span>MyWideCharToMultiByte_JP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MyWideCharToMultiByte_JP </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned short *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WideCharToMultiByte のラッパー関数</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSrcLen</td><td>1 か 2 を渡す </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73f1e03ff78bfe90f32642de522b36b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f1e03ff78bfe90f32642de522b36b4">&#9670;&nbsp;</a></span>SjisFilter_basis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_basis </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ 2区と13区にある文字の正常化</p>
+<p>2区で定義されている文字を2区へ移動し、13区で定義されていて2区にはない文字を13区へ移動させる。 </p>
+
+</div>
+</div>
+<a id="a18e13f0876f43c3a1846405c7a7bab94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e13f0876f43c3a1846405c7a7bab94">&#9670;&nbsp;</a></span>SjisFilter_ibm2nec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_ibm2nec </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ IBM拡張文字 → NEC 選定IBM拡張文字</p>
+<p>IBM 拡張文字をその文字と等価な NEC 選定 IBM 拡張領域のコードポイントへ 可能な限り移動させる。 </p>
+
+</div>
+</div>
+<a id="a066e67d942a74b9bd621723f58f027e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066e67d942a74b9bd621723f58f027e6">&#9670;&nbsp;</a></span>SjisFilter_nec2ibm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_nec2ibm </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ NEC 選定IBM拡張文字 → IBM拡張文字</p>
+<p>NEC 選定 IBM 拡張文字をその文字と等価な IBM 拡張文字領域のコードポイントへ 可能な限り移動させる。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a20ba67a34f08dd73379d93bc770251cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ba67a34f08dd73379d93bc770251cd">&#9670;&nbsp;</a></span>TABLE_WctombSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool TABLE_WctombSpec[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>判別テーブル WinAPI 関数 WideCharToMultiByte の特殊な変換（相互変換できない変換）か </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CPropCommon クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d2/dcf/class_c_prop_common-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CPropCommon クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>共通設定ダイアログボックスクラス  
+ <a href="../../db/d54/class_c_prop_common.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d53/_c_prop_common_8h_source.html">CPropCommon.h</a>&gt;</code></p>
+<div class="dynheader">
+CPropCommon の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d54/class_c_prop_common.png" usemap="#CPropCommon_map" alt=""/>
+  <map id="CPropCommon_map" name="CPropCommon_map">
+<area href="../../dc/deb/class_c_prop_backup.html" title="バックアップページ" alt="CPropBackup" shape="rect" coords="118,56,226,80"/>
+<area href="../../dc/df5/class_c_prop_custmenu.html" title="カスタムメニューページ" alt="CPropCustmenu" shape="rect" coords="118,112,226,136"/>
+<area href="../../d4/d89/class_c_prop_edit.html" title="編集ページ" alt="CPropEdit" shape="rect" coords="118,168,226,192"/>
+<area href="../../de/def/class_c_prop_file.html" title="ファイルページ" alt="CPropFile" shape="rect" coords="118,224,226,248"/>
+<area href="../../d8/d5d/class_c_prop_file_name.html" title="ファイル名表示ページ" alt="CPropFileName" shape="rect" coords="118,280,226,304"/>
+<area href="../../d6/dc7/class_c_prop_format.html" title="書式ページ" alt="CPropFormat" shape="rect" coords="118,336,226,360"/>
+<area href="../../d7/dad/class_c_prop_general.html" title="共通設定プロパティページクラス" alt="CPropGeneral" shape="rect" coords="118,392,226,416"/>
+<area href="../../d3/ded/class_c_prop_grep.html" title="検索ページ" alt="CPropGrep" shape="rect" coords="118,448,226,472"/>
+<area href="../../df/d93/class_c_prop_helper.html" title="支援ページ" alt="CPropHelper" shape="rect" coords="118,504,226,528"/>
+<area href="../../d5/da0/class_c_prop_keybind.html" title="キー割り当てページ" alt="CPropKeybind" shape="rect" coords="118,560,226,584"/>
+<area href="../../d8/dac/class_c_prop_keyword.html" title="キーワードページ" alt="CPropKeyword" shape="rect" coords="118,616,226,640"/>
+<area href="../../d5/de5/class_c_prop_macro.html" title="マクロページ" alt="CPropMacro" shape="rect" coords="118,672,226,696"/>
+<area href="../../de/dd2/class_c_prop_main_menu.html" title="メインメニューページ" alt="CPropMainMenu" shape="rect" coords="118,728,226,752"/>
+<area href="../../de/d7a/class_c_prop_plugin.html" title="プラグインページ" alt="CPropPlugin" shape="rect" coords="118,784,226,808"/>
+<area href="../../df/dc9/class_c_prop_statusbar.html" title="ステータスバーページ" alt="CPropStatusbar" shape="rect" coords="118,840,226,864"/>
+<area href="../../db/d7d/class_c_prop_tab.html" title="タブ動作ページ" alt="CPropTab" shape="rect" coords="118,896,226,920"/>
+<area href="../../df/d29/class_c_prop_toolbar.html" title="ツールバーページ" alt="CPropToolbar" shape="rect" coords="118,952,226,976"/>
+<area href="../../da/dd0/class_c_prop_win.html" title="ウィンドウページ" alt="CPropWin" shape="rect" coords="118,1008,226,1032"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7f/struct_c_prop_common_1_1_s_keyword_set_index.html">SKeywordSetIndex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af1cebf43c060f20ad842093c8f6eff87"><td class="memItemLeft" align="right" valign="top"><a id="af1cebf43c060f20ad842093c8f6eff87"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HWND hwndParent, <a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a> *pcIcons, <a class="el" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a> *pMenuDrawer)</td></tr>
+<tr class="separator:af1cebf43c060f20ad842093c8f6eff87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b638c9ba06c31c17007985f464fd09"><td class="memItemLeft" align="right" valign="top">INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a47b638c9ba06c31c17007985f464fd09">DoPropertySheet</a> (int nPageNum, bool bTrayProc)</td></tr>
+<tr class="separator:a47b638c9ba06c31c17007985f464fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66443cc96047b399aa0c5a863778fe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#ab66443cc96047b399aa0c5a863778fe4">InitData</a> (const int *tempTypeKeywordSet=NULL, const WCHAR *name=NULL, const WCHAR *exts=NULL)</td></tr>
+<tr class="memdesc:ab66443cc96047b399aa0c5a863778fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DLLSHAREDATAから一時データ領域に設定を複製する  <a href="../../db/d54/class_c_prop_common.html#ab66443cc96047b399aa0c5a863778fe4">[詳解]</a><br /></td></tr>
+<tr class="separator:ab66443cc96047b399aa0c5a863778fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f99d73680ec1e4b55ba6755caf8e557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a1f99d73680ec1e4b55ba6755caf8e557">ApplyData</a> (int *tempTypeKeywordSet=NULL)</td></tr>
+<tr class="memdesc:a1f99d73680ec1e4b55ba6755caf8e557"><td class="mdescLeft">&#160;</td><td class="mdescRight">一時データ領域からにDLLSHAREDATA設定をコピーする  <a href="../../db/d54/class_c_prop_common.html#a1f99d73680ec1e4b55ba6755caf8e557">[詳解]</a><br /></td></tr>
+<tr class="separator:a1f99d73680ec1e4b55ba6755caf8e557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b79aff3ae1b3b0807cd7d22ab24618"><td class="memItemLeft" align="right" valign="top"><a id="af5b79aff3ae1b3b0807cd7d22ab24618"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPageNum</b> ()</td></tr>
+<tr class="separator:af5b79aff3ae1b3b0807cd7d22ab24618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6a3e3b2cb7cfb942bde7275d282d88bb"><td class="memItemLeft" align="right" valign="top"><a id="a6a3e3b2cb7cfb942bde7275d282d88bb"></a>
+static INT_PTR CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><b>DlgProc_page</b> (HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a6a3e3b2cb7cfb942bde7275d282d88bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a700a275d37f053bfd433625ad440f340"><td class="memItemLeft" align="right" valign="top"><a id="a700a275d37f053bfd433625ad440f340"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndParent</b></td></tr>
+<tr class="separator:a700a275d37f053bfd433625ad440f340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37b957c152ebb7369544e79d516c0b3"><td class="memItemLeft" align="right" valign="top"><a id="af37b957c152ebb7369544e79d516c0b3"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndThis</b></td></tr>
+<tr class="separator:af37b957c152ebb7369544e79d516c0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a8d71961461d1ae9f92062922282aa"><td class="memItemLeft" align="right" valign="top"><a id="a08a8d71961461d1ae9f92062922282aa"></a>
+<a class="el" href="../../d3/d53/_c_prop_common_8h.html#a7fb90038c9178f9d1fb14d3f0adc40a6">PropComSheetOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_nPageNum</b></td></tr>
+<tr class="separator:a08a8d71961461d1ae9f92062922282aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd856e3979e4582b36872297ee78e032"><td class="memItemLeft" align="right" valign="top"><a id="acd856e3979e4582b36872297ee78e032"></a>
+<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pShareData</b></td></tr>
+<tr class="separator:acd856e3979e4582b36872297ee78e032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16567f72f29c4961293da4e08ef81d21"><td class="memItemLeft" align="right" valign="top"><a id="a16567f72f29c4961293da4e08ef81d21"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nKeywordSet1</b></td></tr>
+<tr class="separator:a16567f72f29c4961293da4e08ef81d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f75118214caa67168686aa032ce6c2"><td class="memItemLeft" align="right" valign="top"><a id="a48f75118214caa67168686aa032ce6c2"></a>
+<a class="el" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcIcons</b></td></tr>
+<tr class="separator:a48f75118214caa67168686aa032ce6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4625cf17410253474d5586a32ae96077"><td class="memItemLeft" align="right" valign="top"><a id="a4625cf17410253474d5586a32ae96077"></a>
+<a class="el" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cLookup</b></td></tr>
+<tr class="separator:a4625cf17410253474d5586a32ae96077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcbceec74aa3bc39ffab16e34a41a22"><td class="memItemLeft" align="right" valign="top"><a id="a7bcbceec74aa3bc39ffab16e34a41a22"></a>
+<a class="el" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pcMenuDrawer</b></td></tr>
+<tr class="separator:a7bcbceec74aa3bc39ffab16e34a41a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e3831ebd32815cfbc373bd2258b3a3"><td class="memItemLeft" align="right" valign="top"><a id="a82e3831ebd32815cfbc373bd2258b3a3"></a>
+<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_Common</b></td></tr>
+<tr class="separator:a82e3831ebd32815cfbc373bd2258b3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ea87c414f9660c3166805f998655e6"><td class="memItemLeft" align="right" valign="top"><a id="a25ea87c414f9660c3166805f998655e6"></a>
+std::vector&lt; <a class="el" href="../../da/d7f/struct_c_prop_common_1_1_s_keyword_set_index.html">SKeywordSetIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_Types_nKeyWordSetIdx</b></td></tr>
+<tr class="separator:a25ea87c414f9660c3166805f998655e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2631470412eb6d13ee27c7d39ca3d68d"><td class="memItemLeft" align="right" valign="top"><a id="a2631470412eb6d13ee27c7d39ca3d68d"></a>
+WCHAR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a2631470412eb6d13ee27c7d39ca3d68d">m_tempTypeName</a> [<a class="el" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0afd6197f358b369806e5450e0d52f18be">MAX_TYPES_NAME</a>]</td></tr>
+<tr class="memdesc:a2631470412eb6d13ee27c7d39ca3d68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ属性：名称 <br /></td></tr>
+<tr class="separator:a2631470412eb6d13ee27c7d39ca3d68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4d6616860b5fa5068b70f323607cd0"><td class="memItemLeft" align="right" valign="top"><a id="aec4d6616860b5fa5068b70f323607cd0"></a>
+WCHAR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#aec4d6616860b5fa5068b70f323607cd0">m_tempTypeExts</a> [<a class="el" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0a605a176469d10863ab91796d3612621a">MAX_TYPES_EXTS</a>]</td></tr>
+<tr class="memdesc:aec4d6616860b5fa5068b70f323607cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ属性：拡張子リスト <br /></td></tr>
+<tr class="separator:aec4d6616860b5fa5068b70f323607cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6d93cdf710da0854fe1c4b971a3e4c"><td class="memItemLeft" align="right" valign="top"><a id="a8d6d93cdf710da0854fe1c4b971a3e4c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bTrayProc</b></td></tr>
+<tr class="separator:a8d6d93cdf710da0854fe1c4b971a3e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fefcdc149ad80ca85ba15c0af17fe6b"><td class="memItemLeft" align="right" valign="top"><a id="a1fefcdc149ad80ca85ba15c0af17fe6b"></a>
+HFONT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a1fefcdc149ad80ca85ba15c0af17fe6b">m_hKeywordHelpFont</a></td></tr>
+<tr class="memdesc:a1fefcdc149ad80ca85ba15c0af17fe6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーワードヘルプ フォント ハンドル <br /></td></tr>
+<tr class="separator:a1fefcdc149ad80ca85ba15c0af17fe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8071d9e739252d33c602676008a5dd6a"><td class="memItemLeft" align="right" valign="top"><a id="a8071d9e739252d33c602676008a5dd6a"></a>
+HFONT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a8071d9e739252d33c602676008a5dd6a">m_hTabFont</a></td></tr>
+<tr class="memdesc:a8071d9e739252d33c602676008a5dd6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブ フォント ハンドル <br /></td></tr>
+<tr class="separator:a8071d9e739252d33c602676008a5dd6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a1941a028a96e3cf982aa7ce2f5434a47"><td class="memItemLeft" align="right" valign="top"><a id="a1941a028a96e3cf982aa7ce2f5434a47"></a>
+typedef INT_PTR(CPropCommon::*&#160;</td><td class="memItemRight" valign="bottom"><b>pDispatchPage</b>) (HWND, UINT, WPARAM, LPARAM)</td></tr>
+<tr class="separator:a1941a028a96e3cf982aa7ce2f5434a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac9d804f108441d9ccc5cb1f02fdd8c26"><td class="memItemLeft" align="right" valign="top"><a id="ac9d804f108441d9ccc5cb1f02fdd8c26"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnHelp</b> (HWND hwndParent, int nPageID)</td></tr>
+<tr class="separator:ac9d804f108441d9ccc5cb1f02fdd8c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13b3e11b21e3815dcc4744a4f7bbc50"><td class="memItemLeft" align="right" valign="top"><a id="ad13b3e11b21e3815dcc4744a4f7bbc50"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SearchIntArr</b> (int nKey, int *pnArr, int nArrNum)</td></tr>
+<tr class="separator:ad13b3e11b21e3815dcc4744a4f7bbc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0079c16f2a40672abc81f05a8f2bc7"><td class="memItemLeft" align="right" valign="top"><a id="a8f0079c16f2a40672abc81f05a8f2bc7"></a>
+INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a8f0079c16f2a40672abc81f05a8f2bc7">DispatchEvent</a> (HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memdesc:a8f0079c16f2a40672abc81f05a8f2bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message Handler <br /></td></tr>
+<tr class="separator:a8f0079c16f2a40672abc81f05a8f2bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4819afc1c3ef8f834905b3187f3dc58"><td class="memItemLeft" align="right" valign="top"><a id="af4819afc1c3ef8f834905b3187f3dc58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#af4819afc1c3ef8f834905b3187f3dc58">SetData</a> (HWND hwndDlg)</td></tr>
+<tr class="memdesc:af4819afc1c3ef8f834905b3187f3dc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログデータの設定 <br /></td></tr>
+<tr class="separator:af4819afc1c3ef8f834905b3187f3dc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4032687fae1ce9bbde7ec71f2801da"><td class="memItemLeft" align="right" valign="top"><a id="afb4032687fae1ce9bbde7ec71f2801da"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#afb4032687fae1ce9bbde7ec71f2801da">GetData</a> (HWND hwndDlg)</td></tr>
+<tr class="memdesc:afb4032687fae1ce9bbde7ec71f2801da"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログデータの取得 <br /></td></tr>
+<tr class="separator:afb4032687fae1ce9bbde7ec71f2801da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6efdf0058c44daa3095df58aa6e4cda"><td class="memItemLeft" align="right" valign="top"><a id="ac6efdf0058c44daa3095df58aa6e4cda"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#ac6efdf0058c44daa3095df58aa6e4cda">Import</a> (HWND hwndDlg)</td></tr>
+<tr class="memdesc:ac6efdf0058c44daa3095df58aa6e4cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">インポートする <br /></td></tr>
+<tr class="separator:ac6efdf0058c44daa3095df58aa6e4cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b9592c0f7cf0510eb0392f5b40eb98"><td class="memItemLeft" align="right" valign="top"><a id="a12b9592c0f7cf0510eb0392f5b40eb98"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a12b9592c0f7cf0510eb0392f5b40eb98">Export</a> (HWND hwndDlg)</td></tr>
+<tr class="memdesc:a12b9592c0f7cf0510eb0392f5b40eb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">エクスポートする <br /></td></tr>
+<tr class="separator:a12b9592c0f7cf0510eb0392f5b40eb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa5d1f53b01014c3e28cb387d62f3b9"><td class="memItemLeft" align="right" valign="top">HFONT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#aaaa5d1f53b01014c3e28cb387d62f3b9">SetCtrlFont</a> (HWND hwndDlg, int idc_static, const LOGFONT &amp;lf)</td></tr>
+<tr class="memdesc:aaaa5d1f53b01014c3e28cb387d62f3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールにフォント設定する // 2013/4/24 Uchi  <a href="../../db/d54/class_c_prop_common.html#aaaa5d1f53b01014c3e28cb387d62f3b9">[詳解]</a><br /></td></tr>
+<tr class="separator:aaaa5d1f53b01014c3e28cb387d62f3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e42358ad22703ed2bf5e86c320ada1d"><td class="memItemLeft" align="right" valign="top">HFONT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a0e42358ad22703ed2bf5e86c320ada1d">SetFontLabel</a> (HWND hwndDlg, int idc_static, const LOGFONT &amp;lf, int nps)</td></tr>
+<tr class="memdesc:a0e42358ad22703ed2bf5e86c320ada1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントラベルにフォントとフォント名設定する // 2013/4/24 Uchi  <a href="../../db/d54/class_c_prop_common.html#a0e42358ad22703ed2bf5e86c320ada1d">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e42358ad22703ed2bf5e86c320ada1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa658334693d75b2cfd2ee52569444cfa"><td class="memItemLeft" align="right" valign="top">static INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#aa658334693d75b2cfd2ee52569444cfa">DlgProc</a> (INT_PTR(CPropCommon::*DispatchPage)(HWND, UINT, WPARAM, LPARAM), HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memdesc:aa658334693d75b2cfd2ee52569444cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">汎用ダイアログプロシージャ  <a href="../../db/d54/class_c_prop_common.html#aa658334693d75b2cfd2ee52569444cfa">[詳解]</a><br /></td></tr>
+<tr class="separator:aa658334693d75b2cfd2ee52569444cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f7402a80e5c46268f31858eccdb225"><td class="memItemLeft" align="right" valign="top"><a id="a69f7402a80e5c46268f31858eccdb225"></a>
+static INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><b>DlgProc2</b> (INT_PTR(CPropCommon::*DispatchPage)(HWND, UINT, WPARAM, LPARAM), HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a69f7402a80e5c46268f31858eccdb225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a1746470421ad742fde4eaf1d2ed16db9"><td class="memItemLeft" align="right" valign="top"><a id="a1746470421ad742fde4eaf1d2ed16db9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a1746470421ad742fde4eaf1d2ed16db9">nLastPos_Macro</a></td></tr>
+<tr class="memdesc:a1746470421ad742fde4eaf1d2ed16db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">前回フォーカスのあった場所 <br /></td></tr>
+<tr class="separator:a1746470421ad742fde4eaf1d2ed16db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f5a20fe2b346b45c7203fa19877d48"><td class="memItemLeft" align="right" valign="top"><a id="a17f5a20fe2b346b45c7203fa19877d48"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d54/class_c_prop_common.html#a17f5a20fe2b346b45c7203fa19877d48">m_nLastPos_FILENAME</a></td></tr>
+<tr class="memdesc:a17f5a20fe2b346b45c7203fa19877d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">前回フォーカスのあった場所 ファイル名タブ用 <br /></td></tr>
+<tr class="separator:a17f5a20fe2b346b45c7203fa19877d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>共通設定ダイアログボックスクラス </p>
+<p>1つのダイアログボックスに複数のプロパティページが入った構造に なっており、Dialog procedureとEvent Dispatcherがページごとにある．</p>
+<dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a1f99d73680ec1e4b55ba6755caf8e557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f99d73680ec1e4b55ba6755caf8e557">&#9670;&nbsp;</a></span>ApplyData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPropCommon::ApplyData </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tempTypeKeywordSet</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一時データ領域からにDLLSHAREDATA設定をコピーする </p>
+<p>ShareData に 設定を適用・コピーする </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tempTypeKeywordSet</td><td>キーワードセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ShareDataにコピーするだけなので，更新要求などは，利用する側で処理してもらう </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002.12.11 Moca CEditDoc::OpenPropertySheetから移動 </dd></dl>
+
+</div>
+</div>
+<a id="aa658334693d75b2cfd2ee52569444cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa658334693d75b2cfd2ee52569444cfa">&#9670;&nbsp;</a></span>DlgProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CPropCommon::DlgProc </td>
+          <td>(</td>
+          <td class="paramtype">INT_PTR(CPropCommon::*)(HWND, UINT, WPARAM, LPARAM)&#160;</td>
+          <td class="paramname"><em>DispatchPage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndDlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>汎用ダイアログプロシージャ </p>
+<p>プロパティページごとのWindow Procedureを引数に取ることで 処理の共通化を狙った．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DispatchPage</td><td>真のWindow Procedureのメンバ関数ポインタ </td></tr>
+    <tr><td class="paramname">hwndDlg</td><td>ダイアログボックスのWindow Handlw </td></tr>
+    <tr><td class="paramname">uMsg</td><td>メッセージ </td></tr>
+    <tr><td class="paramname">wParam</td><td>パラメータ1 </td></tr>
+    <tr><td class="paramname">lParam</td><td>パラメータ2 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47b638c9ba06c31c17007985f464fd09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b638c9ba06c31c17007985f464fd09">&#9670;&nbsp;</a></span>DoPropertySheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CPropCommon::DoPropertySheet </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nPageNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bTrayProc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>プロパティシートの作成 </p><dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd></dl>
+<p>「共通設定」プロパティシートの作成時に必要な情報の配列．</p>
+
+</div>
+</div>
+<a id="ab66443cc96047b399aa0c5a863778fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66443cc96047b399aa0c5a863778fe4">&#9670;&nbsp;</a></span>InitData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPropCommon::InitData </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>tempTypeKeywordSet</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>name</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>exts</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DLLSHAREDATAから一時データ領域に設定を複製する </p>
+<p>ShareDataから一時領域へ設定をコピーする </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tempTypeKeywordSet</td><td>キーワードセット </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>タイプ属性：名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">exts</td><td>タイプ属性：拡張子リスト</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2002.12.11 Moca CEditDoc::OpenPropertySheetから移動 </dd></dl>
+
+</div>
+</div>
+<a id="aaaa5d1f53b01014c3e28cb387d62f3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa5d1f53b01014c3e28cb387d62f3b9">&#9670;&nbsp;</a></span>SetCtrlFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HFONT CPropCommon::SetCtrlFont </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndDlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idc_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LOGFONT &amp;&#160;</td>
+          <td class="paramname"><em>lf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コントロールにフォント設定する // 2013/4/24 Uchi </p>
+<p>コントロールにフォント設定する </p><dl class="section date"><dt>日付</dt><dd>2013.04.24 Uchi </dd></dl>
+
+</div>
+</div>
+<a id="a0e42358ad22703ed2bf5e86c320ada1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e42358ad22703ed2bf5e86c320ada1d">&#9670;&nbsp;</a></span>SetFontLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HFONT CPropCommon::SetFontLabel </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndDlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idc_static</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LOGFONT &amp;&#160;</td>
+          <td class="paramname"><em>lf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フォントラベルにフォントとフォント名設定する // 2013/4/24 Uchi </p>
+<p>フォントラベルにフォントとフォント名設定する </p><dl class="section date"><dt>日付</dt><dd>2013.04.24 Uchi </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/prop/<a class="el" href="../../d3/d53/_c_prop_common_8h_source.html">CPropCommon.h</a></li>
+<li>sakura_core/prop/<a class="el" href="../../d1/dcc/_c_prop_common_8cpp.html">CPropCommon.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

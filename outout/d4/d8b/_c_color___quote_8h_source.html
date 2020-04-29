@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/colors/CColor_Quote.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li><li class="navelem"><a class="el" href="../../dir_a0464b42309a0d60a8707e10cc2a754c.html">colors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CColor_Quote.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d8b/_c_color___quote_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d82/_c_color_strategy_8h.html">view/colors/CColorStrategy.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../dd/dae/class_c_color___quote.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a> : <span class="keyword">public</span> <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a>(<span class="keywordtype">wchar_t</span> cQuote) : m_cQuote(cQuote), m_nCOMMENTEND(-1),m_nColorTypeIndex(0) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        m_szQuote[0] = cQuote;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        m_szQuote[1] = cQuote;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        m_szQuote[2] = cQuote;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dae/class_c_color___quote.html#a91f28480d7dedbd472f8cd38f7e88adb">Update</a>(<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../dd/dae/class_c_color___quote.html#a29220678b42f040b7a3c0494dd3dd4b3">   37</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> <a class="code" href="../../dd/dae/class_c_color___quote.html#a29220678b42f040b7a3c0494dd3dd4b3">GetStrategyColor</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../db/dd8/class_c_layout_color_info.html">CLayoutColorInfo</a>* GetStrategyColorInfo() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dd/dae/class_c_color___quote.html#a5dfa8db2a12cc8f8d0d3fb03f846a74d">   39</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dae/class_c_color___quote.html#a5dfa8db2a12cc8f8d0d3fb03f846a74d">InitStrategyStatus</a>()<span class="keyword"> override</span>{ m_nCOMMENTEND = -1; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> SetStrategyColorInfo(<span class="keyword">const</span> <a class="code" href="../../db/dd8/class_c_layout_color_info.html">CLayoutColorInfo</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> BeginColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> EndColor(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> Disp()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> m_pTypeData-&gt;<a class="code" href="../../d5/d88/struct_s_type_config.html#abd679cc0dafe1855b4f1ad91c119759e">m_ColorInfoArr</a>[this-&gt;<a class="code" href="../../dd/dae/class_c_color___quote.html#a29220678b42f040b7a3c0494dd3dd4b3">GetStrategyColor</a>()].<a class="code" href="../../de/d1a/struct_color_info_base.html#a341695d22866a2c190a1ca13b1d08ce4">m_bDisp</a>; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> IsCppRawString(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cStr, <span class="keywordtype">int</span> nPos);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> Match_Quote( <span class="keywordtype">wchar_t</span> wcQuote, <span class="keywordtype">int</span> nPos, <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cLineStr, <span class="keywordtype">int</span> escapeType, <span class="keywordtype">bool</span>* pbEscapeEnd = NULL );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> Match_QuoteStr( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szQuote, <span class="keywordtype">int</span> nQuoteLen, <span class="keywordtype">int</span> nPos, <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cLineStr, <span class="keywordtype">bool</span> bEscape );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">wchar_t</span> m_cQuote;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">wchar_t</span> m_szQuote[3];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> m_nCOMMENTEND;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::wstring m_tag;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> m_nStringType;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> m_nEscapeType;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span>* m_pbEscapeEnd;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> m_bEscapeEnd;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> m_nColorTypeIndex;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d6/d13/class_c_color___single_quote.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/d13/class_c_color___single_quote.html">CColor_SingleQuote</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d6/d13/class_c_color___single_quote.html">CColor_SingleQuote</a>() : <a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a>(L<span class="charliteral">&#39;\&#39;&#39;</span>) { }</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d6/d13/class_c_color___single_quote.html#ae40362e3be7526b4bd5e90424c061a01">   66</a></span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> <a class="code" href="../../d6/d13/class_c_color___single_quote.html#ae40362e3be7526b4bd5e90424c061a01">GetStrategyColor</a>()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3abb98aadefae3ed6be5d2b160677ec57f">COLORIDX_SSTRING</a>; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../de/d00/class_c_color___double_quote.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d00/class_c_color___double_quote.html">CColor_DoubleQuote</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../de/d00/class_c_color___double_quote.html">CColor_DoubleQuote</a>() : <a class="code" href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a>(L<span class="charliteral">&#39;&quot;&#39;</span>) { }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a> <a class="code" href="../../dd/dae/class_c_color___quote.html#a29220678b42f040b7a3c0494dd3dd4b3">GetStrategyColor</a>()<span class="keyword"> const override</span>{ <span class="keywordflow">return</span> <a class="code" href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a491dada85cca98a40607ef0bef4a76e8">COLORIDX_WSTRING</a>; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3abb98aadefae3ed6be5d2b160677ec57f"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3abb98aadefae3ed6be5d2b160677ec57f">COLORIDX_SSTRING</a></div><div class="ttdeci">@ COLORIDX_SSTRING</div><div class="ttdoc">シングルクォーテーション文字列 //Dec. 4, 2000 shifted by MIK</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:70</div></div>
+<div class="ttc" id="aclass_c_color___single_quote_html"><div class="ttname"><a href="../../d6/d13/class_c_color___single_quote.html">CColor_SingleQuote</a></div><div class="ttdef"><b>Definition:</b> CColor_Quote.h:63</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3">EColorIndexType</a></div><div class="ttdeci">EColorIndexType</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:41</div></div>
+<div class="ttc" id="aclass_c_color___single_quote_html_ae40362e3be7526b4bd5e90424c061a01"><div class="ttname"><a href="../../d6/d13/class_c_color___single_quote.html#ae40362e3be7526b4bd5e90424c061a01">CColor_SingleQuote::GetStrategyColor</a></div><div class="ttdeci">EColorIndexType GetStrategyColor() const override</div><div class="ttdoc">色定義</div><div class="ttdef"><b>Definition:</b> CColor_Quote.h:66</div></div>
+<div class="ttc" id="aclass_c_color___quote_html"><div class="ttname"><a href="../../dd/dae/class_c_color___quote.html">CColor_Quote</a></div><div class="ttdef"><b>Definition:</b> CColor_Quote.h:29</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_color___quote_html_a29220678b42f040b7a3c0494dd3dd4b3"><div class="ttname"><a href="../../dd/dae/class_c_color___quote.html#a29220678b42f040b7a3c0494dd3dd4b3">CColor_Quote::GetStrategyColor</a></div><div class="ttdeci">virtual EColorIndexType GetStrategyColor() const =0</div><div class="ttdoc">色定義</div></div>
+<div class="ttc" id="aclass_c_color___quote_html_a91f28480d7dedbd472f8cd38f7e88adb"><div class="ttname"><a href="../../dd/dae/class_c_color___quote.html#a91f28480d7dedbd472f8cd38f7e88adb">CColor_Quote::Update</a></div><div class="ttdeci">void Update(void) override</div><div class="ttdoc">設定更新</div><div class="ttdef"><b>Definition:</b> CColor_Quote.cpp:25</div></div>
+<div class="ttc" id="aclass_c_color_strategy_html"><div class="ttname"><a href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a></div><div class="ttdef"><b>Definition:</b> CColorStrategy.h:135</div></div>
+<div class="ttc" id="a_c_color_strategy_8h_html"><div class="ttname"><a href="../../d7/d82/_c_color_strategy_8h.html">CColorStrategy.h</a></div></div>
+<div class="ttc" id="aclass_c_layout_color_info_html"><div class="ttname"><a href="../../db/dd8/class_c_layout_color_info.html">CLayoutColorInfo</a></div><div class="ttdef"><b>Definition:</b> CLayoutExInfo.h:29</div></div>
+<div class="ttc" id="aclass_c_color___double_quote_html"><div class="ttname"><a href="../../de/d00/class_c_color___double_quote.html">CColor_DoubleQuote</a></div><div class="ttdef"><b>Definition:</b> CColor_Quote.h:69</div></div>
+<div class="ttc" id="aclass_c_color___quote_html_a5dfa8db2a12cc8f8d0d3fb03f846a74d"><div class="ttname"><a href="../../dd/dae/class_c_color___quote.html#a5dfa8db2a12cc8f8d0d3fb03f846a74d">CColor_Quote::InitStrategyStatus</a></div><div class="ttdeci">void InitStrategyStatus() override</div><div class="ttdoc">色切り替え開始を検出したら、その直前までの描画を行い、さらに色設定を行う。</div><div class="ttdef"><b>Definition:</b> CColor_Quote.h:39</div></div>
+<div class="ttc" id="astruct_color_info_base_html_a341695d22866a2c190a1ca13b1d08ce4"><div class="ttname"><a href="../../de/d1a/struct_color_info_base.html#a341695d22866a2c190a1ca13b1d08ce4">ColorInfoBase::m_bDisp</a></div><div class="ttdeci">bool m_bDisp</div><div class="ttdoc">表示</div><div class="ttdef"><b>Definition:</b> CDocTypeSetting.h:47</div></div>
+<div class="ttc" id="a_e_color_index_type_8h_html_ae0fd30ec9b3b2056ce330a30edbbcae3a491dada85cca98a40607ef0bef4a76e8"><div class="ttname"><a href="../../d9/dc2/_e_color_index_type_8h.html#ae0fd30ec9b3b2056ce330a30edbbcae3a491dada85cca98a40607ef0bef4a76e8">COLORIDX_WSTRING</a></div><div class="ttdeci">@ COLORIDX_WSTRING</div><div class="ttdoc">ダブルクォーテーション文字列 //Dec. 4, 2000 shifted by MIK</div><div class="ttdef"><b>Definition:</b> EColorIndexType.h:71</div></div>
+<div class="ttc" id="astruct_s_type_config_html_abd679cc0dafe1855b4f1ad91c119759e"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html#abd679cc0dafe1855b4f1ad91c119759e">STypeConfig::m_ColorInfoArr</a></div><div class="ttdeci">ColorInfo m_ColorInfoArr[64]</div><div class="ttdoc">色設定配列</div><div class="ttdef"><b>Definition:</b> CType.h:157</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

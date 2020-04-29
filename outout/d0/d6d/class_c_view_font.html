@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CViewFont クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d3/db7/class_c_view_font-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CViewFont クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0b3490686da6bf922457a3d9e944aea1"><td class="memItemLeft" align="right" valign="top"><a id="a0b3490686da6bf922457a3d9e944aea1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CViewFont</b> (const LOGFONT *plf, bool bMiniMap=false)</td></tr>
+<tr class="separator:a0b3490686da6bf922457a3d9e944aea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89b1181afee714b268c0a9691823cf5"><td class="memItemLeft" align="right" valign="top"><a id="ac89b1181afee714b268c0a9691823cf5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFont</b> (const LOGFONT *plf)</td></tr>
+<tr class="separator:ac89b1181afee714b268c0a9691823cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addee90d5bd7383871ac106cd1fec85b0"><td class="memItemLeft" align="right" valign="top">HFONT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6d/class_c_view_font.html#addee90d5bd7383871ac106cd1fec85b0">ChooseFontHandle</a> (int fontNo, <a class="el" href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a> sFontAttr) const</td></tr>
+<tr class="separator:addee90d5bd7383871ac106cd1fec85b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a82b422164585e827ef5debaa7c735"><td class="memItemLeft" align="right" valign="top"><a id="ae2a82b422164585e827ef5debaa7c735"></a>
+HFONT&#160;</td><td class="memItemRight" valign="bottom"><b>GetFontHan</b> () const</td></tr>
+<tr class="separator:ae2a82b422164585e827ef5debaa7c735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad9abee5c748dff93bf287b9b77625b"><td class="memItemLeft" align="right" valign="top"><a id="a0ad9abee5c748dff93bf287b9b77625b"></a>
+const LOGFONT &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLogfont</b> (int FontNo=0) const</td></tr>
+<tr class="separator:a0ad9abee5c748dff93bf287b9b77625b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="addee90d5bd7383871ac106cd1fec85b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addee90d5bd7383871ac106cd1fec85b0">&#9670;&nbsp;</a></span>ChooseFontHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HFONT CViewFont::ChooseFontHandle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fontNo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a>&#160;</td>
+          <td class="paramname"><em>sFontAttr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>フォントを選ぶ </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m_bBoldFont</td><td>trueで太字 </td></tr>
+    <tr><td class="paramname">m_bUnderLine</td><td>trueで下線 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/view/<a class="el" href="../../d3/db3/_c_view_font_8h_source.html">CViewFont.h</a></li>
+<li>sakura_core/view/<a class="el" href="../../d0/dd1/_c_view_font_8cpp.html">CViewFont.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

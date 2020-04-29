@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/mem/CNativeA.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_db20c0c867290198352f2db9c83454b6.html">mem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CNativeA.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d6b/_c_native_a_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d9b/_c_native_8h.html">CNative.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../da/d53/class_c_native_a.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a> final : <span class="keyword">public</span> <a class="code" href="../../d7/d74/class_c_native.html">CNative</a>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>() noexcept;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>( <span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; rhs );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>( <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp;&amp; other ) noexcept;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* szData, <span class="keywordtype">size_t</span> cchData );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* szData);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//ネイティブ設定</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a82bb4e2eff3e6141bc35fa1f3ec499cb">SetString</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pszData );                  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a82bb4e2eff3e6141bc35fa1f3ec499cb">SetString</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pData, <span class="keywordtype">int</span> nDataLen );      </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#ace9e18fb4a95584a340d9849cf259e4d">SetNativeData</a>( <span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; pcNative );         </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a1d22b984e7366c8ae7e459c9bd402c49">AppendString</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pszData );               </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a1d22b984e7366c8ae7e459c9bd402c49">AppendString</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pszData, <span class="keywordtype">int</span> nLength );  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#ae1866f9e3389e3291feb5c41a680d82c">AppendStringF</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pszData, ...);           </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a73a156de32c2a7231e257398df13902b">AppendNativeData</a>( <span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; pcNative );      </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_c_native_a.html#a09ce86d4ca32fc5001b4f0154602c01a">AllocStringBuffer</a>( <span class="keywordtype">int</span> nDataLen );            </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//ネイティブ取得</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> GetStringLength() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../da/d53/class_c_native_a.html#ad7009cfd608a0ccbe43f83d0f6f9e4e9">operator[]</a>(<span class="keywordtype">int</span> nIndex) <span class="keyword">const</span>;                 </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* GetStringPtr()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code" href="../../d6/d31/class_c_memory.html#a2a0b8c81a8542f871c7283bac7618a61">GetRawPtr</a>());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">char</span>* GetStringPtr()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code" href="../../d6/d31/class_c_memory.html#a2a0b8c81a8542f871c7283bac7618a61">GetRawPtr</a>());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//演算子</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; rhs)          { <a class="code" href="../../d6/d31/class_c_memory.html#afadcb6001dd50b83cf3ca983f5014e76">CNative::operator=</a>(rhs); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; operator = (<a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp;&amp; rhs) noexcept      { <a class="code" href="../../d6/d31/class_c_memory.html#afadcb6001dd50b83cf3ca983f5014e76">CNative::operator=</a>(std::forward&lt;CNativeA&gt;(rhs)); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; operator=( <span class="keywordtype">char</span> );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d53/class_c_native_a.html">CNativeA</a>&amp; operator+=( <span class="keywordtype">char</span> );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_native_a_html_a09ce86d4ca32fc5001b4f0154602c01a"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#a09ce86d4ca32fc5001b4f0154602c01a">CNativeA::AllocStringBuffer</a></div><div class="ttdeci">void AllocStringBuffer(int nDataLen)</div><div class="ttdoc">(重要：nDataLenは文字単位) バッファサイズの調整。必要に応じて拡大する。</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:104</div></div>
+<div class="ttc" id="aclass_c_native_html"><div class="ttname"><a href="../../d7/d74/class_c_native.html">CNative</a></div><div class="ttdef"><b>Definition:</b> CNative.h:30</div></div>
+<div class="ttc" id="aclass_c_native_a_html_ad7009cfd608a0ccbe43f83d0f6f9e4e9"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#ad7009cfd608a0ccbe43f83d0f6f9e4e9">CNativeA::operator[]</a></div><div class="ttdeci">char operator[](int nIndex) const</div><div class="ttdoc">任意位置の文字取得。nIndexは文字単位。</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:126</div></div>
+<div class="ttc" id="aclass_c_native_a_html_a73a156de32c2a7231e257398df13902b"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#a73a156de32c2a7231e257398df13902b">CNativeA::AppendNativeData</a></div><div class="ttdeci">void AppendNativeData(const CNativeA &amp;pcNative)</div><div class="ttdoc">バッファの最後にデータを追加する</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:98</div></div>
+<div class="ttc" id="aclass_c_memory_html_afadcb6001dd50b83cf3ca983f5014e76"><div class="ttname"><a href="../../d6/d31/class_c_memory.html#afadcb6001dd50b83cf3ca983f5014e76">CMemory::operator=</a></div><div class="ttdeci">CMemory &amp; operator=(const CMemory &amp;rhs)</div><div class="ttdoc">コピー代入演算子</div><div class="ttdef"><b>Definition:</b> CMemory.h:72</div></div>
+<div class="ttc" id="a_c_native_8h_html"><div class="ttname"><a href="../../d2/d9b/_c_native_8h.html">CNative.h</a></div></div>
+<div class="ttc" id="aclass_c_native_a_html_a1d22b984e7366c8ae7e459c9bd402c49"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#a1d22b984e7366c8ae7e459c9bd402c49">CNativeA::AppendString</a></div><div class="ttdeci">void AppendString(const char *pszData)</div><div class="ttdoc">バッファの最後にデータを追加する</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:56</div></div>
+<div class="ttc" id="aclass_c_native_a_html_a82bb4e2eff3e6141bc35fa1f3ec499cb"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#a82bb4e2eff3e6141bc35fa1f3ec499cb">CNativeA::SetString</a></div><div class="ttdeci">void SetString(const char *pszData)</div><div class="ttdoc">バッファの内容を置き換える</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:37</div></div>
+<div class="ttc" id="aclass_c_native_a_html_ae1866f9e3389e3291feb5c41a680d82c"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#ae1866f9e3389e3291feb5c41a680d82c">CNativeA::AppendStringF</a></div><div class="ttdeci">void AppendStringF(const char *pszData,...)</div><div class="ttdoc">バッファの最後にデータを追加する (フォーマット機能付き)</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:68</div></div>
+<div class="ttc" id="aclass_c_memory_html_a2a0b8c81a8542f871c7283bac7618a61"><div class="ttname"><a href="../../d6/d31/class_c_memory.html#a2a0b8c81a8542f871c7283bac7618a61">CMemory::GetRawPtr</a></div><div class="ttdeci">const void * GetRawPtr() const</div><div class="ttdoc">データへのポインタを返す</div><div class="ttdef"><b>Definition:</b> CMemory.h:66</div></div>
+<div class="ttc" id="aclass_c_native_a_html_ace9e18fb4a95584a340d9849cf259e4d"><div class="ttname"><a href="../../da/d53/class_c_native_a.html#ace9e18fb4a95584a340d9849cf259e4d">CNativeA::SetNativeData</a></div><div class="ttdeci">void SetNativeData(const CNativeA &amp;pcNative)</div><div class="ttdoc">バッファの内容を置き換える</div><div class="ttdef"><b>Definition:</b> CNativeA.cpp:50</div></div>
+<div class="ttc" id="aclass_c_native_a_html"><div class="ttname"><a href="../../da/d53/class_c_native_a.html">CNativeA</a></div><div class="ttdef"><b>Definition:</b> CNativeA.h:29</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

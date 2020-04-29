@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CProgressListener クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../da/d05/class_c_progress_listener-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CProgressListener クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>1つのCProgressSubjectをウォッチする  
+ <a href="../../db/db2/class_c_progress_listener.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">CDocListener.h</a>&gt;</code></p>
+<div class="dynheader">
+CProgressListener の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/db2/class_c_progress_listener.png" usemap="#CProgressListener_map" alt=""/>
+  <map id="CProgressListener_map" name="CProgressListener_map">
+<area href="../../da/d9f/class_c_listener_t.html" alt="CListenerT&lt; CProgressSubject &gt;" shape="rect" coords="0,56,199,80"/>
+<area href="../../d7/def/class_c_listener.html" title="1つのCSubjectをウォッチする" alt="CListener" shape="rect" coords="0,0,199,24"/>
+<area href="../../d2/dc2/class_c_visual_progress.html" alt="CVisualProgress" shape="rect" coords="0,168,199,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a35bf60169bdb81256286583536581a9a"><td class="memItemLeft" align="right" valign="top"><a id="a35bf60169bdb81256286583536581a9a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnProgress</b> (int nPer)=0</td></tr>
+<tr class="separator:a35bf60169bdb81256286583536581a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57674aa3970a750130ee0194fb91f76"><td class="memItemLeft" align="right" valign="top"><a id="ac57674aa3970a750130ee0194fb91f76"></a>
+<a class="el" href="../../d6/d70/class_c_progress_subject.html">CProgressSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Listen</b> (<a class="el" href="../../d6/d70/class_c_progress_subject.html">CProgressSubject</a> *pcSubject)</td></tr>
+<tr class="separator:ac57674aa3970a750130ee0194fb91f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462c96166f483fba52156d0c9f996818"><td class="memItemLeft" align="right" valign="top"><a id="a462c96166f483fba52156d0c9f996818"></a>
+<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/def/class_c_listener.html#a462c96166f483fba52156d0c9f996818">Listen</a> (<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *pcSubject)</td></tr>
+<tr class="memdesc:a462c96166f483fba52156d0c9f996818"><td class="mdescLeft">&#160;</td><td class="mdescRight">直前にウォッチしていたサブジェクトを返す <br /></td></tr>
+<tr class="separator:a462c96166f483fba52156d0c9f996818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc21edce0a4f68fa5f1b061a1dd521c"><td class="memItemLeft" align="right" valign="top"><a id="a0cc21edce0a4f68fa5f1b061a1dd521c"></a>
+<a class="el" href="../../d6/d70/class_c_progress_subject.html">CProgressSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListeningSubject</b> () const</td></tr>
+<tr class="separator:a0cc21edce0a4f68fa5f1b061a1dd521c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f531e60eacd26494384015ea920115"><td class="memItemLeft" align="right" valign="top"><a id="a56f531e60eacd26494384015ea920115"></a>
+<a class="el" href="../../d6/d8b/class_c_subject.html">CSubject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetListeningSubject</b> () const</td></tr>
+<tr class="separator:a56f531e60eacd26494384015ea920115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>1つのCProgressSubjectをウォッチする </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/doc/<a class="el" href="../../d3/db0/_c_doc_listener_8h_source.html">CDocListener.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

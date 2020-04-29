@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CStringRef クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../df/d57/class_c_string_ref-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CStringRef クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文字列への参照を保持するクラス  
+ <a href="../../d6/da7/class_c_string_ref.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">CNativeW.h</a>&gt;</code></p>
+<div class="dynheader">
+CStringRef の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/da7/class_c_string_ref.png" usemap="#CStringRef_map" alt=""/>
+  <map id="CStringRef_map" name="CStringRef_map">
+<area href="../../d0/d76/class_i_string_ref.html" title="文字列への参照を取得するインターフェース" alt="IStringRef" shape="rect" coords="0,0,73,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a14a2b83f8683a76ad3a2d2ace7e6d251"><td class="memItemLeft" align="right" valign="top"><a id="a14a2b83f8683a76ad3a2d2ace7e6d251"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CStringRef</b> (const wchar_t *pData, int nDataLen)</td></tr>
+<tr class="separator:a14a2b83f8683a76ad3a2d2ace7e6d251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4f92d1da6d114e6d1a357a4b013c63"><td class="memItemLeft" align="right" valign="top"><a id="a3d4f92d1da6d114e6d1a357a4b013c63"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPtr</b> () const override</td></tr>
+<tr class="separator:a3d4f92d1da6d114e6d1a357a4b013c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b94663840495978a45aea984272863"><td class="memItemLeft" align="right" valign="top"><a id="a21b94663840495978a45aea984272863"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetLength</b> () const override</td></tr>
+<tr class="separator:a21b94663840495978a45aea984272863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8088571cb9229e2e98bc946c6fc82e0"><td class="memItemLeft" align="right" valign="top"><a id="ae8088571cb9229e2e98bc946c6fc82e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsValid</b> () const</td></tr>
+<tr class="separator:ae8088571cb9229e2e98bc946c6fc82e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86784360bb26c62edce036da8bbbfc8"><td class="memItemLeft" align="right" valign="top"><a id="af86784360bb26c62edce036da8bbbfc8"></a>
+wchar_t&#160;</td><td class="memItemRight" valign="bottom"><b>At</b> (int nIndex) const</td></tr>
+<tr class="separator:af86784360bb26c62edce036da8bbbfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文字列への参照を保持するクラス </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/mem/<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">CNativeW.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

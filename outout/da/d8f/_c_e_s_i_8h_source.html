@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/CESI.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CESI.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d8f/_c_e_s_i_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2006</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2007</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/dd2/structtag_encoding_info.html">   39</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../df/dd2/structtag_encoding_info.html">tagEncodingInfo</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeID;  <span class="comment">// 文字コード識別番号</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> nSpecific;  <span class="comment">// 評価値1</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> nPoints;    <span class="comment">// 評価値2</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../df/dd2/structtag_encoding_info.html">tagEncodingInfo</a>  <a class="code" href="../../df/dd2/structtag_encoding_info.html">MBCODE_INFO</a>, <a class="code" href="../../df/dd2/structtag_encoding_info.html">WCCODE_INFO</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    ○　評価値の使い方　○</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    SJIS, JIS, EUCJP, UTF-8, UTF-7 の場合：</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    typedef名 MBCODE_INFO</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    評価値１ → 固有バイト数</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    評価値２ → ポイント数（特有バイト数 － 不正バイト数）</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    UTF-16 UTF-16BE の場合：</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    typedef名 WCCODE_INFO</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    評価値１ → ワイド文字の改行の個数</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    評価値２ → 不正バイト数</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> DWORD ESI_NOINFORMATION        = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> DWORD ESI_MBC_DETECTED         = 1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> DWORD ESI_WC_DETECTED          = 2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> DWORD ESI_NODETECTED           = 4;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ワイド文字の２種類あるものの格納位置</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">enum</span> EStoreID4WCInfo {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ESI_WCIDX_UTF16LE,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ESI_WCIDX_UTF16BE,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ESI_WCIDX_MAX,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// BOM タイプ</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">enum</span> EBOMType {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ESI_BOMTYPE_UNKNOWN = -1,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ESI_BOMTYPE_LE =0,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    ESI_BOMTYPE_BE =1,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html">   84</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d88/class_c_e_s_i.html">CESI</a> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d5/d88/class_c_e_s_i.html">CESI</a>() { ; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html">CESI</a>( <span class="keyword">const</span> <a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>&amp; ref ) : m_pEncodingConfig(&amp;ref) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">m_dwStatus</a> = ESI_NOINFORMATION;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a> = -1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">m_eMetaName</a> = <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a8efd21094cea35a2c488a7b6547b1540">CheckKanjiCode</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* buff, <span class="keywordtype">size_t</span> size) noexcept;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#accd2262ecc89371d72f4be001b3f3103">DetectUnicodeBom</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keywordtype">size_t</span> nLen) noexcept;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#ae7b0b2b2bdb576c01dcc3aa2a818b580">SetInformation</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a3dbbfef6b1aa130ee14c0f01ba18e2cc">  104</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a3dbbfef6b1aa130ee14c0f01ba18e2cc">InitPriorityTable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//  **** 全般</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// マルチバイト系とUNICODE系とでそれぞれ情報の格納先が違う。</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// 以下の関数で吸収する</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#ad52a32d39e302be520ba97f099b48526">GetIndexById</a>( <span class="keyword">const</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeType ) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// データセッタ/ゲッター</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#afd7dd632ae4443edd3454e77b8600e46">SetEvaluation</a>( <span class="keyword">const</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeId, <span class="keyword">const</span> <span class="keywordtype">int</span> v1, <span class="keyword">const</span> <span class="keywordtype">int</span> v2 );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a186e8f75ce16f503117b348d61729088">GetEvaluation</a>( <span class="keyword">const</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodeId, <span class="keywordtype">int</span> *pv1, <span class="keywordtype">int</span> *pv2 ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">  116</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">  119</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">m_dwStatus</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// m_dwStatus のセッター／ゲッター</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> SetStatus( DWORD inf ){ <a class="code" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">m_dwStatus</a> |= inf; }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    DWORD GetStatus( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">m_dwStatus</a>; }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">// m_nTargetDataLen のセッター／ゲッター</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> SetDataLen( <span class="keyword">const</span> <span class="keywordtype">int</span> n ){ <span class="keywordflow">if</span>( n &lt; 1 ){ <a class="code" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a> = 0; }<span class="keywordflow">else</span>{ <a class="code" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a> = n; } }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span> GetDataLen( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">m_nTargetDataLen</a>; }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">        文字列の文字コード情報を収集する</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a0a3a5c0e87c97998d669b4b110d7fbc2">ScanCode</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a2e35dd02409947888c771b73a93e6afa">GetEncodingInfo_sjis</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#ad5c617f990b677bea2bef33c18a62c51">GetEncodingInfo_jis</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#ac5186f79ace1a9125e540d89b194f0cc">GetEncodingInfo_eucjp</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a9942095ace87ee1002ae1977cb774871">GetEncodingInfo_utf8</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a5fd90beaa0dfffa8efb0d1ce7360ec3e">GetEncodingInfo_utf7</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a27a24bc5799cebdd86bb7630f35b9f2a">GetEncodingInfo_cesu8</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#aff02598efb02e0cb36d1f68261a9c7e1">GetEncodingInfo_uni</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a75527ac223559aecb9d06284811b4bf4">GetEncodingInfo_latin1</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> GetEncodingInfo_meta( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a9669e96779335fa4d8a3997fd0636fe7">_CheckUtf16Eol</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen, <span class="keyword">const</span> <span class="keywordtype">bool</span> bbig_endian );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> _CheckUtf16EolLE( <span class="keyword">const</span> <span class="keywordtype">char</span>* p, <span class="keyword">const</span> <span class="keywordtype">int</span> n ){ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a9669e96779335fa4d8a3997fd0636fe7">_CheckUtf16Eol</a>( p, n, <span class="keyword">false</span> ); }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> _CheckUtf16EolBE( <span class="keyword">const</span> <span class="keywordtype">char</span>* p, <span class="keyword">const</span> <span class="keywordtype">int</span> n ){ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a9669e96779335fa4d8a3997fd0636fe7">_CheckUtf16Eol</a>( p, n, <span class="keyword">true</span> ); }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//  **** マルチバイト判定関係の変数その他</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NUM_OF_MBCODE = (CODE_CODEMAX - 2);</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a4731082c42703039670f93605698179f">  158</a></span>&#160;    <a class="code" href="../../df/dd2/structtag_encoding_info.html">MBCODE_INFO</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4731082c42703039670f93605698179f">m_aMbcInfo</a>[NUM_OF_MBCODE];   </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">  159</a></span>&#160;    <a class="code" href="../../df/dd2/structtag_encoding_info.html">MBCODE_INFO</a>* <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[NUM_OF_MBCODE]; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a68193b9a9a44eaddecc703f7783fc18a">  160</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a68193b9a9a44eaddecc703f7783fc18a">m_nMbcSjisHankata</a>;                   </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a2e97701c75b205ecb246a9f0f129de4d">  161</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a2e97701c75b205ecb246a9f0f129de4d">m_nMbcEucZenHirakata</a>;                </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#aacd99567b7f33db2b774b128e9f57509">  162</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#aacd99567b7f33db2b774b128e9f57509">m_nMbcEucZen</a>;                        </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a1a99d17de3eb0b00e3e2f8105bc2f320">SortMBCInfo</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a1ddebd1691be7b6e30ad58a6d800be42">  168</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a1ddebd1691be7b6e30ad58a6d800be42">IsAmbiguousEucAndSjis</a>( <span class="keywordtype">void</span> ){</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">// EUC と SJIS がトップ2に上がった時</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">// かつ、EUC と SJIS のポイント数が同数のとき</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span>( (<a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee">CODE_SJIS</a> &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4">CODE_EUC</a></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;             || <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee">CODE_SJIS</a> &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4">CODE_EUC</a>)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;         &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;nPoints == <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;nPoints</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        ){</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#ac4f8b966f3abb66dcc84b7aff450d5a6">  181</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#ac4f8b966f3abb66dcc84b7aff450d5a6">IsAmbiguousUtf8AndCesu8</a>( <span class="keywordtype">void</span> ){</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">// UTF-8 と SJIS がトップ2に上がった時</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// かつ、UTF-8 と SJIS のポイント数が同数のとき</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span>( (<a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f">CODE_UTF8</a> &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff">CODE_CESU8</a></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;             || <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f">CODE_UTF8</a> &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;eCodeID == <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff">CODE_CESU8</a>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         &amp;&amp; <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[0]-&gt;nPoints == <a class="code" href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">m_apMbcInfo</a>[1]-&gt;nPoints</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        ){</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a5e84a7847d1cd2f742ccd75b72f97d9a">GuessEucOrSjis</a>( <span class="keywordtype">void</span> );    </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#aff74355a0d7711891633d727ff33db54">GuessUtf8OrCesu8</a>( <span class="keywordtype">void</span> );  </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">//  **** UTF-16 判定関係の変数その他</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#acf69a81cc3a08527c5803838a34cb93f">  200</a></span>&#160;    <a class="code" href="../../df/dd2/structtag_encoding_info.html">WCCODE_INFO</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#acf69a81cc3a08527c5803838a34cb93f">m_aWcInfo</a>[ESI_WCIDX_MAX];  </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a26d4d959c7e734644c0b822e4da8e387">  201</a></span>&#160;    EBOMType <a class="code" href="../../d5/d88/class_c_e_s_i.html#a26d4d959c7e734644c0b822e4da8e387">m_eWcBomType</a>;          </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">  202</a></span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">m_eMetaName</a>;          </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    EBOMType GetBOMType(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a26d4d959c7e734644c0b822e4da8e387">m_eWcBomType</a>; }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> GetMetaName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">m_eMetaName</a>; }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d88/class_c_e_s_i.html#af585d14042b899ee6781a1cbbaf08417">GuessUtf16Bom</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#a478343cd6fb1854ff0ac0c959d4c962e">AutoDetectByXML</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* pBuf, <span class="keywordtype">int</span> nSize );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> AutoDetectByHTML( <span class="keyword">const</span> <span class="keywordtype">char</span>* pBuf, <span class="keywordtype">int</span> nSize );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> AutoDetectByCoding( <span class="keyword">const</span> <span class="keywordtype">char</span>* pBuf, <span class="keywordtype">int</span> nSize );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>* m_pEncodingConfig;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetDebugInfo( <span class="keyword">const</span> <span class="keywordtype">char</span>* pS, <span class="keyword">const</span> <span class="keywordtype">int</span> nLen, <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pcmtxtOut );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword">inline</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="../../d5/d88/class_c_e_s_i.html#accd2262ecc89371d72f4be001b3f3103">  235</a></span>&#160;<a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d5/d88/class_c_e_s_i.html#accd2262ecc89371d72f4be001b3f3103">CESI::DetectUnicodeBom</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* buff, <span class="keywordtype">size_t</span> size) noexcept</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// バイト列がない、または、BOM表現を格納できるサイズに満たない場合、判定をスキップ</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> (!buff || size &lt; 2) <span class="keywordflow">return</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// バイト列の先頭が \ufeff の utf8 表現と一致するか判定</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    constexpr <span class="keyword">const</span> BYTE utf8BOM[]{ 0xef, 0xbb, 0xbf };</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (size &gt;= _countof(utf8BOM) &amp;&amp; 0 == ::memcmp(buff, utf8BOM, _countof(utf8BOM))) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f">CODE_UTF8</a>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// バイト列の先頭が \ufeff の utf16BE 表現と一致するか判定</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    constexpr <span class="keyword">const</span> BYTE utf16BeBOM[]{ 0xfe, 0xff };</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">if</span> (size &gt;= _countof(utf16BeBOM) &amp;&amp; 0 == ::memcmp(buff, utf16BeBOM, _countof(utf16BeBOM))) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a81b7137d4abbf753e0cb7308ad143e5f">CODE_UNICODEBE</a>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// バイト列の先頭が \ufeff の utf16LE 表現と一致するか判定</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    constexpr <span class="keyword">const</span> BYTE utf16LeBOM[]{ 0xff, 0xfe };</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span> (size &gt;= _countof(utf16LeBOM) &amp;&amp; 0 == ::memcmp(buff, utf16LeBOM, _countof(utf16LeBOM))) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60ab0a6616971f717a234bf4fa7cad617b9">CODE_UNICODE</a>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">// UTF-7 は ASCII 7bit 文字 でない文字を UTF-16BE で符号化してから 修正BASE64 で 符号化する。</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// Base64 の符号化は 6bit単位 なので BOM に続く文字が非7bit文字な場合、4バイト目がブレる。</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// このため、 UTF-7 については BOM による判別ロジック省略の対象から外している。</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// </span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// (BOM)abc ⇒ (UTF-7変換) ⇒ +/v8-abc</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// (BOM)ｱｲｳ ⇒ (UTF-7変換) ⇒ +/v//cf9y/3M-</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_e_s_i_html_a64adac503b79ecfa0d0e563d811d8d31"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a64adac503b79ecfa0d0e563d811d8d31">CESI::m_dwStatus</a></div><div class="ttdeci">unsigned int m_dwStatus</div><div class="ttdoc">判定結果を格納するもの</div><div class="ttdef"><b>Definition:</b> CESI.h:119</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4">CODE_EUC</a></div><div class="ttdeci">@ CODE_EUC</div><div class="ttdoc">EUC (MS-CP51932, eucJP-ms(eucJP-open)ではない)</div><div class="ttdef"><b>Definition:</b> charset.h:36</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a1a99d17de3eb0b00e3e2f8105bc2f320"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a1a99d17de3eb0b00e3e2f8105bc2f320">CESI::SortMBCInfo</a></div><div class="ttdeci">void SortMBCInfo(void)</div><div class="ttdoc">マルチバイト系の捜査結果を、ポイントが大きい順にソート。 ソートした結果は、m_apMbcInfo に格納</div><div class="ttdef"><b>Definition:</b> CESI.cpp:161</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html">CESI</a></div><div class="ttdef"><b>Definition:</b> CESI.h:84</div></div>
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a0a3a5c0e87c97998d669b4b110d7fbc2"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a0a3a5c0e87c97998d669b4b110d7fbc2">CESI::ScanCode</a></div><div class="ttdeci">void ScanCode(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:645</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a1ddebd1691be7b6e30ad58a6d800be42"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a1ddebd1691be7b6e30ad58a6d800be42">CESI::IsAmbiguousEucAndSjis</a></div><div class="ttdeci">bool IsAmbiguousEucAndSjis(void)</div><div class="ttdoc">EUC と SJIS が候補のトップ２に上がっているかどうか</div><div class="ttdef"><b>Definition:</b> CESI.h:168</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a4549d4446719d58f6a777d7dff189e92"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a4549d4446719d58f6a777d7dff189e92">CESI::m_apMbcInfo</a></div><div class="ttdeci">MBCODE_INFO * m_apMbcInfo[NUM_OF_MBCODE]</div><div class="ttdoc">評価順にソートされた SJIS, JIS, EUCJP, UTF8, UTF7, CESU8 の情報</div><div class="ttdef"><b>Definition:</b> CESI.h:159</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a75527ac223559aecb9d06284811b4bf4"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a75527ac223559aecb9d06284811b4bf4">CESI::GetEncodingInfo_latin1</a></div><div class="ttdeci">void GetEncodingInfo_latin1(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:494</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a5e84a7847d1cd2f742ccd75b72f97d9a"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a5e84a7847d1cd2f742ccd75b72f97d9a">CESI::GuessEucOrSjis</a></div><div class="ttdeci">void GuessEucOrSjis(void)</div><div class="ttdoc">EUC か SJIS かを判定</div><div class="ttdef"><b>Definition:</b> CESI.cpp:704</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a3dbbfef6b1aa130ee14c0f01ba18e2cc"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a3dbbfef6b1aa130ee14c0f01ba18e2cc">CESI::InitPriorityTable</a></div><div class="ttdeci">void InitPriorityTable(void)</div><div class="ttdoc">添え字に使われる優先順位表を作成</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_ad52a32d39e302be520ba97f099b48526"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#ad52a32d39e302be520ba97f099b48526">CESI::GetIndexById</a></div><div class="ttdeci">int GetIndexById(const ECodeType eCodeType) const</div><div class="ttdoc">文字コードID から情報格納先インデックスを生成</div><div class="ttdef"><b>Definition:</b> CESI.cpp:93</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a2724c9d166b5e4b43441e7054363b6dc"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a2724c9d166b5e4b43441e7054363b6dc">CESI::m_eMetaName</a></div><div class="ttdeci">ECodeType m_eMetaName</div><div class="ttdoc">エンコーディング名からの種類判別</div><div class="ttdef"><b>Definition:</b> CESI.h:202</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a8efd21094cea35a2c488a7b6547b1540"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a8efd21094cea35a2c488a7b6547b1540">CESI::CheckKanjiCode</a></div><div class="ttdeci">ECodeType CheckKanjiCode(const char *buff, size_t size) noexcept</div><div class="ttdoc">日本語コードセット判定</div><div class="ttdef"><b>Definition:</b> CESI.cpp:1202</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60a81b7137d4abbf753e0cb7308ad143e5f"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a81b7137d4abbf753e0cb7308ad143e5f">CODE_UNICODEBE</a></div><div class="ttdeci">@ CODE_UNICODEBE</div><div class="ttdoc">Unicode BigEndian (UTF-16 BigEndian(UCS-2))</div><div class="ttdef"><b>Definition:</b> charset.h:40</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee">CODE_SJIS</a></div><div class="ttdeci">@ CODE_SJIS</div><div class="ttdoc">SJIS (MS-CP932(Windows-31J), シフトJIS(Shift_JIS))</div><div class="ttdef"><b>Definition:</b> charset.h:34</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_afd7dd632ae4443edd3454e77b8600e46"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#afd7dd632ae4443edd3454e77b8600e46">CESI::SetEvaluation</a></div><div class="ttdeci">void SetEvaluation(const ECodeType eCodeId, const int v1, const int v2)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:113</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_ac4f8b966f3abb66dcc84b7aff450d5a6"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#ac4f8b966f3abb66dcc84b7aff450d5a6">CESI::IsAmbiguousUtf8AndCesu8</a></div><div class="ttdeci">bool IsAmbiguousUtf8AndCesu8(void)</div><div class="ttdoc">SJIS と UTF-8 が候補のトップ2に上がっているかどうか</div><div class="ttdef"><b>Definition:</b> CESI.h:181</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f">CODE_UTF8</a></div><div class="ttdeci">@ CODE_UTF8</div><div class="ttdoc">UTF-8(UCS-2)</div><div class="ttdef"><b>Definition:</b> charset.h:38</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a86536320951894559521cdfbdaa29547"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a86536320951894559521cdfbdaa29547">CESI::m_nTargetDataLen</a></div><div class="ttdeci">int m_nTargetDataLen</div><div class="ttdoc">調査対象となったデータの長さ（8bit 単位）</div><div class="ttdef"><b>Definition:</b> CESI.h:116</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a9669e96779335fa4d8a3997fd0636fe7"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a9669e96779335fa4d8a3997fd0636fe7">CESI::_CheckUtf16Eol</a></div><div class="ttdeci">bool _CheckUtf16Eol(const char *pS, const int nLen, const bool bbig_endian)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:517</div></div>
+<div class="ttc" id="astructtag_encoding_info_html"><div class="ttname"><a href="../../df/dd2/structtag_encoding_info.html">tagEncodingInfo</a></div><div class="ttdef"><b>Definition:</b> CESI.h:39</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a4731082c42703039670f93605698179f"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a4731082c42703039670f93605698179f">CESI::m_aMbcInfo</a></div><div class="ttdeci">MBCODE_INFO m_aMbcInfo[NUM_OF_MBCODE]</div><div class="ttdoc">SJIS, JIS, EUCJP, UTF8, UTF7 情報（優先度に従って格納される）</div><div class="ttdef"><b>Definition:</b> CESI.h:158</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a2e35dd02409947888c771b73a93e6afa"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a2e35dd02409947888c771b73a93e6afa">CESI::GetEncodingInfo_sjis</a></div><div class="ttdeci">void GetEncodingInfo_sjis(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:186</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a478343cd6fb1854ff0ac0c959d4c962e"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a478343cd6fb1854ff0ac0c959d4c962e">CESI::AutoDetectByXML</a></div><div class="ttdeci">ECodeType AutoDetectByXML(const char *pBuf, int nSize)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:882</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_ad5c617f990b677bea2bef33c18a62c51"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#ad5c617f990b677bea2bef33c18a62c51">CESI::GetEncodingInfo_jis</a></div><div class="ttdeci">void GetEncodingInfo_jis(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:236</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_accd2262ecc89371d72f4be001b3f3103"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#accd2262ecc89371d72f4be001b3f3103">CESI::DetectUnicodeBom</a></div><div class="ttdeci">ECodeType DetectUnicodeBom(const char *pS, size_t nLen) noexcept</div><div class="ttdef"><b>Definition:</b> CESI.h:235</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a26d4d959c7e734644c0b822e4da8e387"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a26d4d959c7e734644c0b822e4da8e387">CESI::m_eWcBomType</a></div><div class="ttdeci">EBOMType m_eWcBomType</div><div class="ttdoc">m_pWcInfo から推測される BOM の種類</div><div class="ttdef"><b>Definition:</b> CESI.h:201</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a5fd90beaa0dfffa8efb0d1ce7360ec3e"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a5fd90beaa0dfffa8efb0d1ce7360ec3e">CESI::GetEncodingInfo_utf7</a></div><div class="ttdeci">void GetEncodingInfo_utf7(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:349</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_ae7b0b2b2bdb576c01dcc3aa2a818b580"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#ae7b0b2b2bdb576c01dcc3aa2a818b580">CESI::SetInformation</a></div><div class="ttdeci">void SetInformation(const char *pS, const int nLen)</div><div class="ttdoc">調査結果の情報を格納</div><div class="ttdef"><b>Definition:</b> CESI.cpp:79</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a27a24bc5799cebdd86bb7630f35b9f2a"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a27a24bc5799cebdd86bb7630f35b9f2a">CESI::GetEncodingInfo_cesu8</a></div><div class="ttdeci">void GetEncodingInfo_cesu8(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:453</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a2e97701c75b205ecb246a9f0f129de4d"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a2e97701c75b205ecb246a9f0f129de4d">CESI::m_nMbcEucZenHirakata</a></div><div class="ttdeci">int m_nMbcEucZenHirakata</div><div class="ttdoc">EUC 全角ひらがなカタカナのバイト数</div><div class="ttdef"><b>Definition:</b> CESI.h:161</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60ab0a6616971f717a234bf4fa7cad617b9"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60ab0a6616971f717a234bf4fa7cad617b9">CODE_UNICODE</a></div><div class="ttdeci">@ CODE_UNICODE</div><div class="ttdoc">Unicode (UTF-16 LittleEndian(UCS-2))</div><div class="ttdef"><b>Definition:</b> charset.h:37</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a></div><div class="ttdeci">@ CODE_NONE</div><div class="ttdoc">未検出</div><div class="ttdef"><b>Definition:</b> charset.h:48</div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff">CODE_CESU8</a></div><div class="ttdeci">@ CODE_CESU8</div><div class="ttdoc">CESU-8</div><div class="ttdef"><b>Definition:</b> charset.h:41</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_ac5186f79ace1a9125e540d89b194f0cc"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#ac5186f79ace1a9125e540d89b194f0cc">CESI::GetEncodingInfo_eucjp</a></div><div class="ttdeci">void GetEncodingInfo_eucjp(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:287</div></div>
+<div class="ttc" id="astruct_s_encoding_config_html"><div class="ttname"><a href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a></div><div class="ttdoc">エンコードオプション</div><div class="ttdef"><b>Definition:</b> CType.h:101</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a68193b9a9a44eaddecc703f7783fc18a"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a68193b9a9a44eaddecc703f7783fc18a">CESI::m_nMbcSjisHankata</a></div><div class="ttdeci">int m_nMbcSjisHankata</div><div class="ttdoc">SJIS 半角カタカナのバイト数</div><div class="ttdef"><b>Definition:</b> CESI.h:160</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_acf69a81cc3a08527c5803838a34cb93f"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#acf69a81cc3a08527c5803838a34cb93f">CESI::m_aWcInfo</a></div><div class="ttdeci">WCCODE_INFO m_aWcInfo[ESI_WCIDX_MAX]</div><div class="ttdoc">UTF-16 LE/BE 情報</div><div class="ttdef"><b>Definition:</b> CESI.h:200</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_af585d14042b899ee6781a1cbbaf08417"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#af585d14042b899ee6781a1cbbaf08417">CESI::GuessUtf16Bom</a></div><div class="ttdeci">void GuessUtf16Bom(void)</div><div class="ttdoc">BOMの種類を推測して m_eWcBomType を設定</div><div class="ttdef"><b>Definition:</b> CESI.cpp:676</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_aff02598efb02e0cb36d1f68261a9c7e1"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#aff02598efb02e0cb36d1f68261a9c7e1">CESI::GetEncodingInfo_uni</a></div><div class="ttdeci">void GetEncodingInfo_uni(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:552</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a186e8f75ce16f503117b348d61729088"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a186e8f75ce16f503117b348d61729088">CESI::GetEvaluation</a></div><div class="ttdeci">void GetEvaluation(const ECodeType eCodeId, int *pv1, int *pv2) const</div><div class="ttdef"><b>Definition:</b> CESI.cpp:138</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_aff74355a0d7711891633d727ff33db54"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#aff74355a0d7711891633d727ff33db54">CESI::GuessUtf8OrCesu8</a></div><div class="ttdeci">void GuessUtf8OrCesu8(void)</div><div class="ttdoc">UTF-8 か CESU-8 かを判定</div><div class="ttdef"><b>Definition:</b> CESI.cpp:729</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_aacd99567b7f33db2b774b128e9f57509"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#aacd99567b7f33db2b774b128e9f57509">CESI::m_nMbcEucZen</a></div><div class="ttdeci">int m_nMbcEucZen</div><div class="ttdoc">EUC 全角のバイト数</div><div class="ttdef"><b>Definition:</b> CESI.h:162</div></div>
+<div class="ttc" id="aclass_c_e_s_i_html_a9942095ace87ee1002ae1977cb774871"><div class="ttname"><a href="../../d5/d88/class_c_e_s_i.html#a9942095ace87ee1002ae1977cb774871">CESI::GetEncodingInfo_utf8</a></div><div class="ttdeci">void GetEncodingInfo_utf8(const char *pS, const int nLen)</div><div class="ttdef"><b>Definition:</b> CESI.cpp:415</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: メンバ一覧</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CSearchAgent メンバ一覧</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>継承メンバを含む <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a> の全メンバ一覧です。</p>
+<table class="directory">
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CreateCharCharsArr</b>(const wchar_t *pszPattern, int nSrcLen, int **ppnCharCharsArr) (定義場所: <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a>)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html#affc306c7884692e1e31be708205dda41">CreateWordList</a>(std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;searchWords, const wchar_t *pszPattern, int nPatternLen)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CSearchAgent</b>(CDocLineMgr *pcDocLineMgr) (定義場所: <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a>)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>PrevOrNextWord</b>(CLogicInt nLineNum, CLogicInt nIdx, CLogicInt *pnColumnNew, BOOL bLEFT, BOOL bStopsBothEnds) (定義場所: <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a>)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ReplaceData</b>(DocLineReplaceArg *pArg) (定義場所: <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a>)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html#a7a0fce73c3c800eb412bed9a45b91122">SearchString</a>(const wchar_t *pLine, int nLineLen, int nIdxPos, const CSearchStringPattern &amp;pattern)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html#aaa43aa0f25f9e0e4ddd7c158e95b718a">SearchStringWord</a>(const wchar_t *pLine, int nLineLen, int nIdxPos, const std::vector&lt; std::pair&lt; const wchar_t *, CLogicInt &gt; &gt; &amp;searchWords, bool bLoHiCase, int *pnMatchLen)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html#a08fc78fa3528d845b40ad760265413f4">SearchWord</a>(CLogicPoint ptSerachBegin, ESearchDirection eDirection, CLogicRange *pMatchRange, const CSearchStringPattern &amp;pattern)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>WhereCurrentWord</b>(CLogicInt nLineNum, CLogicInt nIdx, CLogicInt *pnIdxFrom, CLogicInt *pnIdxTo, CNativeW *pcmcmWord, CNativeW *pcmcmWordLeft) (定義場所: <a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a>)</td><td class="entry"><a class="el" href="../../de/dbc/class_c_search_agent.html">CSearchAgent</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

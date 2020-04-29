@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CUnicodeBe クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../dd/d26/class_c_unicode_be-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CUnicodeBe クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CUnicodeBe の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/daf/class_c_unicode_be.png" usemap="#CUnicodeBe_map" alt=""/>
+  <map id="CUnicodeBe_map" name="CUnicodeBe_map">
+<area href="../../d6/d84/class_c_code_base.html" alt="CCodeBase" shape="rect" coords="0,0,82,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae7572ea9419313e4217ba1daf420389e"><td class="memItemLeft" align="right" valign="top"><a id="ae7572ea9419313e4217ba1daf420389e"></a>
+<a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/class_c_unicode_be.html#ae7572ea9419313e4217ba1daf420389e">CodeToUnicode</a> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;cSrc, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pDst) override</td></tr>
+<tr class="memdesc:ae7572ea9419313e4217ba1daf420389e"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定コード → UNICODE 変換 <br /></td></tr>
+<tr class="separator:ae7572ea9419313e4217ba1daf420389e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd85cd8b063962a66988d6ca4430bd8b"><td class="memItemLeft" align="right" valign="top"><a id="acd85cd8b063962a66988d6ca4430bd8b"></a>
+<a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/class_c_unicode_be.html#acd85cd8b063962a66988d6ca4430bd8b">UnicodeToCode</a> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cSrc, <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pDst) override</td></tr>
+<tr class="memdesc:acd85cd8b063962a66988d6ca4430bd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNICODE → 特定コード 変換 <br /></td></tr>
+<tr class="separator:acd85cd8b063962a66988d6ca4430bd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73d4de9efb459006d7eb754b28565d7"><td class="memItemLeft" align="right" valign="top"><a id="aa73d4de9efb459006d7eb754b28565d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/class_c_unicode_be.html#aa73d4de9efb459006d7eb754b28565d7">GetBom</a> (<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcmemBom) override</td></tr>
+<tr class="memdesc:aa73d4de9efb459006d7eb754b28565d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">BOMデータ取得 <br /></td></tr>
+<tr class="separator:aa73d4de9efb459006d7eb754b28565d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc9cfc0eb9efaebec6a0c980002c162"><td class="memItemLeft" align="right" valign="top"><a id="afbc9cfc0eb9efaebec6a0c980002c162"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/class_c_unicode_be.html#afbc9cfc0eb9efaebec6a0c980002c162">GetEol</a> (<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcmemEol, <a class="el" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a> eEolType) override</td></tr>
+<tr class="memdesc:afbc9cfc0eb9efaebec6a0c980002c162"><td class="mdescLeft">&#160;</td><td class="mdescRight">改行データ取得 <br /></td></tr>
+<tr class="separator:afbc9cfc0eb9efaebec6a0c980002c162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c70122707415be8d126a9a14d18cc6"><td class="memItemLeft" align="right" valign="top"><a id="a46c70122707415be8d126a9a14d18cc6"></a>
+virtual <a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#a46c70122707415be8d126a9a14d18cc6">UnicodeToCode</a> (const <a class="el" href="../../d6/da7/class_c_string_ref.html">CStringRef</a> &amp;cSrc, <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pDst)</td></tr>
+<tr class="memdesc:a46c70122707415be8d126a9a14d18cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNICODE → 特定コード 変換 <br /></td></tr>
+<tr class="separator:a46c70122707415be8d126a9a14d18cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822958491e4637ec317aca5f750569bf"><td class="memItemLeft" align="right" valign="top"><a id="a822958491e4637ec317aca5f750569bf"></a>
+virtual <a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#a822958491e4637ec317aca5f750569bf">UnicodeToHex</a> (const wchar_t *cSrc, const int iSLen, WCHAR *pDst, const <a class="el" href="../../d8/d63/struct_common_setting___statusbar.html">CommonSetting_Statusbar</a> *psStatusbar)</td></tr>
+<tr class="memdesc:a822958491e4637ec317aca5f750569bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNICODE → Hex 変換 <br /></td></tr>
+<tr class="separator:a822958491e4637ec317aca5f750569bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:affa67f0803d66e586dde651fa3c330a9"><td class="memItemLeft" align="right" valign="top"><a id="affa67f0803d66e586dde651fa3c330a9"></a>
+static <a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UnicodeBEToUnicode</b> (const <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> &amp;cSrc, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pDst)</td></tr>
+<tr class="separator:affa67f0803d66e586dde651fa3c330a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba59e8639441b6c5ce29a39c2c9016e"><td class="memItemLeft" align="right" valign="top"><a id="a8ba59e8639441b6c5ce29a39c2c9016e"></a>
+static <a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UnicodeToUnicodeBE</b> (const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cSrc, <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pDst)</td></tr>
+<tr class="separator:a8ba59e8639441b6c5ce29a39c2c9016e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5cdec5c6797d849ae04c1ef256777e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#af5cdec5c6797d849ae04c1ef256777e8">BinToText</a> (const unsigned char *pSrc, const int nLen, unsigned short *pDst)</td></tr>
+<tr class="separator:af5cdec5c6797d849ae04c1ef256777e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1587129649fbfc7846b687e2d7b88946"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#a1587129649fbfc7846b687e2d7b88946">TextToBin</a> (const unsigned short cSrc)</td></tr>
+<tr class="separator:a1587129649fbfc7846b687e2d7b88946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5845bd9439c3e99bb4dd6654310f9c87"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#a5845bd9439c3e99bb4dd6654310f9c87">MIMEHeaderDecode</a> (const char *pSrc, const int nSrcLen, <a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcMem, const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> eCodetype)</td></tr>
+<tr class="separator:a5845bd9439c3e99bb4dd6654310f9c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fb3d0ec530a6a93b17dfcd0f1f15e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d84/class_c_code_base.html#ad4fb3d0ec530a6a93b17dfcd0f1f15e8">S_GetEol</a> (<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *pcmemEol, <a class="el" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a> eEolType)</td></tr>
+<tr class="memdesc:ad4fb3d0ec530a6a93b17dfcd0f1f15e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">改行データ取得  <a href="../../d6/d84/class_c_code_base.html#ad4fb3d0ec530a6a93b17dfcd0f1f15e8">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4fb3d0ec530a6a93b17dfcd0f1f15e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af5cdec5c6797d849ae04c1ef256777e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5cdec5c6797d849ae04c1ef256777e8">&#9670;&nbsp;</a></span>BinToText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCodeBase::BinToText </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short *&#160;</td>
+          <td class="paramname"><em>pDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>バイナリ１バイトを U+DC00 から U+DCFF までに対応付ける </p>
+
+</div>
+</div>
+<a id="a5845bd9439c3e99bb4dd6654310f9c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5845bd9439c3e99bb4dd6654310f9c87">&#9670;&nbsp;</a></span>MIMEHeaderDecode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CCodeBase::MIMEHeaderDecode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nSrcLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *&#160;</td>
+          <td class="paramname"><em>pcMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>eCodetype</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>MIME デコーダー</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcMem</td><td>デコード済みの文字列を格納 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4fb3d0ec530a6a93b17dfcd0f1f15e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fb3d0ec530a6a93b17dfcd0f1f15e8">&#9670;&nbsp;</a></span>S_GetEol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCodeBase::S_GetEol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a> *&#160;</td>
+          <td class="paramname"><em>pcmemEol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc5/_c_eol_8h.html#a0b30ff82888baa8eedd03857bf43c9b1">EEolType</a>&#160;</td>
+          <td class="paramname"><em>eEolType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>改行データ取得 </p>
+<p>改行データ取得 </p>
+
+</div>
+</div>
+<a id="a1587129649fbfc7846b687e2d7b88946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1587129649fbfc7846b687e2d7b88946">&#9670;&nbsp;</a></span>TextToBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCodeBase::TextToBin </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned short&#160;</td>
+          <td class="paramname"><em>cSrc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>U+DC00 から U+DCFF からバイナリ1バイトを復元 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/charset/<a class="el" href="../../d7/de8/_c_unicode_be_8h_source.html">CUnicodeBe.h</a></li>
+<li>sakura_core/charset/<a class="el" href="../../dd/d88/_c_unicode_be_8cpp.html">CUnicodeBe.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/macro/CKeyMacroMgr.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_614ccf2e7ca9e77c465d8296e7c03a2a.html">macro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CKeyMacroMgr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d9c/_c_key_macro_mgr_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2001, aroka</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d96/_c_macro_manager_base_8h.html">CMacroManagerBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;Funccode_enum.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d01/class_c_macro.html">CMacro</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//#define MAX_STRLEN            70</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//#define MAX_KEYMACRONUM       10000</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../df/d59/class_c_key_macro_mgr.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d59/class_c_key_macro_mgr.html">CKeyMacroMgr</a> : <span class="keyword">public</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../df/d59/class_c_key_macro_mgr.html">CKeyMacroMgr</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="../../df/d59/class_c_key_macro_mgr.html">CKeyMacroMgr</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#a63bf91f7a68cb84204fec628ecfaf1f5">ClearAll</a>( <span class="keywordtype">void</span> );              <span class="comment">/* キーマクロのバッファをクリアする */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#af1e63041d924e193d25b30f2ced864c3">Append</a>( EFunctionCode nFuncID, <span class="keyword">const</span> LPARAM* lParams, <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView );       <span class="comment">/* キーマクロのバッファにデータ追加 */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#af1e63041d924e193d25b30f2ced864c3">Append</a>( <span class="keyword">class</span> <a class="code" href="../../d0/d01/class_c_macro.html">CMacro</a>* macro );     <span class="comment">/* キーマクロのバッファにデータ追加 */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* キーボードマクロをまとめて取り扱う */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    BOOL <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#a2f6969a24e31506347a1aaf8824e598b">SaveKeyMacro</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszPath) <span class="keyword">const</span>;    <span class="comment">/* CMacroの列を、キーボードマクロに保存 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//@@@2002.2.2 YAZAKI PPA.DLLアリ/ナシ共存のためvirtualに。</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//  2007.07.20 genta flags追加</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#a23afd7bbc54df2b0b6d3551a858cf87d">ExecKeyMacro</a>( <span class="keyword">class</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags ) <span class="keyword">const override</span>; <span class="comment">/* キーボードマクロの実行 */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    BOOL <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#a6c1bd0767a8bc1efb0567fd4e94fa675">LoadKeyMacro</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszPath) <span class="keyword">override</span>;     <span class="comment">/* キーボードマクロをファイルから読み込む */</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    BOOL <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#ae3c5fd2bb7eb398535c4ce9aa724918b">LoadKeyMacroStr</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszCode) <span class="keyword">override</span>;  <span class="comment">/* キーボードマクロを文字列から読み込む */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Apr. 29, 2002 genta</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>* <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#af453fd255735e970ee99bdddbd26b4b6">Creator</a>(<span class="keyword">const</span> WCHAR* ext);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d59/class_c_key_macro_mgr.html#ace95851b38a141a552ae1e43ce4ad4d6">declare</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d0/d01/class_c_macro.html">CMacro</a>* m_pTop; <span class="comment">//  先頭と終端を保持</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d0/d01/class_c_macro.html">CMacro</a>* m_pBot;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_key_macro_mgr_html_a63bf91f7a68cb84204fec628ecfaf1f5"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#a63bf91f7a68cb84204fec628ecfaf1f5">CKeyMacroMgr::ClearAll</a></div><div class="ttdeci">void ClearAll(void)</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:48</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_a23afd7bbc54df2b0b6d3551a858cf87d"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#a23afd7bbc54df2b0b6d3551a858cf87d">CKeyMacroMgr::ExecKeyMacro</a></div><div class="ttdeci">bool ExecKeyMacro(class CEditView *pcEditView, int flags) const override</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:125</div></div>
+<div class="ttc" id="a_c_macro_manager_base_8h_html"><div class="ttname"><a href="../../d8/d96/_c_macro_manager_base_8h.html">CMacroManagerBase.h</a></div><div class="ttdoc">マクロエンジン</div></div>
+<div class="ttc" id="aclass_c_macro_html"><div class="ttname"><a href="../../d0/d01/class_c_macro.html">CMacro</a></div><div class="ttdoc">キーボードマクロの1コマンド</div><div class="ttdef"><b>Definition:</b> CMacro.h:94</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_af1e63041d924e193d25b30f2ced864c3"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#af1e63041d924e193d25b30f2ced864c3">CKeyMacroMgr::Append</a></div><div class="ttdeci">void Append(EFunctionCode nFuncID, const LPARAM *lParams, class CEditView *pcEditView)</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:67</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_ae3c5fd2bb7eb398535c4ce9aa724918b"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#ae3c5fd2bb7eb398535c4ce9aa724918b">CKeyMacroMgr::LoadKeyMacroStr</a></div><div class="ttdeci">BOOL LoadKeyMacroStr(HINSTANCE hInstance, const WCHAR *pszCode) override</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:435</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html">CKeyMacroMgr</a></div><div class="ttdoc">キーボードマクロ</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.h:33</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_af453fd255735e970ee99bdddbd26b4b6"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#af453fd255735e970ee99bdddbd26b4b6">CKeyMacroMgr::Creator</a></div><div class="ttdeci">static CMacroManagerBase * Creator(const WCHAR *ext)</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:464</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a></div><div class="ttdoc">マクロを処理するエンジン部分の基底クラス</div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:51</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_a6c1bd0767a8bc1efb0567fd4e94fa675"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#a6c1bd0767a8bc1efb0567fd4e94fa675">CKeyMacroMgr::LoadKeyMacro</a></div><div class="ttdeci">BOOL LoadKeyMacro(HINSTANCE hInstance, const WCHAR *pszPath) override</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:143</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_a2f6969a24e31506347a1aaf8824e598b"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#a2f6969a24e31506347a1aaf8824e598b">CKeyMacroMgr::SaveKeyMacro</a></div><div class="ttdeci">BOOL SaveKeyMacro(HINSTANCE hInstance, const WCHAR *pszPath) const</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:98</div></div>
+<div class="ttc" id="aclass_c_key_macro_mgr_html_ace95851b38a141a552ae1e43ce4ad4d6"><div class="ttname"><a href="../../df/d59/class_c_key_macro_mgr.html#ace95851b38a141a552ae1e43ce4ad4d6">CKeyMacroMgr::declare</a></div><div class="ttdeci">static void declare(void)</div><div class="ttdef"><b>Definition:</b> CKeyMacroMgr.cpp:476</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/uiparts/CMenuDrawer.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_ba03d6460a9ae1359ac1c74c49c4a674.html">uiparts</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CMenuDrawer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d74/_c_menu_drawer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2000, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI, MIK, aroka</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2003, MIK</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2005, aroka, genta</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;Funccode_enum.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>;<span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//#define MAX_MENUPOS   10</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//  Jul. 2, 2005 genta : マクロをたくさん登録すると上限を超えてしまうので</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//  初期値の300から増やす</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// #define MAX_MENUITEMS    400 // 2011.11.23 Moca 上限撤廃</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//ツールバーの拡張  //@@@ 2002.06.15 MIK</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define TBSTYLE_COMBOBOX    ((BYTE)0x40)    //ツールバーにコンボボックス</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d5/d3f/class_c_menu_drawer.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ~<a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> Create( HINSTANCE hInstance, HWND hWndOwner, <a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>* pcIcons );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> ResetContents( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> MyAppendMenu( HMENU hMenu, <span class="keywordtype">int</span> nFlag, UINT_PTR nFuncId, <span class="keyword">const</span> WCHAR*     pszLabel, <span class="keyword">const</span> WCHAR*     pszKey, BOOL bAddKeyStr = TRUE, <span class="keywordtype">int</span> nForceIconId = -1 );   <span class="comment">/* メニュー項目を追加 */</span>    <span class="comment">//お気に入り    //@@@ 2003.04.08 MIK    // add pszKey   2010/5/17 Uchi</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> MyAppendMenuSep( HMENU hMenu, <span class="keywordtype">int</span> nFlag, <span class="keywordtype">int</span> nFuncId, <span class="keyword">const</span> WCHAR* pszLabel, BOOL bAddKeyStr = TRUE, <span class="keywordtype">int</span> nForceIconId = -1 )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        MyAppendMenu(hMenu,nFlag,nFuncId,pszLabel,L<span class="stringliteral">&quot;&quot;</span>,bAddKeyStr,nForceIconId);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/d3f/class_c_menu_drawer.html#a6083b61de001a09249a3c5763855c31b">MeasureItem</a>( <span class="keywordtype">int</span> nFuncID, <span class="keywordtype">int</span>* pnItemHeight );  <span class="comment">/* メニューアイテムの描画サイズを計算 */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d3f/class_c_menu_drawer.html#a3bdda6527c67a3d53a89491d8437f893">DrawItem</a>( DRAWITEMSTRUCT* );   <span class="comment">/* メニューアイテム描画 */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d3f/class_c_menu_drawer.html#a002da9afa1d3c63a5eb1e393e58b7b3d">EndDrawMenu</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    LRESULT <a class="code" href="../../d5/d3f/class_c_menu_drawer.html#aea913594371b2f56198464e9efc663df">OnMenuChar</a>( HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> FindToolbarNoFromCommandId( <span class="keywordtype">int</span> idCommand, <span class="keywordtype">bool</span> bOnlyFunc = <span class="keyword">true</span> )<span class="keyword">const</span>; <span class="comment">// ツールバーNoの取得</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> GetIconIdByFuncId( <span class="keywordtype">int</span> nIndex ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    TBBUTTON <a class="code" href="../../d5/d3f/class_c_menu_drawer.html#a9b12bc9f4733d9135b0db860fb5f0890">getButton</a>( <span class="keywordtype">int</span> nToolBarNo ) <span class="keyword">const</span>; <span class="comment">// 20050809 aroka</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> AddToolButton( <span class="keywordtype">int</span> iBitmap, <span class="keywordtype">int</span> iCommand );    <span class="comment">//ツールバーボタンを追加する 2009.11.14 syat</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// iBitmapに対応する定数</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TOOLBAR_ICON_MACRO_INTERNAL = 384;     <span class="comment">//外部マクロ既定アイコン</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TOOLBAR_ICON_PLUGCOMMAND_DEFAULT = 283;<span class="comment">//プラグインコマンド既定アイコン</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// m_tbMyButtonのindexに対応する定数</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TOOLBAR_BUTTON_F_SEPARATOR = 0;        <span class="comment">//セパレータ（ダミー）</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TOOLBAR_BUTTON_F_TOOLBARWRAP = 384;    <span class="comment">//ツールバー折返しアイコン（ダミー）</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> DeleteCompDC();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> FindIndexFromCommandId( <span class="keywordtype">int</span> idCommand, <span class="keywordtype">bool</span> bOnlyFunc = <span class="keyword">true</span> ) <span class="keyword">const</span>;  <span class="comment">/* ツールバーIndexの取得 */</span><span class="comment">// 20050809 aroka</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> Find( <span class="keywordtype">int</span> nFuncID );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> WCHAR* GetLabel( <span class="keywordtype">int</span> nFuncID );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    WCHAR GetAccelCharFromLabel( <span class="keyword">const</span> WCHAR* pszLabel );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> ToolbarNoToIndex( <span class="keywordtype">int</span> nToolbarNo ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>*   m_pShareData;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    HINSTANCE       m_hInstance;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    HWND            m_hWndOwner;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//@@@ 2002.01.03 YAZAKI m_tbMyButtonなどをCShareDataからCMenuDrawerへ移動したことによる修正。</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//2009.11.14 syat プラグインコマンド動的追加のためvector化</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::vector&lt;TBBUTTON&gt;   m_tbMyButton;   <span class="comment">/* ツールバーのボタン */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span>             m_nMyButtonNum;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span>             m_nMyButtonFixSize; <span class="comment">// 固定部分の最大数</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// 2011.11.18 MenuItemのvector化</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">struct </span>MyMenuItemInfo{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">int</span>             m_nBitmapIdx;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">int</span>             m_nFuncId;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>        m_cmemLabel;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::vector&lt;MyMenuItemInfo&gt; m_menuItems;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span>             m_nMenuHeight;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span>             m_nMenuFontHeight;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    HFONT           m_hFontMenu;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    HBITMAP         m_hCompBitmap;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    HBITMAP         m_hCompBitmapOld;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    HDC             m_hCompDC;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">int</span>             m_nCompBitmapHeight;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">int</span>             m_nCompBitmapWidth;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// 2010.01.30 syat アイコンイメージリストをprivate-&gt;public</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//  Oct. 16, 2000 genta</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>   *m_pcIcons; <span class="comment">//  Image List</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//@@@ 2002.01.03 YAZAKI m_tbMyButtonなどをCShareDataからCMenuDrawerへ移動したことによる修正。</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> SetTBBUTTONVal( TBBUTTON* ptb, <span class="keywordtype">int</span> iBitmap, <span class="keywordtype">int</span> idCommand,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                         BYTE fsState, BYTE fsStyle, DWORD_PTR dwData,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                         INT_PTR iString ) <span class="keyword">const</span>;   <span class="comment">/* TBBUTTON構造体にデータをセット */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html_a002da9afa1d3c63a5eb1e393e58b7b3d"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html#a002da9afa1d3c63a5eb1e393e58b7b3d">CMenuDrawer::EndDrawMenu</a></div><div class="ttdeci">void EndDrawMenu()</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.cpp:1300</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html_a9b12bc9f4733d9135b0db860fb5f0890"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html#a9b12bc9f4733d9135b0db860fb5f0890">CMenuDrawer::getButton</a></div><div class="ttdeci">TBBUTTON getButton(int nToolBarNo) const</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.cpp:1378</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html_aea913594371b2f56198464e9efc663df"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html#aea913594371b2f56198464e9efc663df">CMenuDrawer::OnMenuChar</a></div><div class="ttdeci">LRESULT OnMenuChar(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.cpp:1439</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html_a6083b61de001a09249a3c5763855c31b"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html#a6083b61de001a09249a3c5763855c31b">CMenuDrawer::MeasureItem</a></div><div class="ttdeci">int MeasureItem(int nFuncID, int *pnItemHeight)</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.cpp:898</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html_a3bdda6527c67a3d53a89491d8437f893"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html#a3bdda6527c67a3d53a89491d8437f893">CMenuDrawer::DrawItem</a></div><div class="ttdeci">void DrawItem(DRAWITEMSTRUCT *)</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.cpp:958</div></div>
+<div class="ttc" id="aclass_c_image_list_mgr_html"><div class="ttname"><a href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a></div><div class="ttdoc">ImageListの管理</div><div class="ttdef"><b>Definition:</b> CImageListMgr.h:51</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a></div><div class="ttdoc">メニュー表示＆管理</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.h:45</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

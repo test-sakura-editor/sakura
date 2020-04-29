@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/recent/CRecentImp.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2a62acd1221b8456f325a5b598074fda.html">recent</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CRecentImp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d94/_c_recent_imp_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// 各CRecent実装クラスのベースクラス</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// エディタ系ファイルからincludeするときは CRecent.h をinclude</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8d/_c_recent_8h.html">recent/CRecent.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span> &lt; <span class="keyword">class</span> DATA_TYPE, <span class="keyword">class</span> RECEIVE_TYPE = const DATA_TYPE* &gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/df6/class_c_recent_imp.html">CRecentImp</a> : <span class="keyword">public</span> <a class="code" href="../../d2/d30/class_c_recent.html">CRecent</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html">CRecentImp&lt;DATA_TYPE,RECEIVE_TYPE&gt;</a>  <a class="code" href="../../d3/df6/class_c_recent_imp.html">Me</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">typedef</span> DATA_TYPE                           DataType;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typedef</span> RECEIVE_TYPE                        ReceiveType;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d3/df6/class_c_recent_imp.html">CRecentImp</a>(){ Terminate(); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d3/df6/class_c_recent_imp.html">CRecentImp</a>(){ Terminate(); }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//生成</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a6892203601c37076b5c4f7070a6e73f3">Create</a>(</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        DataType*       pszItemArray,   </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">size_t</span>          nTextMaxLength, </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span>*            pnItemCount,    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span>*           pbItemFavorite, </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span>             nArrayCount,    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span>*            pnViewCount     </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> Terminate();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> IsAvailable() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a2d8536240f8ff77e6c862826219d0ed4">_Recovery</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//更新</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> ChangeViewCount( <span class="keywordtype">int</span> nViewCount ); <span class="comment">//表示数の変更</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> UpdateView();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//プロパティ取得系</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> GetArrayCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">m_nArrayCount</a>; } <span class="comment">//最大要素数</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> GetItemCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ( IsAvailable() ? *<a class="code" href="../../d3/df6/class_c_recent_imp.html#a17bdb1d9cd3da1adb255709435f98d21">m_pnUserItemCount</a> : 0); }  <span class="comment">//登録アイテム数</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> GetViewCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ( IsAvailable() ? (<a class="code" href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">m_pnUserViewCount</a> ? *<a class="code" href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">m_pnUserViewCount</a> : <a class="code" href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">m_nArrayCount</a>) : 0); }    <span class="comment">//表示数</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//お気に入り制御系</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#ad17a345621704ccc328029b0284dce1a">SetFavorite</a>( <span class="keywordtype">int</span> nIndex, <span class="keywordtype">bool</span> bFavorite = <span class="keyword">true</span>);   <span class="comment">//お気に入りに設定</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> ResetFavorite( <span class="keywordtype">int</span> nIndex ) { <span class="keywordflow">return</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#ad17a345621704ccc328029b0284dce1a">SetFavorite</a>( nIndex, <span class="keyword">false</span> ); }   <span class="comment">//お気に入りを解除</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> ResetAllFavorite();            <span class="comment">//お気に入りをすべて解除</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a847c4d014b194ac13bf6759d11be7f7a">IsFavorite</a>( <span class="keywordtype">int</span> nIndex ) <span class="keyword">const</span>;            <span class="comment">//お気に入りか調べる</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//アイテム制御</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> AppendItem( ReceiveType pItemData );   <span class="comment">//アイテムを先頭に追加</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> AppendItemText( LPCWSTR pszText );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> EditItemText( <span class="keywordtype">int</span> nIndex, LPCWSTR pszText );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a6b8436633e5298884257bd6b1bcd50a1">DeleteItem</a>( <span class="keywordtype">int</span> nIndex );              <span class="comment">//アイテムをクリア</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a6b8436633e5298884257bd6b1bcd50a1">DeleteItem</a>( ReceiveType pItemData )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d3/df6/class_c_recent_imp.html#a6b8436633e5298884257bd6b1bcd50a1">DeleteItem</a>( FindItem( pItemData ) );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> DeleteItemsNoFavorite();           <span class="comment">//お気に入り以外のアイテムをクリア</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> DeleteAllItem();                   <span class="comment">//アイテムをすべてクリア</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//アイテム取得</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> DataType* GetItem( <span class="keywordtype">int</span> nIndex ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    DataType* GetItem( <span class="keywordtype">int</span> nIndex ){ <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>DataType*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="../../d3/df6/class_c_recent_imp.html">Me</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;GetItem(nIndex)); }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> FindItem( ReceiveType pItemData ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> MoveItem( <span class="keywordtype">int</span> nSrcIndex, <span class="keywordtype">int</span> nDstIndex );  <span class="comment">//アイテムを移動</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">//オーバーライド用インターフェース</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>  CompareItem( <span class="keyword">const</span> DataType* p1, ReceiveType p2 ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CopyItem( DataType* dst, ReceiveType src ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> DataToReceiveType( ReceiveType* dst, <span class="keyword">const</span> DataType* src ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> TextToDataType( DataType* dst, LPCWSTR pszText ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> ValidateReceiveType( ReceiveType p ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">//実装補助</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> DataType* GetItemPointer(<span class="keywordtype">int</span> nIndex) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    DataType* GetItemPointer(<span class="keywordtype">int</span> nIndex){ <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>DataType*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="../../d3/df6/class_c_recent_imp.html">Me</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;GetItemPointer(nIndex)); }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span>   ZeroItem( <span class="keywordtype">int</span> nIndex );  <span class="comment">//アイテムをゼロクリアする</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span>    GetOldestItem( <span class="keywordtype">int</span> nIndex, <span class="keywordtype">bool</span> bFavorite ); <span class="comment">//最古のアイテムを探す</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span>   CopyItem( <span class="keywordtype">int</span> nSrcIndex, <span class="keywordtype">int</span> nDstIndex );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//内部フラグ</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#a2449b4e6f20c19310ebbe0911d4ab20b">  108</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d3/df6/class_c_recent_imp.html#a2449b4e6f20c19310ebbe0911d4ab20b">m_bCreate</a>;              </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//外部参照</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#aca5f8d6683b733be19c9a4e12e18370d">  111</a></span>&#160;    DataType*   <a class="code" href="../../d3/df6/class_c_recent_imp.html#aca5f8d6683b733be19c9a4e12e18370d">m_puUserItemData</a>;       </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#a17bdb1d9cd3da1adb255709435f98d21">  112</a></span>&#160;    <span class="keywordtype">int</span>*        <a class="code" href="../../d3/df6/class_c_recent_imp.html#a17bdb1d9cd3da1adb255709435f98d21">m_pnUserItemCount</a>;      </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#a63b47fcaa0cc134a71a6ddf244ac227e">  113</a></span>&#160;    <span class="keywordtype">bool</span>*       <a class="code" href="../../d3/df6/class_c_recent_imp.html#a63b47fcaa0cc134a71a6ddf244ac227e">m_pbUserItemFavorite</a>;   </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">  114</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">m_nArrayCount</a>;          </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">  115</a></span>&#160;    <span class="keywordtype">int</span>*        <a class="code" href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">m_pnUserViewCount</a>;      </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d3/df6/class_c_recent_imp.html#afba29f0deee9d0f3985b6d8d42ae05bc">  116</a></span>&#160;    <span class="keywordtype">size_t</span>      <a class="code" href="../../d3/df6/class_c_recent_imp.html#afba29f0deee9d0f3985b6d8d42ae05bc">m_nTextMaxLength</a>;       </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dd2/_c_recent_file_8h.html">CRecentFile.h</a>&quot;</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/df9/_c_recent_folder_8h.html">CRecentFolder.h</a>&quot;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8b/_c_recent_except_mru_8h.html">CRecentExceptMru.h</a>&quot;</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d7a/_c_recent_search_8h.html">CRecentSearch.h</a>&quot;</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dd5/_c_recent_replace_8h.html">CRecentReplace.h</a>&quot;</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d44/_c_recent_grep_file_8h.html">CRecentGrepFile.h</a>&quot;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dd7/_c_recent_grep_folder_8h.html">CRecentGrepFolder.h</a>&quot;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#include &quot;CRecentExcludeFile.h&quot;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#include &quot;CRecentExcludeFolder.h&quot;</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d19/_c_recent_cmd_8h.html">CRecentCmd.h</a>&quot;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/df9/_c_recent_cur_dir_8h.html">CRecentCurDir.h</a>&quot;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dfe/_c_recent_edit_node_8h.html">CRecentEditNode.h</a>&quot;</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/ddf/_c_recent_tagjump_keyword_8h.html">CRecentTagjumpKeyword.h</a>&quot;</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_recent_imp_html_a6892203601c37076b5c4f7070a6e73f3"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a6892203601c37076b5c4f7070a6e73f3">CRecentImp::Create</a></div><div class="ttdeci">bool Create(DataType *pszItemArray, size_t nTextMaxLength, int *pnItemCount, bool *pbItemFavorite, int nArrayCount, int *pnViewCount)</div><div class="ttdef"><b>Definition:</b> CRecentImp.cpp:47</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_ae0d55b1a86b2c31dd135e77485d16740"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">CRecentImp::m_nArrayCount</a></div><div class="ttdeci">int m_nArrayCount</div><div class="ttdoc">最大管理可能なアイテム数</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:114</div></div>
+<div class="ttc" id="a_c_recent_tagjump_keyword_8h_html"><div class="ttname"><a href="../../d5/ddf/_c_recent_tagjump_keyword_8h.html">CRecentTagjumpKeyword.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_html"><div class="ttname"><a href="../../d2/d30/class_c_recent.html">CRecent</a></div><div class="ttdef"><b>Definition:</b> CRecent.h:41</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html">CRecentImp</a></div><div class="ttdef"><b>Definition:</b> CRecentImp.h:33</div></div>
+<div class="ttc" id="a_c_recent_grep_file_8h_html"><div class="ttname"><a href="../../dd/d44/_c_recent_grep_file_8h.html">CRecentGrepFile.h</a></div></div>
+<div class="ttc" id="a_c_recent_folder_8h_html"><div class="ttname"><a href="../../dc/df9/_c_recent_folder_8h.html">CRecentFolder.h</a></div></div>
+<div class="ttc" id="a_c_recent_edit_node_8h_html"><div class="ttname"><a href="../../da/dfe/_c_recent_edit_node_8h.html">CRecentEditNode.h</a></div></div>
+<div class="ttc" id="a_c_recent_cur_dir_8h_html"><div class="ttname"><a href="../../dc/df9/_c_recent_cur_dir_8h.html">CRecentCurDir.h</a></div></div>
+<div class="ttc" id="a_c_recent_8h_html"><div class="ttname"><a href="../../d0/d8d/_c_recent_8h.html">CRecent.h</a></div><div class="ttdoc">最近使ったリスト</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a6b8436633e5298884257bd6b1bcd50a1"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a6b8436633e5298884257bd6b1bcd50a1">CRecentImp::DeleteItem</a></div><div class="ttdeci">bool DeleteItem(int nIndex)</div><div class="ttdoc">アイテムをクリア</div><div class="ttdef"><b>Definition:</b> CRecentImp.cpp:299</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_afba29f0deee9d0f3985b6d8d42ae05bc"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#afba29f0deee9d0f3985b6d8d42ae05bc">CRecentImp::m_nTextMaxLength</a></div><div class="ttdeci">size_t m_nTextMaxLength</div><div class="ttdoc">最大テキスト長(終端含む)</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:116</div></div>
+<div class="ttc" id="a_c_recent_search_8h_html"><div class="ttname"><a href="../../dc/d7a/_c_recent_search_8h.html">CRecentSearch.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a2449b4e6f20c19310ebbe0911d4ab20b"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a2449b4e6f20c19310ebbe0911d4ab20b">CRecentImp::m_bCreate</a></div><div class="ttdeci">bool m_bCreate</div><div class="ttdoc">Create済みか</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:108</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_aa997477779e06ddb1d9db33a7109d352"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">CRecentImp::m_pnUserViewCount</a></div><div class="ttdeci">int * m_pnUserViewCount</div><div class="ttdoc">表示個数 (NULL許可)</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:115</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_ad17a345621704ccc328029b0284dce1a"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#ad17a345621704ccc328029b0284dce1a">CRecentImp::SetFavorite</a></div><div class="ttdeci">bool SetFavorite(int nIndex, bool bFavorite=true)</div><div class="ttdoc">お気に入りに設定</div><div class="ttdef"><b>Definition:</b> CRecentImp.cpp:134</div></div>
+<div class="ttc" id="a_c_recent_file_8h_html"><div class="ttname"><a href="../../d3/dd2/_c_recent_file_8h.html">CRecentFile.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a2d8536240f8ff77e6c862826219d0ed4"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a2d8536240f8ff77e6c862826219d0ed4">CRecentImp::_Recovery</a></div><div class="ttdeci">void _Recovery()</div><div class="ttdoc">リカバリ</div><div class="ttdef"><b>Definition:</b> CRecentImp.cpp:111</div></div>
+<div class="ttc" id="a_c_recent_cmd_8h_html"><div class="ttname"><a href="../../d9/d19/_c_recent_cmd_8h.html">CRecentCmd.h</a></div></div>
+<div class="ttc" id="a_c_recent_grep_folder_8h_html"><div class="ttname"><a href="../../dc/dd7/_c_recent_grep_folder_8h.html">CRecentGrepFolder.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a17bdb1d9cd3da1adb255709435f98d21"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a17bdb1d9cd3da1adb255709435f98d21">CRecentImp::m_pnUserItemCount</a></div><div class="ttdeci">int * m_pnUserItemCount</div><div class="ttdoc">アイテム個数へのポインタ</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:112</div></div>
+<div class="ttc" id="a_c_recent_replace_8h_html"><div class="ttname"><a href="../../da/dd5/_c_recent_replace_8h.html">CRecentReplace.h</a></div></div>
+<div class="ttc" id="a_c_recent_except_mru_8h_html"><div class="ttname"><a href="../../d0/d8b/_c_recent_except_mru_8h.html">CRecentExceptMru.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a847c4d014b194ac13bf6759d11be7f7a"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a847c4d014b194ac13bf6759d11be7f7a">CRecentImp::IsFavorite</a></div><div class="ttdeci">bool IsFavorite(int nIndex) const</div><div class="ttdoc">お気に入りか調べる</div><div class="ttdef"><b>Definition:</b> CRecentImp.cpp:166</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_aca5f8d6683b733be19c9a4e12e18370d"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#aca5f8d6683b733be19c9a4e12e18370d">CRecentImp::m_puUserItemData</a></div><div class="ttdeci">DataType * m_puUserItemData</div><div class="ttdoc">アイテム配列へのポインタ</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:111</div></div>
+<div class="ttc" id="aclass_c_recent_imp_html_a63b47fcaa0cc134a71a6ddf244ac227e"><div class="ttname"><a href="../../d3/df6/class_c_recent_imp.html#a63b47fcaa0cc134a71a6ddf244ac227e">CRecentImp::m_pbUserItemFavorite</a></div><div class="ttdeci">bool * m_pbUserItemFavorite</div><div class="ttdoc">お気に入りへのポインタ (NULL許可)</div><div class="ttdef"><b>Definition:</b> CRecentImp.h:113</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
