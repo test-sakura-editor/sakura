@@ -20,6 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
+      with:
+        path: sakura
 
     - name: Checkout doxygen repo
       uses: actions/checkout@v2
@@ -30,7 +32,7 @@ jobs:
     - name: Doxygen Build
       uses: mattnotmitt/doxygen-action@v1
       with:
-          working-directory: '.'
+          working-directory: 'sakura'
           doxyfile-path: './doxygen.conf'
 
     - name: Deploy doxygen sakura
@@ -38,7 +40,7 @@ jobs:
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: html # The folder the action should deploy.
+          FOLDER: sakura/html # The folder the action should deploy.
           TARGET_FOLDER: doxygen/master
 
     - name: Deploy doxygen repo
@@ -46,6 +48,6 @@ jobs:
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: html # The folder the action should deploy.
+          FOLDER: sakura/html # The folder the action should deploy.
           TARGET_FOLDER: master
           REPOSITORY_NAME: test-sakura-editor/doxygen
