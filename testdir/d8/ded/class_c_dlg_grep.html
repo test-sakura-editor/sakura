@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CDlgGrep クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d8/d28/class_c_dlg_grep-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgGrep クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>GREPダイアログボックス  
+ <a href="../../d8/ded/class_c_dlg_grep.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d2b/_c_dlg_grep_8h_source.html">CDlgGrep.h</a>&gt;</code></p>
+<div class="dynheader">
+CDlgGrep の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/ded/class_c_dlg_grep.png" usemap="#CDlgGrep_map" alt=""/>
+  <map id="CDlgGrep_map" name="CDlgGrep_map">
+<area href="../../dd/d09/class_c_dialog.html" title="ダイアログウィンドウを扱うクラス" alt="CDialog" shape="rect" coords="0,0,114,24"/>
+<area href="../../d2/dbd/class_c_dlg_grep_replace.html" title="GREP置換ダイアログボックス" alt="CDlgGrepReplace" shape="rect" coords="0,112,114,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a76163a913a974f165c37dd8867ceebb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a76163a913a974f165c37dd8867ceebb2">GetPackedGFileString</a> () const</td></tr>
+<tr class="memdesc:a76163a913a974f165c37dd8867ceebb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">除外ファイル、除外フォルダの設定を "-GFILE=" の設定に pack する  <a href="../../d8/ded/class_c_dlg_grep.html#a76163a913a974f165c37dd8867ceebb2">[詳解]</a><br /></td></tr>
+<tr class="separator:a76163a913a974f165c37dd8867ceebb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa052ceacab1932d4cc7ab589937d40a7"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#aa052ceacab1932d4cc7ab589937d40a7">OnCbnDropDown</a> (HWND hwndCtl, int wID) override</td></tr>
+<tr class="separator:aa052ceacab1932d4cc7ab589937d40a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346b1284ec69cbbd4cbdb823655806d3"><td class="memItemLeft" align="right" valign="top"><a id="a346b1284ec69cbbd4cbdb823655806d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>DoModal</b> (HINSTANCE, HWND, const WCHAR *)</td></tr>
+<tr class="separator:a346b1284ec69cbbd4cbdb823655806d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c398ddb7684bdc6b1ac040ba36b807"><td class="memItemLeft" align="right" valign="top"><a id="a18c398ddb7684bdc6b1ac040ba36b807"></a>
+virtual INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchEvent</b> (HWND, UINT, WPARAM, LPARAM)</td></tr>
+<tr class="separator:a18c398ddb7684bdc6b1ac040ba36b807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781ccee7853c95f37a107bf933bfdaa3"><td class="memItemLeft" align="right" valign="top">INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a781ccee7853c95f37a107bf933bfdaa3">DoModal</a> (HINSTANCE hInstance, HWND hwndParent, int nDlgTemplete, LPARAM lParam)</td></tr>
+<tr class="memdesc:a781ccee7853c95f37a107bf933bfdaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">モーダルダイアログの表示  <a href="../../dd/d09/class_c_dialog.html#a781ccee7853c95f37a107bf933bfdaa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a781ccee7853c95f37a107bf933bfdaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6f3033c6d75d365591013b8b7dde99"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a6a6f3033c6d75d365591013b8b7dde99">DoModeless</a> (HINSTANCE hInstance, HWND hwndParent, int nDlgTemplete, LPARAM lParam, int nCmdShow)</td></tr>
+<tr class="memdesc:a6a6f3033c6d75d365591013b8b7dde99"><td class="mdescLeft">&#160;</td><td class="mdescRight">モードレスダイアログの表示  <a href="../../dd/d09/class_c_dialog.html#a6a6f3033c6d75d365591013b8b7dde99">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a6f3033c6d75d365591013b8b7dde99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bba1b2cf86f67b6fafb82872be349af"><td class="memItemLeft" align="right" valign="top"><a id="a4bba1b2cf86f67b6fafb82872be349af"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>DoModeless</b> (HINSTANCE hInstance, HWND hwndParent, LPCDLGTEMPLATE lpTemplate, LPARAM lParam, int nCmdShow)</td></tr>
+<tr class="separator:a4bba1b2cf86f67b6fafb82872be349af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6120d4bf15cbbb987748eab0e56f7b"><td class="memItemLeft" align="right" valign="top"><a id="a3e6120d4bf15cbbb987748eab0e56f7b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseDialog</b> (INT_PTR nModalRetVal)</td></tr>
+<tr class="separator:a3e6120d4bf15cbbb987748eab0e56f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bec089dc5863e0bd56f60ae586a7de"><td class="memItemLeft" align="right" valign="top"><a id="a99bec089dc5863e0bd56f60ae586a7de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDialogPosSize</b> ()</td></tr>
+<tr class="separator:a99bec089dc5863e0bd56f60ae586a7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd8e57dcc66e3763c5d4e56cc7c610a"><td class="memItemLeft" align="right" valign="top"><a id="a1fd8e57dcc66e3763c5d4e56cc7c610a"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnNotify</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a1fd8e57dcc66e3763c5d4e56cc7c610a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9f870d5df2a0f58b42cc62270f9d19"><td class="memItemLeft" align="right" valign="top"><a id="a2d9f870d5df2a0f58b42cc62270f9d19"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnSize</b> ()</td></tr>
+<tr class="separator:a2d9f870d5df2a0f58b42cc62270f9d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b5bcce83f6d3ac790e68c2001e14b2"><td class="memItemLeft" align="right" valign="top"><a id="a86b5bcce83f6d3ac790e68c2001e14b2"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnSize</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a86b5bcce83f6d3ac790e68c2001e14b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e7874ec9dcde03cc716aab6387fc57"><td class="memItemLeft" align="right" valign="top"><a id="ae6e7874ec9dcde03cc716aab6387fc57"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnMove</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ae6e7874ec9dcde03cc716aab6387fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1798381782d550343549fdc84d05a5b"><td class="memItemLeft" align="right" valign="top"><a id="af1798381782d550343549fdc84d05a5b"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDrawItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:af1798381782d550343549fdc84d05a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac9866cea4388720ef7466b7b200f3e"><td class="memItemLeft" align="right" valign="top"><a id="a6ac9866cea4388720ef7466b7b200f3e"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnTimer</b> (WPARAM wParam)</td></tr>
+<tr class="separator:a6ac9866cea4388720ef7466b7b200f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee76210007a8b5a1070a25973828724"><td class="memItemLeft" align="right" valign="top"><a id="a2ee76210007a8b5a1070a25973828724"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnKeyDown</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a2ee76210007a8b5a1070a25973828724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e20716fa385740b255a27d7676831a"><td class="memItemLeft" align="right" valign="top"><a id="ab1e20716fa385740b255a27d7676831a"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDeviceChange</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ab1e20716fa385740b255a27d7676831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af476f3ebdadb2e460fce74a6050ea332"><td class="memItemLeft" align="right" valign="top"><a id="af476f3ebdadb2e460fce74a6050ea332"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnStnClicked</b> (int)</td></tr>
+<tr class="separator:af476f3ebdadb2e460fce74a6050ea332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595a9988267b9f80e49e47568ff296ad"><td class="memItemLeft" align="right" valign="top"><a id="a595a9988267b9f80e49e47568ff296ad"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:a595a9988267b9f80e49e47568ff296ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae553728ef505561872d892f896692777"><td class="memItemLeft" align="right" valign="top"><a id="ae553728ef505561872d892f896692777"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnSetFocus</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae553728ef505561872d892f896692777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d16e612b8173ad6f744e92e28f6216"><td class="memItemLeft" align="right" valign="top"><a id="ab8d16e612b8173ad6f744e92e28f6216"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnKillFocus</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ab8d16e612b8173ad6f744e92e28f6216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2548a82e5879a8d3a9ef58b4ca3058fe"><td class="memItemLeft" align="right" valign="top"><a id="a2548a82e5879a8d3a9ef58b4ca3058fe"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnLbnSelChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:a2548a82e5879a8d3a9ef58b4ca3058fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edeb0bd8d8b7c949ae65aa034d67551"><td class="memItemLeft" align="right" valign="top"><a id="a4edeb0bd8d8b7c949ae65aa034d67551"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnLbnDblclk</b> (int wID)</td></tr>
+<tr class="separator:a4edeb0bd8d8b7c949ae65aa034d67551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7c28012a12f5d7368e33b4684478d5"><td class="memItemLeft" align="right" valign="top"><a id="abd7c28012a12f5d7368e33b4684478d5"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnSelChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:abd7c28012a12f5d7368e33b4684478d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3aa36d64be30dcfe6199c9c214a1fbf"><td class="memItemLeft" align="right" valign="top"><a id="ae3aa36d64be30dcfe6199c9c214a1fbf"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnEditChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae3aa36d64be30dcfe6199c9c214a1fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6058c7a0e303c183a74622a1e1b42d1"><td class="memItemLeft" align="right" valign="top"><a id="ae6058c7a0e303c183a74622a1e1b42d1"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnSelEndOk</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae6058c7a0e303c183a74622a1e1b42d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060c4b32395c85031bad7e239c54053b"><td class="memItemLeft" align="right" valign="top"><a id="a060c4b32395c85031bad7e239c54053b"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnKillFocus</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a060c4b32395c85031bad7e239c54053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce5793ef45d0c930f4f07564a2f2765"><td class="memItemLeft" align="right" valign="top"><a id="a4ce5793ef45d0c930f4f07564a2f2765"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnActivate</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a4ce5793ef45d0c930f4f07564a2f2765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47afdb95e1b1e512457926b83853d7f"><td class="memItemLeft" align="right" valign="top"><a id="ac47afdb95e1b1e512457926b83853d7f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnVKeyToItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ac47afdb95e1b1e512457926b83853d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea09477b1f4c6fc2e20b04d43c4debf9"><td class="memItemLeft" align="right" valign="top"><a id="aea09477b1f4c6fc2e20b04d43c4debf9"></a>
+virtual LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnCharToItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:aea09477b1f4c6fc2e20b04d43c4debf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa518fe678a725135545849474e4027e"><td class="memItemLeft" align="right" valign="top"><a id="afa518fe678a725135545849474e4027e"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnPopupHelp</b> (WPARAM wPara, LPARAM lParam)</td></tr>
+<tr class="separator:afa518fe678a725135545849474e4027e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f5deb4606bf9811428286317d75345"><td class="memItemLeft" align="right" valign="top"><a id="af9f5deb4606bf9811428286317d75345"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnContextMenu</b> (WPARAM wPara, LPARAM lParam)</td></tr>
+<tr class="separator:af9f5deb4606bf9811428286317d75345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d73aea2a4a860fc313d873dd311387"><td class="memItemLeft" align="right" valign="top"><a id="a75d73aea2a4a860fc313d873dd311387"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeItem</b> (HWND hTarget, const POINT &amp;ptDlgDefalut, const POINT &amp;ptDlgNew, const RECT &amp;rcItemDefault, EAnchorStyle anchor, bool bUpdate=true)</td></tr>
+<tr class="separator:a75d73aea2a4a860fc313d873dd311387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d7e13cde0cdb1a1c2c3061c3dbb3f4"><td class="memItemLeft" align="right" valign="top"><a id="a18d7e13cde0cdb1a1c2c3061c3dbb3f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemClientRect</b> (int wID, RECT &amp;rc)</td></tr>
+<tr class="separator:a18d7e13cde0cdb1a1c2c3061c3dbb3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28783195c6d771179193ace4c2eb4832"><td class="memItemLeft" align="right" valign="top"><a id="a28783195c6d771179193ace4c2eb4832"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>GetHwnd</b> () const</td></tr>
+<tr class="separator:a28783195c6d771179193ace4c2eb4832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab744cab2531ea38566e87a71035ed1f"><td class="memItemLeft" align="right" valign="top"><a id="aab744cab2531ea38566e87a71035ed1f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetHwnd</b> (HWND hwnd)</td></tr>
+<tr class="separator:aab744cab2531ea38566e87a71035ed1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a292597f7b1e2eb82d278f726d4cdf7e6"><td class="memItemLeft" align="right" valign="top">static BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a292597f7b1e2eb82d278f726d4cdf7e6">OnCbnDropDown</a> (HWND hwndCtl, bool scrollBar)</td></tr>
+<tr class="separator:a292597f7b1e2eb82d278f726d4cdf7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7174f488da7ddc9595daf94c5d66894"><td class="memItemLeft" align="right" valign="top"><a id="ab7174f488da7ddc9595daf94c5d66894"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetComboBoxDeleter</b> (HWND hwndCtl, <a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a> *data)</td></tr>
+<tr class="separator:ab7174f488da7ddc9595daf94c5d66894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93e5dd81d5e6d3d8b1a34827d744204"><td class="memItemLeft" align="right" valign="top"><a id="ab93e5dd81d5e6d3d8b1a34827d744204"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>DirectoryUp</b> (WCHAR *szDir)</td></tr>
+<tr class="separator:ab93e5dd81d5e6d3d8b1a34827d744204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:ad707e200b7d224d7c20f61d80e4994b8"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#ad707e200b7d224d7c20f61d80e4994b8">m_bSubFolder</a></td></tr>
+<tr class="separator:ad707e200b7d224d7c20f61d80e4994b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967b916728ff445301867fdb5b05e759"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a967b916728ff445301867fdb5b05e759">m_bFromThisText</a></td></tr>
+<tr class="separator:a967b916728ff445301867fdb5b05e759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06147cf4be98f85ed768d496fa28b6c7"><td class="memItemLeft" align="right" valign="top"><a id="a06147cf4be98f85ed768d496fa28b6c7"></a>
+<a class="el" href="../../d2/d18/struct_s_search_option.html">SSearchOption</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a06147cf4be98f85ed768d496fa28b6c7">m_sSearchOption</a></td></tr>
+<tr class="memdesc:a06147cf4be98f85ed768d496fa28b6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索オプション <br /></td></tr>
+<tr class="separator:a06147cf4be98f85ed768d496fa28b6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb6391a95dc5737655fe6a086c25afd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#adfb6391a95dc5737655fe6a086c25afd">m_nGrepCharSet</a></td></tr>
+<tr class="separator:adfb6391a95dc5737655fe6a086c25afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9481b41abe3f982cb3d69245c28eefc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#aa9481b41abe3f982cb3d69245c28eefc">m_nGrepOutputStyle</a></td></tr>
+<tr class="separator:aa9481b41abe3f982cb3d69245c28eefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab363293527897c16bb1c644c8e2c611c"><td class="memItemLeft" align="right" valign="top"><a id="ab363293527897c16bb1c644c8e2c611c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#ab363293527897c16bb1c644c8e2c611c">m_nGrepOutputLineType</a></td></tr>
+<tr class="memdesc:ab363293527897c16bb1c644c8e2c611c"><td class="mdescLeft">&#160;</td><td class="mdescRight">結果出力：行を出力/該当部分/否マッチ行 <br /></td></tr>
+<tr class="separator:ab363293527897c16bb1c644c8e2c611c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948d444c8915d530160b03d687a61bd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a948d444c8915d530160b03d687a61bd2">m_bGrepOutputFileOnly</a></td></tr>
+<tr class="separator:a948d444c8915d530160b03d687a61bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4177bb3ff7486003ad10cab8e605984"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#ac4177bb3ff7486003ad10cab8e605984">m_bGrepOutputBaseFolder</a></td></tr>
+<tr class="separator:ac4177bb3ff7486003ad10cab8e605984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf80000358cf88a82191d1bf76bfd171"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#aaf80000358cf88a82191d1bf76bfd171">m_bGrepSeparateFolder</a></td></tr>
+<tr class="separator:aaf80000358cf88a82191d1bf76bfd171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0a328bcc6c12e519c7d8abb499ddb4"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a3d0a328bcc6c12e519c7d8abb499ddb4">m_strText</a></td></tr>
+<tr class="separator:a3d0a328bcc6c12e519c7d8abb499ddb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac730923cef610f12fa0bb11acedd33eb"><td class="memItemLeft" align="right" valign="top"><a id="ac730923cef610f12fa0bb11acedd33eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#ac730923cef610f12fa0bb11acedd33eb">m_bSetText</a></td></tr>
+<tr class="memdesc:ac730923cef610f12fa0bb11acedd33eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索文字列を設定したか <br /></td></tr>
+<tr class="separator:ac730923cef610f12fa0bb11acedd33eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9c683063be899b3b1893ec180d88b9"><td class="memItemLeft" align="right" valign="top"><a id="afd9c683063be899b3b1893ec180d88b9"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePathLong</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#afd9c683063be899b3b1893ec180d88b9">m_szFile</a></td></tr>
+<tr class="memdesc:afd9c683063be899b3b1893ec180d88b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索ファイル <br /></td></tr>
+<tr class="separator:afd9c683063be899b3b1893ec180d88b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d27df9b01c996313d9170e6b3b574d0"><td class="memItemLeft" align="right" valign="top"><a id="a2d27df9b01c996313d9170e6b3b574d0"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePathLong</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#a2d27df9b01c996313d9170e6b3b574d0">m_szFolder</a></td></tr>
+<tr class="memdesc:a2d27df9b01c996313d9170e6b3b574d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索フォルダ <br /></td></tr>
+<tr class="separator:a2d27df9b01c996313d9170e6b3b574d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f865872cad8b5970a700506532194d"><td class="memItemLeft" align="right" valign="top"><a id="aa5f865872cad8b5970a700506532194d"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePathLong</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#aa5f865872cad8b5970a700506532194d">m_szExcludeFile</a></td></tr>
+<tr class="memdesc:aa5f865872cad8b5970a700506532194d"><td class="mdescLeft">&#160;</td><td class="mdescRight">除外ファイル <br /></td></tr>
+<tr class="separator:aa5f865872cad8b5970a700506532194d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd986f73eb4d8f85fed07d0aa563976"><td class="memItemLeft" align="right" valign="top"><a id="adfd986f73eb4d8f85fed07d0aa563976"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePathLong</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#adfd986f73eb4d8f85fed07d0aa563976">m_szExcludeFolder</a></td></tr>
+<tr class="memdesc:adfd986f73eb4d8f85fed07d0aa563976"><td class="mdescLeft">&#160;</td><td class="mdescRight">除外フォルダ <br /></td></tr>
+<tr class="separator:adfd986f73eb4d8f85fed07d0aa563976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f97a63a8ac056bd7a08bedb3a6b9ef9"><td class="memItemLeft" align="right" valign="top"><a id="a9f97a63a8ac056bd7a08bedb3a6b9ef9"></a>
+<a class="el" href="../../db/d03/class_static_string.html">SFilePath</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_szCurrentFilePath</b></td></tr>
+<tr class="separator:a9f97a63a8ac056bd7a08bedb3a6b9ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac877fe78805bc4dd4612dbecf54b94ac"><td class="memItemLeft" align="right" valign="top"><a id="ac877fe78805bc4dd4612dbecf54b94ac"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hInstance</b></td></tr>
+<tr class="separator:ac877fe78805bc4dd4612dbecf54b94ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bd32612677a1ce63f2da5763012b36"><td class="memItemLeft" align="right" valign="top"><a id="a30bd32612677a1ce63f2da5763012b36"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndParent</b></td></tr>
+<tr class="separator:a30bd32612677a1ce63f2da5763012b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b1e675efde9abdbd04efa906329eee"><td class="memItemLeft" align="right" valign="top"><a id="a89b1e675efde9abdbd04efa906329eee"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndSizeBox</b></td></tr>
+<tr class="separator:a89b1e675efde9abdbd04efa906329eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a0b967d85a19afea071f0ce6a38a2b"><td class="memItemLeft" align="right" valign="top"><a id="a88a0b967d85a19afea071f0ce6a38a2b"></a>
+LPARAM&#160;</td><td class="memItemRight" valign="bottom"><b>m_lParam</b></td></tr>
+<tr class="separator:a88a0b967d85a19afea071f0ce6a38a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e939a42d0527f04d47d50ad858bebc"><td class="memItemLeft" align="right" valign="top"><a id="ab0e939a42d0527f04d47d50ad858bebc"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_bModal</b></td></tr>
+<tr class="separator:ab0e939a42d0527f04d47d50ad858bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33fe7c919473e7f295f7d4cc57f48f4e"><td class="memItemLeft" align="right" valign="top"><a id="a33fe7c919473e7f295f7d4cc57f48f4e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bSizable</b></td></tr>
+<tr class="separator:a33fe7c919473e7f295f7d4cc57f48f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3e4aa063f8a74b498ce7ec9c2dc17b"><td class="memItemLeft" align="right" valign="top"><a id="a6a3e4aa063f8a74b498ce7ec9c2dc17b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nShowCmd</b></td></tr>
+<tr class="separator:a6a3e4aa063f8a74b498ce7ec9c2dc17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4c15b70d0f3f9c94dce6d594d4de4a"><td class="memItemLeft" align="right" valign="top"><a id="aaa4c15b70d0f3f9c94dce6d594d4de4a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nWidth</b></td></tr>
+<tr class="separator:aaa4c15b70d0f3f9c94dce6d594d4de4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ff34c1af494da243389b7c7aea8fdb"><td class="memItemLeft" align="right" valign="top"><a id="ad7ff34c1af494da243389b7c7aea8fdb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nHeight</b></td></tr>
+<tr class="separator:ad7ff34c1af494da243389b7c7aea8fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0113383bf19c48ab4cb740df636fed"><td class="memItemLeft" align="right" valign="top"><a id="aea0113383bf19c48ab4cb740df636fed"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_xPos</b></td></tr>
+<tr class="separator:aea0113383bf19c48ab4cb740df636fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c21b044c6582dedbb68130452bfd4c"><td class="memItemLeft" align="right" valign="top"><a id="a89c21b044c6582dedbb68130452bfd4c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_yPos</b></td></tr>
+<tr class="separator:a89c21b044c6582dedbb68130452bfd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a81e5e30292766afd8bbc6515ebb7e8"><td class="memItemLeft" align="right" valign="top"><a id="a5a81e5e30292766afd8bbc6515ebb7e8"></a>
+<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pShareData</b></td></tr>
+<tr class="separator:a5a81e5e30292766afd8bbc6515ebb7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10ba300f25e45ad8db6f90c092a46a3"><td class="memItemLeft" align="right" valign="top"><a id="ad10ba300f25e45ad8db6f90c092a46a3"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_bInited</b></td></tr>
+<tr class="separator:ad10ba300f25e45ad8db6f90c092a46a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02db589aabe25a6d5afd3c51b935eff"><td class="memItemLeft" align="right" valign="top"><a id="ab02db589aabe25a6d5afd3c51b935eff"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hLangRsrcInstance</b></td></tr>
+<tr class="separator:ab02db589aabe25a6d5afd3c51b935eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:aae99a381293bcfaab5b14485e5008311"><td class="memItemLeft" align="right" valign="top"><a id="aae99a381293bcfaab5b14485e5008311"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> (HWND hwndDlg, WPARAM wParam, LPARAM lParam) override</td></tr>
+<tr class="separator:aae99a381293bcfaab5b14485e5008311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cffbd554a817d54d83cb4a12692a679"><td class="memItemLeft" align="right" valign="top"><a id="a8cffbd554a817d54d83cb4a12692a679"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> () override</td></tr>
+<tr class="separator:a8cffbd554a817d54d83cb4a12692a679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9216ce5bc50cc78029cba74a0fd625dd"><td class="memItemLeft" align="right" valign="top"><a id="a9216ce5bc50cc78029cba74a0fd625dd"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnBnClicked</b> (int wID) override</td></tr>
+<tr class="separator:a9216ce5bc50cc78029cba74a0fd625dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2471df3cfd1092999cc52090fa4a0544"><td class="memItemLeft" align="right" valign="top"><a id="a2471df3cfd1092999cc52090fa4a0544"></a>
+LPVOID&#160;</td><td class="memItemRight" valign="bottom"><b>GetHelpIdTable</b> (void) override</td></tr>
+<tr class="separator:a2471df3cfd1092999cc52090fa4a0544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9442a22e5c8c694375832a72f1681c"><td class="memItemLeft" align="right" valign="top"><a id="afd9442a22e5c8c694375832a72f1681c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetData</b> (void) override</td></tr>
+<tr class="separator:afd9442a22e5c8c694375832a72f1681c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69c4b9de59a6690f5a4df171b9a7f21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#ac69c4b9de59a6690f5a4df171b9a7f21">GetData</a> (void) override</td></tr>
+<tr class="separator:ac69c4b9de59a6690f5a4df171b9a7f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4870ca62f1ec7543f380905d61f7ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/ded/class_c_dlg_grep.html#aef4870ca62f1ec7543f380905d61f7ec">SetDataFromThisText</a> (bool bChecked)</td></tr>
+<tr class="separator:aef4870ca62f1ec7543f380905d61f7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae246f9c12708eaa9bad18993cf7be195"><td class="memItemLeft" align="right" valign="top"><a id="ae246f9c12708eaa9bad18993cf7be195"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateSizeBox</b> (void)</td></tr>
+<tr class="separator:ae246f9c12708eaa9bad18993cf7be195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac250c688e9d92e901faf47eef95441d"><td class="memItemLeft" align="right" valign="top"><a id="aac250c688e9d92e901faf47eef95441d"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCommand</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:aac250c688e9d92e901faf47eef95441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afc98597e721942af6113c7da31b288"><td class="memItemLeft" align="right" valign="top"><a id="a5afc98597e721942af6113c7da31b288"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemHwnd</b> (int nID)</td></tr>
+<tr class="separator:a5afc98597e721942af6113c7da31b288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc4a5db0b5412f9e7cd19a7d485db3"><td class="memItemLeft" align="right" valign="top"><a id="a7acc4a5db0b5412f9e7cd19a7d485db3"></a>
+HFONT&#160;</td><td class="memItemRight" valign="bottom"><b>SetMainFont</b> (HWND hTarget)</td></tr>
+<tr class="separator:a7acc4a5db0b5412f9e7cd19a7d485db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:aa5955287c1ee66bbb377b7b055cd34ac"><td class="memItemLeft" align="right" valign="top"><a id="aa5955287c1ee66bbb377b7b055cd34ac"></a>
+<a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_comboDelText</b></td></tr>
+<tr class="separator:aa5955287c1ee66bbb377b7b055cd34ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dbdaf24200416540aa2cfd66d13a381"><td class="memItemLeft" align="right" valign="top"><a id="a0dbdaf24200416540aa2cfd66d13a381"></a>
+<a class="el" href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cRecentSearch</b></td></tr>
+<tr class="separator:a0dbdaf24200416540aa2cfd66d13a381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2b1ad726354c37f3cf44fc7cbd7182"><td class="memItemLeft" align="right" valign="top"><a id="aab2b1ad726354c37f3cf44fc7cbd7182"></a>
+<a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_comboDelFile</b></td></tr>
+<tr class="separator:aab2b1ad726354c37f3cf44fc7cbd7182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c8448c6b30127e4238b90fb8ab8ab8"><td class="memItemLeft" align="right" valign="top"><a id="a02c8448c6b30127e4238b90fb8ab8ab8"></a>
+<a class="el" href="../../d7/d1f/class_c_recent_grep_file.html">CRecentGrepFile</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cRecentGrepFile</b></td></tr>
+<tr class="separator:a02c8448c6b30127e4238b90fb8ab8ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3238de62fae23d3e2a6e52fb885f992"><td class="memItemLeft" align="right" valign="top"><a id="ad3238de62fae23d3e2a6e52fb885f992"></a>
+<a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_comboDelFolder</b></td></tr>
+<tr class="separator:ad3238de62fae23d3e2a6e52fb885f992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0a4fb6fbc53d1ab2412e3096154494"><td class="memItemLeft" align="right" valign="top"><a id="ade0a4fb6fbc53d1ab2412e3096154494"></a>
+<a class="el" href="../../d8/d79/class_c_recent_grep_folder.html">CRecentGrepFolder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cRecentGrepFolder</b></td></tr>
+<tr class="separator:ade0a4fb6fbc53d1ab2412e3096154494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5b28b5ac2c9d390ec4344deae56da0"><td class="memItemLeft" align="right" valign="top"><a id="abc5b28b5ac2c9d390ec4344deae56da0"></a>
+<a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_comboDelExcludeFile</b></td></tr>
+<tr class="separator:abc5b28b5ac2c9d390ec4344deae56da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97435842adc04476d777599b8a30c15"><td class="memItemLeft" align="right" valign="top"><a id="aa97435842adc04476d777599b8a30c15"></a>
+<a class="el" href="../../d9/d3a/class_c_recent_exclude_file.html">CRecentExcludeFile</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cRecentExcludeFile</b></td></tr>
+<tr class="separator:aa97435842adc04476d777599b8a30c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e37a11b4c3995c9b755ac610de853fa"><td class="memItemLeft" align="right" valign="top"><a id="a0e37a11b4c3995c9b755ac610de853fa"></a>
+<a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_comboDelExcludeFolder</b></td></tr>
+<tr class="separator:a0e37a11b4c3995c9b755ac610de853fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ed24b0c136cc8c5b5570f4bf650b64"><td class="memItemLeft" align="right" valign="top"><a id="ae1ed24b0c136cc8c5b5570f4bf650b64"></a>
+<a class="el" href="../../de/daf/class_c_recent_exclude_folder.html">CRecentExcludeFolder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cRecentExcludeFolder</b></td></tr>
+<tr class="separator:ae1ed24b0c136cc8c5b5570f4bf650b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b8d649301241423794f8bb2421bea1"><td class="memItemLeft" align="right" valign="top"><a id="a29b8d649301241423794f8bb2421bea1"></a>
+<a class="el" href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cFontText</b></td></tr>
+<tr class="separator:a29b8d649301241423794f8bb2421bea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>GREPダイアログボックス </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a781ccee7853c95f37a107bf933bfdaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781ccee7853c95f37a107bf933bfdaa3">&#9670;&nbsp;</a></span>DoModal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CDialog::DoModal </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDlgTemplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モーダルダイアログの表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] アプリケーションインスタンスのハンドル </td></tr>
+    <tr><td class="paramname">hwndParent</td><td>[in] オーナーウィンドウのハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2011.04.10 nasukoji 各国語メッセージリソース対応 </dd></dl>
+
+</div>
+</div>
+<a id="a6a6f3033c6d75d365591013b8b7dde99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6f3033c6d75d365591013b8b7dde99">&#9670;&nbsp;</a></span>DoModeless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND CDialog::DoModeless </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDlgTemplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCmdShow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モードレスダイアログの表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] アプリケーションインスタンスのハンドル </td></tr>
+    <tr><td class="paramname">hwndParent</td><td>[in] オーナーウィンドウのハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2011.04.10 nasukoji 各国語メッセージリソース対応 </dd></dl>
+
+</div>
+</div>
+<a id="ac69c4b9de59a6690f5a4df171b9a7f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69c4b9de59a6690f5a4df171b9a7f21">&#9670;&nbsp;</a></span>GetData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDlgGrep::GetData </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ダイアログデータの取得 </p><dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>正常 </td></tr>
+    <tr><td class="paramname">FALSE</td><td>入力エラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d09/class_c_dialog.html">CDialog</a>を再実装しています。</p>
+
+<p><a class="el" href="../../d2/dbd/class_c_dlg_grep_replace.html#a4012cacfe5f1349b0185874b200fc53e">CDlgGrepReplace</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a76163a913a974f165c37dd8867ceebb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76163a913a974f165c37dd8867ceebb2">&#9670;&nbsp;</a></span>GetPackedGFileString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> CDlgGrep::GetPackedGFileString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>除外ファイル、除外フォルダの設定を "-GFILE=" の設定に pack する </p>
+<p>除外ファイル、除外フォルダの設定を "-GFILE=" の設定に pack する </p>
+
+</div>
+</div>
+<a id="a292597f7b1e2eb82d278f726d4cdf7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292597f7b1e2eb82d278f726d4cdf7e6">&#9670;&nbsp;</a></span>OnCbnDropDown() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDialog::OnCbnDropDown </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCtl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scrollBar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンボボックスのドロップダウン時処理</p>
+<p>コンボボックスがドロップダウンされる時に ドロップダウンリストの幅をアイテム文字列の最大表示幅に合わせる</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndCtl</td><td>[in] コンボボックスのウィンドウハンドル </td></tr>
+    <tr><td class="paramname">wID</td><td>[in] コンボボックスのID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2009.03.29 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="aa052ceacab1932d4cc7ab589937d40a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa052ceacab1932d4cc7ab589937d40a7">&#9670;&nbsp;</a></span>OnCbnDropDown() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDlgGrep::OnCbnDropDown </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCtl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンボボックスのドロップダウンメッセージを捕捉する</p>
+<dl class="section date"><dt>日付</dt><dd>2013.03.24 novice 新規作成 </dd></dl>
+
+<p><a class="el" href="../../dd/d09/class_c_dialog.html">CDialog</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="aef4870ca62f1ec7543f380905d61f7ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4870ca62f1ec7543f380905d61f7ec">&#9670;&nbsp;</a></span>SetDataFromThisText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDlgGrep::SetDataFromThisText </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bChecked</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>現在編集中ファイルから検索チェックでの設定 </p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a967b916728ff445301867fdb5b05e759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967b916728ff445301867fdb5b05e759">&#9670;&nbsp;</a></span>m_bFromThisText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDlgGrep::m_bFromThisText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>この編集中のテキストから検索する </p>
+
+</div>
+</div>
+<a id="ac4177bb3ff7486003ad10cab8e605984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4177bb3ff7486003ad10cab8e605984">&#9670;&nbsp;</a></span>m_bGrepOutputBaseFolder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDlgGrep::m_bGrepOutputBaseFolder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ベースフォルダ表示 </p>
+
+</div>
+</div>
+<a id="a948d444c8915d530160b03d687a61bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948d444c8915d530160b03d687a61bd2">&#9670;&nbsp;</a></span>m_bGrepOutputFileOnly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDlgGrep::m_bGrepOutputFileOnly</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイル毎最初のみ検索 </p>
+
+</div>
+</div>
+<a id="aaf80000358cf88a82191d1bf76bfd171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf80000358cf88a82191d1bf76bfd171">&#9670;&nbsp;</a></span>m_bGrepSeparateFolder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CDlgGrep::m_bGrepSeparateFolder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>フォルダ毎に表示 </p>
+
+</div>
+</div>
+<a id="ad707e200b7d224d7c20f61d80e4994b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad707e200b7d224d7c20f61d80e4994b8">&#9670;&nbsp;</a></span>m_bSubFolder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDlgGrep::m_bSubFolder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>サブフォルダからも検索する </p>
+
+</div>
+</div>
+<a id="adfb6391a95dc5737655fe6a086c25afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb6391a95dc5737655fe6a086c25afd">&#9670;&nbsp;</a></span>m_nGrepCharSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> CDlgGrep::m_nGrepCharSet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>文字コードセット </p>
+
+</div>
+</div>
+<a id="aa9481b41abe3f982cb3d69245c28eefc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9481b41abe3f982cb3d69245c28eefc">&#9670;&nbsp;</a></span>m_nGrepOutputStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CDlgGrep::m_nGrepOutputStyle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Grep: 出力形式 </p>
+
+</div>
+</div>
+<a id="a3d0a328bcc6c12e519c7d8abb499ddb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0a328bcc6c12e519c7d8abb499ddb4">&#9670;&nbsp;</a></span>m_strText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring CDlgGrep::m_strText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>検索文字列 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/dlg/<a class="el" href="../../de/d2b/_c_dlg_grep_8h_source.html">CDlgGrep.h</a></li>
+<li>sakura_core/dlg/<a class="el" href="../../d2/d10/_c_dlg_grep_8cpp.html">CDlgGrep.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

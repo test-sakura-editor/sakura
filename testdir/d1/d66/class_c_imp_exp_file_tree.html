@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CImpExpFileTree クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d8/da0/class_c_imp_exp_file_tree-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CImpExpFileTree クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CImpExpFileTree の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d66/class_c_imp_exp_file_tree.png" usemap="#CImpExpFileTree_map" alt=""/>
+  <map id="CImpExpFileTree_map" name="CImpExpFileTree_map">
+<area href="../../da/dcc/class_c_imp_exp_manager.html" alt="CImpExpManager" shape="rect" coords="0,0,112,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af2460afd5b0de447678a12abd43e8ed4"><td class="memItemLeft" align="right" valign="top"><a id="af2460afd5b0de447678a12abd43e8ed4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CImpExpFileTree</b> (std::vector&lt; <a class="el" href="../../d0/dfe/struct_s_file_tree_item.html">SFileTreeItem</a> &gt; &amp;items)</td></tr>
+<tr class="separator:af2460afd5b0de447678a12abd43e8ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca7e6d264018a38c4bf00a17c90f63c"><td class="memItemLeft" align="right" valign="top"><a id="a9ca7e6d264018a38c4bf00a17c90f63c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Import</b> (const wstring &amp;, wstring &amp;)</td></tr>
+<tr class="separator:a9ca7e6d264018a38c4bf00a17c90f63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330b3713a10f0f763eff5633fadc9f8a"><td class="memItemLeft" align="right" valign="top"><a id="a330b3713a10f0f763eff5633fadc9f8a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Export</b> (const wstring &amp;, wstring &amp;)</td></tr>
+<tr class="separator:a330b3713a10f0f763eff5633fadc9f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea4d6a78f8574b207622a7d66503131"><td class="memItemLeft" align="right" valign="top"><a id="a6ea4d6a78f8574b207622a7d66503131"></a>
+const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultExtension</b> ()</td></tr>
+<tr class="separator:a6ea4d6a78f8574b207622a7d66503131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad887bc6a78cdd5065000706133551d6e"><td class="memItemLeft" align="right" valign="top"><a id="ad887bc6a78cdd5065000706133551d6e"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOriginExtension</b> ()</td></tr>
+<tr class="separator:ad887bc6a78cdd5065000706133551d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb0cbdf3f52f8b808a03792702a06c8"><td class="memItemLeft" align="right" valign="top"><a id="afcb0cbdf3f52f8b808a03792702a06c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportUI</b> (HINSTANCE hInstance, HWND hwndParent)</td></tr>
+<tr class="separator:afcb0cbdf3f52f8b808a03792702a06c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01cce14e0d55c107fc1437dc996cd28"><td class="memItemLeft" align="right" valign="top"><a id="af01cce14e0d55c107fc1437dc996cd28"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExportUI</b> (HINSTANCE hInstance, HWND hwndParent)</td></tr>
+<tr class="separator:af01cce14e0d55c107fc1437dc996cd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78240a67d68610f7bb3a129d2cb04b0e"><td class="memItemLeft" align="right" valign="top"><a id="a78240a67d68610f7bb3a129d2cb04b0e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportAscertain</b> (HINSTANCE hInstance, HWND hwndParent, const wstring &amp;sFileName, wstring &amp;sErrMsg)</td></tr>
+<tr class="separator:a78240a67d68610f7bb3a129d2cb04b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34f2f42892bc9ad7886596ec1c61de3"><td class="memItemLeft" align="right" valign="top"><a id="ae34f2f42892bc9ad7886596ec1c61de3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBaseName</b> (const wstring &amp;sBase)</td></tr>
+<tr class="separator:ae34f2f42892bc9ad7886596ec1c61de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c08e1696873b5a5b0031df0c060171"><td class="memItemLeft" align="right" valign="top"><a id="a91c08e1696873b5a5b0031df0c060171"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFullPath</b> ()</td></tr>
+<tr class="separator:a91c08e1696873b5a5b0031df0c060171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6f54b2f388e71ab3fe0e3830ad1c81"><td class="memItemLeft" align="right" valign="top"><a id="a0d6f54b2f388e71ab3fe0e3830ad1c81"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>MakeFullPath</b> (wstring sFileName)</td></tr>
+<tr class="separator:a0d6f54b2f388e71ab3fe0e3830ad1c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a092c6ac09e59acb71f6e78a3fec8cf"><td class="memItemLeft" align="right" valign="top"><a id="a5a092c6ac09e59acb71f6e78a3fec8cf"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFileName</b> ()</td></tr>
+<tr class="separator:a5a092c6ac09e59acb71f6e78a3fec8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9bb87ff01bb545abb402d65518891d72"><td class="memItemLeft" align="right" valign="top"><a id="a9bb87ff01bb545abb402d65518891d72"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>IO_FileTreeIni</b> (<a class="el" href="../../df/dab/class_c_data_profile.html">CDataProfile</a> &amp;, std::vector&lt; <a class="el" href="../../d0/dfe/struct_s_file_tree_item.html">SFileTreeItem</a> &gt; &amp;)</td></tr>
+<tr class="separator:a9bb87ff01bb545abb402d65518891d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a483c366bd3eece5f42796149dc7a5731"><td class="memItemLeft" align="right" valign="top"><a id="a483c366bd3eece5f42796149dc7a5731"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetImportFolder</b> (const WCHAR *szPath)</td></tr>
+<tr class="separator:a483c366bd3eece5f42796149dc7a5731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a91a596441fac7ec900aaec9ebf3f30de"><td class="memItemLeft" align="right" valign="top"><a id="a91a596441fac7ec900aaec9ebf3f30de"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sBase</b></td></tr>
+<tr class="separator:a91a596441fac7ec900aaec9ebf3f30de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bfe07b93f365b6dc34d40e7747341e7"><td class="memItemLeft" align="right" valign="top"><a id="a5bfe07b93f365b6dc34d40e7747341e7"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sOriginName</b></td></tr>
+<tr class="separator:a5bfe07b93f365b6dc34d40e7747341e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/typeprop/<a class="el" href="../../d5/dd7/_c_imp_exp_manager_8h_source.html">CImpExpManager.h</a></li>
+<li>sakura_core/typeprop/<a class="el" href="../../d0/da6/_c_imp_exp_manager_8cpp.html">CImpExpManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

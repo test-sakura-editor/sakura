@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CHokanMgr クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="../../da/d2e/class_c_hokan_mgr-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CHokanMgr クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>キーワード補完  
+ <a href="../../d9/d39/class_c_hokan_mgr.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/d68/_c_hokan_mgr_8h_source.html">CHokanMgr.h</a>&gt;</code></p>
+<div class="dynheader">
+CHokanMgr の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d39/class_c_hokan_mgr.png" usemap="#CHokanMgr_map" alt=""/>
+  <map id="CHokanMgr_map" name="CHokanMgr_map">
+<area href="../../dd/d09/class_c_dialog.html" title="ダイアログウィンドウを扱うクラス" alt="CDialog" shape="rect" coords="0,0,80,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abbcccf302c9385d13cdd6ad3793269f9"><td class="memItemLeft" align="right" valign="top"><a id="abbcccf302c9385d13cdd6ad3793269f9"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>DoModeless</b> (HINSTANCE hInstance, HWND hwndParent, LPARAM lParam)</td></tr>
+<tr class="separator:abbcccf302c9385d13cdd6ad3793269f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ae1c2527b9bc493c1668263d38f8e0"><td class="memItemLeft" align="right" valign="top"><a id="a40ae1c2527b9bc493c1668263d38f8e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Hide</b> (void)</td></tr>
+<tr class="separator:a40ae1c2527b9bc493c1668263d38f8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21981abaff7a80c2b27d22204a11fb2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d39/class_c_hokan_mgr.html#a21981abaff7a80c2b27d22204a11fb2a">Search</a> (POINT *ppoWin, int nWinHeight, int nColumnWidth, const wchar_t *pszCurWord, const WCHAR *pszHokanFile, bool bHokanLoHiCase, bool bHokanByFile, int nHokanType, bool bHokanByKeyword, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pcmemHokanWord=NULL)</td></tr>
+<tr class="separator:a21981abaff7a80c2b27d22204a11fb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09bf3e99c09195549b2373f6ea3cdd2"><td class="memItemLeft" align="right" valign="top"><a id="ab09bf3e99c09195549b2373f6ea3cdd2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HokanSearchByKeyword</b> (const wchar_t *pszCurWord, bool bHokanLoHiCase, <a class="el" href="../../d9/db1/classvector__ex.html">vector_ex</a>&lt; std::wstring &gt; &amp;vKouho)</td></tr>
+<tr class="separator:ab09bf3e99c09195549b2373f6ea3cdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2179a93e010e061f9199aeb0e4dbc4"><td class="memItemLeft" align="right" valign="top"><a id="add2179a93e010e061f9199aeb0e4dbc4"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>DoHokan</b> (int nVKey)</td></tr>
+<tr class="separator:add2179a93e010e061f9199aeb0e4dbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222cedf34c09ce173e4da80c0ff2db86"><td class="memItemLeft" align="right" valign="top"><a id="a222cedf34c09ce173e4da80c0ff2db86"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ChangeView</b> (LPARAM pcEditView)</td></tr>
+<tr class="separator:a222cedf34c09ce173e4da80c0ff2db86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3ebc177a3906956e331dd1095e14cd"><td class="memItemLeft" align="right" valign="top">INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d39/class_c_hokan_mgr.html#aea3ebc177a3906956e331dd1095e14cd">DispatchEvent</a> (HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam) override</td></tr>
+<tr class="separator:aea3ebc177a3906956e331dd1095e14cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa21b76f9a5dfbaa4d4b9e698d589d6"><td class="memItemLeft" align="right" valign="top"><a id="a1aa21b76f9a5dfbaa4d4b9e698d589d6"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> (HWND, WPARAM wParam, LPARAM lParam) override</td></tr>
+<tr class="separator:a1aa21b76f9a5dfbaa4d4b9e698d589d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac84e1ccdc9e3084e89fd567de25e24"><td class="memItemLeft" align="right" valign="top"><a id="abac84e1ccdc9e3084e89fd567de25e24"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> (void) override</td></tr>
+<tr class="separator:abac84e1ccdc9e3084e89fd567de25e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeab36de3c4fd9459b5d02c0f1090ef9"><td class="memItemLeft" align="right" valign="top"><a id="afeab36de3c4fd9459b5d02c0f1090ef9"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnSize</b> (WPARAM wParam, LPARAM lParam) override</td></tr>
+<tr class="separator:afeab36de3c4fd9459b5d02c0f1090ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12645e4a0844bf6fadd3ac558ec2d48a"><td class="memItemLeft" align="right" valign="top"><a id="a12645e4a0844bf6fadd3ac558ec2d48a"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnLbnSelChange</b> (HWND hwndCtl, int wID) override</td></tr>
+<tr class="separator:a12645e4a0844bf6fadd3ac558ec2d48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7092c351d2631bdc93e01b72a44e24a"><td class="memItemLeft" align="right" valign="top"><a id="ad7092c351d2631bdc93e01b72a44e24a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>KeyProc</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ad7092c351d2631bdc93e01b72a44e24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa663b2f742de1daf550c1006fc333abc"><td class="memItemLeft" align="right" valign="top"><a id="aa663b2f742de1daf550c1006fc333abc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ShowTip</b> ()</td></tr>
+<tr class="separator:aa663b2f742de1daf550c1006fc333abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781ccee7853c95f37a107bf933bfdaa3"><td class="memItemLeft" align="right" valign="top">INT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a781ccee7853c95f37a107bf933bfdaa3">DoModal</a> (HINSTANCE hInstance, HWND hwndParent, int nDlgTemplete, LPARAM lParam)</td></tr>
+<tr class="memdesc:a781ccee7853c95f37a107bf933bfdaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">モーダルダイアログの表示  <a href="../../dd/d09/class_c_dialog.html#a781ccee7853c95f37a107bf933bfdaa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a781ccee7853c95f37a107bf933bfdaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6f3033c6d75d365591013b8b7dde99"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a6a6f3033c6d75d365591013b8b7dde99">DoModeless</a> (HINSTANCE hInstance, HWND hwndParent, int nDlgTemplete, LPARAM lParam, int nCmdShow)</td></tr>
+<tr class="memdesc:a6a6f3033c6d75d365591013b8b7dde99"><td class="mdescLeft">&#160;</td><td class="mdescRight">モードレスダイアログの表示  <a href="../../dd/d09/class_c_dialog.html#a6a6f3033c6d75d365591013b8b7dde99">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a6f3033c6d75d365591013b8b7dde99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bba1b2cf86f67b6fafb82872be349af"><td class="memItemLeft" align="right" valign="top"><a id="a4bba1b2cf86f67b6fafb82872be349af"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>DoModeless</b> (HINSTANCE hInstance, HWND hwndParent, LPCDLGTEMPLATE lpTemplate, LPARAM lParam, int nCmdShow)</td></tr>
+<tr class="separator:a4bba1b2cf86f67b6fafb82872be349af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6120d4bf15cbbb987748eab0e56f7b"><td class="memItemLeft" align="right" valign="top"><a id="a3e6120d4bf15cbbb987748eab0e56f7b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseDialog</b> (INT_PTR nModalRetVal)</td></tr>
+<tr class="separator:a3e6120d4bf15cbbb987748eab0e56f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bec089dc5863e0bd56f60ae586a7de"><td class="memItemLeft" align="right" valign="top"><a id="a99bec089dc5863e0bd56f60ae586a7de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDialogPosSize</b> ()</td></tr>
+<tr class="separator:a99bec089dc5863e0bd56f60ae586a7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd8e57dcc66e3763c5d4e56cc7c610a"><td class="memItemLeft" align="right" valign="top"><a id="a1fd8e57dcc66e3763c5d4e56cc7c610a"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnNotify</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a1fd8e57dcc66e3763c5d4e56cc7c610a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9f870d5df2a0f58b42cc62270f9d19"><td class="memItemLeft" align="right" valign="top"><a id="a2d9f870d5df2a0f58b42cc62270f9d19"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnSize</b> ()</td></tr>
+<tr class="separator:a2d9f870d5df2a0f58b42cc62270f9d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e7874ec9dcde03cc716aab6387fc57"><td class="memItemLeft" align="right" valign="top"><a id="ae6e7874ec9dcde03cc716aab6387fc57"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnMove</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ae6e7874ec9dcde03cc716aab6387fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1798381782d550343549fdc84d05a5b"><td class="memItemLeft" align="right" valign="top"><a id="af1798381782d550343549fdc84d05a5b"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDrawItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:af1798381782d550343549fdc84d05a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac9866cea4388720ef7466b7b200f3e"><td class="memItemLeft" align="right" valign="top"><a id="a6ac9866cea4388720ef7466b7b200f3e"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnTimer</b> (WPARAM wParam)</td></tr>
+<tr class="separator:a6ac9866cea4388720ef7466b7b200f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee76210007a8b5a1070a25973828724"><td class="memItemLeft" align="right" valign="top"><a id="a2ee76210007a8b5a1070a25973828724"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnKeyDown</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a2ee76210007a8b5a1070a25973828724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e20716fa385740b255a27d7676831a"><td class="memItemLeft" align="right" valign="top"><a id="ab1e20716fa385740b255a27d7676831a"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnDeviceChange</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ab1e20716fa385740b255a27d7676831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acedf4a0a0920e28638052c4b0abb022b"><td class="memItemLeft" align="right" valign="top"><a id="acedf4a0a0920e28638052c4b0abb022b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetData</b> (void)</td></tr>
+<tr class="separator:acedf4a0a0920e28638052c4b0abb022b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdcfc2048cdcf007caa410a4c41efe7"><td class="memItemLeft" align="right" valign="top"><a id="adfdcfc2048cdcf007caa410a4c41efe7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetData</b> (void)</td></tr>
+<tr class="separator:adfdcfc2048cdcf007caa410a4c41efe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad743fbc183b81db1f00e6c378a17058a"><td class="memItemLeft" align="right" valign="top"><a id="ad743fbc183b81db1f00e6c378a17058a"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnBnClicked</b> (int wID)</td></tr>
+<tr class="separator:ad743fbc183b81db1f00e6c378a17058a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af476f3ebdadb2e460fce74a6050ea332"><td class="memItemLeft" align="right" valign="top"><a id="af476f3ebdadb2e460fce74a6050ea332"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnStnClicked</b> (int)</td></tr>
+<tr class="separator:af476f3ebdadb2e460fce74a6050ea332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595a9988267b9f80e49e47568ff296ad"><td class="memItemLeft" align="right" valign="top"><a id="a595a9988267b9f80e49e47568ff296ad"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:a595a9988267b9f80e49e47568ff296ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae553728ef505561872d892f896692777"><td class="memItemLeft" align="right" valign="top"><a id="ae553728ef505561872d892f896692777"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnSetFocus</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae553728ef505561872d892f896692777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d16e612b8173ad6f744e92e28f6216"><td class="memItemLeft" align="right" valign="top"><a id="ab8d16e612b8173ad6f744e92e28f6216"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnKillFocus</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ab8d16e612b8173ad6f744e92e28f6216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edeb0bd8d8b7c949ae65aa034d67551"><td class="memItemLeft" align="right" valign="top"><a id="a4edeb0bd8d8b7c949ae65aa034d67551"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnLbnDblclk</b> (int wID)</td></tr>
+<tr class="separator:a4edeb0bd8d8b7c949ae65aa034d67551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7c28012a12f5d7368e33b4684478d5"><td class="memItemLeft" align="right" valign="top"><a id="abd7c28012a12f5d7368e33b4684478d5"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnSelChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:abd7c28012a12f5d7368e33b4684478d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3aa36d64be30dcfe6199c9c214a1fbf"><td class="memItemLeft" align="right" valign="top"><a id="ae3aa36d64be30dcfe6199c9c214a1fbf"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnEditChange</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae3aa36d64be30dcfe6199c9c214a1fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeff93c610273b2b58a727b9ada87e7b"><td class="memItemLeft" align="right" valign="top"><a id="aeeff93c610273b2b58a727b9ada87e7b"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnDropDown</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:aeeff93c610273b2b58a727b9ada87e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6058c7a0e303c183a74622a1e1b42d1"><td class="memItemLeft" align="right" valign="top"><a id="ae6058c7a0e303c183a74622a1e1b42d1"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCbnSelEndOk</b> (HWND hwndCtl, int wID)</td></tr>
+<tr class="separator:ae6058c7a0e303c183a74622a1e1b42d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060c4b32395c85031bad7e239c54053b"><td class="memItemLeft" align="right" valign="top"><a id="a060c4b32395c85031bad7e239c54053b"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnKillFocus</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a060c4b32395c85031bad7e239c54053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce5793ef45d0c930f4f07564a2f2765"><td class="memItemLeft" align="right" valign="top"><a id="a4ce5793ef45d0c930f4f07564a2f2765"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnActivate</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a4ce5793ef45d0c930f4f07564a2f2765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47afdb95e1b1e512457926b83853d7f"><td class="memItemLeft" align="right" valign="top"><a id="ac47afdb95e1b1e512457926b83853d7f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnVKeyToItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:ac47afdb95e1b1e512457926b83853d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea09477b1f4c6fc2e20b04d43c4debf9"><td class="memItemLeft" align="right" valign="top"><a id="aea09477b1f4c6fc2e20b04d43c4debf9"></a>
+virtual LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnCharToItem</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:aea09477b1f4c6fc2e20b04d43c4debf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa518fe678a725135545849474e4027e"><td class="memItemLeft" align="right" valign="top"><a id="afa518fe678a725135545849474e4027e"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnPopupHelp</b> (WPARAM wPara, LPARAM lParam)</td></tr>
+<tr class="separator:afa518fe678a725135545849474e4027e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f5deb4606bf9811428286317d75345"><td class="memItemLeft" align="right" valign="top"><a id="af9f5deb4606bf9811428286317d75345"></a>
+virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnContextMenu</b> (WPARAM wPara, LPARAM lParam)</td></tr>
+<tr class="separator:af9f5deb4606bf9811428286317d75345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d73aea2a4a860fc313d873dd311387"><td class="memItemLeft" align="right" valign="top"><a id="a75d73aea2a4a860fc313d873dd311387"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeItem</b> (HWND hTarget, const POINT &amp;ptDlgDefalut, const POINT &amp;ptDlgNew, const RECT &amp;rcItemDefault, EAnchorStyle anchor, bool bUpdate=true)</td></tr>
+<tr class="separator:a75d73aea2a4a860fc313d873dd311387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d7e13cde0cdb1a1c2c3061c3dbb3f4"><td class="memItemLeft" align="right" valign="top"><a id="a18d7e13cde0cdb1a1c2c3061c3dbb3f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemClientRect</b> (int wID, RECT &amp;rc)</td></tr>
+<tr class="separator:a18d7e13cde0cdb1a1c2c3061c3dbb3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28783195c6d771179193ace4c2eb4832"><td class="memItemLeft" align="right" valign="top"><a id="a28783195c6d771179193ace4c2eb4832"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>GetHwnd</b> () const</td></tr>
+<tr class="separator:a28783195c6d771179193ace4c2eb4832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab744cab2531ea38566e87a71035ed1f"><td class="memItemLeft" align="right" valign="top"><a id="aab744cab2531ea38566e87a71035ed1f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_SetHwnd</b> (HWND hwnd)</td></tr>
+<tr class="separator:aab744cab2531ea38566e87a71035ed1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad9389a3d2e7a6f3b41c93229050b0dd0"><td class="memItemLeft" align="right" valign="top"><a id="ad9389a3d2e7a6f3b41c93229050b0dd0"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddKouhoUnique</b> (<a class="el" href="../../d9/db1/classvector__ex.html">vector_ex</a>&lt; std::wstring &gt; &amp;, const std::wstring &amp;)</td></tr>
+<tr class="separator:ad9389a3d2e7a6f3b41c93229050b0dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292597f7b1e2eb82d278f726d4cdf7e6"><td class="memItemLeft" align="right" valign="top">static BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d09/class_c_dialog.html#a292597f7b1e2eb82d278f726d4cdf7e6">OnCbnDropDown</a> (HWND hwndCtl, bool scrollBar)</td></tr>
+<tr class="separator:a292597f7b1e2eb82d278f726d4cdf7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7174f488da7ddc9595daf94c5d66894"><td class="memItemLeft" align="right" valign="top"><a id="ab7174f488da7ddc9595daf94c5d66894"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetComboBoxDeleter</b> (HWND hwndCtl, <a class="el" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a> *data)</td></tr>
+<tr class="separator:ab7174f488da7ddc9595daf94c5d66894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93e5dd81d5e6d3d8b1a34827d744204"><td class="memItemLeft" align="right" valign="top"><a id="ab93e5dd81d5e6d3d8b1a34827d744204"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>DirectoryUp</b> (WCHAR *szDir)</td></tr>
+<tr class="separator:ab93e5dd81d5e6d3d8b1a34827d744204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a6b96d7e4525113b5ca96a7b2a435d69b"><td class="memItemLeft" align="right" valign="top"><a id="a6b96d7e4525113b5ca96a7b2a435d69b"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cmemCurWord</b></td></tr>
+<tr class="separator:a6b96d7e4525113b5ca96a7b2a435d69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac522144635991537159b585e0dfaa96a"><td class="memItemLeft" align="right" valign="top"><a id="ac522144635991537159b585e0dfaa96a"></a>
+<a class="el" href="../../d9/db1/classvector__ex.html">vector_ex</a>&lt; std::wstring &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_vKouho</b></td></tr>
+<tr class="separator:ac522144635991537159b585e0dfaa96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32c8034fe50bed3efa6db5ce6c47d5a"><td class="memItemLeft" align="right" valign="top"><a id="af32c8034fe50bed3efa6db5ce6c47d5a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nKouhoNum</b></td></tr>
+<tr class="separator:af32c8034fe50bed3efa6db5ce6c47d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a338421cf5caebb476a7628b4def500"><td class="memItemLeft" align="right" valign="top"><a id="a0a338421cf5caebb476a7628b4def500"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nCurKouhoIdx</b></td></tr>
+<tr class="separator:a0a338421cf5caebb476a7628b4def500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493e7e3d08485ee469ef15aac8f48552"><td class="memItemLeft" align="right" valign="top"><a id="a493e7e3d08485ee469ef15aac8f48552"></a>
+POINT&#160;</td><td class="memItemRight" valign="bottom"><b>m_poWin</b></td></tr>
+<tr class="separator:a493e7e3d08485ee469ef15aac8f48552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d541ae6a4d3cc1317c8532faf532ca0"><td class="memItemLeft" align="right" valign="top"><a id="a1d541ae6a4d3cc1317c8532faf532ca0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nWinHeight</b></td></tr>
+<tr class="separator:a1d541ae6a4d3cc1317c8532faf532ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1933e5ff4a65ef4f6eb65c9c754e7327"><td class="memItemLeft" align="right" valign="top"><a id="a1933e5ff4a65ef4f6eb65c9c754e7327"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nColumnWidth</b></td></tr>
+<tr class="separator:a1933e5ff4a65ef4f6eb65c9c754e7327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95948ab36a3308a0034dbda8b7691fac"><td class="memItemLeft" align="right" valign="top"><a id="a95948ab36a3308a0034dbda8b7691fac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_bTimerFlag</b></td></tr>
+<tr class="separator:a95948ab36a3308a0034dbda8b7691fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac877fe78805bc4dd4612dbecf54b94ac"><td class="memItemLeft" align="right" valign="top"><a id="ac877fe78805bc4dd4612dbecf54b94ac"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hInstance</b></td></tr>
+<tr class="separator:ac877fe78805bc4dd4612dbecf54b94ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bd32612677a1ce63f2da5763012b36"><td class="memItemLeft" align="right" valign="top"><a id="a30bd32612677a1ce63f2da5763012b36"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndParent</b></td></tr>
+<tr class="separator:a30bd32612677a1ce63f2da5763012b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b1e675efde9abdbd04efa906329eee"><td class="memItemLeft" align="right" valign="top"><a id="a89b1e675efde9abdbd04efa906329eee"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>m_hwndSizeBox</b></td></tr>
+<tr class="separator:a89b1e675efde9abdbd04efa906329eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a0b967d85a19afea071f0ce6a38a2b"><td class="memItemLeft" align="right" valign="top"><a id="a88a0b967d85a19afea071f0ce6a38a2b"></a>
+LPARAM&#160;</td><td class="memItemRight" valign="bottom"><b>m_lParam</b></td></tr>
+<tr class="separator:a88a0b967d85a19afea071f0ce6a38a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e939a42d0527f04d47d50ad858bebc"><td class="memItemLeft" align="right" valign="top"><a id="ab0e939a42d0527f04d47d50ad858bebc"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_bModal</b></td></tr>
+<tr class="separator:ab0e939a42d0527f04d47d50ad858bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33fe7c919473e7f295f7d4cc57f48f4e"><td class="memItemLeft" align="right" valign="top"><a id="a33fe7c919473e7f295f7d4cc57f48f4e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bSizable</b></td></tr>
+<tr class="separator:a33fe7c919473e7f295f7d4cc57f48f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3e4aa063f8a74b498ce7ec9c2dc17b"><td class="memItemLeft" align="right" valign="top"><a id="a6a3e4aa063f8a74b498ce7ec9c2dc17b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nShowCmd</b></td></tr>
+<tr class="separator:a6a3e4aa063f8a74b498ce7ec9c2dc17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4c15b70d0f3f9c94dce6d594d4de4a"><td class="memItemLeft" align="right" valign="top"><a id="aaa4c15b70d0f3f9c94dce6d594d4de4a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nWidth</b></td></tr>
+<tr class="separator:aaa4c15b70d0f3f9c94dce6d594d4de4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ff34c1af494da243389b7c7aea8fdb"><td class="memItemLeft" align="right" valign="top"><a id="ad7ff34c1af494da243389b7c7aea8fdb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nHeight</b></td></tr>
+<tr class="separator:ad7ff34c1af494da243389b7c7aea8fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0113383bf19c48ab4cb740df636fed"><td class="memItemLeft" align="right" valign="top"><a id="aea0113383bf19c48ab4cb740df636fed"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_xPos</b></td></tr>
+<tr class="separator:aea0113383bf19c48ab4cb740df636fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c21b044c6582dedbb68130452bfd4c"><td class="memItemLeft" align="right" valign="top"><a id="a89c21b044c6582dedbb68130452bfd4c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_yPos</b></td></tr>
+<tr class="separator:a89c21b044c6582dedbb68130452bfd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a81e5e30292766afd8bbc6515ebb7e8"><td class="memItemLeft" align="right" valign="top"><a id="a5a81e5e30292766afd8bbc6515ebb7e8"></a>
+<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pShareData</b></td></tr>
+<tr class="separator:a5a81e5e30292766afd8bbc6515ebb7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10ba300f25e45ad8db6f90c092a46a3"><td class="memItemLeft" align="right" valign="top"><a id="ad10ba300f25e45ad8db6f90c092a46a3"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_bInited</b></td></tr>
+<tr class="separator:ad10ba300f25e45ad8db6f90c092a46a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02db589aabe25a6d5afd3c51b935eff"><td class="memItemLeft" align="right" valign="top"><a id="ab02db589aabe25a6d5afd3c51b935eff"></a>
+HINSTANCE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hLangRsrcInstance</b></td></tr>
+<tr class="separator:ab02db589aabe25a6d5afd3c51b935eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab3a40463d6c7929abc80f383129652a6"><td class="memItemLeft" align="right" valign="top"><a id="ab3a40463d6c7929abc80f383129652a6"></a>
+LPVOID&#160;</td><td class="memItemRight" valign="bottom"><b>GetHelpIdTable</b> (void) override</td></tr>
+<tr class="separator:ab3a40463d6c7929abc80f383129652a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae246f9c12708eaa9bad18993cf7be195"><td class="memItemLeft" align="right" valign="top"><a id="ae246f9c12708eaa9bad18993cf7be195"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateSizeBox</b> (void)</td></tr>
+<tr class="separator:ae246f9c12708eaa9bad18993cf7be195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac250c688e9d92e901faf47eef95441d"><td class="memItemLeft" align="right" valign="top"><a id="aac250c688e9d92e901faf47eef95441d"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnCommand</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:aac250c688e9d92e901faf47eef95441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5afc98597e721942af6113c7da31b288"><td class="memItemLeft" align="right" valign="top"><a id="a5afc98597e721942af6113c7da31b288"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemHwnd</b> (int nID)</td></tr>
+<tr class="separator:a5afc98597e721942af6113c7da31b288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc4a5db0b5412f9e7cd19a7d485db3"><td class="memItemLeft" align="right" valign="top"><a id="a7acc4a5db0b5412f9e7cd19a7d485db3"></a>
+HFONT&#160;</td><td class="memItemRight" valign="bottom"><b>SetMainFont</b> (HWND hTarget)</td></tr>
+<tr class="separator:a7acc4a5db0b5412f9e7cd19a7d485db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>キーワード補完 </p>
+<dl class="section date"><dt>日付</dt><dd>2003.06.25 Moca ファイル内からの補完機能を追加 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aea3ebc177a3906956e331dd1095e14cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3ebc177a3906956e331dd1095e14cd">&#9670;&nbsp;</a></span>DispatchEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CHokanMgr::DispatchEvent </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>wMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>標準以外のメッセージを捕捉する </p>
+
+<p><a class="el" href="../../dd/d09/class_c_dialog.html">CDialog</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a781ccee7853c95f37a107bf933bfdaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781ccee7853c95f37a107bf933bfdaa3">&#9670;&nbsp;</a></span>DoModal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CDialog::DoModal </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDlgTemplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モーダルダイアログの表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] アプリケーションインスタンスのハンドル </td></tr>
+    <tr><td class="paramname">hwndParent</td><td>[in] オーナーウィンドウのハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2011.04.10 nasukoji 各国語メッセージリソース対応 </dd></dl>
+
+</div>
+</div>
+<a id="a6a6f3033c6d75d365591013b8b7dde99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6f3033c6d75d365591013b8b7dde99">&#9670;&nbsp;</a></span>DoModeless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HWND CDialog::DoModeless </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDlgTemplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCmdShow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モードレスダイアログの表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hInstance</td><td>[in] アプリケーションインスタンスのハンドル </td></tr>
+    <tr><td class="paramname">hwndParent</td><td>[in] オーナーウィンドウのハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2011.04.10 nasukoji 各国語メッセージリソース対応 </dd></dl>
+
+</div>
+</div>
+<a id="a292597f7b1e2eb82d278f726d4cdf7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292597f7b1e2eb82d278f726d4cdf7e6">&#9670;&nbsp;</a></span>OnCbnDropDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CDialog::OnCbnDropDown </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCtl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scrollBar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>コンボボックスのドロップダウン時処理</p>
+<p>コンボボックスがドロップダウンされる時に ドロップダウンリストの幅をアイテム文字列の最大表示幅に合わせる</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndCtl</td><td>[in] コンボボックスのウィンドウハンドル </td></tr>
+    <tr><td class="paramname">wID</td><td>[in] コンボボックスのID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>著者</dt><dd>ryoji </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2009.03.29 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a21981abaff7a80c2b27d22204a11fb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21981abaff7a80c2b27d22204a11fb2a">&#9670;&nbsp;</a></span>Search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CHokanMgr::Search </td>
+          <td>(</td>
+          <td class="paramtype">POINT *&#160;</td>
+          <td class="paramname"><em>ppoWin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nWinHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nColumnWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszCurWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszHokanFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHokanLoHiCase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHokanByFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nHokanType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bHokanByKeyword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pcmemHokanWord</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>初期化 pcmemHokanWord == NULLのとき、補完候補がひとつだったら、補完ウィンドウを表示しないで終了します。 <a class="el" href="../../d9/d39/class_c_hokan_mgr.html#a21981abaff7a80c2b27d22204a11fb2a">Search()</a>呼び出し元で確定処理を進めてください。</p>
+<dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d1/d68/_c_hokan_mgr_8h_source.html">CHokanMgr.h</a></li>
+<li>sakura_core/<a class="el" href="../../d2/d27/_c_hokan_mgr_8cpp.html">CHokanMgr.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

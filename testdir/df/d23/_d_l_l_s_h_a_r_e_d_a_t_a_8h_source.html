@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/DLLSHAREDATA.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DLLSHAREDATA.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//                         アクセサ                            //</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//DLLSHAREDATAへの簡易アクセサ</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">inline</span> <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>&amp; GetDllShareData()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">extern</span> <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* g_theDLLSHAREDATA;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    assert(g_theDLLSHAREDATA);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> *g_theDLLSHAREDATA;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">inline</span> <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>&amp; GetDllShareData(<span class="keywordtype">bool</span> bNullCheck)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">extern</span> <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* g_theDLLSHAREDATA;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span>( bNullCheck ){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        assert(g_theDLLSHAREDATA);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> *g_theDLLSHAREDATA;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//DLLSHAREDATAを確保したら、まずこれを呼ぶ。破棄する前にも呼ぶ。</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> SetDllShareData(<a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* pShareData)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">extern</span> <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* g_theDLLSHAREDATA;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    g_theDLLSHAREDATA = pShareData;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">//                    共有メモリ構成要素                       //</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// 2010.04.19 Moca CShareDataからDLLSHAREDATAメンバのincludeをDLLSHAREDATA.hに移動</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d33/_c_app_node_manager_8h.html">env/CAppNodeManager.h</a>&quot;</span>    <span class="comment">//SShare_Nodes</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//2007.09.28 kobake Common構造体をCShareData.hから分離</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d06/_common_setting_8h.html">env/CommonSetting.h</a>&quot;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d0d/_c_search_keyword_manager_8h.html">env/CSearchKeywordManager.h</a>&quot;</span>  <span class="comment">//SShare_SearchKeywords</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/dee/_c_tag_jump_manager_8h.html">env/CTagJumpManager.h</a>&quot;</span>        <span class="comment">//SShare_TagJump</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da4/_c_file_name_manager_8h.html">env/CFileNameManager.h</a>&quot;</span>       <span class="comment">//SShare_FileNameManagement</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/dbe/_edit_info_8h.html">EditInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/ddc/_c_type_8h.html">types/CType.h</a>&quot;</span> <span class="comment">// STypeConfig</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d6c/_c_print_8h.html">print/CPrint.h</a>&quot;</span> <span class="comment">//PRINTSETTING</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/daa/_s_share___history_8h.html">recent/SShare_History.h</a>&quot;</span>  <span class="comment">//SShare_History</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d1/d7b/struct_s_share___flags.html">   82</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d1/d7b/struct_s_share___flags.html">SShare_Flags</a>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    BOOL                m_bEditWndChanging;             <span class="comment">// 編集ウィンドウ切替中 // 2007.04.03 ryoji</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/*  @@@ 2002.1.24 YAZAKI</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">        キーボードマクロは、記録終了した時点でファイル「m_szKeyMacroFileName」に書き出すことにする。</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">        m_bRecordingKeyMacroがTRUEのときは、キーボードマクロの記録中なので、m_szKeyMacroFileNameにアクセスしてはならない。</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    BOOL                m_bRecordingKeyMacro;       <span class="comment">/* キーボードマクロの記録中 */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    HWND                m_hwndRecordingKeyMacro;    <span class="comment">/* キーボードマクロを記録中のウィンドウ */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../dc/de5/struct_s_share___work_buffer.html">   93</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../dc/de5/struct_s_share___work_buffer.html">SShare_WorkBuffer</a>{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//2007.09.16 kobake char型だと、常に文字列であるという誤解を招くので、BYTE型に変更。変数名も変更。</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">//           UNICODE版では、余分に領域を使うことが予想されるため、ANSI版の2倍確保。</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    BYTE                m_pWork[32000*<span class="keyword">sizeof</span>(WCHAR)];</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    T* GetWorkBuffer(){ <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(m_pWork); }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">size_t</span> GetWorkBufferCount(){ <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(m_pWork)/<span class="keyword">sizeof</span>(T); }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../dc/dba/struct_edit_info.html">EditInfo</a>            m_EditInfo_MYWM_GETFILEINFO;    <span class="comment">//MYWM_GETFILEINFOデータ受け渡し用  ####美しくない</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../dc/de5/struct_s_share___work_buffer.html#a37fadfcd10d7fdef81760e27420d0228">  107</a></span>&#160;    <a class="code" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a>         <a class="code" href="../../dc/de5/struct_s_share___work_buffer.html#a37fadfcd10d7fdef81760e27420d0228">m_LogicPoint</a>;                   </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>         m_TypeConfig;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../d9/df1/struct_s_share___handles.html">  112</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d9/df1/struct_s_share___handles.html">SShare_Handles</a>{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    HWND                m_hwndTray;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    HWND                m_hwndDebug;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    HACCEL              m_hAccel;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d7/d50/struct_s_share___version.html">  119</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d7/d50/struct_s_share___version.html">SShare_Version</a>{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    DWORD               m_dwProductVersionMS;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    DWORD               m_dwProductVersionLS;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">//                   共有メモリ構造体本体                      //</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">  128</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// -- -- バージョン -- -- //</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a1b7f562582780fb16a46d359dfb77e71">  135</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a1b7f562582780fb16a46d359dfb77e71">m_vStructureVersion</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                m_nSize;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">// -- -- 非保存対象 -- -- //</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="../../d7/d50/struct_s_share___version.html">SShare_Version</a>              m_sVersion; <span class="comment">//※読込は行わないが、書込は行う</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="../../dc/de5/struct_s_share___work_buffer.html">SShare_WorkBuffer</a>           m_sWorkBuffer;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="../../d1/d7b/struct_s_share___flags.html">SShare_Flags</a>                m_sFlags;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="../../d3/d1c/struct_s_share___nodes.html">SShare_Nodes</a>                m_sNodes;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="../../d9/df1/struct_s_share___handles.html">SShare_Handles</a>              m_sHandles;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a71327add7dc95130c713d3d9949a86d7">  145</a></span>&#160;    <a class="code" href="../../d7/db1/struct_s_char_width_cache.html">SCharWidthCache</a>             <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a71327add7dc95130c713d3d9949a86d7">m_sCharWidth</a>;                           </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a56a39912e6440b967d3e51f601d388a4">  146</a></span>&#160;    DWORD                       <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a56a39912e6440b967d3e51f601d388a4">m_dwCustColors</a>[16];                     </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// プラグイン</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#aba014f7c8300b51386aca85c7c9607ba">  149</a></span>&#160;    <span class="keywordtype">short</span>                       <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#aba014f7c8300b51386aca85c7c9607ba">m_PlugCmdIcon</a>[MAX_PLUGIN*MAX_PLUG_CMD]; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a753822103ad65e72d1dc8742f6fde8ab">  150</a></span>&#160;    <span class="keywordtype">int</span>                         <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a753822103ad65e72d1dc8742f6fde8ab">m_maxTBNum</a>;                             </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// -- -- 保存対象 -- -- //</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="../../d5/d05/struct_common_setting.html">CommonSetting</a>               m_Common;                               <span class="comment">// 共通設定</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span>                         m_nTypesCount;  <span class="comment">// タイプ別設定数</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>                 m_TypeBasis;                            <span class="comment">// タイプ別設定: 共通</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="../../da/d8f/struct_s_type_config_mini.html">STypeConfigMini</a>             m_TypeMini[<a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a>];                  <span class="comment">// タイプ別設定(mini)</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a>                m_PrintSettingArr[<a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0aea6c4f416d0d7d1b5b0f8cf2ebb7cc88">MAX_PRINTSETTINGARR</a>]; <span class="comment">// 印刷ページ設定</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#ada3d589fae2b942dae601e2e79dc6834">  159</a></span>&#160;    <span class="keywordtype">int</span>                         <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#ada3d589fae2b942dae601e2e79dc6834">m_nLockCount</a>;   </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">//その他</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="../../d1/d0f/struct_s_share___search_keywords.html">SShare_SearchKeywords</a>       m_sSearchKeywords;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="../../dc/d17/struct_s_share___tag_jump.html">SShare_TagJump</a>              m_sTagJump;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../da/de3/struct_s_share___file_name_management.html">SShare_FileNameManagement</a>   m_sFileNameManagement;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../d9/d28/struct_s_share___history.html">SShare_History</a>              m_sHistory;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">//外部コマンド実行ダイアログのオプション</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span>                         m_nExecFlgOpt;              <span class="comment">/* 外部コマンド実行オプション */</span>    <span class="comment">//  2006.12.03 maru オプションの拡張のため</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">//DIFF差分表示ダイアログのオプション</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">int</span>                         m_nDiffFlgOpt;              <span class="comment">/* DIFF差分表示 */</span>  <span class="comment">//@@@ 2002.05.27 MIK</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">//タグファイルの作成ダイアログのオプション</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    WCHAR                       m_szTagsCmdLine[_MAX_PATH]; <span class="comment">/* TAGSコマンドラインオプション */</span>  <span class="comment">//@@@ 2003.05.12 MIK</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">int</span>                         m_nTagsOpt;                 <span class="comment">/* TAGSオプション(チェック) */</span>  <span class="comment">//@@@ 2003.05.12 MIK</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// -- -- テンポラリ -- -- //</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">//指定行へジャンプダイアログのオプション</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">bool</span>                        m_bLineNumIsCRLF_ForJump;           <span class="comment">/* 指定行へジャンプの「改行単位の行番号」か「折り返し単位の行番号」か */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="../../d4/d9d/class_c_share_data_lock_counter.html">  180</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d9d/class_c_share_data_lock_counter.html">CShareDataLockCounter</a>{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d4/d9d/class_c_share_data_lock_counter.html">CShareDataLockCounter</a>();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    ~<a class="code" href="../../d4/d9d/class_c_share_data_lock_counter.html">CShareDataLockCounter</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> GetLockCounter();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> WaitLock( HWND hwndParent, <a class="code" href="../../d4/d9d/class_c_share_data_lock_counter.html">CShareDataLockCounter</a>** ppLock = NULL );</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_s_share___nodes_html"><div class="ttname"><a href="../../d3/d1c/struct_s_share___nodes.html">SShare_Nodes</a></div><div class="ttdoc">共有メモリ内構造体</div><div class="ttdef"><b>Definition:</b> CAppNodeManager.h:59</div></div>
+<div class="ttc" id="astruct_s_share___version_html"><div class="ttname"><a href="../../d7/d50/struct_s_share___version.html">SShare_Version</a></div><div class="ttdoc">EXE情報</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:119</div></div>
+<div class="ttc" id="astruct_s_share___history_html"><div class="ttname"><a href="../../d9/d28/struct_s_share___history.html">SShare_History</a></div><div class="ttdef"><b>Definition:</b> SShare_History.h:31</div></div>
+<div class="ttc" id="a_c_print_8h_html"><div class="ttname"><a href="../../d4/d6c/_c_print_8h.html">CPrint.h</a></div><div class="ttdoc">印刷関連</div></div>
+<div class="ttc" id="astruct_common_setting_html"><div class="ttname"><a href="../../d5/d05/struct_common_setting.html">CommonSetting</a></div><div class="ttdoc">共通設定</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:720</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="a_s_share___history_8h_html"><div class="ttname"><a href="../../da/daa/_s_share___history_8h.html">SShare_History.h</a></div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_a1b7f562582780fb16a46d359dfb77e71"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a1b7f562582780fb16a46d359dfb77e71">DLLSHAREDATA::m_vStructureVersion</a></div><div class="ttdeci">unsigned int m_vStructureVersion</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:135</div></div>
+<div class="ttc" id="a_c_type_8h_html"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html">CType.h</a></div></div>
+<div class="ttc" id="astruct_s_share___work_buffer_html_a37fadfcd10d7fdef81760e27420d0228"><div class="ttname"><a href="../../dc/de5/struct_s_share___work_buffer.html#a37fadfcd10d7fdef81760e27420d0228">SShare_WorkBuffer::m_LogicPoint</a></div><div class="ttdeci">CLogicPoint m_LogicPoint</div><div class="ttdoc">カーソル位置</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:107</div></div>
+<div class="ttc" id="a_c_file_name_manager_8h_html"><div class="ttname"><a href="../../d4/da4/_c_file_name_manager_8h.html">CFileNameManager.h</a></div></div>
+<div class="ttc" id="a_c_tag_jump_manager_8h_html"><div class="ttname"><a href="../../d7/dee/_c_tag_jump_manager_8h.html">CTagJumpManager.h</a></div></div>
+<div class="ttc" id="astruct_s_share___flags_html"><div class="ttname"><a href="../../d1/d7b/struct_s_share___flags.html">SShare_Flags</a></div><div class="ttdoc">共有フラグ</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:82</div></div>
+<div class="ttc" id="astruct_s_type_config_mini_html"><div class="ttname"><a href="../../da/d8f/struct_s_type_config_mini.html">STypeConfigMini</a></div><div class="ttdoc">タイプ別設定(mini)</div><div class="ttdef"><b>Definition:</b> CType.h:264</div></div>
+<div class="ttc" id="a_common_setting_8h_html"><div class="ttname"><a href="../../d6/d06/_common_setting_8h.html">CommonSetting.h</a></div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_a56a39912e6440b967d3e51f601d388a4"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a56a39912e6440b967d3e51f601d388a4">DLLSHAREDATA::m_dwCustColors</a></div><div class="ttdeci">DWORD m_dwCustColors[16]</div><div class="ttdoc">フォントDialogカスタムパレット</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:146</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_aba014f7c8300b51386aca85c7c9607ba"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#aba014f7c8300b51386aca85c7c9607ba">DLLSHAREDATA::m_PlugCmdIcon</a></div><div class="ttdeci">short m_PlugCmdIcon[MAX_PLUGIN *MAX_PLUG_CMD]</div><div class="ttdoc">プラグイン コマンド ICON 番号 // 2010/7/3 Uchi</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:149</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_a71327add7dc95130c713d3d9949a86d7"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a71327add7dc95130c713d3d9949a86d7">DLLSHAREDATA::m_sCharWidth</a></div><div class="ttdeci">SCharWidthCache m_sCharWidth</div><div class="ttdoc">文字半角全角キャッシュ</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:145</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLogicPoint, CLogicInt &gt;</a></div></div>
+<div class="ttc" id="aclass_c_share_data_lock_counter_html"><div class="ttname"><a href="../../d4/d9d/class_c_share_data_lock_counter.html">CShareDataLockCounter</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:180</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_a753822103ad65e72d1dc8742f6fde8ab"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#a753822103ad65e72d1dc8742f6fde8ab">DLLSHAREDATA::m_maxTBNum</a></div><div class="ttdeci">int m_maxTBNum</div><div class="ttdoc">ツールバーボタン 最大値 // 2010/7/5 Uchi</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:150</div></div>
+<div class="ttc" id="astruct_s_share___tag_jump_html"><div class="ttname"><a href="../../dc/d17/struct_s_share___tag_jump.html">SShare_TagJump</a></div><div class="ttdef"><b>Definition:</b> CTagJumpManager.h:43</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="a_c_search_keyword_manager_8h_html"><div class="ttname"><a href="../../de/d0d/_c_search_keyword_manager_8h.html">CSearchKeywordManager.h</a></div></div>
+<div class="ttc" id="astruct_s_share___work_buffer_html"><div class="ttname"><a href="../../dc/de5/struct_s_share___work_buffer.html">SShare_WorkBuffer</a></div><div class="ttdoc">共有ワークバッファ</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:93</div></div>
+<div class="ttc" id="astruct_edit_info_html"><div class="ttname"><a href="../../dc/dba/struct_edit_info.html">EditInfo</a></div><div class="ttdef"><b>Definition:</b> EditInfo.h:42</div></div>
+<div class="ttc" id="a_c_app_node_manager_8h_html"><div class="ttname"><a href="../../d4/d33/_c_app_node_manager_8h.html">CAppNodeManager.h</a></div></div>
+<div class="ttc" id="astruct_s_char_width_cache_html"><div class="ttname"><a href="../../d7/db1/struct_s_char_width_cache.html">SCharWidthCache</a></div><div class="ttdef"><b>Definition:</b> charcode.h:322</div></div>
+<div class="ttc" id="amaxdata_8h_html_a4863e4bc6ccbeffb162dfa643df760f0aea6c4f416d0d7d1b5b0f8cf2ebb7cc88"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0aea6c4f416d0d7d1b5b0f8cf2ebb7cc88">MAX_PRINTSETTINGARR</a></div><div class="ttdeci">@ MAX_PRINTSETTINGARR</div><div class="ttdoc">印刷ページ設定</div><div class="ttdef"><b>Definition:</b> maxdata.h:43</div></div>
+<div class="ttc" id="a_edit_info_8h_html"><div class="ttname"><a href="../../d6/dbe/_edit_info_8h.html">EditInfo.h</a></div></div>
+<div class="ttc" id="astruct_s_share___handles_html"><div class="ttname"><a href="../../d9/df1/struct_s_share___handles.html">SShare_Handles</a></div><div class="ttdoc">共有ハンドル</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:112</div></div>
+<div class="ttc" id="amaxdata_8h_html_a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a></div><div class="ttdeci">@ MAX_TYPES</div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> maxdata.h:40</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html_ada3d589fae2b942dae601e2e79dc6834"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html#ada3d589fae2b942dae601e2e79dc6834">DLLSHAREDATA::m_nLockCount</a></div><div class="ttdeci">int m_nLockCount</div><div class="ttdoc">ロックカウント</div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:159</div></div>
+<div class="ttc" id="astruct_s_share___search_keywords_html"><div class="ttname"><a href="../../d1/d0f/struct_s_share___search_keywords.html">SShare_SearchKeywords</a></div><div class="ttdef"><b>Definition:</b> CSearchKeywordManager.h:34</div></div>
+<div class="ttc" id="astruct_s_share___file_name_management_html"><div class="ttname"><a href="../../da/de3/struct_s_share___file_name_management.html">SShare_FileNameManagement</a></div><div class="ttdef"><b>Definition:</b> CFileNameManager.h:48</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<div class="ttc" id="astruct_p_r_i_n_t_s_e_t_t_i_n_g_html"><div class="ttname"><a href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a></div><div class="ttdef"><b>Definition:</b> CPrint.h:85</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

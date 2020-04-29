@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CImpExpManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d3/db5/class_c_imp_exp_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CImpExpManager クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CImpExpManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dcc/class_c_imp_exp_manager.png" usemap="#CImpExpManager_map" alt=""/>
+  <map id="CImpExpManager_map" name="CImpExpManager_map">
+<area href="../../d4/d20/class_c_imp_exp_colors.html" alt="CImpExpColors" shape="rect" coords="131,56,252,80"/>
+<area href="../../dc/de3/class_c_imp_exp_cust_menu.html" alt="CImpExpCustMenu" shape="rect" coords="131,112,252,136"/>
+<area href="../../d1/d66/class_c_imp_exp_file_tree.html" alt="CImpExpFileTree" shape="rect" coords="131,168,252,192"/>
+<area href="../../d6/d67/class_c_imp_exp_keybind.html" alt="CImpExpKeybind" shape="rect" coords="131,224,252,248"/>
+<area href="../../d0/df5/class_c_imp_exp_key_help.html" alt="CImpExpKeyHelp" shape="rect" coords="131,280,252,304"/>
+<area href="../../d1/d26/class_c_imp_exp_key_word.html" alt="CImpExpKeyWord" shape="rect" coords="131,336,252,360"/>
+<area href="../../df/d25/class_c_imp_exp_main_menu.html" alt="CImpExpMainMenu" shape="rect" coords="131,392,252,416"/>
+<area href="../../d1/dc0/class_c_imp_exp_regex.html" alt="CImpExpRegex" shape="rect" coords="131,448,252,472"/>
+<area href="../../d1/da1/class_c_imp_exp_type.html" alt="CImpExpType" shape="rect" coords="131,504,252,528"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:afcb0cbdf3f52f8b808a03792702a06c8"><td class="memItemLeft" align="right" valign="top"><a id="afcb0cbdf3f52f8b808a03792702a06c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportUI</b> (HINSTANCE hInstance, HWND hwndParent)</td></tr>
+<tr class="separator:afcb0cbdf3f52f8b808a03792702a06c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01cce14e0d55c107fc1437dc996cd28"><td class="memItemLeft" align="right" valign="top"><a id="af01cce14e0d55c107fc1437dc996cd28"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExportUI</b> (HINSTANCE hInstance, HWND hwndParent)</td></tr>
+<tr class="separator:af01cce14e0d55c107fc1437dc996cd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78240a67d68610f7bb3a129d2cb04b0e"><td class="memItemLeft" align="right" valign="top"><a id="a78240a67d68610f7bb3a129d2cb04b0e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportAscertain</b> (HINSTANCE hInstance, HWND hwndParent, const wstring &amp;sFileName, wstring &amp;sErrMsg)</td></tr>
+<tr class="separator:a78240a67d68610f7bb3a129d2cb04b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45792df6cc120105e676490f2e631060"><td class="memItemLeft" align="right" valign="top"><a id="a45792df6cc120105e676490f2e631060"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Import</b> (const wstring &amp;sFileName, wstring &amp;sErrMsg)=0</td></tr>
+<tr class="separator:a45792df6cc120105e676490f2e631060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396f3e31b531e7a05fc82ae5df20e769"><td class="memItemLeft" align="right" valign="top"><a id="a396f3e31b531e7a05fc82ae5df20e769"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Export</b> (const wstring &amp;sFileName, wstring &amp;sErrMsg)=0</td></tr>
+<tr class="separator:a396f3e31b531e7a05fc82ae5df20e769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34f2f42892bc9ad7886596ec1c61de3"><td class="memItemLeft" align="right" valign="top"><a id="ae34f2f42892bc9ad7886596ec1c61de3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBaseName</b> (const wstring &amp;sBase)</td></tr>
+<tr class="separator:ae34f2f42892bc9ad7886596ec1c61de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c08e1696873b5a5b0031df0c060171"><td class="memItemLeft" align="right" valign="top"><a id="a91c08e1696873b5a5b0031df0c060171"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFullPath</b> ()</td></tr>
+<tr class="separator:a91c08e1696873b5a5b0031df0c060171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6f54b2f388e71ab3fe0e3830ad1c81"><td class="memItemLeft" align="right" valign="top"><a id="a0d6f54b2f388e71ab3fe0e3830ad1c81"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>MakeFullPath</b> (wstring sFileName)</td></tr>
+<tr class="separator:a0d6f54b2f388e71ab3fe0e3830ad1c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a092c6ac09e59acb71f6e78a3fec8cf"><td class="memItemLeft" align="right" valign="top"><a id="a5a092c6ac09e59acb71f6e78a3fec8cf"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetFileName</b> ()</td></tr>
+<tr class="separator:a5a092c6ac09e59acb71f6e78a3fec8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a483c366bd3eece5f42796149dc7a5731"><td class="memItemLeft" align="right" valign="top"><a id="a483c366bd3eece5f42796149dc7a5731"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetImportFolder</b> (const WCHAR *szPath)</td></tr>
+<tr class="separator:a483c366bd3eece5f42796149dc7a5731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469840a3ddc6bf91e49ba4820e4741e7"><td class="memItemLeft" align="right" valign="top"><a id="a469840a3ddc6bf91e49ba4820e4741e7"></a>
+virtual const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultExtension</b> ()</td></tr>
+<tr class="separator:a469840a3ddc6bf91e49ba4820e4741e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97728d542423beeed40b75b38e65bd0"><td class="memItemLeft" align="right" valign="top"><a id="ac97728d542423beeed40b75b38e65bd0"></a>
+virtual const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOriginExtension</b> ()</td></tr>
+<tr class="separator:ac97728d542423beeed40b75b38e65bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a91a596441fac7ec900aaec9ebf3f30de"><td class="memItemLeft" align="right" valign="top"><a id="a91a596441fac7ec900aaec9ebf3f30de"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sBase</b></td></tr>
+<tr class="separator:a91a596441fac7ec900aaec9ebf3f30de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bfe07b93f365b6dc34d40e7747341e7"><td class="memItemLeft" align="right" valign="top"><a id="a5bfe07b93f365b6dc34d40e7747341e7"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sOriginName</b></td></tr>
+<tr class="separator:a5bfe07b93f365b6dc34d40e7747341e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/typeprop/<a class="el" href="../../d5/dd7/_c_imp_exp_manager_8h_source.html">CImpExpManager.h</a></li>
+<li>sakura_core/typeprop/<a class="el" href="../../d0/da6/_c_imp_exp_manager_8cpp.html">CImpExpManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

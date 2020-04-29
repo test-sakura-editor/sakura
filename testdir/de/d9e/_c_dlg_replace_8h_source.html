@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/dlg/CDlgReplace.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_fe6e8cc90cbef61cb0c49f3c312a7f14.html">dlg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgReplace.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d9e/_c_dlg_replace_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2001, hor</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2002, hor</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2009, ryoji</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8d/_c_recent_8h.html">recent/CRecent.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/df1/window_8h.html">util/window.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/d8e/class_c_dlg_replace.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d8e/class_c_dlg_replace.html">CDlgReplace</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/d09/class_c_dialog.html">CDialog</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d0/d8e/class_c_dlg_replace.html">CDlgReplace</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    HWND DoModeless(HINSTANCE hInstance, HWND hwndParent, LPARAM lParam, BOOL bSelected);   <span class="comment">/* モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> ChangeView(LPARAM pcEditView); <span class="comment">/* モードレス時：置換・検索対象となるビューの変更 */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d2/d18/struct_s_search_option.html">SSearchOption</a>   m_sSearchOption;    <span class="comment">// 検索オプション</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span>             m_bConsecutiveAll;  <span class="comment">/* 「すべて置換」は置換の繰返し */</span>  <span class="comment">// 2007.01.16 ryoji</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::wstring    m_strText;  <span class="comment">// 検索文字列</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::wstring    m_strText2; <span class="comment">// 置換後文字列</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span>             m_nReplaceKeySequence;  <span class="comment">//置換後シーケンス</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    BOOL            m_bSelectedArea;    <span class="comment">/* 選択範囲内置換 */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span>             m_bNOTIFYNOTFOUND;              <span class="comment">/* 検索／置換  見つからないときメッセージを表示 */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    BOOL            m_bSelected;    <span class="comment">/* テキスト選択中か */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span>             m_nReplaceTarget;   <span class="comment">/* 置換対象 */</span>  <span class="comment">// 2001.12.03 hor</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span>             m_nPaste;           <span class="comment">/* 貼り付け？ */</span>    <span class="comment">// 2001.12.03 hor</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span>             m_nReplaceCnt;      <span class="comment">//すべて置換の実行結果      // 2002.02.08 hor</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span>            m_bCanceled;        <span class="comment">//すべて置換で中断したか    // 2002.02.08 hor</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d4/dce/class_c_strict_point.html">CLogicPoint</a>     m_ptEscCaretPos_PHY;    <span class="comment">// 検索/置換開始時のカーソル位置退避エリア</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a>           m_cRecentSearch;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelText;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../de/dd1/class_c_recent_replace.html">CRecentReplace</a>          m_cRecentReplace;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a>    m_comboDelText2;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a>        m_cFontText;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a>        m_cFontText2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    ||  実装ヘルパ関数</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    BOOL <a class="code" href="../../d0/d8e/class_c_dlg_replace.html#a85f49db06a1a304977fc71add7462a43">OnCbnDropDown</a>( HWND hwndCtl, <span class="keywordtype">int</span> wID ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    BOOL OnInitDialog(HWND hwndDlg, WPARAM wParam, LPARAM lParam) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    BOOL OnDestroy() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    BOOL OnBnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    BOOL OnActivate( WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;   <span class="comment">// 2009.11.29 ryoji</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    LPVOID GetHelpIdTable(<span class="keywordtype">void</span>) <span class="keyword">override</span>;   <span class="comment">//@@@ 2002.01.18 add</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> SetData( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;      <span class="comment">/* ダイアログデータの設定 */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> SetCombosList( <span class="keywordtype">void</span> ); <span class="comment">/* 検索文字列/置換後文字列リストの設定 */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> GetData( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;       <span class="comment">/* ダイアログデータの取得 */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_dlg_replace_html"><div class="ttname"><a href="../../d0/d8e/class_c_dlg_replace.html">CDlgReplace</a></div><div class="ttdoc">置換ダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgReplace.h:31</div></div>
+<div class="ttc" id="aclass_c_dlg_replace_html_a85f49db06a1a304977fc71add7462a43"><div class="ttname"><a href="../../d0/d8e/class_c_dlg_replace.html#a85f49db06a1a304977fc71add7462a43">CDlgReplace::OnCbnDropDown</a></div><div class="ttdeci">BOOL OnCbnDropDown(HWND hwndCtl, int wID) override</div><div class="ttdef"><b>Definition:</b> CDlgReplace.cpp:74</div></div>
+<div class="ttc" id="astruct_s_combo_box_item_deleter_html"><div class="ttname"><a href="../../d6/d87/struct_s_combo_box_item_deleter.html">SComboBoxItemDeleter</a></div><div class="ttdef"><b>Definition:</b> CDialog.h:53</div></div>
+<div class="ttc" id="aclass_c_font_auto_deleter_html"><div class="ttname"><a href="../../d2/d13/class_c_font_auto_deleter.html">CFontAutoDeleter</a></div><div class="ttdef"><b>Definition:</b> window.h:153</div></div>
+<div class="ttc" id="a_c_recent_8h_html"><div class="ttname"><a href="../../d0/d8d/_c_recent_8h.html">CRecent.h</a></div><div class="ttdoc">最近使ったリスト</div></div>
+<div class="ttc" id="astruct_s_search_option_html"><div class="ttname"><a href="../../d2/d18/struct_s_search_option.html">SSearchOption</a></div><div class="ttdef"><b>Definition:</b> global.h:150</div></div>
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_recent_search_html"><div class="ttname"><a href="../../d2/df2/class_c_recent_search.html">CRecentSearch</a></div><div class="ttdoc">検索の履歴を管理 (RECENT_FOR_SEARCH)</div><div class="ttdef"><b>Definition:</b> CRecentSearch.h:33</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLogicPoint, CLogicInt &gt;</a></div></div>
+<div class="ttc" id="aclass_c_dialog_html"><div class="ttname"><a href="../../dd/d09/class_c_dialog.html">CDialog</a></div><div class="ttdoc">ダイアログウィンドウを扱うクラス</div><div class="ttdef"><b>Definition:</b> CDialog.h:73</div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="../../d3/df1/window_8h.html">window.h</a></div></div>
+<div class="ttc" id="aclass_c_recent_replace_html"><div class="ttname"><a href="../../de/dd1/class_c_recent_replace.html">CRecentReplace</a></div><div class="ttdoc">置換の履歴を管理 (RECENT_FOR_REPLACE)</div><div class="ttdef"><b>Definition:</b> CRecentReplace.h:33</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

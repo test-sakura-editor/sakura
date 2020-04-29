@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/extmodule/CBregexp.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2ec910363d65229279bd9bee590782c4.html">extmodule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CBregexp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/dbf/_c_bregexp_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2001-2002, genta</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2001, novice, hor</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Copyright (C) 2002, novice, hor, Azumaiya</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    Copyright (C) 2003, かろと</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Copyright (C) 2005, かろと, aroka</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    Copyright (C) 2006, かろと</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d90/_c_bregexp_dll2_8h.html">CBregexpDll2.h</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html">   64</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a> : <span class="keyword">public</span> <a class="code" href="../../d4/dc5/class_c_bregexp_dll2.html">CBregexpDll2</a>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// 2006.01.22 かろと オプション追加・名称変更</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904">   70</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904">Option</a> {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a9f45244dcc5e08d0553e539fc07bcc41">   71</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a9f45244dcc5e08d0553e539fc07bcc41">optNothing</a> = 0,                 </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a68847096d894854cf641d3232e1084c9">   72</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a68847096d894854cf641d3232e1084c9">optCaseSensitive</a> = 1,           </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a748685806d2bd5bb38558b89f586bd7f">   73</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a748685806d2bd5bb38558b89f586bd7f">optGlobal</a> = 2,                  </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a201f1758832ce510c3b02a528a689fac">   74</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a201f1758832ce510c3b02a528a689fac">optExtend</a> = 4,                  </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904ab22f64d027339dd5afca4d7d38a7be53">   75</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904ab22f64d027339dd5afca4d7d38a7be53">optASCII</a> = 8,                   </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a91f4445857b10e05287639de368ff135">   76</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a91f4445857b10e05287639de368ff135">optUnicode</a> = 0x10,              </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904af1658ea6030d748f4ff3935e29a1d2fc">   77</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904af1658ea6030d748f4ff3935e29a1d2fc">optDefault</a> = 0x20,              </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a05c080e985c436a57b492f086dbfb2fe">   78</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a05c080e985c436a57b492f086dbfb2fe">optLocale</a> = 0x40,               </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a434a88b3a1c6062f61f648706eec9799">   79</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a434a88b3a1c6062f61f648706eec9799">optR</a> = 0x80,                    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5ee">   82</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5ee">Pattern</a> {</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea4731027d0ab52a13659abfc8627bba26">   83</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea4731027d0ab52a13659abfc8627bba26">PAT_UNKNOWN</a> = 0,        </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea06063841ac0ab912df289fa2069f0af1">   84</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea06063841ac0ab912df289fa2069f0af1">PAT_NORMAL</a> = 1,         </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeabf5981ee9c267c911ae0761c17ccebf7">   85</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeabf5981ee9c267c911ae0761c17ccebf7">PAT_TOP</a> = 2,            </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea6215bc3a23454e939ee913d29f771f58">   86</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea6215bc3a23454e939ee913d29f771f58">PAT_BOTTOM</a> = 4,         </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeaea84eb6a118987dfe3349813d4129c79">   87</a></span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeaea84eb6a118987dfe3349813d4129c79">PAT_TAB</a> = 8,            </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea831ffe6ec2869fe9abef4f71683ab3b0">PAT_LOOKAHEAD</a> = 16      </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea831ffe6ec2869fe9abef4f71683ab3b0">   89</a></span>&#160;    };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#a78c73ebf1a07ed9e8456232bbe15a411">   92</a></span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../d7/da1/class_c_bregexp.html#a78c73ebf1a07ed9e8456232bbe15a411">GetVersionW</a>() noexcept { <span class="keywordflow">return</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a>() ? BRegexpVersion() : L<span class="stringliteral">&quot;&quot;</span>; }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//  CJreエミュレーション関数</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span>    <span class="comment">// 2002/01/19 novice 正規表現による文字列置換</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// 2002.01.26 hor    置換後文字列を別引数に</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// 2002.02.01 hor    大文字小文字を無視するオプション追加</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//&gt;&gt; 2002/03/27 Azumaiya 正規表現置換にコンパイル関数を使う形式を追加</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#a8dae350d76462abf513049ae2da475a4">  100</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a8dae350d76462abf513049ae2da475a4">Compile</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *szPattern, <span class="keywordtype">int</span> nOption = 0) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a8dae350d76462abf513049ae2da475a4">Compile</a>(szPattern, NULL, nOption);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a8dae350d76462abf513049ae2da475a4">Compile</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *szPattern0, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *szPattern1, <span class="keywordtype">int</span> nOption = 0, <span class="keywordtype">bool</span> bKakomi = <span class="keyword">false</span>);  </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a736dd9f76e44c5e4097d30bad9aa0f88">Match</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *szTarget, <span class="keywordtype">int</span> nLen, <span class="keywordtype">int</span> nStart = 0);                      </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a2d514d00971cd5781c5d827118c9549b">Replace</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *szTarget, <span class="keywordtype">int</span> nLen, <span class="keywordtype">int</span> nStart = 0);                 </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//-----------------------------------------</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// 2005.03.19 かろと クラス内部を隠蔽</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ae8c314257e28eb852abe95e4ae423150">  116</a></span>&#160;<span class="comment"></span>    CLogicInt <a class="code" href="../../d7/da1/class_c_bregexp.html#ae8c314257e28eb852abe95e4ae423150">GetIndex</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> CLogicInt(m_pRegExp-&gt;startp[0] - m_szTarget);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ac67aec565966fb848424f47affc145b9">  124</a></span>&#160;    CLogicInt <a class="code" href="../../d7/da1/class_c_bregexp.html#ac67aec565966fb848424f47affc145b9">GetLastIndex</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> CLogicInt(m_pRegExp-&gt;endp[0] - m_szTarget);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#a98e29be68bbfaad4d1ed34f3a6bcc44a">  132</a></span>&#160;    CLogicInt <a class="code" href="../../d7/da1/class_c_bregexp.html#a98e29be68bbfaad4d1ed34f3a6bcc44a">GetMatchLen</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> CLogicInt(m_pRegExp-&gt;endp[0] - m_pRegExp-&gt;startp[0]);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#aa44e24436575a0cf4d9ff6b726808e38">  140</a></span>&#160;    CLogicInt <a class="code" href="../../d7/da1/class_c_bregexp.html#aa44e24436575a0cf4d9ff6b726808e38">GetStringLen</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">// 置換後文字列が０幅なら outp、outendpもNULLになる</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">// NULLポインタの引き算は問題なく０になる。</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// outendpは &#39;\0&#39;なので、文字列長は +1不要</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// Jun. 03, 2005 Karoto</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">//  置換後文字列が0幅の場合にoutpがNULLでもoutendpがNULLでない場合があるので，</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//  outpのNULLチェックが必要</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span> (m_pRegExp-&gt;outp == NULL) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">return</span> CLogicInt(0);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">return</span> CLogicInt(m_pRegExp-&gt;outendp - m_pRegExp-&gt;outp);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#a2a14f100b17f6715862290fb09f96e87">  159</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *<a class="code" href="../../d7/da1/class_c_bregexp.html#a2a14f100b17f6715862290fb09f96e87">GetString</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> m_pRegExp-&gt;outp;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//-----------------------------------------</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../d7/da1/class_c_bregexp.html#af4a371f86bf5d69d0f20b3a0c0ddaad2">GetLastMessage</a>() <span class="keyword">const</span>;<span class="comment">// { return m_szMsg; }</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#ac55ae7b8fa3a4e4969d0993a31405440">  176</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#ac55ae7b8fa3a4e4969d0993a31405440">IsLookAhead</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> m_ePatType &amp; <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea831ffe6ec2869fe9abef4f71683ab3b0">PAT_LOOKAHEAD</a> ? true : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#aac38915bbc07cc99fa0c6ceec6efa665">  184</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#aac38915bbc07cc99fa0c6ceec6efa665">IsLookAhead</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *pattern) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        CheckPattern(pattern);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#ac55ae7b8fa3a4e4969d0993a31405440">IsLookAhead</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="../../d7/da1/class_c_bregexp.html#a2d8f5a3186cfbe1e9eca8067be8d9cde">  196</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/da1/class_c_bregexp.html#a2d8f5a3186cfbe1e9eca8067be8d9cde">ReleaseCompileBuffer</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span>( m_pRegExp ){</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            BRegfree( m_pRegExp );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            m_pRegExp = NULL;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        m_ePatType = <a class="code" href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea4731027d0ab52a13659abfc8627bba26">PAT_UNKNOWN</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">//  内部関数</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">int</span> CheckPattern( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern );</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">wchar_t</span>* MakePatternSub( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern2, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szAdd2, <span class="keywordtype">int</span> nOption );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">wchar_t</span>* MakePattern( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern2, <span class="keywordtype">int</span> nOption );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">wchar_t</span>* MakePatternAlternate( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <span class="keyword">const</span> szSearch, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <span class="keyword">const</span> szReplace, <span class="keywordtype">int</span> nOption );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">//  メンバ変数</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../db/d44/structbregexp.html">BREGEXP_W</a>*          m_pRegExp;          </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">int</span>                 m_ePatType;         </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*      m_szTarget;         </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">wchar_t</span>             m_szMsg[80];        </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">// 静的メンバ変数</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>    m_tmpBuf[2];    </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">//  Jun. 26, 2001 genta</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="../../d8/dbf/_c_bregexp_8h.html#a5729e556c1095012c2d5aef8b7390771">CheckRegexpVersion</a>( HWND hWnd, <span class="keywordtype">int</span> nCmpId, <span class="keywordtype">bool</span> bShowMsg = <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d8/dbf/_c_bregexp_8h.html#aac1ff21bbf97b43ab7f5ab668b2384ce">CheckRegexpSyntax</a>( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* szPattern, HWND hWnd, <span class="keywordtype">bool</span> bShowMessage, <span class="keywordtype">int</span> nOption = -1, <span class="keywordtype">bool</span> bKakomi = <span class="keyword">false</span> );<span class="comment">// 2002/2/1 hor追加</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d8/dbf/_c_bregexp_8h.html#a0aa6543eaa2892b0b835bb1910b81e10">InitRegexp</a>( HWND hWnd, <a class="code" href="../../d7/da1/class_c_bregexp.html">CBregexp</a>&amp; rRegexp, <span class="keywordtype">bool</span> bShowMessage );</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a05c080e985c436a57b492f086dbfb2fe"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a05c080e985c436a57b492f086dbfb2fe">CBregexp::optLocale</a></div><div class="ttdeci">@ optLocale</div><div class="ttdoc">Locale(/l)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:78</div></div>
+<div class="ttc" id="a_c_bregexp_8h_html_aac1ff21bbf97b43ab7f5ab668b2384ce"><div class="ttname"><a href="../../d8/dbf/_c_bregexp_8h.html#aac1ff21bbf97b43ab7f5ab668b2384ce">CheckRegexpSyntax</a></div><div class="ttdeci">bool CheckRegexpSyntax(const wchar_t *szPattern, HWND hWnd, bool bShowMessage, int nOption=-1, bool bKakomi=false)</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:657</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eea4731027d0ab52a13659abfc8627bba26"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea4731027d0ab52a13659abfc8627bba26">CBregexp::PAT_UNKNOWN</a></div><div class="ttdeci">@ PAT_UNKNOWN</div><div class="ttdoc">不明（初期値)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:83</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a2a14f100b17f6715862290fb09f96e87"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a2a14f100b17f6715862290fb09f96e87">CBregexp::GetString</a></div><div class="ttdeci">const wchar_t * GetString(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:159</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a91f4445857b10e05287639de368ff135"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a91f4445857b10e05287639de368ff135">CBregexp::optUnicode</a></div><div class="ttdeci">@ optUnicode</div><div class="ttdoc">Unicode(/u)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:76</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ac67aec565966fb848424f47affc145b9"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ac67aec565966fb848424f47affc145b9">CBregexp::GetLastIndex</a></div><div class="ttdeci">CLogicInt GetLastIndex(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:124</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_af4a371f86bf5d69d0f20b3a0c0ddaad2"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#af4a371f86bf5d69d0f20b3a0c0ddaad2">CBregexp::GetLastMessage</a></div><div class="ttdeci">const WCHAR * GetLastMessage() const</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:571</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904">CBregexp::Option</a></div><div class="ttdeci">Option</div><div class="ttdef"><b>Definition:</b> CBregexp.h:70</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ac55ae7b8fa3a4e4969d0993a31405440"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ac55ae7b8fa3a4e4969d0993a31405440">CBregexp::IsLookAhead</a></div><div class="ttdeci">bool IsLookAhead(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:176</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eea6215bc3a23454e939ee913d29f771f58"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea6215bc3a23454e939ee913d29f771f58">CBregexp::PAT_BOTTOM</a></div><div class="ttdeci">@ PAT_BOTTOM</div><div class="ttdoc">行末&quot;$&quot;</div><div class="ttdef"><b>Definition:</b> CBregexp.h:86</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a68847096d894854cf641d3232e1084c9"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a68847096d894854cf641d3232e1084c9">CBregexp::optCaseSensitive</a></div><div class="ttdeci">@ optCaseSensitive</div><div class="ttdoc">大文字小文字区別オプション(/iをつけない)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:72</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a2d514d00971cd5781c5d827118c9549b"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a2d514d00971cd5781c5d827118c9549b">CBregexp::Replace</a></div><div class="ttdeci">int Replace(const wchar_t *szTarget, int nLen, int nStart=0)</div><div class="ttdoc">置換を実行する // 2007.01.16 ryoji 戻り値を置換個数に変更</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:527</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ae8c314257e28eb852abe95e4ae423150"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ae8c314257e28eb852abe95e4ae423150">CBregexp::GetIndex</a></div><div class="ttdeci">CLogicInt GetIndex(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:116</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eea831ffe6ec2869fe9abef4f71683ab3b0"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea831ffe6ec2869fe9abef4f71683ab3b0">CBregexp::PAT_LOOKAHEAD</a></div><div class="ttdeci">@ PAT_LOOKAHEAD</div><div class="ttdoc">先読み&quot;(?[=]&quot;</div><div class="ttdef"><b>Definition:</b> CBregexp.h:88</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eeabf5981ee9c267c911ae0761c17ccebf7"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeabf5981ee9c267c911ae0761c17ccebf7">CBregexp::PAT_TOP</a></div><div class="ttdeci">@ PAT_TOP</div><div class="ttdoc">行頭&quot;^&quot;</div><div class="ttdef"><b>Definition:</b> CBregexp.h:85</div></div>
+<div class="ttc" id="astructbregexp_html"><div class="ttname"><a href="../../db/d44/structbregexp.html">bregexp</a></div><div class="ttdef"><b>Definition:</b> CBregexpDll2.h:29</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a201f1758832ce510c3b02a528a689fac"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a201f1758832ce510c3b02a528a689fac">CBregexp::optExtend</a></div><div class="ttdeci">@ optExtend</div><div class="ttdoc">拡張正規表現(/x)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:74</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a78c73ebf1a07ed9e8456232bbe15a411"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a78c73ebf1a07ed9e8456232bbe15a411">CBregexp::GetVersionW</a></div><div class="ttdeci">const WCHAR * GetVersionW() noexcept</div><div class="ttdoc">DLLのバージョン情報を取得</div><div class="ttdef"><b>Definition:</b> CBregexp.h:92</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a8dae350d76462abf513049ae2da475a4"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a8dae350d76462abf513049ae2da475a4">CBregexp::Compile</a></div><div class="ttdeci">bool Compile(const wchar_t *szPattern, int nOption=0)</div><div class="ttdoc">検索パターンのコンパイル</div><div class="ttdef"><b>Definition:</b> CBregexp.h:100</div></div>
+<div class="ttc" id="a_c_bregexp_8h_html_a0aa6543eaa2892b0b835bb1910b81e10"><div class="ttname"><a href="../../d8/dbf/_c_bregexp_8h.html#a0aa6543eaa2892b0b835bb1910b81e10">InitRegexp</a></div><div class="ttdeci">bool InitRegexp(HWND hWnd, CBregexp &amp;rRegexp, bool bShowMessage)</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:586</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904ab22f64d027339dd5afca4d7d38a7be53"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904ab22f64d027339dd5afca4d7d38a7be53">CBregexp::optASCII</a></div><div class="ttdeci">@ optASCII</div><div class="ttdoc">ASCII(/a)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:75</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a2d8f5a3186cfbe1e9eca8067be8d9cde"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a2d8f5a3186cfbe1e9eca8067be8d9cde">CBregexp::ReleaseCompileBuffer</a></div><div class="ttdeci">void ReleaseCompileBuffer(void)</div><div class="ttdoc">コンパイルバッファを解放する</div><div class="ttdef"><b>Definition:</b> CBregexp.h:196</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a736dd9f76e44c5e4097d30bad9aa0f88"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a736dd9f76e44c5e4097d30bad9aa0f88">CBregexp::Match</a></div><div class="ttdeci">bool Match(const wchar_t *szTarget, int nLen, int nStart=0)</div><div class="ttdoc">検索を実行する</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:473</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904af1658ea6030d748f4ff3935e29a1d2fc"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904af1658ea6030d748f4ff3935e29a1d2fc">CBregexp::optDefault</a></div><div class="ttdeci">@ optDefault</div><div class="ttdoc">Default(/d)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:77</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_aa44e24436575a0cf4d9ff6b726808e38"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#aa44e24436575a0cf4d9ff6b726808e38">CBregexp::GetStringLen</a></div><div class="ttdeci">CLogicInt GetStringLen(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:140</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eea06063841ac0ab912df289fa2069f0af1"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eea06063841ac0ab912df289fa2069f0af1">CBregexp::PAT_NORMAL</a></div><div class="ttdeci">@ PAT_NORMAL</div><div class="ttdoc">通常</div><div class="ttdef"><b>Definition:</b> CBregexp.h:84</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a89601f2b3b9578c93a7d4b8d3368a1e8"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">CDllImp::IsAvailable</a></div><div class="ttdeci">virtual bool IsAvailable() const</div><div class="ttdoc">DLLの関数を呼び出せるか状態どうか</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:114</div></div>
+<div class="ttc" id="a_c_bregexp_8h_html_a5729e556c1095012c2d5aef8b7390771"><div class="ttname"><a href="../../d8/dbf/_c_bregexp_8h.html#a5729e556c1095012c2d5aef8b7390771">CheckRegexpVersion</a></div><div class="ttdeci">bool CheckRegexpVersion(HWND hWnd, int nCmpId, bool bShowMsg=false)</div><div class="ttdoc">正規表現ライブラリのバージョン取得</div><div class="ttdef"><b>Definition:</b> CBregexp.cpp:626</div></div>
+<div class="ttc" id="a_c_bregexp_dll2_8h_html"><div class="ttname"><a href="../../d0/d90/_c_bregexp_dll2_8h.html">CBregexpDll2.h</a></div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a434a88b3a1c6062f61f648706eec9799"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a434a88b3a1c6062f61f648706eec9799">CBregexp::optR</a></div><div class="ttdeci">@ optR</div><div class="ttdoc">CRLF(/R)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:79</div></div>
+<div class="ttc" id="aclass_c_bregexp_html"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html">CBregexp</a></div><div class="ttdoc">Perl互換正規表現 BREGEXP.DLL をサポートするクラス</div><div class="ttdef"><b>Definition:</b> CBregexp.h:64</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a9f45244dcc5e08d0553e539fc07bcc41"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a9f45244dcc5e08d0553e539fc07bcc41">CBregexp::optNothing</a></div><div class="ttdeci">@ optNothing</div><div class="ttdoc">オプションなし</div><div class="ttdef"><b>Definition:</b> CBregexp.h:71</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_acd5091cc535f3c2e98a26000121ef904a748685806d2bd5bb38558b89f586bd7f"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#acd5091cc535f3c2e98a26000121ef904a748685806d2bd5bb38558b89f586bd7f">CBregexp::optGlobal</a></div><div class="ttdeci">@ optGlobal</div><div class="ttdoc">全域オプション(/g)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:73</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_a98e29be68bbfaad4d1ed34f3a6bcc44a"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#a98e29be68bbfaad4d1ed34f3a6bcc44a">CBregexp::GetMatchLen</a></div><div class="ttdeci">CLogicInt GetMatchLen(void)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:132</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_aac38915bbc07cc99fa0c6ceec6efa665"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#aac38915bbc07cc99fa0c6ceec6efa665">CBregexp::IsLookAhead</a></div><div class="ttdeci">bool IsLookAhead(const wchar_t *pattern)</div><div class="ttdef"><b>Definition:</b> CBregexp.h:184</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5ee"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5ee">CBregexp::Pattern</a></div><div class="ttdeci">Pattern</div><div class="ttdoc">検索パターン定義</div><div class="ttdef"><b>Definition:</b> CBregexp.h:82</div></div>
+<div class="ttc" id="aclass_c_bregexp_html_ad12022c28c394028e069cfe40a1cc5eeaea84eb6a118987dfe3349813d4129c79"><div class="ttname"><a href="../../d7/da1/class_c_bregexp.html#ad12022c28c394028e069cfe40a1cc5eeaea84eb6a118987dfe3349813d4129c79">CBregexp::PAT_TAB</a></div><div class="ttdeci">@ PAT_TAB</div><div class="ttdoc">行頭行末&quot;^$&quot;</div><div class="ttdef"><b>Definition:</b> CBregexp.h:87</div></div>
+<div class="ttc" id="aclass_c_bregexp_dll2_html"><div class="ttname"><a href="../../d4/dc5/class_c_bregexp_dll2.html">CBregexpDll2</a></div><div class="ttdoc">BREGONIG.DLLをラップしたもの。</div><div class="ttdef"><b>Definition:</b> CBregexpDll2.h:45</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

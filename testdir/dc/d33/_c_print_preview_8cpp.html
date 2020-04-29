@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/print/CPrintPreview.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_927ee261bd1486ce26f4f8a9375170b5.html">print</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">CPrintPreview.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>印刷プレビュー管理クラス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d65/_c_print_preview_8h_source.html">CPrintPreview.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/de5/_hand_cursor_8h_source.html">uiparts/HandCursor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d5f/_c_layout_8h_source.html">doc/layout/CLayout.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d14/_c_edit_wnd_8h_source.html">window/CEditWnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d0b/_c_dlg_cancel_8h_source.html">dlg/CDlgCancel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d3a/_c_dlg_input1_8h_source.html">dlg/CDlgInput1.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d51/_c_graphics_8h_source.html">uiparts/CGraphics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de2/_c_sakura_environment_8h_source.html">env/CSakuraEnvironment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d82/_c_color_strategy_8h_source.html">view/colors/CColorStrategy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a6750cc387f7bb923b9e2df688f765bac"><td class="memItemLeft" align="right" valign="top"><a id="a6750cc387f7bb923b9e2df688f765bac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_PREVIEW_ZOOM</b>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a6750cc387f7bb923b9e2df688f765bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa463a17d61aea2fc9a921a0f38091b6e"><td class="memItemLeft" align="right" valign="top"><a id="aa463a17d61aea2fc9a921a0f38091b6e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_PREVIEW_ZOOM</b>&#160;&#160;&#160;400</td></tr>
+<tr class="separator:aa463a17d61aea2fc9a921a0f38091b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7ae8153e4ac557ce2dec0e7f2e8f97"><td class="memItemLeft" align="right" valign="top"><a id="a4e7ae8153e4ac557ce2dec0e7f2e8f97"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LINE_RANGE_X</b>&#160;&#160;&#160;48		/* 水平方向の１回のスクロール幅 */</td></tr>
+<tr class="separator:a4e7ae8153e4ac557ce2dec0e7f2e8f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160ef3de8b5de3c6f0ae489102c53c9b"><td class="memItemLeft" align="right" valign="top"><a id="a160ef3de8b5de3c6f0ae489102c53c9b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LINE_RANGE_Y</b>&#160;&#160;&#160;24		/* 垂直方向の１回のスクロール幅 */</td></tr>
+<tr class="separator:a160ef3de8b5de3c6f0ae489102c53c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee1fe9abede33747721402ae6526e78"><td class="memItemLeft" align="right" valign="top"><a id="a9ee1fe9abede33747721402ae6526e78"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_RANGE_X</b>&#160;&#160;&#160;160		/* 水平方向の１回のページスクロール幅 */</td></tr>
+<tr class="separator:a9ee1fe9abede33747721402ae6526e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dce8f8f526d7560326a96f666ecf07e"><td class="memItemLeft" align="right" valign="top"><a id="a7dce8f8f526d7560326a96f666ecf07e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_RANGE_Y</b>&#160;&#160;&#160;160		/* 垂直方向の１回のページスクロール幅 */</td></tr>
+<tr class="separator:a7dce8f8f526d7560326a96f666ecf07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac410107b8c5ea6b10a162472be2c18f1"><td class="memItemLeft" align="right" valign="top"><a id="ac410107b8c5ea6b10a162472be2c18f1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COMPAT_BMP_BASE</b>&#160;&#160;&#160;1   /* COMPAT_BMP_SCALEピクセル幅を複写する画面ピクセル幅 */</td></tr>
+<tr class="separator:ac410107b8c5ea6b10a162472be2c18f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2add04d9f657443abb50e5271ff88e4a"><td class="memItemLeft" align="right" valign="top"><a id="a2add04d9f657443abb50e5271ff88e4a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COMPAT_BMP_SCALE</b>&#160;&#160;&#160;2   /* 互換BMPのCOMPAT_BMP_BASEに対する倍率(1以上の整数倍) */</td></tr>
+<tr class="separator:a2add04d9f657443abb50e5271ff88e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>印刷プレビュー管理クラス </p>
+<dl class="section author"><dt>著者</dt><dd>YAZAKI </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2002/1/11 新規作成 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/apiwrap/StdControl.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_91e391275ce155d63b5eb01c4bf28a00.html">apiwrap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">StdControl.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;Commctrl.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d38/_c_native_w_8h_source.html">mem/CNativeW.h</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div>
+<p><a href="../../d3/d4a/_std_control_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5498b48140567707138203172491a66f"><td class="memItemLeft" align="right" valign="top"><a id="a5498b48140567707138203172491a66f"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Wnd_SetText</b> (HWND hwnd, const WCHAR *str)</td></tr>
+<tr class="separator:a5498b48140567707138203172491a66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7ad11faacb67ee75b1faa8b272f8bf"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/_std_control_8h.html#acc7ad11faacb67ee75b1faa8b272f8bf">ApiWrap::Wnd_SetText</a> (HWND hwnd, const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;str)</td></tr>
+<tr class="memdesc:acc7ad11faacb67ee75b1faa8b272f8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window テキストを設定する  <a href="../../d3/d4a/_std_control_8h.html#acc7ad11faacb67ee75b1faa8b272f8bf">[詳解]</a><br /></td></tr>
+<tr class="separator:acc7ad11faacb67ee75b1faa8b272f8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd07f162fec2dcac649c82dcd9c0477"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/_std_control_8h.html#a2bd07f162fec2dcac649c82dcd9c0477">ApiWrap::Wnd_GetText</a> (HWND hwnd, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;str)</td></tr>
+<tr class="memdesc:a2bd07f162fec2dcac649c82dcd9c0477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window テキストを取得する  <a href="../../d3/d4a/_std_control_8h.html#a2bd07f162fec2dcac649c82dcd9c0477">[詳解]</a><br /></td></tr>
+<tr class="separator:a2bd07f162fec2dcac649c82dcd9c0477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279353ed7b5b8943c31905e79c80a01b"><td class="memItemLeft" align="right" valign="top"><a id="a279353ed7b5b8943c31905e79c80a01b"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_AddString</b> (HWND hwndCombo, const WCHAR *str)</td></tr>
+<tr class="separator:a279353ed7b5b8943c31905e79c80a01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630ec354ffb6b395350ee5eb316212f7"><td class="memItemLeft" align="right" valign="top"><a id="a630ec354ffb6b395350ee5eb316212f7"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetLBText</b> (HWND hwndCombo, int nIndex, WCHAR *str)</td></tr>
+<tr class="separator:a630ec354ffb6b395350ee5eb316212f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755409dd471cc94a6f61d0ae6382b9b5"><td class="memItemLeft" align="right" valign="top"><a id="a755409dd471cc94a6f61d0ae6382b9b5"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetText</b> (HWND hwndCombo, WCHAR *str, int cchMax)</td></tr>
+<tr class="separator:a755409dd471cc94a6f61d0ae6382b9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0971da5a6a8030f512ea2f71d580da2"><td class="memItemLeft" align="right" valign="top"><a id="aa0971da5a6a8030f512ea2f71d580da2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_DeleteString</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:aa0971da5a6a8030f512ea2f71d580da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59141b57eef100796dc86277d091fc25"><td class="memItemLeft" align="right" valign="top"><a id="a59141b57eef100796dc86277d091fc25"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_FindStringExact</b> (HWND hwndCtl, int indexStart, const WCHAR *lpszFind)</td></tr>
+<tr class="separator:a59141b57eef100796dc86277d091fc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2f3651a508a4743fe268b54c3df01c"><td class="memItemLeft" align="right" valign="top"><a id="ade2f3651a508a4743fe268b54c3df01c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetCount</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:ade2f3651a508a4743fe268b54c3df01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace05a2bfcde7a916601263706cc6531a"><td class="memItemLeft" align="right" valign="top"><a id="ace05a2bfcde7a916601263706cc6531a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetCurSel</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:ace05a2bfcde7a916601263706cc6531a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa917248e2e4db9375288feac9591d04b"><td class="memItemLeft" align="right" valign="top"><a id="aa917248e2e4db9375288feac9591d04b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetCurSel</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:aa917248e2e4db9375288feac9591d04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10109dd24eb23047efbd8152f03d71d0"><td class="memItemLeft" align="right" valign="top"><a id="a10109dd24eb23047efbd8152f03d71d0"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetItemData</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:a10109dd24eb23047efbd8152f03d71d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6533f9848af7ab5247503eb63971634b"><td class="memItemLeft" align="right" valign="top"><a id="a6533f9848af7ab5247503eb63971634b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetItemData</b> (HWND hwndCtl, int index, int data)</td></tr>
+<tr class="separator:a6533f9848af7ab5247503eb63971634b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7f160aacb375c04f7f0c4d0bf32109"><td class="memItemLeft" align="right" valign="top"><a id="a9d7f160aacb375c04f7f0c4d0bf32109"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetItemData</b> (HWND hwndCtl, int index, void *data)</td></tr>
+<tr class="separator:a9d7f160aacb375c04f7f0c4d0bf32109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac193e550e56b50db2d1b48af0ff40f2d"><td class="memItemLeft" align="right" valign="top"><a id="ac193e550e56b50db2d1b48af0ff40f2d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetLBTextLen</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:ac193e550e56b50db2d1b48af0ff40f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0427bd27c6a5f224768edd9662e5d3"><td class="memItemLeft" align="right" valign="top"><a id="a2e0427bd27c6a5f224768edd9662e5d3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_InsertString</b> (HWND hwndCtl, int index, const WCHAR *lpsz)</td></tr>
+<tr class="separator:a2e0427bd27c6a5f224768edd9662e5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d43096fd8276173cf55d95de7f9039"><td class="memItemLeft" align="right" valign="top"><a id="aa5d43096fd8276173cf55d95de7f9039"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_LimitText</b> (HWND hwndCtl, int cchLimit)</td></tr>
+<tr class="separator:aa5d43096fd8276173cf55d95de7f9039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8caa76ce889dcd54ce8bf0b4b1a684"><td class="memItemLeft" align="right" valign="top"><a id="a9d8caa76ce889dcd54ce8bf0b4b1a684"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_ResetContent</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a9d8caa76ce889dcd54ce8bf0b4b1a684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf0bcb161193224b201f3d853d211c4"><td class="memItemLeft" align="right" valign="top"><a id="a2bf0bcb161193224b201f3d853d211c4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetEditSel</b> (HWND hwndCtl, int ichStart, int ichEnd)</td></tr>
+<tr class="separator:a2bf0bcb161193224b201f3d853d211c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afabfee2814ee32cfedacefc49a13f9f5"><td class="memItemLeft" align="right" valign="top"><a id="afabfee2814ee32cfedacefc49a13f9f5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetExtendedUI</b> (HWND hwndCtl, UINT flags)</td></tr>
+<tr class="separator:afabfee2814ee32cfedacefc49a13f9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e8196cbf84b262f06ce744a6111c76"><td class="memItemLeft" align="right" valign="top"><a id="a51e8196cbf84b262f06ce744a6111c76"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_ShowDropdown</b> (HWND hwndCtl, BOOL fShow)</td></tr>
+<tr class="separator:a51e8196cbf84b262f06ce744a6111c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86344ab9726f7de11b6e0d4271ca80f"><td class="memItemLeft" align="right" valign="top"><a id="af86344ab9726f7de11b6e0d4271ca80f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_SetDroppedWidth</b> (HWND hwndCtl, int width)</td></tr>
+<tr class="separator:af86344ab9726f7de11b6e0d4271ca80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14b90e41ed07c575d26e94a9a938697"><td class="memItemLeft" align="right" valign="top"><a id="ac14b90e41ed07c575d26e94a9a938697"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::Combo_GetDroppedState</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:ac14b90e41ed07c575d26e94a9a938697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031f437a387056739cc6307adc500f3a"><td class="memItemLeft" align="right" valign="top"><a id="a031f437a387056739cc6307adc500f3a"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetText</b> (HWND hwndList, int nIndex, WCHAR *pszText, size_t cchText)</td></tr>
+<tr class="separator:a031f437a387056739cc6307adc500f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa479f6c4e7cd177b1e5d586197f27354"><td class="memTemplParams" colspan="2"><a id="aa479f6c4e7cd177b1e5d586197f27354"></a>
+template&lt;size_t cchText&gt; </td></tr>
+<tr class="memitem:aa479f6c4e7cd177b1e5d586197f27354"><td class="memTemplItemLeft" align="right" valign="top">LRESULT&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ApiWrap::List_GetText</b> (HWND hwndList, int nIndex, WCHAR(&amp;pszText)[cchText])</td></tr>
+<tr class="separator:aa479f6c4e7cd177b1e5d586197f27354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb752df3d1de55b83b7d1e083976296"><td class="memItemLeft" align="right" valign="top"><a id="aacb752df3d1de55b83b7d1e083976296"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_AddString</b> (HWND hwndList, const WCHAR *str)</td></tr>
+<tr class="separator:aacb752df3d1de55b83b7d1e083976296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43bf93457a3436f89d2a05d11dafec6a"><td class="memItemLeft" align="right" valign="top"><a id="a43bf93457a3436f89d2a05d11dafec6a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_AddItemData</b> (HWND hwndCtl, int data)</td></tr>
+<tr class="separator:a43bf93457a3436f89d2a05d11dafec6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de68d500eeb85b79c81e5f982b1460b"><td class="memItemLeft" align="right" valign="top"><a id="a3de68d500eeb85b79c81e5f982b1460b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_AddItemData</b> (HWND hwndCtl, void *data)</td></tr>
+<tr class="separator:a3de68d500eeb85b79c81e5f982b1460b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae76ff2f417490cb2010bf96c13b84a8"><td class="memItemLeft" align="right" valign="top"><a id="aae76ff2f417490cb2010bf96c13b84a8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_DeleteString</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:aae76ff2f417490cb2010bf96c13b84a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46beb67cedc395455c890a6577854cfb"><td class="memItemLeft" align="right" valign="top"><a id="a46beb67cedc395455c890a6577854cfb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_FindStringExact</b> (HWND hwndCtl, int indexStart, WCHAR *lpszFind)</td></tr>
+<tr class="separator:a46beb67cedc395455c890a6577854cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f60c0dfbbea29cb894f7a1058f778eb"><td class="memItemLeft" align="right" valign="top"><a id="a6f60c0dfbbea29cb894f7a1058f778eb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetCaretIndex</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a6f60c0dfbbea29cb894f7a1058f778eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906d45ffa3f5eb370c669c865c6b5e9d"><td class="memItemLeft" align="right" valign="top"><a id="a906d45ffa3f5eb370c669c865c6b5e9d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetCount</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a906d45ffa3f5eb370c669c865c6b5e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a3f594ac7d9ef6884cebf8af54e837"><td class="memItemLeft" align="right" valign="top"><a id="a63a3f594ac7d9ef6884cebf8af54e837"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetCurSel</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a63a3f594ac7d9ef6884cebf8af54e837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e33461acbbdb2941a9f21954f265b7"><td class="memItemLeft" align="right" valign="top"><a id="ac2e33461acbbdb2941a9f21954f265b7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetTextLen</b> (HWND hwndCtl, int nIndex)</td></tr>
+<tr class="separator:ac2e33461acbbdb2941a9f21954f265b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d55326cb1b4259f07ef8d0c466e41a"><td class="memItemLeft" align="right" valign="top"><a id="a28d55326cb1b4259f07ef8d0c466e41a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetCurSel</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:a28d55326cb1b4259f07ef8d0c466e41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3c310dfd57896e06a05e7f26fb9363"><td class="memItemLeft" align="right" valign="top"><a id="a1f3c310dfd57896e06a05e7f26fb9363"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetItemData</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:a1f3c310dfd57896e06a05e7f26fb9363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8839ec736a4aad34906a9204f7e38421"><td class="memItemLeft" align="right" valign="top"><a id="a8839ec736a4aad34906a9204f7e38421"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetItemData</b> (HWND hwndCtl, int index, int data)</td></tr>
+<tr class="separator:a8839ec736a4aad34906a9204f7e38421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1da0e812e152c645a4676a98336305"><td class="memItemLeft" align="right" valign="top"><a id="afc1da0e812e152c645a4676a98336305"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetItemData</b> (HWND hwndCtl, int index, void *data)</td></tr>
+<tr class="separator:afc1da0e812e152c645a4676a98336305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100269548d3ed461ef586461aa707223"><td class="memItemLeft" align="right" valign="top"><a id="a100269548d3ed461ef586461aa707223"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetItemRect</b> (HWND hwndCtl, int index, RECT *lprc)</td></tr>
+<tr class="separator:a100269548d3ed461ef586461aa707223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd7070033e13a8b6da4582b31c9cfac"><td class="memItemLeft" align="right" valign="top"><a id="a8cd7070033e13a8b6da4582b31c9cfac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetTopIndex</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a8cd7070033e13a8b6da4582b31c9cfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9787a21e5710e0fa33824cb9b366784e"><td class="memItemLeft" align="right" valign="top"><a id="a9787a21e5710e0fa33824cb9b366784e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_InsertItemData</b> (HWND hwndCtl, int index, int data)</td></tr>
+<tr class="separator:a9787a21e5710e0fa33824cb9b366784e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29dfd604301d7b16e35c033a88c1eefe"><td class="memItemLeft" align="right" valign="top"><a id="a29dfd604301d7b16e35c033a88c1eefe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_InsertItemData</b> (HWND hwndCtl, int index, void *data)</td></tr>
+<tr class="separator:a29dfd604301d7b16e35c033a88c1eefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448eaa22c830783dbcd39136775be54c"><td class="memItemLeft" align="right" valign="top"><a id="a448eaa22c830783dbcd39136775be54c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_InsertString</b> (HWND hwndCtl, int index, const WCHAR *lpsz)</td></tr>
+<tr class="separator:a448eaa22c830783dbcd39136775be54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace64f79d99c9cef119d316d4b05e4c84"><td class="memItemLeft" align="right" valign="top"><a id="ace64f79d99c9cef119d316d4b05e4c84"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_ResetContent</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:ace64f79d99c9cef119d316d4b05e4c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96c85a3d421cc1ff1b58722981a92c8"><td class="memItemLeft" align="right" valign="top"><a id="ad96c85a3d421cc1ff1b58722981a92c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetHorizontalExtent</b> (HWND hwndCtl, int cxExtent)</td></tr>
+<tr class="separator:ad96c85a3d421cc1ff1b58722981a92c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55fbd6b8857afc794b8ca03c945579c"><td class="memItemLeft" align="right" valign="top"><a id="ab55fbd6b8857afc794b8ca03c945579c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_GetItemHeight</b> (HWND hwndCtl, int index)</td></tr>
+<tr class="separator:ab55fbd6b8857afc794b8ca03c945579c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20820fa9a220b9e3f79f1d6df0e29c0"><td class="memItemLeft" align="right" valign="top"><a id="af20820fa9a220b9e3f79f1d6df0e29c0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetItemHeight</b> (HWND hwndCtl, int index, int cy)</td></tr>
+<tr class="separator:af20820fa9a220b9e3f79f1d6df0e29c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793771d1bbf21072beb3603528cd0efe"><td class="memItemLeft" align="right" valign="top"><a id="a793771d1bbf21072beb3603528cd0efe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::List_SetTopIndex</b> (HWND hwndCtl, int indexTop)</td></tr>
+<tr class="separator:a793771d1bbf21072beb3603528cd0efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae8d13120938f9e20bc43f9bc3fbcd8"><td class="memItemLeft" align="right" valign="top"><a id="aaae8d13120938f9e20bc43f9bc3fbcd8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::EditCtl_LimitText</b> (HWND hwndCtl, int cchLimit)</td></tr>
+<tr class="separator:aaae8d13120938f9e20bc43f9bc3fbcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1083cd67055651fa3cff24c1d12817f0"><td class="memItemLeft" align="right" valign="top"><a id="a1083cd67055651fa3cff24c1d12817f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::EditCtl_SetSel</b> (HWND hwndCtl, int ichStart, int ichEnd)</td></tr>
+<tr class="separator:a1083cd67055651fa3cff24c1d12817f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad82b3690e5efe6433329f890fb28019c"><td class="memItemLeft" align="right" valign="top"><a id="ad82b3690e5efe6433329f890fb28019c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::EditCtl_ReplaceSel</b> (HWND hwndCtl, const WCHAR *lpsz)</td></tr>
+<tr class="separator:ad82b3690e5efe6433329f890fb28019c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39294fe7452e9ee39da07e18272471d8"><td class="memItemLeft" align="right" valign="top"><a id="a39294fe7452e9ee39da07e18272471d8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::BtnCtl_GetCheck</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a39294fe7452e9ee39da07e18272471d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d3ac7b16ff0f027f9fa7ba6ffe6f02"><td class="memItemLeft" align="right" valign="top"><a id="a37d3ac7b16ff0f027f9fa7ba6ffe6f02"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::BtnCtl_SetCheck</b> (HWND hwndCtl, int check)</td></tr>
+<tr class="separator:a37d3ac7b16ff0f027f9fa7ba6ffe6f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda67af3571132d87ba7c36a932539f0"><td class="memItemLeft" align="right" valign="top"><a id="afda67af3571132d87ba7c36a932539f0"></a>
+HICON&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::StCtl_SetIcon</b> (HWND hwndCtl, HICON hIcon)</td></tr>
+<tr class="separator:afda67af3571132d87ba7c36a932539f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2dcaa683b72e76ad33251878f30afe"><td class="memItemLeft" align="right" valign="top"><a id="a4d2dcaa683b72e76ad33251878f30afe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::TrackBarCtl_SetRange</b> (HWND hwndCtl, BOOL bRedraw, WORD minimum, WORD maximum)</td></tr>
+<tr class="separator:a4d2dcaa683b72e76ad33251878f30afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea125bcee0440ecdbd64a723d8d57127"><td class="memItemLeft" align="right" valign="top"><a id="aea125bcee0440ecdbd64a723d8d57127"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::TrackBarCtl_SetPos</b> (HWND hwndCtl, BOOL bRedraw, LPARAM pos)</td></tr>
+<tr class="separator:aea125bcee0440ecdbd64a723d8d57127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1ac6b5a38e7a9554968c6bb3f747e1"><td class="memItemLeft" align="right" valign="top"><a id="a9d1ac6b5a38e7a9554968c6bb3f747e1"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::TrackBarCtl_GetPos</b> (HWND hwndCtl)</td></tr>
+<tr class="separator:a9d1ac6b5a38e7a9554968c6bb3f747e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936318e6bdc9aef61c4cf29524ae9d61"><td class="memItemLeft" align="right" valign="top"><a id="a936318e6bdc9aef61c4cf29524ae9d61"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::DlgItem_SetText</b> (HWND hwndDlg, int nIDDlgItem, const WCHAR *str)</td></tr>
+<tr class="separator:a936318e6bdc9aef61c4cf29524ae9d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005e7143f098b419112dd56b82cf1e7a"><td class="memItemLeft" align="right" valign="top"><a id="a005e7143f098b419112dd56b82cf1e7a"></a>
+UINT&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::DlgItem_GetText</b> (HWND hwndDlg, int nIDDlgItem, WCHAR *pszText, int nMaxCount)</td></tr>
+<tr class="separator:a005e7143f098b419112dd56b82cf1e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81537ff2d631d2eb5854173a93a31b9"><td class="memItemLeft" align="right" valign="top"><a id="ac81537ff2d631d2eb5854173a93a31b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::TreeView_GetItemTextVector</b> (HWND hwndTree, TVITEM &amp;item, std::vector&lt; WCHAR &gt; &amp;vecStr)</td></tr>
+<tr class="separator:ac81537ff2d631d2eb5854173a93a31b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec2a8d3a2d14b41d5a76cc9c46201a1"><td class="memItemLeft" align="right" valign="top"><a id="a8ec2a8d3a2d14b41d5a76cc9c46201a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApiWrap::TreeView_ExpandAll</b> (HWND hwndTree, bool bExpand, int nMaxDepth)</td></tr>
+<tr class="separator:a8ec2a8d3a2d14b41d5a76cc9c46201a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2bd07f162fec2dcac649c82dcd9c0477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd07f162fec2dcac649c82dcd9c0477">&#9670;&nbsp;</a></span>Wnd_GetText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ApiWrap::Wnd_GetText </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Window テキストを取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hwnd</td><td>ウィンドウハンドル </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">str</td><td>ウィンドウテキスト </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合 true </dd>
+<dd>
+失敗した場合 false </dd></dl>
+
+</div>
+</div>
+<a id="acc7ad11faacb67ee75b1faa8b272f8bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7ad11faacb67ee75b1faa8b272f8bf">&#9670;&nbsp;</a></span>Wnd_SetText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL ApiWrap::Wnd_SetText </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Window テキストを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hwnd</td><td>ウィンドウハンドル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>ウィンドウテキスト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CDlgTypeList.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgTypeList.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/dec/_c_dlg_type_list_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/df5/class_c_dlg_type_list.html">CDlgTypeList</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::wstring;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d3/df5/class_c_dlg_type_list.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/df5/class_c_dlg_type_list.html">CDlgTypeList</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/d09/class_c_dialog.html">CDialog</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// 型</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html">   32</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html">SResult</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#ab25c70c3400d0052be5a7a7dd4ee33eb">   33</a></span>&#160;        <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> <a class="code" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#ab25c70c3400d0052be5a7a7dd4ee33eb">cDocumentType</a>;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#a9b7609e225052a97828e94798c575402">   34</a></span>&#160;        <span class="keywordtype">bool</span>            <a class="code" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#a9b7609e225052a97828e94798c575402">bTempChange</a>;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// インターフェース</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> DoModal( HINSTANCE hInstance, HWND hwndParent, <a class="code" href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html">SResult</a>* psResult ); <span class="comment">/* モーダルダイアログの表示 */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// 実装ヘルパ関数</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    BOOL OnLbnDblclk(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    BOOL OnBnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    BOOL OnActivate( WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    INT_PTR DispatchEvent( HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> SetData() <span class="keyword">override</span>;    <span class="comment">/* ダイアログデータの設定 */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> SetData(<span class="keywordtype">int</span> selIdx);   <span class="comment">/* ダイアログデータの設定 */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    LPVOID GetHelpIdTable(<span class="keywordtype">void</span>) <span class="keyword">override</span>;   <span class="comment">//@@@ 2002.01.18 add</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> Import( <span class="keywordtype">void</span> );            <span class="comment">// 2010/4/12 Uchi</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> Export( <span class="keywordtype">void</span> );            <span class="comment">// 2010/4/12 Uchi</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df5/class_c_dlg_type_list.html#a3b7459740e4c4eac9cb6c04562e68f04">InitializeType</a>( <span class="keywordtype">void</span> );    <span class="comment">// 2010/4/12 Uchi</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> CopyType();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> UpType();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> DownType();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> AddType();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> DelType();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df5/class_c_dlg_type_list.html#a815807f66aeeb082407359e2f0556956">AlertFileAssociation</a>();    <span class="comment">// 2011/8/20 syat</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a>             m_nSettingType;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// 関連付け状態</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> m_bRegistryChecked[ <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a> ];   <span class="comment">//レジストリ確認 未／済</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">bool</span> m_bExtRMenu[ <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a> ];          <span class="comment">//右クリック登録 未／済</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> m_bExtDblClick[ <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a> ];       <span class="comment">//ダブルクリック 未／済</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> m_bAlertFileAssociation;           <span class="comment">//関連付け警告の表示フラグ</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> m_bEnableTempChange;               <span class="comment">//一時適用の有効化</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_dlg_type_list_html_a815807f66aeeb082407359e2f0556956"><div class="ttname"><a href="../../d3/df5/class_c_dlg_type_list.html#a815807f66aeeb082407359e2f0556956">CDlgTypeList::AlertFileAssociation</a></div><div class="ttdeci">bool AlertFileAssociation()</div><div class="ttdoc">レジストリ変更の警告メッセージを表示する</div><div class="ttdef"><b>Definition:</b> CDlgTypeList.cpp:1083</div></div>
+<div class="ttc" id="aclass_c_dlg_type_list_html_a3b7459740e4c4eac9cb6c04562e68f04"><div class="ttname"><a href="../../d3/df5/class_c_dlg_type_list.html#a3b7459740e4c4eac9cb6c04562e68f04">CDlgTypeList::InitializeType</a></div><div class="ttdeci">bool InitializeType(void)</div><div class="ttdef"><b>Definition:</b> CDlgTypeList.cpp:486</div></div>
+<div class="ttc" id="aclass_c_dlg_type_list_html"><div class="ttname"><a href="../../d3/df5/class_c_dlg_type_list.html">CDlgTypeList</a></div><div class="ttdoc">ファイルタイプ一覧ダイアログ</div><div class="ttdef"><b>Definition:</b> CDlgTypeList.h:29</div></div>
+<div class="ttc" id="astruct_c_dlg_type_list_1_1_s_result_html"><div class="ttname"><a href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html">CDlgTypeList::SResult</a></div><div class="ttdef"><b>Definition:</b> CDlgTypeList.h:32</div></div>
+<div class="ttc" id="aclass_c_type_config_html"><div class="ttname"><a href="../../d8/d39/class_c_type_config.html">CTypeConfig</a></div><div class="ttdoc">ドキュメント種類。共有データ内 STypeConfig へのアクセサも兼ねる。</div><div class="ttdef"><b>Definition:</b> CType.h:276</div></div>
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="astruct_c_dlg_type_list_1_1_s_result_html_a9b7609e225052a97828e94798c575402"><div class="ttname"><a href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#a9b7609e225052a97828e94798c575402">CDlgTypeList::SResult::bTempChange</a></div><div class="ttdeci">bool bTempChange</div><div class="ttdoc">旧PROP_TEMPCHANGE_FLAG</div><div class="ttdef"><b>Definition:</b> CDlgTypeList.h:34</div></div>
+<div class="ttc" id="aclass_c_dialog_html"><div class="ttname"><a href="../../dd/d09/class_c_dialog.html">CDialog</a></div><div class="ttdoc">ダイアログウィンドウを扱うクラス</div><div class="ttdef"><b>Definition:</b> CDialog.h:73</div></div>
+<div class="ttc" id="amaxdata_8h_html_a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0ae965f8d3f49c43a08cc0c08bf143a678">MAX_TYPES</a></div><div class="ttdeci">@ MAX_TYPES</div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> maxdata.h:40</div></div>
+<div class="ttc" id="astruct_c_dlg_type_list_1_1_s_result_html_ab25c70c3400d0052be5a7a7dd4ee33eb"><div class="ttname"><a href="../../d9/ddb/struct_c_dlg_type_list_1_1_s_result.html#ab25c70c3400d0052be5a7a7dd4ee33eb">CDlgTypeList::SResult::cDocumentType</a></div><div class="ttdeci">CTypeConfig cDocumentType</div><div class="ttdoc">文書種類</div><div class="ttdef"><b>Definition:</b> CDlgTypeList.h:33</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

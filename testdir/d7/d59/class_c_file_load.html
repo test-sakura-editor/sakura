@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CFileLoad クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../db/da2/class_c_file_load-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CFileLoad クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d9/d9d/_c_file_load_8h_source.html">CFileLoad.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4672a0ae4d78032b35d82b9e64d8af76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a4672a0ae4d78032b35d82b9e64d8af76">CFileLoad</a> (const <a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a> &amp;encode)</td></tr>
+<tr class="separator:a4672a0ae4d78032b35d82b9e64d8af76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4a8484eabd23be9d8b2ed2abf246da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#aab4a8484eabd23be9d8b2ed2abf246da">~CFileLoad</a> (void)</td></tr>
+<tr class="separator:aab4a8484eabd23be9d8b2ed2abf246da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae895620833393215a11ebae651414c7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ae895620833393215a11ebae651414c7b">FileOpen</a> (LPCWSTR, bool bBigFile, <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>, int, bool *pbBomExist=NULL)</td></tr>
+<tr class="separator:ae895620833393215a11ebae651414c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ba5a48d3532219aa8fd7a257f964eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#af4ba5a48d3532219aa8fd7a257f964eb">FileClose</a> (void)</td></tr>
+<tr class="separator:af4ba5a48d3532219aa8fd7a257f964eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb31c7de2acc074eb0deaa006ff96004"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#abb31c7de2acc074eb0deaa006ff96004">ReadLine</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pUnicodeBuffer, <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *pcEol)</td></tr>
+<tr class="memdesc:abb31c7de2acc074eb0deaa006ff96004"><td class="mdescLeft">&#160;</td><td class="mdescRight">1行データをロードする 順アクセス用  <a href="../../d7/d59/class_c_file_load.html#abb31c7de2acc074eb0deaa006ff96004">[詳解]</a><br /></td></tr>
+<tr class="separator:abb31c7de2acc074eb0deaa006ff96004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94a2701db310395466ac489d078c4db"><td class="memItemLeft" align="right" valign="top"><a id="ab94a2701db310395466ac489d078c4db"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ab94a2701db310395466ac489d078c4db">GetFileTime</a> (FILETIME *pftCreate, FILETIME *pftLastAccess, FILETIME *pftLastWrite)</td></tr>
+<tr class="memdesc:ab94a2701db310395466ac489d078c4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルの日時を取得する <br /></td></tr>
+<tr class="separator:ab94a2701db310395466ac489d078c4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f9266ca2fe086e2d5615996519a348"><td class="memItemLeft" align="right" valign="top"><a id="ab4f9266ca2fe086e2d5615996519a348"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ab4f9266ca2fe086e2d5615996519a348">IsBomExist</a> (void)</td></tr>
+<tr class="memdesc:ab4f9266ca2fe086e2d5615996519a348"><td class="mdescLeft">&#160;</td><td class="mdescRight">開いたファイルにはBOMがあるか？ <br /></td></tr>
+<tr class="separator:ab4f9266ca2fe086e2d5615996519a348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1220401b75f3103661536c0df37df74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ae1220401b75f3103661536c0df37df74">GetPercent</a> (void)</td></tr>
+<tr class="memdesc:ae1220401b75f3103661536c0df37df74"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の進行率を取得する(0% - 100%) 若干誤差が出る  <a href="../../d7/d59/class_c_file_load.html#ae1220401b75f3103661536c0df37df74">[詳解]</a><br /></td></tr>
+<tr class="separator:ae1220401b75f3103661536c0df37df74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3654d84b251d7041ac46aaa72f6516b6"><td class="memItemLeft" align="right" valign="top"><a id="a3654d84b251d7041ac46aaa72f6516b6"></a>
+LONGLONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a3654d84b251d7041ac46aaa72f6516b6">GetFileSize</a> (void)</td></tr>
+<tr class="memdesc:a3654d84b251d7041ac46aaa72f6516b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルサイズを取得する <br /></td></tr>
+<tr class="separator:a3654d84b251d7041ac46aaa72f6516b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac91ba3def68ea25264a5edce3f67b5b8"><td class="memItemLeft" align="right" valign="top"><a id="ac91ba3def68ea25264a5edce3f67b5b8"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLoadableSize</b> (ULONGLONG size, bool ignoreLimit=false)</td></tr>
+<tr class="separator:ac91ba3def68ea25264a5edce3f67b5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0f131366c360927d0f8a97ffc9b71c"><td class="memItemLeft" align="right" valign="top"><a id="aef0f131366c360927d0f8a97ffc9b71c"></a>
+static ULONGLONG&#160;</td><td class="memItemRight" valign="bottom"><b>GetLimitSize</b> ()</td></tr>
+<tr class="separator:aef0f131366c360927d0f8a97ffc9b71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4de1008fa08690203aaf4b3017cb9a"><td class="memItemLeft" align="right" valign="top"><a id="aae4de1008fa08690203aaf4b3017cb9a"></a>
+static std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#aae4de1008fa08690203aaf4b3017cb9a">GetSizeStringForHuman</a> (ULONGLONG size)</td></tr>
+<tr class="memdesc:aae4de1008fa08690203aaf4b3017cb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">人にとって見やすいサイズ文字列を作る (例: "2 GB", "10 GB", "400 MB", "32 KB") <br /></td></tr>
+<tr class="separator:aae4de1008fa08690203aaf4b3017cb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:ad69bf5d892921fc911e709e63d05c3b1"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ad69bf5d892921fc911e709e63d05c3b1">gm_nBufSizeDef</a> = 32768</td></tr>
+<tr class="separator:ad69bf5d892921fc911e709e63d05c3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a8f6009f06a88892c91e452093a2fb68e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">enumFileLoadMode</a> { <a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658">FLMODE_CLOSE</a> = 0, 
+<a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3">FLMODE_OPEN</a>, 
+<a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59">FLMODE_READY</a>, 
+<a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a">FLMODE_READBUFEND</a>
+ }</td></tr>
+<tr class="separator:a8f6009f06a88892c91e452093a2fb68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6f510da9948764c7a3828510fcedd823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a6f510da9948764c7a3828510fcedd823">Buffering</a> (void)</td></tr>
+<tr class="separator:a6f510da9948764c7a3828510fcedd823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999ce46ad5054c68a45ce291ab104e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a999ce46ad5054c68a45ce291ab104e2a">ReadBufEmpty</a> (void)</td></tr>
+<tr class="separator:a999ce46ad5054c68a45ce291ab104e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a4ad9731dae2b04596a953cb529719"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#ac1a4ad9731dae2b04596a953cb529719">GetNextLineCharCode</a> (const char *pData, int nDataLen, int *pnLineLen, int *pnBgn, <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *pcEol, int *pnEolLen, int *pnBufferNext)</td></tr>
+<tr class="separator:ac1a4ad9731dae2b04596a953cb529719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bc73ce47ee40bdb50d979ad173fa79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a33bc73ce47ee40bdb50d979ad173fa79">ReadLine_core</a> (<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *pUnicodeBuffer, <a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *pcEol)</td></tr>
+<tr class="separator:a33bc73ce47ee40bdb50d979ad173fa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaadf778d4bf1fc9c4cc81fa2638aac"><td class="memItemLeft" align="right" valign="top"><a id="aecaadf778d4bf1fc9c4cc81fa2638aac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Read</b> (void *pBuf, size_t nSize)</td></tr>
+<tr class="separator:aecaadf778d4bf1fc9c4cc81fa2638aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697cc7c62d93457d991969de0db3ea59"><td class="memItemLeft" align="right" valign="top"><a id="a697cc7c62d93457d991969de0db3ea59"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>FilePointer</b> (DWORD offset, DWORD origin)</td></tr>
+<tr class="separator:a697cc7c62d93457d991969de0db3ea59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c317299902981c017b1c2457e242fbf"><td class="memItemLeft" align="right" valign="top"><a id="a7c317299902981c017b1c2457e242fbf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d7/d59/class_c_file_load.html">CFileLoad</a>)</td></tr>
+<tr class="separator:a7c317299902981c017b1c2457e242fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a1e2542effaabb9ea9641ed13926c11eb"><td class="memItemLeft" align="right" valign="top"><a id="a1e2542effaabb9ea9641ed13926c11eb"></a>
+const <a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pEencoding</b></td></tr>
+<tr class="separator:a1e2542effaabb9ea9641ed13926c11eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b5b31a53b0de5b9b63604233f3b7d7"><td class="memItemLeft" align="right" valign="top"><a id="aa4b5b31a53b0de5b9b63604233f3b7d7"></a>
+HANDLE&#160;</td><td class="memItemRight" valign="bottom"><b>m_hFile</b></td></tr>
+<tr class="separator:aa4b5b31a53b0de5b9b63604233f3b7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0705852ebd0a3a7afb80438fd4dfebba"><td class="memItemLeft" align="right" valign="top"><a id="a0705852ebd0a3a7afb80438fd4dfebba"></a>
+LONGLONG&#160;</td><td class="memItemRight" valign="bottom"><b>m_nFileSize</b></td></tr>
+<tr class="separator:a0705852ebd0a3a7afb80438fd4dfebba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20518e6d17dc8785bcd1ad28b068b701"><td class="memItemLeft" align="right" valign="top"><a id="a20518e6d17dc8785bcd1ad28b068b701"></a>
+LONGLONG&#160;</td><td class="memItemRight" valign="bottom"><b>m_nFileDataLen</b></td></tr>
+<tr class="separator:a20518e6d17dc8785bcd1ad28b068b701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7675b9206e0d70550b39f58c60bf9a8"><td class="memItemLeft" align="right" valign="top"><a id="ad7675b9206e0d70550b39f58c60bf9a8"></a>
+LONGLONG&#160;</td><td class="memItemRight" valign="bottom"><b>m_nReadLength</b></td></tr>
+<tr class="separator:ad7675b9206e0d70550b39f58c60bf9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeadd22b28e88bda76128ecc6f635e828"><td class="memItemLeft" align="right" valign="top"><a id="aeadd22b28e88bda76128ecc6f635e828"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nLineIndex</b></td></tr>
+<tr class="separator:aeadd22b28e88bda76128ecc6f635e828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1f900a5152aa6fb6263864abe74ed3"><td class="memItemLeft" align="right" valign="top"><a id="a2b1f900a5152aa6fb6263864abe74ed3"></a>
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_CharCode</b></td></tr>
+<tr class="separator:a2b1f900a5152aa6fb6263864abe74ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043adfa49b940b958141d91209a8982f"><td class="memItemLeft" align="right" valign="top"><a id="a043adfa49b940b958141d91209a8982f"></a>
+<a class="el" href="../../d6/d84/class_c_code_base.html">CCodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pCodeBase</b></td></tr>
+<tr class="separator:a043adfa49b940b958141d91209a8982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64c2cc548edd469781c2af1e6be67b3"><td class="memItemLeft" align="right" valign="top"><a id="ac64c2cc548edd469781c2af1e6be67b3"></a>
+EEncodingTrait&#160;</td><td class="memItemRight" valign="bottom"><b>m_encodingTrait</b></td></tr>
+<tr class="separator:ac64c2cc548edd469781c2af1e6be67b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf46d0fcbe7973a5c216ed48e574475"><td class="memItemLeft" align="right" valign="top"><a id="aeaf46d0fcbe7973a5c216ed48e574475"></a>
+<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_memEols</b> [3]</td></tr>
+<tr class="separator:aeaf46d0fcbe7973a5c216ed48e574475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31cd3d43cc561a79170f35b1225a750d"><td class="memItemLeft" align="right" valign="top"><a id="a31cd3d43cc561a79170f35b1225a750d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a31cd3d43cc561a79170f35b1225a750d">m_bEolEx</a></td></tr>
+<tr class="memdesc:a31cd3d43cc561a79170f35b1225a750d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CR/LF以外のEOLが有効か <br /></td></tr>
+<tr class="separator:a31cd3d43cc561a79170f35b1225a750d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b57b7605e0d47da9a9254a96ba68e8"><td class="memItemLeft" align="right" valign="top"><a id="a32b57b7605e0d47da9a9254a96ba68e8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d59/class_c_file_load.html#a32b57b7605e0d47da9a9254a96ba68e8">m_nMaxEolLen</a></td></tr>
+<tr class="memdesc:a32b57b7605e0d47da9a9254a96ba68e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">EOLの長さ <br /></td></tr>
+<tr class="separator:a32b57b7605e0d47da9a9254a96ba68e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823da0deb0e1624886d18a5ddd1d1a84"><td class="memItemLeft" align="right" valign="top"><a id="a823da0deb0e1624886d18a5ddd1d1a84"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bBomExist</b></td></tr>
+<tr class="separator:a823da0deb0e1624886d18a5ddd1d1a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116c08420b56590fc368c091e5b0c307"><td class="memItemLeft" align="right" valign="top"><a id="a116c08420b56590fc368c091e5b0c307"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nFlag</b></td></tr>
+<tr class="separator:a116c08420b56590fc368c091e5b0c307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f08784151c47a5c43b0dcc2e4657c6"><td class="memItemLeft" align="right" valign="top"><a id="af0f08784151c47a5c43b0dcc2e4657c6"></a>
+<a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">enumFileLoadMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_eMode</b></td></tr>
+<tr class="separator:af0f08784151c47a5c43b0dcc2e4657c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c0e2f882709e120b7acc80fb083a9c"><td class="memItemLeft" align="right" valign="top"><a id="a45c0e2f882709e120b7acc80fb083a9c"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>m_pReadBuf</b></td></tr>
+<tr class="separator:a45c0e2f882709e120b7acc80fb083a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c8cf34c1be754ea6e9fe0620a7fa64"><td class="memItemLeft" align="right" valign="top"><a id="a63c8cf34c1be754ea6e9fe0620a7fa64"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nReadBufSize</b></td></tr>
+<tr class="separator:a63c8cf34c1be754ea6e9fe0620a7fa64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b9fe5a3d403bdf12bf7234f482ca207"><td class="memItemLeft" align="right" valign="top"><a id="a1b9fe5a3d403bdf12bf7234f482ca207"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nReadDataLen</b></td></tr>
+<tr class="separator:a1b9fe5a3d403bdf12bf7234f482ca207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1052a049b4e302109ffa3f7e0631bd9"><td class="memItemLeft" align="right" valign="top"><a id="aa1052a049b4e302109ffa3f7e0631bd9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nReadBufOffSet</b></td></tr>
+<tr class="separator:aa1052a049b4e302109ffa3f7e0631bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4d32a2ce04eb16f6ab1dc819d1cea6"><td class="memItemLeft" align="right" valign="top"><a id="acb4d32a2ce04eb16f6ab1dc819d1cea6"></a>
+<a class="el" href="../../d6/d31/class_c_memory.html">CMemory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cLineBuffer</b></td></tr>
+<tr class="separator:acb4d32a2ce04eb16f6ab1dc819d1cea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30787c3a3da35a060db4f91191593ab1"><td class="memItemLeft" align="right" valign="top"><a id="a30787c3a3da35a060db4f91191593ab1"></a>
+<a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cLineTemp</b></td></tr>
+<tr class="separator:a30787c3a3da35a060db4f91191593ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af951becb58d0b9d5023c86fe3e6c2808"><td class="memItemLeft" align="right" valign="top"><a id="af951becb58d0b9d5023c86fe3e6c2808"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nReadOffset2</b></td></tr>
+<tr class="separator:af951becb58d0b9d5023c86fe3e6c2808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f980c078edf7334639419971c90f413"><td class="memItemLeft" align="right" valign="top"><a id="a4f980c078edf7334639419971c90f413"></a>
+<a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_nTempResult</b></td></tr>
+<tr class="separator:a4f980c078edf7334639419971c90f413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文字コードを変換してデータを行単位で取得するためのクラス </p><dl class="section note"><dt>覚え書き</dt><dd>明示的にFileOpenメンバを呼び出さないと使えない ファイルポインタを共有すると困るので、クラスのコピー禁止 </dd></dl>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a8f6009f06a88892c91e452093a2fb68e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6009f06a88892c91e452093a2fb68e">&#9670;&nbsp;</a></span>enumFileLoadMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">CFileLoad::enumFileLoadMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658"></a>FLMODE_CLOSE&#160;</td><td class="fielddoc"><p>初期状態 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3"></a>FLMODE_OPEN&#160;</td><td class="fielddoc"><p>ファイルオープンのみ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59"></a>FLMODE_READY&#160;</td><td class="fielddoc"><p>順アクセスOK </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a"></a>FLMODE_READBUFEND&#160;</td><td class="fielddoc"><p>ファイルの終端までバッファに入れた </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a4672a0ae4d78032b35d82b9e64d8af76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4672a0ae4d78032b35d82b9e64d8af76">&#9670;&nbsp;</a></span>CFileLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFileLoad::CFileLoad </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>encode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ロード用バッファサイズの設定可能な最低値 *&zwj;/ const int gm_nBufSizeMin = 1024;</p>
+<p>bool CFileLoad::IsLoadableSize(ULONGLONG size, bool ignoreLimit) { 上限無視 if (ignoreLimit)return true;</p>
+<p>判定 return size &lt; CFileLoad::GetLimitSize(); }</p>
+<p>ULONGLONG CFileLoad::GetLimitSize() {</p>
+<p>32bit の場合 だいたい 2GB くらいを上限とする (既存コードがそうなっていたのでそれを踏襲) return 0x80000000;</p>
+<p>}</p>
+<p>! 人にとって見やすいサイズ文字列を作る (例: "2 GB", "10 GB", "400 MB", "32 KB") …と言いつつ、今のところは MB 単位での表示にします。適宜必要あれば改良してください。 std::wstring <a class="el" href="../../d7/d59/class_c_file_load.html#aae4de1008fa08690203aaf4b3017cb9a" title="人にとって見やすいサイズ文字列を作る (例: &quot;2 GB&quot;, &quot;10 GB&quot;, &quot;400 MB&quot;, &quot;32 KB&quot;)">CFileLoad::GetSizeStringForHuman(ULONGLONG size)</a> { bytes to megabytes ULONGLONG megabytes = size / 1024 / 1024;</p>
+<p>to string wchar_t buf[32]; swprintf_s(buf, _countof(buf), L"%I64u", megabytes); std::wstring str = buf;</p>
+<p><a href="https://stackoverflow.com/questions/7276826/c-format-number-with-commas">https://stackoverflow.com/questions/7276826/c-format-number-with-commas</a> コンマ区切り文字列 int insertPosition = str.length() - 3; while (insertPosition &gt; 0) { str.insert(insertPosition, L","); insertPosition -= 3; }</p>
+<p>単位付けて返す return str + L" MB"; }</p>
+<p>/*! コンストラクタ </p>
+
+</div>
+</div>
+<a id="aab4a8484eabd23be9d8b2ed2abf246da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4a8484eabd23be9d8b2ed2abf246da">&#9670;&nbsp;</a></span>~CFileLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFileLoad::~CFileLoad </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>デストラクタ </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a6f510da9948764c7a3828510fcedd823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f510da9948764c7a3828510fcedd823">&#9670;&nbsp;</a></span>Buffering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFileLoad::Buffering </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>バッファにデータを読み込む </p><dl class="section note"><dt>覚え書き</dt><dd>エラー時は throw する </dd></dl>
+
+</div>
+</div>
+<a id="af4ba5a48d3532219aa8fd7a257f964eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ba5a48d3532219aa8fd7a257f964eb">&#9670;&nbsp;</a></span>FileClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFileLoad::FileClose </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイルを閉じる 読み込み用バッファとm_memLineもクリアされる </p>
+
+</div>
+</div>
+<a id="ae895620833393215a11ebae651414c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae895620833393215a11ebae651414c7b">&#9670;&nbsp;</a></span>FileOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> CFileLoad::FileOpen </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>pFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bBigFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>&#160;</td>
+          <td class="paramname"><em>CharCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFlag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbBomExist</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ファイルを開く </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFileName</td><td>[in] ファイル名 </td></tr>
+    <tr><td class="paramname">bBigFile</td><td>[in] 2GB以上のファイルを開くか。Grep=true, 32bit版はその他=falseで運用 </td></tr>
+    <tr><td class="paramname">CharCode</td><td>[in] ファイルの文字コード． </td></tr>
+    <tr><td class="paramname">nFlag</td><td>[in] 文字コードのオプション </td></tr>
+    <tr><td class="paramname">pbBomExist</td><td>[out] BOMの有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2003.06.08 Moca CODE_AUTODETECTを指定できるように変更 </dd>
+<dd>
+2003.07.26 ryoji BOM引数追加 </dd></dl>
+
+</div>
+</div>
+<a id="ac1a4ad9731dae2b04596a953cb529719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a4ad9731dae2b04596a953cb529719">&#9670;&nbsp;</a></span>GetNextLineCharCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * CFileLoad::GetNextLineCharCode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDataLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnBgn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *&#160;</td>
+          <td class="paramname"><em>pcEol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnEolLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnBufferNext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>GetNextLineの汎用文字コード版 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pData</td><td>[in] 検索文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nDataLen</td><td>[in] 検索文字列のバイト数 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnLineLen</td><td>[out] 1行のバイト数を返すただしEOLは含まない </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pnBgn</td><td>[i/o] 検索文字列のバイト単位のオフセット位置 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pcEol</td><td>[i/o] EOL </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnEolLen</td><td>[out] EOLのバイト数 (Unicodeで困らないように) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnBufferNext</td><td>[out] 次回持越しバッファ長(EOLの断片) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1220401b75f3103661536c0df37df74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1220401b75f3103661536c0df37df74">&#9670;&nbsp;</a></span>GetPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CFileLoad::GetPercent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在の進行率を取得する(0% - 100%) 若干誤差が出る </p>
+<p>現在の進行率を取得する </p><dl class="section return"><dt>戻り値</dt><dd>0% - 100% 若干誤差が出る </dd></dl>
+
+</div>
+</div>
+<a id="a999ce46ad5054c68a45ce291ab104e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999ce46ad5054c68a45ce291ab104e2a">&#9670;&nbsp;</a></span>ReadBufEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFileLoad::ReadBufEmpty </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>バッファクリア </p>
+
+</div>
+</div>
+<a id="abb31c7de2acc074eb0deaa006ff96004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb31c7de2acc074eb0deaa006ff96004">&#9670;&nbsp;</a></span>ReadLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> CFileLoad::ReadLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pUnicodeBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *&#160;</td>
+          <td class="paramname"><em>pcEol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>1行データをロードする 順アクセス用 </p>
+<p>1行読み込み UTF-7場合、データ内のNEL,PS,LS等の改行までを1行として取り出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pUnicodeBuffer</td><td>[out] UNICODEデータ受け取りバッファ </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pcEol</td><td>[i/o] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a33bc73ce47ee40bdb50d979ad173fa79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bc73ce47ee40bdb50d979ad173fa79">&#9670;&nbsp;</a></span>ReadLine_core()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> CFileLoad::ReadLine_core </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> *&#160;</td>
+          <td class="paramname"><em>pUnicodeBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d83/class_c_eol.html">CEol</a> *&#160;</td>
+          <td class="paramname"><em>pcEol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>次の論理行を文字コード変換してロードする 順次アクセス専用 GetNextLineのような動作をする </p><dl class="section return"><dt>戻り値</dt><dd>NULL以外 1行を保持しているデータの先頭アドレスを返す。永続的ではない一時的な領域。 NULL データがなかった </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pUnicodeBuffer</td><td>[out] UNICODEデータ受け取りバッファ。改行も含めて読み取る。 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pcEol</td><td>[i/o] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ad69bf5d892921fc911e709e63d05c3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69bf5d892921fc911e709e63d05c3b1">&#9670;&nbsp;</a></span>gm_nBufSizeDef</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int CFileLoad::gm_nBufSizeDef = 32768</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ロード用バッファサイズの初期値 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/io/<a class="el" href="../../d9/d9d/_c_file_load_8h_source.html">CFileLoad.h</a></li>
+<li>sakura_core/io/<a class="el" href="../../d0/d7a/_c_file_load_8cpp.html">CFileLoad.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

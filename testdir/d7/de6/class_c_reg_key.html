@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CRegKey クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d5/de1/class_c_reg_key-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CRegKey クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0cd63c12410e455977741e929a6eab01"><td class="memItemLeft" align="right" valign="top"><a id="a0cd63c12410e455977741e929a6eab01"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOpend</b> () const</td></tr>
+<tr class="separator:a0cd63c12410e455977741e929a6eab01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada18fbd2d739ab1922c9d438218b454b"><td class="memItemLeft" align="right" valign="top"><a id="ada18fbd2d739ab1922c9d438218b454b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HKEY root, const WCHAR *path, unsigned int access=(KEY_READ|KEY_WRITE))</td></tr>
+<tr class="separator:ada18fbd2d739ab1922c9d438218b454b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b42f8cb37516659455018aa756263f"><td class="memItemLeft" align="right" valign="top"><a id="aa3b42f8cb37516659455018aa756263f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> (HKEY root, const WCHAR *path, unsigned int access=KEY_READ)</td></tr>
+<tr class="separator:aa3b42f8cb37516659455018aa756263f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb7d2c9087d75a0461f9f2b68665384"><td class="memItemLeft" align="right" valign="top"><a id="aecb7d2c9087d75a0461f9f2b68665384"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Close</b> ()</td></tr>
+<tr class="separator:aecb7d2c9087d75a0461f9f2b68665384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01d4b6f539638aeba5de5fd600ac97b"><td class="memItemLeft" align="right" valign="top"><a id="ac01d4b6f539638aeba5de5fd600ac97b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetValue</b> (const WCHAR *valueName, WCHAR *buffer, unsigned int nMaxChar, int *pGetChars=NULL) const</td></tr>
+<tr class="separator:ac01d4b6f539638aeba5de5fd600ac97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ac538cced772313e43811698ba735d"><td class="memItemLeft" align="right" valign="top"><a id="aa4ac538cced772313e43811698ba735d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetValueBINARY</b> (const WCHAR *valueName, BYTE *buffer, unsigned int nMaxChar, int *pGetChars=NULL) const</td></tr>
+<tr class="separator:aa4ac538cced772313e43811698ba735d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24828b1133ea8d6eae14882ef2400512"><td class="memItemLeft" align="right" valign="top"><a id="a24828b1133ea8d6eae14882ef2400512"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SetValue</b> (const WCHAR *valueName, const WCHAR *buffer, int nMaxChar=-1)</td></tr>
+<tr class="separator:a24828b1133ea8d6eae14882ef2400512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cccdb9b99a29eb13039a29de0d0b76a"><td class="memItemLeft" align="right" valign="top"><a id="a3cccdb9b99a29eb13039a29de0d0b76a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SetValue</b> (const WCHAR *valueName, const BYTE *buffer, int nMaxChar, DWORD dwType)</td></tr>
+<tr class="separator:a3cccdb9b99a29eb13039a29de0d0b76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085dd6653e0bc39c12b13c671d3f92f7"><td class="memItemLeft" align="right" valign="top"><a id="a085dd6653e0bc39c12b13c671d3f92f7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteValue</b> (const WCHAR *valueName)</td></tr>
+<tr class="separator:a085dd6653e0bc39c12b13c671d3f92f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee5fa03fdef96a9d667c31b287e6a21"><td class="memItemLeft" align="right" valign="top"><a id="aaee5fa03fdef96a9d667c31b287e6a21"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteSubKey</b> (const WCHAR *path)</td></tr>
+<tr class="separator:aaee5fa03fdef96a9d667c31b287e6a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69694b8715840f3276f1f66be74ce1e2"><td class="memItemLeft" align="right" valign="top"><a id="a69694b8715840f3276f1f66be74ce1e2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>EnumKey</b> (int &amp;index, WCHAR *pNameBuffer, int nMaxChar, int *pGetChar=NULL) const</td></tr>
+<tr class="separator:a69694b8715840f3276f1f66be74ce1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2baec23ab419d4e3adde289bdd1eaa5"><td class="memItemLeft" align="right" valign="top"><a id="af2baec23ab419d4e3adde289bdd1eaa5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>EnumValue</b> (int &amp;index, WCHAR *pNameBuffer, int nMaxChar, DWORD *lpType, BYTE *lpData, int nMaxData, DWORD *pDataLen) const</td></tr>
+<tr class="separator:af2baec23ab419d4e3adde289bdd1eaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a292dedb09a22b9813c7a4537ec3f2919"><td class="memItemLeft" align="right" valign="top"><a id="a292dedb09a22b9813c7a4537ec3f2919"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExistsKey</b> (HKEY root, const WCHAR *path, unsigned int access=KEY_READ)</td></tr>
+<tr class="separator:a292dedb09a22b9813c7a4537ec3f2919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab1e962c069dfc44696a75c69946770"><td class="memItemLeft" align="right" valign="top"><a id="abab1e962c069dfc44696a75c69946770"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteKey</b> (HKEY root, const WCHAR *path)</td></tr>
+<tr class="separator:abab1e962c069dfc44696a75c69946770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a13c98ecf43e32c6df7d67602cd2a487a"><td class="memItemLeft" align="right" valign="top"><a id="a13c98ecf43e32c6df7d67602cd2a487a"></a>
+HKEY&#160;</td><td class="memItemRight" valign="bottom"><b>_root</b></td></tr>
+<tr class="separator:a13c98ecf43e32c6df7d67602cd2a487a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303cda1286dbe5b66c905be2b340dcec"><td class="memItemLeft" align="right" valign="top"><a id="a303cda1286dbe5b66c905be2b340dcec"></a>
+HKEY&#160;</td><td class="memItemRight" valign="bottom"><b>_key</b></td></tr>
+<tr class="separator:a303cda1286dbe5b66c905be2b340dcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/util/<a class="el" href="../../dc/d26/_reg_key_8h_source.html">RegKey.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

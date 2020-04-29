@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/mem/CMemoryIterator.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_db20c0c867290198352f2db9c83454b6.html">mem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CMemoryIterator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d7a/_c_memory_iterator_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, Yazaki</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2003, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2005, D.S.Koba</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    This source code is designed for sakura editor.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Please contact the copyright holder to use this code for other purpose.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  sakura</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d86/charcode_8h.html">charset/charcode.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/df6/_c_tsv_mode_info_8h.html">doc/layout/CTsvModeInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// 2007.10.23 kobake テンプレートである必要も無いので、非テンプレートに変更。</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d5f/_c_layout_8h.html">doc/layout/CLayout.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d31/_c_doc_line_8h.html">doc/logic/CDocLine.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../dd/dac/class_c_memory_iterator.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dac/class_c_memory_iterator.html">CMemoryIterator</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//CDocLine用コンストラクタ</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dd/dac/class_c_memory_iterator.html">CMemoryIterator</a>( <span class="keyword">const</span> <a class="code" href="../../d9/d35/class_c_doc_line.html">CDocLine</a>* pcT, CLayoutInt nTabSpace, <span class="keyword">const</span> <a class="code" href="../../de/d46/class_c_tsv_mode_info.html">CTsvModeInfo</a>&amp; tsvInfo, CPixelXInt nCharDx, CPixelXInt nSpacing )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : m_pLine( pcT ? pcT-&gt;GetPtr() : NULL )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    , m_nLineLen( pcT ? pcT-&gt;GetLengthWithEOL() : 0 )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    , m_nTabSpace( nTabSpace )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    , m_tsvInfo( tsvInfo )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    , m_nIndent( CLayoutInt(0) )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    , m_nSpacing(nSpacing)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    , m_nTabPadding(nCharDx - 1)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    , m_nTabSpaceDx((Int)nTabSpace + nCharDx - 1)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../dd/dac/class_c_memory_iterator.html#ac7f27d778d986fbbf149cc8c8d97a3ec">first</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//CLayout用コンストラクタ</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../dd/dac/class_c_memory_iterator.html">CMemoryIterator</a>( <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>* pcT, CLayoutInt nTabSpace, <span class="keyword">const</span> <a class="code" href="../../de/d46/class_c_tsv_mode_info.html">CTsvModeInfo</a>&amp; tsvInfo, CPixelXInt nCharDx, CPixelXInt nSpacing )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    : m_pLine( pcT ? pcT-&gt;GetPtr() : NULL )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    , m_nLineLen( pcT ? pcT-&gt;GetLengthWithEOL() : 0 )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    , m_nTabSpace( nTabSpace )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    , m_tsvInfo( tsvInfo )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    , m_nIndent( pcT ? pcT-&gt;<a class="code" href="../../db/d1c/class_c_layout.html#a7e91dd8855e9cae0203255e9256f4ebb">GetIndent</a>() : CLayoutInt(0) )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    , m_nSpacing(nSpacing)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    , m_nTabPadding(nCharDx - 1)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    , m_nTabSpaceDx((Int)nTabSpace + nCharDx - 1)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../dd/dac/class_c_memory_iterator.html#ac7f27d778d986fbbf149cc8c8d97a3ec">first</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../dd/dac/class_c_memory_iterator.html#ac7f27d778d986fbbf149cc8c8d97a3ec">   63</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dac/class_c_memory_iterator.html#ac7f27d778d986fbbf149cc8c8d97a3ec">first</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        m_nIndex = CLogicInt(0);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        m_nColumn = m_nIndent;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        m_nIndex_Delta = CLogicInt(0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        m_nColumn_Delta = CLayoutInt(0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../dd/dac/class_c_memory_iterator.html#a9a8236f1648cb2dbc5b3871751cd7cbc">   74</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dd/dac/class_c_memory_iterator.html#a9a8236f1648cb2dbc5b3871751cd7cbc">end</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> (m_nLineLen &lt;= m_nIndex);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//  次の文字を確認して次の文字との差を求める</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> scanNext()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// 2005-09-02 D.S.Koba GetSizeOfChar</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// 2007.09.04 kobake UNICODE化：データ増分と桁増分を別々の値として計算する。</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//データ増分を計算</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        m_nIndex_Delta = <a class="code" href="../../d5/d86/class_c_native_w.html#a7fd3229b7083c2d99c18f3a96c0c7c57">CNativeW::GetSizeOfChar</a>(m_pLine, m_nLineLen, m_nIndex);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span>( 0 == m_nIndex_Delta )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            m_nIndex_Delta = CLogicInt(1);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//桁増分を計算</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> (m_pLine[m_nIndex] == WCODE::TAB){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">if</span> (m_tsvInfo.m_nTsvMode == TSV_MODE_TSV) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                m_nColumn_Delta = m_tsvInfo.GetActualTabLength(m_nColumn, m_tsvInfo.m_nMaxCharLayoutX);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_tsvInfo.m_nTsvMode == TSV_MODE_CSV) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                m_nColumn_Delta = m_nTabPadding;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                m_nColumn_Delta = m_nTabSpaceDx - (m_nColumn + m_nTabPadding) % m_nTabSpace;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_pLine[m_nIndex] == L<span class="charliteral">&#39;,&#39;</span> &amp;&amp; m_tsvInfo.m_nTsvMode == TSV_MODE_CSV){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            m_nColumn_Delta = m_tsvInfo.GetActualTabLength(m_nColumn, m_tsvInfo.m_nMaxCharLayoutX);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            m_nColumn_Delta = CNativeW::GetColmOfChar( m_pLine, m_nLineLen, m_nIndex );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">if</span>( m_nSpacing ){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                m_nColumn_Delta += CLayoutXInt(<a class="code" href="../../d5/d86/class_c_native_w.html#a39458d640443461c185ca3483e4abc4f">CNativeW::GetKetaOfChar</a>(m_pLine, m_nLineLen, m_nIndex) * m_nSpacing);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//          if( 0 == m_nColumn_Delta )              // 削除 サロゲートペア対策  2008/7/5 Uchi</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//              m_nColumn_Delta = CLayoutInt(1);</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../dd/dac/class_c_memory_iterator.html#a47702cb931374496f6f6662c971de383">  116</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dac/class_c_memory_iterator.html#a47702cb931374496f6f6662c971de383">addDelta</a>(){</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        m_nColumn += m_nColumn_Delta;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        m_nIndex += m_nIndex_Delta;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }   <span class="comment">//  ポインタをずらす</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    CLogicInt   getIndex()<span class="keyword">          const </span>{ <span class="keywordflow">return</span> m_nIndex;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    CLayoutInt  getColumn()<span class="keyword">         const </span>{ <span class="keywordflow">return</span> m_nColumn;   }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    CLogicInt   getIndexDelta()<span class="keyword">     const </span>{ <span class="keywordflow">return</span> m_nIndex_Delta;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    CLayoutInt  getColumnDelta()<span class="keyword">    const </span>{ <span class="keywordflow">return</span> m_nColumn_Delta; }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">//  2002.10.07 YAZAKI</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> getCurrentChar(){ <span class="keywordflow">return</span> m_pLine[m_nIndex];   }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//  Jul. 20, 2003 genta 追加</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//  memcpyをするのにポインタがとれないと面倒</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* getCurrentPos(){ <span class="keywordflow">return</span> m_pLine + m_nIndex;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//コンストラクタで受け取ったパラメータ (固定)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*      m_pLine;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>           m_nLineLen;  <span class="comment">//データ長。文字単位。</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">const</span> CLayoutInt    m_nTabSpace;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../de/d46/class_c_tsv_mode_info.html">CTsvModeInfo</a>&amp; m_tsvInfo;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">const</span> CLayoutInt    m_nIndent;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">const</span> CPixelXInt    m_nSpacing;     <span class="comment">//文字隙間(px)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">const</span> CPixelXInt    m_nTabPadding;  <span class="comment">//タブ幅最少値-1</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">const</span> CPixelXInt    m_nTabSpaceDx;  <span class="comment">//タブ幅計算用(m_nTabSpace + m_nTabPadding - 1)</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">//状態変数</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    CLogicInt   m_nIndex;        <span class="comment">//データ位置。文字単位。</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    CLayoutInt  m_nColumn;       <span class="comment">//レイアウト位置。桁(半角幅)単位。</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    CLogicInt   m_nIndex_Delta;  <span class="comment">//index増分</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    CLayoutInt  m_nColumn_Delta; <span class="comment">//column増分</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="a_c_tsv_mode_info_8h_html"><div class="ttname"><a href="../../db/df6/_c_tsv_mode_info_8h.html">CTsvModeInfo.h</a></div><div class="ttdoc">TSVモード管理</div></div>
+<div class="ttc" id="a_c_layout_8h_html"><div class="ttname"><a href="../../d4/d5f/_c_layout_8h.html">CLayout.h</a></div><div class="ttdoc">テキストのレイアウト情報</div></div>
+<div class="ttc" id="aclass_c_memory_iterator_html_a9a8236f1648cb2dbc5b3871751cd7cbc"><div class="ttname"><a href="../../dd/dac/class_c_memory_iterator.html#a9a8236f1648cb2dbc5b3871751cd7cbc">CMemoryIterator::end</a></div><div class="ttdeci">bool end() const</div><div class="ttdef"><b>Definition:</b> CMemoryIterator.h:74</div></div>
+<div class="ttc" id="aclass_c_memory_iterator_html_a47702cb931374496f6f6662c971de383"><div class="ttname"><a href="../../dd/dac/class_c_memory_iterator.html#a47702cb931374496f6f6662c971de383">CMemoryIterator::addDelta</a></div><div class="ttdeci">void addDelta()</div><div class="ttdef"><b>Definition:</b> CMemoryIterator.h:116</div></div>
+<div class="ttc" id="a_c_doc_line_8h_html"><div class="ttname"><a href="../../d1/d31/_c_doc_line_8h.html">CDocLine.h</a></div><div class="ttdoc">文書データ1行</div></div>
+<div class="ttc" id="aclass_c_tsv_mode_info_html"><div class="ttname"><a href="../../de/d46/class_c_tsv_mode_info.html">CTsvModeInfo</a></div><div class="ttdef"><b>Definition:</b> CTsvModeInfo.h:40</div></div>
+<div class="ttc" id="aclass_c_memory_iterator_html"><div class="ttname"><a href="../../dd/dac/class_c_memory_iterator.html">CMemoryIterator</a></div><div class="ttdoc">ブロックコメントデリミタを管理する</div><div class="ttdef"><b>Definition:</b> CMemoryIterator.h:32</div></div>
+<div class="ttc" id="aclass_c_native_w_html_a39458d640443461c185ca3483e4abc4f"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html#a39458d640443461c185ca3483e4abc4f">CNativeW::GetKetaOfChar</a></div><div class="ttdeci">static CKetaXInt GetKetaOfChar(const wchar_t *pData, int nDataLen, int nIdx)</div><div class="ttdoc">指定した位置の文字が半角何個分かを返す</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:365</div></div>
+<div class="ttc" id="aclass_c_layout_html"><div class="ttname"><a href="../../db/d1c/class_c_layout.html">CLayout</a></div><div class="ttdef"><b>Definition:</b> CLayout.h:32</div></div>
+<div class="ttc" id="aclass_c_memory_iterator_html_ac7f27d778d986fbbf149cc8c8d97a3ec"><div class="ttname"><a href="../../dd/dac/class_c_memory_iterator.html#ac7f27d778d986fbbf149cc8c8d97a3ec">CMemoryIterator::first</a></div><div class="ttdeci">void first()</div><div class="ttdoc">桁位置を行の先頭にセット</div><div class="ttdef"><b>Definition:</b> CMemoryIterator.h:63</div></div>
+<div class="ttc" id="aclass_c_layout_html_a7e91dd8855e9cae0203255e9256f4ebb"><div class="ttname"><a href="../../db/d1c/class_c_layout.html#a7e91dd8855e9cae0203255e9256f4ebb">CLayout::GetIndent</a></div><div class="ttdeci">CLayoutInt GetIndent() const</div><div class="ttdoc">このレイアウト行のインデントサイズを取得。単位は半角文字。 CMemoryIterator用</div><div class="ttdef"><b>Definition:</b> CLayout.h:66</div></div>
+<div class="ttc" id="aclass_c_native_w_html_a7fd3229b7083c2d99c18f3a96c0c7c57"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html#a7fd3229b7083c2d99c18f3a96c0c7c57">CNativeW::GetSizeOfChar</a></div><div class="ttdeci">static CLogicInt GetSizeOfChar(const wchar_t *pData, int nDataLen, int nIdx)</div><div class="ttdoc">指定した位置の文字がwchar_t何個分かを返す</div><div class="ttdef"><b>Definition:</b> CNativeW.cpp:348</div></div>
+<div class="ttc" id="aclass_c_doc_line_html"><div class="ttname"><a href="../../d9/d35/class_c_doc_line.html">CDocLine</a></div><div class="ttdoc">文書データ1行</div><div class="ttdef"><b>Definition:</b> CDocLine.h:35</div></div>
+<div class="ttc" id="acharcode_8h_html"><div class="ttname"><a href="../../d4/d86/charcode_8h.html">charcode.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/codeutil.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">codeutil.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;mbstring.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d8a/codeutil_8h_source.html">charset/codeutil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dbd/codechecker_8h_source.html">charset/codechecker.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4e2caed496f5df77e74a481055a94c20"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/codeutil_8cpp.html#a4e2caed496f5df77e74a481055a94c20">SjisFilter_basis</a> (const unsigned int uCode)</td></tr>
+<tr class="separator:a4e2caed496f5df77e74a481055a94c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa041e32dc3c218cf4641ef6f9dea3fe5"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/codeutil_8cpp.html#aa041e32dc3c218cf4641ef6f9dea3fe5">SjisFilter_ibm2nec</a> (const unsigned int uCode)</td></tr>
+<tr class="separator:aa041e32dc3c218cf4641ef6f9dea3fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192b19550f0443ecec769f96c2fc8994"><td class="memItemLeft" align="right" valign="top">unsigned int __fastcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/codeutil_8cpp.html#a192b19550f0443ecec769f96c2fc8994">SjisFilter_nec2ibm</a> (const unsigned int uCode)</td></tr>
+<tr class="separator:a192b19550f0443ecec769f96c2fc8994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a20ba67a34f08dd73379d93bc770251cd"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/codeutil_8cpp.html#a20ba67a34f08dd73379d93bc770251cd">TABLE_WctombSpec</a> []</td></tr>
+<tr class="separator:a20ba67a34f08dd73379d93bc770251cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4e2caed496f5df77e74a481055a94c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2caed496f5df77e74a481055a94c20">&#9670;&nbsp;</a></span>SjisFilter_basis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_basis </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ 2区と13区にある文字の正常化</p>
+<p>2区で定義されている文字を2区へ移動し、13区で定義されていて2区にはない文字を13区へ移動させる。 </p>
+
+</div>
+</div>
+<a id="aa041e32dc3c218cf4641ef6f9dea3fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa041e32dc3c218cf4641ef6f9dea3fe5">&#9670;&nbsp;</a></span>SjisFilter_ibm2nec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_ibm2nec </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ IBM拡張文字 → NEC 選定IBM拡張文字</p>
+<p>IBM 拡張文字をその文字と等価な NEC 選定 IBM 拡張領域のコードポイントへ 可能な限り移動させる。 </p>
+
+</div>
+</div>
+<a id="a192b19550f0443ecec769f96c2fc8994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a192b19550f0443ecec769f96c2fc8994">&#9670;&nbsp;</a></span>SjisFilter_nec2ibm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int __fastcall SjisFilter_nec2ibm </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>uCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS フィルタ NEC 選定IBM拡張文字 → IBM拡張文字</p>
+<p>NEC 選定 IBM 拡張文字をその文字と等価な IBM 拡張文字領域のコードポイントへ 可能な限り移動させる。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a20ba67a34f08dd73379d93bc770251cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ba67a34f08dd73379d93bc770251cd">&#9670;&nbsp;</a></span>TABLE_WctombSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool TABLE_WctombSpec[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    bNA,  <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,  <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,   </div>
+<div class="line">    bNA,  <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    bNA,  bNA,  <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,  <span class="keyword">true</span>, bNA,  <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,  bNA,  bNA,  bNA,   </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,   </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, bNA,   </div>
+<div class="line">    <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>,  </div>
+<div class="line">}</div>
+</div><!-- fragment --><p>判別テーブル WinAPI 関数 WideCharToMultiByte の特殊な変換（相互変換できない変換）か </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/util/tchar_printf.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_5c0539adde09cc41ecf60c3e659bb773.html">util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">tchar_printf.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/de1/tchar__printf_8h_source.html">tchar_printf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d9a/tchar__template_8h_source.html">util/tchar_template.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a2491303d0fe260aaba8f46717cda66cc"><td class="memItemLeft" align="right" valign="top"><a id="a2491303d0fe260aaba8f46717cda66cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_BUF</b>&#160;&#160;&#160;0x7FFFFFFF</td></tr>
+<tr class="separator:a2491303d0fe260aaba8f46717cda66cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae2586f79305629eba4a0b034a268aec6"><td class="memTemplParams" colspan="2"><a id="ae2586f79305629eba4a0b034a268aec6"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae2586f79305629eba4a0b034a268aec6"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is_field_begin</b> (T c)</td></tr>
+<tr class="separator:ae2586f79305629eba4a0b034a268aec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae3581f5ddb77aa60863fa53880badf"><td class="memTemplParams" colspan="2"><a id="a8ae3581f5ddb77aa60863fa53880badf"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8ae3581f5ddb77aa60863fa53880badf"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>skip_field_flag</b> (const T *p)</td></tr>
+<tr class="separator:a8ae3581f5ddb77aa60863fa53880badf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e9a88657c1bc92bddc32fe34a50833"><td class="memTemplParams" colspan="2"><a id="a69e9a88657c1bc92bddc32fe34a50833"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a69e9a88657c1bc92bddc32fe34a50833"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>skip_field_width</b> (const T *p)</td></tr>
+<tr class="separator:a69e9a88657c1bc92bddc32fe34a50833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c22276d6d53ba9e6ad2f37f4511d8b"><td class="memTemplParams" colspan="2"><a id="ad8c22276d6d53ba9e6ad2f37f4511d8b"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad8c22276d6d53ba9e6ad2f37f4511d8b"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>skip_field_precision</b> (const T *p)</td></tr>
+<tr class="separator:ad8c22276d6d53ba9e6ad2f37f4511d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62139d730bcaa3c81209b672f001aade"><td class="memTemplParams" colspan="2"><a id="a62139d730bcaa3c81209b672f001aade"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a62139d730bcaa3c81209b672f001aade"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>skip_field_prefix</b> (const T *p)</td></tr>
+<tr class="separator:a62139d730bcaa3c81209b672f001aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8593c8dec1075c8c72f2a98bb00e5d9f"><td class="memItemLeft" align="right" valign="top"><a id="a8593c8dec1075c8c72f2a98bb00e5d9f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_field_type</b> (char c)</td></tr>
+<tr class="separator:a8593c8dec1075c8c72f2a98bb00e5d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2172a93444ab2e8b13475a7c68c82edb"><td class="memItemLeft" align="right" valign="top"><a id="a2172a93444ab2e8b13475a7c68c82edb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_field_type</b> (wchar_t c)</td></tr>
+<tr class="separator:a2172a93444ab2e8b13475a7c68c82edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3cb680e6d202f23a55ce04501bee990"><td class="memTemplParams" colspan="2"><a id="ad3cb680e6d202f23a55ce04501bee990"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad3cb680e6d202f23a55ce04501bee990"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>tchar_vsprintf_s_imp</b> (T *buf, size_t nBufCount, const T *format, va_list &amp;v, bool truncate)</td></tr>
+<tr class="separator:ad3cb680e6d202f23a55ce04501bee990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a05ddbc47928f1ca5732a50bfce271"><td class="memItemLeft" align="right" valign="top"><a id="aa6a05ddbc47928f1ca5732a50bfce271"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsprintf_s</b> (ACHAR *buf, size_t nBufCount, const ACHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:aa6a05ddbc47928f1ca5732a50bfce271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f56cab26483020592111f7b2c2447b2"><td class="memItemLeft" align="right" valign="top"><a id="a0f56cab26483020592111f7b2c2447b2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsprintf_s</b> (WCHAR *buf, size_t nBufCount, const WCHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:a0f56cab26483020592111f7b2c2447b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a6856a19806352179d9b61677e8569"><td class="memItemLeft" align="right" valign="top"><a id="ac1a6856a19806352179d9b61677e8569"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsprintf</b> (ACHAR *buf, const ACHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:ac1a6856a19806352179d9b61677e8569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe28eeb536dbf93b7f41dba8ed47d748"><td class="memItemLeft" align="right" valign="top"><a id="abe28eeb536dbf93b7f41dba8ed47d748"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsprintf</b> (WCHAR *buf, const WCHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:abe28eeb536dbf93b7f41dba8ed47d748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe73f6f30be9c0d97af811e107db3ea3"><td class="memItemLeft" align="right" valign="top"><a id="afe73f6f30be9c0d97af811e107db3ea3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsnprintf_s</b> (ACHAR *buf, size_t nBufCount, const ACHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:afe73f6f30be9c0d97af811e107db3ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b703d03899c7f03d44219101be32c6"><td class="memItemLeft" align="right" valign="top"><a id="a32b703d03899c7f03d44219101be32c6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_vsnprintf_s</b> (WCHAR *buf, size_t nBufCount, const WCHAR *format, va_list &amp;v)</td></tr>
+<tr class="separator:a32b703d03899c7f03d44219101be32c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca84f1d5d2f067af04dc655c35f497b8"><td class="memItemLeft" align="right" valign="top"><a id="aca84f1d5d2f067af04dc655c35f497b8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_sprintf_s</b> (ACHAR *buf, size_t nBufCount, const ACHAR *format,...)</td></tr>
+<tr class="separator:aca84f1d5d2f067af04dc655c35f497b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21721b62c49f6e6cf9feabf49546ccc2"><td class="memItemLeft" align="right" valign="top"><a id="a21721b62c49f6e6cf9feabf49546ccc2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_sprintf_s</b> (WCHAR *buf, size_t nBufCount, const WCHAR *format,...)</td></tr>
+<tr class="separator:a21721b62c49f6e6cf9feabf49546ccc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9fdb492b779dd64599b35f3806d361"><td class="memItemLeft" align="right" valign="top"><a id="a8e9fdb492b779dd64599b35f3806d361"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_sprintf</b> (ACHAR *buf, const ACHAR *format,...)</td></tr>
+<tr class="separator:a8e9fdb492b779dd64599b35f3806d361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a884d2e53876245fb94972a11ec51a7"><td class="memItemLeft" align="right" valign="top"><a id="a9a884d2e53876245fb94972a11ec51a7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_sprintf</b> (WCHAR *buf, const WCHAR *format,...)</td></tr>
+<tr class="separator:a9a884d2e53876245fb94972a11ec51a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d51c0ceda20e944356c6e49ee7d8e6"><td class="memItemLeft" align="right" valign="top"><a id="a84d51c0ceda20e944356c6e49ee7d8e6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_snprintf_s</b> (ACHAR *buf, size_t count, const ACHAR *format,...)</td></tr>
+<tr class="separator:a84d51c0ceda20e944356c6e49ee7d8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c2ddfc832ce0b439c5a281eef26770"><td class="memItemLeft" align="right" valign="top"><a id="a81c2ddfc832ce0b439c5a281eef26770"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tchar_snprintf_s</b> (WCHAR *buf, size_t count, const WCHAR *format,...)</td></tr>
+<tr class="separator:a81c2ddfc832ce0b439c5a281eef26770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

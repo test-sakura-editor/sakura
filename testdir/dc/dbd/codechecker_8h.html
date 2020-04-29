@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/codechecker.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">codechecker.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文字コード認識・判別支援関数ライブラリ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d2/d49/global_8h_source.html">_main/global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/da2/convert__util2_8h_source.html">convert/convert_util2.h</a>&quot;</code><br />
+</div>
+<p><a href="../../dc/dbd/codechecker_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a9f7b71e45397229948fb84e84150150a"><td class="memItemLeft" align="right" valign="top"><a id="a9f7b71e45397229948fb84e84150150a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_SJIS_ZEN1</b>(x)&#160;&#160;&#160;((unsigned int)((x) ^ 0x20) - 0xa1 &lt; 0x3c)</td></tr>
+<tr class="separator:a9f7b71e45397229948fb84e84150150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0805273747c668ae2ef7ab72f99ede"><td class="memItemLeft" align="right" valign="top"><a id="aac0805273747c668ae2ef7ab72f99ede"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_SJIS_ZEN2</b>(x)&#160;&#160;&#160;(0x40 &lt;= (x) &amp;&amp; (x) &lt;= 0xfc &amp;&amp; (x) != 0x7f)</td></tr>
+<tr class="separator:aac0805273747c668ae2ef7ab72f99ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb77dc2ddb5fa1a4a89a9da17fe58e4e"><td class="memItemLeft" align="right" valign="top"><a id="abb77dc2ddb5fa1a4a89a9da17fe58e4e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_EUCJP_ZEN1</b>(x)&#160;&#160;&#160;( 0xa1 &lt;= (x) &amp;&amp; (x) &lt;= 0xfe )</td></tr>
+<tr class="separator:abb77dc2ddb5fa1a4a89a9da17fe58e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051beb98edb5bc6339d520013449a67b"><td class="memItemLeft" align="right" valign="top"><a id="a051beb98edb5bc6339d520013449a67b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_EUCJP_ZEN2</b>(x)&#160;&#160;&#160;( 0xa1 &lt;= (x) &amp;&amp; (x) &lt;= 0xfe )</td></tr>
+<tr class="separator:a051beb98edb5bc6339d520013449a67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a45bc9a3adefbcf63fbfb19728a2b7e"><td class="memItemLeft" align="right" valign="top"><a id="a1a45bc9a3adefbcf63fbfb19728a2b7e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_EUCJP_HANKATA2</b>(x)&#160;&#160;&#160;( 0xa1 &lt;= (x) &amp;&amp; (x) &lt;= 0xdf )</td></tr>
+<tr class="separator:a1a45bc9a3adefbcf63fbfb19728a2b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3253e09fbebe96a643853f43ad05f54a"><td class="memItemLeft" align="right" valign="top"><a id="a3253e09fbebe96a643853f43ad05f54a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHARCODE__IS_JIS</b>(x)&#160;&#160;&#160;( 0x21 &lt;= (x) &amp;&amp; (x) &lt;= 0x7e )</td></tr>
+<tr class="separator:a3253e09fbebe96a643853f43ad05f54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e386e01caca860da464402cb690d326"><td class="memItemLeft" align="right" valign="top"><a id="a7e386e01caca860da464402cb690d326"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a7e386e01caca860da464402cb690d326">UC_NONCHARACTER</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a7e386e01caca860da464402cb690d326"><td class="mdescLeft">&#160;</td><td class="mdescRight">非文字を不正文字とする <br /></td></tr>
+<tr class="separator:a7e386e01caca860da464402cb690d326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999e202c35b42087b2bb9100483b0887"><td class="memItemLeft" align="right" valign="top"><a id="a999e202c35b42087b2bb9100483b0887"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UC_LOOSE</b>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a999e202c35b42087b2bb9100483b0887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a8924dff298f089b18ae98a554a808962"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962aa394ace9d4312e027241736c17bdf534">CHARSET_BINARY</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a3b422049e7257de4b0d5c936270d0653">CHARSET_ASCII7</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a0f7708b4f0efa1f95bb4cc6e4e1d0519">CHARSET_JIS_HANKATA</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a4bc494815f593df20f57d61673af0bd4">CHARSET_JIS_ZENKAKU</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6e2e01fbb943d5fec06669571f547e77">CHARSET_JIS_SUPPLEMENTAL</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01">CHARSET_UNI_NORMAL</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36">CHARSET_UNI_SURROG</a>, 
+<a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962a03f5f0f975c554b4565bf425d741aab0">CHARSET_BINARY2</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8924dff298f089b18ae98a554a808962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dd7069317eedbf3e3bfc1c43ec1ddf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ae0dd7069317eedbf3e3bfc1c43ec1ddf">EJisEscseq</a> { <br />
+&#160;&#160;<b>JISESC_UNKNOWN</b>, 
+<b>JISESC_ASCII</b>, 
+<b>JISESC_JISX0201Latin</b>, 
+<b>JISESC_JISX0201Latin_OLD</b>, 
+<br />
+&#160;&#160;<b>JISESC_JISX0201Katakana</b>, 
+<b>JISESC_JISX0208_1978</b>, 
+<b>JISESC_JISX0208_1983</b>, 
+<b>JISESC_JISX0208_1990</b>
+<br />
+ }</td></tr>
+<tr class="separator:ae0dd7069317eedbf3e3bfc1c43ec1ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3939d7eee95907fc0e2f98d7a88551f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> { <br />
+&#160;&#160;<b>MYJISESC_NONE</b>, 
+<b>MYJISESC_ASCII7</b>, 
+<b>MYJISESC_HANKATA</b>, 
+<b>MYJISESC_ZENKAKU</b>, 
+<br />
+&#160;&#160;<b>MYJISESC_UNKNOWN</b>
+<br />
+ }</td></tr>
+<tr class="separator:a3939d7eee95907fc0e2f98d7a88551f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975c6640b1eda336b16e925d73a221d5"><td class="memItemLeft" align="right" valign="top"><a id="a975c6640b1eda336b16e925d73a221d5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>EJisChecker</b> { <b>JISCHECK_ASCII7</b>, 
+<b>JISCHECK_HANKATA</b>, 
+<b>JISCHECK_ZENKAKU</b>, 
+<b>JISCHECK_UNKNOWN</b> = -1
+ }</td></tr>
+<tr class="separator:a975c6640b1eda336b16e925d73a221d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a234db72f5548482d57a403ee971cbd18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a234db72f5548482d57a403ee971cbd18">IsUnicodeNoncharacter</a> (const wchar32_t wc)</td></tr>
+<tr class="separator:a234db72f5548482d57a403ee971cbd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06a7b358b2d38b8a78fcdba889b9d85"><td class="memTemplParams" colspan="2"><a id="ae06a7b358b2d38b8a78fcdba889b9d85"></a>
+template&lt;typename Tchar &gt; </td></tr>
+<tr class="memitem:ae06a7b358b2d38b8a78fcdba889b9d85"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ae06a7b358b2d38b8a78fcdba889b9d85">IsAscii7</a> (const Tchar c)</td></tr>
+<tr class="memdesc:ae06a7b358b2d38b8a78fcdba889b9d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">7bit ASCII か <br /></td></tr>
+<tr class="separator:ae06a7b358b2d38b8a78fcdba889b9d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb84b93f67bb7ac36b494863ecc892c0"><td class="memItemLeft" align="right" valign="top"><a id="abb84b93f67bb7ac36b494863ecc892c0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#abb84b93f67bb7ac36b494863ecc892c0">IsSjisZen1</a> (const char c)</td></tr>
+<tr class="memdesc:abb84b93f67bb7ac36b494863ecc892c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS 全角文字 1 バイト目か <br /></td></tr>
+<tr class="separator:abb84b93f67bb7ac36b494863ecc892c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9455141e9babce1c599d14bfff002e"><td class="memItemLeft" align="right" valign="top"><a id="acc9455141e9babce1c599d14bfff002e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#acc9455141e9babce1c599d14bfff002e">IsSjisZen2</a> (const char c)</td></tr>
+<tr class="memdesc:acc9455141e9babce1c599d14bfff002e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS 全角文字 2 バイト目か <br /></td></tr>
+<tr class="separator:acc9455141e9babce1c599d14bfff002e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbe641b89d72fd8652a19210e4122d4"><td class="memItemLeft" align="right" valign="top"><a id="a5cbe641b89d72fd8652a19210e4122d4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a5cbe641b89d72fd8652a19210e4122d4">IsSjisZen</a> (const char *pC)</td></tr>
+<tr class="memdesc:a5cbe641b89d72fd8652a19210e4122d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS 全角文字か <br /></td></tr>
+<tr class="separator:a5cbe641b89d72fd8652a19210e4122d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63766c0136c077a904bb8c004c299461"><td class="memItemLeft" align="right" valign="top"><a id="a63766c0136c077a904bb8c004c299461"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_IS_SJIS_1</b> (unsigned char c)</td></tr>
+<tr class="separator:a63766c0136c077a904bb8c004c299461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c0a30086c2feaab95e77dbd9e2d2c6"><td class="memItemLeft" align="right" valign="top"><a id="a94c0a30086c2feaab95e77dbd9e2d2c6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_IS_SJIS_2</b> (unsigned char c)</td></tr>
+<tr class="separator:a94c0a30086c2feaab95e77dbd9e2d2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd275740a385285295d3d4ac5933a11"><td class="memItemLeft" align="right" valign="top"><a id="a8dd275740a385285295d3d4ac5933a11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_IS_SJIS_1</b> (char c)</td></tr>
+<tr class="separator:a8dd275740a385285295d3d4ac5933a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fb8eab8834d4d87ec013f4dea3e18c"><td class="memItemLeft" align="right" valign="top"><a id="a70fb8eab8834d4d87ec013f4dea3e18c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_IS_SJIS_2</b> (char c)</td></tr>
+<tr class="separator:a70fb8eab8834d4d87ec013f4dea3e18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739d2722a7c9c1e85e5dc54f3c3367f3"><td class="memItemLeft" align="right" valign="top"><a id="a739d2722a7c9c1e85e5dc54f3c3367f3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>my_iskanji1</b> (int c)</td></tr>
+<tr class="separator:a739d2722a7c9c1e85e5dc54f3c3367f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7067c87fbdb2f5e177d924c9c8d36a6"><td class="memItemLeft" align="right" valign="top"><a id="af7067c87fbdb2f5e177d924c9c8d36a6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>my_iskanji2</b> (int c)</td></tr>
+<tr class="separator:af7067c87fbdb2f5e177d924c9c8d36a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc65de65739a6e72a09c2c13cd20136c"><td class="memItemLeft" align="right" valign="top"><a id="adc65de65739a6e72a09c2c13cd20136c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#adc65de65739a6e72a09c2c13cd20136c">IsSjisHankata</a> (const char c)</td></tr>
+<tr class="memdesc:adc65de65739a6e72a09c2c13cd20136c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS 半角カタカナか <br /></td></tr>
+<tr class="separator:adc65de65739a6e72a09c2c13cd20136c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc37c3b9e9cfe0b7bad46c9a17149177"><td class="memItemLeft" align="right" valign="top"><a id="abc37c3b9e9cfe0b7bad46c9a17149177"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#abc37c3b9e9cfe0b7bad46c9a17149177">IsEucjpZen1</a> (const char c)</td></tr>
+<tr class="memdesc:abc37c3b9e9cfe0b7bad46c9a17149177"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 全角文字 1 バイト目か <br /></td></tr>
+<tr class="separator:abc37c3b9e9cfe0b7bad46c9a17149177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0e6c4a57fb2d9013db37686d9ca939"><td class="memItemLeft" align="right" valign="top"><a id="a4a0e6c4a57fb2d9013db37686d9ca939"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a4a0e6c4a57fb2d9013db37686d9ca939">IsEucjpZen2</a> (const char c)</td></tr>
+<tr class="memdesc:a4a0e6c4a57fb2d9013db37686d9ca939"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 全角文字 2 バイト目か <br /></td></tr>
+<tr class="separator:a4a0e6c4a57fb2d9013db37686d9ca939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fae12c30413292bc0ca99bb9efe8089"><td class="memItemLeft" align="right" valign="top"><a id="a8fae12c30413292bc0ca99bb9efe8089"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8fae12c30413292bc0ca99bb9efe8089">IsEucjpZen</a> (const char *pC)</td></tr>
+<tr class="memdesc:a8fae12c30413292bc0ca99bb9efe8089"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 全角文字か <br /></td></tr>
+<tr class="separator:a8fae12c30413292bc0ca99bb9efe8089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81eb22dba0e70b7c8ae2273c396ebdd3"><td class="memItemLeft" align="right" valign="top"><a id="a81eb22dba0e70b7c8ae2273c396ebdd3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEucZen_hirakata</b> (const char *pC)</td></tr>
+<tr class="separator:a81eb22dba0e70b7c8ae2273c396ebdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b82aca4e5e2cf79f74d8f26d83e0a76"><td class="memItemLeft" align="right" valign="top"><a id="a0b82aca4e5e2cf79f74d8f26d83e0a76"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a0b82aca4e5e2cf79f74d8f26d83e0a76">IsEucjpSupplemtal</a> (const char *pC)</td></tr>
+<tr class="memdesc:a0b82aca4e5e2cf79f74d8f26d83e0a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 全角文字　補助漢字か <br /></td></tr>
+<tr class="separator:a0b82aca4e5e2cf79f74d8f26d83e0a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6cc84dbdc07a37f392f1ada852e8327"><td class="memItemLeft" align="right" valign="top"><a id="aa6cc84dbdc07a37f392f1ada852e8327"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#aa6cc84dbdc07a37f392f1ada852e8327">IsEucjpHankata2</a> (const char c)</td></tr>
+<tr class="memdesc:aa6cc84dbdc07a37f392f1ada852e8327"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 半角カタカナ文字 2 バイト目か added by genta <br /></td></tr>
+<tr class="separator:aa6cc84dbdc07a37f392f1ada852e8327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6afd079cb930b1106a4984fb133e70c"><td class="memItemLeft" align="right" valign="top"><a id="ad6afd079cb930b1106a4984fb133e70c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ad6afd079cb930b1106a4984fb133e70c">IsEucjpHankata</a> (const char *pC)</td></tr>
+<tr class="memdesc:ad6afd079cb930b1106a4984fb133e70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP 半角カタカナ文字か <br /></td></tr>
+<tr class="separator:ad6afd079cb930b1106a4984fb133e70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42ed3c269af53eee82ad8ab749742cc"><td class="memItemLeft" align="right" valign="top"><a id="ad42ed3c269af53eee82ad8ab749742cc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ad42ed3c269af53eee82ad8ab749742cc">IsJis</a> (const char c)</td></tr>
+<tr class="memdesc:ad42ed3c269af53eee82ad8ab749742cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISO-2022-JP(JIS) か <br /></td></tr>
+<tr class="separator:ad42ed3c269af53eee82ad8ab749742cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e74330e4f5c36a38a33c86eb2541885"><td class="memItemLeft" align="right" valign="top"><a id="a4e74330e4f5c36a38a33c86eb2541885"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a4e74330e4f5c36a38a33c86eb2541885">IsJisHankata</a> (const char c)</td></tr>
+<tr class="memdesc:a4e74330e4f5c36a38a33c86eb2541885"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISO-2022-JP(JIS) 半角カタカナ文字か <br /></td></tr>
+<tr class="separator:a4e74330e4f5c36a38a33c86eb2541885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7576bcad0df57ba6915c4839853469e7"><td class="memItemLeft" align="right" valign="top"><a id="a7576bcad0df57ba6915c4839853469e7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a7576bcad0df57ba6915c4839853469e7">IsJisZen</a> (const char *pC)</td></tr>
+<tr class="memdesc:a7576bcad0df57ba6915c4839853469e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISO-2022-JP(JIS) 全角文字か <br /></td></tr>
+<tr class="separator:a7576bcad0df57ba6915c4839853469e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41822b26ff81a36e7b6dd0200e75fc30"><td class="memItemLeft" align="right" valign="top"><a id="a41822b26ff81a36e7b6dd0200e75fc30"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a41822b26ff81a36e7b6dd0200e75fc30">IsUtf16SurrogHi</a> (const wchar_t wc)</td></tr>
+<tr class="memdesc:a41822b26ff81a36e7b6dd0200e75fc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF16 上位サロゲートか <br /></td></tr>
+<tr class="separator:a41822b26ff81a36e7b6dd0200e75fc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b8b418db1ea9b4b193006e27435c14"><td class="memItemLeft" align="right" valign="top"><a id="aa0b8b418db1ea9b4b193006e27435c14"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#aa0b8b418db1ea9b4b193006e27435c14">IsUtf16SurrogLow</a> (const wchar_t wc)</td></tr>
+<tr class="memdesc:aa0b8b418db1ea9b4b193006e27435c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF16 下位サロゲート文字か <br /></td></tr>
+<tr class="separator:aa0b8b418db1ea9b4b193006e27435c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2a6681d1a6db192c69cb080d66ec15"><td class="memItemLeft" align="right" valign="top"><a id="a5a2a6681d1a6db192c69cb080d66ec15"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a5a2a6681d1a6db192c69cb080d66ec15">IsUtf8SurrogHi</a> (const char *pS)</td></tr>
+<tr class="memdesc:a5a2a6681d1a6db192c69cb080d66ec15"><td class="mdescLeft">&#160;</td><td class="mdescRight">UtF-8版 上位サロゲートか <br /></td></tr>
+<tr class="separator:a5a2a6681d1a6db192c69cb080d66ec15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208f6ff14448da53beec9f2d06b2f451"><td class="memItemLeft" align="right" valign="top"><a id="a208f6ff14448da53beec9f2d06b2f451"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a208f6ff14448da53beec9f2d06b2f451">IsUtf8SurrogLow</a> (const char *pS)</td></tr>
+<tr class="memdesc:a208f6ff14448da53beec9f2d06b2f451"><td class="mdescLeft">&#160;</td><td class="mdescRight">UtF-8版 下位サロゲートか <br /></td></tr>
+<tr class="separator:a208f6ff14448da53beec9f2d06b2f451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d6c1fc3eeabb6404b4edc5edfcd016"><td class="memTemplParams" colspan="2"><a id="a39d6c1fc3eeabb6404b4edc5edfcd016"></a>
+template&lt;typename CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a39d6c1fc3eeabb6404b4edc5edfcd016"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a39d6c1fc3eeabb6404b4edc5edfcd016">IsUtf7SetD</a> (const CHAR_TYPE c)</td></tr>
+<tr class="memdesc:a39d6c1fc3eeabb6404b4edc5edfcd016"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-7 Set D の文字か <br /></td></tr>
+<tr class="separator:a39d6c1fc3eeabb6404b4edc5edfcd016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f2848e911c79b68b6ab7495e48c14e"><td class="memTemplParams" colspan="2"><a id="af4f2848e911c79b68b6ab7495e48c14e"></a>
+template&lt;typename CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:af4f2848e911c79b68b6ab7495e48c14e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#af4f2848e911c79b68b6ab7495e48c14e">IsUtf7SetO</a> (const CHAR_TYPE c)</td></tr>
+<tr class="memdesc:af4f2848e911c79b68b6ab7495e48c14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-7 Set O の文字か <br /></td></tr>
+<tr class="separator:af4f2848e911c79b68b6ab7495e48c14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a9fc1494547819dbb7d45465a6adcd"><td class="memTemplParams" colspan="2"><a id="a88a9fc1494547819dbb7d45465a6adcd"></a>
+template&lt;typename CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a88a9fc1494547819dbb7d45465a6adcd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a88a9fc1494547819dbb7d45465a6adcd">IsUtf7Direct</a> (const CHAR_TYPE c)</td></tr>
+<tr class="memdesc:a88a9fc1494547819dbb7d45465a6adcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-7 で直接エンコードされ得る文字か <br /></td></tr>
+<tr class="separator:a88a9fc1494547819dbb7d45465a6adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de43805d2bcfc2d24ed8ee5e6ad5faa"><td class="memTemplParams" colspan="2"><a id="a7de43805d2bcfc2d24ed8ee5e6ad5faa"></a>
+template&lt;class CHAR_TYPE &gt; </td></tr>
+<tr class="memitem:a7de43805d2bcfc2d24ed8ee5e6ad5faa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a7de43805d2bcfc2d24ed8ee5e6ad5faa">IsBase64</a> (const CHAR_TYPE c)</td></tr>
+<tr class="memdesc:a7de43805d2bcfc2d24ed8ee5e6ad5faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-7 Set B (Modified BASE64) の文字か <br /></td></tr>
+<tr class="separator:a7de43805d2bcfc2d24ed8ee5e6ad5faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0809c99f1cadc1d67d443e60e6d76097"><td class="memItemLeft" align="right" valign="top"><a id="a0809c99f1cadc1d67d443e60e6d76097"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsBinaryOnSurrogate</b> (const wchar_t wc)</td></tr>
+<tr class="separator:a0809c99f1cadc1d67d443e60e6d76097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47dd31064ddfd6439d32076bd8be7767"><td class="memItemLeft" align="right" valign="top"><a id="a47dd31064ddfd6439d32076bd8be7767"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a47dd31064ddfd6439d32076bd8be7767">IsUTF16High</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a47dd31064ddfd6439d32076bd8be7767"><td class="mdescLeft">&#160;</td><td class="mdescRight">高位サロゲートエリアか？ from ssrc_2004-06-05wchar00703b 2008/5/15 Uchi <br /></td></tr>
+<tr class="separator:a47dd31064ddfd6439d32076bd8be7767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a642ca79dc72df6eff0543e43deef35"><td class="memItemLeft" align="right" valign="top"><a id="a5a642ca79dc72df6eff0543e43deef35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a5a642ca79dc72df6eff0543e43deef35">IsUTF16Low</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a5a642ca79dc72df6eff0543e43deef35"><td class="mdescLeft">&#160;</td><td class="mdescRight">下位サロゲートエリアか？ from ssrc_2004-06-05wchar00703b 2008/5/15 Uchi <br /></td></tr>
+<tr class="separator:a5a642ca79dc72df6eff0543e43deef35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581af0a9f5632bbe2f3af6aa1384042f"><td class="memItemLeft" align="right" valign="top"><a id="a581af0a9f5632bbe2f3af6aa1384042f"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a581af0a9f5632bbe2f3af6aa1384042f">_SwapHLByte</a> (const unsigned short wc)</td></tr>
+<tr class="memdesc:a581af0a9f5632bbe2f3af6aa1384042f"><td class="mdescLeft">&#160;</td><td class="mdescRight">上位バイトと下位バイトを交換 (主に UTF-16 LE/BE 向け) <br /></td></tr>
+<tr class="separator:a581af0a9f5632bbe2f3af6aa1384042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef24ae441bca4353041e3bc4924478f"><td class="memItemLeft" align="right" valign="top"><a id="aeef24ae441bca4353041e3bc4924478f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#aeef24ae441bca4353041e3bc4924478f">GuessSjisCharsz</a> (const char uc)</td></tr>
+<tr class="memdesc:aeef24ae441bca4353041e3bc4924478f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SJIS の文字長を推測 <br /></td></tr>
+<tr class="separator:aeef24ae441bca4353041e3bc4924478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d0a41d652589893d331a590040f99b"><td class="memItemLeft" align="right" valign="top"><a id="a66d0a41d652589893d331a590040f99b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a66d0a41d652589893d331a590040f99b">GuessUtf16Charsz</a> (const wchar_t wc)</td></tr>
+<tr class="memdesc:a66d0a41d652589893d331a590040f99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-16 の文字長を推測（組み合わせ文字列の考慮なし） <br /></td></tr>
+<tr class="separator:a66d0a41d652589893d331a590040f99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818cffadd10262b0c50eacb4a4e6b977"><td class="memItemLeft" align="right" valign="top"><a id="a818cffadd10262b0c50eacb4a4e6b977"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a818cffadd10262b0c50eacb4a4e6b977">GuessUtf8Charsz</a> (const char uc_)</td></tr>
+<tr class="memdesc:a818cffadd10262b0c50eacb4a4e6b977"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8 の文字長を推測（組み合わせ文字列の考慮なし） <br /></td></tr>
+<tr class="separator:a818cffadd10262b0c50eacb4a4e6b977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab324bf15300c7db2a3e51528ae405500"><td class="memItemLeft" align="right" valign="top"><a id="ab324bf15300c7db2a3e51528ae405500"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ab324bf15300c7db2a3e51528ae405500">GuessCesu8Charsz</a> (const char uc_)</td></tr>
+<tr class="memdesc:ab324bf15300c7db2a3e51528ae405500"><td class="mdescLeft">&#160;</td><td class="mdescRight">CESU-8 の文字長を推測 <br /></td></tr>
+<tr class="separator:ab324bf15300c7db2a3e51528ae405500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e31c00af93b2bfa5056a4d0730d169"><td class="memItemLeft" align="right" valign="top"><a id="ae4e31c00af93b2bfa5056a4d0730d169"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ae4e31c00af93b2bfa5056a4d0730d169">GuessEucjpCharsz</a> (const char uc_)</td></tr>
+<tr class="memdesc:ae4e31c00af93b2bfa5056a4d0730d169"><td class="mdescLeft">&#160;</td><td class="mdescRight">EUCJP の文字長を推測 <br /></td></tr>
+<tr class="separator:ae4e31c00af93b2bfa5056a4d0730d169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f7282d13c2fa6b20eb76d19b9351ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a31f7282d13c2fa6b20eb76d19b9351ad">CheckSjisChar</a> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *)</td></tr>
+<tr class="separator:a31f7282d13c2fa6b20eb76d19b9351ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6918162a5b2283be15912e8c425ec23a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a6918162a5b2283be15912e8c425ec23a">CheckEucjpChar</a> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *)</td></tr>
+<tr class="separator:a6918162a5b2283be15912e8c425ec23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47370ae5cc97efe56d6410e5bce077b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#ae47370ae5cc97efe56d6410e5bce077b">DetectJisEscseq</a> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *)</td></tr>
+<tr class="separator:ae47370ae5cc97efe56d6410e5bce077b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7476f54b79203a5701486010319a77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a4b7476f54b79203a5701486010319a77">_CheckJisAnyPart</a> (const char *, const int, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount, const int nType)</td></tr>
+<tr class="separator:a4b7476f54b79203a5701486010319a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f00256cabb641a2090c450af8940e08"><td class="memItemLeft" align="right" valign="top"><a id="a3f00256cabb641a2090c450af8940e08"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckJisAscii7Part</b> (const char *pS, const int nLen, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount)</td></tr>
+<tr class="separator:a3f00256cabb641a2090c450af8940e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2380331d76e552cfed3511448b66ae89"><td class="memItemLeft" align="right" valign="top"><a id="a2380331d76e552cfed3511448b66ae89"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckJisHankataPart</b> (const char *pS, const int nLen, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount)</td></tr>
+<tr class="separator:a2380331d76e552cfed3511448b66ae89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86741f8c48481cab38dfb78a5cd78971"><td class="memItemLeft" align="right" valign="top"><a id="a86741f8c48481cab38dfb78a5cd78971"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckJisZenkakuPart</b> (const char *pS, const int nLen, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount)</td></tr>
+<tr class="separator:a86741f8c48481cab38dfb78a5cd78971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f781f86d5338d0e7ea011b3f4e11da4"><td class="memItemLeft" align="right" valign="top"><a id="a9f781f86d5338d0e7ea011b3f4e11da4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckJisUnknownPart</b> (const char *pS, const int nLen, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount)</td></tr>
+<tr class="separator:a9f781f86d5338d0e7ea011b3f4e11da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82361793319a64603ca9342e93a424c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a82361793319a64603ca9342e93a424c2">_CheckUtf16Char</a> (const wchar_t *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *, const int nOption, const bool bBigEndian)</td></tr>
+<tr class="separator:a82361793319a64603ca9342e93a424c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199a43b5ed3f85d4ade4695f316e8f0c"><td class="memItemLeft" align="right" valign="top"><a id="a199a43b5ed3f85d4ade4695f316e8f0c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckUtf16leChar</b> (const wchar_t *p, const int n, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *e, const int o)</td></tr>
+<tr class="separator:a199a43b5ed3f85d4ade4695f316e8f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba56d07a60b21a433e5abab7bd873ecc"><td class="memItemLeft" align="right" valign="top"><a id="aba56d07a60b21a433e5abab7bd873ecc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckUtf16beChar</b> (const wchar_t *p, const int n, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *e, const int o)</td></tr>
+<tr class="separator:aba56d07a60b21a433e5abab7bd873ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5673a65e9507ff6a4809612ef2ec12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a0e5673a65e9507ff6a4809612ef2ec12">CheckUtf8Char</a> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *, const bool bAllow4byteCode, const int nOption)</td></tr>
+<tr class="separator:a0e5673a65e9507ff6a4809612ef2ec12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5866c49a92b062a3ead1420d66de6fd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a5866c49a92b062a3ead1420d66de6fd0">CheckUtf8Char2</a> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *, const bool bAllow4byteCode, const int nOption)</td></tr>
+<tr class="separator:a5866c49a92b062a3ead1420d66de6fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508a144791dbc48b862ea9099a5678ec"><td class="memItemLeft" align="right" valign="top"><a id="a508a144791dbc48b862ea9099a5678ec"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckCesu8Char</b> (const char *, const int, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *, const int nOption)</td></tr>
+<tr class="separator:a508a144791dbc48b862ea9099a5678ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4038472f43ecdac0326c12a08272f73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#af4038472f43ecdac0326c12a08272f73">CheckUtf7DPart</a> (const char *, const int, char **ppNextChar, bool *pbError)</td></tr>
+<tr class="separator:af4038472f43ecdac0326c12a08272f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e88e13f8d52d1aeb40f5f308269dd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dbd/codechecker_8h.html#a31e88e13f8d52d1aeb40f5f308269dd6">CheckUtf7BPart</a> (const char *, const int, char **ppNextChar, bool *pbError, const int nOption, bool *pbNoAddPoint=NULL)</td></tr>
+<tr class="separator:a31e88e13f8d52d1aeb40f5f308269dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ab8668e6c9f1f586242682319e58c011c"><td class="memItemLeft" align="right" valign="top"><a id="ab8668e6c9f1f586242682319e58c011c"></a>
+const char&#160;</td><td class="memItemRight" valign="bottom"><b>TABLE_IsUtf7Direct</b> []</td></tr>
+<tr class="separator:ab8668e6c9f1f586242682319e58c011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文字コード認識・判別支援関数ライブラリ </p>
+<dl class="section author"><dt>著者</dt><dd>Sakura-Editor collaborators </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/03/06 新規作成 </dd>
+<dd>
+2006/03/06 名称変更（旧名：文字コード定数の定義） </dd>
+<dd>
+2007/03/19 名称改定（旧名：文字コード認識ライブラリ） </dd></dl>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="a8924dff298f089b18ae98a554a808962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8924dff298f089b18ae98a554a808962">&#9670;&nbsp;</a></span>ECharSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>認識する文字コード種別</p>
+<p>内部的に認識する文字集合 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962aa394ace9d4312e027241736c17bdf534"></a>CHARSET_BINARY&#160;</td><td class="fielddoc"><p>任意値 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a3b422049e7257de4b0d5c936270d0653"></a>CHARSET_ASCII7&#160;</td><td class="fielddoc"><p>7ビット ASCII 文字 (ISO/IEC 646 IRV) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a0f7708b4f0efa1f95bb4cc6e4e1d0519"></a>CHARSET_JIS_HANKATA&#160;</td><td class="fielddoc"><p>日本語の半角カタカナ文字 (JIS X 0201) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a4bc494815f593df20f57d61673af0bd4"></a>CHARSET_JIS_ZENKAKU&#160;</td><td class="fielddoc"><p>日本語の全角文字 (JIS X 0208 ＋ MS 拡張文字) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a6e2e01fbb943d5fec06669571f547e77"></a>CHARSET_JIS_SUPPLEMENTAL&#160;</td><td class="fielddoc"><p>日本語の補助漢字文字 (JIS X 0213) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a6c327dfc60291ad5756b6ee06039ce01"></a>CHARSET_UNI_NORMAL&#160;</td><td class="fielddoc"><p>サロゲート領域を除いたユニコード文字 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a92aca065444b69c173b28690a370cc36"></a>CHARSET_UNI_SURROG&#160;</td><td class="fielddoc"><p>ユニコードのサロゲート領域にある文字 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8924dff298f089b18ae98a554a808962a03f5f0f975c554b4565bf425d741aab0"></a>CHARSET_BINARY2&#160;</td><td class="fielddoc"><p>文字列断片(継続用) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae0dd7069317eedbf3e3bfc1c43ec1ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0dd7069317eedbf3e3bfc1c43ec1ddf">&#9670;&nbsp;</a></span>EJisEscseq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/dbd/codechecker_8h.html#ae0dd7069317eedbf3e3bfc1c43ec1ddf">EJisEscseq</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>JIS コードのエスケープシーケンスたち</p>
+<dl class="section note"><dt>覚え書き</dt><dd>順番変えると危険 </dd></dl>
+
+</div>
+</div>
+<a id="a3939d7eee95907fc0e2f98d7a88551f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3939d7eee95907fc0e2f98d7a88551f1">&#9670;&nbsp;</a></span>EMyJisEscseq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>内部的に認識する JIS エスケープシーケンスの種類 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a4b7476f54b79203a5701486010319a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7476f54b79203a5701486010319a77">&#9670;&nbsp;</a></span>_CheckJisAnyPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _CheckJisAnyPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *&#160;</td>
+          <td class="paramname"><em>peNextEsc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnErrorCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>JIS 文字列をチェック</p>
+<p>今のエスケープシーケンスから次のエスケープシーケンスに変わる間をブロックと便宜的に呼んでいます。 </p>
+
+</div>
+</div>
+<a id="a82361793319a64603ca9342e93a424c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82361793319a64603ca9342e93a424c2">&#9670;&nbsp;</a></span>_CheckUtf16Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _CheckUtf16Char </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bBigEndian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-16 LE/BE 文字をチェック　(組み合わせ文字列考慮なし) </p>
+
+</div>
+</div>
+<a id="a6918162a5b2283be15912e8c425ec23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6918162a5b2283be15912e8c425ec23a">&#9670;&nbsp;</a></span>CheckEucjpChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckEucjpChar </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>EUC-JP 文字をチェック</p>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="../../d7/d76/codechecker_8cpp.html#a043f7cd6db4b93f3e647751c775df01d">CheckSjisChar()</a></dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.09.23 EUCJP 半角カタカナ判別が間違っていたのを修正．genta </dd></dl>
+
+</div>
+</div>
+<a id="a31f7282d13c2fa6b20eb76d19b9351ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f7282d13c2fa6b20eb76d19b9351ad">&#9670;&nbsp;</a></span>CheckSjisChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckSjisChar </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS 文字をチェック</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnCharset</td><td>確認した文字コードの種別が格納される</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>確認した文字の長さ </dd></dl>
+
+</div>
+</div>
+<a id="a31e88e13f8d52d1aeb40f5f308269dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e88e13f8d52d1aeb40f5f308269dd6">&#9670;&nbsp;</a></span>CheckUtf7BPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf7BPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbError</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbNoAddPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-7 セットＢの文字列か</p>
+<dl class="section return"><dt>戻り値</dt><dd>セットＢ文字列の長さ</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppNextChar</td><td>次のブロック（UTF-7セットD部分）の先頭文字のポインタが格納される（文字'-'を飛ばす）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>この関数の前に <a class="el" href="../../d7/d76/codechecker_8cpp.html#adb22799b8345ec04adba4e95e9defec1">CheckUtf7DPart()</a> が実行される必要がある。 </dd></dl>
+
+</div>
+</div>
+<a id="af4038472f43ecdac0326c12a08272f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4038472f43ecdac0326c12a08272f73">&#9670;&nbsp;</a></span>CheckUtf7DPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf7DPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbError</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-7 セットＤの文字列か</p>
+<dl class="section return"><dt>戻り値</dt><dd>セットＤの文字列の長さ</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppNextChar</td><td>次のブロック（UTF-7セットB部分）の先頭文字のポインタが格納される。（'+'を飛ばす）</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>pbError を NULL 以外に設定していて、pbError に true が格納された場合、 戻り値と ppNextChar に格納されるポインタは使えない。 1つ以上のエラーが見つかれば候補から外れるのでそういう適当な仕様に。 </p>
+
+</div>
+</div>
+<a id="a0e5673a65e9507ff6a4809612ef2ec12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5673a65e9507ff6a4809612ef2ec12">&#9670;&nbsp;</a></span>CheckUtf8Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf8Char </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bAllow4byteCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-8 文字をチェック　(組み合わせ文字列考慮なし)</p>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="../../d7/d76/codechecker_8cpp.html#a043f7cd6db4b93f3e647751c775df01d">CheckSjisChar()</a></dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2008/11/01 syat UTF8ファイルで欧米の特殊文字が読み込めない不具合を修正 </dd></dl>
+
+</div>
+</div>
+<a id="a5866c49a92b062a3ead1420d66de6fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5866c49a92b062a3ead1420d66de6fd0">&#9670;&nbsp;</a></span>CheckUtf8Char2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf8Char2 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bAllow4byteCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-8 文字をチェック　(組み合わせ文字列考慮なし)</p>
+<dl class="section note"><dt>覚え書き</dt><dd>途中までUTF-8のエンコーディングが合っていれば、CHARSET_BINARY2を設定する</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2015.12.30 novice 第１バイトが11110abbのとき、nLenより大きい値を返すのを修正 </dd></dl>
+
+</div>
+</div>
+<a id="ae47370ae5cc97efe56d6410e5bce077b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae47370ae5cc97efe56d6410e5bce077b">&#9670;&nbsp;</a></span>DetectJisEscseq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DetectJisEscseq </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *&#160;</td>
+          <td class="paramname"><em>peEscType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>JIS の エスケープ文字列を検出する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pS</td><td>調査データ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLen</td><td>調査データ長 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">peEscType</td><td>検出されたエスケープ文字列の種類</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">n</td><td>== 0 調査データがない </td></tr>
+    <tr><td class="paramname">n</td><td>&gt; 0 エスケープシーケンスの長さ </td></tr>
+    <tr><td class="paramname">n</td><td>&lt; 0 エスケープシーケンスが検出されなかった</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>戻り値がゼロより大きい場合に限り，*pnEscType が更新される．<br  />
+ pnEscType は NULL でも良い．<br  />
+</dd></dl>
+
+</div>
+</div>
+<a id="a234db72f5548482d57a403ee971cbd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234db72f5548482d57a403ee971cbd18">&#9670;&nbsp;</a></span>IsUnicodeNoncharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsUnicodeNoncharacter </td>
+          <td>(</td>
+          <td class="paramtype">const wchar32_t&#160;</td>
+          <td class="paramname"><em>wc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unicode の Noncharacter を確認</p>
+<p>参考資料：http://unicode.org/versions/Unicode4.0.0/ch15.pdf </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

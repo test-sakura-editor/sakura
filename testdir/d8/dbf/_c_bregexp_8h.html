@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/extmodule/CBregexp.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2ec910363d65229279bd9bee590782c4.html">extmodule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CBregexp.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>BREGEXP Library Handler  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/d90/_c_bregexp_dll2_8h_source.html">CBregexpDll2.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d8/dbf/_c_bregexp_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da1/class_c_bregexp.html">CBregexp</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perl互換正規表現 BREGEXP.DLL をサポートするクラス  <a href="../../d7/da1/class_c_bregexp.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5729e556c1095012c2d5aef8b7390771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbf/_c_bregexp_8h.html#a5729e556c1095012c2d5aef8b7390771">CheckRegexpVersion</a> (HWND hWnd, int nCmpId, bool bShowMsg=false)</td></tr>
+<tr class="memdesc:a5729e556c1095012c2d5aef8b7390771"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規表現ライブラリのバージョン取得  <a href="../../d8/dbf/_c_bregexp_8h.html#a5729e556c1095012c2d5aef8b7390771">[詳解]</a><br /></td></tr>
+<tr class="separator:a5729e556c1095012c2d5aef8b7390771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1ff21bbf97b43ab7f5ab668b2384ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbf/_c_bregexp_8h.html#aac1ff21bbf97b43ab7f5ab668b2384ce">CheckRegexpSyntax</a> (const wchar_t *szPattern, HWND hWnd, bool bShowMessage, int nOption=-1, bool bKakomi=false)</td></tr>
+<tr class="separator:aac1ff21bbf97b43ab7f5ab668b2384ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa6543eaa2892b0b835bb1910b81e10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbf/_c_bregexp_8h.html#a0aa6543eaa2892b0b835bb1910b81e10">InitRegexp</a> (HWND hWnd, <a class="el" href="../../d7/da1/class_c_bregexp.html">CBregexp</a> &amp;rRegexp, bool bShowMessage)</td></tr>
+<tr class="separator:a0aa6543eaa2892b0b835bb1910b81e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>BREGEXP Library Handler </p>
+<p>Perl5互換正規表現を扱うDLLであるBREGEXP.DLLを利用するためのインターフェース</p>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>Jun. 10, 2001 </dd>
+<dd>
+Jan. 05, 2002 genta コメント追加 </dd>
+<dd>
+2002/2/1 hor </dd>
+<dd>
+Jul. 25, 2002 genta 行頭条件の考慮を追加 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aac1ff21bbf97b43ab7f5ab668b2384ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1ff21bbf97b43ab7f5ab668b2384ce">&#9670;&nbsp;</a></span>CheckRegexpSyntax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckRegexpSyntax </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>szPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bShowMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nOption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bKakomi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>正規表現が規則に従っているかをチェックする。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">szPattern</td><td>[in] チェックする正規表現 </td></tr>
+    <tr><td class="paramname">hWnd</td><td>[in] メッセージボックスの親ウィンドウ </td></tr>
+    <tr><td class="paramname">bShowMessage</td><td>[in] 初期化失敗時にエラーメッセージを出すフラグ </td></tr>
+    <tr><td class="paramname">nOption</td><td>[in] 大文字と小文字を無視して比較するフラグ // 2002/2/1 hor追加</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正規表現は規則通り </td></tr>
+    <tr><td class="paramname">false</td><td>文法に誤りがある。または、ライブラリが使用できない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5729e556c1095012c2d5aef8b7390771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5729e556c1095012c2d5aef8b7390771">&#9670;&nbsp;</a></span>CheckRegexpVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckRegexpVersion </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nCmpId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bShowMessage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>正規表現ライブラリのバージョン取得 </p>
+<p>正規表現ライブラリの存在を確認し、あればバージョン情報を指定コンポーネントにセットする。 失敗した場合には空文字列をセットする。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>バージョン番号の設定に成功 </td></tr>
+    <tr><td class="paramname">false</td><td>正規表現ライブラリの初期化に失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0aa6543eaa2892b0b835bb1910b81e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa6543eaa2892b0b835bb1910b81e10">&#9670;&nbsp;</a></span>InitRegexp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InitRegexp </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/da1/class_c_bregexp.html">CBregexp</a> &amp;&#160;</td>
+          <td class="paramname"><em>rRegexp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bShowMessage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>与えられた正規表現ライブラリの初期化を行う． メッセージフラグがONで初期化に失敗したときはメッセージを表示する．</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>初期化成功 </td></tr>
+    <tr><td class="paramname">false</td><td>初期化に失敗</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.08.12 genta 共通設定からDLL名を取得する </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

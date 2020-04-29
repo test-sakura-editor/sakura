@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/uiparts/CGraphics.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_ba03d6460a9ae1359ac1c74c49c4a674.html">uiparts</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CGraphics.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d51/_c_graphics_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">2008.05.20 kobake 作成</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">   42</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a>( <span class="keyword">const</span> HDC hDC, <span class="keyword">const</span> RECT &amp;rc, <span class="keyword">const</span> HBRUSH hBrush ) noexcept</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    assert( hDC );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    assert( hBrush );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> ( !hDC || !hBrush ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    HGDIOBJ hBrushOld = ::SelectObject( hDC, hBrush );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> ( !hBrushOld || hBrushOld == HGDI_ERROR ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">auto</span> retPatBlt = ::PatBlt( hDC, rc.left, rc.top, rc.right - rc.left, rc.bottom - rc.top, PATCOPY );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ::SelectObject( hDC, hBrushOld );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> retPatBlt != 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d51/_c_graphics_8h.html#aa40de4ac27e70786f0636ac5737a8854">   65</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a>( <span class="keyword">const</span> HDC hDC, <span class="keyword">const</span> RECT &amp;rc, <span class="keyword">const</span> <span class="keywordtype">int</span> sysColor ) noexcept</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    assert( hDC );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ( !hDC ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    HBRUSH hBrush = ::GetSysColorBrush( sysColor );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> ( hBrush == NULL ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> retMyFillRect = <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a>( hDC, rc, hBrush );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> retMyFillRect;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d51/_c_graphics_8h.html#ab212d3fb48da6bd7007a46de560fcb8e">   86</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a>( <span class="keyword">const</span> HDC hDC, <span class="keyword">const</span> RECT &amp;rc, <span class="keyword">const</span> COLORREF color ) noexcept</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    assert( hDC );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ( !hDC ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    HBRUSH hBrush = ::CreateSolidBrush( color );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> ( hBrush == NULL ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> retMyFillRect = <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a>( hDC, rc, hBrush );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ::DeleteObject( hBrush );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> retMyFillRect;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d5/d46/class_t_original_holder.html">  103</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d46/class_t_original_holder.html">TOriginalHolder</a>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../d5/d46/class_t_original_holder.html">TOriginalHolder&lt;T&gt;</a>()</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        m_data = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        m_hold = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> Clear()</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        m_data = 0;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        m_hold = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> AssignOnce(<span class="keyword">const</span> T&amp; t)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span>(!m_hold){</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            m_data = t;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            m_hold = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">const</span> T&amp; Get()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> m_data;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">bool</span> HasData()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> m_hold;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    T       m_data;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span>    m_hold;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../de/df7/struct_s_f_o_n_t.html">  136</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a> {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a>   m_sFontAttr;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../de/df7/struct_s_f_o_n_t.html#a55c15bb4521dbb51e2ae2efad0ae6673">  138</a></span>&#160;    HFONT       <a class="code" href="../../de/df7/struct_s_f_o_n_t.html#a55c15bb4521dbb51e2ae2efad0ae6673">m_hFont</a>;      </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//最新実装：ブラシ</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html">  143</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>(<span class="keyword">const</span> <a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>&amp; rhs){ Init(rhs.m_hdc); }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>(HDC hdc = NULL){ Init(hdc); }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ~<a class="code" href="../../dc/d90/class_c_graphics.html">CGraphics</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> Init(HDC hdc);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">operator</span> HDC()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hdc; }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">//クリッピング</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> _InitClipping();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">void</span> PushClipping(<span class="keyword">const</span> RECT&amp; rc);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> PopClipping();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> ClearClipping();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> SetClipping(<span class="keyword">const</span> RECT&amp; rc)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        ClearClipping();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        PushClipping(rc);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">//テキスト文字色</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> PushTextForeColor(COLORREF color);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> PopTextForeColor();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> ClearTextForeColor();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> SetTextForeColor(COLORREF color)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        ClearTextForeColor();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        PushTextForeColor(color);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    COLORREF GetCurrentTextForeColor()</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        assert(!m_vTextForeColors.empty());</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> m_vTextForeColors.back();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">//テキスト背景色</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> PushTextBackColor(COLORREF color);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> PopTextBackColor();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> ClearTextBackColor();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> SetTextBackColor(COLORREF color)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        ClearTextBackColor();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        PushTextBackColor(color);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    COLORREF GetTextBackColor()</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        assert(!m_vTextBackColors.empty());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">return</span> m_vTextBackColors.back();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//テキストモード</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">void</span> SetTextBackTransparent(<span class="keywordtype">bool</span> b)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        m_nTextModeOrg.AssignOnce( ::SetBkMode(m_hdc,b?TRANSPARENT:OPAQUE) );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">//テキスト</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> RestoreTextColors();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">//フォント</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">void</span> PushMyFont(HFONT hFont)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a> sFont = { { <span class="keyword">false</span>, <span class="keyword">false</span> }, hFont };</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        PushMyFont(sFont);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> PushMyFont(<span class="keyword">const</span> <a class="code" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a>&amp; sFont);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> PopMyFont();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> ClearMyFont();</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html#a38168fc5de9b29e59053e3ceaa52dd2d">  219</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#a38168fc5de9b29e59053e3ceaa52dd2d">SetMyFont</a>(<span class="keyword">const</span> <a class="code" href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a>&amp; sFont)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        ClearMyFont();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        PushMyFont(sFont);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">bool</span> GetCurrentMyFontBold()</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        assert(!m_vFonts.empty());</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">return</span>  m_vFonts.back().m_sFontAttr.m_bBoldFont;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">bool</span> GetCurrentMyFontUnderline()</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        assert(!m_vFonts.empty());</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span>  m_vFonts.back().m_sFontAttr.m_bUnderLine;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a>&amp; GetCurrentMyFontAttr()</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        assert(!m_vFonts.empty());</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">return</span>  m_vFonts.back().m_sFontAttr;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">//ペン</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> PushPen(COLORREF color, <span class="keywordtype">int</span> nPenWidth, <span class="keywordtype">int</span> nStyle = PS_SOLID);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> PopPen();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> SetPen(COLORREF color)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        ClearPen();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        PushPen(color,1);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> ClearPen();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    COLORREF GetPenColor() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">//ブラシ</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">void</span> _InitBrushColor();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#abdd73b00e686994dceada42aa765c88b">PushBrushColor</a>(</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        COLORREF color  </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    );</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> PopBrushColor();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">void</span> ClearBrush();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> SetBrushColor(COLORREF color)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        ClearBrush();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="../../dc/d90/class_c_graphics.html#abdd73b00e686994dceada42aa765c88b">PushBrushColor</a>(color);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    HBRUSH GetCurrentBrush()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_vBrushes.size()?m_vBrushes.back():NULL; }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">//描画</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html#a2294c71ddaf86743113268c062f840e7">  271</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#a2294c71ddaf86743113268c062f840e7">DrawLine</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        ::MoveToEx(m_hdc,x1,y1,NULL);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        ::LineTo(m_hdc,x2,y2);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> DrawDotLine(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2);   <span class="comment">//点線</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html#a3418c562be5082cd0ed4ec240e872835">  278</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#a3418c562be5082cd0ed4ec240e872835">FillMyRect</a>(<span class="keyword">const</span> RECT&amp; rc)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">::MyFillRect</a>( m_hdc, rc, GetCurrentBrush() );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        ::SetPixel(m_hdc,-1,-1,0); <span class="comment">//###########実験</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html#a137ec8e38470e76f3efcd53dc128e8d5">  286</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#a137ec8e38470e76f3efcd53dc128e8d5">FillSolidMyRect</a>(<span class="keyword">const</span> RECT&amp; rc, COLORREF color)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        PushTextBackColor(color);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="../../dc/d90/class_c_graphics.html#a39acdd1b0e44923bc48c0a903bced386">FillMyRectTextBackColor</a>(rc);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        PopTextBackColor();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="../../dc/d90/class_c_graphics.html#a39acdd1b0e44923bc48c0a903bced386">  293</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d90/class_c_graphics.html#a39acdd1b0e44923bc48c0a903bced386">FillMyRectTextBackColor</a>(<span class="keyword">const</span> RECT&amp; rc)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        ::ExtTextOut(m_hdc, rc.left, rc.top, ETO_OPAQUE|ETO_CLIPPED, &amp;rc, L<span class="stringliteral">&quot;&quot;</span>, 0, NULL);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> DrawDropRect(LPCRECT lpRectNew, SIZE sizeNew, LPCRECT lpRectLast, SIZE sizeLast);   <span class="comment">// ドロップ先の矩形を描画する</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">void</span> DrawRect(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">void</span> DrawRect(<span class="keyword">const</span> RECT&amp; rc){ DrawRect(rc.left, rc.top, rc.right, rc.bottom); }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">//型</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d5/d46/class_t_original_holder.html">TOriginalHolder&lt;COLORREF&gt;</a>   COrgColor;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d5/d46/class_t_original_holder.html">TOriginalHolder&lt;int&gt;</a>        COrgInt;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    HDC                 m_hdc;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">//クリッピング</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    std::vector&lt;HRGN&gt;       m_vClippingRgns;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="comment">//テキスト</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    std::vector&lt;COLORREF&gt;   m_vTextForeColors;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    std::vector&lt;COLORREF&gt;   m_vTextBackColors;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    std::vector&lt;SFONT&gt;      m_vFonts;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">//テキスト</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    COrgInt             m_nTextModeOrg;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">//ペン</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    HPEN                m_hpnOrg;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    std::vector&lt;HPEN&gt;   m_vPens;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">//ブラシ</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    std::vector&lt;HBRUSH&gt; m_vBrushes;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    HBRUSH              m_hbrOrg;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    HBRUSH              m_hbrCurrent;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">bool</span>                m_bDynamicBrush;    <span class="comment">//m_hbrCurrentを動的に作成した場合はtrue</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_graphics_html"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html">CGraphics</a></div><div class="ttdoc">描画管理</div><div class="ttdef"><b>Definition:</b> CGraphics.h:143</div></div>
+<div class="ttc" id="astruct_s_f_o_n_t_html"><div class="ttname"><a href="../../de/df7/struct_s_f_o_n_t.html">SFONT</a></div><div class="ttdoc">フォント情報管理</div><div class="ttdef"><b>Definition:</b> CGraphics.h:136</div></div>
+<div class="ttc" id="astruct_s_font_attr_html"><div class="ttname"><a href="../../d1/d42/struct_s_font_attr.html">SFontAttr</a></div><div class="ttdoc">フォント属性</div><div class="ttdef"><b>Definition:</b> CDocTypeSetting.h:34</div></div>
+<div class="ttc" id="aclass_t_original_holder_html"><div class="ttname"><a href="../../d5/d46/class_t_original_holder.html">TOriginalHolder</a></div><div class="ttdoc">オリジナル値保存クラス</div><div class="ttdef"><b>Definition:</b> CGraphics.h:103</div></div>
+<div class="ttc" id="aclass_c_graphics_html_abdd73b00e686994dceada42aa765c88b"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#abdd73b00e686994dceada42aa765c88b">CGraphics::PushBrushColor</a></div><div class="ttdeci">void PushBrushColor(COLORREF color)</div><div class="ttdef"><b>Definition:</b> CGraphics.cpp:305</div></div>
+<div class="ttc" id="aclass_c_graphics_html_a3418c562be5082cd0ed4ec240e872835"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#a3418c562be5082cd0ed4ec240e872835">CGraphics::FillMyRect</a></div><div class="ttdeci">void FillMyRect(const RECT &amp;rc)</div><div class="ttdoc">矩形塗り潰し</div><div class="ttdef"><b>Definition:</b> CGraphics.h:278</div></div>
+<div class="ttc" id="aclass_c_graphics_html_a137ec8e38470e76f3efcd53dc128e8d5"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#a137ec8e38470e76f3efcd53dc128e8d5">CGraphics::FillSolidMyRect</a></div><div class="ttdeci">void FillSolidMyRect(const RECT &amp;rc, COLORREF color)</div><div class="ttdoc">矩形塗り潰し</div><div class="ttdef"><b>Definition:</b> CGraphics.h:286</div></div>
+<div class="ttc" id="aclass_c_graphics_html_a38168fc5de9b29e59053e3ceaa52dd2d"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#a38168fc5de9b29e59053e3ceaa52dd2d">CGraphics::SetMyFont</a></div><div class="ttdeci">void SetMyFont(const SFONT &amp;sFont)</div><div class="ttdoc">フォント設定</div><div class="ttdef"><b>Definition:</b> CGraphics.h:219</div></div>
+<div class="ttc" id="aclass_c_graphics_html_a39acdd1b0e44923bc48c0a903bced386"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#a39acdd1b0e44923bc48c0a903bced386">CGraphics::FillMyRectTextBackColor</a></div><div class="ttdeci">void FillMyRectTextBackColor(const RECT &amp;rc)</div><div class="ttdoc">矩形塗り潰し</div><div class="ttdef"><b>Definition:</b> CGraphics.h:293</div></div>
+<div class="ttc" id="astruct_s_f_o_n_t_html_a55c15bb4521dbb51e2ae2efad0ae6673"><div class="ttname"><a href="../../de/df7/struct_s_f_o_n_t.html#a55c15bb4521dbb51e2ae2efad0ae6673">SFONT::m_hFont</a></div><div class="ttdeci">HFONT m_hFont</div><div class="ttdoc">フォントハンドル</div><div class="ttdef"><b>Definition:</b> CGraphics.h:138</div></div>
+<div class="ttc" id="a_c_graphics_8h_html_ad2cc08f807b406c07a9682176611c191"><div class="ttname"><a href="../../d9/d51/_c_graphics_8h.html#ad2cc08f807b406c07a9682176611c191">MyFillRect</a></div><div class="ttdeci">bool MyFillRect(const HDC hDC, const RECT &amp;rc, const HBRUSH hBrush) noexcept</div><div class="ttdoc">API関数FillRectの高速版(ブラシ用)</div><div class="ttdef"><b>Definition:</b> CGraphics.h:42</div></div>
+<div class="ttc" id="aclass_c_graphics_html_a2294c71ddaf86743113268c062f840e7"><div class="ttname"><a href="../../dc/d90/class_c_graphics.html#a2294c71ddaf86743113268c062f840e7">CGraphics::DrawLine</a></div><div class="ttdeci">void DrawLine(int x1, int y1, int x2, int y2)</div><div class="ttdoc">直線</div><div class="ttdef"><b>Definition:</b> CGraphics.h:271</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

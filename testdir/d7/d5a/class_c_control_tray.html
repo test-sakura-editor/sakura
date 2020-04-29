@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CControlTray クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="../../d9/d7a/class_c_control_tray-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CControlTray クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>常駐部の管理  
+ <a href="../../d7/d5a/class_c_control_tray.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../da/d0e/_c_control_tray_8h_source.html">CControlTray.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a84a6e257486d57e7662e2c0c40584c74"><td class="memItemLeft" align="right" valign="top"><a id="a84a6e257486d57e7662e2c0c40584c74"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (HINSTANCE hInstance)</td></tr>
+<tr class="separator:a84a6e257486d57e7662e2c0c40584c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0c5f73fdede5a400ea7921e323af38"><td class="memItemLeft" align="right" valign="top"><a id="a4d0c5f73fdede5a400ea7921e323af38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a4d0c5f73fdede5a400ea7921e323af38">CreateTrayIcon</a> (HWND hWnd)</td></tr>
+<tr class="memdesc:a4d0c5f73fdede5a400ea7921e323af38"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスクトレイにアイコンを登録する <br /></td></tr>
+<tr class="separator:a4d0c5f73fdede5a400ea7921e323af38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25eb342e2aa12fd91e63bc4b784e5b64"><td class="memItemLeft" align="right" valign="top"><a id="a25eb342e2aa12fd91e63bc4b784e5b64"></a>
+LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchEvent</b> (HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="separator:a25eb342e2aa12fd91e63bc4b784e5b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c428344cea9da30f8a915a5ee053080"><td class="memItemLeft" align="right" valign="top"><a id="a6c428344cea9da30f8a915a5ee053080"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MessageLoop</b> (void)</td></tr>
+<tr class="separator:a6c428344cea9da30f8a915a5ee053080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aaa77e1307ba708d7d2d46e328a5470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a0aaa77e1307ba708d7d2d46e328a5470">OnDestroy</a> (void)</td></tr>
+<tr class="memdesc:a0aaa77e1307ba708d7d2d46e328a5470"><td class="mdescLeft">&#160;</td><td class="mdescRight">WM_DESTROY 処理  <a href="../../d7/d5a/class_c_control_tray.html#a0aaa77e1307ba708d7d2d46e328a5470">[詳解]</a><br /></td></tr>
+<tr class="separator:a0aaa77e1307ba708d7d2d46e328a5470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f198e8ffe223877c749d1698ce7e6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a81f198e8ffe223877c749d1698ce7e6c">CreatePopUpMenu_L</a> (void)</td></tr>
+<tr class="separator:a81f198e8ffe223877c749d1698ce7e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca42d74bbdfeca14cd95e90e7bf531a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a6ca42d74bbdfeca14cd95e90e7bf531a">CreatePopUpMenu_R</a> (void)</td></tr>
+<tr class="separator:a6ca42d74bbdfeca14cd95e90e7bf531a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590df275870f042c4a4702f5a6ace5d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a590df275870f042c4a4702f5a6ace5d4">CreateAccelTbl</a> (void)</td></tr>
+<tr class="separator:a590df275870f042c4a4702f5a6ace5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e92ded3a5ee52603285ae19e90951f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a9e92ded3a5ee52603285ae19e90951f9">DeleteAccelTbl</a> (void)</td></tr>
+<tr class="separator:a9e92ded3a5ee52603285ae19e90951f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1866fd8f1255cfd33833ef310b96620d"><td class="memItemLeft" align="right" valign="top"><a id="a1866fd8f1255cfd33833ef310b96620d"></a>
+HWND&#160;</td><td class="memItemRight" valign="bottom"><b>GetTrayHwnd</b> () const</td></tr>
+<tr class="separator:a1866fd8f1255cfd33833ef310b96620d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa0ddb059ad2fd1d878024f29687c2439"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#aa0ddb059ad2fd1d878024f29687c2439">OpenNewEditor</a> (HINSTANCE hInstance, HWND hWndParent, const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;sLoadInfo, const WCHAR *szCmdLineOption=NULL, bool sync=false, const WCHAR *pszCurDir=NULL, bool bNewWindow=false)</td></tr>
+<tr class="separator:aa0ddb059ad2fd1d878024f29687c2439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc69e0f199405b6076fb22a28209eb81"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#afc69e0f199405b6076fb22a28209eb81">OpenNewEditor2</a> (HINSTANCE hInstance, HWND hWndParent, const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *pfi, bool bViewMode, bool sync=false, bool bNewWindow=false)</td></tr>
+<tr class="separator:afc69e0f199405b6076fb22a28209eb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df5ddb8c51422fcb6436d3a5e019233"><td class="memItemLeft" align="right" valign="top"><a id="a6df5ddb8c51422fcb6436d3a5e019233"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ActiveNextWindow</b> (HWND hwndParent)</td></tr>
+<tr class="separator:a6df5ddb8c51422fcb6436d3a5e019233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098a762c3a8a40268525b264eabc6d25"><td class="memItemLeft" align="right" valign="top"><a id="a098a762c3a8a40268525b264eabc6d25"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ActivePrevWindow</b> (HWND hwndParent)</td></tr>
+<tr class="separator:a098a762c3a8a40268525b264eabc6d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc37e36ae17b9be3617039df6e1f9ca"><td class="memItemLeft" align="right" valign="top">static BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a2fc37e36ae17b9be3617039df6e1f9ca">CloseAllEditor</a> (BOOL bCheckConfirm, HWND hWndFrom, BOOL bExit, int nGroup)</td></tr>
+<tr class="separator:a2fc37e36ae17b9be3617039df6e1f9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba2518626517bdf99e1798ffe5c2bb2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a1ba2518626517bdf99e1798ffe5c2bb2">TerminateApplication</a> (HWND hWndFrom)</td></tr>
+<tr class="separator:a1ba2518626517bdf99e1798ffe5c2bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739ab5fc430ae18ef1c65e4833d56757"><td class="memItemLeft" align="right" valign="top"><a id="a739ab5fc430ae18ef1c65e4833d56757"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DoGrepCreateWindow</b> (HINSTANCE hinst, HWND, <a class="el" href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a> &amp;cDlgGrep)</td></tr>
+<tr class="separator:a739ab5fc430ae18ef1c65e4833d56757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac91c7f592279c37dd220ee312796088d"><td class="memItemLeft" align="right" valign="top"><a id="ac91c7f592279c37dd220ee312796088d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoGrep</b> ()</td></tr>
+<tr class="separator:ac91c7f592279c37dd220ee312796088d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c693571454b5fd46db6c4375742404"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a28c693571454b5fd46db6c4375742404">TrayMessage</a> (HWND hDlg, DWORD dwMessage, UINT uID, HICON hIcon, const WCHAR *pszTip)</td></tr>
+<tr class="separator:a28c693571454b5fd46db6c4375742404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a0d091e5675a5b9601923434c652b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a56a0d091e5675a5b9601923434c652b6">OnCommand</a> (WORD wNotifyCode, WORD wID, HWND hwndCtl)</td></tr>
+<tr class="separator:a56a0d091e5675a5b9601923434c652b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e35c60e326ba51e995723c9501b0218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#a2e35c60e326ba51e995723c9501b0218">OnNewEditor</a> (bool bNewWindow)</td></tr>
+<tr class="memdesc:a2e35c60e326ba51e995723c9501b0218"><td class="mdescLeft">&#160;</td><td class="mdescRight">2003.05.30 genta 新規ウィンドウ作成処理を切り出し  <a href="../../d7/d5a/class_c_control_tray.html#a2e35c60e326ba51e995723c9501b0218">[詳解]</a><br /></td></tr>
+<tr class="separator:a2e35c60e326ba51e995723c9501b0218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:af6ce1fb625d65e78d94a1e7fd251a5e2"><td class="memItemLeft" align="right" valign="top">static INT_PTR CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5a/class_c_control_tray.html#af6ce1fb625d65e78d94a1e7fd251a5e2">ExitingDlgProc</a> (HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memdesc:af6ce1fb625d65e78d94a1e7fd251a5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了ダイアログ用プロシージャ  <a href="../../d7/d5a/class_c_control_tray.html#af6ce1fb625d65e78d94a1e7fd251a5e2">[詳解]</a><br /></td></tr>
+<tr class="separator:af6ce1fb625d65e78d94a1e7fd251a5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>常駐部の管理 </p>
+<p>タスクトレイアイコンの管理，タスクトレイメニューのアクション， MRU、キー割り当て、共通設定、編集ウィンドウの管理など</p>
+<dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2fc37e36ae17b9be3617039df6e1f9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc37e36ae17b9be3617039df6e1f9ca">&#9670;&nbsp;</a></span>CloseAllEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CControlTray::CloseAllEditor </td>
+          <td>(</td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bCheckConfirm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndFrom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bExit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>すべてのウィンドウを閉じる</p>
+<dl class="section date"><dt>日付</dt><dd>Oct. 7, 2000 jepro 「編集ウィンドウの全終了」という説明を左記のように変更 </dd>
+<dd>
+2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd>
+<dd>
+2006.12.25 ryoji 複数の編集ウィンドウを閉じるときの確認（引数追加） </dd>
+<dd>
+2007.02.13 ryoji 「編集の全終了」を示す引数(bExit)を追加 </dd>
+<dd>
+2007.06.20 ryoji nGroup引数を追加 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bCheckConfirm</td><td>[in] [すべて閉じる]確認オプションに従って問い合わせをするかどうか </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hWndFrom</td><td>[in] 呼び出し元のウィンドウハンドル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bExit</td><td>[in] TRUE: 編集の全終了 / FALSE: すべて閉じる </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nGroup</td><td>[in] グループID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a590df275870f042c4a4702f5a6ace5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a590df275870f042c4a4702f5a6ace5d4">&#9670;&nbsp;</a></span>CreateAccelTbl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::CreateAccelTbl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アクセラレータテーブル作成 </p><dl class="section date"><dt>日付</dt><dd>2013.04.20 novice 共通処理を関数化 </dd></dl>
+
+</div>
+</div>
+<a id="a81f198e8ffe223877c749d1698ce7e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f198e8ffe223877c749d1698ce7e6c">&#9670;&nbsp;</a></span>CreatePopUpMenu_L()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CControlTray::CreatePopUpMenu_L </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ポップアップメニュー(トレイ左ボタン) </p>
+
+</div>
+</div>
+<a id="a6ca42d74bbdfeca14cd95e90e7bf531a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca42d74bbdfeca14cd95e90e7bf531a">&#9670;&nbsp;</a></span>CreatePopUpMenu_R()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CControlTray::CreatePopUpMenu_R </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ポップアップメニュー(トレイ右ボタン) </p>
+
+</div>
+</div>
+<a id="a9e92ded3a5ee52603285ae19e90951f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e92ded3a5ee52603285ae19e90951f9">&#9670;&nbsp;</a></span>DeleteAccelTbl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::DeleteAccelTbl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>アクセラレータテーブル破棄 </p><dl class="section date"><dt>日付</dt><dd>2013.04.20 novice 共通処理を関数化 </dd></dl>
+
+</div>
+</div>
+<a id="af6ce1fb625d65e78d94a1e7fd251a5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ce1fb625d65e78d94a1e7fd251a5e2">&#9670;&nbsp;</a></span>ExitingDlgProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">INT_PTR CALLBACK CControlTray::ExitingDlgProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndDlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMsg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了ダイアログ用プロシージャ </p>
+<dl class="section date"><dt>日付</dt><dd>2006.07.02 ryoji <a class="el" href="../../dd/d98/class_c_control_process.html" title="コントロールプロセスクラス">CControlProcess</a> から移動 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndDlg</td><td>終了ダイアログ用プロシージャ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56a0d091e5675a5b9601923434c652b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a0d091e5675a5b9601923434c652b6">&#9670;&nbsp;</a></span>OnCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::OnCommand </td>
+          <td>(</td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>wNotifyCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>wID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hwndCtl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>WM_COMMANDメッセージ処理 </p>
+
+</div>
+</div>
+<a id="a0aaa77e1307ba708d7d2d46e328a5470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aaa77e1307ba708d7d2d46e328a5470">&#9670;&nbsp;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::OnDestroy </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WM_DESTROY 処理 </p>
+<dl class="section date"><dt>日付</dt><dd>2006.07.09 ryoji 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a2e35c60e326ba51e995723c9501b0218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e35c60e326ba51e995723c9501b0218">&#9670;&nbsp;</a></span>OnNewEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::OnNewEditor </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bNewWindow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>2003.05.30 genta 新規ウィンドウ作成処理を切り出し </p>
+<p>新規ウィンドウを作成する</p>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2003.05.30 新規作成 </dd>
+<dd>
+2013.03.21 novice MRUは使用しない </dd></dl>
+
+</div>
+</div>
+<a id="aa0ddb059ad2fd1d878024f29687c2439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ddb059ad2fd1d878024f29687c2439">&#9670;&nbsp;</a></span>OpenNewEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CControlTray::OpenNewEditor </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>sLoadInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>szCmdLineOption</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sync</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszCurDir</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bNewWindow</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>新規編集ウィンドウの追加 ver 0</p>
+<dl class="section date"><dt>日付</dt><dd>2000.10.24 genta WinExec -&gt; CreateProcess．同期機能を付加 </dd>
+<dd>
+2002.02.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd>
+<dd>
+2003.05.30 genta 外部プロセス起動時のカレントディレクトリ指定を可能に． </dd>
+<dd>
+2007.06.26 ryoji 新規編集ウィンドウは hWndParent と同じグループを指定して起動する </dd>
+<dd>
+2008.04.19 ryoji MYWM_FIRST_IDLE 待ちを追加 </dd>
+<dd>
+2008.05.05 novice GetModuleHandle(NULL)→NULLに変更 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">hInstance</td><td>新規編集ウィンドウの追加 ver 0 [in] インスタンスID (実は未使用) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hWndParent</td><td>[in] 親ウィンドウハンドル．エラーメッセージ表示用 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sLoadInfo</td><td>[in] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">szCmdLineOption</td><td>[in] 追加のコマンドラインオプション </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sync</td><td>[in] trueなら新規エディタの起動まで待機する </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszCurDir</td><td>[in] 新規エディタのカレントディレクトリ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bNewWindow</td><td>[in] 新規エディタをウインドウで開く </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc69e0f199405b6076fb22a28209eb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc69e0f199405b6076fb22a28209eb81">&#9670;&nbsp;</a></span>OpenNewEditor2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CControlTray::OpenNewEditor2 </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dba/struct_edit_info.html">EditInfo</a> *&#160;</td>
+          <td class="paramname"><em>pfi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bViewMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sync</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bNewWindow</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>新規編集ウィンドウの追加 ver 2:</p>
+<dl class="section date"><dt>日付</dt><dd>Oct. 24, 2000 genta create. </dd>
+<dd>
+Feb. 25, 2012 novice -CODE/-RはOpenNewEditor側で処理するので削除 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">hInstance</td><td>新規編集ウィンドウの追加 ver 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bNewWindow</td><td>[in] 新規エディタを新しいウインドウで開く </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ba2518626517bdf99e1798ffe5c2bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba2518626517bdf99e1798ffe5c2bb2">&#9670;&nbsp;</a></span>TerminateApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CControlTray::TerminateApplication </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWndFrom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>サクラエディタの全終了</p>
+<dl class="section date"><dt>日付</dt><dd>2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。 </dd>
+<dd>
+2006.12.25 ryoji 複数の編集ウィンドウを閉じるときの確認（引数追加） </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hWndFrom</td><td>[in] 呼び出し元のウィンドウハンドル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28c693571454b5fd46db6c4375742404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c693571454b5fd46db6c4375742404">&#9670;&nbsp;</a></span>TrayMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CControlTray::TrayMessage </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hDlg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>dwMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HICON&#160;</td>
+          <td class="paramname"><em>hIcon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszTip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>タスクトレイのアイコンに関する処理 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/_main/<a class="el" href="../../da/d0e/_c_control_tray_8h_source.html">CControlTray.h</a></li>
+<li>sakura_core/_main/<a class="el" href="../../d7/dd7/_c_control_tray_8cpp.html">CControlTray.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

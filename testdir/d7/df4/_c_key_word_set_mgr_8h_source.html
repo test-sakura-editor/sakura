@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/CKeyWordSetMgr.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CKeyWordSetMgr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/df4/_c_key_word_set_mgr_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2000, MIK</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2001, jepro</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2004, Moca</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2005, Moca</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span><span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define     MAX_SETNUM      100 //2007.12.01 genta 最大値増加</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define     MAX_SETNAMELEN  32</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define     MAX_KEYWORDNUM  15000</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/df4/_c_key_word_set_mgr_8h.html#abcbe631da58909c6cb36a8ce5f1fd564">   47</a></span>&#160;<span class="preprocessor">#define     MAX_KEYWORDLEN  63</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ae165ff4a33fe7ce50e7ada978d9794e5">CKeyWordSetMgr</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ~<a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a4df2f30dabfc23933f9bc410eab18e4b">AddKeyWordSet</a>(                         </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pszSetName,             </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">bool</span>            bKEYWORDCASE,           </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">int</span>             nSize           = -1    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> DelKeyWordSet(<span class="keywordtype">int</span> nIdx);   <span class="comment">/* ｎ番目のセットを削除 */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aebedb565a31c5cae6667622c5584e953">GetTypeName</a>(<span class="keywordtype">int</span> nIdx);   <span class="comment">/* ｎ番目のセット名を返す */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aca64560c05281b8f6d2389df712d90b7">SetTypeName</a>(<span class="keywordtype">int</span> nIdx, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* name);  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> SetKeyWordCase(<span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nCase);               <span class="comment">/* ｎ番目のセットの大文字小文字判断をセットする */</span>  <span class="comment">//MIK</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> GetKeyWordCase(<span class="keywordtype">int</span> nIdx);                      <span class="comment">/* ｎ番目のセットの大文字小文字判断を取得する */</span>            <span class="comment">//MIK</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> SortKeyWord( <span class="keywordtype">int</span> nIdx ); <span class="comment">/* ｎ番目のセットのキーワードをソートする */</span>  <span class="comment">//MIK</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// From Here 2004.07.29 Moca 追加 可変長記憶</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ac520281a2ee489d6f255b6fd81f4ad5b">SetKeyWordArr</a>( <span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nSize, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszKeyWordArr );         </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ac520281a2ee489d6f255b6fd81f4ad5b">SetKeyWordArr</a>(                      </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">int</span>             nIdx,               </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">int</span>             nSize,              </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  ppszKeyWordArr[]    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// To Here 2004.07.29 Moca</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> GetKeyWordNum(<span class="keywordtype">int</span> nIdx);    <span class="comment">/* ｎ番目のセットのキーワードの数を返す */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a7ff4fd395a8ef41e4b133c0d39269a2e">GetKeyWord</a>(<span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nIdx2); <span class="comment">/* ｎ番目のセットのｍ番目のキーワードを返す */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a44653cf62241538c05003f255a61cc8f">UpdateKeyWord</a>( <span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nIdx2, <span class="keyword">const</span> WCHAR* pszKeyWord);    <span class="comment">/* ｎ番目のセットのｍ番目のキーワードを編集 */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a309eb5da1aa99f3deb4ff19e0275e1e5">AddKeyWord</a>( <span class="keywordtype">int</span> nIdx, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszKeyWord);   <span class="comment">/* ｎ番目のセットにキーワードを追加 */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#af2b37ba38147447cffe0d73fb1515c34">DelKeyWord</a>( <span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nIdx2);           <span class="comment">/* ｎ番目のセットのｍ番目のキーワードを削除 */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a6af9cdfcc5f8f02b150ec0aa6871eb64">CanAddKeyWord</a>(<span class="keywordtype">int</span> nIdx);   </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//int SearchKeyWord( int , const char*, int );  /* ｎ番目のセットから指定キーワードをサーチ 無いときは-1を返す */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//  BOOL IsModify( CKeyWordSetMgr&amp;, BOOL* pnModifyFlagArr );    /* 変更状況を調査 */    // Uchi 2010/4/14 実体が無いので削除</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a3c1f4ad8bb0f7bae6c90481f44f6cb74">SearchKeyWord2</a>( <span class="keywordtype">int</span> nIdx , <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszKeyWord, <span class="keywordtype">int</span> nKeyWordLen );    <span class="comment">/* ｎ番目のセットから指定キーワードをバイナリサーチ。見つかれば 0以上を返す */</span>  <span class="comment">//MIK</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">int</span> SearchKeyWordSet( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszKeyWord );      <span class="comment">// キーワードセット名からセット番号を取得。見つからなければ -1を返す    // Uchi 2010/4/14</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// From Here 2004.07.29 Moca 追加 可変長記憶</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a05b84135cc26bd0a30ce31cc16eb6b06">CleanKeyWords</a>(<span class="keywordtype">int</span> nIdx);    </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aea079dce5d2799ccd4ed30cac94d3961">GetAllocSize</a>(<span class="keywordtype">int</span> nIdx) <span class="keyword">const</span>;   </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ad2ca19d69af8ea2547a2b5550760b722">GetFreeSize</a>() <span class="keyword">const</span>;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aed27bb83c1d7bf18e12cb72858d1c26d">ResetAllKeyWordSet</a>( <span class="keywordtype">void</span> ); <span class="comment">// 全キーワードセットの削除と初期化</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// To Here 2004.07.29 Moca</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    || 演算子</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a>&amp; operator=( <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a>&amp; );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#af9b77ea45f4ef2a5cf312a71a8c5c725">  137</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#af9b77ea45f4ef2a5cf312a71a8c5c725">m_nCurrentKeyWordSetIdx</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#ab550f1f6d7dd2ce8abe555688cb96ed0">  138</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ab550f1f6d7dd2ce8abe555688cb96ed0">m_nKeyWordSetNum</a>;   </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#ada1cf85555315f3078777cb49d17e0f9">  139</a></span>&#160;    <span class="keywordtype">wchar_t</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ada1cf85555315f3078777cb49d17e0f9">m_szSetNameArr</a>[MAX_SETNUM][MAX_SETNAMELEN + 1];</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#aa85a00070cf97ff9c9c8e0e4db5fa266">  140</a></span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aa85a00070cf97ff9c9c8e0e4db5fa266">m_bKEYWORDCASEArr</a>[MAX_SETNUM];  </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#a9e6c009024bf227239f53f54a756b2b2">  141</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a9e6c009024bf227239f53f54a756b2b2">m_nKeyWordNumArr</a>[MAX_SETNUM];   </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">wchar_t</span> m_szKeyWordArr[<a class="code" href="../../d7/df4/_c_key_word_set_mgr_8h.html#abcbe631da58909c6cb36a8ce5f1fd564">MAX_KEYWORDNUM</a>][MAX_KEYWORDLEN + 1]; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">char</span>    m_IsSorted[MAX_SETNUM];   <span class="comment">//MIK</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// 2004.07.29 Moca 可変長記憶</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#aa686b5ae1b747987de2d17f1f38e049b">  153</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span>     <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#aa686b5ae1b747987de2d17f1f38e049b">m_nStartIdx</a>[MAX_SETNUM + 1];</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d4/d32/class_c_key_word_set_mgr.html#a36d4ddcb1f68d3745d33d07f5da534ab">  154</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#a36d4ddcb1f68d3745d33d07f5da534ab">m_nKeyWordMaxLenArr</a>[MAX_SETNUM]; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    ||  実装ヘルパ関数</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">//bool KeyWordAlloc( int );</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/d32/class_c_key_word_set_mgr.html#ae99fcdb9a39f0b11ceeabd8d750dac3e">KeyWordReAlloc</a>(<span class="keywordtype">int</span> nIdx, <span class="keywordtype">int</span> nSize);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> KeywordMaxLen(<span class="keywordtype">int</span> nIdx);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a7ff4fd395a8ef41e4b133c0d39269a2e"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a7ff4fd395a8ef41e4b133c0d39269a2e">CKeyWordSetMgr::GetKeyWord</a></div><div class="ttdeci">const wchar_t * GetKeyWord(int nIdx, int nIdx2)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:212</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aca64560c05281b8f6d2389df712d90b7"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aca64560c05281b8f6d2389df712d90b7">CKeyWordSetMgr::SetTypeName</a></div><div class="ttdeci">const wchar_t * SetTypeName(int nIdx, const wchar_t *name)</div><div class="ttdoc">ｎ番目のセット名を設定する // 2005.01.26 Moca</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:188</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a05b84135cc26bd0a30ce31cc16eb6b06"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a05b84135cc26bd0a30ce31cc16eb6b06">CKeyWordSetMgr::CleanKeyWords</a></div><div class="ttdeci">int CleanKeyWords(int nIdx)</div><div class="ttdoc">キーワードの整頓・利用できないキーワードの削除</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:522</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ad2ca19d69af8ea2547a2b5550760b722"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ad2ca19d69af8ea2547a2b5550760b722">CKeyWordSetMgr::GetFreeSize</a></div><div class="ttdeci">int GetFreeSize() const</div><div class="ttdoc">未割り当てブロックのキーワード数を返す</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:665</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a44653cf62241538c05003f255a61cc8f"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a44653cf62241538c05003f255a61cc8f">CKeyWordSetMgr::UpdateKeyWord</a></div><div class="ttdeci">const wchar_t * UpdateKeyWord(int nIdx, int nIdx2, const WCHAR *pszKeyWord)</div><div class="ttdoc">ｎ番目のセットのｍ番目のキーワードを編集</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:224</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aa686b5ae1b747987de2d17f1f38e049b"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aa686b5ae1b747987de2d17f1f38e049b">CKeyWordSetMgr::m_nStartIdx</a></div><div class="ttdeci">int m_nStartIdx[MAX_SETNUM+1]</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:153</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aea079dce5d2799ccd4ed30cac94d3961"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aea079dce5d2799ccd4ed30cac94d3961">CKeyWordSetMgr::GetAllocSize</a></div><div class="ttdeci">int GetAllocSize(int nIdx) const</div><div class="ttdoc">確保している数を返す</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:654</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html">CKeyWordSetMgr</a></div><div class="ttdoc">強調キーワード管理</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:68</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ae165ff4a33fe7ce50e7ada978d9794e5"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ae165ff4a33fe7ce50e7ada978d9794e5">CKeyWordSetMgr::CKeyWordSetMgr</a></div><div class="ttdeci">CKeyWordSetMgr()</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:53</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ab550f1f6d7dd2ce8abe555688cb96ed0"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ab550f1f6d7dd2ce8abe555688cb96ed0">CKeyWordSetMgr::m_nKeyWordSetNum</a></div><div class="ttdeci">int m_nKeyWordSetNum</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:138</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a3c1f4ad8bb0f7bae6c90481f44f6cb74"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a3c1f4ad8bb0f7bae6c90481f44f6cb74">CKeyWordSetMgr::SearchKeyWord2</a></div><div class="ttdeci">int SearchKeyWord2(int nIdx, const wchar_t *pszKeyWord, int nKeyWordLen)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:387</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ac520281a2ee489d6f255b6fd81f4ad5b"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ac520281a2ee489d6f255b6fd81f4ad5b">CKeyWordSetMgr::SetKeyWordArr</a></div><div class="ttdeci">int SetKeyWordArr(int nIdx, int nSize, const wchar_t *pszKeyWordArr)</div><div class="ttdoc">iniからキーワードを設定する</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:466</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a9e6c009024bf227239f53f54a756b2b2"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a9e6c009024bf227239f53f54a756b2b2">CKeyWordSetMgr::m_nKeyWordNumArr</a></div><div class="ttdeci">int m_nKeyWordNumArr[MAX_SETNUM]</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:141</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a36d4ddcb1f68d3745d33d07f5da534ab"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a36d4ddcb1f68d3745d33d07f5da534ab">CKeyWordSetMgr::m_nKeyWordMaxLenArr</a></div><div class="ttdeci">int m_nKeyWordMaxLenArr[MAX_SETNUM]</div><div class="ttdoc">一番長いキーワードの長さ(ソート後のみ有効)(INI未保存)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:154</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ae99fcdb9a39f0b11ceeabd8d750dac3e"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ae99fcdb9a39f0b11ceeabd8d750dac3e">CKeyWordSetMgr::KeyWordReAlloc</a></div><div class="ttdeci">bool KeyWordReAlloc(int nIdx, int nSize)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:613</div></div>
+<div class="ttc" id="a_c_key_word_set_mgr_8h_html_abcbe631da58909c6cb36a8ce5f1fd564"><div class="ttname"><a href="../../d7/df4/_c_key_word_set_mgr_8h.html#abcbe631da58909c6cb36a8ce5f1fd564">MAX_KEYWORDNUM</a></div><div class="ttdeci">#define MAX_KEYWORDNUM</div><div class="ttdoc">キーワード総数 (2005.01.27 1セットあたりの数→セット全体の総数へ意味変更)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:46</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aed27bb83c1d7bf18e12cb72858d1c26d"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aed27bb83c1d7bf18e12cb72858d1c26d">CKeyWordSetMgr::ResetAllKeyWordSet</a></div><div class="ttdeci">void ResetAllKeyWordSet(void)</div><div class="ttdoc">全キーワードセットの削除と初期化</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:76</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aa85a00070cf97ff9c9c8e0e4db5fa266"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aa85a00070cf97ff9c9c8e0e4db5fa266">CKeyWordSetMgr::m_bKEYWORDCASEArr</a></div><div class="ttdeci">bool m_bKEYWORDCASEArr[MAX_SETNUM]</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:140</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_af2b37ba38147447cffe0d73fb1515c34"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#af2b37ba38147447cffe0d73fb1515c34">CKeyWordSetMgr::DelKeyWord</a></div><div class="ttdeci">int DelKeyWord(int nIdx, int nIdx2)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:304</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a4df2f30dabfc23933f9bc410eab18e4b"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a4df2f30dabfc23933f9bc410eab18e4b">CKeyWordSetMgr::AddKeyWordSet</a></div><div class="ttdeci">bool AddKeyWordSet(const wchar_t *pszSetName, bool bKEYWORDCASE, int nSize=-1)</div><div class="ttdoc">キーワードセットの追加</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:114</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_aebedb565a31c5cae6667622c5584e953"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#aebedb565a31c5cae6667622c5584e953">CKeyWordSetMgr::GetTypeName</a></div><div class="ttdeci">const wchar_t * GetTypeName(int nIdx)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:176</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_ada1cf85555315f3078777cb49d17e0f9"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#ada1cf85555315f3078777cb49d17e0f9">CKeyWordSetMgr::m_szSetNameArr</a></div><div class="ttdeci">wchar_t m_szSetNameArr[MAX_SETNUM][MAX_SETNAMELEN+1]</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:139</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a309eb5da1aa99f3deb4ff19e0275e1e5"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a309eb5da1aa99f3deb4ff19e0275e1e5">CKeyWordSetMgr::AddKeyWord</a></div><div class="ttdeci">int AddKeyWord(int nIdx, const wchar_t *pszKeyWord)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:263</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_af9b77ea45f4ef2a5cf312a71a8c5c725"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#af9b77ea45f4ef2a5cf312a71a8c5c725">CKeyWordSetMgr::m_nCurrentKeyWordSetIdx</a></div><div class="ttdeci">int m_nCurrentKeyWordSetIdx</div><div class="ttdoc">現在のキーワードセット番号(GUI用)</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.h:137</div></div>
+<div class="ttc" id="aclass_c_key_word_set_mgr_html_a6af9cdfcc5f8f02b150ec0aa6871eb64"><div class="ttname"><a href="../../d4/d32/class_c_key_word_set_mgr.html#a6af9cdfcc5f8f02b150ec0aa6871eb64">CKeyWordSetMgr::CanAddKeyWord</a></div><div class="ttdeci">bool CanAddKeyWord(int nIdx)</div><div class="ttdoc">キーワードが追加可能か</div><div class="ttdef"><b>Definition:</b> CKeyWordSetMgr.cpp:565</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

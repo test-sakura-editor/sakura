@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/print/CPrintPreview.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_927ee261bd1486ce26f4f8a9375170b5.html">print</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CPrintPreview.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d65/_c_print_preview_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2003, かろと</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span> <span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d6c/_c_print_8h.html">CPrint.h</a>&quot;</span> <span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/de6/class_c_color_strategy_pool.html">CColorStrategyPool</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/da3/class_c_dlg_cancel.html">CDlgCancel</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* メンバ関数宣言 */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    ||  コンストラクタ</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d3/ddb/class_c_print_preview.html#a71fff7fc29d0112c0bd5e20dd9e20c00">CPrintPreview</a>( <span class="keyword">class</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>* pParentWnd );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    ||  イベント</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//  Window Messages</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    LRESULT <a class="code" href="../../d3/ddb/class_c_print_preview.html#abcc2b2d2d589596ba1e2a5259a80cdf6">OnPaint</a>(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);    <span class="comment">/* 描画処理 */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    LRESULT OnSize(WPARAM wParam, LPARAM lParam);               <span class="comment">/* WM_SIZE 処理 */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    LRESULT <a class="code" href="../../d3/ddb/class_c_print_preview.html#a6ad0a3323b7075becf2e5449ddd292cc">OnVScroll</a>( WPARAM wParam, LPARAM lParam );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    LRESULT <a class="code" href="../../d3/ddb/class_c_print_preview.html#aed96d0f2341de50e7a7d4e4e0f4be828">OnHScroll</a>( WPARAM wParam, LPARAM lParam );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    LRESULT OnMouseMove( WPARAM wParam, LPARAM lParam );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    LRESULT OnMouseWheel( WPARAM wParam, LPARAM lParam );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//  User Messages</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> OnChangeSetting();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> OnChangePrintSetting( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> OnPreviewGoPage( <span class="keywordtype">int</span> nPage );  <span class="comment">/* プレビュー ページ指定 */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> OnPreviewGoPreviousPage(){ OnPreviewGoPage( m_nCurPageNum - 1 ); }     <span class="comment">//  前のページへ</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> OnPreviewGoNextPage(){ OnPreviewGoPage( m_nCurPageNum + 1 ); }     <span class="comment">//  前のページへ</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#aeb2dd37b6af52482a515e1f99a7ef61e">OnPreviewGoDirectPage</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> OnPreviewZoom( BOOL bZoomUp );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#a75416befe7c119155cb6157d960d52ca">OnPrint</a>( <span class="keywordtype">void</span> );   <span class="comment">/* 印刷実行 */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    BOOL OnPrintPageSetting( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#a4e9cf386129e30e6e94df77dbb1d26f2">OnCheckAntialias</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    ||  コントロール</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//  スクロールバー</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> InitPreviewScrollBar( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//  PrintPreviewバー（画面上部のコントロール）</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#ad780c18766421f175bcd9c0f538511ea">CreatePrintPreviewControls</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#a0ebf451ac6f080622c8c97a7c50c4ee8">DestroyPrintPreviewControls</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> SetFocusToPrintPreviewBar( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    HWND GetPrintPreviewBarHANDLE( <span class="keywordtype">void</span> ){ <span class="keywordflow">return</span> m_hwndPrintPreviewBar;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#a669225401ce5e5ba65df43394f40e9f4">   90</a></span>&#160;    HWND <a class="code" href="../../d3/ddb/class_c_print_preview.html#a669225401ce5e5ba65df43394f40e9f4">GetPrintPreviewBarHANDLE_Safe</a>()<span class="keyword"> const</span>{ <span class="keywordflow">if</span>(!<span class="keyword">this</span>)<span class="keywordflow">return</span> NULL; <span class="keywordflow">else</span> <span class="keywordflow">return</span> m_hwndPrintPreviewBar; } </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//  PrintPreviewバーのメッセージ処理。</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//  まずPrintPreviewBar_DlgProcにメッセージが届き、DispatchEvent_PPBに転送する仕組み</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">static</span> INT_PTR CALLBACK PrintPreviewBar_DlgProc(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        HWND    hwndDlg,    <span class="comment">// handle to dialog box</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        UINT    uMsg,       <span class="comment">// message</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        WPARAM  wParam,     <span class="comment">// first message parameter</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        LPARAM  lParam      <span class="comment">// second message parameter</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    INT_PTR DispatchEvent_PPB(</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        HWND    hwndDlg,    <span class="comment">// handle to dialog box</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        UINT    uMsg,       <span class="comment">// message</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        WPARAM  wParam,     <span class="comment">// first message parameter</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        LPARAM  lParam      <span class="comment">// second message parameter</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    ||  描画。</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    ||  DrawXXXXX()は、現在のフォントを半角フォントに設定してから呼び出すこと。</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    ||  また、DrawXXXXX()から抜けてきたときは、半角フォントに設定されていることを期待してよい。</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    ||  フォントは、半角フォントと全角フォントしかないことも期待してよい。</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#ab25b955744d7c667aef74379503ba151">DrawHeaderFooter</a>( HDC hdc, <span class="keyword">const</span> <a class="code" href="../../d7/d43/class_c_my_rect.html">CMyRect</a>&amp; rect , <span class="keywordtype">bool</span> bHeader );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* DrawPageTextFirst( <span class="keywordtype">int</span> nPageNum );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* DrawPageText( HDC hdc, <span class="keywordtype">int</span> nOffX, <span class="keywordtype">int</span> nOffY, <span class="keywordtype">int</span> nPageNum,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                  <a class="code" href="../../d9/da3/class_c_dlg_cancel.html">CDlgCancel</a>* pCDlgCancel, <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* pStrategyStart );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// 印刷／プレビュー 行描画</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* <a class="code" href="../../d3/ddb/class_c_print_preview.html#a4f0e63b786942ab369b25efec4b2d511">Print_DrawLine</a>(</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        HDC             hdc,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        POINT           ptDraw,     </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pLine,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">int</span>             nDocLineLen,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">int</span>             nLineStart,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">int</span>             nLineLen,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        CLayoutInt      nIndent,    </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>*  pcLayout = NULL,    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* pStrategyStart = NULL</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">// 印刷／プレビュー ブロック描画</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#a099881f71dc071d6bf9322a4a66f40fc">Print_DrawBlock</a>(</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        HDC             hdc,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        POINT           ptDraw,     </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>*  pPhysicalLine,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">int</span>             nBlockLen,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">int</span>             nKind,      <span class="comment">//&lt; 0:半角, 1:全角</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d1c/class_c_layout.html">CLayout</a>*  pcLayout,   </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">int</span>             nColorIndex,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">int</span>             nBgnPhysical,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        CLayoutInt      nLayoutX,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">int</span>             nDx,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span>*      pDxArray</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// 指定ロジック位置のCColorStrategyを取得</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>* <a class="code" href="../../d3/ddb/class_c_print_preview.html#a30c9bcf90cd7001f71eff85a97b688ba">GetColorStrategy</a>(</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp;   cStringLine,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">int</span>                 iLogic,</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a>*     pStrategy,</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">bool</span>&amp;               bChange</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// 印刷用フォントを作成する</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">void</span> CreateFonts(HDC hdc);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="comment">// 印刷用フォントを破棄する</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> DestroyFonts();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">//  フォント列挙</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> CALLBACK MyEnumFontFamProc(</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        ENUMLOGFONT*    pelf,       <span class="comment">// pointer to logical-font data</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        NEWTEXTMETRIC*  pntm,       <span class="comment">// pointer to physical-font data</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">int</span>             nFontType,  <span class="comment">// type of font</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        LPARAM          lParam      <span class="comment">// address of application-defined data</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">    ||  アクセサ</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> SetPrintSetting( <a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a>* pPrintSetting ){</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        m_sPrintSetting = *pPrintSetting;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        m_pPrintSetting = &amp;m_sPrintSetting;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        m_pPrintSettingOrg = pPrintSetting;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    BOOL GetDefaultPrinterInfo(){ <span class="keywordflow">return</span> <a class="code" href="../../d3/ddb/class_c_print_preview.html#a3e0842de654cb6620658d89504c9a48d">m_cPrint</a>.<a class="code" href="../../d7/d1e/class_c_print.html#a219204336b6e81ffa4e9f18477d057a0">GetDefaultPrinter</a>( &amp;m_pPrintSetting-&gt;<a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html#ab613c05ef5209a43299b694825fc6e65">m_mdmDevMode</a> ); }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">int</span>  GetCurPageNum(){ <span class="keywordflow">return</span> m_nCurPageNum; }   <span class="comment">/* 現在のページ */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">int</span>  GetAllPageNum(){ <span class="keywordflow">return</span> m_nAllPageNum; }   <span class="comment">/* 現在のページ */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">    ||  ヘッダ・フッタ</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> SetHeader(<span class="keywordtype">char</span>* pszWork[]);    <span class="comment">//  &amp;fなどを登録</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> SetFooter(<span class="keywordtype">char</span>* pszWork[]);    <span class="comment">//  &amp;p/&amp;Pなどを登録</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> SetPreviewFontHan( <span class="keyword">const</span> LOGFONT* lf );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> SetPreviewFontZen( <span class="keyword">const</span> LOGFONT* lf );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">/* メンバ変数宣言 */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">/* none */</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>*       m_pParentWnd;   <span class="comment">//  親のCEditDoc*。</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// 2006.08.17 Moca YAZAKIさんのメモの通りDC/BMPをCEditDocからCPrintPreviewへ移動</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#abb404b78567d45bef23995884fd3d8d1">  199</a></span>&#160;    HDC             <a class="code" href="../../d3/ddb/class_c_print_preview.html#abb404b78567d45bef23995884fd3d8d1">m_hdcCompatDC</a>;  </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#a7fb7f28ad6c83fb684aad1b2d7af4708">  200</a></span>&#160;    HBITMAP         <a class="code" href="../../d3/ddb/class_c_print_preview.html#a7fb7f28ad6c83fb684aad1b2d7af4708">m_hbmpCompatBMP</a>;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#a113ee71f4adfb53e64862a3166639894">  201</a></span>&#160;    HBITMAP         <a class="code" href="../../d3/ddb/class_c_print_preview.html#a113ee71f4adfb53e64862a3166639894">m_hbmpCompatBMPOld</a>; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#a1dcfaab31bc2b98098f17600946992db">  202</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d3/ddb/class_c_print_preview.html#a1dcfaab31bc2b98098f17600946992db">m_nbmpCompatScale</a>;  </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">/*  コントロール制御用  */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">//  操作バー</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    HWND            m_hwndPrintPreviewBar;  <span class="comment">/* 印刷プレビュー 操作バー */</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//  スクロールバー</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">int</span>             m_nPreviewVScrollPos;   <span class="comment">/* 印刷プレビュー：スクロール位置縦 */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">int</span>             m_nPreviewHScrollPos;   <span class="comment">/* 印刷プレビュー：スクロール位置横 */</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    BOOL            m_SCROLLBAR_HORZ;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    BOOL            m_SCROLLBAR_VERT;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    HWND            m_hwndVScrollBar;   <span class="comment">/* 垂直スクロールバーウィンドウハンドル */</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    HWND            m_hwndHScrollBar;   <span class="comment">/* 水平スクロールバーウィンドウハンドル */</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">//  サイズボックス</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    HWND            m_hwndSizeBox;      <span class="comment">/* サイズボックスウィンドウハンドル */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    BOOL            m_SizeBoxCanMove;   <span class="comment">/* サイズボックスウィンドウハンドルを動かせるかどうか */</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">//  表示</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_Zoom;    <span class="comment">/* 印刷プレビュー：倍率 */</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">//  印刷位置を決定するための変数</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_ViewWidth;       <span class="comment">/* 印刷プレビュー：ビュー幅(ピクセル) */</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_ViewHeight;      <span class="comment">/* 印刷プレビュー：ビュー高さ(ピクセル) */</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_ViewMarginLeft;  <span class="comment">/* 印刷プレビュー：ビュー左端と用紙の間隔(1/10mm単位) */</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_ViewMarginTop;   <span class="comment">/* 印刷プレビュー：ビュー左端と用紙の間隔(1/10mm単位) */</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperAllWidth;   <span class="comment">/* 用紙幅(1/10mm単位) */</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperAllHeight;  <span class="comment">/* 用紙高さ(1/10mm単位) */</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperWidth;      <span class="comment">/* 用紙印刷有効幅(1/10mm単位) */</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperHeight;     <span class="comment">/* 用紙印刷有効高さ(1/10mm単位) */</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperOffsetLeft; <span class="comment">/* 用紙余白左端(1/10mm単位) */</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">short</span>           m_nPreview_PaperOffsetTop;  <span class="comment">/* 用紙余白上端(1/10mm単位) */</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    CKetaXInt       m_bPreview_EnableColumns;   <span class="comment">/* 印字可能桁数/ページ */</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">int</span>             m_bPreview_EnableLines;     <span class="comment">/* 印字可能行数/ページ */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">int</span>             m_nPreview_LineNumberColumns;   <span class="comment">/* 行番号エリアの幅（文字数） */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    WORD            m_nAllPageNum;              <span class="comment">/* 全ページ数 */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    WORD            m_nCurPageNum;              <span class="comment">/* 現在のページ */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a>*   m_pPrintSetting;            <span class="comment">/* 現在の印刷設定(キャッシュへのポインタ) */</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a>*   m_pPrintSettingOrg;         <span class="comment">/* 現在の印刷設定(共有データ) */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a>    m_sPrintSetting;            <span class="comment">/* 現在の印刷設定(キャッシュ) */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    LOGFONT         m_lfPreviewHan;             <span class="comment">/* プレビュー用フォント */</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    LOGFONT         m_lfPreviewZen;             <span class="comment">/* プレビュー用フォント */</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    HFONT           m_hFontHan;                 <span class="comment">// 印刷用半角フォントハンドル</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    HFONT           m_hFontHan_b;               <span class="comment">// 印刷用半角フォントハンドル 太字</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    HFONT           m_hFontHan_u;               <span class="comment">// 印刷用半角フォントハンドル 下線</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    HFONT           m_hFontHan_bu;              <span class="comment">// 印刷用半角フォントハンドル 太字、下線</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    HFONT           m_hFontZen;                 <span class="comment">// 印刷用全角フォントハンドル</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    HFONT           m_hFontZen_b;               <span class="comment">// 印刷用全角フォントハンドル 太字</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    HFONT           m_hFontZen_u;               <span class="comment">// 印刷用全角フォントハンドル 下線</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    HFONT           m_hFontZen_bu;              <span class="comment">// 印刷用全角フォントハンドル 太字、下線</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">int</span>             m_nAscentHan;               <span class="comment">// 半角文字のアセント（文字高/基準ラインからの高さ）</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">int</span>             m_nAscentZen;               <span class="comment">// 全角文字のアセント（文字高/基準ラインからの高さ）</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="../../d6/de6/class_c_color_strategy_pool.html">CColorStrategyPool</a>* m_pool;                 <span class="comment">// 色定義管理情報</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a>*   m_pLayoutMgr_Print;     <span class="comment">/* 印刷用のレイアウト管理情報 */</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a> m_typePrint;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// プレビューから出ても現在のプリンタ情報を記憶しておけるようにstaticにする 2003.05.02 かろと </span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../d3/ddb/class_c_print_preview.html#a3e0842de654cb6620658d89504c9a48d">  263</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d7/d1e/class_c_print.html">CPrint</a>   <a class="code" href="../../d3/ddb/class_c_print_preview.html#a3e0842de654cb6620658d89504c9a48d">m_cPrint</a>;                   </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">bool</span>            m_bLockSetting;             <span class="comment">// 設定のロック</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">bool</span>            m_bDemandUpdateSetting;     <span class="comment">// 設定の更新要求</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a>);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
+<div class="ttc" id="aclass_c_layout_mgr_html"><div class="ttname"><a href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a></div><div class="ttdoc">テキストのレイアウト情報管理</div><div class="ttdef"><b>Definition:</b> CLayoutMgr.h:92</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_aed96d0f2341de50e7a7d4e4e0f4be828"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#aed96d0f2341de50e7a7d4e4e0f4be828">CPrintPreview::OnHScroll</a></div><div class="ttdeci">LRESULT OnHScroll(WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:518</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a0ebf451ac6f080622c8c97a7c50c4ee8"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a0ebf451ac6f080622c8c97a7c50c4ee8">CPrintPreview::DestroyPrintPreviewControls</a></div><div class="ttdeci">void DestroyPrintPreviewControls(void)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:2028</div></div>
+<div class="ttc" id="a_c_print_8h_html"><div class="ttname"><a href="../../d4/d6c/_c_print_8h.html">CPrint.h</a></div><div class="ttdoc">印刷関連</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_aeb2dd37b6af52482a515e1f99a7ef61e"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#aeb2dd37b6af52482a515e1f99a7ef61e">CPrintPreview::OnPreviewGoDirectPage</a></div><div class="ttdeci">void OnPreviewGoDirectPage(void)</div><div class="ttdoc">ページ番号直接指定によるジャンプ</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:875</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_print_html"><div class="ttname"><a href="../../d7/d1e/class_c_print.html">CPrint</a></div><div class="ttdoc">印刷関連機能</div><div class="ttdef"><b>Definition:</b> CPrint.h:130</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a113ee71f4adfb53e64862a3166639894"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a113ee71f4adfb53e64862a3166639894">CPrintPreview::m_hbmpCompatBMPOld</a></div><div class="ttdeci">HBITMAP m_hbmpCompatBMPOld</div><div class="ttdoc">再描画用メモリBMP(OLD)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:201</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_abcc2b2d2d589596ba1e2a5259a80cdf6"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#abcc2b2d2d589596ba1e2a5259a80cdf6">CPrintPreview::OnPaint</a></div><div class="ttdeci">LRESULT OnPaint(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:128</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a1dcfaab31bc2b98098f17600946992db"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a1dcfaab31bc2b98098f17600946992db">CPrintPreview::m_nbmpCompatScale</a></div><div class="ttdeci">int m_nbmpCompatScale</div><div class="ttdoc">BMPの画面の10(COMPAT_BMP_BASE)ピクセル幅あたりのBMPのピクセル幅</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:202</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a099881f71dc071d6bf9322a4a66f40fc"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a099881f71dc071d6bf9322a4a66f40fc">CPrintPreview::Print_DrawBlock</a></div><div class="ttdeci">void Print_DrawBlock(HDC hdc, POINT ptDraw, const wchar_t *pPhysicalLine, int nBlockLen, int nKind, const CLayout *pcLayout, int nColorIndex, int nBgnPhysical, CLayoutInt nLayoutX, int nDx, const int *pDxArray)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1798</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a7fb7f28ad6c83fb684aad1b2d7af4708"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a7fb7f28ad6c83fb684aad1b2d7af4708">CPrintPreview::m_hbmpCompatBMP</a></div><div class="ttdeci">HBITMAP m_hbmpCompatBMP</div><div class="ttdoc">再描画用メモリBMP</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:200</div></div>
+<div class="ttc" id="aclass_c_my_rect_html"><div class="ttname"><a href="../../d7/d43/class_c_my_rect.html">CMyRect</a></div><div class="ttdef"><b>Definition:</b> CMyRect.h:30</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a6ad0a3323b7075becf2e5449ddd292cc"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a6ad0a3323b7075becf2e5449ddd292cc">CPrintPreview::OnVScroll</a></div><div class="ttdeci">LRESULT OnVScroll(WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:448</div></div>
+<div class="ttc" id="aclass_c_color_strategy_pool_html"><div class="ttname"><a href="../../d6/de6/class_c_color_strategy_pool.html">CColorStrategyPool</a></div><div class="ttdef"><b>Definition:</b> CColorStrategy.h:181</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a30c9bcf90cd7001f71eff85a97b688ba"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a30c9bcf90cd7001f71eff85a97b688ba">CPrintPreview::GetColorStrategy</a></div><div class="ttdeci">CColorStrategy * GetColorStrategy(const CStringRef &amp;cStringLine, int iLogic, CColorStrategy *pStrategy, bool &amp;bChange)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1855</div></div>
+<div class="ttc" id="astruct_p_r_i_n_t_s_e_t_t_i_n_g_html_ab613c05ef5209a43299b694825fc6e65"><div class="ttname"><a href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html#ab613c05ef5209a43299b694825fc6e65">PRINTSETTING::m_mdmDevMode</a></div><div class="ttdeci">MYDEVMODE m_mdmDevMode</div><div class="ttdef"><b>Definition:</b> CPrint.h:108</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="aclass_c_print_preview_html_ab25b955744d7c667aef74379503ba151"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#ab25b955744d7c667aef74379503ba151">CPrintPreview::DrawHeaderFooter</a></div><div class="ttdeci">void DrawHeaderFooter(HDC hdc, const CMyRect &amp;rect, bool bHeader)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1234</div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="aclass_c_color_strategy_html"><div class="ttname"><a href="../../d3/de3/class_c_color_strategy.html">CColorStrategy</a></div><div class="ttdef"><b>Definition:</b> CColorStrategy.h:135</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a4e9cf386129e30e6e94df77dbb1d26f2"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a4e9cf386129e30e6e94df77dbb1d26f2">CPrintPreview::OnCheckAntialias</a></div><div class="ttdeci">void OnCheckAntialias(void)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1018</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="aclass_c_layout_html"><div class="ttname"><a href="../../db/d1c/class_c_layout.html">CLayout</a></div><div class="ttdef"><b>Definition:</b> CLayout.h:32</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a3e0842de654cb6620658d89504c9a48d"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a3e0842de654cb6620658d89504c9a48d">CPrintPreview::m_cPrint</a></div><div class="ttdeci">static CPrint m_cPrint</div><div class="ttdoc">現在のプリンタ情報</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:263</div></div>
+<div class="ttc" id="aclass_c_print_preview_html"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a></div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:46</div></div>
+<div class="ttc" id="aclass_c_print_html_a219204336b6e81ffa4e9f18477d057a0"><div class="ttname"><a href="../../d7/d1e/class_c_print.html#a219204336b6e81ffa4e9f18477d057a0">CPrint::GetDefaultPrinter</a></div><div class="ttdeci">BOOL GetDefaultPrinter(MYDEVMODE *pMYDEVMODE)</div><div class="ttdoc">デフォルトのプリンタを取得し、MYDEVMODE に設定</div><div class="ttdef"><b>Definition:</b> CPrint.cpp:201</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_ad780c18766421f175bcd9c0f538511ea"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#ad780c18766421f175bcd9c0f538511ea">CPrintPreview::CreatePrintPreviewControls</a></div><div class="ttdeci">void CreatePrintPreviewControls(void)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1939</div></div>
+<div class="ttc" id="aclass_c_dlg_cancel_html"><div class="ttname"><a href="../../d9/da3/class_c_dlg_cancel.html">CDlgCancel</a></div><div class="ttdoc">キャンセルボタンダイアログ</div><div class="ttdef"><b>Definition:</b> CDlgCancel.h:26</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a75416befe7c119155cb6157d960d52ca"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a75416befe7c119155cb6157d960d52ca">CPrintPreview::OnPrint</a></div><div class="ttdeci">void OnPrint(void)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1029</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_abb404b78567d45bef23995884fd3d8d1"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#abb404b78567d45bef23995884fd3d8d1">CPrintPreview::m_hdcCompatDC</a></div><div class="ttdeci">HDC m_hdcCompatDC</div><div class="ttdoc">再描画用コンパチブルDC</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:199</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a71fff7fc29d0112c0bd5e20dd9e20c00"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a71fff7fc29d0112c0bd5e20dd9e20c00">CPrintPreview::CPrintPreview</a></div><div class="ttdeci">CPrintPreview(class CEditWnd *pParentWnd)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:74</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a4f0e63b786942ab369b25efec4b2d511"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a4f0e63b786942ab369b25efec4b2d511">CPrintPreview::Print_DrawLine</a></div><div class="ttdeci">CColorStrategy * Print_DrawLine(HDC hdc, POINT ptDraw, const wchar_t *pLine, int nDocLineLen, int nLineStart, int nLineLen, CLayoutInt nIndent, const CLayout *pcLayout=NULL, CColorStrategy *pStrategyStart=NULL)</div><div class="ttdef"><b>Definition:</b> CPrintPreview.cpp:1648</div></div>
+<div class="ttc" id="aclass_c_print_preview_html_a669225401ce5e5ba65df43394f40e9f4"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html#a669225401ce5e5ba65df43394f40e9f4">CPrintPreview::GetPrintPreviewBarHANDLE_Safe</a></div><div class="ttdeci">HWND GetPrintPreviewBarHANDLE_Safe() const</div><div class="ttdoc">thisがNULLでも実行できる版。2007.10.29 kobake</div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:90</div></div>
+<div class="ttc" id="astruct_p_r_i_n_t_s_e_t_t_i_n_g_html"><div class="ttname"><a href="../../dd/d49/struct_p_r_i_n_t_s_e_t_t_i_n_g.html">PRINTSETTING</a></div><div class="ttdef"><b>Definition:</b> CPrint.h:85</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

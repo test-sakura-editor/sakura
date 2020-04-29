@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/env/CDocTypeManager.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_d753b2643e08bf14baf4914c5ba1a9ae.html">env</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDocTypeManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d35/_c_doc_type_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    2008.05.18 kobake CShareData から分離</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">DLLSHAREDATA.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../de/df3/class_c_doc_type_manager.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/df3/class_c_doc_type_manager.html">CDocTypeManager</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../de/df3/class_c_doc_type_manager.html">CDocTypeManager</a>()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        m_pShareData = &amp;GetDllShareData();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#ad1572f397be912e28ce05ac6a33bf317">GetDocumentTypeOfPath</a>( <span class="keyword">const</span> WCHAR* pszFilePath );  <span class="comment">/* ファイルパスを渡して、ドキュメントタイプ（数値）を取得する */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#ad4ea22bfd6303729121136b255be8c39">GetDocumentTypeOfExt</a>( <span class="keyword">const</span> WCHAR* pszExt );        <span class="comment">/* 拡張子を渡して、ドキュメントタイプ（数値）を取得する */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> GetDocumentTypeOfId( <span class="keywordtype">int</span> <span class="keywordtype">id</span> );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> GetTypeConfig(<a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> cDocumentType, <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>&amp; type);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> SetTypeConfig(<a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> cDocumentType, <span class="keyword">const</span> <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>&amp; type);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#af32ff95b33b3b4b237f7cbe572200515">GetTypeConfigMini</a>(<a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> cDocumentType, <span class="keyword">const</span> <a class="code" href="../../da/d8f/struct_s_type_config_mini.html">STypeConfigMini</a>** type);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> AddTypeConfig(<a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> cDocumentType);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> DelTypeConfig(<a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> cDocumentType);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#a7e074ed82e7aeb2bbb1e02e65aff1be0">IsFileNameMatch</a>(<span class="keyword">const</span> WCHAR* pszTypeExts, <span class="keyword">const</span> WCHAR* pszFileName);    <span class="comment">// タイプ別拡張子にファイル名がマッチするか</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#a44a3640a7c61ed6b254ad3d2b336ec3a">GetFirstExt</a>(<span class="keyword">const</span> WCHAR* pszTypeExts, WCHAR szFirstExt[], <span class="keywordtype">int</span> nBuffSize);   <span class="comment">// タイプ別拡張子の先頭拡張子を取得する</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../de/df3/class_c_doc_type_manager.html#a0933f1d2c7e97a879f8914bf40a28f90">ConvertTypesExtToDlgExt</a>( <span class="keyword">const</span> WCHAR *pszSrcExt, <span class="keyword">const</span> WCHAR* szExt, WCHAR *pszDstExt );    <span class="comment">// タイプ別設定の拡張子リストをダイアログ用リストに変換する</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> WCHAR* m_typeExtSeps;          <span class="comment">// タイプ別拡張子の区切り文字</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> WCHAR* m_typeExtWildcards;     <span class="comment">// タイプ別拡張子のワイルドカード</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>* m_pShareData;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_a0933f1d2c7e97a879f8914bf40a28f90"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#a0933f1d2c7e97a879f8914bf40a28f90">CDocTypeManager::ConvertTypesExtToDlgExt</a></div><div class="ttdeci">static bool ConvertTypesExtToDlgExt(const WCHAR *pszSrcExt, const WCHAR *szExt, WCHAR *pszDstExt)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:223</div></div>
+<div class="ttc" id="a_d_l_l_s_h_a_r_e_d_a_t_a_8h_html"><div class="ttname"><a href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">DLLSHAREDATA.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_ad1572f397be912e28ce05ac6a33bf317"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#ad1572f397be912e28ce05ac6a33bf317">CDocTypeManager::GetDocumentTypeOfPath</a></div><div class="ttdeci">CTypeConfig GetDocumentTypeOfPath(const WCHAR *pszFilePath)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:48</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_ad4ea22bfd6303729121136b255be8c39"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#ad4ea22bfd6303729121136b255be8c39">CDocTypeManager::GetDocumentTypeOfExt</a></div><div class="ttdeci">CTypeConfig GetDocumentTypeOfExt(const WCHAR *pszExt)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:80</div></div>
+<div class="ttc" id="astruct_s_type_config_mini_html"><div class="ttname"><a href="../../da/d8f/struct_s_type_config_mini.html">STypeConfigMini</a></div><div class="ttdoc">タイプ別設定(mini)</div><div class="ttdef"><b>Definition:</b> CType.h:264</div></div>
+<div class="ttc" id="aclass_c_type_config_html"><div class="ttname"><a href="../../d8/d39/class_c_type_config.html">CTypeConfig</a></div><div class="ttdoc">ドキュメント種類。共有データ内 STypeConfig へのアクセサも兼ねる。</div><div class="ttdef"><b>Definition:</b> CType.h:276</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_a44a3640a7c61ed6b254ad3d2b336ec3a"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#a44a3640a7c61ed6b254ad3d2b336ec3a">CDocTypeManager::GetFirstExt</a></div><div class="ttdeci">static void GetFirstExt(const WCHAR *pszTypeExts, WCHAR szFirstExt[], int nBuffSize)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:198</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html">CDocTypeManager</a></div><div class="ttdoc">ドキュメントタイプ管理</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.h:33</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_af32ff95b33b3b4b237f7cbe572200515"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#af32ff95b33b3b4b237f7cbe572200515">CDocTypeManager::GetTypeConfigMini</a></div><div class="ttdeci">bool GetTypeConfigMini(CTypeConfig cDocumentType, const STypeConfigMini **type)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:137</div></div>
+<div class="ttc" id="aclass_c_doc_type_manager_html_a7e074ed82e7aeb2bbb1e02e65aff1be0"><div class="ttname"><a href="../../de/df3/class_c_doc_type_manager.html#a7e074ed82e7aeb2bbb1e02e65aff1be0">CDocTypeManager::IsFileNameMatch</a></div><div class="ttdeci">static bool IsFileNameMatch(const WCHAR *pszTypeExts, const WCHAR *pszFileName)</div><div class="ttdef"><b>Definition:</b> CDocTypeManager.cpp:165</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CKeyBind クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-static-methods">静的限定公開メンバ関数</a> &#124;
+<a href="../../d3/df2/class_c_key_bind-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CKeyBind クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>キー割り当て関連ルーチン  
+ <a href="../../d2/d31/class_c_key_bind.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/de8/_c_key_bind_8h_source.html">CKeyBind.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9c1ac0c4a4216108b7f631b728d08b30"><td class="memItemLeft" align="right" valign="top">static HACCEL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a9c1ac0c4a4216108b7f631b728d08b30">CreateAccerelator</a> (int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr)</td></tr>
+<tr class="separator:a9c1ac0c4a4216108b7f631b728d08b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc15c0d511d89f35a4372642a3fdb13"><td class="memItemLeft" align="right" valign="top">static EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a6fc15c0d511d89f35a4372642a3fdb13">GetFuncCode</a> (WORD nAccelCmd, int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="separator:a6fc15c0d511d89f35a4372642a3fdb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9fc0be93b79232f21f55ff0650a0042"><td class="memItemLeft" align="right" valign="top">static EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#ae9fc0be93b79232f21f55ff0650a0042">GetFuncCodeAt</a> (<a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> &amp;KeyData, int nState, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="separator:ae9fc0be93b79232f21f55ff0650a0042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620cfc7780fab09b95cae639ed36e49d"><td class="memItemLeft" align="right" valign="top">static EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a620cfc7780fab09b95cae639ed36e49d">GetDefFuncCode</a> (int nKeyCode, int nState)</td></tr>
+<tr class="separator:a620cfc7780fab09b95cae639ed36e49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be00b4a4c24c816aff2387261656950"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a5be00b4a4c24c816aff2387261656950">CreateKeyBindList</a> (HINSTANCE hInstance, int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cMemList, <a class="el" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a> *pcFuncLookup, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="memdesc:a5be00b4a4c24c816aff2387261656950"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー割り当て一覧を作成する  <a href="../../d2/d31/class_c_key_bind.html#a5be00b4a4c24c816aff2387261656950">[詳解]</a><br /></td></tr>
+<tr class="separator:a5be00b4a4c24c816aff2387261656950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab144619dd41c131027112d6562ff3b37"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#ab144619dd41c131027112d6562ff3b37">GetKeyStr</a> (HINSTANCE hInstance, int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cMemList, int nFuncId, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="separator:ab144619dd41c131027112d6562ff3b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967170f911b0205d79c298a1102f6ddd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a967170f911b0205d79c298a1102f6ddd">GetKeyStrList</a> (HINSTANCE hInstance, int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> ***pppcMemList, int nFuncId, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="separator:a967170f911b0205d79c298a1102f6ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589b5a5a403c2afbcf696c4ddd7ac156"><td class="memItemLeft" align="right" valign="top">static WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a589b5a5a403c2afbcf696c4ddd7ac156">GetMenuLabel</a> (HINSTANCE hInstance, int nKeyNameArrNum, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, int nFuncId, WCHAR *pszLabel, const WCHAR *pszKey, BOOL bKeyStr, int nLabelSize, BOOL bGetDefFuncCode=TRUE)</td></tr>
+<tr class="separator:a589b5a5a403c2afbcf696c4ddd7ac156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22c1c587b3d51e6a181e96808cd2092"><td class="memItemLeft" align="right" valign="top">static WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#af22c1c587b3d51e6a181e96808cd2092">MakeMenuLabel</a> (const WCHAR *sName, const WCHAR *sKey)</td></tr>
+<tr class="separator:af22c1c587b3d51e6a181e96808cd2092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+静的限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3e4ea396cbb9c2ab3a8703a9996aa573"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d31/class_c_key_bind.html#a3e4ea396cbb9c2ab3a8703a9996aa573">GetKeyStrSub</a> (int &amp;nKeyNameArrBegin, int nKeyNameArrEnd, <a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *pKeyNameArr, int nShiftState, <a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;cMemList, int nFuncId, BOOL bGetDefFuncCode)</td></tr>
+<tr class="separator:a3e4ea396cbb9c2ab3a8703a9996aa573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>キー割り当て関連ルーチン </p>
+<p>すべての関数はstaticで保持するデータはない。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a9c1ac0c4a4216108b7f631b728d08b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1ac0c4a4216108b7f631b728d08b30">&#9670;&nbsp;</a></span>CreateAccerelator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HACCEL CKeyBind::CreateAccerelator </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Windows アクセラレータの作成 </p><dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 </dd></dl>
+
+</div>
+</div>
+<a id="a5be00b4a4c24c816aff2387261656950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be00b4a4c24c816aff2387261656950">&#9670;&nbsp;</a></span>CreateKeyBindList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyBind::CreateKeyBindList </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>cMemList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dc4/class_c_func_lookup.html">CFuncLookup</a> *&#160;</td>
+          <td class="paramname"><em>pcFuncLookup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キー割り当て一覧を作成する </p>
+<dl class="section return"><dt>戻り値</dt><dd>機能が割り当てられているキーストロークの数</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>Oct. 31, 2001 genta 動的な機能名に対応するため引数追加 </dd>
+<dd>
+2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hInstance</td><td>[in] インスタンスハンドル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nKeyNameArrNum</td><td>[in] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pKeyNameArr</td><td>[out] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pcFuncLookup</td><td>[in] 機能番号→名前の対応を取る </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bGetDefFuncCode</td><td>[in] ON:デフォルト機能割り当てを使う/OFF:使わない デフォルト:TRUE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a620cfc7780fab09b95cae639ed36e49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620cfc7780fab09b95cae639ed36e49d">&#9670;&nbsp;</a></span>GetDefFuncCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode CKeyBind::GetDefFuncCode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>キーのデフォルト機能を取得する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nKeyCode</td><td>[in] キーコード </td></tr>
+    <tr><td class="paramname">nState</td><td>[in] Shift,Ctrl,Altキー状態</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>機能番号</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji 新規作成 </dd></dl>
+
+</div>
+</div>
+<a id="a6fc15c0d511d89f35a4372642a3fdb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc15c0d511d89f35a4372642a3fdb13">&#9670;&nbsp;</a></span>GetFuncCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode CKeyBind::GetFuncCode </td>
+          <td>(</td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>nAccelCmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>アクラセレータ識別子に対応するコマンド識別子を返す． 対応するアクラセレータ識別子がない場合または機能未割り当ての場合は0を返す．</p>
+<dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 </dd></dl>
+
+</div>
+</div>
+<a id="ae9fc0be93b79232f21f55ff0650a0042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9fc0be93b79232f21f55ff0650a0042">&#9670;&nbsp;</a></span>GetFuncCodeAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode CKeyBind::GetFuncCodeAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> &amp;&#160;</td>
+          <td class="paramname"><em>KeyData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>特定のキー情報から機能コードを取得する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KeyData</td><td>[in] キー情報 </td></tr>
+    <tr><td class="paramname">nState</td><td>[in] Shift,Ctrl,Altキー状態 </td></tr>
+    <tr><td class="paramname">bGetDefFuncCode</td><td>[in] デフォルト機能を取得するかどうか</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>機能番号</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2007.03.07 ryoji インライン関数から通常の関数に変更（BCCの最適化バグ対策） </dd></dl>
+
+</div>
+</div>
+<a id="ab144619dd41c131027112d6562ff3b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab144619dd41c131027112d6562ff3b37">&#9670;&nbsp;</a></span>GetKeyStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyBind::GetKeyStr </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>cMemList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>機能に対応するキー名の取得 </p><dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 </dd>
+<dd>
+2007.11.04 genta マウスクリックよりキー割り当ての優先度を上げる </dd>
+<dd>
+2007.11.04 genta 共通機能のサブルーチン化 </dd></dl>
+
+</div>
+</div>
+<a id="a967170f911b0205d79c298a1102f6ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967170f911b0205d79c298a1102f6ddd">&#9670;&nbsp;</a></span>GetKeyStrList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CKeyBind::GetKeyStrList </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> ***&#160;</td>
+          <td class="paramname"><em>pppcMemList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>機能に対応するキー名の取得(複数) </p><dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 </dd>
+<dd>
+2007.11.04 genta 共通機能のサブルーチン化 </dd></dl>
+
+</div>
+</div>
+<a id="a3e4ea396cbb9c2ab3a8703a9996aa573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e4ea396cbb9c2ab3a8703a9996aa573">&#9670;&nbsp;</a></span>GetKeyStrSub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyBind::GetKeyStrSub </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>nKeyNameArrBegin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrEnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nShiftState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d86/class_c_native_w.html">CNativeW</a> &amp;&#160;</td>
+          <td class="paramname"><em>cMemList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>機能に対応するキー名のサーチ(補助関数)</p>
+<p>与えられたシフト状態に対して，指定された範囲のキーエリアから 当該機能に対応するキーがあるかを調べ，見つかったら 対応するキー文字列をセットする．</p>
+<p>関数から出るときには検索開始位置(nKeyNameArrBegin)に 次に処理するindexを設定する．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nKeyNameArrBegin</td><td>調査開始INDEX (終了時には次回の開始INDEXに書き換えられる) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nKeyNameArrBegin</td><td>調査終了INDEX + 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pKeyNameArr</td><td>キー配列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nShiftState</td><td>シフト状態 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cMemList</td><td>キー文字列設定先 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nFuncId</td><td>検索対象機能ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bGetDefFuncCode</td><td>標準機能を取得するかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a589b5a5a403c2afbcf696c4ddd7ac156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589b5a5a403c2afbcf696c4ddd7ac156">&#9670;&nbsp;</a></span>GetMenuLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WCHAR * CKeyBind::GetMenuLabel </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&#160;</td>
+          <td class="paramname"><em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nKeyNameArrNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d04/struct_k_e_y_d_a_t_a.html">KEYDATA</a> *&#160;</td>
+          <td class="paramname"><em>pKeyNameArr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFuncId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>pszLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>pszKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bKeyStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLabelSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BOOL&#160;</td>
+          <td class="paramname"><em>bGetDefFuncCode</em> = <code>TRUE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>メニューラベルの作成 </p><dl class="section date"><dt>日付</dt><dd>2007.02.22 ryoji デフォルト機能割り当てに関する処理を追加 2010/5/17 アクセスキーの追加 </dd>
+<dd>
+2014.05.04 Moca LABEL_MAX=256 =&gt; nLabelSize </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pszLabel</td><td>[in,out] バッファは256以上と仮定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af22c1c587b3d51e6a181e96808cd2092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22c1c587b3d51e6a181e96808cd2092">&#9670;&nbsp;</a></span>MakeMenuLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WCHAR * CKeyBind::MakeMenuLabel </td>
+          <td>(</td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>sName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WCHAR *&#160;</td>
+          <td class="paramname"><em>sKey</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>アクセスキー付きの文字列の作成 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sName</td><td>ラベル </td></tr>
+    <tr><td class="paramname">sKey</td><td>アクセスキー </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アクセスキー付きの文字列 @data 2013.12.09 novice アクセスキーと文字列の比較で小文字も有効にする </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2014.05.04 sLabelのバッファ長を300 =&gt; _MAX_PATH*2 + 30 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/func/<a class="el" href="../../d1/de8/_c_key_bind_8h_source.html">CKeyBind.h</a></li>
+<li>sakura_core/func/<a class="el" href="../../d2/d2a/_c_key_bind_8cpp.html">CKeyBind.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

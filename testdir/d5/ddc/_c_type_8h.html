@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/types/CType.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9bcd7d45e1814a3f6d4b84e4be8b1f83.html">types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CType.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../db/dc5/_c_eol_8h_source.html">CEol.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d06/_common_setting_8h_source.html">env/CommonSetting.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/ddc/_c_doc_type_setting_8h_source.html">doc/CDocTypeSetting.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d0e/_c_line_comment_8h_source.html">doc/CLineComment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de3/_c_block_comment_8h_source.html">doc/CBlockComment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/dae/charset_8h_source.html">charset/charset.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d4a/_c_regex_keyword_8h_source.html">CRegexKeyword.h</a>&quot;</code><br />
+</div>
+<p><a href="../../d5/ddc/_c_type_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンコードオプション  <a href="../../d2/d22/struct_s_encoding_config.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ別設定  <a href="../../d5/d88/struct_s_type_config.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8f/struct_s_type_config_mini.html">STypeConfigMini</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイプ別設定(mini)  <a href="../../da/d8f/struct_s_type_config_mini.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ドキュメント種類。共有データ内 <a class="el" href="../../d5/d88/struct_s_type_config.html" title="タイプ別設定">STypeConfig</a> へのアクセサも兼ねる。  <a href="../../d8/d39/class_c_type_config.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d40/class_c_type.html">CType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a8a888e9da0514747d748ba3ce1b822e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>GEN_CTYPE</b>(CLASS_NAME)</td></tr>
+<tr class="separator:a8a888e9da0514747d748ba3ce1b822e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:abc53eb7d1c801464cc0e9b16b7e561c1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1">ETabArrow</a> { <a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1acb45b274a618126921dcaa0779b03eb4">TABARROW_STRING</a> = 0, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1aacc22db3de14ec15b6d05975393b4b0f">TABARROW_SHORT</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1adf380dc192b59dcce7f92e09082253a9">TABARROW_LONG</a>
+ }</td></tr>
+<tr class="memdesc:abc53eb7d1c801464cc0e9b16b7e561c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">タブ表示方法  <a href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1">[詳解]</a><br /></td></tr>
+<tr class="separator:abc53eb7d1c801464cc0e9b16b7e561c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b5e596b70273cca152f2094e721e37"><td class="memItemLeft" align="right" valign="top"><a id="a16b5e596b70273cca152f2094e721e37"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a> { <br />
+&#160;&#160;<b>OUTLINE_C</b>, 
+<b>OUTLINE_C_CPP</b>, 
+<b>OUTLINE_PLSQL</b>, 
+<b>OUTLINE_TEXT</b>, 
+<br />
+&#160;&#160;<b>OUTLINE_JAVA</b>, 
+<b>OUTLINE_COBOL</b>, 
+<b>OUTLINE_ASM</b>, 
+<b>OUTLINE_PERL</b>, 
+<br />
+&#160;&#160;<b>OUTLINE_VB</b>, 
+<b>OUTLINE_WZTXT</b>, 
+<b>OUTLINE_HTML</b>, 
+<b>OUTLINE_TEX</b>, 
+<br />
+&#160;&#160;<b>OUTLINE_FILE</b>, 
+<b>OUTLINE_PYTHON</b>, 
+<b>OUTLINE_ERLANG</b>, 
+<b>OUTLINE_XML</b>, 
+<br />
+&#160;&#160;<b>OUTLINE_CPP</b>, 
+<b>OUTLINE_CODEMAX</b>, 
+<b>OUTLINE_BOOKMARK</b>, 
+<b>OUTLINE_PLUGIN</b>, 
+<br />
+&#160;&#160;<b>OUTLINE_FILETREE</b>, 
+<b>OUTLINE_DEFAULT</b> =-1, 
+<b>OUTLINE_UNKNOWN</b> = 99, 
+<b>OUTLINE_TREE</b> = 100, 
+<br />
+&#160;&#160;<b>OUTLINE_TREE_TAGJUMP</b> = 101, 
+<b>OUTLINE_CLSTREE</b> = 200, 
+<b>OUTLINE_LIST</b> = 300
+<br />
+ }</td></tr>
+<tr class="memdesc:a16b5e596b70273cca152f2094e721e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">アウトライン解析の種類 <br /></td></tr>
+<tr class="separator:a16b5e596b70273cca152f2094e721e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427ae3355529353b22280f208318c3e4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">ESmartIndentType</a> { <a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a5a51c847b9496528a3332156ede5f8c4">SMARTINDENT_NONE</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a7ab836923ca78d2e53e75a0713af99bb">SMARTINDENT_CPP</a>
+ }</td></tr>
+<tr class="memdesc:a427ae3355529353b22280f208318c3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スマートインデント種別  <a href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">[詳解]</a><br /></td></tr>
+<tr class="separator:a427ae3355529353b22280f208318c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352d7393b5ef45e8de53acc658cb03ca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03ca">EHereDocType</a> { <a class="el" href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03caafa1ca4383e98bb92bb18edb476797b13">HEREDOC_PHP</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03caafbabdf1c98a760ddbb0e174ae2bb8a0b">HEREDOC_RUBY</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03caa660267605d7a0e2c7cd4b4911e02870a">HEREDOC_PERL</a>
+ }</td></tr>
+<tr class="memdesc:a352d7393b5ef45e8de53acc658cb03ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ヒアドキュメント種別  <a href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a352d7393b5ef45e8de53acc658cb03ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f017bf167c6516a804e511b78239dfa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfa">EBackgroundImagePos</a> { <br />
+&#160;&#160;<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaad1ee4b382ca550aaa210d5b0772655cb">BGIMAGE_TOP_LEFT</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaa456977e92743ac315fe5642c9da4f2cf">BGIMAGE_TOP_RIGHT</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaacf168a6bc73ad1e718950c16e836dcb5">BGIMAGE_BOTTOM_LEFT</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaa4365c42af65dee1308fb0c08a966b3c2">BGIMAGE_BOTTOM_RIGHT</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaaacd5691642488060cb696f63e9c7d7c4">BGIMAGE_CENTER</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaa684a22e582e8aa80e77e2bde78d8f353">BGIMAGE_TOP_CENTER</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaae7b5e0a52fb7749f38bcb3b314c4860f">BGIMAGE_BOTTOM_CENTER</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaa508bcadc45094b73b0b4a9f6cdebc1d1">BGIMAGE_CENTER_LEFT</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfaa16632e986c663d72eba60ec22103e524">BGIMAGE_CENTER_RIGHT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a2f017bf167c6516a804e511b78239dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">背景画像表示位置  <a href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfa">[詳解]</a><br /></td></tr>
+<tr class="separator:a2f017bf167c6516a804e511b78239dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcd6434b49bbfb5247441ce61d4fb51"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51">EStringLiteralType</a> { <br />
+&#160;&#160;<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a2184d32fd1336a3a21b4f3f96be917c5">STRING_LITERAL_CPP</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a1ca1d4240dd46693e278b60ec77a017d">STRING_LITERAL_PLSQL</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a9ca4514448365528fc0aba064a3630fc">STRING_LITERAL_HTML</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51ab30f4b0910111bccd90b9fd9bd1dfc23">STRING_LITERAL_CSHARP</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51a5e9cd47d0e6a0b141702ff976f528a55">STRING_LITERAL_PYTHON</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a8dcd6434b49bbfb5247441ce61d4fb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列区切り記号エスケープ方法  <a href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51">[詳解]</a><br /></td></tr>
+<tr class="separator:a8dcd6434b49bbfb5247441ce61d4fb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a5ecf09f005afdb5eaf8d6a7a9c317"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317">EKeyHelpRMenuType</a> { <a class="el" href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317a112e1713016d364a183b30c420726b70">KEYHELP_RMENU_NONE</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317aa6ac69c795b3e75d3da5b6d0e31ff4fe">KEYHELP_RMENU_TOP</a>, 
+<a class="el" href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317a2a99b7537a1a934d0442bcfd0add729c">KEYHELP_RMENU_BOTTOM</a>
+ }</td></tr>
+<tr class="memdesc:ae5a5ecf09f005afdb5eaf8d6a7a9c317"><td class="mdescLeft">&#160;</td><td class="mdescRight">右クリックメニュー表示  <a href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5a5ecf09f005afdb5eaf8d6a7a9c317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9d4db654f3545a851b18f301776b7ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a9d4db654f3545a851b18f301776b7ccb">C_IsSpace</a> (wchar_t c, bool bExtEol)</td></tr>
+<tr class="separator:a9d4db654f3545a851b18f301776b7ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/ddc/_c_type_8h.html#a3bf1d7aa571f09945d2f9478fa59fdc3">GetCLangOutlineType</a> (const wchar_t *pszFileName)</td></tr>
+<tr class="memdesc:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C/C++のファイル名による判定  <a href="../../d5/ddc/_c_type_8h.html#a3bf1d7aa571f09945d2f9478fa59fdc3">[詳解]</a><br /></td></tr>
+<tr class="separator:a3bf1d7aa571f09945d2f9478fa59fdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a8a888e9da0514747d748ba3ce1b822e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a888e9da0514747d748ba3ce1b822e8">&#9670;&nbsp;</a></span>GEN_CTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GEN_CTYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CLASS_NAME</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keyword">class </span>CLASS_NAME : <span class="keyword">public</span> <a class="code" href="../../d4/d40/class_c_type.html">CType</a>{ \</div>
+<div class="line">protected: \</div>
+<div class="line">    void InitTypeConfigImp(<a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>* pType); \</div>
+<div class="line">};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a2f017bf167c6516a804e511b78239dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f017bf167c6516a804e511b78239dfa">&#9670;&nbsp;</a></span>EBackgroundImagePos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#a2f017bf167c6516a804e511b78239dfa">EBackgroundImagePos</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>背景画像表示位置 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaad1ee4b382ca550aaa210d5b0772655cb"></a>BGIMAGE_TOP_LEFT&#160;</td><td class="fielddoc"><p>左上 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaa456977e92743ac315fe5642c9da4f2cf"></a>BGIMAGE_TOP_RIGHT&#160;</td><td class="fielddoc"><p>右上 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaacf168a6bc73ad1e718950c16e836dcb5"></a>BGIMAGE_BOTTOM_LEFT&#160;</td><td class="fielddoc"><p>左下 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaa4365c42af65dee1308fb0c08a966b3c2"></a>BGIMAGE_BOTTOM_RIGHT&#160;</td><td class="fielddoc"><p>右下 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaaacd5691642488060cb696f63e9c7d7c4"></a>BGIMAGE_CENTER&#160;</td><td class="fielddoc"><p>中央 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaa684a22e582e8aa80e77e2bde78d8f353"></a>BGIMAGE_TOP_CENTER&#160;</td><td class="fielddoc"><p>中央上 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaae7b5e0a52fb7749f38bcb3b314c4860f"></a>BGIMAGE_BOTTOM_CENTER&#160;</td><td class="fielddoc"><p>中央下 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaa508bcadc45094b73b0b4a9f6cdebc1d1"></a>BGIMAGE_CENTER_LEFT&#160;</td><td class="fielddoc"><p>中央左 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f017bf167c6516a804e511b78239dfaa16632e986c663d72eba60ec22103e524"></a>BGIMAGE_CENTER_RIGHT&#160;</td><td class="fielddoc"><p>中央右 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a352d7393b5ef45e8de53acc658cb03ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352d7393b5ef45e8de53acc658cb03ca">&#9670;&nbsp;</a></span>EHereDocType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#a352d7393b5ef45e8de53acc658cb03ca">EHereDocType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ヒアドキュメント種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a352d7393b5ef45e8de53acc658cb03caafa1ca4383e98bb92bb18edb476797b13"></a>HEREDOC_PHP&#160;</td><td class="fielddoc"><p>PHP </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a352d7393b5ef45e8de53acc658cb03caafbabdf1c98a760ddbb0e174ae2bb8a0b"></a>HEREDOC_RUBY&#160;</td><td class="fielddoc"><p>Ruby </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a352d7393b5ef45e8de53acc658cb03caa660267605d7a0e2c7cd4b4911e02870a"></a>HEREDOC_PERL&#160;</td><td class="fielddoc"><p>Perl </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae5a5ecf09f005afdb5eaf8d6a7a9c317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a5ecf09f005afdb5eaf8d6a7a9c317">&#9670;&nbsp;</a></span>EKeyHelpRMenuType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#ae5a5ecf09f005afdb5eaf8d6a7a9c317">EKeyHelpRMenuType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右クリックメニュー表示 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae5a5ecf09f005afdb5eaf8d6a7a9c317a112e1713016d364a183b30c420726b70"></a>KEYHELP_RMENU_NONE&#160;</td><td class="fielddoc"><p>非表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae5a5ecf09f005afdb5eaf8d6a7a9c317aa6ac69c795b3e75d3da5b6d0e31ff4fe"></a>KEYHELP_RMENU_TOP&#160;</td><td class="fielddoc"><p>メニュー先頭 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae5a5ecf09f005afdb5eaf8d6a7a9c317a2a99b7537a1a934d0442bcfd0add729c"></a>KEYHELP_RMENU_BOTTOM&#160;</td><td class="fielddoc"><p>メニュー末尾 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a427ae3355529353b22280f208318c3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427ae3355529353b22280f208318c3e4">&#9670;&nbsp;</a></span>ESmartIndentType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">ESmartIndentType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スマートインデント種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a427ae3355529353b22280f208318c3e4a5a51c847b9496528a3332156ede5f8c4"></a>SMARTINDENT_NONE&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a427ae3355529353b22280f208318c3e4a7ab836923ca78d2e53e75a0713af99bb"></a>SMARTINDENT_CPP&#160;</td><td class="fielddoc"><p>C/C++ </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a8dcd6434b49bbfb5247441ce61d4fb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcd6434b49bbfb5247441ce61d4fb51">&#9670;&nbsp;</a></span>EStringLiteralType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#a8dcd6434b49bbfb5247441ce61d4fb51">EStringLiteralType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列区切り記号エスケープ方法 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8dcd6434b49bbfb5247441ce61d4fb51a2184d32fd1336a3a21b4f3f96be917c5"></a>STRING_LITERAL_CPP&#160;</td><td class="fielddoc"><p>C/C++言語風 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8dcd6434b49bbfb5247441ce61d4fb51a1ca1d4240dd46693e278b60ec77a017d"></a>STRING_LITERAL_PLSQL&#160;</td><td class="fielddoc"><p>PL/SQL風 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8dcd6434b49bbfb5247441ce61d4fb51a9ca4514448365528fc0aba064a3630fc"></a>STRING_LITERAL_HTML&#160;</td><td class="fielddoc"><p>HTML/XML風 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8dcd6434b49bbfb5247441ce61d4fb51ab30f4b0910111bccd90b9fd9bd1dfc23"></a>STRING_LITERAL_CSHARP&#160;</td><td class="fielddoc"><p>C::風 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8dcd6434b49bbfb5247441ce61d4fb51a5e9cd47d0e6a0b141702ff976f528a55"></a>STRING_LITERAL_PYTHON&#160;</td><td class="fielddoc"><p>Python風 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="abc53eb7d1c801464cc0e9b16b7e561c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc53eb7d1c801464cc0e9b16b7e561c1">&#9670;&nbsp;</a></span>ETabArrow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1">ETabArrow</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>タブ表示方法 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="abc53eb7d1c801464cc0e9b16b7e561c1acb45b274a618126921dcaa0779b03eb4"></a>TABARROW_STRING&#160;</td><td class="fielddoc"><p>文字指定 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc53eb7d1c801464cc0e9b16b7e561c1aacc22db3de14ec15b6d05975393b4b0f"></a>TABARROW_SHORT&#160;</td><td class="fielddoc"><p>短い矢印 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abc53eb7d1c801464cc0e9b16b7e561c1adf380dc192b59dcce7f92e09082253a9"></a>TABARROW_LONG&#160;</td><td class="fielddoc"><p>長い矢印 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a9d4db654f3545a851b18f301776b7ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4db654f3545a851b18f301776b7ccb">&#9670;&nbsp;</a></span>C_IsSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool C_IsSpace </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bExtEol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>スペースの判定 </p>
+
+</div>
+</div>
+<a id="a3bf1d7aa571f09945d2f9478fa59fdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf1d7aa571f09945d2f9478fa59fdc3">&#9670;&nbsp;</a></span>GetCLangOutlineType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a> GetCLangOutlineType </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C/C++のファイル名による判定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszFileName</td><td>ファイル名(nullptr指定不可、NUL終端すること) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アウトライン種別</dd></dl>
+<p>@detail ファイル名(拡張子)に応じたアウトライン種別を取得する。 拡張子の一致判定は大文字小文字を区別しない。 現状、拡張子に対応するアウトライン種別はベタ書きで判定している。 一致する拡張子がない場合、OUTLINE_C_CPPになる。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="aclass_c_type_html"><div class="ttname"><a href="../../d4/d40/class_c_type.html">CType</a></div><div class="ttdef"><b>Definition:</b> CType.h:310</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

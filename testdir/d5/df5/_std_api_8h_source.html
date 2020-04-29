@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/apiwrap/StdApi.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_91e391275ce155d63b5eb01c4bf28a00.html">apiwrap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StdApi.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/df5/_std_api_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//ランタイム情報ライブラリにアクセスするWindowsヘッダを参照する</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ImageHlp.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d38/_c_native_w_8h.html">mem/CNativeW.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//デバッグ用。</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//VistaだとExtTextOutの結果が即反映されない。この関数を用いると即反映されるので、</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//デバッグ時ステップ実行する際に便利になる。ただし、当然重くなる。</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define DEBUG_SETPIXEL(hdc) SetPixel(hdc,-1,-1,0); //SetPixelをすると、結果が即反映される。</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define DEBUG_SETPIXEL(hdc)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>ApiWrap</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//          W系が存在しないAPIのための、新しい関数定義         //</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//W版が無いので、自作</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    BOOL <a class="code" href="../../d7/dd6/_std_api_8cpp.html#a99aba1a93e3a3c46f078c64e9011dd9e">MakeSureDirectoryPathExistsW</a>(LPCWSTR pszDirPath);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//                    描画API 不具合ラップ                     //</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//VistaでSetPixelが動かないため、代替関数を用意。</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> SetPixelSurely(HDC hdc,<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y,COLORREF c);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//                      よく使う引数値                         //</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d5/df5/_std_api_8h.html#add04df00b5a858783e3d8f4925da263b">   60</a></span>&#160;    <span class="keyword">inline</span> UINT <a class="code" href="../../d5/df5/_std_api_8h.html#add04df00b5a858783e3d8f4925da263b">ExtTextOutOption</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> ETO_CLIPPED | ETO_OPAQUE;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//                       よく使う用法                          //</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d5/df5/_std_api_8h.html#ae3183119d2a1404625f32e2566b3aabe">   70</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d5/df5/_std_api_8h.html#ae3183119d2a1404625f32e2566b3aabe">GetKeyState_Shift</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> (::GetKeyState(VK_SHIFT)&amp;0x8000)!=0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d5/df5/_std_api_8h.html#a869ab46e5a9abe6817566674273673d5">   76</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d5/df5/_std_api_8h.html#a869ab46e5a9abe6817566674273673d5">GetKeyState_Control</a>()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> (::GetKeyState(VK_CONTROL)&amp;0x8000)!=0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d5/df5/_std_api_8h.html#a92590efc417c3e567b0b964691c52fff">   82</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d5/df5/_std_api_8h.html#a92590efc417c3e567b0b964691c52fff">GetKeyState_Alt</a>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> (::GetKeyState(VK_MENU)&amp;0x8000)!=0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//             SendMessage,PostMessage意味付け                 //</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// 過去のUNICODE化の名残です。</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// 現在となっては、特に意味はありません。</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//文字コードに関係のなさそうな SendMessage は SendMessageAny に差し替えておく。</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">    #define SendMessageAny SendMessage</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//WM_COMMAND系の SendMessage は SendMessageCmd に差し替えておく。</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">    #define SendMessageCmd SendMessage</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//文字コードに関係のなさそうな PostMessage は PostMessageAny に差し替えておく。</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">    #define PostMessageAny PostMessage</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//WM_COMMAND系の PostMessage は PostMessageCmd に差し替えておく。</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">    #define PostMessageCmd PostMessage</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">using namespace </span>ApiWrap;</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_std_api_8h_html_a869ab46e5a9abe6817566674273673d5"><div class="ttname"><a href="../../d5/df5/_std_api_8h.html#a869ab46e5a9abe6817566674273673d5">ApiWrap::GetKeyState_Control</a></div><div class="ttdeci">bool GetKeyState_Control()</div><div class="ttdoc">CTRLを押しているかどうか</div><div class="ttdef"><b>Definition:</b> StdApi.h:76</div></div>
+<div class="ttc" id="a_c_native_w_8h_html"><div class="ttname"><a href="../../d8/d38/_c_native_w_8h.html">CNativeW.h</a></div></div>
+<div class="ttc" id="a_std_api_8h_html_add04df00b5a858783e3d8f4925da263b"><div class="ttname"><a href="../../d5/df5/_std_api_8h.html#add04df00b5a858783e3d8f4925da263b">ApiWrap::ExtTextOutOption</a></div><div class="ttdeci">UINT ExtTextOutOption()</div><div class="ttdoc">よく使うExtTextOutのオプション</div><div class="ttdef"><b>Definition:</b> StdApi.h:60</div></div>
+<div class="ttc" id="a_std_api_8h_html_a92590efc417c3e567b0b964691c52fff"><div class="ttname"><a href="../../d5/df5/_std_api_8h.html#a92590efc417c3e567b0b964691c52fff">ApiWrap::GetKeyState_Alt</a></div><div class="ttdeci">bool GetKeyState_Alt()</div><div class="ttdoc">ALTを押しているかどうか</div><div class="ttdef"><b>Definition:</b> StdApi.h:82</div></div>
+<div class="ttc" id="a_std_api_8cpp_html_a99aba1a93e3a3c46f078c64e9011dd9e"><div class="ttname"><a href="../../d7/dd6/_std_api_8cpp.html#a99aba1a93e3a3c46f078c64e9011dd9e">ApiWrap::MakeSureDirectoryPathExistsW</a></div><div class="ttdeci">BOOL MakeSureDirectoryPathExistsW(LPCWSTR szDirPath)</div><div class="ttdef"><b>Definition:</b> StdApi.cpp:35</div></div>
+<div class="ttc" id="a_std_api_8h_html_ae3183119d2a1404625f32e2566b3aabe"><div class="ttname"><a href="../../d5/df5/_std_api_8h.html#ae3183119d2a1404625f32e2566b3aabe">ApiWrap::GetKeyState_Shift</a></div><div class="ttdeci">bool GetKeyState_Shift()</div><div class="ttdoc">SHIFTを押しているかどうか</div><div class="ttdef"><b>Definition:</b> StdApi.h:70</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/io/CFileLoad.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_8f863bb37653c962fb957559ba8a7e99.html">io</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CFileLoad.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d9d/_c_file_load_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2002, Moca, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2003, Moca, ryoji</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d16/_c_stream_8h.html">CStream.h</a>&quot;</span> <span class="comment">//CError_FileOpen</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d55/_c_code_base_8h.html">charset/CCodeBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/df3/_c_code_page_8h.html">charset/CCodePage.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/d84/class_c_code_base.html">CCodeBase</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d59/class_c_file_load.html">CFileLoad</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> IsLoadableSize(ULONGLONG size, <span class="keywordtype">bool</span> ignoreLimit = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> ULONGLONG GetLimitSize();</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#aae4de1008fa08690203aaf4b3017cb9a">   52</a></span>&#160;    <span class="keyword">static</span> std::wstring <a class="code" href="../../d7/d59/class_c_file_load.html#aae4de1008fa08690203aaf4b3017cb9a">GetSizeStringForHuman</a>(ULONGLONG size); </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d7/d59/class_c_file_load.html#a4672a0ae4d78032b35d82b9e64d8af76">CFileLoad</a>( <span class="keyword">const</span> <a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>&amp; encode );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d7/d59/class_c_file_load.html#aab4a8484eabd23be9d8b2ed2abf246da">~CFileLoad</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//  Jul. 26, 2003 ryoji BOM引数追加</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> <a class="code" href="../../d7/d59/class_c_file_load.html#ae895620833393215a11ebae651414c7b">FileOpen</a>( LPCWSTR, <span class="keywordtype">bool</span> bBigFile, <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>, <span class="keywordtype">int</span>, <span class="keywordtype">bool</span>* pbBomExist = NULL );      <span class="comment">// 指定文字コードでファイルをオープンする</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d59/class_c_file_load.html#af4ba5a48d3532219aa8fd7a257f964eb">FileClose</a>( <span class="keywordtype">void</span> );                 <span class="comment">// 明示的にファイルをクローズする</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d7/d59/class_c_file_load.html#abb31c7de2acc074eb0deaa006ff96004">ReadLine</a>(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>*   pUnicodeBuffer, </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../db/d83/class_c_eol.html">CEol</a>*       pcEol           </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//  未実装関数郡</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//  cosnt char* ReadAtLine( int, int*, CEol* ); // 指定行目をロードする</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//  cosnt wchar_t* ReadAtLineW( int, int*, CEol* ); // 指定行目をロードする(Unicode版)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//  bool ReadIgnoreLine( void ); // 1行読み飛ばす</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    BOOL <a class="code" href="../../d7/d59/class_c_file_load.html#ab94a2701db310395466ac489d078c4db">GetFileTime</a>( FILETIME* pftCreate, FILETIME* pftLastAccess, FILETIME* pftLastWrite ); <span class="comment">// inline</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//  Jun. 08, 2003 Moca</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#ab4f9266ca2fe086e2d5615996519a348">   78</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_c_file_load.html#ab4f9266ca2fe086e2d5615996519a348">IsBomExist</a>( <span class="keywordtype">void</span> ){ <span class="keywordflow">return</span> m_bBomExist; }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d7/d59/class_c_file_load.html#ae1220401b75f3103661536c0df37df74">GetPercent</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a3654d84b251d7041ac46aaa72f6516b6">   84</a></span>&#160;    <span class="keyword">inline</span> LONGLONG <a class="code" href="../../d7/d59/class_c_file_load.html#a3654d84b251d7041ac46aaa72f6516b6">GetFileSize</a>( <span class="keywordtype">void</span> ){ <span class="keywordflow">return</span> m_nFileSize; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#ad69bf5d892921fc911e709e63d05c3b1">   86</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d59/class_c_file_load.html#ad69bf5d892921fc911e709e63d05c3b1">gm_nBufSizeDef</a>; <span class="comment">// ロード用バッファサイズの初期値</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//  static const int gm_nBufSizeMin; // ロード用バッファサイズの設定可能な最低値</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// Oct. 19, 2002 genta スペルミス修正</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//  void SeekBegin( void );     // ファイルの先頭位置に移動する(BOMを考慮する)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d59/class_c_file_load.html#a6f510da9948764c7a3828510fcedd823">Buffering</a>( <span class="keywordtype">void</span> );     <span class="comment">// バッファにデータをロードする</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d7/d59/class_c_file_load.html#a999ce46ad5054c68a45ce291ab104e2a">ReadBufEmpty</a>( <span class="keywordtype">void</span> );  <span class="comment">// バッファを空にする</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// GetLextLine の 文字コード考慮版</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="../../d7/d59/class_c_file_load.html#ac1a4ad9731dae2b04596a953cb529719">GetNextLineCharCode</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pData, <span class="keywordtype">int</span> nDataLen, <span class="keywordtype">int</span>* pnLineLen, <span class="keywordtype">int</span>* pnBgn, <a class="code" href="../../db/d83/class_c_eol.html">CEol</a>* pcEol, <span class="keywordtype">int</span>* pnEolLen, <span class="keywordtype">int</span>* pnBufferNext);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> <a class="code" href="../../d7/d59/class_c_file_load.html#a33bc73ce47ee40bdb50d979ad173fa79">ReadLine_core</a>(<a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* pUnicodeBuffer, <a class="code" href="../../db/d83/class_c_eol.html">CEol</a>* pcEol);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> Read(<span class="keywordtype">void</span>* pBuf, <span class="keywordtype">size_t</span> nSize); <span class="comment">// inline</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    DWORD FilePointer(DWORD offset, DWORD origin); <span class="comment">// inline</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">/* メンバオブジェクト */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a>* m_pEencoding;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//  LPWSTR  m_pszFileName;  // ファイル名</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    HANDLE  m_hFile;        <span class="comment">// ファイルハンドル</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    LONGLONG    m_nFileSize;    <span class="comment">// ファイルサイズ(64bit)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    LONGLONG    m_nFileDataLen; <span class="comment">// ファイルデータ長からBOM長を引いたバイト数</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    LONGLONG    m_nReadLength;  <span class="comment">// 現在までにロードしたデータの合計バイト数(BOM長を含まない)</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span>     m_nLineIndex;   <span class="comment">// 現在ロードしている論理行(0開始)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>   m_CharCode;     <span class="comment">// 文字コード</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../d6/d84/class_c_code_base.html">CCodeBase</a>*  m_pCodeBase;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    EEncodingTrait  m_encodingTrait;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a>         m_memEols[3];</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a31cd3d43cc561a79170f35b1225a750d">  115</a></span>&#160;    <span class="keywordtype">bool</span>    <a class="code" href="../../d7/d59/class_c_file_load.html#a31cd3d43cc561a79170f35b1225a750d">m_bEolEx</a>;       </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a32b57b7605e0d47da9a9254a96ba68e8">  116</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d7/d59/class_c_file_load.html#a32b57b7605e0d47da9a9254a96ba68e8">m_nMaxEolLen</a>;   </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span>    m_bBomExist;    <span class="comment">// ファイルのBOMが付いているか Jun. 08, 2003 Moca </span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">int</span>     m_nFlag;        <span class="comment">// 文字コードの変換オプション</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//  Jun. 13, 2003 Moca</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">//  状態をenumとしてわかりやすく．</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">  121</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">enumFileLoadMode</a>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658">  122</a></span>&#160;        <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658">FLMODE_CLOSE</a> = 0, </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3">  123</a></span>&#160;        <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3">FLMODE_OPEN</a>, </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59">  124</a></span>&#160;        <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59">FLMODE_READY</a>, </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a">FLMODE_READBUFEND</a> </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a">  126</a></span>&#160;    };</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">enumFileLoadMode</a>    m_eMode;        <span class="comment">// 現在の読み込み状態</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// 読み込みバッファ系</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">char</span>*   m_pReadBuf;         <span class="comment">// 読み込みバッファへのポインタ</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span>     m_nReadBufSize;     <span class="comment">// 読み込みバッファの実際に確保しているサイズ</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">int</span>     m_nReadDataLen;     <span class="comment">// 読み込みバッファの有効データサイズ</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">int</span>     m_nReadBufOffSet;   <span class="comment">// 読み込みバッファ中のオフセット(次の行頭位置)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">//  int     m_nReadBufSumSize;  // 今までにバッファに読み込んだデータの合計サイズ</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../d6/d31/class_c_memory.html">CMemory</a> m_cLineBuffer;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a> m_cLineTemp;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">int</span>     m_nReadOffset2;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a> m_nTempResult;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../d7/d59/class_c_file_load.html">CFileLoad</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}; <span class="comment">// class CFileLoad</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">// インライン関数郡</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">// public</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../d7/d59/class_c_file_load.html#ab94a2701db310395466ac489d078c4db">  146</a></span>&#160;<span class="keyword">inline</span> BOOL <a class="code" href="../../d7/d59/class_c_file_load.html#ab94a2701db310395466ac489d078c4db">CFileLoad::GetFileTime</a>( FILETIME* pftCreate, FILETIME* pftLastAccess, FILETIME* pftLastWrite ){</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    return ::GetFileTime( m_hFile, pftCreate, pftLastAccess, pftLastWrite );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">// protected</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> CFileLoad::Read( <span class="keywordtype">void</span>* pBuf, <span class="keywordtype">size_t</span> nSize )</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    DWORD ReadSize;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span>( !::ReadFile( m_hFile, pBuf, nSize, &amp;ReadSize, NULL ) )</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="../../d1/d36/class_c_error___file_read.html">CError_FileRead</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)ReadSize;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">// protected</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">inline</span> DWORD CFileLoad::FilePointer( DWORD offset, DWORD origin )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    DWORD fp;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span>( INVALID_SET_FILE_POINTER == ( fp = ::SetFilePointer( m_hFile, offset, NULL, FILE_BEGIN ) ) )</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="../../d1/d36/class_c_error___file_read.html">CError_FileRead</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> fp;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_file_load_html_a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ead3c6d13f27f90ea761dca75cac86efa3">CFileLoad::FLMODE_OPEN</a></div><div class="ttdeci">@ FLMODE_OPEN</div><div class="ttdoc">ファイルオープンのみ</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:123</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a999ce46ad5054c68a45ce291ab104e2a"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a999ce46ad5054c68a45ce291ab104e2a">CFileLoad::ReadBufEmpty</a></div><div class="ttdeci">void ReadBufEmpty(void)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:467</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ab94a2701db310395466ac489d078c4db"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ab94a2701db310395466ac489d078c4db">CFileLoad::GetFileTime</a></div><div class="ttdeci">BOOL GetFileTime(FILETIME *pftCreate, FILETIME *pftLastAccess, FILETIME *pftLastWrite)</div><div class="ttdoc">ファイルの日時を取得する</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:146</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea8a95acd89e22ffe8f28a0c6e17391b59">CFileLoad::FLMODE_READY</a></div><div class="ttdeci">@ FLMODE_READY</div><div class="ttdoc">順アクセスOK</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:124</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a33bc73ce47ee40bdb50d979ad173fa79"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a33bc73ce47ee40bdb50d979ad173fa79">CFileLoad::ReadLine_core</a></div><div class="ttdeci">EConvertResult ReadLine_core(CNativeW *pUnicodeBuffer, CEol *pcEol)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:340</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ab4f9266ca2fe086e2d5615996519a348"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ab4f9266ca2fe086e2d5615996519a348">CFileLoad::IsBomExist</a></div><div class="ttdeci">bool IsBomExist(void)</div><div class="ttdoc">開いたファイルにはBOMがあるか？</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:78</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ae895620833393215a11ebae651414c7b"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ae895620833393215a11ebae651414c7b">CFileLoad::FileOpen</a></div><div class="ttdeci">ECodeType FileOpen(LPCWSTR, bool bBigFile, ECodeType, int, bool *pbBomExist=NULL)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:156</div></div>
+<div class="ttc" id="a_c_code_base_8h_html"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html">CCodeBase.h</a></div></div>
+<div class="ttc" id="aclass_c_memory_html"><div class="ttname"><a href="../../d6/d31/class_c_memory.html">CMemory</a></div><div class="ttdoc">メモリバッファクラス</div><div class="ttdef"><b>Definition:</b> CMemory.h:43</div></div>
+<div class="ttc" id="aclass_c_file_load_html_aab4a8484eabd23be9d8b2ed2abf246da"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#aab4a8484eabd23be9d8b2ed2abf246da">CFileLoad::~CFileLoad</a></div><div class="ttdeci">~CFileLoad(void)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:133</div></div>
+<div class="ttc" id="aclass_c_code_base_html"><div class="ttname"><a href="../../d6/d84/class_c_code_base.html">CCodeBase</a></div><div class="ttdef"><b>Definition:</b> CCodeBase.h:45</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68eaf1e9815851cd0ed38bc406e47fe4823a">CFileLoad::FLMODE_READBUFEND</a></div><div class="ttdeci">@ FLMODE_READBUFEND</div><div class="ttdoc">ファイルの終端までバッファに入れた</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:125</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a32b57b7605e0d47da9a9254a96ba68e8"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a32b57b7605e0d47da9a9254a96ba68e8">CFileLoad::m_nMaxEolLen</a></div><div class="ttdeci">int m_nMaxEolLen</div><div class="ttdoc">EOLの長さ</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:116</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a3654d84b251d7041ac46aaa72f6516b6"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a3654d84b251d7041ac46aaa72f6516b6">CFileLoad::GetFileSize</a></div><div class="ttdeci">LONGLONG GetFileSize(void)</div><div class="ttdoc">ファイルサイズを取得する</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:84</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ae1220401b75f3103661536c0df37df74"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ae1220401b75f3103661536c0df37df74">CFileLoad::GetPercent</a></div><div class="ttdeci">int GetPercent(void)</div><div class="ttdoc">現在の進行率を取得する(0% - 100%) 若干誤差が出る</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:482</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="aclass_c_file_load_html_abb31c7de2acc074eb0deaa006ff96004"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#abb31c7de2acc074eb0deaa006ff96004">CFileLoad::ReadLine</a></div><div class="ttdeci">EConvertResult ReadLine(CNativeW *pUnicodeBuffer, CEol *pcEol)</div><div class="ttdoc">1行データをロードする 順アクセス用</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:296</div></div>
+<div class="ttc" id="a_c_stream_8h_html"><div class="ttname"><a href="../../dd/d16/_c_stream_8h.html">CStream.h</a></div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a8f6009f06a88892c91e452093a2fb68e"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68e">CFileLoad::enumFileLoadMode</a></div><div class="ttdeci">enumFileLoadMode</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:121</div></div>
+<div class="ttc" id="a_c_code_page_8h_html"><div class="ttname"><a href="../../dc/df3/_c_code_page_8h.html">CCodePage.h</a></div><div class="ttdoc">コードページ</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a4672a0ae4d78032b35d82b9e64d8af76"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a4672a0ae4d78032b35d82b9e64d8af76">CFileLoad::CFileLoad</a></div><div class="ttdeci">CFileLoad(const SEncodingConfig &amp;encode)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:109</div></div>
+<div class="ttc" id="aclass_c_file_load_html"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html">CFileLoad</a></div><div class="ttdef"><b>Definition:</b> CFileLoad.h:48</div></div>
+<div class="ttc" id="aclass_c_error___file_read_html"><div class="ttname"><a href="../../d1/d36/class_c_error___file_read.html">CError_FileRead</a></div><div class="ttdoc">例外：ファイル読み込み失敗</div><div class="ttdef"><b>Definition:</b> CStream.h:45</div></div>
+<div class="ttc" id="aclass_c_file_load_html_af4ba5a48d3532219aa8fd7a257f964eb"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#af4ba5a48d3532219aa8fd7a257f964eb">CFileLoad::FileClose</a></div><div class="ttdeci">void FileClose(void)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:272</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a6f510da9948764c7a3828510fcedd823"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a6f510da9948764c7a3828510fcedd823">CFileLoad::Buffering</a></div><div class="ttdeci">void Buffering(void)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:424</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ad69bf5d892921fc911e709e63d05c3b1"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ad69bf5d892921fc911e709e63d05c3b1">CFileLoad::gm_nBufSizeDef</a></div><div class="ttdeci">static const int gm_nBufSizeDef</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:86</div></div>
+<div class="ttc" id="a_c_code_base_8h_html_aaf5b9c8cb800b2a36198d4f1c4d07c84"><div class="ttname"><a href="../../d8/d55/_c_code_base_8h.html#aaf5b9c8cb800b2a36198d4f1c4d07c84">EConvertResult</a></div><div class="ttdeci">EConvertResult</div><div class="ttdef"><b>Definition:</b> CCodeBase.h:28</div></div>
+<div class="ttc" id="aclass_c_file_load_html_aae4de1008fa08690203aaf4b3017cb9a"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#aae4de1008fa08690203aaf4b3017cb9a">CFileLoad::GetSizeStringForHuman</a></div><div class="ttdeci">static std::wstring GetSizeStringForHuman(ULONGLONG size)</div><div class="ttdoc">人にとって見やすいサイズ文字列を作る (例: &quot;2 GB&quot;, &quot;10 GB&quot;, &quot;400 MB&quot;, &quot;32 KB&quot;)</div></div>
+<div class="ttc" id="aclass_c_file_load_html_ac1a4ad9731dae2b04596a953cb529719"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#ac1a4ad9731dae2b04596a953cb529719">CFileLoad::GetNextLineCharCode</a></div><div class="ttdeci">const char * GetNextLineCharCode(const char *pData, int nDataLen, int *pnLineLen, int *pnBgn, CEol *pcEol, int *pnEolLen, int *pnBufferNext)</div><div class="ttdef"><b>Definition:</b> CFileLoad.cpp:495</div></div>
+<div class="ttc" id="aclass_c_eol_html"><div class="ttname"><a href="../../db/d83/class_c_eol.html">CEol</a></div><div class="ttdoc">行末の改行コードを管理</div><div class="ttdef"><b>Definition:</b> CEol.h:75</div></div>
+<div class="ttc" id="astruct_s_encoding_config_html"><div class="ttname"><a href="../../d2/d22/struct_s_encoding_config.html">SEncodingConfig</a></div><div class="ttdoc">エンコードオプション</div><div class="ttdef"><b>Definition:</b> CType.h:101</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a31cd3d43cc561a79170f35b1225a750d"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a31cd3d43cc561a79170f35b1225a750d">CFileLoad::m_bEolEx</a></div><div class="ttdeci">bool m_bEolEx</div><div class="ttdoc">CR/LF以外のEOLが有効か</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:115</div></div>
+<div class="ttc" id="aclass_c_file_load_html_a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658"><div class="ttname"><a href="../../d7/d59/class_c_file_load.html#a8f6009f06a88892c91e452093a2fb68ea5a2f74a409e144d0e7f01619fcc08658">CFileLoad::FLMODE_CLOSE</a></div><div class="ttdeci">@ FLMODE_CLOSE</div><div class="ttdoc">初期状態</div><div class="ttdef"><b>Definition:</b> CFileLoad.h:122</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

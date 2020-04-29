@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CDlgSameColor.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDlgSameColor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d9c/_c_dlg_same_color_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2006, ryoji</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/da6/_c_dialog_8h.html">dlg/CDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/df4/class_c_dlg_same_color.html">CDlgSameColor</a> final : <span class="keyword">public</span> <a class="code" href="../../dd/d09/class_c_dialog.html">CDialog</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../de/df4/class_c_dlg_same_color.html">CDlgSameColor</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ~<a class="code" href="../../de/df4/class_c_dlg_same_color.html">CDlgSameColor</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../de/df4/class_c_dlg_same_color.html#aeb2e8a928a546cc65750ac3044932a10">DoModal</a>( HINSTANCE hInstance, HWND hwndParent, WORD wID, <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>* pTypes, COLORREF cr );        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    LPVOID GetHelpIdTable( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    INT_PTR <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a2308705c9f3ad3dfcc765c843ca82e49">DispatchEvent</a>( HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;   </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    BOOL <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a65d0328dfcdcf4dbcef6ec478f16ffec">OnInitDialog</a>( HWND hwndDlg, WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;           </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    BOOL <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a63087962dd3528a2e25d795bc339148b">OnBnClicked</a>( <span class="keywordtype">int</span> wID ) <span class="keyword">override</span>;                           </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    BOOL <a class="code" href="../../de/df4/class_c_dlg_same_color.html#abdf3457b94c74066f57444a04e7e839a">OnDrawItem</a>( WPARAM wParam, LPARAM lParam ) <span class="keyword">override</span>;   </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    BOOL <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a76ebeba7049ef6a7e038dd015dde583a">OnSelChangeListColors</a>( HWND hwndCtl );                 </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">static</span> LRESULT CALLBACK <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a5b4c20711ab723f6833e0d2aff75214c">ColorStatic_SubclassProc</a>( HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam ); </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> LRESULT CALLBACK <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a7c5049638d31e87b04fd1121d6f8d7d3">ColorList_SubclassProc</a>( HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam );   </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html#a6d1230959f3c4cf22c46061ba1c01856">   61</a></span>&#160;    WNDPROC <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a6d1230959f3c4cf22c46061ba1c01856">m_wpColorStaticProc</a>;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html#a951307505d1242b4c901bd58f0e8f832">   62</a></span>&#160;    WNDPROC <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a951307505d1242b4c901bd58f0e8f832">m_wpColorListProc</a>;      </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html#a8ba47d0dc167d06da73e77266d934590">   64</a></span>&#160;    WORD <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a8ba47d0dc167d06da73e77266d934590">m_wID</a>;         </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html#adb8356880e166384e8f16b349051518d">   65</a></span>&#160;    <a class="code" href="../../d5/d88/struct_s_type_config.html">STypeConfig</a>* <a class="code" href="../../de/df4/class_c_dlg_same_color.html#adb8356880e166384e8f16b349051518d">m_pTypes</a>;  </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../de/df4/class_c_dlg_same_color.html#a117b1ad602c811be276da2752c5fe515">   66</a></span>&#160;    COLORREF <a class="code" href="../../de/df4/class_c_dlg_same_color.html#a117b1ad602c811be276da2752c5fe515">m_cr</a>;      </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_dlg_same_color_html_abdf3457b94c74066f57444a04e7e839a"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#abdf3457b94c74066f57444a04e7e839a">CDlgSameColor::OnDrawItem</a></div><div class="ttdeci">BOOL OnDrawItem(WPARAM wParam, LPARAM lParam) override</div><div class="ttdoc">WM_DRAWITEM 処理</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:264</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a6d1230959f3c4cf22c46061ba1c01856"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a6d1230959f3c4cf22c46061ba1c01856">CDlgSameColor::m_wpColorStaticProc</a></div><div class="ttdeci">WNDPROC m_wpColorStaticProc</div><div class="ttdoc">サブクラス化以前の指定色スタティックのウィンドウプロシージャ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:61</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a5b4c20711ab723f6833e0d2aff75214c"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a5b4c20711ab723f6833e0d2aff75214c">CDlgSameColor::ColorStatic_SubclassProc</a></div><div class="ttdeci">static LRESULT CALLBACK ColorStatic_SubclassProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</div><div class="ttdoc">サブクラス化された指定色スタティックのウィンドウプロシージャ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:380</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a951307505d1242b4c901bd58f0e8f832"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a951307505d1242b4c901bd58f0e8f832">CDlgSameColor::m_wpColorListProc</a></div><div class="ttdeci">WNDPROC m_wpColorListProc</div><div class="ttdoc">サブクラス化以前の色選択リストのウィンドウプロシージャ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:62</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a65d0328dfcdcf4dbcef6ec478f16ffec"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a65d0328dfcdcf4dbcef6ec478f16ffec">CDlgSameColor::OnInitDialog</a></div><div class="ttdeci">BOOL OnInitDialog(HWND hwndDlg, WPARAM wParam, LPARAM lParam) override</div><div class="ttdoc">ダイアログのメッセージ処理</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:127</div></div>
+<div class="ttc" id="a_c_dialog_8h_html"><div class="ttname"><a href="../../d4/da6/_c_dialog_8h.html">CDialog.h</a></div><div class="ttdoc">Dialog Box基底クラスヘッダファイル</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_aeb2e8a928a546cc65750ac3044932a10"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#aeb2e8a928a546cc65750ac3044932a10">CDlgSameColor::DoModal</a></div><div class="ttdeci">int DoModal(HINSTANCE hInstance, HWND hwndParent, WORD wID, STypeConfig *pTypes, COLORREF cr)</div><div class="ttdoc">モーダルダイアログの表示</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:113</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_adb8356880e166384e8f16b349051518d"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#adb8356880e166384e8f16b349051518d">CDlgSameColor::m_pTypes</a></div><div class="ttdeci">STypeConfig * m_pTypes</div><div class="ttdoc">タイプ別設定データ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:65</div></div>
+<div class="ttc" id="astruct_s_type_config_html"><div class="ttname"><a href="../../d5/d88/struct_s_type_config.html">STypeConfig</a></div><div class="ttdoc">タイプ別設定</div><div class="ttdef"><b>Definition:</b> CType.h:129</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html">CDlgSameColor</a></div><div class="ttdoc">文字色／背景色統一ダイアログ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:43</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a117b1ad602c811be276da2752c5fe515"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a117b1ad602c811be276da2752c5fe515">CDlgSameColor::m_cr</a></div><div class="ttdeci">COLORREF m_cr</div><div class="ttdoc">指定色</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:66</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a8ba47d0dc167d06da73e77266d934590"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a8ba47d0dc167d06da73e77266d934590">CDlgSameColor::m_wID</a></div><div class="ttdeci">WORD m_wID</div><div class="ttdoc">タイプ別設定ダイアログ（親ダイアログ）で押されたボタンID</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.h:64</div></div>
+<div class="ttc" id="aclass_c_dialog_html"><div class="ttname"><a href="../../dd/d09/class_c_dialog.html">CDialog</a></div><div class="ttdoc">ダイアログウィンドウを扱うクラス</div><div class="ttdef"><b>Definition:</b> CDialog.h:73</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a76ebeba7049ef6a7e038dd015dde583a"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a76ebeba7049ef6a7e038dd015dde583a">CDlgSameColor::OnSelChangeListColors</a></div><div class="ttdeci">BOOL OnSelChangeListColors(HWND hwndCtl)</div><div class="ttdoc">色選択リストの LBN_SELCHANGE 処理</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:328</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a7c5049638d31e87b04fd1121d6f8d7d3"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a7c5049638d31e87b04fd1121d6f8d7d3">CDlgSameColor::ColorList_SubclassProc</a></div><div class="ttdeci">static LRESULT CALLBACK ColorList_SubclassProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</div><div class="ttdoc">サブクラス化された色選択リストのウィンドウプロシージャ</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:438</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a2308705c9f3ad3dfcc765c843ca82e49"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a2308705c9f3ad3dfcc765c843ca82e49">CDlgSameColor::DispatchEvent</a></div><div class="ttdeci">INT_PTR DispatchEvent(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam) override</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:75</div></div>
+<div class="ttc" id="aclass_c_dlg_same_color_html_a63087962dd3528a2e25d795bc339148b"><div class="ttname"><a href="../../de/df4/class_c_dlg_same_color.html#a63087962dd3528a2e25d795bc339148b">CDlgSameColor::OnBnClicked</a></div><div class="ttdeci">BOOL OnBnClicked(int wID) override</div><div class="ttdoc">BN_CLICKED 処理</div><div class="ttdef"><b>Definition:</b> CDlgSameColor.cpp:194</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

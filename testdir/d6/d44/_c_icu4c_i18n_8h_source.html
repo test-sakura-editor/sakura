@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/extmodule/CIcu4cI18n.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2ec910363d65229279bd9bee590782c4.html">extmodule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CIcu4cI18n.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d44/_c_icu4c_i18n_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2018-2020 Sakura Editor Organization</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/df1/_c_dll_handler_8h.html">CDllHandler.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//ICU4Cの型定義</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>UCharsetDetector;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>UCharsetMatch;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78caa43dbfc9499c5f911d04e1a0ca3bf6f9">   34</a></span>&#160;    <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78caa43dbfc9499c5f911d04e1a0ca3bf6f9">U_ZERO_ERROR</a> = 0,     </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../db/d8e/class_c_icu4c_i18n.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d8e/class_c_icu4c_i18n.html">CIcu4cI18n</a> final : <span class="keyword">public</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html">CDllImp</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// DLL関数型定義</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">typedef</span> UCharsetDetector*       (__cdecl *ucsdet_open_t)(<a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> void                    (__cdecl *ucsdet_setText_t)(UCharsetDetector *ucsd, <span class="keyword">const</span> <span class="keywordtype">char</span> *textIn, int32_t len, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">const</span> UCharsetMatch *   (__cdecl *ucsdet_detect_t)(UCharsetDetector *ucsd, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keywordtype">char</span>*             (__cdecl *ucsdet_getName_t)(<span class="keyword">const</span> UCharsetMatch *ucsm, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> void                    (__cdecl *ucsdet_close_t)(UCharsetDetector *ucsd);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// メンバ定義</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ucsdet_open_t       _ucsdet_open;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ucsdet_setText_t    _ucsdet_setText;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ucsdet_detect_t     _ucsdet_detect;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ucsdet_getName_t    _ucsdet_getName;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ucsdet_close_t      _ucsdet_close;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../db/d8e/class_c_icu4c_i18n.html">CIcu4cI18n</a>() noexcept;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../db/d8e/class_c_icu4c_i18n.html">CIcu4cI18n</a>() noexcept;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// CDllImpインタフェース</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    LPCWSTR <a class="code" href="../../db/d8e/class_c_icu4c_i18n.html#a989310ca958ce1b5b49f7ca21a6e2ecb">GetDllNameImp</a>(<span class="keywordtype">int</span> nIndex) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../db/d8e/class_c_icu4c_i18n.html#a7d7a61c78b40d42c9c32c8a3fd761045">InitDllImp</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">inline</span> UCharsetDetector* ucsdet_open(<a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> _ucsdet_open(status);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> ucsdet_setText(UCharsetDetector *ucsd, <span class="keyword">const</span> <span class="keywordtype">char</span> *textIn, int32_t len, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> _ucsdet_setText(ucsd, textIn, len, status);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> UCharsetMatch* ucsdet_detect(UCharsetDetector *ucsd, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> _ucsdet_detect(ucsd, status);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* ucsdet_getName(<span class="keyword">const</span> UCharsetMatch *ucsm, <a class="code" href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a> *status)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> _ucsdet_getName(ucsm, status);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> ucsdet_close(UCharsetDetector *ucsd)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> _ucsdet_close(ucsd);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_icu4c_i18n_html_a989310ca958ce1b5b49f7ca21a6e2ecb"><div class="ttname"><a href="../../db/d8e/class_c_icu4c_i18n.html#a989310ca958ce1b5b49f7ca21a6e2ecb">CIcu4cI18n::GetDllNameImp</a></div><div class="ttdeci">LPCWSTR GetDllNameImp(int nIndex) override</div><div class="ttdoc">DLLの名前を返す</div><div class="ttdef"><b>Definition:</b> CIcu4cI18n.cpp:43</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html">CDllImp</a></div><div class="ttdoc">DLLの動的なLoad/Unloadを行うためのクラス</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:86</div></div>
+<div class="ttc" id="a_c_dll_handler_8h_html"><div class="ttname"><a href="../../d6/df1/_c_dll_handler_8h.html">CDllHandler.h</a></div><div class="ttdoc">DLLのロード、アンロード</div></div>
+<div class="ttc" id="aclass_c_icu4c_i18n_html"><div class="ttname"><a href="../../db/d8e/class_c_icu4c_i18n.html">CIcu4cI18n</a></div><div class="ttdef"><b>Definition:</b> CIcu4cI18n.h:41</div></div>
+<div class="ttc" id="a_c_icu4c_i18n_8h_html_a3343c1c8a8377277046774691c98d78c"><div class="ttname"><a href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78c">UErrorCode</a></div><div class="ttdeci">UErrorCode</div><div class="ttdef"><b>Definition:</b> CIcu4cI18n.h:33</div></div>
+<div class="ttc" id="aclass_c_icu4c_i18n_html_a7d7a61c78b40d42c9c32c8a3fd761045"><div class="ttname"><a href="../../db/d8e/class_c_icu4c_i18n.html#a7d7a61c78b40d42c9c32c8a3fd761045">CIcu4cI18n::InitDllImp</a></div><div class="ttdeci">bool InitDllImp() override</div><div class="ttdef"><b>Definition:</b> CIcu4cI18n.cpp:56</div></div>
+<div class="ttc" id="a_c_icu4c_i18n_8h_html_a3343c1c8a8377277046774691c98d78caa43dbfc9499c5f911d04e1a0ca3bf6f9"><div class="ttname"><a href="../../d6/d44/_c_icu4c_i18n_8h.html#a3343c1c8a8377277046774691c98d78caa43dbfc9499c5f911d04e1a0ca3bf6f9">U_ZERO_ERROR</a></div><div class="ttdeci">@ U_ZERO_ERROR</div><div class="ttdef"><b>Definition:</b> CIcu4cI18n.h:34</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

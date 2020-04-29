@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/_os/CClipboard.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_383b1b210927f2ecf986cc7aab6f7f8d.html">_os</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CClipboard.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d60/_c_clipboard_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d83/class_c_eol.html">CEol</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/dea/class_c_clipboard.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/dea/class_c_clipboard.html">CClipboard</a>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d0/dea/class_c_clipboard.html#afc73d99293e38ddfdcdc513a7fb125a0">CClipboard</a>(HWND hwnd); </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a2d3f396dd804846d9c7f6942e3db7ad0">~CClipboard</a>(); </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//インターフェース</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a1cb7cc62a698b98a426418e4fb044a40">Empty</a>(); </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#acadb783b5fe8df195a2331608b7d3035">Close</a>(); </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a136a77c87f94112cfdeaeb7090b0ecb0">SetText</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pData, <span class="keywordtype">int</span> nDataLen, <span class="keywordtype">bool</span> bColumnSelect, <span class="keywordtype">bool</span> bLineSelect, UINT uFormat = (UINT)-1);   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> SetHtmlText(<span class="keyword">const</span> <a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; cmemBUf);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#ab77fd0ff1addf457f842644cd94fc93b">GetText</a>(<a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>* cmemBuf, <span class="keywordtype">bool</span>* pbColumnSelect, <span class="keywordtype">bool</span>* pbLineSelect, <span class="keyword">const</span> <a class="code" href="../../db/d83/class_c_eol.html">CEol</a>&amp; cEol, UINT uGetFormat = (UINT)-1); </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> IsIncludeClipboradFormat(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pFormatName);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> SetClipboradByFormat(<span class="keyword">const</span> <a class="code" href="../../d6/da7/class_c_string_ref.html">CStringRef</a>&amp; cstr, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pFormatName, <span class="keywordtype">int</span> nMode, <span class="keywordtype">int</span> nEndMode);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a31a685d82382da0ff6b883252f30da2c">GetClipboradByFormat</a>(<a class="code" href="../../d5/d86/class_c_native_w.html">CNativeW</a>&amp; mem, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pFormatName, <span class="keywordtype">int</span> nMode, <span class="keywordtype">int</span> nEndMode, <span class="keyword">const</span> <a class="code" href="../../db/d83/class_c_eol.html">CEol</a>&amp; cEol);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//演算子</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d0/dea/class_c_clipboard.html#a799d170cfd0e7e150ba7e0a4a2cdd907">   47</a></span>&#160;    <span class="keyword">operator</span> bool()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_bOpenResult!=FALSE; } </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    HWND m_hwnd;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    BOOL m_bOpenResult;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// -- -- staticインターフェース -- -- //</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a90e741faf028adbeeb67dc7847c6f4e3">HasValidData</a>();    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> CLIPFORMAT <a class="code" href="../../d0/dea/class_c_clipboard.html#ab236cc29708fbaa8805512d30aaea1c3">GetSakuraFormat</a>(); </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/dea/class_c_clipboard.html#a17fca3c521cb0bdbef0abe33211e1ca9">GetDataType</a>();      </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_clipboard_html_afc73d99293e38ddfdcdc513a7fb125a0"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#afc73d99293e38ddfdcdc513a7fb125a0">CClipboard::CClipboard</a></div><div class="ttdeci">CClipboard(HWND hwnd)</div><div class="ttdoc">コンストラクタ内でクリップボードが開かれる</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:40</div></div>
+<div class="ttc" id="aclass_c_clipboard_html"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html">CClipboard</a></div><div class="ttdoc">サクラエディタ用クリップボードクラス。後々はこの中で全てのクリップボードAPIを呼ばせたい。</div><div class="ttdef"><b>Definition:</b> CClipboard.h:30</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a136a77c87f94112cfdeaeb7090b0ecb0"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a136a77c87f94112cfdeaeb7090b0ecb0">CClipboard::SetText</a></div><div class="ttdeci">bool SetText(const wchar_t *pData, int nDataLen, bool bColumnSelect, bool bLineSelect, UINT uFormat=(UINT) -1)</div><div class="ttdoc">テキストを設定する</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:68</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_ab236cc29708fbaa8805512d30aaea1c3"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#ab236cc29708fbaa8805512d30aaea1c3">CClipboard::GetSakuraFormat</a></div><div class="ttdeci">static CLIPFORMAT GetSakuraFormat()</div><div class="ttdoc">サクラエディタ独自のクリップボードデータ形式</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:654</div></div>
+<div class="ttc" id="aclass_c_string_ref_html"><div class="ttname"><a href="../../d6/da7/class_c_string_ref.html">CStringRef</a></div><div class="ttdoc">文字列への参照を保持するクラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:39</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a1cb7cc62a698b98a426418e4fb044a40"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a1cb7cc62a698b98a426418e4fb044a40">CClipboard::Empty</a></div><div class="ttdeci">void Empty()</div><div class="ttdoc">クリップボードを空にする</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:55</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a90e741faf028adbeeb67dc7847c6f4e3"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a90e741faf028adbeeb67dc7847c6f4e3">CClipboard::HasValidData</a></div><div class="ttdeci">static bool HasValidData()</div><div class="ttdoc">クリップボード内に、サクラエディタで扱えるデータがあればtrue</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:642</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_acadb783b5fe8df195a2331608b7d3035"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#acadb783b5fe8df195a2331608b7d3035">CClipboard::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">クリップボードを閉じる</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:60</div></div>
+<div class="ttc" id="aclass_c_native_w_html"><div class="ttname"><a href="../../d5/d86/class_c_native_w.html">CNativeW</a></div><div class="ttdoc">UNICODE文字列管理クラス</div><div class="ttdef"><b>Definition:</b> CNativeW.h:68</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a2d3f396dd804846d9c7f6942e3db7ad0"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a2d3f396dd804846d9c7f6942e3db7ad0">CClipboard::~CClipboard</a></div><div class="ttdeci">virtual ~CClipboard()</div><div class="ttdoc">デストラクタ内でCloseが呼ばれる</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:46</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a31a685d82382da0ff6b883252f30da2c"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a31a685d82382da0ff6b883252f30da2c">CClipboard::GetClipboradByFormat</a></div><div class="ttdeci">bool GetClipboradByFormat(CNativeW &amp;mem, const wchar_t *pFormatName, int nMode, int nEndMode, const CEol &amp;cEol)</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:560</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_ab77fd0ff1addf457f842644cd94fc93b"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#ab77fd0ff1addf457f842644cd94fc93b">CClipboard::GetText</a></div><div class="ttdeci">bool GetText(CNativeW *cmemBuf, bool *pbColumnSelect, bool *pbLineSelect, const CEol &amp;cEol, UINT uGetFormat=(UINT) -1)</div><div class="ttdoc">テキストを取得する</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:265</div></div>
+<div class="ttc" id="aclass_c_clipboard_html_a17fca3c521cb0bdbef0abe33211e1ca9"><div class="ttname"><a href="../../d0/dea/class_c_clipboard.html#a17fca3c521cb0bdbef0abe33211e1ca9">CClipboard::GetDataType</a></div><div class="ttdeci">static int GetDataType()</div><div class="ttdoc">クリップボードデータ形式(CF_UNICODETEXT等)の取得</div><div class="ttdef"><b>Definition:</b> CClipboard.cpp:667</div></div>
+<div class="ttc" id="aclass_c_eol_html"><div class="ttname"><a href="../../db/d83/class_c_eol.html">CEol</a></div><div class="ttdoc">行末の改行コードを管理</div><div class="ttdef"><b>Definition:</b> CEol.h:75</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

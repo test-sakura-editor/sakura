@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: COutlineErlang 構造体</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d0/d07/struct_c_outline_erlang-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">COutlineErlang 構造体</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a528ab30c7feecf5af6f4735403217c3e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3ea8711ebd04c3eb952410a8d76a122b681">STATE_NORMAL</a>, 
+<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3ea12fc862af9893de6880031f4a31a8b25">STATE_FUNC_CANDIDATE_FIN</a>, 
+<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3ea60dfaad4fc24b3d066bae13f08b31d3a">STATE_FUNC_ARGS1</a>, 
+<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3eabaecff258f38b5f0b046623ad41a1794">STATE_FUNC_ARGS</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3ea7e265e331688b1316caf9fd00082c373">STATE_FUNC_ARGS_FIN</a>, 
+<a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a528ab30c7feecf5af6f4735403217c3ea16114c3a73eff8ed540b465036d7f7cd">STATE_FUNC_FOUND</a>
+<br />
+ }</td></tr>
+<tr class="separator:a528ab30c7feecf5af6f4735403217c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a51b975c65cbaca4aec948505b199655b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a51b975c65cbaca4aec948505b199655b">parse</a> (const wchar_t *buf, int linelen, CLogicInt linenum)</td></tr>
+<tr class="separator:a51b975c65cbaca4aec948505b199655b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56cd69c3e6204146ce604eb1f01ac32"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#ac56cd69c3e6204146ce604eb1f01ac32">ScanFuncName</a> (const wchar_t *buf, const wchar_t *end, const wchar_t *p)</td></tr>
+<tr class="separator:ac56cd69c3e6204146ce604eb1f01ac32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94419438f528c48b31813c1ec29c816"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#ab94419438f528c48b31813c1ec29c816">EnterArgs</a> (const wchar_t *end, const wchar_t *p)</td></tr>
+<tr class="separator:ab94419438f528c48b31813c1ec29c816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32374007f6f50c4c6ee692f8429978fe"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a32374007f6f50c4c6ee692f8429978fe">ScanArgs1</a> (const wchar_t *end, const wchar_t *p)</td></tr>
+<tr class="separator:a32374007f6f50c4c6ee692f8429978fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1f8944a5e147b80edb93214f2e6adf"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#aee1f8944a5e147b80edb93214f2e6adf">ScanArgs</a> (const wchar_t *end, const wchar_t *p)</td></tr>
+<tr class="separator:aee1f8944a5e147b80edb93214f2e6adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9312407d3e8eebfd043ebeb18c4bca27"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a9312407d3e8eebfd043ebeb18c4bca27">EnterCond</a> (const wchar_t *end, const wchar_t *p)</td></tr>
+<tr class="separator:a9312407d3e8eebfd043ebeb18c4bca27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95372a0df9ce344b8491cd8f55a0b8a7"><td class="memItemLeft" align="right" valign="top"><a id="a95372a0df9ce344b8491cd8f55a0b8a7"></a>
+const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetFuncName</b> () const</td></tr>
+<tr class="separator:a95372a0df9ce344b8491cd8f55a0b8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86126ef66007f84fa1b6fa8511b5a592"><td class="memItemLeft" align="right" valign="top"><a id="a86126ef66007f84fa1b6fa8511b5a592"></a>
+CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><b>GetFuncLine</b> () const</td></tr>
+<tr class="separator:a86126ef66007f84fa1b6fa8511b5a592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a730df36a16be41587caa38204eaaef27"><td class="memItemLeft" align="right" valign="top"><a id="a730df36a16be41587caa38204eaaef27"></a>
+enum COutlineErlang:: { ... } &#160;</td><td class="memItemRight" valign="bottom"><b>m_state</b></td></tr>
+<tr class="separator:a730df36a16be41587caa38204eaaef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d69633cfe0cc8c15896da96c9d99011"><td class="memItemLeft" align="right" valign="top"><a id="a0d69633cfe0cc8c15896da96c9d99011"></a>
+wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a0d69633cfe0cc8c15896da96c9d99011">m_func</a> [64]</td></tr>
+<tr class="memdesc:a0d69633cfe0cc8c15896da96c9d99011"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数名(Arity含む) = 表示名 <br /></td></tr>
+<tr class="separator:a0d69633cfe0cc8c15896da96c9d99011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade378ae53ac5f6ae98c8829222aa0c42"><td class="memItemLeft" align="right" valign="top"><a id="ade378ae53ac5f6ae98c8829222aa0c42"></a>
+CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#ade378ae53ac5f6ae98c8829222aa0c42">m_lnum</a></td></tr>
+<tr class="memdesc:ade378ae53ac5f6ae98c8829222aa0c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">関数の行番号 <br /></td></tr>
+<tr class="separator:ade378ae53ac5f6ae98c8829222aa0c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2adeadf3b7b53afbbf5f6e8a51c1d2c3"><td class="memItemLeft" align="right" valign="top"><a id="a2adeadf3b7b53afbbf5f6e8a51c1d2c3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a2adeadf3b7b53afbbf5f6e8a51c1d2c3">m_argcount</a></td></tr>
+<tr class="memdesc:a2adeadf3b7b53afbbf5f6e8a51c1d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">発見した引数の数 <br /></td></tr>
+<tr class="separator:a2adeadf3b7b53afbbf5f6e8a51c1d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99397bdce4b7cfafc6655216484f61b4"><td class="memItemLeft" align="right" valign="top"><a id="a99397bdce4b7cfafc6655216484f61b4"></a>
+wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a99397bdce4b7cfafc6655216484f61b4">m_parenthesis</a> [32]</td></tr>
+<tr class="memdesc:a99397bdce4b7cfafc6655216484f61b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">括弧のネストを管理するもの <br /></td></tr>
+<tr class="separator:a99397bdce4b7cfafc6655216484f61b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3099629ba8ba815bb6bdbef7cc78b9e0"><td class="memItemLeft" align="right" valign="top"><a id="a3099629ba8ba815bb6bdbef7cc78b9e0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc0/struct_c_outline_erlang.html#a3099629ba8ba815bb6bdbef7cc78b9e0">m_parenthesis_ptr</a></td></tr>
+<tr class="memdesc:a3099629ba8ba815bb6bdbef7cc78b9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">括弧のネストレベル <br /></td></tr>
+<tr class="separator:a3099629ba8ba815bb6bdbef7cc78b9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Erlang アウトライン解析 管理＆解析 </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a528ab30c7feecf5af6f4735403217c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528ab30c7feecf5af6f4735403217c3e">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3ea8711ebd04c3eb952410a8d76a122b681"></a>STATE_NORMAL&#160;</td><td class="fielddoc"><p>解析中でない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3ea12fc862af9893de6880031f4a31a8b25"></a>STATE_FUNC_CANDIDATE_FIN&#160;</td><td class="fielddoc"><p>関数らしきもの(行頭のatom)を解析済み </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3ea60dfaad4fc24b3d066bae13f08b31d3a"></a>STATE_FUNC_ARGS1&#160;</td><td class="fielddoc"><p>最初の引数確認中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3eabaecff258f38b5f0b046623ad41a1794"></a>STATE_FUNC_ARGS&#160;</td><td class="fielddoc"><p>2つめ以降の引数確認中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3ea7e265e331688b1316caf9fd00082c373"></a>STATE_FUNC_ARGS_FIN&#160;</td><td class="fielddoc"><p>関数の解析を完了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a528ab30c7feecf5af6f4735403217c3ea16114c3a73eff8ed540b465036d7f7cd"></a>STATE_FUNC_FOUND&#160;</td><td class="fielddoc"><p>関数を発見．データの取得が可能 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab94419438f528c48b31813c1ec29c816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab94419438f528c48b31813c1ec29c816">&#9670;&nbsp;</a></span>EnterArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * COutlineErlang::EnterArgs </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パラメータの発見</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>buf末尾 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>解析の現在位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>関数名の取得が完了し，パラメータ先頭の括弧を探す． </p>
+
+</div>
+</div>
+<a id="a9312407d3e8eebfd043ebeb18c4bca27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9312407d3e8eebfd043ebeb18c4bca27">&#9670;&nbsp;</a></span>EnterCond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * COutlineErlang::EnterCond </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>関数本体の区切り，または条件文の検出</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>buf末尾 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>解析の現在位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>パラメータ本体を表す記号(-&gt;)か条件文の開始キーワード(when)を 見つけたら，関数発見とする． それ以外の場合は関数ではなかったと考える． </p>
+
+</div>
+</div>
+<a id="a51b975c65cbaca4aec948505b199655b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b975c65cbaca4aec948505b199655b">&#9670;&nbsp;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool COutlineErlang::parse </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>linelen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>linenum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>行の解析</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>行(先頭から) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">linelen</td><td>行の長さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">linenum</td><td>行番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee1f8944a5e147b80edb93214f2e6adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1f8944a5e147b80edb93214f2e6adf">&#9670;&nbsp;</a></span>ScanArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * COutlineErlang::ScanArgs </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パラメータの解析とカウント</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>buf末尾 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>解析の現在位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>パラメータを解析する．パラメータの数と末尾の閉じ括弧を正しく判別するために， 引用符，括弧，パラメータの区切りのカンマに着目する． 引用符は改行を含むことができない． </p>
+
+</div>
+</div>
+<a id="a32374007f6f50c4c6ee692f8429978fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32374007f6f50c4c6ee692f8429978fe">&#9670;&nbsp;</a></span>ScanArgs1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * COutlineErlang::ScanArgs1 </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>先頭パラメータの発見</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>buf末尾 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>解析の現在位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>パラメータが0個と1個以上の判別のために状態を設けている． </p>
+
+</div>
+</div>
+<a id="ac56cd69c3e6204146ce604eb1f01ac32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56cd69c3e6204146ce604eb1f01ac32">&#9670;&nbsp;</a></span>ScanFuncName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const wchar_t * COutlineErlang::ScanFuncName </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>関数名の取得</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>行(先頭から) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>buf末尾 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>解析の現在位置</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>関数名はatom．atomは 小文字アルファベット，_, @ のいずれかから始まる 英数文字列か，あるいはシングルクォーテーションで囲まれた文字列． </p>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/types/<a class="el" href="../../da/dbd/_c_type___erlang_8cpp.html">CType_Erlang.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

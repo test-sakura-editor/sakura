@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/charset.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">charset.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="../../d5/dae/charset_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d55/class_c_code_type_name.html">CCodeTypeName</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd4/class_c_code_types_for_combobox.html">CCodeTypesForCombobox</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ab1a19f5d4c65868f6245c1dc4d164b60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a> { <br />
+&#160;&#160;<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee">CODE_SJIS</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a97edc59fa13c788ca321c709d9fae9fc">CODE_JIS</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4">CODE_EUC</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60ab0a6616971f717a234bf4fa7cad617b9">CODE_UNICODE</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f">CODE_UTF8</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a703c1c356516b881c2fbd708108aad48">CODE_UTF7</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a81b7137d4abbf753e0cb7308ad143e5f">CODE_UNICODEBE</a>, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff">CODE_CESU8</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60ad007c3e31140fed4718b2c70425a1585">CODE_LATIN1</a>, 
+<b>CODE_CODEMAX</b>, 
+<b>CODE_CPACP</b> = 90, 
+<b>CODE_CPOEM</b> = 91, 
+<br />
+&#160;&#160;<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60af3b38acf197fbe97d494ac6eaa8e11ab">CODE_AUTODETECT</a> = 99, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60afacfaacf2b3fd4e43ba95be012e217b0">CODE_ERROR</a> = -1, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a">CODE_NONE</a> = -1, 
+<a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60a9de2ccc6e97fe1633d715e098ebbf566">CODE_DEFAULT</a> = CODE_UTF8
+<br />
+ }</td></tr>
+<tr class="separator:ab1a19f5d4c65868f6245c1dc4d164b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a355a33fe6715e34b12eb310643d76c96"><td class="memItemLeft" align="right" valign="top"><a id="a355a33fe6715e34b12eb310643d76c96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dae/charset_8h.html#a355a33fe6715e34b12eb310643d76c96">IsValidCodeType</a> (int code)</td></tr>
+<tr class="memdesc:a355a33fe6715e34b12eb310643d76c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効な文字コードセットならtrue <br /></td></tr>
+<tr class="separator:a355a33fe6715e34b12eb310643d76c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0da3c4beab1ae319df371e65c6ec10c"><td class="memItemLeft" align="right" valign="top"><a id="ad0da3c4beab1ae319df371e65c6ec10c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dae/charset_8h.html#ad0da3c4beab1ae319df371e65c6ec10c">IsValidCodeTypeExceptSJIS</a> (int code)</td></tr>
+<tr class="memdesc:ad0da3c4beab1ae319df371e65c6ec10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効な文字コードセットならtrue。ただし、SJISは除く(ファイル一覧に文字コードを[]付きで表示のため) <br /></td></tr>
+<tr class="separator:ad0da3c4beab1ae319df371e65c6ec10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eaa82674323eff705478f334b17a349"><td class="memItemLeft" align="right" valign="top"><a id="a1eaa82674323eff705478f334b17a349"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dae/charset_8h.html#a1eaa82674323eff705478f334b17a349">IsValidCodePageEx</a> (int code)</td></tr>
+<tr class="memdesc:a1eaa82674323eff705478f334b17a349"><td class="mdescLeft">&#160;</td><td class="mdescRight">ECodeType型で表せる値ならtrue <br /></td></tr>
+<tr class="separator:a1eaa82674323eff705478f334b17a349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6f2239c975160eddf899dcd254b025"><td class="memItemLeft" align="right" valign="top"><a id="a6f6f2239c975160eddf899dcd254b025"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitCodeSet</b> ()</td></tr>
+<tr class="separator:a6f6f2239c975160eddf899dcd254b025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96181d7571ff576fc94e1a9cb0d9a84f"><td class="memItemLeft" align="right" valign="top"><a id="a96181d7571ff576fc94e1a9cb0d9a84f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsValidCodeOrCPType</b> (int code)</td></tr>
+<tr class="separator:a96181d7571ff576fc94e1a9cb0d9a84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b5604d4d1a221a70dcfcdb704e3681"><td class="memItemLeft" align="right" valign="top"><a id="ab0b5604d4d1a221a70dcfcdb704e3681"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsValidCodeOrCPTypeExceptSJIS</b> (int code)</td></tr>
+<tr class="separator:ab0b5604d4d1a221a70dcfcdb704e3681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="ab1a19f5d4c65868f6245c1dc4d164b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a19f5d4c65868f6245c1dc4d164b60">&#9670;&nbsp;</a></span>ECodeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a06d3240495d52c3445c5167034aadcee"></a>CODE_SJIS&#160;</td><td class="fielddoc"><p>SJIS (MS-CP932(Windows-31J), シフトJIS(Shift_JIS)) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a97edc59fa13c788ca321c709d9fae9fc"></a>CODE_JIS&#160;</td><td class="fielddoc"><p>JIS (MS-CP5022x(ISO-2022-JP-MS)ではない) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60aa811afc97600c1394b8fcd5e813584d4"></a>CODE_EUC&#160;</td><td class="fielddoc"><p>EUC (MS-CP51932, eucJP-ms(eucJP-open)ではない) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60ab0a6616971f717a234bf4fa7cad617b9"></a>CODE_UNICODE&#160;</td><td class="fielddoc"><p>Unicode (UTF-16 LittleEndian(UCS-2)) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a9b0d40200d089af05977547859affb3f"></a>CODE_UTF8&#160;</td><td class="fielddoc"><p>UTF-8(UCS-2) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a703c1c356516b881c2fbd708108aad48"></a>CODE_UTF7&#160;</td><td class="fielddoc"><p>UTF-7(UCS-2) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a81b7137d4abbf753e0cb7308ad143e5f"></a>CODE_UNICODEBE&#160;</td><td class="fielddoc"><p>Unicode BigEndian (UTF-16 BigEndian(UCS-2)) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a4146256d8e170d09a3ef1525c3cccfff"></a>CODE_CESU8&#160;</td><td class="fielddoc"><p>CESU-8 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60ad007c3e31140fed4718b2c70425a1585"></a>CODE_LATIN1&#160;</td><td class="fielddoc"><p>Latin1 (Latin1, 欧文, Windows-1252, Windows Codepage 1252 West European) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60af3b38acf197fbe97d494ac6eaa8e11ab"></a>CODE_AUTODETECT&#160;</td><td class="fielddoc"><p>文字コード自動判別 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60afacfaacf2b3fd4e43ba95be012e217b0"></a>CODE_ERROR&#160;</td><td class="fielddoc"><p>エラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60abfcbc51e54c1136e8247b37c336ddf7a"></a>CODE_NONE&#160;</td><td class="fielddoc"><p>未検出 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab1a19f5d4c65868f6245c1dc4d164b60a9de2ccc6e97fe1633d715e098ebbf566"></a>CODE_DEFAULT&#160;</td><td class="fielddoc"><p>デフォルトの文字コード </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

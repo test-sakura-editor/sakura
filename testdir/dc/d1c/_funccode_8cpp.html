@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/func/Funccode.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2a6206e6f7582fa6aff912a4cbda4187.html">func</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">Funccode.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>機能分類定義  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &lt;Shlwapi.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d61/_funccode_8h_source.html">func/Funccode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d43/maxdata_8h_source.html">config/maxdata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h_source.html">env/DLLSHAREDATA.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d69/_c_edit_doc_8h_source.html">doc/CEditDoc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d47/_c_app_mode_8h_source.html">_main/CAppMode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d19/_c_grep_agent_8h_source.html">CGrepAgent.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/de7/_c_s_macro_mgr_8h_source.html">macro/CSMacroMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d14/_c_edit_wnd_8h_source.html">window/CEditWnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dc1/_c_diff_manager_8h_source.html">docplus/CDiffManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db8/_c_mark_mgr_8h_source.html">CMarkMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a80ce618e34413c45a449b95b3cdbb1da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1c/_funccode_8cpp.html#a80ce618e34413c45a449b95b3cdbb1da">FuncID_To_HelpContextID</a> (EFunctionCode nFuncID)</td></tr>
+<tr class="memdesc:a80ce618e34413c45a449b95b3cdbb1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能番号に応じてヘルプトピック番号を返す  <a href="../../dc/d1c/_funccode_8cpp.html#a80ce618e34413c45a449b95b3cdbb1da">[詳解]</a><br /></td></tr>
+<tr class="separator:a80ce618e34413c45a449b95b3cdbb1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e417ab694ef0dde886a7ab456577761"><td class="memItemLeft" align="right" valign="top"><a id="a6e417ab694ef0dde886a7ab456577761"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFuncEnable</b> (const <a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *pcEditDoc, const <a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData, EFunctionCode nId)</td></tr>
+<tr class="separator:a6e417ab694ef0dde886a7ab456577761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097ccb0aa6c50708e4df0e51a910c608"><td class="memItemLeft" align="right" valign="top"><a id="a097ccb0aa6c50708e4df0e51a910c608"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFuncChecked</b> (const <a class="el" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a> *pcEditDoc, const <a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *pShareData, EFunctionCode nId)</td></tr>
+<tr class="separator:a097ccb0aa6c50708e4df0e51a910c608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a1f85d6aee82993b28ca6bd329bb6e170"><td class="memItemLeft" align="right" valign="top"><a id="a1f85d6aee82993b28ca6bd329bb6e170"></a>
+const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_File</b> []</td></tr>
+<tr class="separator:a1f85d6aee82993b28ca6bd329bb6e170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987d961e674b555540010b58ddb06521"><td class="memItemLeft" align="right" valign="top"><a id="a987d961e674b555540010b58ddb06521"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_File_Num</b> = _countof( pnFuncList_File )</td></tr>
+<tr class="separator:a987d961e674b555540010b58ddb06521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225b2fdbd6c22447802dc742dba2878e"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Edit</b> []</td></tr>
+<tr class="separator:a225b2fdbd6c22447802dc742dba2878e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff3267bd9398a35abb4371011b1a35e"><td class="memItemLeft" align="right" valign="top"><a id="a5ff3267bd9398a35abb4371011b1a35e"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Edit_Num</b> = _countof( pnFuncList_Edit )</td></tr>
+<tr class="separator:a5ff3267bd9398a35abb4371011b1a35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693278d53a8f16a72a2987d439cf6b87"><td class="memItemLeft" align="right" valign="top"><a id="a693278d53a8f16a72a2987d439cf6b87"></a>
+const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Move</b> []</td></tr>
+<tr class="separator:a693278d53a8f16a72a2987d439cf6b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693d2325b35b5912ca46de408c088f9e"><td class="memItemLeft" align="right" valign="top"><a id="a693d2325b35b5912ca46de408c088f9e"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Move_Num</b> = _countof( pnFuncList_Move )</td></tr>
+<tr class="separator:a693d2325b35b5912ca46de408c088f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a909a5c0cddc5faa1742908391d37b"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Select</b> []</td></tr>
+<tr class="separator:ad9a909a5c0cddc5faa1742908391d37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b678d69df4a5e93b338d73b2f91a4b4"><td class="memItemLeft" align="right" valign="top"><a id="a7b678d69df4a5e93b338d73b2f91a4b4"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Select_Num</b> = _countof( pnFuncList_Select )</td></tr>
+<tr class="separator:a7b678d69df4a5e93b338d73b2f91a4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3aa5f1729ef05c667be66b24b82f61"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Box</b> []</td></tr>
+<tr class="separator:a0d3aa5f1729ef05c667be66b24b82f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade52c3b53aa1f5539fb4705dae3e100d"><td class="memItemLeft" align="right" valign="top"><a id="ade52c3b53aa1f5539fb4705dae3e100d"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Box_Num</b> = _countof( pnFuncList_Box )</td></tr>
+<tr class="separator:ade52c3b53aa1f5539fb4705dae3e100d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bfa4478ebf43a9ba8dcba10245e2db"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Clip</b> []</td></tr>
+<tr class="separator:a28bfa4478ebf43a9ba8dcba10245e2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2844097c4c613f534d4a4107afa97f"><td class="memItemLeft" align="right" valign="top"><a id="afe2844097c4c613f534d4a4107afa97f"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Clip_Num</b> = _countof( pnFuncList_Clip )</td></tr>
+<tr class="separator:afe2844097c4c613f534d4a4107afa97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21315134a21ace65c260ef7f8dc6dae4"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Insert</b> []</td></tr>
+<tr class="separator:a21315134a21ace65c260ef7f8dc6dae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f31df8551ec60b7c3653a6dd2e2fad"><td class="memItemLeft" align="right" valign="top"><a id="a99f31df8551ec60b7c3653a6dd2e2fad"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Insert_Num</b> = _countof( pnFuncList_Insert )</td></tr>
+<tr class="separator:a99f31df8551ec60b7c3653a6dd2e2fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3317d2bce2590ceb518b406c821750"><td class="memItemLeft" align="right" valign="top"><a id="afa3317d2bce2590ceb518b406c821750"></a>
+const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Convert</b> []</td></tr>
+<tr class="separator:afa3317d2bce2590ceb518b406c821750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd387b539ea168b5fdda4099974cc20"><td class="memItemLeft" align="right" valign="top"><a id="afcd387b539ea168b5fdda4099974cc20"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Convert_Num</b> = _countof( pnFuncList_Convert )</td></tr>
+<tr class="separator:afcd387b539ea168b5fdda4099974cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a81861e8a3de3a2af5eebb01a3ece1d"><td class="memItemLeft" align="right" valign="top"><a id="a4a81861e8a3de3a2af5eebb01a3ece1d"></a>
+const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Search</b> []</td></tr>
+<tr class="separator:a4a81861e8a3de3a2af5eebb01a3ece1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae33b90ee538144df11fdd32fe247c7"><td class="memItemLeft" align="right" valign="top"><a id="a6ae33b90ee538144df11fdd32fe247c7"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Search_Num</b> = _countof( pnFuncList_Search )</td></tr>
+<tr class="separator:a6ae33b90ee538144df11fdd32fe247c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c455886ef52fc3b2ba578e43fe2c59"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Mode</b> []</td></tr>
+<tr class="separator:a57c455886ef52fc3b2ba578e43fe2c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7447683eda9430a4a5d4c28d61685f5c"><td class="memItemLeft" align="right" valign="top"><a id="a7447683eda9430a4a5d4c28d61685f5c"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Mode_Num</b> = _countof( pnFuncList_Mode )</td></tr>
+<tr class="separator:a7447683eda9430a4a5d4c28d61685f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0734405e29e587ca88ba717c5a4bb55a"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Set</b> []</td></tr>
+<tr class="separator:a0734405e29e587ca88ba717c5a4bb55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fefe8d5ef84261078f8c80efeadc6be"><td class="memItemLeft" align="right" valign="top"><a id="a5fefe8d5ef84261078f8c80efeadc6be"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Set_Num</b> = _countof( pnFuncList_Set )</td></tr>
+<tr class="separator:a5fefe8d5ef84261078f8c80efeadc6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f6682cc87f0cad8fe89c93f54ee9e1"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Macro</b> []</td></tr>
+<tr class="separator:ae8f6682cc87f0cad8fe89c93f54ee9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d11cc53cc64c84ae9726c2eee49caf2"><td class="memItemLeft" align="right" valign="top"><a id="a5d11cc53cc64c84ae9726c2eee49caf2"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Macro_Num</b> = _countof( pnFuncList_Macro)</td></tr>
+<tr class="separator:a5d11cc53cc64c84ae9726c2eee49caf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b0df3731c824e8687cf1e754077c79"><td class="memItemLeft" align="right" valign="top"><a id="ad5b0df3731c824e8687cf1e754077c79"></a>
+const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Win</b> []</td></tr>
+<tr class="separator:ad5b0df3731c824e8687cf1e754077c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7588a2403e1655960b775446a7448ff9"><td class="memItemLeft" align="right" valign="top"><a id="a7588a2403e1655960b775446a7448ff9"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Win_Num</b> = _countof( pnFuncList_Win )</td></tr>
+<tr class="separator:a7588a2403e1655960b775446a7448ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8989af25c06ba04ff522e7f03cacab1"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Support</b> []</td></tr>
+<tr class="separator:ac8989af25c06ba04ff522e7f03cacab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55856997a7ce2bd2361e6aaa568eb75e"><td class="memItemLeft" align="right" valign="top"><a id="a55856997a7ce2bd2361e6aaa568eb75e"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Support_Num</b> = _countof( pnFuncList_Support )</td></tr>
+<tr class="separator:a55856997a7ce2bd2361e6aaa568eb75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89abbd58250a155df36a539b2f7f11a9"><td class="memItemLeft" align="right" valign="top">const EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>pnFuncList_Others</b> []</td></tr>
+<tr class="separator:a89abbd58250a155df36a539b2f7f11a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d374f88a53dcff4ac71e5f7f8041dc"><td class="memItemLeft" align="right" valign="top"><a id="a16d374f88a53dcff4ac71e5f7f8041dc"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>nFincList_Others_Num</b> = _countof( pnFuncList_Others )</td></tr>
+<tr class="separator:a16d374f88a53dcff4ac71e5f7f8041dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>機能分類定義 </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a80ce618e34413c45a449b95b3cdbb1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ce618e34413c45a449b95b3cdbb1da">&#9670;&nbsp;</a></span>FuncID_To_HelpContextID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FuncID_To_HelpContextID </td>
+          <td>(</td>
+          <td class="paramtype">EFunctionCode&#160;</td>
+          <td class="paramname"><em>nFuncID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>機能番号に応じてヘルプトピック番号を返す </p>
+<dl class="section author"><dt>著者</dt><dd>Stonee </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2001/02/23 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nFuncID</td><td>機能番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ヘルプトピック番号。該当IDが無い場合には0を返す。</dd></dl>
+<p>内容はcase文の羅列。</p>
+<dl class="section user"><dt>history</dt><dd>2001.12.22 YAZAKI sakura.hhを参照するように変更 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a0d3aa5f1729ef05c667be66b24b82f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3aa5f1729ef05c667be66b24b82f61">&#9670;&nbsp;</a></span>pnFuncList_Box</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Box[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line"> </div>
+<div class="line">    F_BEGIN_BOX         ,   </div>
+<div class="line">    F_UP_BOX            ,   </div>
+<div class="line">    F_DOWN_BOX          ,   </div>
+<div class="line">    F_LEFT_BOX          ,   </div>
+<div class="line">    F_RIGHT_BOX         ,   </div>
+<div class="line">    F_UP2_BOX           ,   </div>
+<div class="line">    F_DOWN2_BOX         ,   </div>
+<div class="line">    F_WORDLEFT_BOX      ,   </div>
+<div class="line">    F_WORDRIGHT_BOX     ,   </div>
+<div class="line">    F_GOLOGICALLINETOP_BOX  ,   </div>
+<div class="line">    F_GOLINETOP_BOX     ,   </div>
+<div class="line">    F_GOLINEEND_BOX     ,   </div>
+<div class="line">    F_HalfPageUp_BOX    ,   </div>
+<div class="line">    F_HalfPageDown_BOX  ,   </div>
+<div class="line">    F_1PageUp_BOX       ,   </div>
+<div class="line">    F_1PageDown_BOX     ,   </div>
+<div class="line">    F_GOFILETOP_BOX     ,   </div>
+<div class="line">    F_GOFILEEND_BOX         </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a28bfa4478ebf43a9ba8dcba10245e2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bfa4478ebf43a9ba8dcba10245e2db">&#9670;&nbsp;</a></span>pnFuncList_Clip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Clip[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    F_CUT                       ,   </div>
+<div class="line">    F_COPY                      ,   </div>
+<div class="line">    F_COPY_ADDCRLF              ,   </div>
+<div class="line">    F_COPY_CRLF                 ,   </div>
+<div class="line">    F_PASTE                     ,   </div>
+<div class="line">    F_PASTEBOX                  ,   </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    F_COPYLINES                 ,   </div>
+<div class="line">    F_COPYLINESASPASSAGE        ,   </div>
+<div class="line">    F_COPYLINESWITHLINENUMBER   ,   </div>
+<div class="line">    F_COPY_COLOR_HTML           ,   </div>
+<div class="line">    F_COPY_COLOR_HTML_LINENUMBER,   </div>
+<div class="line">    F_COPYFNAME                 ,   </div>
+<div class="line">    F_COPYPATH                  ,   </div>
+<div class="line">    F_COPYDIRPATH               ,   </div>
+<div class="line">    F_COPYTAG                   ,   </div>
+<div class="line">    F_CREATEKEYBINDLIST             </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a225b2fdbd6c22447802dc742dba2878e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225b2fdbd6c22447802dc742dba2878e">&#9670;&nbsp;</a></span>pnFuncList_Edit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Edit[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    F_UNDO              ,   </div>
+<div class="line">    F_REDO              ,   </div>
+<div class="line">    F_DELETE            ,   </div>
+<div class="line">    F_DELETE_BACK       ,   </div>
+<div class="line">    F_WordDeleteToStart ,   </div>
+<div class="line">    F_WordDeleteToEnd   ,   </div>
+<div class="line">    F_WordCut           ,   </div>
+<div class="line">    F_WordDelete        ,   </div>
+<div class="line">    F_LineCutToStart    ,   </div>
+<div class="line">    F_LineCutToEnd      ,   </div>
+<div class="line">    F_LineDeleteToStart ,   </div>
+<div class="line">    F_LineDeleteToEnd   ,   </div>
+<div class="line">    F_CUT_LINE          ,   </div>
+<div class="line">    F_DELETE_LINE       ,   </div>
+<div class="line">    F_DUPLICATELINE     ,   </div>
+<div class="line">    F_INDENT_TAB        ,   </div>
+<div class="line">    F_UNINDENT_TAB      ,   </div>
+<div class="line">    F_INDENT_SPACE      ,   </div>
+<div class="line">    F_UNINDENT_SPACE    ,   </div>
+<div class="line">    F_LTRIM             ,   </div>
+<div class="line">    F_RTRIM             ,   </div>
+<div class="line">    F_SORT_ASC          ,   </div>
+<div class="line">    F_SORT_DESC         ,   </div>
+<div class="line">    F_MERGE             ,   </div>
+<div class="line">    F_RECONVERT             </div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a21315134a21ace65c260ef7f8dc6dae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21315134a21ace65c260ef7f8dc6dae4">&#9670;&nbsp;</a></span>pnFuncList_Insert</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Insert[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    F_INS_DATE              ,   </div>
+<div class="line">    F_INS_TIME              ,   </div>
+<div class="line">    F_CTRL_CODE_DIALOG      ,   </div>
+<div class="line">    F_INS_FILE_USED_RECENTLY,   </div>
+<div class="line">    F_INS_FOLDER_USED_RECENTLY, </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae8f6682cc87f0cad8fe89c93f54ee9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8f6682cc87f0cad8fe89c93f54ee9e1">&#9670;&nbsp;</a></span>pnFuncList_Macro</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Macro[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    F_RECKEYMACRO   ,   </div>
+<div class="line">    F_SAVEKEYMACRO  ,   </div>
+<div class="line">    F_LOADKEYMACRO  ,   </div>
+<div class="line">    F_EXECKEYMACRO  ,   </div>
+<div class="line">    F_EXECEXTMACRO  ,   </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    F_EXECMD_DIALOG     </div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a57c455886ef52fc3b2ba578e43fe2c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c455886ef52fc3b2ba578e43fe2c59">&#9670;&nbsp;</a></span>pnFuncList_Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Mode[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    F_CHGMOD_INS        ,   </div>
+<div class="line">    F_CHG_CHARSET       ,   </div>
+<div class="line">    F_CHGMOD_EOL_CRLF   ,   </div>
+<div class="line">    F_CHGMOD_EOL_LF     ,   </div>
+<div class="line">    F_CHGMOD_EOL_CR     ,   </div>
+<div class="line">    F_CANCEL_MODE           </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89abbd58250a155df36a539b2f7f11a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89abbd58250a155df36a539b2f7f11a9">&#9670;&nbsp;</a></span>pnFuncList_Others</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Others[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    F_DISABLE               </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9a909a5c0cddc5faa1742908391d37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a909a5c0cddc5faa1742908391d37b">&#9670;&nbsp;</a></span>pnFuncList_Select</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Select[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    F_SELECTWORD            ,   </div>
+<div class="line">    F_SELECTALL             ,   </div>
+<div class="line">    F_SELECTLINE            ,   </div>
+<div class="line">    F_BEGIN_SEL             ,   </div>
+<div class="line">    F_UP_SEL                ,   </div>
+<div class="line">    F_DOWN_SEL              ,   </div>
+<div class="line">    F_LEFT_SEL              ,   </div>
+<div class="line">    F_RIGHT_SEL             ,   </div>
+<div class="line">    F_UP2_SEL               ,   </div>
+<div class="line">    F_DOWN2_SEL             ,   </div>
+<div class="line">    F_WORDLEFT_SEL          ,   </div>
+<div class="line">    F_WORDRIGHT_SEL         ,   </div>
+<div class="line">    F_GOLINETOP_SEL         ,   </div>
+<div class="line">    F_GOLINEEND_SEL         ,   </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    F_HalfPageUp_Sel        ,   </div>
+<div class="line">    F_HalfPageDown_Sel      ,   </div>
+<div class="line">    F_1PageUp_Sel           ,   </div>
+<div class="line">    F_1PageDown_Sel         ,   </div>
+<div class="line">    F_GOFILETOP_SEL         ,   </div>
+<div class="line">    F_GOFILEEND_SEL         ,   </div>
+<div class="line">    F_GONEXTPARAGRAPH_SEL   ,   </div>
+<div class="line">    F_GOPREVPARAGRAPH_SEL   ,   </div>
+<div class="line">    F_MODIFYLINE_NEXT_SEL   ,   </div>
+<div class="line">    F_MODIFYLINE_PREV_SEL   ,   </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0734405e29e587ca88ba717c5a4bb55a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0734405e29e587ca88ba717c5a4bb55a">&#9670;&nbsp;</a></span>pnFuncList_Set</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Set[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    F_SHOWTOOLBAR       ,   </div>
+<div class="line">    F_SHOWFUNCKEY       ,       </div>
+<div class="line">    F_SHOWTAB           ,       </div>
+<div class="line">    F_SHOWSTATUSBAR     ,   </div>
+<div class="line">    F_SHOWMINIMAP       ,   </div>
+<div class="line">    F_TYPE_LIST         ,               </div>
+<div class="line">    F_OPTION_TYPE       ,   </div>
+<div class="line">    F_OPTION            ,   </div>
+<div class="line">    F_FONT              ,   </div>
+<div class="line">    F_SETFONTSIZEUP     ,   </div>
+<div class="line">    F_SETFONTSIZEDOWN   ,   </div>
+<div class="line">    F_WRAPWINDOWWIDTH   ,       </div>
+<div class="line">    F_PRINT_PAGESETUP   ,   </div>
+<div class="line">    F_FAVORITE          ,   </div>
+<div class="line">    F_TMPWRAPNOWRAP     ,   </div>
+<div class="line">    F_TMPWRAPSETTING    ,   </div>
+<div class="line">    F_TMPWRAPWINDOW     ,   </div>
+<div class="line">    F_SELECT_COUNT_MODE     </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac8989af25c06ba04ff522e7f03cacab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8989af25c06ba04ff522e7f03cacab1">&#9670;&nbsp;</a></span>pnFuncList_Support</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EFunctionCode pnFuncList_Support[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    F_HOKAN                     ,   </div>
+<div class="line">    F_TOGGLE_KEY_SEARCH         ,       </div>
+<div class="line"> </div>
+<div class="line">    F_HELP_CONTENTS             ,               </div>
+<div class="line">    F_HELP_SEARCH               ,       </div>
+<div class="line">    F_MENU_ALLFUNC              ,   </div>
+<div class="line">    F_EXTHELP1                  ,   </div>
+<div class="line">    F_EXTHTMLHELP               ,   </div>
+<div class="line">    F_ABOUT                             </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

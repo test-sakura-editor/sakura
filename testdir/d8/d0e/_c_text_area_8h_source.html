@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/view/CTextArea.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_9d48af863df3ea58396c09960e66fed0.html">view</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CTextArea.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d0e/_c_text_area_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright (C) 2008, kobake</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d6d/class_c_view_font.html">CViewFont</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/db0/_disp_pos_8h.html">DispPos.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d0/d83/class_c_text_area.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d83/class_c_text_area.html">CTextArea</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d0/d83/class_c_text_area.html">CTextArea</a>(<a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pEditView);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d0/d83/class_c_text_area.html">CTextArea</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> CopyTextAreaStatus(<a class="code" href="../../d0/d83/class_c_text_area.html">CTextArea</a>* pDst) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//                     ビュー情報を取得                        //</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d0/d83/class_c_text_area.html#a3e87e4e868d49e530f5cc8b65dc9cab9">   43</a></span>&#160;    CLayoutInt <a class="code" href="../../d0/d83/class_c_text_area.html#a3e87e4e868d49e530f5cc8b65dc9cab9">GetViewTopLine</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> m_nViewTopLine;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> SetViewTopLine(CLayoutInt nLine)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_nViewTopLine=nLine;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d0/d83/class_c_text_area.html#a91d3ff37a306b5d335a7dac859ac981c">   53</a></span>&#160;    CLayoutInt <a class="code" href="../../d0/d83/class_c_text_area.html#a91d3ff37a306b5d335a7dac859ac981c">GetViewLeftCol</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> m_nViewLeftCol;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> SetViewLeftCol(CLayoutInt nLeftCol)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        m_nViewLeftCol=nLeftCol;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d0/d83/class_c_text_area.html#a4d42d45f1a97cdf23ec390f4e7ddc54d">   63</a></span>&#160;    CLayoutInt <a class="code" href="../../d0/d83/class_c_text_area.html#a4d42d45f1a97cdf23ec390f4e7ddc54d">GetRightCol</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> m_nViewLeftCol + m_nViewColNum;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/d83/class_c_text_area.html#a1882fa600cc6db9efe5f2385a62cef04">   69</a></span>&#160;    CLayoutInt <a class="code" href="../../d0/d83/class_c_text_area.html#a1882fa600cc6db9efe5f2385a62cef04">GetBottomLine</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> m_nViewTopLine + m_nViewRowNum;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//                   領域を取得(ピクセル)                      //</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> GetAreaLeft()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignLeft;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> GetAreaTop()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignTop;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> GetAreaRight()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignLeft + m_nViewCx;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> GetAreaBottom()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignTop + m_nViewCy;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d7/d43/class_c_my_rect.html">CMyRect</a> GetAreaRect()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/d43/class_c_my_rect.html">CMyRect</a>(GetAreaLeft(), GetAreaTop(), GetAreaRight(), GetAreaBottom());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> GetAreaWidth()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> m_nViewCx;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> GetAreaHeight()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> m_nViewCy;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span> GetTopYohaku()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> m_nTopYohaku;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> SetTopYohaku(<span class="keywordtype">int</span> nPixel)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        m_nTopYohaku=nPixel;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> GetLeftYohaku()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> m_nLeftYohaku;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> SetLeftYohaku(<span class="keywordtype">int</span> nPixel)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        m_nLeftYohaku=nPixel;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// 行番号の幅(余白なし)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">int</span> GetLineNumberWidth()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignLeft - m_nLeftYohaku;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a8ae8b4c603c44c74a766bca23fde948d">TextArea_OnSize</a>(</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d0/d7f/class_c_my_size.html">CMySize</a>&amp; sizeClient, </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">int</span> nCxVScroll,            </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">int</span> nCyHScroll             </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a65e7b9bd04e9b0a1a2ce621cf908aa3f">DetectWidthOfLineNumberArea</a>( <span class="keywordtype">bool</span> bRedraw );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span>  <a class="code" href="../../d0/d83/class_c_text_area.html#ac46a7e84b07dcf0693cc175452f019e5">DetectWidthOfLineNumberArea_calculate</a>(<span class="keyword">const</span> <a class="code" href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a>*, <span class="keywordtype">bool</span> bLayout=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//                           判定                              //</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span> IsRectIntersected(<span class="keyword">const</span> RECT&amp; rc)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//rcが無効またはゼロ領域の場合はfalse</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span>( rc.left &gt;= rc.right )<span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span>( rc.top  &gt;= rc.bottom )<span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span>( rc.left &gt;= this-&gt;GetAreaRight() )<span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//右外</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span>( rc.right &lt;= this-&gt;GetAreaLeft() )<span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//左外</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span>( rc.top &gt;= this-&gt;GetAreaBottom() )<span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//下外</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span>( rc.bottom &lt;= this-&gt;GetAreaTop() )<span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//上外</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">//                        その他取得                           //</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">int</span> GetRulerHeight()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> m_nViewAlignTop - GetTopYohaku();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a95f2ddbf4d090956037127f6d420bc95">GetDocumentLeftClientPointX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">//計算</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a96c5cd14787e63bdb76b44b416c4086c">ClientToLayout</a>(<a class="code" href="../../d2/de9/class_c_my_point.html">CMyPoint</a> ptClient, <a class="code" href="../../d4/dce/class_c_strict_point.html">CLayoutPoint</a>* pptLayout) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">//                           設定                              //</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a0b8ebd52da73a69e50cfc812d7f36b96">UpdateAreaMetrics</a>();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> SetAreaLeft(<span class="keywordtype">int</span> nAreaLeft)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        m_nViewAlignLeft = nAreaLeft;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> SetAreaTop(<span class="keywordtype">int</span> nAreaTop)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        m_nViewAlignTop = nAreaTop;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> OffsetViewTopLine(CLayoutInt nOff)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        m_nViewTopLine += nOff;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a8721fe6b96b7f7caad729ea3f99b0afb">UpdateViewColRowNums</a>();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">//                         サポート                            //</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//$ Generateなんていう大げさな名前じゃなくて、Get～で良い気がしてきた</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a0122a1d6f00c90cafa046316549e456b">GenerateCharRect</a>(RECT* rc,<span class="keyword">const</span> <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>&amp; sPos,CLayoutXInt nColumns) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">bool</span> TrimRectByArea(RECT* rc) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">bool</span> GenerateClipRect(RECT* rc,<span class="keyword">const</span> <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>&amp; sPos,CLayoutXInt nColumns) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a91de2f7716cf474f8fba566809c9346c">GenerateClipRectRight</a>(RECT* rc,<span class="keyword">const</span> <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>&amp; sPos) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/d83/class_c_text_area.html#afd79617b7005b0024cba14bbf0e2e357">GenerateClipRectLine</a>(RECT* rc,<span class="keyword">const</span> <a class="code" href="../../d8/d97/struct_disp_pos.html">DispPos</a>&amp; sPos) <span class="keyword">const</span>;  </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a859ab6c799c00819ac2352ef95cabe23">GenerateTopRect</a>   (RECT* rc, CLayoutInt nLineCount) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d83/class_c_text_area.html#a82b0b5e3fed34f94163017066f836029">GenerateBottomRect</a>(RECT* rc, CLayoutInt nLineCount) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> GenerateLeftRect  (RECT* rc, CLayoutInt nColCount ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">void</span> GenerateRightRect (RECT* rc, CLayoutInt nColCount ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">void</span> GenerateLineNumberRect(RECT* rc) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">void</span> GenerateTextAreaRect(RECT* rc) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">int</span> GenerateYPx(CLayoutYInt nLineNum) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">//参照</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*  m_pEditView;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">/* 画面情報 */</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="comment">//ピクセル</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">int</span>     m_nViewAlignLeft;       <span class="comment">/* 表示域の左端座標 */</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">int</span>     m_nViewAlignTop;        <span class="comment">/* 表示域の上端座標 */</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">int</span>     m_nTopYohaku;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">int</span>     m_nLeftYohaku;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span>     m_nViewCx;              <span class="comment">/* 表示域の幅 */</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">int</span>     m_nViewCy;              <span class="comment">/* 表示域の高さ */</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">//テキスト</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    CLayoutInt  m_nViewTopLine;         <span class="comment">/* 表示域の一番上の行(0開始) */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    CLayoutInt  m_nViewRowNum;          <span class="comment">/* 表示域の行数 */</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    CLayoutInt  m_nViewLeftCol;         <span class="comment">/* 表示域の一番左の桁(0開始) */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    CLayoutInt  m_nViewColNum;          <span class="comment">/* 表示域の桁数 */</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//その他</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">int</span>     m_nViewAlignLeftCols;   <span class="comment">/* 行番号域の桁数 */</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_layout_mgr_html"><div class="ttname"><a href="../../da/d25/class_c_layout_mgr.html">CLayoutMgr</a></div><div class="ttdoc">テキストのレイアウト情報管理</div><div class="ttdef"><b>Definition:</b> CLayoutMgr.h:92</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a0b8ebd52da73a69e50cfc812d7f36b96"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a0b8ebd52da73a69e50cfc812d7f36b96">CTextArea::UpdateAreaMetrics</a></div><div class="ttdeci">void UpdateAreaMetrics()</div><div class="ttdoc">フォント変更の際、各種パラメータを計算し直す</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:75</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a95f2ddbf4d090956037127f6d420bc95"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a95f2ddbf4d090956037127f6d420bc95">CTextArea::GetDocumentLeftClientPointX</a></div><div class="ttdeci">int GetDocumentLeftClientPointX() const</div><div class="ttdoc">ドキュメント左端のクライアント座標を取得 (つまり、スクロールされた状態であれば、マイナスを返す)</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:280</div></div>
+<div class="ttc" id="aclass_c_my_point_html"><div class="ttname"><a href="../../d2/de9/class_c_my_point.html">CMyPoint</a></div><div class="ttdef"><b>Definition:</b> CMyPoint.h:29</div></div>
+<div class="ttc" id="a_disp_pos_8h_html"><div class="ttname"><a href="../../d1/db0/_disp_pos_8h.html">DispPos.h</a></div></div>
+<div class="ttc" id="aclass_c_text_area_html_a4d42d45f1a97cdf23ec390f4e7ddc54d"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a4d42d45f1a97cdf23ec390f4e7ddc54d">CTextArea::GetRightCol</a></div><div class="ttdeci">CLayoutInt GetRightCol() const</div><div class="ttdoc">右にはみ出した最初の列を返す</div><div class="ttdef"><b>Definition:</b> CTextArea.h:63</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a3e87e4e868d49e530f5cc8b65dc9cab9"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a3e87e4e868d49e530f5cc8b65dc9cab9">CTextArea::GetViewTopLine</a></div><div class="ttdeci">CLayoutInt GetViewTopLine() const</div><div class="ttdoc">表示される最初の行</div><div class="ttdef"><b>Definition:</b> CTextArea.h:43</div></div>
+<div class="ttc" id="aclass_c_my_rect_html"><div class="ttname"><a href="../../d7/d43/class_c_my_rect.html">CMyRect</a></div><div class="ttdef"><b>Definition:</b> CMyRect.h:30</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a8ae8b4c603c44c74a766bca23fde948d"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a8ae8b4c603c44c74a766bca23fde948d">CTextArea::TextArea_OnSize</a></div><div class="ttdeci">void TextArea_OnSize(const CMySize &amp;sizeClient, int nCxVScroll, int nCyHScroll)</div><div class="ttdoc">クライアントサイズ更新</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:269</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="astruct_disp_pos_html"><div class="ttname"><a href="../../d8/d97/struct_disp_pos.html">DispPos</a></div><div class="ttdef"><b>Definition:</b> DispPos.h:31</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a8721fe6b96b7f7caad729ea3f99b0afb"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a8721fe6b96b7f7caad729ea3f99b0afb">CTextArea::UpdateViewColRowNums</a></div><div class="ttdeci">void UpdateViewColRowNums()</div><div class="ttdoc">表示域の再計算</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:65</div></div>
+<div class="ttc" id="aclass_c_text_area_html"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html">CTextArea</a></div><div class="ttdef"><b>Definition:</b> CTextArea.h:32</div></div>
+<div class="ttc" id="aclass_c_strict_point_html"><div class="ttname"><a href="../../d4/dce/class_c_strict_point.html">CStrictPoint&lt; SLayoutPoint, CLayoutInt &gt;</a></div></div>
+<div class="ttc" id="aclass_c_my_size_html"><div class="ttname"><a href="../../d0/d7f/class_c_my_size.html">CMySize</a></div><div class="ttdef"><b>Definition:</b> CMySize.h:29</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a0122a1d6f00c90cafa046316549e456b"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a0122a1d6f00c90cafa046316549e456b">CTextArea::GenerateCharRect</a></div><div class="ttdeci">void GenerateCharRect(RECT *rc, const DispPos &amp;sPos, CLayoutXInt nColumns) const</div><div class="ttdoc">クリッピング矩形を作成。表示範囲外だった場合はfalseを返す。</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:82</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a82b0b5e3fed34f94163017066f836029"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a82b0b5e3fed34f94163017066f836029">CTextArea::GenerateBottomRect</a></div><div class="ttdeci">void GenerateBottomRect(RECT *rc, CLayoutInt nLineCount) const</div><div class="ttdoc">行番号エリアも含む範囲</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:305</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a65e7b9bd04e9b0a1a2ce621cf908aa3f"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a65e7b9bd04e9b0a1a2ce621cf908aa3f">CTextArea::DetectWidthOfLineNumberArea</a></div><div class="ttdeci">bool DetectWidthOfLineNumberArea(bool bRedraw)</div><div class="ttdoc">行番号表示に必要な幅を設定</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:150</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a91d3ff37a306b5d335a7dac859ac981c"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a91d3ff37a306b5d335a7dac859ac981c">CTextArea::GetViewLeftCol</a></div><div class="ttdeci">CLayoutInt GetViewLeftCol() const</div><div class="ttdoc">表示域の一番左の桁</div><div class="ttdef"><b>Definition:</b> CTextArea.h:53</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a1882fa600cc6db9efe5f2385a62cef04"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a1882fa600cc6db9efe5f2385a62cef04">CTextArea::GetBottomLine</a></div><div class="ttdeci">CLayoutInt GetBottomLine() const</div><div class="ttdoc">下にはみ出した最初の行を返す</div><div class="ttdef"><b>Definition:</b> CTextArea.h:69</div></div>
+<div class="ttc" id="aclass_c_text_area_html_afd79617b7005b0024cba14bbf0e2e357"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#afd79617b7005b0024cba14bbf0e2e357">CTextArea::GenerateClipRectLine</a></div><div class="ttdeci">bool GenerateClipRectLine(RECT *rc, const DispPos &amp;sPos) const</div><div class="ttdoc">行全部</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:138</div></div>
+<div class="ttc" id="aclass_c_view_font_html"><div class="ttname"><a href="../../d0/d6d/class_c_view_font.html">CViewFont</a></div><div class="ttdef"><b>Definition:</b> CViewFont.h:29</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a91de2f7716cf474f8fba566809c9346c"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a91de2f7716cf474f8fba566809c9346c">CTextArea::GenerateClipRectRight</a></div><div class="ttdeci">bool GenerateClipRectRight(RECT *rc, const DispPos &amp;sPos) const</div><div class="ttdoc">右端まで全部</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:115</div></div>
+<div class="ttc" id="aclass_c_text_area_html_ac46a7e84b07dcf0693cc175452f019e5"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#ac46a7e84b07dcf0693cc175452f019e5">CTextArea::DetectWidthOfLineNumberArea_calculate</a></div><div class="ttdeci">int DetectWidthOfLineNumberArea_calculate(const CLayoutMgr *, bool bLayout=false) const</div><div class="ttdoc">行番号表示に必要な桁数を計算</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:219</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a859ab6c799c00819ac2352ef95cabe23"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a859ab6c799c00819ac2352ef95cabe23">CTextArea::GenerateTopRect</a></div><div class="ttdeci">void GenerateTopRect(RECT *rc, CLayoutInt nLineCount) const</div><div class="ttdoc">行番号エリアも含む範囲</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:296</div></div>
+<div class="ttc" id="aclass_c_text_area_html_a96c5cd14787e63bdb76b44b416c4086c"><div class="ttname"><a href="../../d0/d83/class_c_text_area.html#a96c5cd14787e63bdb76b44b416c4086c">CTextArea::ClientToLayout</a></div><div class="ttdeci">void ClientToLayout(CMyPoint ptClient, CLayoutPoint *pptLayout) const</div><div class="ttdoc">クライアント座標からレイアウト位置に変換する</div><div class="ttdef"><b>Definition:</b> CTextArea.cpp:286</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

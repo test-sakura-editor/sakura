@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: COpeBuf クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d2/dfc/class_c_ope_buf-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">COpeBuf クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>2002/2/10 aroka  
+ <a href="../../de/d26/class_c_ope_buf.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d83/_c_ope_buf_8h_source.html">COpeBuf.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad469dc3516aae1fd880c12eda995935f"><td class="memItemLeft" align="right" valign="top"><a id="ad469dc3516aae1fd880c12eda995935f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#ad469dc3516aae1fd880c12eda995935f">IsEnableUndo</a> () const</td></tr>
+<tr class="memdesc:ad469dc3516aae1fd880c12eda995935f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo可能な状態か <br /></td></tr>
+<tr class="separator:ad469dc3516aae1fd880c12eda995935f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0d0e89196785f770be4e01f8e4cd9b"><td class="memItemLeft" align="right" valign="top"><a id="a1c0d0e89196785f770be4e01f8e4cd9b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#a1c0d0e89196785f770be4e01f8e4cd9b">IsEnableRedo</a> () const</td></tr>
+<tr class="memdesc:a1c0d0e89196785f770be4e01f8e4cd9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redo可能な状態か <br /></td></tr>
+<tr class="separator:a1c0d0e89196785f770be4e01f8e4cd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8750cca55a3149a068fb82eac7347ab"><td class="memItemLeft" align="right" valign="top"><a id="ab8750cca55a3149a068fb82eac7347ab"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentPointer</b> (void) const</td></tr>
+<tr class="separator:ab8750cca55a3149a068fb82eac7347ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57231dcf4745ddacaa973f1b7f1bb95e"><td class="memItemLeft" align="right" valign="top"><a id="a57231dcf4745ddacaa973f1b7f1bb95e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextSeq</b> () const</td></tr>
+<tr class="separator:a57231dcf4745ddacaa973f1b7f1bb95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e16dda37dc38bfec6981d6866517f3"><td class="memItemLeft" align="right" valign="top"><a id="ab3e16dda37dc38bfec6981d6866517f3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNoModifiedSeq</b> () const</td></tr>
+<tr class="separator:ab3e16dda37dc38bfec6981d6866517f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8f6d7b7738d7696c25923ffe3605f3"><td class="memItemLeft" align="right" valign="top"><a id="acf8f6d7b7738d7696c25923ffe3605f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#acf8f6d7b7738d7696c25923ffe3605f3">ClearAll</a> ()</td></tr>
+<tr class="memdesc:acf8f6d7b7738d7696c25923ffe3605f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">全要素のクリア <br /></td></tr>
+<tr class="separator:acf8f6d7b7738d7696c25923ffe3605f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ad522d9bfc8b82fd85979f125f7c72"><td class="memItemLeft" align="right" valign="top"><a id="ac9ad522d9bfc8b82fd85979f125f7c72"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#ac9ad522d9bfc8b82fd85979f125f7c72">AppendOpeBlk</a> (<a class="el" href="../../dc/d83/class_c_ope_blk.html">COpeBlk</a> *pcOpeBlk)</td></tr>
+<tr class="memdesc:ac9ad522d9bfc8b82fd85979f125f7c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作ブロックの追加 <br /></td></tr>
+<tr class="separator:ac9ad522d9bfc8b82fd85979f125f7c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd43ef437f928cbe4731cdd9068ff91"><td class="memItemLeft" align="right" valign="top"><a id="addd43ef437f928cbe4731cdd9068ff91"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#addd43ef437f928cbe4731cdd9068ff91">SetNoModified</a> ()</td></tr>
+<tr class="memdesc:addd43ef437f928cbe4731cdd9068ff91"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置で無変更な状態になったことを通知 <br /></td></tr>
+<tr class="separator:addd43ef437f928cbe4731cdd9068ff91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad807652260444a4c80b06f991bc2b815"><td class="memItemLeft" align="right" valign="top"><a id="ad807652260444a4c80b06f991bc2b815"></a>
+<a class="el" href="../../dc/d83/class_c_ope_blk.html">COpeBlk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#ad807652260444a4c80b06f991bc2b815">DoUndo</a> (bool *pbModified)</td></tr>
+<tr class="memdesc:ad807652260444a4c80b06f991bc2b815"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のUndo対象の操作ブロックを返す <br /></td></tr>
+<tr class="separator:ad807652260444a4c80b06f991bc2b815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793d0947af58b947a263a7c98b23b5e6"><td class="memItemLeft" align="right" valign="top"><a id="a793d0947af58b947a263a7c98b23b5e6"></a>
+<a class="el" href="../../dc/d83/class_c_ope_blk.html">COpeBlk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#a793d0947af58b947a263a7c98b23b5e6">DoRedo</a> (bool *pbModified)</td></tr>
+<tr class="memdesc:a793d0947af58b947a263a7c98b23b5e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のRedo対象の操作ブロックを返す <br /></td></tr>
+<tr class="separator:a793d0947af58b947a263a7c98b23b5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4314550be6aad82316b08d56607cf0"><td class="memItemLeft" align="right" valign="top"><a id="aff4314550be6aad82316b08d56607cf0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d26/class_c_ope_buf.html#aff4314550be6aad82316b08d56607cf0">DUMP</a> ()</td></tr>
+<tr class="memdesc:aff4314550be6aad82316b08d56607cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">編集操作要素ブロックのダンプ <br /></td></tr>
+<tr class="separator:aff4314550be6aad82316b08d56607cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>2002/2/10 aroka </p>
+<p>アンドゥ・リドゥバッファ </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/<a class="el" href="../../d9/d83/_c_ope_buf_8h_source.html">COpeBuf.h</a></li>
+<li>sakura_core/<a class="el" href="../../de/d49/_c_ope_buf_8cpp.html">COpeBuf.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

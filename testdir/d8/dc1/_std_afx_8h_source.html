@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/StdAfx.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StdAfx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/dc1/_std_afx_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// stdafx.h : 標準のシステム インクルード ファイル、</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//              または参照回数が多く、かつあまり変更されない</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//              プロジェクト専用のインクルード ファイルを記述します。</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) &amp;&amp; _MSC_VER &gt; 1000</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif // _MSC_VER &gt; 1000</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// この位置にヘッダーを挿入してください</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// #define WIN32_LEAN_AND_MEAN      // Windows ヘッダーから殆ど使用されないスタッフを除外します</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef STRICT</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define STRICT 1</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Windows SDKのmin/maxマクロは使いません</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define NOMINMAX</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// MS Cランタイムの非セキュア関数の使用を容認します</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#if defined _M_IX86</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma comment(linker,&quot;/manifestdependency:\&quot;type=&#39;win32&#39; name=&#39;Microsoft.Windows.Common-Controls&#39; version=&#39;6.0.0.0&#39; processorArchitecture=&#39;x86&#39; publicKeyToken=&#39;6595b64144ccf1df&#39; language=&#39;*&#39;\&quot;&quot;)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#elif defined _M_IA64</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma comment(linker,&quot;/manifestdependency:\&quot;type=&#39;win32&#39; name=&#39;Microsoft.Windows.Common-Controls&#39; version=&#39;6.0.0.0&#39; processorArchitecture=&#39;ia64&#39; publicKeyToken=&#39;6595b64144ccf1df&#39; language=&#39;*&#39;\&quot;&quot;)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#elif defined _M_X64</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#pragma comment(linker,&quot;/manifestdependency:\&quot;type=&#39;win32&#39; name=&#39;Microsoft.Windows.Common-Controls&#39; version=&#39;6.0.0.0&#39; processorArchitecture=&#39;amd64&#39; publicKeyToken=&#39;6595b64144ccf1df&#39; language=&#39;*&#39;\&quot;&quot;)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma comment(linker,&quot;/manifestdependency:\&quot;type=&#39;win32&#39; name=&#39;Microsoft.Windows.Common-Controls&#39; version=&#39;6.0.0.0&#39; processorArchitecture=&#39;*&#39; publicKeyToken=&#39;6595b64144ccf1df&#39; language=&#39;*&#39;\&quot;&quot;)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// Workaround for PROPSHEETHEADER_V2_SIZE</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef __MINGW32__</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;_mingw.h&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef DUMMYUNION5_MEMBER</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef NONAMELESSUNION</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define DUMMYUNION5_MEMBER(x) x</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* NONAMELESSUNION */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define DUMMYUNION5_MEMBER(x) DUMMYUNIONNAME5.x</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// MinGW-w64-gcc にない関数をマクロ定義する</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define _wcstok wcstok</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//グローバル</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//ビルドオプション的なヘッダ</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d2b/build__config_8h.html">config/build_config.h</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//定数(プリコンパイル日付に依存)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d9d/system__constants_8h.html">config/system_constants.h</a>&quot;</span>    <span class="comment">//システム定数</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/df2/app__constants_8h.html">config/app_constants.h</a>&quot;</span>       <span class="comment">//アプリケーション定数</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//高頻度API等</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// #include &lt;CommDlg.h&gt; // WIN32_LEAN_AND_MEANでは必要。OpenFileDialg系</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;CommCtrl.h&gt;</span> <span class="comment">// コモンコントロール</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span>  <span class="comment">// _MAX_PATH</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &lt;wchar.h&gt;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifndef SAKURA_PCH_MODE_MIN</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// 2010.04.19 重そうなので追加</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &lt;HtmlHelp.h&gt;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &lt;ObjIdl.h&gt;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &lt;ShlObj.h&gt;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &lt;ShellAPI.h&gt;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &lt;io.h&gt;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif // ifndef SAKURA_PCH_MODE_MIN</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//デバッグ</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d58/_debug1_8h.html">debug/Debug1.h</a>&quot;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/dc0/_debug2_8h.html">debug/Debug2.h</a>&quot;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dd7/_debug3_8h.html">debug/Debug3.h</a>&quot;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//シンプルでよく使うもの</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d71/primitive_8h.html">basis/primitive.h</a>&quot;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/dec/std__macro_8h.html">util/std_macro.h</a>&quot;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//MFC互換</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d33/_c_my_string_8h.html">basis/CMyString.h</a>&quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d64/_c_my_rect_8h.html">basis/CMyRect.h</a>&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/df1/_c_my_point_8h.html">basis/CMyPoint.h</a>&quot;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d20/_c_my_size_8h.html">basis/CMySize.h</a>&quot;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//サクラエディタ固有型</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/db9/_sakura_basis_8h.html">basis/SakuraBasis.h</a>&quot;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//よく使うヘッダ</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d38/_c_native_w_8h.html">mem/CNativeW.h</a>&quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d6b/_c_native_a_8h.html">mem/CNativeA.h</a>&quot;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d92/string__ex_8h.html">util/string_ex.h</a>&quot;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d15/_message_box_f_8h.html">util/MessageBoxF.h</a>&quot;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/db9/_c_select_lang_8h.html">CSelectLang.h</a>&quot;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/dc5/_string__define_8h.html">String_define.h</a>&quot;</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">//その他</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define malloc_char (char*)malloc</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#define GlobalLockChar  (char*)::GlobalLock</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#define GlobalLockUChar (unsigned char*)::GlobalLock</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define GlobalLockWChar (wchar_t*)::GlobalLock</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#define GlobalLockBYTE  (BYTE*)::GlobalLock</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">//APIラップ</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d4a/_std_control_8h.html">apiwrap/StdControl.h</a>&quot;</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d44/_common_control_8h.html">apiwrap/CommonControl.h</a>&quot;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/df5/_std_api_8h.html">apiwrap/StdApi.h</a>&quot;</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">//TCHARユーティリティ</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/ddb/tchar__convert_8h.html">util/tchar_convert.h</a>&quot;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d86/charcode_8h.html">charset/charcode.h</a>&quot;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dbd/codechecker_8h.html">charset/codechecker.h</a>&quot;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// 2010.04.19 Moca includeの大規模整理</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#ifndef SAKURA_PCH_MODE_MIN</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#define SAKURA_PCH_MODE_DLLSHARE 1</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#if defined(SAKURA_PCH_MODE_MAX) || defined(SAKURA_PCH_MODE_DLLSHARE)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">env/DLLSHAREDATA.h</a>&quot;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#ifdef SAKURA_PCH_MODE_MAX</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d26/_c_share_data_8h.html">env/CShareData.h</a>&quot;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d5e/_c_normal_process_8h.html">_main/CNormalProcess.h</a>&quot;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d47/_c_app_mode_8h.html">_main/CAppMode.h</a>&quot;</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d14/_c_edit_wnd_8h.html">window/CEditWnd.h</a>&quot;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/de1/_c_edit_app_8h.html">CEditApp.h</a>&quot;</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dc1/_c_doc_reader_8h.html">doc/CDocReader.h</a>&quot;</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d42/_c_modify_manager_8h.html">docplus/CModifyManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/dc1/_c_diff_manager_8h.html">docplus/CDiffManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d3d/_c_bookmark_manager_8h.html">docplus/CBookmarkManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d6e/_c_read_manager_8h.html">CReadManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/de9/_c_write_manager_8h.html">CWriteManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d0b/_c_search_agent_8h.html">CSearchAgent.h</a>&quot;</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">//###########超仮</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d51/_c_graphics_8h.html">uiparts/CGraphics.h</a>&quot;</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif // SAKURA_PCH_MODE_MAX</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">//{{AFX_INSERT_LOCATION}}</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// Microsoft Visual C++ は前行の直前に追加の宣言を挿入します。</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_c_edit_wnd_8h_html"><div class="ttname"><a href="../../dc/d14/_c_edit_wnd_8h.html">CEditWnd.h</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div></div>
+<div class="ttc" id="aapp__constants_8h_html"><div class="ttname"><a href="../../d6/df2/app__constants_8h.html">app_constants.h</a></div></div>
+<div class="ttc" id="a_std_api_8h_html"><div class="ttname"><a href="../../d5/df5/_std_api_8h.html">StdApi.h</a></div></div>
+<div class="ttc" id="a_debug3_8h_html"><div class="ttname"><a href="../../df/dd7/_debug3_8h.html">Debug3.h</a></div><div class="ttdoc">DebugMonitorLib用関数</div></div>
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="a_c_diff_manager_8h_html"><div class="ttname"><a href="../../d6/dc1/_c_diff_manager_8h.html">CDiffManager.h</a></div></div>
+<div class="ttc" id="a_c_native_w_8h_html"><div class="ttname"><a href="../../d8/d38/_c_native_w_8h.html">CNativeW.h</a></div></div>
+<div class="ttc" id="acodechecker_8h_html"><div class="ttname"><a href="../../dc/dbd/codechecker_8h.html">codechecker.h</a></div><div class="ttdoc">文字コード認識・判別支援関数ライブラリ</div></div>
+<div class="ttc" id="a_c_my_size_8h_html"><div class="ttname"><a href="../../d1/d20/_c_my_size_8h.html">CMySize.h</a></div></div>
+<div class="ttc" id="a_debug2_8h_html"><div class="ttname"><a href="../../de/dc0/_debug2_8h.html">Debug2.h</a></div><div class="ttdoc">assert関数</div></div>
+<div class="ttc" id="a_c_read_manager_8h_html"><div class="ttname"><a href="../../d6/d6e/_c_read_manager_8h.html">CReadManager.h</a></div></div>
+<div class="ttc" id="a_d_l_l_s_h_a_r_e_d_a_t_a_8h_html"><div class="ttname"><a href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">DLLSHAREDATA.h</a></div></div>
+<div class="ttc" id="a_c_my_rect_8h_html"><div class="ttname"><a href="../../d3/d64/_c_my_rect_8h.html">CMyRect.h</a></div></div>
+<div class="ttc" id="a_c_doc_reader_8h_html"><div class="ttname"><a href="../../df/dc1/_c_doc_reader_8h.html">CDocReader.h</a></div></div>
+<div class="ttc" id="a_debug1_8h_html"><div class="ttname"><a href="../../dc/d58/_debug1_8h.html">Debug1.h</a></div><div class="ttdoc">デバッグ用関数</div></div>
+<div class="ttc" id="a_c_search_agent_8h_html"><div class="ttname"><a href="../../df/d0b/_c_search_agent_8h.html">CSearchAgent.h</a></div></div>
+<div class="ttc" id="a_c_my_point_8h_html"><div class="ttname"><a href="../../dc/df1/_c_my_point_8h.html">CMyPoint.h</a></div></div>
+<div class="ttc" id="a_c_native_a_8h_html"><div class="ttname"><a href="../../d6/d6b/_c_native_a_8h.html">CNativeA.h</a></div></div>
+<div class="ttc" id="a_c_write_manager_8h_html"><div class="ttname"><a href="../../d7/de9/_c_write_manager_8h.html">CWriteManager.h</a></div></div>
+<div class="ttc" id="aprimitive_8h_html"><div class="ttname"><a href="../../d1/d71/primitive_8h.html">primitive.h</a></div></div>
+<div class="ttc" id="astd__macro_8h_html"><div class="ttname"><a href="../../d0/dec/std__macro_8h.html">std_macro.h</a></div></div>
+<div class="ttc" id="a_std_control_8h_html"><div class="ttname"><a href="../../d3/d4a/_std_control_8h.html">StdControl.h</a></div></div>
+<div class="ttc" id="a_sakura_basis_8h_html"><div class="ttname"><a href="../../dd/db9/_sakura_basis_8h.html">SakuraBasis.h</a></div></div>
+<div class="ttc" id="a_c_my_string_8h_html"><div class="ttname"><a href="../../d6/d33/_c_my_string_8h.html">CMyString.h</a></div></div>
+<div class="ttc" id="a_string__define_8h_html"><div class="ttname"><a href="../../d0/dc5/_string__define_8h.html">String_define.h</a></div></div>
+<div class="ttc" id="astring__ex_8h_html"><div class="ttname"><a href="../../d3/d92/string__ex_8h.html">string_ex.h</a></div></div>
+<div class="ttc" id="a_c_select_lang_8h_html"><div class="ttname"><a href="../../dc/db9/_c_select_lang_8h.html">CSelectLang.h</a></div><div class="ttdoc">各国語メッセージリソース対応</div></div>
+<div class="ttc" id="a_c_normal_process_8h_html"><div class="ttname"><a href="../../d4/d5e/_c_normal_process_8h.html">CNormalProcess.h</a></div><div class="ttdoc">エディタプロセスクラスヘッダファイル</div></div>
+<div class="ttc" id="asystem__constants_8h_html"><div class="ttname"><a href="../../d1/d9d/system__constants_8h.html">system_constants.h</a></div><div class="ttdoc">システム定数</div></div>
+<div class="ttc" id="a_message_box_f_8h_html"><div class="ttname"><a href="../../db/d15/_message_box_f_8h.html">MessageBoxF.h</a></div><div class="ttdoc">MessageBox用関数</div></div>
+<div class="ttc" id="atchar__convert_8h_html"><div class="ttname"><a href="../../dd/ddb/tchar__convert_8h.html">tchar_convert.h</a></div></div>
+<div class="ttc" id="a_c_modify_manager_8h_html"><div class="ttname"><a href="../../d5/d42/_c_modify_manager_8h.html">CModifyManager.h</a></div></div>
+<div class="ttc" id="a_c_graphics_8h_html"><div class="ttname"><a href="../../d9/d51/_c_graphics_8h.html">CGraphics.h</a></div></div>
+<div class="ttc" id="abuild__config_8h_html"><div class="ttname"><a href="../../d8/d2b/build__config_8h.html">build_config.h</a></div></div>
+<div class="ttc" id="a_c_share_data_8h_html"><div class="ttname"><a href="../../d1/d26/_c_share_data_8h.html">CShareData.h</a></div><div class="ttdoc">プロセス間共有データへのアクセス</div></div>
+<div class="ttc" id="a_c_bookmark_manager_8h_html"><div class="ttname"><a href="../../d5/d3d/_c_bookmark_manager_8h.html">CBookmarkManager.h</a></div></div>
+<div class="ttc" id="a_c_edit_app_8h_html"><div class="ttname"><a href="../../d5/de1/_c_edit_app_8h.html">CEditApp.h</a></div></div>
+<div class="ttc" id="a_common_control_8h_html"><div class="ttname"><a href="../../dc/d44/_common_control_8h.html">CommonControl.h</a></div></div>
+<div class="ttc" id="a_c_app_mode_8h_html"><div class="ttname"><a href="../../d7/d47/_c_app_mode_8h.html">CAppMode.h</a></div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<div class="ttc" id="acharcode_8h_html"><div class="ttname"><a href="../../d4/d86/charcode_8h.html">charcode.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

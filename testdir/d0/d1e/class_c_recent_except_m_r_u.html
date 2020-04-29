@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CRecentExceptMRU クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="../../d2/d34/class_c_recent_except_m_r_u-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CRecentExceptMRU クラス<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>フォルダの履歴を管理 (RECENT_FOR_FOLDER)  
+ <a href="../../d0/d1e/class_c_recent_except_m_r_u.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d0/d8b/_c_recent_except_mru_8h_source.html">CRecentExceptMru.h</a>&gt;</code></p>
+<div class="dynheader">
+CRecentExceptMRU の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/d1e/class_c_recent_except_m_r_u.png" usemap="#CRecentExceptMRU_map" alt=""/>
+  <map id="CRecentExceptMRU_map" name="CRecentExceptMRU_map">
+<area href="../../d3/df6/class_c_recent_imp.html" alt="CRecentImp&lt; CMetaPath, LPCWSTR &gt;" shape="rect" coords="0,56,232,80"/>
+<area href="../../d2/d30/class_c_recent.html" alt="CRecent" shape="rect" coords="0,0,232,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa44a5ebebe04fabcefd82fd53841b899"><td class="memItemLeft" align="right" valign="top"><a id="aa44a5ebebe04fabcefd82fd53841b899"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CompareItem</b> (const <a class="el" href="../../db/d03/class_static_string.html">CMetaPath</a> *p1, LPCWSTR p2) const override</td></tr>
+<tr class="separator:aa44a5ebebe04fabcefd82fd53841b899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab435b2b6293fb715c322b718bb5fee7f"><td class="memItemLeft" align="right" valign="top"><a id="ab435b2b6293fb715c322b718bb5fee7f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyItem</b> (<a class="el" href="../../db/d03/class_static_string.html">CMetaPath</a> *dst, LPCWSTR src) const override</td></tr>
+<tr class="separator:ab435b2b6293fb715c322b718bb5fee7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e168a613f50cbef005169f9fae0c90"><td class="memItemLeft" align="right" valign="top"><a id="ae6e168a613f50cbef005169f9fae0c90"></a>
+const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemText</b> (int nIndex) const</td></tr>
+<tr class="separator:ae6e168a613f50cbef005169f9fae0c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9c26cd0bd653a08f7cb63251688d66"><td class="memItemLeft" align="right" valign="top"><a id="a3a9c26cd0bd653a08f7cb63251688d66"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DataToReceiveType</b> (LPCWSTR *dst, const <a class="el" href="../../db/d03/class_static_string.html">CMetaPath</a> *src) const override</td></tr>
+<tr class="separator:a3a9c26cd0bd653a08f7cb63251688d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326a2d1621a8fdf69d26ea318def898e"><td class="memItemLeft" align="right" valign="top"><a id="a326a2d1621a8fdf69d26ea318def898e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>TextToDataType</b> (<a class="el" href="../../db/d03/class_static_string.html">CMetaPath</a> *dst, LPCWSTR pszText) const override</td></tr>
+<tr class="separator:a326a2d1621a8fdf69d26ea318def898e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a91dcf88f5892af56ff26a810af315c"><td class="memItemLeft" align="right" valign="top"><a id="a6a91dcf88f5892af56ff26a810af315c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ValidateReceiveType</b> (LPCWSTR p) const override</td></tr>
+<tr class="separator:a6a91dcf88f5892af56ff26a810af315c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea761ab954ac8f5b0508b1a88dd338f2"><td class="memItemLeft" align="right" valign="top"><a id="aea761ab954ac8f5b0508b1a88dd338f2"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextMaxLength</b> () const</td></tr>
+<tr class="separator:aea761ab954ac8f5b0508b1a88dd338f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af122acff6bab16eecca44daa55973529"><td class="memItemLeft" align="right" valign="top"><a id="af122acff6bab16eecca44daa55973529"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Terminate</b> ()</td></tr>
+<tr class="separator:af122acff6bab16eecca44daa55973529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd9e57bbff1094676260193832234ba"><td class="memItemLeft" align="right" valign="top"><a id="a5cd9e57bbff1094676260193832234ba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsAvailable</b> () const</td></tr>
+<tr class="separator:a5cd9e57bbff1094676260193832234ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8536240f8ff77e6c862826219d0ed4"><td class="memItemLeft" align="right" valign="top"><a id="a2d8536240f8ff77e6c862826219d0ed4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#a2d8536240f8ff77e6c862826219d0ed4">_Recovery</a> ()</td></tr>
+<tr class="memdesc:a2d8536240f8ff77e6c862826219d0ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">リカバリ <br /></td></tr>
+<tr class="separator:a2d8536240f8ff77e6c862826219d0ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603a17e331b76868a60aed57348231c4"><td class="memItemLeft" align="right" valign="top"><a id="a603a17e331b76868a60aed57348231c4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ChangeViewCount</b> (int nViewCount)</td></tr>
+<tr class="separator:a603a17e331b76868a60aed57348231c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aeeea56ad2b70b4781f4a62edf33d22"><td class="memItemLeft" align="right" valign="top"><a id="a8aeeea56ad2b70b4781f4a62edf33d22"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateView</b> ()</td></tr>
+<tr class="separator:a8aeeea56ad2b70b4781f4a62edf33d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9c35f58b5320a385f438e1e6b45306"><td class="memItemLeft" align="right" valign="top"><a id="abf9c35f58b5320a385f438e1e6b45306"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetArrayCount</b> () const</td></tr>
+<tr class="separator:abf9c35f58b5320a385f438e1e6b45306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8825790c586375a50ea0b991497250f"><td class="memItemLeft" align="right" valign="top"><a id="ab8825790c586375a50ea0b991497250f"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetArrayCount</b> () const =0</td></tr>
+<tr class="separator:ab8825790c586375a50ea0b991497250f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa207bed108f4fbf5a0dd06b3f7dba3d0"><td class="memItemLeft" align="right" valign="top"><a id="aa207bed108f4fbf5a0dd06b3f7dba3d0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemCount</b> () const</td></tr>
+<tr class="separator:aa207bed108f4fbf5a0dd06b3f7dba3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5762429658a138c6f7e34ca2ae6bffac"><td class="memItemLeft" align="right" valign="top"><a id="a5762429658a138c6f7e34ca2ae6bffac"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetItemCount</b> () const =0</td></tr>
+<tr class="separator:a5762429658a138c6f7e34ca2ae6bffac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3be7b1b8f96b062cdfaa1674bb4966"><td class="memItemLeft" align="right" valign="top"><a id="a4a3be7b1b8f96b062cdfaa1674bb4966"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewCount</b> () const</td></tr>
+<tr class="separator:a4a3be7b1b8f96b062cdfaa1674bb4966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe8c1a4a523065b219a1d4e40ddb70a"><td class="memItemLeft" align="right" valign="top"><a id="a2fe8c1a4a523065b219a1d4e40ddb70a"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewCount</b> () const =0</td></tr>
+<tr class="separator:a2fe8c1a4a523065b219a1d4e40ddb70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17a345621704ccc328029b0284dce1a"><td class="memItemLeft" align="right" valign="top"><a id="ad17a345621704ccc328029b0284dce1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetFavorite</b> (int nIndex, bool bFavorite=true)</td></tr>
+<tr class="memdesc:ad17a345621704ccc328029b0284dce1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">お気に入りに設定 <br /></td></tr>
+<tr class="separator:ad17a345621704ccc328029b0284dce1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cf01e9f04b1cdd123ecc16062ad53b"><td class="memItemLeft" align="right" valign="top"><a id="ad8cf01e9f04b1cdd123ecc16062ad53b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ResetFavorite</b> (int nIndex)</td></tr>
+<tr class="separator:ad8cf01e9f04b1cdd123ecc16062ad53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803cbf902f59b55b7d7fe8f6ac1af6bf"><td class="memItemLeft" align="right" valign="top"><a id="a803cbf902f59b55b7d7fe8f6ac1af6bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetAllFavorite</b> ()</td></tr>
+<tr class="separator:a803cbf902f59b55b7d7fe8f6ac1af6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847c4d014b194ac13bf6759d11be7f7a"><td class="memItemLeft" align="right" valign="top"><a id="a847c4d014b194ac13bf6759d11be7f7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFavorite</b> (int nIndex) const</td></tr>
+<tr class="memdesc:a847c4d014b194ac13bf6759d11be7f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">お気に入りか調べる <br /></td></tr>
+<tr class="separator:a847c4d014b194ac13bf6759d11be7f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3e60ae47e3c4c2468be1640f2465bd"><td class="memItemLeft" align="right" valign="top"><a id="a1e3e60ae47e3c4c2468be1640f2465bd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AppendItem</b> (ReceiveType pItemData)</td></tr>
+<tr class="separator:a1e3e60ae47e3c4c2468be1640f2465bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354db2be52c26ab4110a9d60b9eafc4c"><td class="memItemLeft" align="right" valign="top"><a id="a354db2be52c26ab4110a9d60b9eafc4c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AppendItemText</b> (LPCWSTR pszText)</td></tr>
+<tr class="separator:a354db2be52c26ab4110a9d60b9eafc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb0e4623d194d8eb2260df3a4ceecf1"><td class="memItemLeft" align="right" valign="top"><a id="aebb0e4623d194d8eb2260df3a4ceecf1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>AppendItemText</b> (const WCHAR *pszText)=0</td></tr>
+<tr class="separator:aebb0e4623d194d8eb2260df3a4ceecf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5359a5a063db80282073882b33aad2e5"><td class="memItemLeft" align="right" valign="top"><a id="a5359a5a063db80282073882b33aad2e5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>EditItemText</b> (int nIndex, LPCWSTR pszText)</td></tr>
+<tr class="separator:a5359a5a063db80282073882b33aad2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af521d4e8154eb16676d90d30ac2ac5c7"><td class="memItemLeft" align="right" valign="top"><a id="af521d4e8154eb16676d90d30ac2ac5c7"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>EditItemText</b> (int nIndex, const WCHAR *pszText)=0</td></tr>
+<tr class="separator:af521d4e8154eb16676d90d30ac2ac5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8436633e5298884257bd6b1bcd50a1"><td class="memItemLeft" align="right" valign="top"><a id="a6b8436633e5298884257bd6b1bcd50a1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteItem</b> (int nIndex)</td></tr>
+<tr class="memdesc:a6b8436633e5298884257bd6b1bcd50a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイテムをクリア <br /></td></tr>
+<tr class="separator:a6b8436633e5298884257bd6b1bcd50a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52ecbef5f8d72492dcb56f658066690"><td class="memItemLeft" align="right" valign="top"><a id="aa52ecbef5f8d72492dcb56f658066690"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteItem</b> (ReceiveType pItemData)</td></tr>
+<tr class="separator:aa52ecbef5f8d72492dcb56f658066690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd19348e71d1a4339b7faf0072a5259"><td class="memItemLeft" align="right" valign="top"><a id="a0bd19348e71d1a4339b7faf0072a5259"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteItemsNoFavorite</b> ()</td></tr>
+<tr class="separator:a0bd19348e71d1a4339b7faf0072a5259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49549e31f6c0f5f6da5d51049873598"><td class="memItemLeft" align="right" valign="top"><a id="ae49549e31f6c0f5f6da5d51049873598"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteAllItem</b> ()</td></tr>
+<tr class="separator:ae49549e31f6c0f5f6da5d51049873598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc3cdfa96a69b4d7d2270d9dce4aa8f"><td class="memItemLeft" align="right" valign="top"><a id="aecc3cdfa96a69b4d7d2270d9dce4aa8f"></a>
+const <a class="el" href="../../db/d03/class_static_string.html">DataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetItem</b> (int nIndex) const</td></tr>
+<tr class="separator:aecc3cdfa96a69b4d7d2270d9dce4aa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b59f936dfc1cf27417fc2a6cc4b74ee"><td class="memItemLeft" align="right" valign="top"><a id="a9b59f936dfc1cf27417fc2a6cc4b74ee"></a>
+<a class="el" href="../../db/d03/class_static_string.html">DataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetItem</b> (int nIndex)</td></tr>
+<tr class="separator:a9b59f936dfc1cf27417fc2a6cc4b74ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bd4167e8c5823bb7fd39fbbf6078dd"><td class="memItemLeft" align="right" valign="top"><a id="af4bd4167e8c5823bb7fd39fbbf6078dd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FindItem</b> (ReceiveType pItemData) const</td></tr>
+<tr class="separator:af4bd4167e8c5823bb7fd39fbbf6078dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c119943d544d19e1367abef8e7969f8"><td class="memItemLeft" align="right" valign="top"><a id="a4c119943d544d19e1367abef8e7969f8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MoveItem</b> (int nSrcIndex, int nDstIndex)</td></tr>
+<tr class="separator:a4c119943d544d19e1367abef8e7969f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fff2d1803630fe6370345e5c9fa7d2"><td class="memItemLeft" align="right" valign="top"><a id="aa4fff2d1803630fe6370345e5c9fa7d2"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>CompareItem</b> (const <a class="el" href="../../db/d03/class_static_string.html">DataType</a> *p1, ReceiveType p2) const=0</td></tr>
+<tr class="separator:aa4fff2d1803630fe6370345e5c9fa7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbff5e10b0be508a35951d8ed7c70fcd"><td class="memItemLeft" align="right" valign="top"><a id="afbff5e10b0be508a35951d8ed7c70fcd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyItem</b> (<a class="el" href="../../db/d03/class_static_string.html">DataType</a> *dst, ReceiveType src) const=0</td></tr>
+<tr class="separator:afbff5e10b0be508a35951d8ed7c70fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c162789410dd9a9900d1cb2f0bb6cd"><td class="memItemLeft" align="right" valign="top"><a id="ad8c162789410dd9a9900d1cb2f0bb6cd"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>DataToReceiveType</b> (ReceiveType *dst, const <a class="el" href="../../db/d03/class_static_string.html">DataType</a> *src) const=0</td></tr>
+<tr class="separator:ad8c162789410dd9a9900d1cb2f0bb6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a075a78a8e7b601f794a18b9b178a5072"><td class="memItemLeft" align="right" valign="top"><a id="a075a78a8e7b601f794a18b9b178a5072"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>TextToDataType</b> (<a class="el" href="../../db/d03/class_static_string.html">DataType</a> *dst, LPCWSTR pszText) const=0</td></tr>
+<tr class="separator:a075a78a8e7b601f794a18b9b178a5072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1826700bab3965fa5828115717f46b47"><td class="memItemLeft" align="right" valign="top"><a id="a1826700bab3965fa5828115717f46b47"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FindItemByText</b> (const WCHAR *pszText) const</td></tr>
+<tr class="separator:a1826700bab3965fa5828115717f46b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205fc8526f7214ab19e9155a709a0222"><td class="memItemLeft" align="right" valign="top"><a id="a205fc8526f7214ab19e9155a709a0222"></a>
+<a class="el" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetShareData</b> ()</td></tr>
+<tr class="separator:a205fc8526f7214ab19e9155a709a0222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6892203601c37076b5c4f7070a6e73f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#a6892203601c37076b5c4f7070a6e73f3">Create</a> (<a class="el" href="../../db/d03/class_static_string.html">DataType</a> *pszItemArray, size_t nTextMaxLength, int *pnItemCount, bool *pbItemFavorite, int nArrayCount, int *pnViewCount)</td></tr>
+<tr class="separator:a6892203601c37076b5c4f7070a6e73f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a2449b4e6f20c19310ebbe0911d4ab20b"><td class="memItemLeft" align="right" valign="top"><a id="a2449b4e6f20c19310ebbe0911d4ab20b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#a2449b4e6f20c19310ebbe0911d4ab20b">m_bCreate</a></td></tr>
+<tr class="memdesc:a2449b4e6f20c19310ebbe0911d4ab20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create済みか <br /></td></tr>
+<tr class="separator:a2449b4e6f20c19310ebbe0911d4ab20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5f8d6683b733be19c9a4e12e18370d"><td class="memItemLeft" align="right" valign="top"><a id="aca5f8d6683b733be19c9a4e12e18370d"></a>
+<a class="el" href="../../db/d03/class_static_string.html">DataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#aca5f8d6683b733be19c9a4e12e18370d">m_puUserItemData</a></td></tr>
+<tr class="memdesc:aca5f8d6683b733be19c9a4e12e18370d"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイテム配列へのポインタ <br /></td></tr>
+<tr class="separator:aca5f8d6683b733be19c9a4e12e18370d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bdb1d9cd3da1adb255709435f98d21"><td class="memItemLeft" align="right" valign="top"><a id="a17bdb1d9cd3da1adb255709435f98d21"></a>
+int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#a17bdb1d9cd3da1adb255709435f98d21">m_pnUserItemCount</a></td></tr>
+<tr class="memdesc:a17bdb1d9cd3da1adb255709435f98d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイテム個数へのポインタ <br /></td></tr>
+<tr class="separator:a17bdb1d9cd3da1adb255709435f98d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b47fcaa0cc134a71a6ddf244ac227e"><td class="memItemLeft" align="right" valign="top"><a id="a63b47fcaa0cc134a71a6ddf244ac227e"></a>
+bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#a63b47fcaa0cc134a71a6ddf244ac227e">m_pbUserItemFavorite</a></td></tr>
+<tr class="memdesc:a63b47fcaa0cc134a71a6ddf244ac227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">お気に入りへのポインタ (NULL許可) <br /></td></tr>
+<tr class="separator:a63b47fcaa0cc134a71a6ddf244ac227e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d55b1a86b2c31dd135e77485d16740"><td class="memItemLeft" align="right" valign="top"><a id="ae0d55b1a86b2c31dd135e77485d16740"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#ae0d55b1a86b2c31dd135e77485d16740">m_nArrayCount</a></td></tr>
+<tr class="memdesc:ae0d55b1a86b2c31dd135e77485d16740"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大管理可能なアイテム数 <br /></td></tr>
+<tr class="separator:ae0d55b1a86b2c31dd135e77485d16740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa997477779e06ddb1d9db33a7109d352"><td class="memItemLeft" align="right" valign="top"><a id="aa997477779e06ddb1d9db33a7109d352"></a>
+int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#aa997477779e06ddb1d9db33a7109d352">m_pnUserViewCount</a></td></tr>
+<tr class="memdesc:aa997477779e06ddb1d9db33a7109d352"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示個数 (NULL許可) <br /></td></tr>
+<tr class="separator:aa997477779e06ddb1d9db33a7109d352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba29f0deee9d0f3985b6d8d42ae05bc"><td class="memItemLeft" align="right" valign="top"><a id="afba29f0deee9d0f3985b6d8d42ae05bc"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/class_c_recent_imp.html#afba29f0deee9d0f3985b6d8d42ae05bc">m_nTextMaxLength</a></td></tr>
+<tr class="memdesc:afba29f0deee9d0f3985b6d8d42ae05bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大テキスト長(終端含む) <br /></td></tr>
+<tr class="separator:afba29f0deee9d0f3985b6d8d42ae05bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>フォルダの履歴を管理 (RECENT_FOR_FOLDER) </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a6892203601c37076b5c4f7070a6e73f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6892203601c37076b5c4f7070a6e73f3">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d3/df6/class_c_recent_imp.html">CRecentImp</a>&lt; T, S &gt;::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d03/class_static_string.html">DataType</a> *&#160;</td>
+          <td class="paramname"><em>pszItemArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nTextMaxLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnItemCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbItemFavorite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nArrayCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnViewCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszItemArray</td><td>アイテム配列へのポインタ </td></tr>
+    <tr><td class="paramname">nTextMaxLength</td><td>最大テキスト長(終端含む) </td></tr>
+    <tr><td class="paramname">pnItemCount</td><td>アイテム個数へのポインタ </td></tr>
+    <tr><td class="paramname">pbItemFavorite</td><td>お気に入りへのポインタ(NULL許可) </td></tr>
+    <tr><td class="paramname">nArrayCount</td><td>最大管理可能なアイテム数 </td></tr>
+    <tr><td class="paramname">pnViewCount</td><td>表示個数(NULL許可) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/recent/<a class="el" href="../../d0/d8b/_c_recent_except_mru_8h_source.html">CRecentExceptMru.h</a></li>
+<li>sakura_core/recent/<a class="el" href="../../d4/db0/_c_recent_except_mru_8cpp.html">CRecentExceptMru.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

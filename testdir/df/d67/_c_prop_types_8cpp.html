@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CPropTypes.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CPropTypes.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>タイプ別設定ダイアログボックス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d7a/_c_prop_types_8h_source.html">CPropTypes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/de1/_c_edit_app_8h_source.html">CEditApp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/dc2/_e_color_index_type_8h_source.html">view/colors/EColorIndexType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/struct_type_prop_sheet_info.html">TypePropSheetInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a72944e47fdf0f4662282d401abf531a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>GEN_PROPTYPES_CALLBACK</b>(FUNC,  CLASS)</td></tr>
+<tr class="separator:a72944e47fdf0f4662282d401abf531a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:aa2ebeae7512bb9cf3c9fe7406e604dcf"><td class="memItemLeft" align="right" valign="top"><a id="aa2ebeae7512bb9cf3c9fe7406e604dcf"></a>
+typedef INT_PTR(CPropTypes::*&#160;</td><td class="memItemRight" valign="bottom"><b>DISPATCH_EVENT_TYPE</b>) (HWND, UINT, WPARAM, LPARAM)</td></tr>
+<tr class="separator:aa2ebeae7512bb9cf3c9fe7406e604dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fb315d809282838ea5141d7de9f978"><td class="memItemLeft" align="right" valign="top"><a id="a36fb315d809282838ea5141d7de9f978"></a>
+typedef INT_PTR(CPropTypes::*&#160;</td><td class="memItemRight" valign="bottom"><b>pDispatchPage</b>) (HWND, UINT, WPARAM, LPARAM)</td></tr>
+<tr class="separator:a36fb315d809282838ea5141d7de9f978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a59461afac128a87c28a120409e9172c4"><td class="memItemLeft" align="right" valign="top"><a id="a59461afac128a87c28a120409e9172c4"></a>
+INT_PTR CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><b>PropTypesCommonProc</b> (HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam, DISPATCH_EVENT_TYPE pDispatch)</td></tr>
+<tr class="separator:a59461afac128a87c28a120409e9172c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>タイプ別設定ダイアログボックス </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/12/24 新規作成 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a72944e47fdf0f4662282d401abf531a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72944e47fdf0f4662282d401abf531a9">&#9670;&nbsp;</a></span>GEN_PROPTYPES_CALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GEN_PROPTYPES_CALLBACK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FUNC, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CLASS&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">INT_PTR CALLBACK FUNC(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam) \</div>
+<div class="line">{ \</div>
+<div class="line">    return PropTypesCommonProc(hwndDlg,uMsg,wParam,lParam,<span class="keyword">reinterpret_cast&lt;</span>pDispatchPage<span class="keyword">&gt;</span>(&amp;CLASS::DispatchEvent)); \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

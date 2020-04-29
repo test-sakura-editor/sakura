@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/extmodule/CDllHandler.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_2ec910363d65229279bd9bee590782c4.html">extmodule</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CDllHandler.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/df1/_c_dll_handler_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2001, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d9/d3d/class_c_dll_handler.html">   43</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> DLLIMP&gt; <span class="keyword">class </span><a class="code" href="../../d9/d3d/class_c_dll_handler.html">CDllHandler</a>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../d9/d3d/class_c_dll_handler.html">CDllHandler</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        m_pcDllImp = <span class="keyword">new</span> DLLIMP();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_pcDllImp-&gt;InitDll();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ~<a class="code" href="../../d9/d3d/class_c_dll_handler.html">CDllHandler</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_pcDllImp-&gt;DeinitDll(<span class="keyword">true</span>); <span class="comment">//※終了処理に失敗しても強制的にDLL解放</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">delete</span> m_pcDllImp;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//アクセサ</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    DLLIMP* operator-&gt;(){ <span class="keywordflow">return</span> m_pcDllImp; }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d9/d3d/class_c_dll_handler.html#a9f86be4fb0dcfcf9390da67dcd03dc3c">   61</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d9/d3d/class_c_dll_handler.html#a9f86be4fb0dcfcf9390da67dcd03dc3c">operator!</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pcDllImp-&gt;IsAvailable(); }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    DLLIMP* m_pcDllImp;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">   68</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    DLL_SUCCESS,        <span class="comment">//成功</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    DLL_LOADFAILURE,    <span class="comment">//DLLロード失敗</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    DLL_INITFAILURE,    <span class="comment">//初期処理に失敗</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../da/dc8/class_c_dll_imp.html">   86</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/dc8/class_c_dll_imp.html">CDllImp</a>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//                            型                               //</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">   96</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span>*       proc;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* name;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//                        生成と破棄                           //</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//コンストラクタ・デストラクタ</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../da/dc8/class_c_dll_imp.html">CDllImp</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#a457442532af49775563246966572fb24">~CDllImp</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//                         DLLロード                           //</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">  114</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">IsAvailable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_hInstance != NULL; }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a> <a class="code" href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">InitDll</a>(</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        LPCWSTR pszSpecifiedDllName = NULL  </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">DeinitDll</a>(</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">bool</span> force = <span class="keyword">false</span>  </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">  127</a></span>&#160;    HINSTANCE <a class="code" href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">GetInstance</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_hInstance; }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//                           属性                              //</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    LPCWSTR <a class="code" href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">GetLoadedDllName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//                  オーバーロード可能実装                     //</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">  150</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">InitDllImp</a>() = 0;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">DeinitDllImp</a>();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">  191</a></span>&#160;    <span class="keyword">virtual</span> LPCWSTR <a class="code" href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">GetDllNameImp</a>(<span class="keywordtype">int</span> nIndex) = 0;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">//                         実装補助                            //</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">RegisterEntries</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">ImportTable</a> table[]);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">//                        メンバ変数                           //</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    HINSTANCE       m_hInstance;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    std::wstring    m_strLoadedDllName;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a41ab92e932b407973a588988200da3b2"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a41ab92e932b407973a588988200da3b2">CDllImp::GetDllNameImp</a></div><div class="ttdeci">virtual LPCWSTR GetDllNameImp(int nIndex)=0</div><div class="ttdoc">DLLファイル名の取得(複数を順次)</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html">CDllImp</a></div><div class="ttdoc">DLLの動的なLoad/Unloadを行うためのクラス</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:86</div></div>
+<div class="ttc" id="a_c_dll_handler_8h_html_a21b9e2f0a57653029f8e73f1d2bf4052"><div class="ttname"><a href="../../d6/df1/_c_dll_handler_8h.html#a21b9e2f0a57653029f8e73f1d2bf4052">EDllResult</a></div><div class="ttdeci">EDllResult</div><div class="ttdoc">結果定数</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:68</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a457442532af49775563246966572fb24"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a457442532af49775563246966572fb24">CDllImp::~CDllImp</a></div><div class="ttdeci">virtual ~CDllImp()</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:47</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_ab1a992c613d9648deffdc65c5f79409c"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#ab1a992c613d9648deffdc65c5f79409c">CDllImp::DeinitDllImp</a></div><div class="ttdeci">virtual bool DeinitDllImp()</div><div class="ttdoc">関数の初期化</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:169</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_ac5e9ba90e87c3363d67550fdf3a26bdd"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#ac5e9ba90e87c3363d67550fdf3a26bdd">CDllImp::InitDllImp</a></div><div class="ttdeci">virtual bool InitDllImp()=0</div><div class="ttdoc">DLLの初期化</div></div>
+<div class="ttc" id="aclass_c_dll_handler_html"><div class="ttname"><a href="../../d9/d3d/class_c_dll_handler.html">CDllHandler</a></div><div class="ttdef"><b>Definition:</b> CDllHandler.h:43</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a9dbb9983cd44701e32e45f12449fae2a"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a9dbb9983cd44701e32e45f12449fae2a">CDllImp::InitDll</a></div><div class="ttdeci">EDllResult InitDll(LPCWSTR pszSpecifiedDllName=NULL)</div><div class="ttdoc">DLLロードと初期処理</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:58</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a89342932a0061f0460eb665addfc3379"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a89342932a0061f0460eb665addfc3379">CDllImp::DeinitDll</a></div><div class="ttdeci">bool DeinitDll(bool force=false)</div><div class="ttdoc">終了処理とDLLアンロード</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:127</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a89601f2b3b9578c93a7d4b8d3368a1e8"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a89601f2b3b9578c93a7d4b8d3368a1e8">CDllImp::IsAvailable</a></div><div class="ttdeci">virtual bool IsAvailable() const</div><div class="ttdoc">DLLの関数を呼び出せるか状態どうか</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:114</div></div>
+<div class="ttc" id="astruct_c_dll_imp_1_1_import_table_html"><div class="ttname"><a href="../../d2/d60/struct_c_dll_imp_1_1_import_table.html">CDllImp::ImportTable</a></div><div class="ttdef"><b>Definition:</b> CDllHandler.h:96</div></div>
+<div class="ttc" id="aclass_c_dll_handler_html_a9f86be4fb0dcfcf9390da67dcd03dc3c"><div class="ttname"><a href="../../d9/d3d/class_c_dll_handler.html#a9f86be4fb0dcfcf9390da67dcd03dc3c">CDllHandler::operator!</a></div><div class="ttdeci">bool operator!() const</div><div class="ttdoc">利用状態のチェック（operator版）</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:61</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_aaacac64e6dda58142e17ddc09d91e213"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#aaacac64e6dda58142e17ddc09d91e213">CDllImp::RegisterEntries</a></div><div class="ttdeci">bool RegisterEntries(const ImportTable table[])</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:186</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_a15922171bb90c760b36830f6277a9cd5"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#a15922171bb90c760b36830f6277a9cd5">CDllImp::GetLoadedDllName</a></div><div class="ttdeci">LPCWSTR GetLoadedDllName() const</div><div class="ttdoc">ロード済みDLLファイル名の取得。ロードされていない (またはロードに失敗した) 場合は NULL を返す。</div><div class="ttdef"><b>Definition:</b> CDllHandler.cpp:157</div></div>
+<div class="ttc" id="aclass_c_dll_imp_html_ab7c2f0c5505877f58d19dce62ae69ab1"><div class="ttname"><a href="../../da/dc8/class_c_dll_imp.html#ab7c2f0c5505877f58d19dce62ae69ab1">CDllImp::GetInstance</a></div><div class="ttdeci">HINSTANCE GetInstance() const</div><div class="ttdoc">インスタンスハンドルの取得</div><div class="ttdef"><b>Definition:</b> CDllHandler.h:127</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

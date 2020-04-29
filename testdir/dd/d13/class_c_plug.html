@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CPlug クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="../../d9/d68/class_c_plug-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CPlug クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CPlug の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d13/class_c_plug.png" usemap="#CPlug_map" alt=""/>
+  <map id="CPlug_map" name="CPlug_map">
+<area href="../../d5/dd9/class_c_dll_plug.html" alt="CDllPlug" shape="rect" coords="0,56,74,80"/>
+<area href="../../da/d1b/class_c_w_s_h_plug.html" alt="CWSHPlug" shape="rect" coords="84,56,158,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a6d556414732034cebea4b84ed9197279"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../dd/d13/class_c_plug.html">CPlug</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d13/class_c_plug.html#a6d556414732034cebea4b84ed9197279">Array</a></td></tr>
+<tr class="separator:a6d556414732034cebea4b84ed9197279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0de25570a30dbff76d91b04b12307c4"><td class="memItemLeft" align="right" valign="top"><a id="ae0de25570a30dbff76d91b04b12307c4"></a>
+typedef Array::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>ArrayIter</b></td></tr>
+<tr class="separator:ae0de25570a30dbff76d91b04b12307c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:adf888b589cb01fa180a86a692d2f5db4"><td class="memItemLeft" align="right" valign="top"><a id="adf888b589cb01fa180a86a692d2f5db4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CPlug</b> (<a class="el" href="../../d9/d51/class_c_plugin.html">CPlugin</a> &amp;plugin, <a class="el" href="../../d2/d03/_c_plugin_8h.html#a9636f924ea13dcaa4991a87f07ee2ed6">PlugId</a> id, wstring sJack, wstring sHandler, wstring sLabel)</td></tr>
+<tr class="separator:adf888b589cb01fa180a86a692d2f5db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5a710209350ca6dd088e8182f9d95d"><td class="memItemLeft" align="right" valign="top"><a id="aae5a710209350ca6dd088e8182f9d95d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Invoke</b> (<a class="el" href="../../d7/d7b/class_c_edit_view.html">CEditView</a> *view, CWSHIfObj::List &amp;params)</td></tr>
+<tr class="separator:aae5a710209350ca6dd088e8182f9d95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54ce8bb412b8c3305f2336cb5969a9b"><td class="memItemLeft" align="right" valign="top"><a id="ab54ce8bb412b8c3305f2336cb5969a9b"></a>
+EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>GetFunctionCode</b> () const</td></tr>
+<tr class="separator:ab54ce8bb412b8c3305f2336cb5969a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa028ab885d84148f8e8db3c7742a6fa9"><td class="memItemLeft" align="right" valign="top"><a id="aa028ab885d84148f8e8db3c7742a6fa9"></a>
+static EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginFunctionCode</b> (<a class="el" href="../../d2/d03/_c_plugin_8h.html#aa1800e496768ad6a1099308177d8e92f">PluginId</a> nPluginId, <a class="el" href="../../d2/d03/_c_plugin_8h.html#a9636f924ea13dcaa4991a87f07ee2ed6">PlugId</a> nPlugId)</td></tr>
+<tr class="separator:aa028ab885d84148f8e8db3c7742a6fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128692cb48a44feefc000905f5a22ca3"><td class="memItemLeft" align="right" valign="top"><a id="a128692cb48a44feefc000905f5a22ca3"></a>
+static <a class="el" href="../../d2/d03/_c_plugin_8h.html#aa1800e496768ad6a1099308177d8e92f">PluginId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginId</b> (EFunctionCode nFunctionCode)</td></tr>
+<tr class="separator:a128692cb48a44feefc000905f5a22ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede5adc31a1f2586492ab4434ca65542"><td class="memItemLeft" align="right" valign="top"><a id="aede5adc31a1f2586492ab4434ca65542"></a>
+static <a class="el" href="../../d2/d03/_c_plugin_8h.html#a9636f924ea13dcaa4991a87f07ee2ed6">PlugId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlugId</b> (EFunctionCode nFunctionCode)</td></tr>
+<tr class="separator:aede5adc31a1f2586492ab4434ca65542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804513e4c0c48be08c07a7421f0c49f0"><td class="memItemLeft" align="right" valign="top"><a id="a804513e4c0c48be08c07a7421f0c49f0"></a>
+static <a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutlineType</b> (EFunctionCode nFunctionCode)</td></tr>
+<tr class="separator:a804513e4c0c48be08c07a7421f0c49f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8de078e737da973338da8a0aee0a79"><td class="memItemLeft" align="right" valign="top"><a id="a1d8de078e737da973338da8a0aee0a79"></a>
+static <a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">ESmartIndentType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetSmartIndentType</b> (EFunctionCode nFunctionCode)</td></tr>
+<tr class="separator:a1d8de078e737da973338da8a0aee0a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a76d827d9616ec38d2c05862f63030e6d"><td class="memItemLeft" align="right" valign="top"><a id="a76d827d9616ec38d2c05862f63030e6d"></a>
+const <a class="el" href="../../d2/d03/_c_plugin_8h.html#a9636f924ea13dcaa4991a87f07ee2ed6">PlugId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_id</b></td></tr>
+<tr class="separator:a76d827d9616ec38d2c05862f63030e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51b37e141765ee9ca30d941a9ae6f77"><td class="memItemLeft" align="right" valign="top"><a id="aa51b37e141765ee9ca30d941a9ae6f77"></a>
+const wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sJack</b></td></tr>
+<tr class="separator:aa51b37e141765ee9ca30d941a9ae6f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df9e9e870d46f949b3447d99e340ae8"><td class="memItemLeft" align="right" valign="top"><a id="a0df9e9e870d46f949b3447d99e340ae8"></a>
+const wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sHandler</b></td></tr>
+<tr class="separator:a0df9e9e870d46f949b3447d99e340ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808bb7bdcc04793c44d017e3ff15e794"><td class="memItemLeft" align="right" valign="top"><a id="a808bb7bdcc04793c44d017e3ff15e794"></a>
+const wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sLabel</b></td></tr>
+<tr class="separator:a808bb7bdcc04793c44d017e3ff15e794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f74ced149d34eb9fcf21359ff720c1"><td class="memItemLeft" align="right" valign="top"><a id="a25f74ced149d34eb9fcf21359ff720c1"></a>
+wstring&#160;</td><td class="memItemRight" valign="bottom"><b>m_sIcon</b></td></tr>
+<tr class="separator:a25f74ced149d34eb9fcf21359ff720c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b3d7bbf57072d2ca76adf883a4fd3e"><td class="memItemLeft" align="right" valign="top"><a id="a73b3d7bbf57072d2ca76adf883a4fd3e"></a>
+<a class="el" href="../../d9/d51/class_c_plugin.html">CPlugin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_cPlugin</b></td></tr>
+<tr class="separator:a73b3d7bbf57072d2ca76adf883a4fd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a09249cdd063cbedbc604367352a90fad"><td class="memItemLeft" align="right" valign="top"><a id="a09249cdd063cbedbc604367352a90fad"></a>
+typedef std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>wstring</b></td></tr>
+<tr class="separator:a09249cdd063cbedbc604367352a90fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="a6d556414732034cebea4b84ed9197279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d556414732034cebea4b84ed9197279">&#9670;&nbsp;</a></span>Array</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="../../dd/d13/class_c_plug.html">CPlug</a>*&gt; <a class="el" href="../../dd/d13/class_c_plug.html#a6d556414732034cebea4b84ed9197279">CPlug::Array</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CPlug::Arrayはstd::vectorなので、要素の追加削除（insert/erase）をすると イテレータが無効になることがある。そのため変数に格納したイテレータを insert/eraseの第一引数に指定すると、VC2005でビルドエラーが出る。 かわりにbegin/endからの相対位置指定や、インデックス指定を使うこと。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/plugin/<a class="el" href="../../d2/d03/_c_plugin_8h_source.html">CPlugin.h</a></li>
+<li>sakura_core/plugin/<a class="el" href="../../d3/d34/_c_plugin_8cpp.html">CPlugin.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

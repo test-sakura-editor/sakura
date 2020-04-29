@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CCppPreprocessMng クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../de/d97/class_c_cpp_preprocess_mng-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CCppPreprocessMng クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa996b8a4f6753e6643b4d25bdcf5a2a7"><td class="memItemLeft" align="right" valign="top">CLogicInt&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9e/class_c_cpp_preprocess_mng.html#aa996b8a4f6753e6643b4d25bdcf5a2a7">ScanLine</a> (const wchar_t *, CLogicInt)</td></tr>
+<tr class="separator:aa996b8a4f6753e6643b4d25bdcf5a2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Cプリプロセッサの #if/ifdef/ifndef - #else - #endif状態管理クラス</p>
+<p>ネストレベルは32レベル=(sizeof(int) * 8)まで</p>
+<dl class="section date"><dt>日付</dt><dd>2007.12.15 genta : m_enablebufの初期値が悪さをすることがあるので0に </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa996b8a4f6753e6643b4d25bdcf5a2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa996b8a4f6753e6643b4d25bdcf5a2a7">&#9670;&nbsp;</a></span>ScanLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLogicInt CCppPreprocessMng::ScanLine </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CLogicInt&#160;</td>
+          <td class="paramname"><em>_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cプリプロセッサの #if/ifdef/ifndef - #else - #endifを元に 処理の必要性を判定する．</p>
+<p>与えられた1行の文字列を先頭から走査し，C/C++での走査が必要な場合は 先頭の空白を除いた開始位置を，不要な場合はlengthを返す． 呼び出し側では戻り値から解析を始めるので， lengthを返すことはすべて空白と見なすことになる．</p>
+<p>ネストの最大を超えた場合には記憶域がないために判定は不可能となるが， ネストレベルだけは管理する．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>[in] 1行の文字列 </td></tr>
+    <tr><td class="paramname">length</td><td>[in] 文字列長</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>C解析開始位置．処理不要の場合はlength(行末までスキップ)．</dd></dl>
+<dl class="section user"><dt>elifの扱い</dt><dd>if (A) elif (B) elif (C) else (D) endifのような場合には(A)-(D)のどれか1つ だけが実行される．しかし，そうなると1ビットでは管理できないしネストを 囲むようなケースでelifを使うことはあまり無いと勝手に決めて見なかったことにする．</dd></dl>
+<dl class="section author"><dt>著者</dt><dd>genta </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2004.08.10 新規作成 </dd>
+<dd>
+2004.08.13 zenryaku 複数行のディレクティブに対応 </dd>
+<dd>
+2007.12.13 じゅうじ : ifの直後にスペースがない場合の対応 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/types/<a class="el" href="../../d1/d46/_c_type___cpp_8cpp.html">CType_Cpp.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

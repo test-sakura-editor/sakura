@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/parse/CWordParse.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_bbfabac4872e24227309ae4edd51df62.html">parse</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">CWordParse.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d8f/_c_word_parse_8h_source.html">CWordParse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a42b5306a66716f3a741b2f98f307c5a4"><td class="memItemLeft" align="right" valign="top"><a id="a42b5306a66716f3a741b2f98f307c5a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/_c_word_parse_8cpp.html#a42b5306a66716f3a741b2f98f307c5a4">isCSymbol</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a42b5306a66716f3a741b2f98f307c5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別子に使用可能な文字かどうか <br /></td></tr>
+<tr class="separator:a42b5306a66716f3a741b2f98f307c5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6c7d1a864d19b72bdbd89c6e004d48"><td class="memItemLeft" align="right" valign="top"><a id="a2a6c7d1a864d19b72bdbd89c6e004d48"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/_c_word_parse_8cpp.html#a2a6c7d1a864d19b72bdbd89c6e004d48">isCSymbolZen</a> (wchar_t c)</td></tr>
+<tr class="memdesc:a2a6c7d1a864d19b72bdbd89c6e004d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">全角版、識別子に使用可能な文字かどうか <br /></td></tr>
+<tr class="separator:a2a6c7d1a864d19b72bdbd89c6e004d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0b0f421f24a154832bfddcf967e881"><td class="memItemLeft" align="right" valign="top"><a id="ada0b0f421f24a154832bfddcf967e881"></a>
+uchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/_c_word_parse_8cpp.html#ada0b0f421f24a154832bfddcf967e881">wc_to_c</a> (wchar_t wc)</td></tr>
+<tr class="memdesc:ada0b0f421f24a154832bfddcf967e881"><td class="mdescLeft">&#160;</td><td class="mdescRight">wcがasciiなら0-127のまま返す。それ以外は0を返す。 <br /></td></tr>
+<tr class="separator:ada0b0f421f24a154832bfddcf967e881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7012d2a48862bffc0eafd7b68b2d27"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/_c_word_parse_8cpp.html#a1e7012d2a48862bffc0eafd7b68b2d27">IsURL</a> (const wchar_t *pszLine, int offset, int nLineLen, int *pnMatchLen)</td></tr>
+<tr class="separator:a1e7012d2a48862bffc0eafd7b68b2d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6d06071c2e961a76f0d1165ac0601d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8e/_c_word_parse_8cpp.html#add6d06071c2e961a76f0d1165ac0601d">IsMailAddress</a> (const wchar_t *pszBuf, int offset, int nBufLen, int *pnAddressLength)</td></tr>
+<tr class="separator:add6d06071c2e961a76f0d1165ac0601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="add6d06071c2e961a76f0d1165ac0601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6d06071c2e961a76f0d1165ac0601d">&#9670;&nbsp;</a></span>IsMailAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsMailAddress </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nBufLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnAddressLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定アドレスがメールアドレスの先頭ならば TRUE とその長さを返す。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszBuf</td><td>文字列バッファの先頭アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>メールアドレス判定開始文字を示す、pszBuf からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nBufLen</td><td>メールアドレス判定最終文字の次を示す、pszBuf からの相対位置。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnAddressLength</td><td>メールアドレスの長さを受け取る変数のアドレス。NULL可。長さとは pszBuf + offset からの距離。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>正の offset が与えられた場合は、その場合に限り、判定開始位置直前の文字との間で境界判定を行います。 途中から切り出したメールアドレスの一部をメールアドレスであると誤って判定しないために pszBuf を固定し offset を０以上の範囲で変化させるのが望ましい使用方法です。 </p>
+
+</div>
+</div>
+<a id="a1e7012d2a48862bffc0eafd7b68b2d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7012d2a48862bffc0eafd7b68b2d27">&#9670;&nbsp;</a></span>IsURL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL IsURL </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pszLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLineLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnMatchLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>文字列がURLかどうかを検査する。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>URLである </td></tr>
+    <tr><td class="paramname">FALSE</td><td>URLでない</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>関数内に定義したテーブルは必ず static const 宣言にすること(性能に影響します)。 url_char の値は url_table の配列番号+1 になっています。 新しい URL を追加する場合は #define 値を修正してください。 url_table は頭文字がアルファベット順になるように並べてください。</dd></dl>
+<p>2007.10.23 kobake UNICODE対応。//$ wchar_t専用のテーブル(または判定ルーチン)を用意したほうが効率は上がるはずです。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pszLine</td><td>[in] 文字列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>[in] 検査を開始する位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLineLen</td><td>[in] 文字列の長さ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnMatchLen</td><td>[out] URLの長さ。offset からの距離。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

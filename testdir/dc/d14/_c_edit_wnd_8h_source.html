@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/window/CEditWnd.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_848eeabb30808a87d3d4a20b9241b9be.html">window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CEditWnd.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d14/_c_edit_wnd_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 1998-2001, Norio Nakatani</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2000, genta</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2001-2002, YAZAKI</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    Copyright (C) 2002, aroka, genta, MIK</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    Copyright (C) 2003, MIK, genta, wmlhq</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    Copyright (C) 2004, Moca</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Copyright (C) 2005, genta, Moca</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    Copyright (C) 2006, ryoji, aroka, fon, yukihane</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    Copyright (C) 2008, ryoji</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    Copyright (C) 2009, nasukoji</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose,</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such,</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;ShellAPI.h&gt;</span><span class="comment">// HDROP</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d49/global_8h.html">_main/global.h</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/daf/_c_main_tool_bar_8h.html">CMainToolBar.h</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/d5a/_c_tab_wnd_8h.html">CTabWnd.h</a>&quot;</span>    <span class="comment">//@@@ 2003.05.31 MIK</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/dc5/_c_func_key_wnd_8h.html">func/CFuncKeyWnd.h</a>&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d9e/_c_main_status_bar_8h.html">CMainStatusBar.h</a>&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d8c/_c_edit_view_8h.html">view/CEditView.h</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/d3e/_c_splitter_wnd_8h.html">window/CSplitterWnd.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d88/_c_dlg_find_8h.html">dlg/CDlgFind.h</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d9e/_c_dlg_replace_8h.html">dlg/CDlgReplace.h</a>&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d07/_c_dlg_jump_8h.html">dlg/CDlgJump.h</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d2b/_c_dlg_grep_8h.html">dlg/CDlgGrep.h</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d28/_c_dlg_grep_replace_8h.html">dlg/CDlgGrepReplace.h</a>&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d06/_c_dlg_set_char_set_8h.html">dlg/CDlgSetCharSet.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d53/_c_dlg_func_list_8h.html">outline/CDlgFuncList.h</a>&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d68/_c_hokan_mgr_8h.html">CHokanMgr.h</a>&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db0/_c_doc_listener_8h.html">doc/CDocListener.h</a>&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d74/_c_menu_drawer_8h.html">uiparts/CMenuDrawer.h</a>&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db3/_c_view_font_8h.html">view/CViewFont.h</a>&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MENUBAR_MESSAGE_MAX_LEN = 30;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//@@@ 2002.01.14 YAZAKI 印刷プレビューをCPrintPreviewに独立させたことによる変更</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a>;<span class="comment">// 2002/2/10 aroka</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/db7/class_c_drop_target.html">CDropTarget</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d13/class_c_plug.html">CPlug</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">class </span><a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//メインウィンドウ内コントロールID</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#define IDT_EDIT        455  // 20060128 aroka</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#define IDT_TOOLBAR     456</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#define IDT_CAPTION     457</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define IDT_FIRST_IDLE  458</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define IDT_SYSMENU     1357</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define ID_TOOLBAR      100</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d2/dfc/struct_s_tab_group_info.html">   82</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    HWND            hwndTop;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    WINDOWPLACEMENT wpTop;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>() : hwndTop(NULL) { }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> IsValid()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> hwndTop!=NULL; }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">// 2002.02.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">// 2007.10.30 kobake IsFuncEnable,IsFuncCheckedをFunccode.hに移動</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// 2007.10.30 kobake OnHelp_MenuItemをCEditAppに移動</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html">   94</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;: <span class="keyword">public</span> <a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;CEditWnd&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;, <span class="keyword">public</span> <a class="code" href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>&lt;<a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>&gt;;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    ~<a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//                           作成                              //</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//  Mar. 7, 2002 genta 文書タイプ用引数追加</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// 2007.06.26 ryoji グループ指定引数追加</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span>    HWND <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aba45e550180849ae0b8633a7bea1ad79">Create</a>(</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>*       pcEditDoc,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a>*  pcIcons,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">int</span>             nGroup</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> _GetTabGroupInfo(<a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>* pTabGroupInfo, <span class="keywordtype">int</span>&amp; nGroup);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a766e438be29651769b99a50af9a0a633">_GetWindowRectForInit</a>(<a class="code" href="../../d7/d43/class_c_my_rect.html">CMyRect</a>* rcResult, <span class="keywordtype">int</span> nGroup, <span class="keyword">const</span> <a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>&amp; sTabGroupInfo);  </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    HWND _CreateMainWindow(<span class="keywordtype">int</span> nGroup, <span class="keyword">const</span> <a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>&amp; sTabGroupInfo);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> _AdjustInMonitor(<span class="keyword">const</span> <a class="code" href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a>&amp; sTabGroupInfo);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a20a87f4f3917f1d74dc2e919e2f2c15a">OpenDocumentWhenStart</a>(</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a>&amp; sLoadInfo      </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aaa897cc4c5da1c430348450445273d1a">SetDocumentTypeWhenCreate</a>(</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a>       nCharCode,                          </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">bool</span>            bViewMode,                          </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a> nDocumentType = <a class="code" href="../../d8/d39/class_c_type_config.html">CTypeConfig</a>(-1) </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#af021c55087aab45137fb39c9e172ce3a">UpdateCaption</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//                         イベント                            //</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">//ドキュメントイベント</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a5ec388f0f976931312d8191a77cb8a75">OnAfterSave</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a>&amp; sSaveInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">//管理</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> MessageLoop( <span class="keywordtype">void</span> );                               <span class="comment">/* メッセージループ */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    LRESULT DispatchEvent(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam);   <span class="comment">/* メッセージ処理 */</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//各種イベント</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    LRESULT OnPaint(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam); <span class="comment">/* 描画処理 */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    LRESULT OnSize(WPARAM wParam, LPARAM lParam);   <span class="comment">/* WM_SIZE 処理 */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    LRESULT OnSize2(WPARAM wParam, LPARAM lParam, <span class="keywordtype">bool</span> bUpdateStatus);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    LRESULT OnLButtonUp(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    LRESULT OnLButtonDown(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    LRESULT <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a328d890701af56908c110b3a9318d7c4">OnMouseMove</a>(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    LRESULT OnMouseWheel(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    BOOL <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a114fe5461f4b1b61be9f88f15b8ed7e6">DoMouseWheel</a>( WPARAM wParam, LPARAM lParam );  <span class="comment">// マウスホイール処理   // 2007.10.16 ryoji</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    LRESULT OnHScroll(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    LRESULT OnVScroll(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aee994d25742b29825f706b4612f8a9f0">OnClose</a>(HWND hWndActive, <span class="keywordtype">bool</span> bGrepNoConfirm);  <span class="comment">/* 終了時の処理 */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> OnDropFiles(HDROP hDrop);  <span class="comment">/* ファイルがドロップされた */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    BOOL OnPrintPageSetting( <span class="keywordtype">void</span> );<span class="comment">/* 印刷ページ設定 */</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    LRESULT <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aa1d0300293a1a8a50e7b9e3678981750">OnTimer</a>(WPARAM wParam, LPARAM lParam);  <span class="comment">// WM_TIMER 処理    // 2007.04.03 ryoji</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#af81b9c766da4d31b5d51697182f5bab7">OnEditTimer</a>( <span class="keywordtype">void</span> );   <span class="comment">/* タイマーの処理 */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a7e4923b3f9e6210ac1bea1cf59bbd79c">OnCaptionTimer</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a7e1330ffacc4fc679b01168507651cad">OnSysMenuTimer</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aa5c23a5f30c31fafdc3961a7f8314880">OnCommand</a>(WORD wNotifyCode, WORD wID, HWND hwndCtl);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    LRESULT OnNcLButtonDown(WPARAM wp, LPARAM lp);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    LRESULT OnNcLButtonUp(WPARAM wp, LPARAM lp);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    LRESULT OnLButtonDblClk(WPARAM wp, LPARAM lp);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//                           通知                              //</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//ファイル名変更通知</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aa3b650608551ba9dc7bef47c6ee20bd9">ChangeFileNameNotify</a>( <span class="keyword">const</span> WCHAR* pszTabCaption, <span class="keyword">const</span> WCHAR* pszFilePath, <span class="keywordtype">bool</span> bIsGrep );    <span class="comment">//@@@ 2003.05.31 MIK, 2006.01.28 ryoji ファイル名、Grepモードパラメータを追加</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">//                         メニュー                            //</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> InitMenu(HMENU hMenu, UINT uPos, BOOL fSystemMenu);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#afad4e40108d19e8c40e0bf0005d1790f">InitMenu_Function</a>(HMENU hMenu, EFunctionCode eFunc, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszName, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* pszKey);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a296a0e63b603531fdc2c42f045ac7d6d">InitMenu_Special</a>(HMENU hMenu, EFunctionCode eFunc);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> InitMenubarMessageFont(<span class="keywordtype">void</span>);  <span class="comment">//  メニューバーへのメッセージ表示機能をCEditWndより移管    //  Dec. 4, 2002 genta</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    LRESULT <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a317a53c005f5fdcf5eb292e19ddca820">WinListMenu</a>(HMENU hMenu, <a class="code" href="../../d1/df4/struct_edit_node.html">EditNode</a>* pEditNodeArr, <span class="keywordtype">int</span> nRowNum, BOOL bFull);      <span class="comment">// 2006.03.23 fon</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    LRESULT <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a83462c321128768f82bfa9897c471230">PopupWinList</a>( <span class="keywordtype">bool</span> bMousePos );     <span class="comment">// 2006.03.23 fon   // 2007.02.28 ryoji フルパス指定のパラメータを削除</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> RegisterPluginCommand();           <span class="comment">//プラグインコマンドをエディタに登録する</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> RegisterPluginCommand( <span class="keywordtype">int</span> <span class="keywordtype">id</span> );   <span class="comment">//プラグインコマンドをエディタに登録する</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> RegisterPluginCommand( <a class="code" href="../../dd/d13/class_c_plug.html">CPlug</a>* <span class="keywordtype">id</span> );    <span class="comment">//プラグインコマンドをエディタに登録する</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> SetMenuFuncSel( HMENU hMenu, EFunctionCode nFunc, <span class="keyword">const</span> WCHAR* sKey, <span class="keywordtype">bool</span> flag );              <span class="comment">// 表示の動的選択   2010/5/19 Uchi</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">//                           整形                              //</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ac168d5f69b7385c1e15c2af9983780de">LayoutMainMenu</a>( <span class="keywordtype">void</span> );        <span class="comment">// メインメニュー                   // 2010/5/16 Uchi</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a26854a12f597b5fdd13ff4553569e809">LayoutToolBar</a>( <span class="keywordtype">void</span> );         <span class="comment">/* ツールバーの配置処理 */</span>          <span class="comment">// 2006.12.19 ryoji</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aa3423a818bcc790be49c973d2616d38a">LayoutFuncKey</a>( <span class="keywordtype">void</span> );         <span class="comment">/* ファンクションキーの配置処理 */</span>  <span class="comment">// 2006.12.19 ryoji</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a23c9b59c1ec093fd858d89ad212d001a">LayoutTabBar</a>( <span class="keywordtype">void</span> );          <span class="comment">/* タブバーの配置処理 */</span>            <span class="comment">// 2006.12.19 ryoji</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a622af0f016d41ad2b39b38acaae2409a">LayoutStatusBar</a>( <span class="keywordtype">void</span> );       <span class="comment">/* ステータスバーの配置処理 */</span>      <span class="comment">// 2006.12.19 ryoji</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a2b96c27fc31a199e6f6d6572880f73f9">LayoutMiniMap</a>();               <span class="comment">// ミニマップの配置処理</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a0f843ff7fecdce515678544bd3c6f747">EndLayoutBars</a>( BOOL bAdjust = TRUE );  <span class="comment">/* バーの配置終了処理 */</span>    <span class="comment">// 2006.12.19 ryoji</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">//                           設定                              //</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> PrintPreviewModeONOFF( <span class="keywordtype">void</span> ); <span class="comment">/* 印刷プレビューモードのオン/オフ */</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">//アイコン</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ac7ce9b0cd5cf9c3e46667fde693bc0c1">SetWindowIcon</a>(HICON hIcon, <span class="keywordtype">int</span> flag);  <span class="comment">//  Sep. 10, 2002 genta</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a13c56f668ad8f351da67d49c721aa92e">GetDefaultIcon</a>( HICON* hIconBig, HICON* hIconSmall ) <span class="keyword">const</span>;    <span class="comment">//  Sep. 10, 2002 genta</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ab59ac2e96de996ba53e776740db74cc1">GetRelatedIcon</a>(<span class="keyword">const</span> WCHAR* szFile, HICON* hIconBig, HICON* hIconSmall) <span class="keyword">const</span>; <span class="comment">//  Sep. 10, 2002 genta</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> SetPageScrollByWheel( BOOL bState ) { m_bPageScrollByWheel = bState; }     <span class="comment">// ホイール操作によるページスクロール有無を設定する（TRUE=あり, FALSE=なし）    // 2009.01.17 nasukoji</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> SetHScrollByWheel( BOOL bState ) { m_bHorizontalScrollByWheel = bState; }  <span class="comment">// ホイール操作による横スクロール有無を設定する（TRUE=あり, FALSE=なし）    // 2009.01.17 nasukoji</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a005c500f8032c6734ccb3b74dec9103c">ClearMouseState</a>( <span class="keywordtype">void</span> );       <span class="comment">// 2009.01.17 nasukoji  マウスの状態をクリアする（ホイールスクロール有無状態をクリア）</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">//                           情報                              //</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a23dd01f020c572e87c5c06cad3cf2483">  213</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a23dd01f020c572e87c5c06cad3cf2483">IsActiveApp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bIsActiveApp; }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#aebfe9fd7835d0c376df8b7d2f0eca3ab">GetTooltipText</a>(WCHAR* pszBuf, <span class="keywordtype">size_t</span> nBufCount, <span class="keywordtype">int</span> nID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a00c9eb46f0c7fd96058dd2bdcbfd9501">  219</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a00c9eb46f0c7fd96058dd2bdcbfd9501">IsInPreviewMode</a>()</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a8377523601fb7f935b224feb961853c6">m_pPrintPreview</a>!=NULL;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    BOOL IsPageScrollByWheel()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bPageScrollByWheel; }       <span class="comment">// ホイール操作によるページスクロール有無   // 2009.01.17 nasukoji</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    BOOL IsHScrollByWheel()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bHorizontalScrollByWheel; }    <span class="comment">// ホイール操作による横スクロール有無       // 2009.01.17 nasukoji</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">//                           表示                              //</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">void</span> PrintMenubarMessage( <span class="keyword">const</span> WCHAR* msg );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a15871ebc16cd130b1143dc54ee5bf5f6">SendStatusMessage</a>( <span class="keyword">const</span> WCHAR* msg );     <span class="comment">//  Dec. 4, 2002 genta 実体をCEditViewから移動</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">//                      ウィンドウ操作                         //</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a85130d8e6559ac3cb0b31b7b314bf62f">WindowTopMost</a>(<span class="keywordtype">int</span> top); <span class="comment">// 2004.09.21 Moca</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">//                        ビュー管理                           //</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    LRESULT Views_DispatchEvent(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">bool</span> CreateEditViewBySplit(<span class="keywordtype">int</span> nViewCount);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> InitAllViews();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> Views_RedrawAll();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> Views_Redraw();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> SetActivePane(<span class="keywordtype">int</span> nIndex); <span class="comment">/* アクティブなペインを設定 */</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">int</span> GetActivePane( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nActivePaneIndex; }  <span class="comment">/* アクティブなペインを取得 */</span> <span class="comment">//2007.08.26 kobake const追加</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ac1ad1923f1f22e110b0e3f0f35649f8e">SetDrawSwitchOfAllViews</a>( <span class="keywordtype">bool</span> bDraw );                 <span class="comment">/* すべてのペインの描画スイッチを設定する */</span>    <span class="comment">// 2008.06.08 ryoji</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ab8d0bfb9f94ccf9501412267fb40d039">RedrawAllViews</a>( <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcViewExclude );                <span class="comment">/* すべてのペインをRedrawする */</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">void</span> Views_DisableSelectArea(<span class="keywordtype">bool</span> bRedraw);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    BOOL DetectWidthOfLineNumberAreaAllPane( <span class="keywordtype">bool</span> bRedraw );    <span class="comment">/* すべてのペインで、行番号表示に必要な幅を再設定する（必要なら再描画する） */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    BOOL <a class="code" href="../../d2/d89/class_c_edit_wnd.html#abbbcc82fc319f61c886b562c812d251d">WrapWindowWidth</a>( <span class="keywordtype">int</span> nPane );  <span class="comment">/* 右端で折り返す */</span>    <span class="comment">// 2008.06.08 ryoji</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    BOOL <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a5efba468e13736cb3372d88642bde992">UpdateTextWrap</a>( <span class="keywordtype">void</span> );        <span class="comment">/* 折り返し方法関連の更新 */</span>    <span class="comment">// 2008.06.10 ryoji</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">//  Aug. 14, 2005 genta TAB幅と折り返し位置の更新</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a6aac550bcf4fe5f473a64b54302bdee2">ChangeLayoutParam</a>( <span class="keywordtype">bool</span> bShowProgress, CKetaXInt nTabSize, <span class="keywordtype">int</span> nTsvMode, CKetaXInt nMaxLineKetas );</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">//  Aug. 14, 2005 genta</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="../../d0/d76/class_c_logic_point_ex.html">CLogicPointEx</a>* <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a6a662d6c990b24e742e4627d1335a811">SavePhysPosOfAllView</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a76253b59fa678e7cca58a2ef137cb2e6">RestorePhysPosOfAllView</a>( <a class="code" href="../../d0/d76/class_c_logic_point_ex.html">CLogicPointEx</a>* pptPosArray );</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// 互換BMPによる画面バッファ 2007.09.09 Moca</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a537fb26cd9346b6cc1efcca3b4702920">Views_DeleteCompatibleBitmap</a>(); </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">//                       各種アクセサ                          //</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    HWND            GetHwnd()<span class="keyword">       const   </span>{ <span class="keywordflow">return</span> m_hWnd; }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a>&amp;    GetMenuDrawer()         { <span class="keywordflow">return</span> m_cMenuDrawer; }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>*       GetDocument()           { <span class="keywordflow">return</span> m_pcEditDoc; }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>* GetDocument()<span class="keyword"> const     </span>{ <span class="keywordflow">return</span> m_pcEditDoc; }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">//ビュー</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>&amp;    GetActiveView()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_pcEditView; }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>&amp;          GetActiveView()       { <span class="keywordflow">return</span> *m_pcEditView; }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>&amp;    GetView(<span class="keywordtype">int</span> n)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_pcEditViewArr[n]; }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>&amp;          GetView(<span class="keywordtype">int</span> n)       { <span class="keywordflow">return</span> *m_pcEditViewArr[n]; }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>&amp;          GetMiniMap()       { <span class="keywordflow">return</span> *m_pcEditViewMiniMap; }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">bool</span>                IsEnablePane(<span class="keywordtype">int</span> n)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 0 &lt;= n &amp;&amp; n &lt; m_nEditViewCount; }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">int</span>                 GetAllViewCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nEditViewCount; }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*          GetDragSourceView()<span class="keyword"> const                   </span>{ <span class="keywordflow">return</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#abe1ed456960b4e3f88088c93474abf1a">m_pcDragSourceView</a>; }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">void</span>                SetDragSourceView( <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcDragSourceView )    { <a class="code" href="../../d2/d89/class_c_edit_wnd.html#abe1ed456960b4e3f88088c93474abf1a">m_pcDragSourceView</a> = pcDragSourceView; }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">//                         実装補助                            //</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">//by 鬼</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">enum</span> EIconClickStatus{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        icNone,</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        icDown,</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        icClicked,</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        icDoubleClicked</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    };</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">//ドロップダウンメニュー</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#af51ba556e8eb87eee4c4dcc0c8f43de2">CreateFileDropDownMenu</a>(HWND hwnd);  <span class="comment">//開く(ドロップダウン)  //@@@ 2002.06.15 MIK</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">//タイマー</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">void</span> Timer_ONOFF(<span class="keywordtype">bool</span> bStart); <span class="comment">/* 更新の開始／停止 20060128 aroka */</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// メニュー</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">void</span> CheckFreeSubMenu(HWND hWnd, HMENU hMenu, UINT uPos);       <span class="comment">// メニューバーの無効化を検査   2010/6/18 Uchi</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">void</span> CheckFreeSubMenuSub(HMENU hMenu, <span class="keywordtype">int</span> nLv);         <span class="comment">// メニューバーの無効化を検査   2010/6/18 Uchi</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">//public:</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#ad8b0263413b85c0e3c155062ba81649d">  307</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad8b0263413b85c0e3c155062ba81649d">IncrementTimerCount</a>(<span class="keywordtype">int</span> nInterval)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">m_nTimerCount</a>++;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span>( nInterval &lt;= <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">m_nTimerCount</a> ){ <span class="comment">// 2012.11.29 aroka 呼び出し間隔のバグ修正</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">m_nTimerCount</a> = 0;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ae0c05677218092ef74540a3891c104a7">CreateAccelTbl</a>( <span class="keywordtype">void</span> ); <span class="comment">// ウィンドウ毎のアクセラレータテーブル作成(Wine用)</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a96d58a1966db8692d72f1d9ecfcfc685">DeleteAccelTbl</a>( <span class="keywordtype">void</span> ); <span class="comment">// ウィンドウ毎のアクセラレータテーブル破棄(Wine用)</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">//D&amp;Dフラグ管理</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">void</span> SetDragPosOrg(<a class="code" href="../../d2/de9/class_c_my_point.html">CMyPoint</a> ptDragPosOrg){ m_ptDragPosOrg=ptDragPosOrg; }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">void</span> SetDragMode(<span class="keywordtype">bool</span> bDragMode){ m_bDragMode = bDragMode; }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">bool</span> GetDragMode()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_bDragMode; }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d2/de9/class_c_my_point.html">CMyPoint</a>&amp; GetDragPosOrg()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_ptDragPosOrg; }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="comment">/* IDropTarget実装 */</span>   <span class="comment">// 2008.06.20 ryoji</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    STDMETHODIMP DragEnter(LPDATAOBJECT pDataObject, DWORD dwKeyState, POINTL pt, LPDWORD pdwEffect);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    STDMETHODIMP DragOver(DWORD dwKeyState, POINTL pt, LPDWORD pdwEffect);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    STDMETHODIMP DragLeave( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    STDMETHODIMP Drop(LPDATAOBJECT pDataObject, DWORD dwKeyState, POINTL pt, LPDWORD pdwEffect);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="comment">//フォーカス管理</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">int</span> GetCurrentFocus()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_nCurrentFocus; }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> SetCurrentFocus(<span class="keywordtype">int</span> n){ m_nCurrentFocus = n; }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">const</span> LOGFONT&amp;  GetLogfont(<span class="keywordtype">bool</span> bTempSetting = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordtype">int</span>         GetFontPointSize(<span class="keywordtype">bool</span> bTempSetting = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    ECharWidthCacheMode GetLogfontCacheMode();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordtype">void</span> ClearViewCaretPosInfo();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="comment">//                        メンバ変数                           //</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="comment">//自ウィンドウ</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    HWND            m_hWnd;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">//親ウィンドウ</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    HWND            m_hwndParent;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="comment">//子ウィンドウ</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#afbb3a92f1a27c98c3ca31f69a13a4b19">  352</a></span>&#160;    <a class="code" href="../../dd/d59/class_c_main_tool_bar.html">CMainToolBar</a>    <a class="code" href="../../d2/d89/class_c_edit_wnd.html#afbb3a92f1a27c98c3ca31f69a13a4b19">m_cToolbar</a>;         </div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#ad47088757e87433e3f4cbaeff556abc2">  353</a></span>&#160;    <a class="code" href="../../d1/d9e/class_c_tab_wnd.html">CTabWnd</a>         <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad47088757e87433e3f4cbaeff556abc2">m_cTabWnd</a>;          </div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a3b87dd03564e260b82a23bb6916e46cd">  354</a></span>&#160;    <a class="code" href="../../df/def/class_c_func_key_wnd.html">CFuncKeyWnd</a>     <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a3b87dd03564e260b82a23bb6916e46cd">m_cFuncKeyWnd</a>;      </div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a1bb4fb5c5622e0fe2295c5318cea4160">  355</a></span>&#160;    <a class="code" href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a>  <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a1bb4fb5c5622e0fe2295c5318cea4160">m_cStatusBar</a>;       </div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a8377523601fb7f935b224feb961853c6">  356</a></span>&#160;    <a class="code" href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a>*  <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a8377523601fb7f935b224feb961853c6">m_pPrintPreview</a>;    </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a3739f82a4f27dcb3fce133ad871b36e7">  358</a></span>&#160;    <a class="code" href="../../dd/dc3/class_c_splitter_wnd.html">CSplitterWnd</a>    <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a3739f82a4f27dcb3fce133ad871b36e7">m_cSplitterWnd</a>;     </div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#abe1ed456960b4e3f88088c93474abf1a">  359</a></span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*      <a class="code" href="../../d2/d89/class_c_edit_wnd.html#abe1ed456960b4e3f88088c93474abf1a">m_pcDragSourceView</a>; </div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a1cea5d1ae1b6c6b2fc6095041b9ac778">  360</a></span>&#160;    <a class="code" href="../../d0/d6d/class_c_view_font.html">CViewFont</a>*      <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a1cea5d1ae1b6c6b2fc6095041b9ac778">m_pcViewFont</a>;       </div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a4a26aef7b7133721eb2d0b1850f3aad7">  361</a></span>&#160;    <a class="code" href="../../d0/d6d/class_c_view_font.html">CViewFont</a>*      <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a4a26aef7b7133721eb2d0b1850f3aad7">m_pcViewFontMiniMap</a>;        </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="comment">//ダイアログ達</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="../../da/d48/class_c_dlg_find.html">CDlgFind</a>        m_cDlgFind;         <span class="comment">// 「検索」ダイアログ</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="../../d0/d8e/class_c_dlg_replace.html">CDlgReplace</a>     m_cDlgReplace;      <span class="comment">// 「置換」ダイアログ</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="../../d3/d22/class_c_dlg_jump.html">CDlgJump</a>        m_cDlgJump;         <span class="comment">// 「指定行へジャンプ」ダイアログ</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a>        m_cDlgGrep;         <span class="comment">// Grepダイアログ</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <a class="code" href="../../d2/dbd/class_c_dlg_grep_replace.html">CDlgGrepReplace</a> m_cDlgGrepReplace;  <span class="comment">// Grep置換ダイアログ</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <a class="code" href="../../dd/dd3/class_c_dlg_func_list.html">CDlgFuncList</a>    m_cDlgFuncList;     <span class="comment">// アウトライン解析結果ダイアログ</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="../../d9/d39/class_c_hokan_mgr.html">CHokanMgr</a>       m_cHokanMgr;        <span class="comment">// 入力補完</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="../../dc/d4b/class_c_dlg_set_char_set.html">CDlgSetCharSet</a>  m_cDlgSetCharSet;   <span class="comment">// 「文字コードセット設定」ダイアログ</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">// 2010.04.10 Moca  public -&gt; private. 起動直後は[0]のみ有効 4つとは限らないので注意</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="../../db/db7/class_c_edit_doc.html">CEditDoc</a>*       m_pcEditDoc;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*      m_pcEditViewArr[4]; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*      m_pcEditView;       </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>*      m_pcEditViewMiniMap;    </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">int</span>             m_nActivePaneIndex; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">int</span>             m_nEditViewCount;   </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>       m_nEditViewMaxCount;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">//共有データ</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>*   m_pShareData;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="comment">//ヘルパ</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <a class="code" href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a>     m_cMenuDrawer;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">//状態</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">bool</span>            m_bIsActiveApp;     </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    LPWSTR          m_pszLastCaption;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    LPWSTR          m_pszMenubarMessage; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">  394</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">m_nTimerCount</a>;      </div>
+<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="../../d2/d89/class_c_edit_wnd.html#a454a5d738b0538ef54c911649d67338c">  395</a></span>&#160;    <a class="code" href="../../d0/d76/class_c_logic_point_ex.html">CLogicPointEx</a>*  <a class="code" href="../../d2/d89/class_c_edit_wnd.html#a454a5d738b0538ef54c911649d67338c">m_posSaveAry</a>;       </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">int</span>             m_nCurrentFocus;    </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">int</span>             m_nWinSizeType;     </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    BOOL            m_bPageScrollByWheel;       </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    BOOL            m_bHorizontalScrollByWheel; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    HACCEL          m_hAccelWine;       </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    HACCEL          m_hAccel;           </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="comment">//フォント・イメージ</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    HFONT           m_hFontCaretPosInfo;        </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">int</span>             m_nCaretPosInfoCharWidth;   </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordtype">int</span>             m_nCaretPosInfoCharHeight;  </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="comment">//D&amp;Dフラグ</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">bool</span>            m_bDragMode;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <a class="code" href="../../d2/de9/class_c_my_point.html">CMyPoint</a>        m_ptDragPosOrg;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <a class="code" href="../../d1/db7/class_c_drop_target.html">CDropTarget</a>*    m_pcDropTarget;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">//その他フラグ</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    BOOL                m_bUIPI;        <span class="comment">// エディタ－トレイ間でのUI特権分離確認用フラグ // 2007.06.07 ryoji</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    EIconClickStatus    m_IconClicked;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <a class="code" href="../../d2/d49/global_8h.html#a51bfe75f25ae042df86c34e5967b4cb7">ESelectCountMode</a>    m_nSelectCountMode; <span class="comment">// 選択文字カウント方法</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aglobal_8h_html"><div class="ttname"><a href="../../d2/d49/global_8h.html">global.h</a></div><div class="ttdoc">共通定義</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a5ec388f0f976931312d8191a77cb8a75"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a5ec388f0f976931312d8191a77cb8a75">CEditWnd::OnAfterSave</a></div><div class="ttdeci">void OnAfterSave(const SSaveInfo &amp;sSaveInfo) override</div><div class="ttdoc">ドキュメントリスナ：セーブ後</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:254</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a6aac550bcf4fe5f473a64b54302bdee2"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a6aac550bcf4fe5f473a64b54302bdee2">CEditWnd::ChangeLayoutParam</a></div><div class="ttdeci">void ChangeLayoutParam(bool bShowProgress, CKetaXInt nTabSize, int nTsvMode, CKetaXInt nMaxLineKetas)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4575</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aa3423a818bcc790be49c973d2616d38a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aa3423a818bcc790be49c973d2616d38a">CEditWnd::LayoutFuncKey</a></div><div class="ttdeci">void LayoutFuncKey(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:961</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a4a26aef7b7133721eb2d0b1850f3aad7"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a4a26aef7b7133721eb2d0b1850f3aad7">CEditWnd::m_pcViewFontMiniMap</a></div><div class="ttdeci">CViewFont * m_pcViewFontMiniMap</div><div class="ttdoc">フォント</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:361</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a23c9b59c1ec093fd858d89ad212d001a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a23c9b59c1ec093fd858d89ad212d001a">CEditWnd::LayoutTabBar</a></div><div class="ttdeci">void LayoutTabBar(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:985</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aa3b650608551ba9dc7bef47c6ee20bd9"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aa3b650608551ba9dc7bef47c6ee20bd9">CEditWnd::ChangeFileNameNotify</a></div><div class="ttdeci">void ChangeFileNameNotify(const WCHAR *pszTabCaption, const WCHAR *pszFilePath, bool bIsGrep)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4013</div></div>
+<div class="ttc" id="aclass_c_dlg_replace_html"><div class="ttname"><a href="../../d0/d8e/class_c_dlg_replace.html">CDlgReplace</a></div><div class="ttdoc">置換ダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgReplace.h:31</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a0f843ff7fecdce515678544bd3c6f747"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a0f843ff7fecdce515678544bd3c6f747">CEditWnd::EndLayoutBars</a></div><div class="ttdeci">void EndLayoutBars(BOOL bAdjust=TRUE)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:1020</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_af51ba556e8eb87eee4c4dcc0c8f43de2"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#af51ba556e8eb87eee4c4dcc0c8f43de2">CEditWnd::CreateFileDropDownMenu</a></div><div class="ttdeci">int CreateFileDropDownMenu(HWND hwnd)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3715</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a23dd01f020c572e87c5c06cad3cf2483"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a23dd01f020c572e87c5c06cad3cf2483">CEditWnd::IsActiveApp</a></div><div class="ttdeci">bool IsActiveApp() const</div><div class="ttdoc">自アプリがアクティブかどうか // 2007.03.08 ryoji</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:213</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a1cea5d1ae1b6c6b2fc6095041b9ac778"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a1cea5d1ae1b6c6b2fc6095041b9ac778">CEditWnd::m_pcViewFont</a></div><div class="ttdeci">CViewFont * m_pcViewFont</div><div class="ttdoc">フォント</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:360</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a96d58a1966db8692d72f1d9ecfcfc685"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a96d58a1966db8692d72f1d9ecfcfc685">CEditWnd::DeleteAccelTbl</a></div><div class="ttdeci">void DeleteAccelTbl(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4791</div></div>
+<div class="ttc" id="a_c_hokan_mgr_8h_html"><div class="ttname"><a href="../../d1/d68/_c_hokan_mgr_8h.html">CHokanMgr.h</a></div><div class="ttdoc">キーワード補完</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ad8b0263413b85c0e3c155062ba81649d"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ad8b0263413b85c0e3c155062ba81649d">CEditWnd::IncrementTimerCount</a></div><div class="ttdeci">void IncrementTimerCount(int nInterval)</div><div class="ttdoc">周期内でm_nTimerCountをインクリメント</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:307</div></div>
+<div class="ttc" id="aclass_c_my_point_html"><div class="ttname"><a href="../../d2/de9/class_c_my_point.html">CMyPoint</a></div><div class="ttdef"><b>Definition:</b> CMyPoint.h:29</div></div>
+<div class="ttc" id="aclass_c_hokan_mgr_html"><div class="ttname"><a href="../../d9/d39/class_c_hokan_mgr.html">CHokanMgr</a></div><div class="ttdoc">キーワード補完</div><div class="ttdef"><b>Definition:</b> CHokanMgr.h:26</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a2b96c27fc31a199e6f6d6572880f73f9"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a2b96c27fc31a199e6f6d6572880f73f9">CEditWnd::LayoutMiniMap</a></div><div class="ttdeci">void LayoutMiniMap()</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:1002</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a00c9eb46f0c7fd96058dd2bdcbfd9501"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a00c9eb46f0c7fd96058dd2bdcbfd9501">CEditWnd::IsInPreviewMode</a></div><div class="ttdeci">bool IsInPreviewMode()</div><div class="ttdoc">印刷プレビュー中かどうか</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:219</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_abbbcc82fc319f61c886b562c812d251d"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#abbbcc82fc319f61c886b562c812d251d">CEditWnd::WrapWindowWidth</a></div><div class="ttdeci">BOOL WrapWindowWidth(int nPane)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4531</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aee994d25742b29825f706b4612f8a9f0"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aee994d25742b29825f706b4612f8a9f0">CEditWnd::OnClose</a></div><div class="ttdeci">int OnClose(HWND hWndActive, bool bGrepNoConfirm)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2081</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ab59ac2e96de996ba53e776740db74cc1"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ab59ac2e96de996ba53e776740db74cc1">CEditWnd::GetRelatedIcon</a></div><div class="ttdeci">bool GetRelatedIcon(const WCHAR *szFile, HICON *hIconBig, HICON *hIconSmall) const</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3849</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_af021c55087aab45137fb39c9e172ce3a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#af021c55087aab45137fb39c9e172ce3a">CEditWnd::UpdateCaption</a></div><div class="ttdeci">void UpdateCaption()</div><div class="ttdoc">ウィンドウ生成用の矩形を取得</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:266</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_replace_html"><div class="ttname"><a href="../../d2/dbd/class_c_dlg_grep_replace.html">CDlgGrepReplace</a></div><div class="ttdoc">GREP置換ダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgGrepReplace.h:24</div></div>
+<div class="ttc" id="aclass_c_edit_doc_html"><div class="ttname"><a href="../../db/db7/class_c_edit_doc.html">CEditDoc</a></div><div class="ttdef"><b>Definition:</b> CEditDoc.h:77</div></div>
+<div class="ttc" id="a_c_dlg_grep_8h_html"><div class="ttname"><a href="../../de/d2b/_c_dlg_grep_8h.html">CDlgGrep.h</a></div><div class="ttdoc">GREPダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a622af0f016d41ad2b39b38acaae2409a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a622af0f016d41ad2b39b38acaae2409a">CEditWnd::LayoutStatusBar</a></div><div class="ttdeci">void LayoutStatusBar(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:946</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aa5c23a5f30c31fafdc3961a7f8314880"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aa5c23a5f30c31fafdc3961a7f8314880">CEditWnd::OnCommand</a></div><div class="ttdeci">void OnCommand(WORD wNotifyCode, WORD wID, HWND hwndCtl)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2157</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a26854a12f597b5fdd13ff4553569e809"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a26854a12f597b5fdd13ff4553569e809">CEditWnd::LayoutToolBar</a></div><div class="ttdeci">void LayoutToolBar(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:933</div></div>
+<div class="ttc" id="aclass_c_dlg_grep_html"><div class="ttname"><a href="../../d8/ded/class_c_dlg_grep.html">CDlgGrep</a></div><div class="ttdoc">GREPダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgGrep.h:28</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a15871ebc16cd130b1143dc54ee5bf5f6"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a15871ebc16cd130b1143dc54ee5bf5f6">CEditWnd::SendStatusMessage</a></div><div class="ttdeci">void SendStatusMessage(const WCHAR *msg)</div><div class="ttdoc">メッセージの表示</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3995</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a005c500f8032c6734ccb3b74dec9103c"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a005c500f8032c6734ccb3b74dec9103c">CEditWnd::ClearMouseState</a></div><div class="ttdeci">void ClearMouseState(void)</div><div class="ttdoc">マウスの状態をクリアする（ホイールスクロール有無状態をクリア）</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4755</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a7e4923b3f9e6210ac1bea1cf59bbd79c"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a7e4923b3f9e6210ac1bea1cf59bbd79c">CEditWnd::OnCaptionTimer</a></div><div class="ttdeci">void OnCaptionTimer(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2863</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a8377523601fb7f935b224feb961853c6"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a8377523601fb7f935b224feb961853c6">CEditWnd::m_pPrintPreview</a></div><div class="ttdeci">CPrintPreview * m_pPrintPreview</div><div class="ttdoc">印刷プレビュー表示情報。必要になったときのみインスタンスを生成する。</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:356</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a5efba468e13736cb3372d88642bde992"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a5efba468e13736cb3372d88642bde992">CEditWnd::UpdateTextWrap</a></div><div class="ttdeci">BOOL UpdateTextWrap(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4547</div></div>
+<div class="ttc" id="aclass_c_my_rect_html"><div class="ttname"><a href="../../d7/d43/class_c_my_rect.html">CMyRect</a></div><div class="ttdef"><b>Definition:</b> CMyRect.h:30</div></div>
+<div class="ttc" id="a_c_view_font_8h_html"><div class="ttname"><a href="../../d3/db3/_c_view_font_8h.html">CViewFont.h</a></div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a83462c321128768f82bfa9897c471230"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a83462c321128768f82bfa9897c471230">CEditWnd::PopupWinList</a></div><div class="ttdeci">LRESULT PopupWinList(bool bMousePos)</div><div class="ttdoc">ウィンドウ一覧をポップアップ表示</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4130</div></div>
+<div class="ttc" id="a_c_dlg_replace_8h_html"><div class="ttname"><a href="../../de/d9e/_c_dlg_replace_8h.html">CDlgReplace.h</a></div><div class="ttdoc">置換ダイアログ</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aebfe9fd7835d0c376df8b7d2f0eca3ab"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aebfe9fd7835d0c376df8b7d2f0eca3ab">CEditWnd::GetTooltipText</a></div><div class="ttdeci">void GetTooltipText(WCHAR *pszBuf, size_t nBufCount, int nID) const</div><div class="ttdoc">ツールチップのテキストを取得。2007.09.08 kobake 追加</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4207</div></div>
+<div class="ttc" id="a_c_dlg_grep_replace_8h_html"><div class="ttname"><a href="../../dd/d28/_c_dlg_grep_replace_8h.html">CDlgGrepReplace.h</a></div><div class="ttdoc">GREP置換ダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a328d890701af56908c110b3a9318d7c4"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a328d890701af56908c110b3a9318d7c4">CEditWnd::OnMouseMove</a></div><div class="ttdeci">LRESULT OnMouseMove(WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3394</div></div>
+<div class="ttc" id="aclass_c_dlg_find_html"><div class="ttname"><a href="../../da/d48/class_c_dlg_find.html">CDlgFind</a></div><div class="ttdef"><b>Definition:</b> CDlgFind.h:25</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_abe1ed456960b4e3f88088c93474abf1a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#abe1ed456960b4e3f88088c93474abf1a">CEditWnd::m_pcDragSourceView</a></div><div class="ttdeci">CEditView * m_pcDragSourceView</div><div class="ttdoc">ドラッグ元のビュー</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:359</div></div>
+<div class="ttc" id="a_c_func_key_wnd_8h_html"><div class="ttname"><a href="../../d7/dc5/_c_func_key_wnd_8h.html">CFuncKeyWnd.h</a></div><div class="ttdoc">ファンクションキーウィンドウ</div></div>
+<div class="ttc" id="aclass_c_type_config_html"><div class="ttname"><a href="../../d8/d39/class_c_type_config.html">CTypeConfig</a></div><div class="ttdoc">ドキュメント種類。共有データ内 STypeConfig へのアクセサも兼ねる。</div><div class="ttdef"><b>Definition:</b> CType.h:276</div></div>
+<div class="ttc" id="aclass_t_singleton_html"><div class="ttname"><a href="../../d5/d1e/class_t_singleton.html">TSingleton</a></div><div class="ttdef"><b>Definition:</b> design_template.h:47</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="aclass_c_doc_listener_ex_html"><div class="ttname"><a href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:203</div></div>
+<div class="ttc" id="aglobal_8h_html_a51bfe75f25ae042df86c34e5967b4cb7"><div class="ttname"><a href="../../d2/d49/global_8h.html#a51bfe75f25ae042df86c34e5967b4cb7">ESelectCountMode</a></div><div class="ttdeci">ESelectCountMode</div><div class="ttdef"><b>Definition:</b> global.h:128</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aa1d0300293a1a8a50e7b9e3678981750"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aa1d0300293a1a8a50e7b9e3678981750">CEditWnd::OnTimer</a></div><div class="ttdeci">LRESULT OnTimer(WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2830</div></div>
+<div class="ttc" id="aclass_c_dlg_func_list_html"><div class="ttname"><a href="../../dd/dd3/class_c_dlg_func_list.html">CDlgFuncList</a></div><div class="ttdoc">アウトライン解析ダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgFuncList.h:61</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a296a0e63b603531fdc2c42f045ac7d6d"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a296a0e63b603531fdc2c42f045ac7d6d">CEditWnd::InitMenu_Special</a></div><div class="ttdeci">bool InitMenu_Special(HMENU hMenu, EFunctionCode eFunc)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2554</div></div>
+<div class="ttc" id="aclass_c_drop_target_html"><div class="ttname"><a href="../../d1/db7/class_c_drop_target.html">CDropTarget</a></div><div class="ttdef"><b>Definition:</b> CDropTarget.h:68</div></div>
+<div class="ttc" id="aclass_c_dlg_jump_html"><div class="ttname"><a href="../../d3/d22/class_c_dlg_jump.html">CDlgJump</a></div><div class="ttdoc">指定行へのジャンプダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgJump.h:23</div></div>
+<div class="ttc" id="a_c_main_status_bar_8h_html"><div class="ttname"><a href="../../d6/d9e/_c_main_status_bar_8h.html">CMainStatusBar.h</a></div></div>
+<div class="ttc" id="acharset_8h_html_ab1a19f5d4c65868f6245c1dc4d164b60"><div class="ttname"><a href="../../d5/dae/charset_8h.html#ab1a19f5d4c65868f6245c1dc4d164b60">ECodeType</a></div><div class="ttdeci">ECodeType</div><div class="ttdef"><b>Definition:</b> charset.h:33</div></div>
+<div class="ttc" id="aclass_c_image_list_mgr_html"><div class="ttname"><a href="../../d2/d1b/class_c_image_list_mgr.html">CImageListMgr</a></div><div class="ttdoc">ImageListの管理</div><div class="ttdef"><b>Definition:</b> CImageListMgr.h:51</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a3739f82a4f27dcb3fce133ad871b36e7"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a3739f82a4f27dcb3fce133ad871b36e7">CEditWnd::m_cSplitterWnd</a></div><div class="ttdeci">CSplitterWnd m_cSplitterWnd</div><div class="ttdoc">分割フレーム</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:358</div></div>
+<div class="ttc" id="astruct_s_load_info_html"><div class="ttname"><a href="../../d1/d2e/struct_s_load_info.html">SLoadInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:71</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a7e1330ffacc4fc679b01168507651cad"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a7e1330ffacc4fc679b01168507651cad">CEditWnd::OnSysMenuTimer</a></div><div class="ttdeci">void OnSysMenuTimer(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2877</div></div>
+<div class="ttc" id="a_c_splitter_wnd_8h_html"><div class="ttname"><a href="../../d7/d3e/_c_splitter_wnd_8h.html">CSplitterWnd.h</a></div><div class="ttdoc">分割線ウィンドウクラス</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ac1ad1923f1f22e110b0e3f0f35649f8e"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ac1ad1923f1f22e110b0e3f0f35649f8e">CEditWnd::SetDrawSwitchOfAllViews</a></div><div class="ttdeci">bool SetDrawSwitchOfAllViews(bool bDraw)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4444</div></div>
+<div class="ttc" id="aclass_c_menu_drawer_html"><div class="ttname"><a href="../../d5/d3f/class_c_menu_drawer.html">CMenuDrawer</a></div><div class="ttdoc">メニュー表示＆管理</div><div class="ttdef"><b>Definition:</b> CMenuDrawer.h:45</div></div>
+<div class="ttc" id="aclass_c_dlg_set_char_set_html"><div class="ttname"><a href="../../dc/d4b/class_c_dlg_set_char_set.html">CDlgSetCharSet</a></div><div class="ttdoc">文字コードセット設定ダイアログボックス</div><div class="ttdef"><b>Definition:</b> CDlgSetCharSet.h:20</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ab8d0bfb9f94ccf9501412267fb40d039"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ab8d0bfb9f94ccf9501412267fb40d039">CEditWnd::RedrawAllViews</a></div><div class="ttdeci">void RedrawAllViews(CEditView *pcViewExclude)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4464</div></div>
+<div class="ttc" id="a_c_dlg_find_8h_html"><div class="ttname"><a href="../../d4/d88/_c_dlg_find_8h.html">CDlgFind.h</a></div><div class="ttdoc">検索ダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_afad4e40108d19e8c40e0bf0005d1790f"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#afad4e40108d19e8c40e0bf0005d1790f">CEditWnd::InitMenu_Function</a></div><div class="ttdeci">void InitMenu_Function(HMENU hMenu, EFunctionCode eFunc, const wchar_t *pszName, const wchar_t *pszKey)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:2397</div></div>
+<div class="ttc" id="a_c_menu_drawer_8h_html"><div class="ttname"><a href="../../de/d74/_c_menu_drawer_8h.html">CMenuDrawer.h</a></div><div class="ttdoc">メニュー管理＆表示</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a13c56f668ad8f351da67d49c721aa92e"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a13c56f668ad8f351da67d49c721aa92e">CEditWnd::GetDefaultIcon</a></div><div class="ttdeci">void GetDefaultIcon(HICON *hIconBig, HICON *hIconSmall) const</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3828</div></div>
+<div class="ttc" id="aclass_c_logic_point_ex_html"><div class="ttname"><a href="../../d0/d76/class_c_logic_point_ex.html">CLogicPointEx</a></div><div class="ttdef"><b>Definition:</b> CLayoutMgr.h:77</div></div>
+<div class="ttc" id="a_c_dlg_set_char_set_8h_html"><div class="ttname"><a href="../../dc/d06/_c_dlg_set_char_set_8h.html">CDlgSetCharSet.h</a></div><div class="ttdoc">文字コードセット設定ダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_splitter_wnd_html"><div class="ttname"><a href="../../dd/dc3/class_c_splitter_wnd.html">CSplitterWnd</a></div><div class="ttdoc">分割線ウィンドウクラス</div><div class="ttdef"><b>Definition:</b> CSplitterWnd.h:34</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_afbb3a92f1a27c98c3ca31f69a13a4b19"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#afbb3a92f1a27c98c3ca31f69a13a4b19">CEditWnd::m_cToolbar</a></div><div class="ttdeci">CMainToolBar m_cToolbar</div><div class="ttdoc">ツールバー</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:352</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aba45e550180849ae0b8633a7bea1ad79"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aba45e550180849ae0b8633a7bea1ad79">CEditWnd::Create</a></div><div class="ttdeci">HWND Create(CEditDoc *pcEditDoc, CImageListMgr *pcIcons, int nGroup)</div><div class="ttdoc">作成</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:576</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ac7ce9b0cd5cf9c3e46667fde693bc0c1"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ac7ce9b0cd5cf9c3e46667fde693bc0c1">CEditWnd::SetWindowIcon</a></div><div class="ttdeci">void SetWindowIcon(HICON hIcon, int flag)</div><div class="ttdoc">ウィンドウのアイコン設定</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3810</div></div>
+<div class="ttc" id="aclass_c_tab_wnd_html"><div class="ttname"><a href="../../d1/d9e/class_c_tab_wnd.html">CTabWnd</a></div><div class="ttdoc">タブバーウィンドウ</div><div class="ttdef"><b>Definition:</b> CTabWnd.h:48</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_af81b9c766da4d31b5d51697182f5bab7"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#af81b9c766da4d31b5d51697182f5bab7">CEditWnd::OnEditTimer</a></div><div class="ttdeci">void OnEditTimer(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4245</div></div>
+<div class="ttc" id="a_c_dlg_jump_8h_html"><div class="ttname"><a href="../../d0/d07/_c_dlg_jump_8h.html">CDlgJump.h</a></div><div class="ttdoc">指定行へのジャンプダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a317a53c005f5fdcf5eb292e19ddca820"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a317a53c005f5fdcf5eb292e19ddca820">CEditWnd::WinListMenu</a></div><div class="ttdeci">LRESULT WinListMenu(HMENU hMenu, EditNode *pEditNodeArr, int nRowNum, BOOL bFull)</div><div class="ttdoc">現在開いている編集窓のリストをメニューにする</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4177</div></div>
+<div class="ttc" id="a_c_tab_wnd_8h_html"><div class="ttname"><a href="../../d5/d5a/_c_tab_wnd_8h.html">CTabWnd.h</a></div><div class="ttdoc">タブウィンドウ</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ac168d5f69b7385c1e15c2af9983780de"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ac168d5f69b7385c1e15c2af9983780de">CEditWnd::LayoutMainMenu</a></div><div class="ttdeci">void LayoutMainMenu(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:817</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a76253b59fa678e7cca58a2ef137cb2e6"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a76253b59fa678e7cca58a2ef137cb2e6">CEditWnd::RestorePhysPosOfAllView</a></div><div class="ttdeci">void RestorePhysPosOfAllView(CLogicPointEx *pptPosArray)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4688</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a454a5d738b0538ef54c911649d67338c"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a454a5d738b0538ef54c911649d67338c">CEditWnd::m_posSaveAry</a></div><div class="ttdeci">CLogicPointEx * m_posSaveAry</div><div class="ttdoc">フォント変更前の座標</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:395</div></div>
+<div class="ttc" id="astruct_s_save_info_html"><div class="ttname"><a href="../../d7/d29/struct_s_save_info.html">SSaveInfo</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:110</div></div>
+<div class="ttc" id="aclass_c_print_preview_html"><div class="ttname"><a href="../../d3/ddb/class_c_print_preview.html">CPrintPreview</a></div><div class="ttdef"><b>Definition:</b> CPrintPreview.h:46</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a766e438be29651769b99a50af9a0a633"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a766e438be29651769b99a50af9a0a633">CEditWnd::_GetWindowRectForInit</a></div><div class="ttdeci">void _GetWindowRectForInit(CMyRect *rcResult, int nGroup, const STabGroupInfo &amp;sTabGroupInfo)</div><div class="ttdoc">ウィンドウ生成用の矩形を取得</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:292</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a3b87dd03564e260b82a23bb6916e46cd"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a3b87dd03564e260b82a23bb6916e46cd">CEditWnd::m_cFuncKeyWnd</a></div><div class="ttdeci">CFuncKeyWnd m_cFuncKeyWnd</div><div class="ttdoc">ファンクションバー</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:354</div></div>
+<div class="ttc" id="aclass_c_main_tool_bar_html"><div class="ttname"><a href="../../dd/d59/class_c_main_tool_bar.html">CMainToolBar</a></div><div class="ttdef"><b>Definition:</b> CMainToolBar.h:33</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a537fb26cd9346b6cc1efcca3b4702920"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a537fb26cd9346b6cc1efcca3b4702920">CEditWnd::Views_DeleteCompatibleBitmap</a></div><div class="ttdeci">void Views_DeleteCompatibleBitmap()</div><div class="ttdoc">CEditViewの画面バッファを削除</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4281</div></div>
+<div class="ttc" id="aclass_c_func_key_wnd_html"><div class="ttname"><a href="../../df/def/class_c_func_key_wnd.html">CFuncKeyWnd</a></div><div class="ttdoc">ファンクションキーウィンドウ</div><div class="ttdef"><b>Definition:</b> CFuncKeyWnd.h:26</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a114fe5461f4b1b61be9f88f15b8ed7e6"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a114fe5461f4b1b61be9f88f15b8ed7e6">CEditWnd::DoMouseWheel</a></div><div class="ttdeci">BOOL DoMouseWheel(WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:3495</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ad47088757e87433e3f4cbaeff556abc2"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ad47088757e87433e3f4cbaeff556abc2">CEditWnd::m_cTabWnd</a></div><div class="ttdeci">CTabWnd m_cTabWnd</div><div class="ttdoc">タブウインドウ //@@ 2003.05.31 MIK</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:353</div></div>
+<div class="ttc" id="astruct_s_tab_group_info_html"><div class="ttname"><a href="../../d2/dfc/struct_s_tab_group_info.html">STabGroupInfo</a></div><div class="ttdef"><b>Definition:</b> CEditWnd.h:82</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a20a87f4f3917f1d74dc2e919e2f2c15a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a20a87f4f3917f1d74dc2e919e2f2c15a">CEditWnd::OpenDocumentWhenStart</a></div><div class="ttdeci">void OpenDocumentWhenStart(const SLoadInfo &amp;sLoadInfo)</div><div class="ttdoc">起動時のファイルオープン処理</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:752</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a85130d8e6559ac3cb0b31b7b314bf62f"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a85130d8e6559ac3cb0b31b7b314bf62f">CEditWnd::WindowTopMost</a></div><div class="ttdeci">void WindowTopMost(int top)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4060</div></div>
+<div class="ttc" id="a_c_main_tool_bar_8h_html"><div class="ttname"><a href="../../d5/daf/_c_main_tool_bar_8h.html">CMainToolBar.h</a></div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ad5ed776d715053b3b49d4b355de7a1d0"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ad5ed776d715053b3b49d4b355de7a1d0">CEditWnd::m_nTimerCount</a></div><div class="ttdeci">int m_nTimerCount</div><div class="ttdoc">OnTimer用 2003.08.29 wmlhq</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:394</div></div>
+<div class="ttc" id="aclass_c_view_font_html"><div class="ttname"><a href="../../d0/d6d/class_c_view_font.html">CViewFont</a></div><div class="ttdef"><b>Definition:</b> CViewFont.h:29</div></div>
+<div class="ttc" id="aclass_c_plug_html"><div class="ttname"><a href="../../dd/d13/class_c_plug.html">CPlug</a></div><div class="ttdef"><b>Definition:</b> CPlugin.h:68</div></div>
+<div class="ttc" id="aclass_c_main_status_bar_html"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a></div><div class="ttdef"><b>Definition:</b> CMainStatusBar.h:33</div></div>
+<div class="ttc" id="astruct_edit_node_html"><div class="ttname"><a href="../../d1/df4/struct_edit_node.html">EditNode</a></div><div class="ttdoc">編集ウィンドウノード</div><div class="ttdef"><b>Definition:</b> CAppNodeManager.h:33</div></div>
+<div class="ttc" id="a_c_edit_view_8h_html"><div class="ttname"><a href="../../df/d8c/_c_edit_view_8h.html">CEditView.h</a></div><div class="ttdoc">文書ウィンドウの管理</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_ae0c05677218092ef74540a3891c104a7"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#ae0c05677218092ef74540a3891c104a7">CEditWnd::CreateAccelTbl</a></div><div class="ttdeci">void CreateAccelTbl(void)</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4769</div></div>
+<div class="ttc" id="a_c_doc_listener_8h_html"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html">CDocListener.h</a></div></div>
+<div class="ttc" id="a_c_dlg_func_list_8h_html"><div class="ttname"><a href="../../d1/d53/_c_dlg_func_list_8h.html">CDlgFuncList.h</a></div><div class="ttdoc">アウトライン解析ダイアログボックス</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a1bb4fb5c5622e0fe2295c5318cea4160"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a1bb4fb5c5622e0fe2295c5318cea4160">CEditWnd::m_cStatusBar</a></div><div class="ttdeci">CMainStatusBar m_cStatusBar</div><div class="ttdoc">ステータスバー</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:355</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_a6a662d6c990b24e742e4627d1335a811"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#a6a662d6c990b24e742e4627d1335a811">CEditWnd::SavePhysPosOfAllView</a></div><div class="ttdeci">CLogicPointEx * SavePhysPosOfAllView()</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:4629</div></div>
+<div class="ttc" id="aclass_c_edit_wnd_html_aaa897cc4c5da1c430348450445273d1a"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html#aaa897cc4c5da1c430348450445273d1a">CEditWnd::SetDocumentTypeWhenCreate</a></div><div class="ttdeci">void SetDocumentTypeWhenCreate(ECodeType nCharCode, bool bViewMode, CTypeConfig nDocumentType=CTypeConfig(-1))</div><div class="ttdef"><b>Definition:</b> CEditWnd.cpp:773</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

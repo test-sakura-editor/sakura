@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CPluginManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="../../da/db4/class_c_plugin_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CPluginManager クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CPluginManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/da2/class_c_plugin_manager.png" usemap="#CPluginManager_map" alt=""/>
+  <map id="CPluginManager_map" name="CPluginManager_map">
+<area href="../../d5/d1e/class_t_singleton.html" alt="TSingleton&lt; CPluginManager &gt;" shape="rect" coords="0,0,190,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad55565b0fcca79bf21b99acf8b0c8cd2"><td class="memItemLeft" align="right" valign="top"><a id="ad55565b0fcca79bf21b99acf8b0c8cd2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadAllPlugin</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> *common=NULL)</td></tr>
+<tr class="separator:ad55565b0fcca79bf21b99acf8b0c8cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a04fcbf446bb31e0184e5392c80ed4c"><td class="memItemLeft" align="right" valign="top"><a id="a8a04fcbf446bb31e0184e5392c80ed4c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnloadAllPlugin</b> ()</td></tr>
+<tr class="separator:a8a04fcbf446bb31e0184e5392c80ed4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb43a4375524e261f155449eff9c6f17"><td class="memItemLeft" align="right" valign="top"><a id="afb43a4375524e261f155449eff9c6f17"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SearchNewPlugin</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, HWND hWndOwner)</td></tr>
+<tr class="separator:afb43a4375524e261f155449eff9c6f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd34c2452a2c2bd23a0b8a96303b0db"><td class="memItemLeft" align="right" valign="top"><a id="a5fd34c2452a2c2bd23a0b8a96303b0db"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>InstallPlugin</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, const WCHAR *pszPluginName, HWND hWndOwner, wstring &amp;errorMsg, bool bUpdate=false)</td></tr>
+<tr class="separator:a5fd34c2452a2c2bd23a0b8a96303b0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e98c56f280e6e5d324c9a8fe6d98e25"><td class="memItemLeft" align="right" valign="top"><a id="a6e98c56f280e6e5d324c9a8fe6d98e25"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InstZipPlugin</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, HWND hWndOwner, const wstring &amp;sZipName, bool bInSearch=false)</td></tr>
+<tr class="separator:a6e98c56f280e6e5d324c9a8fe6d98e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb02079706ec2248fe54d3e8786cc7fd"><td class="memItemLeft" align="right" valign="top"><a id="abb02079706ec2248fe54d3e8786cc7fd"></a>
+<a class="el" href="../../d9/d51/class_c_plugin.html">CPlugin</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlugin</b> (int id)</td></tr>
+<tr class="separator:abb02079706ec2248fe54d3e8786cc7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cb2e03951755814ff7e959b8c31ad6"><td class="memItemLeft" align="right" valign="top"><a id="ae1cb2e03951755814ff7e959b8c31ad6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UninstallPlugin</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, int id)</td></tr>
+<tr class="separator:ae1cb2e03951755814ff7e959b8c31ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b64e97c4c594986af8ac25a586c77b"><td class="memItemLeft" align="right" valign="top"><a id="aa8b64e97c4c594986af8ac25a586c77b"></a>
+const wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetBaseDir</b> ()</td></tr>
+<tr class="separator:aa8b64e97c4c594986af8ac25a586c77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff83546a6458da897982f26475deffd"><td class="memItemLeft" align="right" valign="top"><a id="a9ff83546a6458da897982f26475deffd"></a>
+const wstring&#160;</td><td class="memItemRight" valign="bottom"><b>GetExePluginDir</b> ()</td></tr>
+<tr class="separator:a9ff83546a6458da897982f26475deffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1e6704b35ba8f2ccd5e53d583dfc14"><td class="memItemLeft" align="right" valign="top"><a id="a5a1e6704b35ba8f2ccd5e53d583dfc14"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SearchNewPluginDir</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, HWND hWndOwner, const wstring &amp;sSearchDir, bool &amp;bCancel)</td></tr>
+<tr class="separator:a5a1e6704b35ba8f2ccd5e53d583dfc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b15a234bd2bc5c5a1643f617a481399"><td class="memItemLeft" align="right" valign="top"><a id="a7b15a234bd2bc5c5a1643f617a481399"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SearchNewPluginZip</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, HWND hWndOwner, const wstring &amp;sSearchDir, bool &amp;bCancel)</td></tr>
+<tr class="separator:a7b15a234bd2bc5c5a1643f617a481399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb37b4c2cf186f8bc5cd394586b1728"><td class="memItemLeft" align="right" valign="top"><a id="acdb37b4c2cf186f8bc5cd394586b1728"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InstZipPluginSub</b> (<a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> &amp;common, HWND hWndOwner, const wstring &amp;sZipName, const wstring &amp;sDispName, bool bInSearch, bool &amp;bCancel)</td></tr>
+<tr class="separator:acdb37b4c2cf186f8bc5cd394586b1728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a403bd634e764e8b739d5d279a1668395"><td class="memItemLeft" align="right" valign="top"><a id="a403bd634e764e8b739d5d279a1668395"></a>
+static <a class="el" href="../../d9/da2/class_c_plugin_manager.html">CPluginManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="separator:a403bd634e764e8b739d5d279a1668395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4e0e14be06355726db2c02e344a48f"><td class="memItemLeft" align="right" valign="top"><a id="a1d4e0e14be06355726db2c02e344a48f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DISALLOW_COPY_AND_ASSIGN</b> (<a class="el" href="../../d5/d1e/class_t_singleton.html">TSingleton</a>)</td></tr>
+<tr class="separator:a1d4e0e14be06355726db2c02e344a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a59a9f4eb431828fc8fb394aa0d32584d"><td class="memItemLeft" align="right" valign="top"><a id="a59a9f4eb431828fc8fb394aa0d32584d"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TSingleton&lt; CPluginManager &gt;</b></td></tr>
+<tr class="separator:a59a9f4eb431828fc8fb394aa0d32584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/plugin/<a class="el" href="../../de/de4/_c_plugin_manager_8h_source.html">CPluginManager.h</a></li>
+<li>sakura_core/plugin/<a class="el" href="../../da/d5a/_c_plugin_manager_8cpp.html">CPluginManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

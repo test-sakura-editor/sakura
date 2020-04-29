@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: CFuncLookup クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d7/d10/class_c_func_lookup-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CFuncLookup クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>表示用文字列等の取得  
+ <a href="../../df/dc4/class_c_func_lookup.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../da/db5/_c_func_lookup_8h_source.html">CFuncLookup.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8f4206639a8e621543a56eb7aa41f5a7"><td class="memItemLeft" align="right" valign="top"><a id="a8f4206639a8e621543a56eb7aa41f5a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="../../d8/d4a/struct_macro_rec.html">MacroRec</a> *pMacroRec, <a class="el" href="../../d5/d05/struct_common_setting.html">CommonSetting</a> *pCom)</td></tr>
+<tr class="separator:a8f4206639a8e621543a56eb7aa41f5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9c6ec6bbc9520a15e1d6065bcd5d2a"><td class="memItemLeft" align="right" valign="top">EFunctionCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#aff9c6ec6bbc9520a15e1d6065bcd5d2a">Pos2FuncCode</a> (int category, int position, bool bGetUnavailable=true) const</td></tr>
+<tr class="memdesc:aff9c6ec6bbc9520a15e1d6065bcd5d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">分類中の位置に対応する機能番号を返す．  <a href="../../df/dc4/class_c_func_lookup.html#aff9c6ec6bbc9520a15e1d6065bcd5d2a">[詳解]</a><br /></td></tr>
+<tr class="separator:aff9c6ec6bbc9520a15e1d6065bcd5d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5097bd3b2be06d4b1e2c8d2ca309c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a8d5097bd3b2be06d4b1e2c8d2ca309c0">Pos2FuncName</a> (int category, int position, WCHAR *ptr, int bufsize) const</td></tr>
+<tr class="memdesc:a8d5097bd3b2be06d4b1e2c8d2ca309c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">分類中の位置に対応する機能名称を返す．  <a href="../../df/dc4/class_c_func_lookup.html#a8d5097bd3b2be06d4b1e2c8d2ca309c0">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d5097bd3b2be06d4b1e2c8d2ca309c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f96b16c55d6eafc41e08ed9c8d205b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#aa6f96b16c55d6eafc41e08ed9c8d205b">Funccode2Name</a> (int funccode, WCHAR *ptr, int bufsize) const</td></tr>
+<tr class="memdesc:aa6f96b16c55d6eafc41e08ed9c8d205b"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能番号に対応する機能名称を返す．  <a href="../../df/dc4/class_c_func_lookup.html#aa6f96b16c55d6eafc41e08ed9c8d205b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa6f96b16c55d6eafc41e08ed9c8d205b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1291d23f6389108164a54c8f8fe8047e"><td class="memItemLeft" align="right" valign="top">const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a1291d23f6389108164a54c8f8fe8047e">Category2Name</a> (int category) const</td></tr>
+<tr class="memdesc:a1291d23f6389108164a54c8f8fe8047e"><td class="mdescLeft">&#160;</td><td class="mdescRight">機能分類番号に対応する機能名称を返す．  <a href="../../df/dc4/class_c_func_lookup.html#a1291d23f6389108164a54c8f8fe8047e">[詳解]</a><br /></td></tr>
+<tr class="separator:a1291d23f6389108164a54c8f8fe8047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad23be0486cf0970c44b2bbba96ede9"><td class="memItemLeft" align="right" valign="top">const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a7ad23be0486cf0970c44b2bbba96ede9">Custmenu2Name</a> (int index, WCHAR buf[], int bufSize) const</td></tr>
+<tr class="memdesc:a7ad23be0486cf0970c44b2bbba96ede9"><td class="mdescLeft">&#160;</td><td class="mdescRight">番号に対応するカスタムメニュー名称を返す．  <a href="../../df/dc4/class_c_func_lookup.html#a7ad23be0486cf0970c44b2bbba96ede9">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ad23be0486cf0970c44b2bbba96ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3317d409220b016911e44b73de4a601d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a3317d409220b016911e44b73de4a601d">SetCategory2Combo</a> (HWND hComboBox) const</td></tr>
+<tr class="memdesc:a3317d409220b016911e44b73de4a601d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ComboBoxに利用可能な機能分類一覧を登録する  <a href="../../df/dc4/class_c_func_lookup.html#a3317d409220b016911e44b73de4a601d">[詳解]</a><br /></td></tr>
+<tr class="separator:a3317d409220b016911e44b73de4a601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edbd623264ffa5306febe3024c3a2dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a6edbd623264ffa5306febe3024c3a2dc">SetListItem</a> (HWND hListBox, int category) const</td></tr>
+<tr class="memdesc:a6edbd623264ffa5306febe3024c3a2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された分類に属する機能リストをListBoxに登録する．  <a href="../../df/dc4/class_c_func_lookup.html#a6edbd623264ffa5306febe3024c3a2dc">[詳解]</a><br /></td></tr>
+<tr class="separator:a6edbd623264ffa5306febe3024c3a2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03908135d092c34d7ef2993c7c41152d"><td class="memItemLeft" align="right" valign="top"><a id="a03908135d092c34d7ef2993c7c41152d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCategoryCount</b> (void) const</td></tr>
+<tr class="separator:a03908135d092c34d7ef2993c7c41152d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c937350d2caa9c1bf773a653c892ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc4/class_c_func_lookup.html#a15c937350d2caa9c1bf773a653c892ca">GetItemCount</a> (int category) const</td></tr>
+<tr class="separator:a15c937350d2caa9c1bf773a653c892ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>表示用文字列等の取得 </p>
+<p>機能，機能分類と位置，機能番号，文字列などの対応を集約する． </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a1291d23f6389108164a54c8f8fe8047e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1291d23f6389108164a54c8f8fe8047e">&#9670;&nbsp;</a></span>Category2Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const WCHAR * CFuncLookup::Category2Name </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>機能分類番号に対応する機能名称を返す． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>[in] 機能分類番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>NULL 分類名称．取得に失敗したらNULL． </dd></dl>
+
+</div>
+</div>
+<a id="a7ad23be0486cf0970c44b2bbba96ede9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad23be0486cf0970c44b2bbba96ede9">&#9670;&nbsp;</a></span>Custmenu2Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const WCHAR * CFuncLookup::Custmenu2Name </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR&#160;</td>
+          <td class="paramname"><em>buf</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>番号に対応するカスタムメニュー名称を返す． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>[in] カスタムメニュー番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>NULL 分類名称．取得に失敗したらNULL． </dd></dl>
+
+</div>
+</div>
+<a id="aa6f96b16c55d6eafc41e08ed9c8d205b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f96b16c55d6eafc41e08ed9c8d205b">&#9670;&nbsp;</a></span>Funccode2Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFuncLookup::Funccode2Name </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>funccode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>機能番号に対応する機能名称を返す． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funccode</td><td>[in] 機能番号 </td></tr>
+    <tr><td class="paramname">ptr</td><td>[out] 文字列を格納するバッファの先頭 </td></tr>
+    <tr><td class="paramname">bufsize</td><td>[in] 文字列を格納するバッファのサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>指定された機能番号は定義されている </td></tr>
+    <tr><td class="paramname">false</td><td>指定された機能番号は未定義</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.11.02 ryoji 未登録マクロも文字列を格納．戻り値の意味を変更（文字列は必ず格納）． </dd></dl>
+
+</div>
+</div>
+<a id="a15c937350d2caa9c1bf773a653c892ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c937350d2caa9c1bf773a653c892ca">&#9670;&nbsp;</a></span>GetItemCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CFuncLookup::GetItemCount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定分類中の機能数を取得する．</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>[in] 機能分類番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff9c6ec6bbc9520a15e1d6065bcd5d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9c6ec6bbc9520a15e1d6065bcd5d2a">&#9670;&nbsp;</a></span>Pos2FuncCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EFunctionCode CFuncLookup::Pos2FuncCode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bGetUnavailable</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分類中の位置に対応する機能番号を返す． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>[in] 分類番号 (0-) </td></tr>
+    <tr><td class="paramname">position</td><td>[in] 分類中のindex (0-) </td></tr>
+    <tr><td class="paramname">bGetUnavailable</td><td>[in] 未登録マクロでも機能番号を返す</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">機能番号</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.11.02 ryoji bGetUnavailableパラメータ追加 </dd></dl>
+
+</div>
+</div>
+<a id="a8d5097bd3b2be06d4b1e2c8d2ca309c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5097bd3b2be06d4b1e2c8d2ca309c0">&#9670;&nbsp;</a></span>Pos2FuncName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFuncLookup::Pos2FuncName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WCHAR *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分類中の位置に対応する機能名称を返す． </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>指定された機能番号は定義されている </td></tr>
+    <tr><td class="paramname">false</td><td>指定された機能番号は未定義</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.11.02 ryoji 処理を簡素化 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>[in] 分類番号 (0-) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>[in] 分類中のindex (0-) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ptr</td><td>[out] 文字列を格納するバッファの先頭 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufsize</td><td>[in] 文字列を格納するバッファのサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3317d409220b016911e44b73de4a601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3317d409220b016911e44b73de4a601d">&#9670;&nbsp;</a></span>SetCategory2Combo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFuncLookup::SetCategory2Combo </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hComboBox</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ComboBoxに利用可能な機能分類一覧を登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hComboBox</td><td>[in(out)] データを設定するコンボボックス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6edbd623264ffa5306febe3024c3a2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6edbd623264ffa5306febe3024c3a2dc">&#9670;&nbsp;</a></span>SetListItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFuncLookup::SetListItem </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hListBox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された分類に属する機能リストをListBoxに登録する． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hListBox</td><td>[in(out)] 値を設定するリストボックス </td></tr>
+    <tr><td class="paramname">category</td><td>[in] 機能分類番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>日付</dt><dd>2007.11.02 ryoji 未定義コマンドは除外．処理も簡素化． </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>sakura_core/func/<a class="el" href="../../da/db5/_c_func_lookup_8h_source.html">CFuncLookup.h</a></li>
+<li>sakura_core/func/<a class="el" href="../../d7/d21/_c_func_lookup_8cpp.html">CFuncLookup.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

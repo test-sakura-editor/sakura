@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/charset/codechecker.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_f25fe00a41a70dda8b4261816327e4c2.html">charset</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">codechecker.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>文字コード認識・判別支援関数ライブラリ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dbd/codechecker_8h_source.html">charset/codechecker.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d5f/_c_memory_8h_source.html">mem/CMemory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/da2/convert__util2_8h_source.html">convert/convert_util2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d8a/codeutil_8h_source.html">charset/codeutil.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d86/charcode_8h_source.html">charset/charcode.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a043f7cd6db4b93f3e647751c775df01d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a043f7cd6db4b93f3e647751c775df01d">CheckSjisChar</a> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset)</td></tr>
+<tr class="separator:a043f7cd6db4b93f3e647751c775df01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a250d33cfd7cdc86243ea94ee84daec8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a250d33cfd7cdc86243ea94ee84daec8b">CheckEucjpChar</a> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset)</td></tr>
+<tr class="separator:a250d33cfd7cdc86243ea94ee84daec8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac482a38c40d0f40c07f5d0b84dd0c2ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#ac482a38c40d0f40c07f5d0b84dd0c2ec">DetectJisEscseq</a> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peEscType)</td></tr>
+<tr class="separator:ac482a38c40d0f40c07f5d0b84dd0c2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9741312eee6c67259119de5fbc9ea1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a2f9741312eee6c67259119de5fbc9ea1">_CheckJisAnyPart</a> (const char *pS, const int nLen, const char **ppNextChar, <a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *peNextEsc, int *pnErrorCount, const int nType)</td></tr>
+<tr class="separator:a2f9741312eee6c67259119de5fbc9ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af459202d5759db59a181510cfa846424"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#af459202d5759db59a181510cfa846424">_CheckUtf16Char</a> (const wchar_t *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset, const int nOption, const bool bBigEndian)</td></tr>
+<tr class="separator:af459202d5759db59a181510cfa846424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7c62b1883cfd61ef7cb32c60d2ae85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a2e7c62b1883cfd61ef7cb32c60d2ae85">CheckUtf8Char</a> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset, const bool bAllow4byteCode, const int nOption)</td></tr>
+<tr class="separator:a2e7c62b1883cfd61ef7cb32c60d2ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004cb1f9519889ec46c1e0bc4608c8e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a004cb1f9519889ec46c1e0bc4608c8e9">CheckUtf8Char2</a> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset, const bool bAllow4byteCode, const int nOption)</td></tr>
+<tr class="separator:a004cb1f9519889ec46c1e0bc4608c8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903c16ba07883b63c29332cbab59464f"><td class="memItemLeft" align="right" valign="top"><a id="a903c16ba07883b63c29332cbab59464f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CheckCesu8Char</b> (const char *pS, const int nLen, <a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *peCharset, const int nOption)</td></tr>
+<tr class="separator:a903c16ba07883b63c29332cbab59464f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb22799b8345ec04adba4e95e9defec1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#adb22799b8345ec04adba4e95e9defec1">CheckUtf7DPart</a> (const char *pS, const int nLen, char **ppNextChar, bool *pbError)</td></tr>
+<tr class="separator:adb22799b8345ec04adba4e95e9defec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f7cc221ba91a8826f595714ae99c77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d76/codechecker_8cpp.html#a30f7cc221ba91a8826f595714ae99c77">CheckUtf7BPart</a> (const char *pS, const int nLen, char **ppNextChar, bool *pbError, const int nOption, bool *pbNoAddPoint)</td></tr>
+<tr class="separator:a30f7cc221ba91a8826f595714ae99c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ab8668e6c9f1f586242682319e58c011c"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><b>TABLE_IsUtf7Direct</b> []</td></tr>
+<tr class="separator:ab8668e6c9f1f586242682319e58c011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>文字コード認識・判別支援関数ライブラリ </p>
+<dl class="section author"><dt>著者</dt><dd>Sakura-Editor collaborators </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>1998/03/06 新規作成 </dd>
+<dd>
+2006/03/06 名称変更（旧名：文字コード定数の定義） </dd>
+<dd>
+2007/03/19 名称改定（旧名：文字コード認識ライブラリ） </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2f9741312eee6c67259119de5fbc9ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9741312eee6c67259119de5fbc9ea1">&#9670;&nbsp;</a></span>_CheckJisAnyPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _CheckJisAnyPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *&#160;</td>
+          <td class="paramname"><em>peNextEsc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pnErrorCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>JIS 文字列をチェック</p>
+<p>今のエスケープシーケンスから次のエスケープシーケンスに変わる間をブロックと便宜的に呼んでいます。 </p>
+
+</div>
+</div>
+<a id="af459202d5759db59a181510cfa846424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af459202d5759db59a181510cfa846424">&#9670;&nbsp;</a></span>_CheckUtf16Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _CheckUtf16Char </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bBigEndian</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-16 LE/BE 文字をチェック　(組み合わせ文字列考慮なし) </p>
+
+</div>
+</div>
+<a id="a250d33cfd7cdc86243ea94ee84daec8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a250d33cfd7cdc86243ea94ee84daec8b">&#9670;&nbsp;</a></span>CheckEucjpChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckEucjpChar </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>EUC-JP 文字をチェック</p>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="../../d7/d76/codechecker_8cpp.html#a043f7cd6db4b93f3e647751c775df01d">CheckSjisChar()</a></dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2006.09.23 EUCJP 半角カタカナ判別が間違っていたのを修正．genta </dd></dl>
+
+</div>
+</div>
+<a id="a043f7cd6db4b93f3e647751c775df01d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043f7cd6db4b93f3e647751c775df01d">&#9670;&nbsp;</a></span>CheckSjisChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckSjisChar </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SJIS 文字をチェック</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pnCharset</td><td>確認した文字コードの種別が格納される</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>確認した文字の長さ </dd></dl>
+
+</div>
+</div>
+<a id="a30f7cc221ba91a8826f595714ae99c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f7cc221ba91a8826f595714ae99c77">&#9670;&nbsp;</a></span>CheckUtf7BPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf7BPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbError</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbNoAddPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-7 セットＢの文字列か</p>
+<dl class="section return"><dt>戻り値</dt><dd>セットＢ文字列の長さ</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppNextChar</td><td>次のブロック（UTF-7セットD部分）の先頭文字のポインタが格納される（文字'-'を飛ばす）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>この関数の前に <a class="el" href="../../d7/d76/codechecker_8cpp.html#adb22799b8345ec04adba4e95e9defec1">CheckUtf7DPart()</a> が実行される必要がある。 </dd></dl>
+
+</div>
+</div>
+<a id="adb22799b8345ec04adba4e95e9defec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb22799b8345ec04adba4e95e9defec1">&#9670;&nbsp;</a></span>CheckUtf7DPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf7DPart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>ppNextChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbError</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-7 セットＤの文字列か</p>
+<dl class="section return"><dt>戻り値</dt><dd>セットＤの文字列の長さ</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppNextChar</td><td>次のブロック（UTF-7セットB部分）の先頭文字のポインタが格納される。（'+'を飛ばす）</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>pbError を NULL 以外に設定していて、pbError に true が格納された場合、 戻り値と ppNextChar に格納されるポインタは使えない。 1つ以上のエラーが見つかれば候補から外れるのでそういう適当な仕様に。 </p>
+
+</div>
+</div>
+<a id="a2e7c62b1883cfd61ef7cb32c60d2ae85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7c62b1883cfd61ef7cb32c60d2ae85">&#9670;&nbsp;</a></span>CheckUtf8Char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf8Char </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bAllow4byteCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-8 文字をチェック　(組み合わせ文字列考慮なし)</p>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="../../d7/d76/codechecker_8cpp.html#a043f7cd6db4b93f3e647751c775df01d">CheckSjisChar()</a></dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2008/11/01 syat UTF8ファイルで欧米の特殊文字が読み込めない不具合を修正 </dd></dl>
+
+</div>
+</div>
+<a id="a004cb1f9519889ec46c1e0bc4608c8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004cb1f9519889ec46c1e0bc4608c8e9">&#9670;&nbsp;</a></span>CheckUtf8Char2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckUtf8Char2 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a8924dff298f089b18ae98a554a808962">ECharSet</a> *&#160;</td>
+          <td class="paramname"><em>peCharset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>bAllow4byteCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nOption</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>UTF-8 文字をチェック　(組み合わせ文字列考慮なし)</p>
+<dl class="section note"><dt>覚え書き</dt><dd>途中までUTF-8のエンコーディングが合っていれば、CHARSET_BINARY2を設定する</dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2015.12.30 novice 第１バイトが11110abbのとき、nLenより大きい値を返すのを修正 </dd></dl>
+
+</div>
+</div>
+<a id="ac482a38c40d0f40c07f5d0b84dd0c2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac482a38c40d0f40c07f5d0b84dd0c2ec">&#9670;&nbsp;</a></span>DetectJisEscseq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DetectJisEscseq </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dbd/codechecker_8h.html#a3939d7eee95907fc0e2f98d7a88551f1">EMyJisEscseq</a> *&#160;</td>
+          <td class="paramname"><em>peEscType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>JIS の エスケープ文字列を検出する</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pS</td><td>調査データ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nLen</td><td>調査データ長 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">peEscType</td><td>検出されたエスケープ文字列の種類</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">n</td><td>== 0 調査データがない </td></tr>
+    <tr><td class="paramname">n</td><td>&gt; 0 エスケープシーケンスの長さ </td></tr>
+    <tr><td class="paramname">n</td><td>&lt; 0 エスケープシーケンスが検出されなかった</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>戻り値がゼロより大きい場合に限り，*pnEscType が更新される．<br  />
+ pnEscType は NULL でも良い．<br  />
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ab8668e6c9f1f586242682319e58c011c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8668e6c9f1f586242682319e58c011c">&#9670;&nbsp;</a></span>TABLE_IsUtf7Direct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char TABLE_IsUtf7Direct[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0, 0, 0, 0, 0, 0, 0, 0,  </div>
+<div class="line">    0, 1, 1, 0, 0, 1, 0, 0,  </div>
+<div class="line">    0, 0, 0, 0, 0, 0, 0, 0,  </div>
+<div class="line">    0, 0, 0, 0, 0, 0, 0, 0,  </div>
+<div class="line">    1, 2, 2, 2, 2, 2, 2, 1,  </div>
+<div class="line">    1, 1, 2, 0, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 2, 2, 2, 2, 1,  </div>
+<div class="line">    2, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 2, 0, 2, 2, 2,  </div>
+<div class="line">    2, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 1, 1, 1, 1, 1,  </div>
+<div class="line">    1, 1, 1, 2, 2, 2, 0, 0,  </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

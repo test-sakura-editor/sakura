@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CDlgTypeList.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CDlgTypeList.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイルタイプ一覧ダイアログ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/ddc/_c_type_8h_source.html">types/CType.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d14/_c_edit_wnd_8h_source.html">window/CEditWnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dec/_c_dlg_type_list_8h_source.html">typeprop/CDlgTypeList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/dd7/_c_imp_exp_manager_8h_source.html">typeprop/CImpExpManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d26/_c_share_data_8h_source.html">env/CShareData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d35/_c_doc_type_manager_8h_source.html">env/CDocTypeManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d26/_reg_key_8h_source.html">util/RegKey.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/da9/string__ex2_8h_source.html">util/string_ex2.h</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top"><a id="a6b20d41d6252e9871430c242cb1a56e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUFFER_SIZE</b>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978b07d501f893793aa0822ef1032154"><td class="memItemLeft" align="right" valign="top"><a id="a978b07d501f893793aa0822ef1032154"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ACTION_NAME</b>&#160;&#160;&#160;(L&quot;SakuraEditor&quot;)</td></tr>
+<tr class="separator:a978b07d501f893793aa0822ef1032154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84795ed8c82a7236a4259449efa11fe"><td class="memItemLeft" align="right" valign="top"><a id="aa84795ed8c82a7236a4259449efa11fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROGID_BACKUP_NAME</b>&#160;&#160;&#160;(L&quot;SakuraEditorBackup&quot;)</td></tr>
+<tr class="separator:aa84795ed8c82a7236a4259449efa11fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309e2db52bb874d0840d4e87929954b4"><td class="memItemLeft" align="right" valign="top"><a id="a309e2db52bb874d0840d4e87929954b4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ACTION_BACKUP_PATH</b>&#160;&#160;&#160;(L&quot;\\ShellBackup&quot;)</td></tr>
+<tr class="separator:a309e2db52bb874d0840d4e87929954b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:afcd589b65197d03c7ae02b6ee11cf7e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de3/_c_dlg_type_list_8cpp.html#afcd589b65197d03c7ae02b6ee11cf7e1">CopyRegistry</a> (HKEY srcRoot, const wstring &amp;srcPath, HKEY destRoot, const wstring &amp;destPath)</td></tr>
+<tr class="separator:afcd589b65197d03c7ae02b6ee11cf7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99ab6326986256d0c9e0aac1b47d34a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de3/_c_dlg_type_list_8cpp.html#ae99ab6326986256d0c9e0aac1b47d34a">DeleteRegistry</a> (HKEY root, const wstring &amp;path)</td></tr>
+<tr class="separator:ae99ab6326986256d0c9e0aac1b47d34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f16ac219baa3ff289d59eef854ee4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de3/_c_dlg_type_list_8cpp.html#ab9f16ac219baa3ff289d59eef854ee4e">RegistExt</a> (LPCWSTR sExt, bool bDefProg)</td></tr>
+<tr class="memdesc:ab9f16ac219baa3ff289d59eef854ee4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張子ごとの関連付けレジストリ設定を行う  <a href="../../d4/de3/_c_dlg_type_list_8cpp.html#ab9f16ac219baa3ff289d59eef854ee4e">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9f16ac219baa3ff289d59eef854ee4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2bd394c293e05212070819bf8b88db1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de3/_c_dlg_type_list_8cpp.html#af2bd394c293e05212070819bf8b88db1">UnregistExt</a> (LPCWSTR sExt)</td></tr>
+<tr class="memdesc:af2bd394c293e05212070819bf8b88db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張子ごとの関連付けレジストリ設定を削除する  <a href="../../d4/de3/_c_dlg_type_list_8cpp.html#af2bd394c293e05212070819bf8b88db1">[詳解]</a><br /></td></tr>
+<tr class="separator:af2bd394c293e05212070819bf8b88db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb3f196ee69963e935dc3b29aef6d5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de3/_c_dlg_type_list_8cpp.html#a5eb3f196ee69963e935dc3b29aef6d5b">CheckExt</a> (LPCWSTR sExt, bool *pbRMenu, bool *pbDblClick)</td></tr>
+<tr class="memdesc:a5eb3f196ee69963e935dc3b29aef6d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張子ごとの関連付けレジストリ設定を確認する  <a href="../../d4/de3/_c_dlg_type_list_8cpp.html#a5eb3f196ee69963e935dc3b29aef6d5b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5eb3f196ee69963e935dc3b29aef6d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a5d66618e7370973c97222087e2687c7e"><td class="memItemLeft" align="right" valign="top">const DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>p_helpids</b> []</td></tr>
+<tr class="separator:a5d66618e7370973c97222087e2687c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイルタイプ一覧ダイアログ </p>
+<dl class="section author"><dt>著者</dt><dd>Norio Nakatani </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a5eb3f196ee69963e935dc3b29aef6d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb3f196ee69963e935dc3b29aef6d5b">&#9670;&nbsp;</a></span>CheckExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckExt </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>sExt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbRMenu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>pbDblClick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡張子ごとの関連付けレジストリ設定を確認する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sExt</td><td>[in]拡張子 </td></tr>
+    <tr><td class="paramname">pbRMenu</td><td>[out]関連付け設定 </td></tr>
+    <tr><td class="paramname">pbDblClick</td><td>[out]既定設定 処理の流れ ・pbRMenu &lt;- false, pbDblClick &lt;- false ・[HKCU\Software\Classes.(拡張子)]の存在チェック 存在しなければ終了 ・ProgID &lt;- [HKCU\Software\Classes.(拡張子)]の値 ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor]の存在チェック 存在しなければ終了 ・pbRMenu &lt;- true ・[HKCU\Software\Classes(ProgID)\shell]の値をチェック 「SakuraEditor」なら、pbDblClick &lt;- true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afcd589b65197d03c7ae02b6ee11cf7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd589b65197d03c7ae02b6ee11cf7e1">&#9670;&nbsp;</a></span>CopyRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CopyRegistry </td>
+          <td>(</td>
+          <td class="paramtype">HKEY&#160;</td>
+          <td class="paramname"><em>srcRoot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>srcPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HKEY&#160;</td>
+          <td class="paramname"><em>destRoot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>destPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>再帰的レジストリコピー </p>
+
+</div>
+</div>
+<a id="ae99ab6326986256d0c9e0aac1b47d34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99ab6326986256d0c9e0aac1b47d34a">&#9670;&nbsp;</a></span>DeleteRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeleteRegistry </td>
+          <td>(</td>
+          <td class="paramtype">HKEY&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>再帰的レジストリ削除 </p>
+
+</div>
+</div>
+<a id="ab9f16ac219baa3ff289d59eef854ee4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f16ac219baa3ff289d59eef854ee4e">&#9670;&nbsp;</a></span>RegistExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RegistExt </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>sExt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bDefProg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡張子ごとの関連付けレジストリ設定を行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sExt</td><td>拡張子 </td></tr>
+    <tr><td class="paramname">bDefProg</td><td>[in]既定フラグ（ダブルクリックで起動させるか） レジストリアクセス方針 ・管理者権限なしで実施したいため、HKLMは読み込みのみとし、書き込みはHKCUに行う。 処理の流れ ・[HKCU\Software\Classes.(拡張子)]の存在チェック 存在しなければ ・[HKCU\Software\Classes.(拡張子)]を作成。値は「SakuraEditor_(拡張子)」 ・[HKCU\Software\Classes.(拡張子)]の値が「SakuraEditor_(拡張子)」以外の場合、 [HKCU\Software\Classes.(拡張子)\SakuraEditorBackup]に値をコピーする 値に「SakuraEditor_(拡張子)」を設定する ・ProgID &lt;- [HKCR\Software\Classes.(拡張子)]の値 ・[HKCU\Software\Classes(ProgID)]の存在チェック 存在しなければ ・[HKLM\Software\Classes(HKLMのProgID)]の存在チェック 存在すれば ・[HKLM\Software\Classes(ProgID)]の構造を[HKCU\Software\Classes(ProgID)]にコピーする ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor\command]を作成。値は「"(サクラEXEパス)" "%1"」 ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor]の値を「Sakura &amp;Editor」とする ・既定フラグ判定 trueなら ・[HKCU\Software\Classes(ProgID)\shell]の値が空でなければ[HKCU\Software\Classes(ProgID)\shell\SakuraEditor\ShellBackup]に退避する ・[HKCU\Software\Classes(ProgID)\shell]の値を「SakuraEditor」とする falseなら ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor\ShellBackup]の存在チェック 存在すれば、退避した値を[HKCU\Software\Classes(ProgID)\shell]に設定 存在しなければ、[HKCU\Software\Classes(ProgID)\shell]の値を削除 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2bd394c293e05212070819bf8b88db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2bd394c293e05212070819bf8b88db1">&#9670;&nbsp;</a></span>UnregistExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnregistExt </td>
+          <td>(</td>
+          <td class="paramtype">LPCWSTR&#160;</td>
+          <td class="paramname"><em>sExt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡張子ごとの関連付けレジストリ設定を削除する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sExt</td><td>[in]拡張子 処理の流れ ・[HKCU\Software\Classes.(拡張子)]の存在チェック 存在しなければ終了 ・ProgID &lt;- [HKCU\Software\Classes.(拡張子)]の値 ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor]の存在チェック 存在しなければ終了 ・[HKCU\Software\Classes(ProgID)\shell\SakuraEditor\ShellBackup]の存在チェック 存在すれば、退避した値を[HKCU\Software\Classes(ProgID)\shell]に設定 存在しなければ、[HKCU\Software\Classes(ProgID)\shell]の値を削除 ・ProgIDの先頭が"SakuraEditor_"か？ そうなら[HKCU\Software\Classes(ProgID)]と[HKCU\Software\Classes.(拡張子)]を削除 　　そうでなければ[HKCU\Software\Classes(ProgID)\shell\SakuraEditor]を削除 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a5d66618e7370973c97222087e2687c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d66618e7370973c97222087e2687c7e">&#9670;&nbsp;</a></span>p_helpids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DWORD p_helpids[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { </div>
+<div class="line">    IDC_BUTTON_TEMPCHANGE,  HIDC_TL_BUTTON_TEMPCHANGE,  </div>
+<div class="line">    IDOK,                   HIDOK_TL,                   </div>
+<div class="line">    IDCANCEL,               HIDCANCEL_TL,               </div>
+<div class="line">    IDC_BUTTON_HELP,        HIDC_TL_BUTTON_HELP,        </div>
+<div class="line">    IDC_LIST_TYPES,         HIDC_TL_LIST_TYPES,         </div>
+<div class="line">    IDC_BUTTON_IMPORT,      HIDC_TL_BUTTON_IMPORT,      </div>
+<div class="line">    IDC_BUTTON_EXPORT,      HIDC_TL_BUTTON_EXPORT,      </div>
+<div class="line">    IDC_BUTTON_INITIALIZE,  HIDC_TL_BUTTON_INIT,        </div>
+<div class="line">    IDC_BUTTON_COPY_TYPE,   HIDC_BUTTON_COPY_TYPE,      </div>
+<div class="line">    IDC_BUTTON_UP_TYPE,     HIDC_BUTTON_UP_TYPE,        </div>
+<div class="line">    IDC_BUTTON_DOWN_TYPE,   HIDC_BUTTON_DOWN_TYPE,      </div>
+<div class="line">    IDC_BUTTON_ADD_TYPE,    HIDC_BUTTON_ADD_TYPE,       </div>
+<div class="line">    IDC_BUTTON_DEL_TYPE,    HIDC_BUTTON_DEL_TYPE,       </div>
+<div class="line">    IDC_CHECK_EXT_RMENU,    HIDC_TL_CHECK_RMENU,        </div>
+<div class="line">    IDC_CHECK_EXT_DBLCLICK, HIDC_TL_CHECK_DBLCLICK,     </div>
+<div class="line"> </div>
+<div class="line">    0, 0</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

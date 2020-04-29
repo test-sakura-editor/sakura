@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/macro/CSMacroMgr.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_614ccf2e7ca9e77c465d8296e7c03a2a.html">macro</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CSMacroMgr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/de7/_c_s_macro_mgr_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Copyright (C) 2001, genta</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    Copyright (C) 2002, YAZAKI, genta</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Copyright (C) 2005, FILE</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    Copyright (C) 2007, ryoji</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    This software is provided &#39;as-is&#39;, without any express or implied</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    warranty. In no event will the authors be held liable for any damages</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    arising from the use of this software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Permission is granted to anyone to use this software for any purpose, </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    including commercial applications, and to alter it and redistribute it </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    freely, subject to the following restrictions:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">        1. The origin of this software must not be misrepresented;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">           you must not claim that you wrote the original software.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">           If you use this software in a product, an acknowledgment</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">           in the product documentation would be appreciated but is</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">           not required.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        2. Altered source versions must be plainly marked as such, </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">           and must not be misrepresented as being the original software.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        3. This notice may not be removed or altered from any source</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">           distribution.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;WTypes.h&gt;</span> <span class="comment">//VARTYPE</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d96/_c_macro_manager_base_8h.html">CMacroManagerBase.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">env/DLLSHAREDATA.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d43/maxdata_8h.html">config/maxdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d78/design__template_8h.html">util/design_template.h</a>&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../df/de7/_c_s_macro_mgr_8h.html#a4ed5b15df834df7ec8390f75458289d2">   46</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/de7/_c_s_macro_mgr_8h.html#a4ed5b15df834df7ec8390f75458289d2">STAND_KEYMACRO</a>    = -1;   </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../df/de7/_c_s_macro_mgr_8h.html#aafe7d6432f305918c74faa641ad5b986">   47</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/de7/_c_s_macro_mgr_8h.html#aafe7d6432f305918c74faa641ad5b986">TEMP_KEYMACRO</a>     = -2;   </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../df/de7/_c_s_macro_mgr_8h.html#a0a023107a5f95fd9a2386143aaa00bd6">   48</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/de7/_c_s_macro_mgr_8h.html#a0a023107a5f95fd9a2386143aaa00bd6">INVALID_MACRO_IDX</a> = -3;   </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d2/d71/struct_macro_func_info_ex.html">   50</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d2/d71/struct_macro_func_info_ex.html">MacroFuncInfoEx</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span>         m_nArgMinSize;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span>         m_nArgMaxSize;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    VARTYPE*    m_pVarArgEx;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//マクロ関数情報構造体</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//  関数名はCSMacroMgrが持つ</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d2/dc1/struct_macro_func_info.html">   59</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span>             m_nFuncID;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> WCHAR*    m_pszFuncName;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d2/dc1/struct_macro_func_info.html#ab8f4e3807467c3fd3cbf4ef069162bb5">   62</a></span>&#160;    VARTYPE         <a class="code" href="../../d2/dc1/struct_macro_func_info.html#ab8f4e3807467c3fd3cbf4ef069162bb5">m_varArguments</a>[4];  </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d2/dc1/struct_macro_func_info.html#ae22e0c614b6775fab3baf9b8808619a9">   63</a></span>&#160;    VARTYPE         <a class="code" href="../../d2/dc1/struct_macro_func_info.html#ae22e0c614b6775fab3baf9b8808619a9">m_varResult</a>;        </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="../../d2/d71/struct_macro_func_info_ex.html">MacroFuncInfoEx</a>*    m_pData;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//マクロ関数情報構造体配列</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>* <a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfoArray</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/*-----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">クラスの宣言</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">@date 2002.2.17 YAZAKI CShareDataのインスタンスは、CProcessにひとつあるのみ。</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">-----------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d0/d94/class_c_s_macro_mgr.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//  データの型宣言</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>* m_cSavedKeyMacro[<a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a>]; <span class="comment">//  キーマクロをカスタムメニューの数だけ管理</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//  Jun. 16, 2002 genta</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//  キーマクロに標準マクロ以外のマクロを読み込めるように</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>* m_pKeyMacro; <span class="comment">//  標準の（保存ができる）キーマクロも管理</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//　一時マクロ（名前を指定してマクロ実行）を管理</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>* m_pTempMacro;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    ||  Constructors</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#ae4983273c68ab306ebd30f8546cb9a0f">CSMacroMgr</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ~<a class="code" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> Clear( <span class="keywordtype">int</span> idx );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#afa91c39aecfc3c08590b13b086fd6419">ClearAll</a>( <span class="keywordtype">void</span> );  <span class="comment">/* キーマクロのバッファをクリアする */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    BOOL <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a147834b54187e2251ae1e91e85af4ea2">Exec</a>( <span class="keywordtype">int</span> idx, HINSTANCE hInstance, <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView, <span class="keywordtype">int</span> flags );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d0/d94/class_c_s_macro_mgr.html#a2f45d708589c22af0e6186fb906ec3a9">  103</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a2f45d708589c22af0e6186fb906ec3a9">IsEnabled</a>(<span class="keywordtype">int</span> idx)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> ( 0 &lt;= idx &amp;&amp; idx &lt; <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a> ) ?</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        m_pShareData-&gt;m_Common.<a class="code" href="../../d5/d05/struct_common_setting.html#af82c72a507209b083c8102056f88413a">m_sMacro</a>.<a class="code" href="../../d4/d29/struct_common_setting___macro.html#a4ed9aa6a9f66e2f6580d8ee3583459ca">m_MacroTable</a>[idx].IsEnabled() : <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d0/d94/class_c_s_macro_mgr.html#ab2bb97a3db3bc9692911c7a6ebe94c63">  109</a></span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#ab2bb97a3db3bc9692911c7a6ebe94c63">GetTitle</a>(<span class="keywordtype">int</span> idx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> ( 0 &lt;= idx &amp;&amp; idx &lt; <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a> ) ?</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        m_pShareData-&gt;m_Common.<a class="code" href="../../d5/d05/struct_common_setting.html#af82c72a507209b083c8102056f88413a">m_sMacro</a>.<a class="code" href="../../d4/d29/struct_common_setting___macro.html#a4ed9aa6a9f66e2f6580d8ee3583459ca">m_MacroTable</a>[idx].GetTitle() : NULL;    <span class="comment">// 2007.11.02 ryoji</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d0/d94/class_c_s_macro_mgr.html#a11087eb4d0c296bd529fae9376fb72aa">  116</a></span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a11087eb4d0c296bd529fae9376fb72aa">GetName</a>(<span class="keywordtype">int</span> idx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> ( 0 &lt;= idx &amp;&amp; idx &lt; <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a> ) ?</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        m_pShareData-&gt;m_Common.<a class="code" href="../../d5/d05/struct_common_setting.html#af82c72a507209b083c8102056f88413a">m_sMacro</a>.<a class="code" href="../../d4/d29/struct_common_setting___macro.html#a4ed9aa6a9f66e2f6580d8ee3583459ca">m_MacroTable</a>[idx].<a class="code" href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">m_szName</a> : NULL;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../d0/d94/class_c_s_macro_mgr.html#a6ae22c68dd23caa0f5f04c124def2373">  126</a></span>&#160;    <span class="keyword">const</span> WCHAR* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a6ae22c68dd23caa0f5f04c124def2373">GetFile</a>(<span class="keywordtype">int</span> idx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> ( 0 &lt;= idx &amp;&amp; idx &lt; <a class="code" href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a> ) ?</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        m_pShareData-&gt;m_Common.<a class="code" href="../../d5/d05/struct_common_setting.html#af82c72a507209b083c8102056f88413a">m_sMacro</a>.<a class="code" href="../../d4/d29/struct_common_setting___macro.html#a4ed9aa6a9f66e2f6580d8ee3583459ca">m_MacroTable</a>[idx].<a class="code" href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">m_szFile</a> : </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ( (idx == <a class="code" href="../../df/de7/_c_s_macro_mgr_8h.html#a4ed5b15df834df7ec8390f75458289d2">STAND_KEYMACRO</a> || idx == <a class="code" href="../../df/de7/_c_s_macro_mgr_8h.html#aafe7d6432f305918c74faa641ad5b986">TEMP_KEYMACRO</a>) &amp;&amp; m_sMacroPath != L<span class="stringliteral">&quot;&quot;</span> ) ?</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        m_sMacroPath.c_str() : NULL;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    BOOL <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#adfb887ef2736d448fbb1eae2150bf9ac">Load</a>( <span class="keywordtype">int</span> idx, HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszPath, <span class="keyword">const</span> WCHAR* pszType );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    BOOL <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a43a7c99a252acdb43e686d5171760afe">Save</a>( <span class="keywordtype">int</span> idx, HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszPath );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#ab3ca3656991d08c2fb192c589960ce8a">UnloadAll</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#afa2f54e7f2c08c4d1c2e399af19fdd72">Append</a>( <span class="keywordtype">int</span> idx, EFunctionCode nFuncID, <span class="keyword">const</span> LPARAM* lParams, <a class="code" href="../../d7/d7b/class_c_edit_view.html">CEditView</a>* pcEditView );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    ||  Attributes &amp; Operations</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">static</span> WCHAR* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a5d2eb343ab40f5fc23d80f267c36ba92">GetFuncInfoByID</a>( HINSTANCE hInstance, <span class="keywordtype">int</span> nFuncID, WCHAR* pszFuncName, WCHAR* pszFuncNameJapanese );  <span class="comment">/* 機能ID→関数名，機能名日本語 */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">static</span> EFunctionCode <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#ac9e2751b566734ab2733589a6455d6cf">GetFuncInfoByName</a>( HINSTANCE hInstance, <span class="keyword">const</span> WCHAR* pszFuncName, WCHAR* pszFuncNameJapanese );    <span class="comment">/* 関数名→機能ID，機能名日本語 */</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> BOOL <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a1c2df872fd08c8a3082b297d1b595b7b">CanFuncIsKeyMacro</a>( <span class="keywordtype">int</span> nFuncID );   <span class="comment">/* キーマクロに記録可能な機能かどうかを調べる */</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">//  Jun. 16, 2002 genta</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a5d2eb343ab40f5fc23d80f267c36ba92">GetFuncInfoByID</a>( <span class="keywordtype">int</span> nFuncID );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#aae5593e9149a398b3fc75e30d0f237f1">IsSaveOk</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//  Sep. 15, 2005 FILE  実行中マクロのインデックス番号操作 (INVALID_MACRO_IDX:無効)</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">int</span> GetCurrentIdx( <span class="keywordtype">void</span> )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> m_CurrentIdx;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> SetCurrentIdx( <span class="keywordtype">int</span> idx ) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">int</span> oldIdx = m_CurrentIdx;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        m_CurrentIdx = idx;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> oldIdx;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//  Oct. 22, 2008 syat 一時マクロ導入</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>* <a class="code" href="../../d0/d94/class_c_s_macro_mgr.html#a8a5a8b67c79d08a8bb671cef24ac500e">SetTempMacro</a>( <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a> *newMacro );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a>*   m_pShareData;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a>** Idx2Ptr(<span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">int</span> m_CurrentIdx;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    std::wstring    m_sMacroPath;   <span class="comment">// Loadしたマクロ名</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>    m_MacroFuncInfoCommandArr[];    <span class="comment">// コマンド情報(戻り値なし)</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a>    m_MacroFuncInfoArr[];       <span class="comment">// 関数情報(戻り値あり)</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    DISALLOW_COPY_AND_ASSIGN(<a class="code" href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a11087eb4d0c296bd529fae9376fb72aa"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a11087eb4d0c296bd529fae9376fb72aa">CSMacroMgr::GetName</a></div><div class="ttdeci">const WCHAR * GetName(int idx) const</div><div class="ttdoc">表示名の取得</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:116</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_afa2f54e7f2c08c4d1c2e399af19fdd72"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#afa2f54e7f2c08c4d1c2e399af19fdd72">CSMacroMgr::Append</a></div><div class="ttdeci">int Append(int idx, EFunctionCode nFuncID, const LPARAM *lParams, CEditView *pcEditView)</div><div class="ttdoc">キーマクロのバッファにデータ追加</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:543</div></div>
+<div class="ttc" id="a_c_s_macro_mgr_8h_html_aafe7d6432f305918c74faa641ad5b986"><div class="ttname"><a href="../../df/de7/_c_s_macro_mgr_8h.html#aafe7d6432f305918c74faa641ad5b986">TEMP_KEYMACRO</a></div><div class="ttdeci">const int TEMP_KEYMACRO</div><div class="ttdoc">一時マクロ(名前を指定してマクロ実行)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:47</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_ab3ca3656991d08c2fb192c589960ce8a"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#ab3ca3656991d08c2fb192c589960ce8a">CSMacroMgr::UnloadAll</a></div><div class="ttdeci">void UnloadAll(void)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:711</div></div>
+<div class="ttc" id="astruct_macro_func_info_ex_html"><div class="ttname"><a href="../../d2/d71/struct_macro_func_info_ex.html">MacroFuncInfoEx</a></div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:51</div></div>
+<div class="ttc" id="astruct_d_l_l_s_h_a_r_e_d_a_t_a_html"><div class="ttname"><a href="../../d5/da6/struct_d_l_l_s_h_a_r_e_d_a_t_a.html">DLLSHAREDATA</a></div><div class="ttdef"><b>Definition:</b> DLLSHAREDATA.h:128</div></div>
+<div class="ttc" id="astruct_common_setting_html_af82c72a507209b083c8102056f88413a"><div class="ttname"><a href="../../d5/d05/struct_common_setting.html#af82c72a507209b083c8102056f88413a">CommonSetting::m_sMacro</a></div><div class="ttdeci">CommonSetting_Macro m_sMacro</div><div class="ttdoc">マクロ</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:735</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a2f45d708589c22af0e6186fb906ec3a9"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a2f45d708589c22af0e6186fb906ec3a9">CSMacroMgr::IsEnabled</a></div><div class="ttdeci">bool IsEnabled(int idx) const</div><div class="ttdoc">実行可能か？CShareDataに問い合わせ</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:103</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_afa91c39aecfc3c08590b13b086fd6419"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#afa91c39aecfc3c08590b13b086fd6419">CSMacroMgr::ClearAll</a></div><div class="ttdeci">void ClearAll(void)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:522</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a1c2df872fd08c8a3082b297d1b595b7b"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a1c2df872fd08c8a3082b297d1b595b7b">CSMacroMgr::CanFuncIsKeyMacro</a></div><div class="ttdeci">static BOOL CanFuncIsKeyMacro(int nFuncID)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:892</div></div>
+<div class="ttc" id="a_c_s_macro_mgr_8h_html_a4ed5b15df834df7ec8390f75458289d2"><div class="ttname"><a href="../../df/de7/_c_s_macro_mgr_8h.html#a4ed5b15df834df7ec8390f75458289d2">STAND_KEYMACRO</a></div><div class="ttdeci">const int STAND_KEYMACRO</div><div class="ttdoc">標準マクロ(キーマクロ)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:46</div></div>
+<div class="ttc" id="a_d_l_l_s_h_a_r_e_d_a_t_a_8h_html"><div class="ttname"><a href="../../df/d23/_d_l_l_s_h_a_r_e_d_a_t_a_8h.html">DLLSHAREDATA.h</a></div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a5d2eb343ab40f5fc23d80f267c36ba92"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a5d2eb343ab40f5fc23d80f267c36ba92">CSMacroMgr::GetFuncInfoByID</a></div><div class="ttdeci">static WCHAR * GetFuncInfoByID(HINSTANCE hInstance, int nFuncID, WCHAR *pszFuncName, WCHAR *pszFuncNameJapanese)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:806</div></div>
+<div class="ttc" id="a_c_macro_manager_base_8h_html"><div class="ttname"><a href="../../d8/d96/_c_macro_manager_base_8h.html">CMacroManagerBase.h</a></div><div class="ttdoc">マクロエンジン</div></div>
+<div class="ttc" id="astruct_macro_rec_html_ae0c063966b3bb2c6f4d5a90ff339d560"><div class="ttname"><a href="../../d8/d4a/struct_macro_rec.html#ae0c063966b3bb2c6f4d5a90ff339d560">MacroRec::m_szName</a></div><div class="ttdeci">WCHAR m_szName[MACRONAME_MAX]</div><div class="ttdoc">表示名</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:46</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_ae4983273c68ab306ebd30f8546cb9a0f"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#ae4983273c68ab306ebd30f8546cb9a0f">CSMacroMgr::CSMacroMgr</a></div><div class="ttdeci">CSMacroMgr()</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:490</div></div>
+<div class="ttc" id="aclass_c_edit_view_html"><div class="ttname"><a href="../../d7/d7b/class_c_edit_view.html">CEditView</a></div><div class="ttdoc">文書ウィンドウの管理</div><div class="ttdef"><b>Definition:</b> CEditView.h:132</div></div>
+<div class="ttc" id="astruct_macro_func_info_html_ae22e0c614b6775fab3baf9b8808619a9"><div class="ttname"><a href="../../d2/dc1/struct_macro_func_info.html#ae22e0c614b6775fab3baf9b8808619a9">MacroFuncInfo::m_varResult</a></div><div class="ttdeci">VARTYPE m_varResult</div><div class="ttdoc">戻り値の型 VT_EMPTYならprocedureということで</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:63</div></div>
+<div class="ttc" id="adesign__template_8h_html"><div class="ttname"><a href="../../d8/d78/design__template_8h.html">design_template.h</a></div></div>
+<div class="ttc" id="amaxdata_8h_html_a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html#a4863e4bc6ccbeffb162dfa643df760f0acdc15d5471c5ff8d6e0ff592d5eb57a3">MAX_CUSTMACRO</a></div><div class="ttdeci">@ MAX_CUSTMACRO</div><div class="ttdoc">2002.11.24 Moca</div><div class="ttdef"><b>Definition:</b> maxdata.h:65</div></div>
+<div class="ttc" id="astruct_macro_func_info_html"><div class="ttname"><a href="../../d2/dc1/struct_macro_func_info.html">MacroFuncInfo</a></div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:59</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a147834b54187e2251ae1e91e85af4ea2"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a147834b54187e2251ae1e91e85af4ea2">CSMacroMgr::Exec</a></div><div class="ttdeci">BOOL Exec(int idx, HINSTANCE hInstance, CEditView *pcEditView, int flags)</div><div class="ttdoc">キーボードマクロの実行</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:578</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_ac9e2751b566734ab2733589a6455d6cf"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#ac9e2751b566734ab2733589a6455d6cf">CSMacroMgr::GetFuncInfoByName</a></div><div class="ttdeci">static EFunctionCode GetFuncInfoByName(HINSTANCE hInstance, const WCHAR *pszFuncName, WCHAR *pszFuncNameJapanese)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:846</div></div>
+<div class="ttc" id="aclass_c_macro_manager_base_html"><div class="ttname"><a href="../../dd/d69/class_c_macro_manager_base.html">CMacroManagerBase</a></div><div class="ttdoc">マクロを処理するエンジン部分の基底クラス</div><div class="ttdef"><b>Definition:</b> CMacroManagerBase.h:51</div></div>
+<div class="ttc" id="astruct_macro_func_info_html_ab8f4e3807467c3fd3cbf4ef069162bb5"><div class="ttname"><a href="../../d2/dc1/struct_macro_func_info.html#ab8f4e3807467c3fd3cbf4ef069162bb5">MacroFuncInfo::m_varArguments</a></div><div class="ttdeci">VARTYPE m_varArguments[4]</div><div class="ttdoc">引数の型の配列</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:62</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_ab2bb97a3db3bc9692911c7a6ebe94c63"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#ab2bb97a3db3bc9692911c7a6ebe94c63">CSMacroMgr::GetTitle</a></div><div class="ttdeci">const WCHAR * GetTitle(int idx) const</div><div class="ttdoc">表示する名前の取得</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:109</div></div>
+<div class="ttc" id="a_c_s_macro_mgr_8h_html_a0a023107a5f95fd9a2386143aaa00bd6"><div class="ttname"><a href="../../df/de7/_c_s_macro_mgr_8h.html#a0a023107a5f95fd9a2386143aaa00bd6">INVALID_MACRO_IDX</a></div><div class="ttdeci">const int INVALID_MACRO_IDX</div><div class="ttdoc">無効なマクロのインデックス番号</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:48</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a6ae22c68dd23caa0f5f04c124def2373"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a6ae22c68dd23caa0f5f04c124def2373">CSMacroMgr::GetFile</a></div><div class="ttdeci">const WCHAR * GetFile(int idx) const</div><div class="ttdoc">ファイル名の取得</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:126</div></div>
+<div class="ttc" id="astruct_common_setting___macro_html_a4ed9aa6a9f66e2f6580d8ee3583459ca"><div class="ttname"><a href="../../d4/d29/struct_common_setting___macro.html#a4ed9aa6a9f66e2f6580d8ee3583459ca">CommonSetting_Macro::m_MacroTable</a></div><div class="ttdeci">MacroRec m_MacroTable[MAX_CUSTMACRO]</div><div class="ttdoc">キー割り当て用マクロテーブル Sep. 14, 2001 genta</div><div class="ttdef"><b>Definition:</b> CommonSetting.h:506</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html">CSMacroMgr</a></div><div class="ttdef"><b>Definition:</b> CSMacroMgr.h:75</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a8a5a8b67c79d08a8bb671cef24ac500e"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a8a5a8b67c79d08a8bb671cef24ac500e">CSMacroMgr::SetTempMacro</a></div><div class="ttdeci">CMacroManagerBase * SetTempMacro(CMacroManagerBase *newMacro)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:1266</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_aae5593e9149a398b3fc75e30d0f237f1"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#aae5593e9149a398b3fc75e30d0f237f1">CSMacroMgr::IsSaveOk</a></div><div class="ttdeci">bool IsSaveOk(void)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:1255</div></div>
+<div class="ttc" id="astruct_macro_rec_html_ab6011055d3bffb46068ed4773621e92c"><div class="ttname"><a href="../../d8/d4a/struct_macro_rec.html#ab6011055d3bffb46068ed4773621e92c">MacroRec::m_szFile</a></div><div class="ttdeci">WCHAR m_szFile[_MAX_PATH+1]</div><div class="ttdoc">ファイル名(ディレクトリを含まない)</div><div class="ttdef"><b>Definition:</b> CFuncLookup.h:47</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_a43a7c99a252acdb43e686d5171760afe"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#a43a7c99a252acdb43e686d5171760afe">CSMacroMgr::Save</a></div><div class="ttdeci">BOOL Save(int idx, HINSTANCE hInstance, const WCHAR *pszPath)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:727</div></div>
+<div class="ttc" id="aclass_c_s_macro_mgr_html_adfb887ef2736d448fbb1eae2150bf9ac"><div class="ttname"><a href="../../d0/d94/class_c_s_macro_mgr.html#adfb887ef2736d448fbb1eae2150bf9ac">CSMacroMgr::Load</a></div><div class="ttdeci">BOOL Load(int idx, HINSTANCE hInstance, const WCHAR *pszPath, const WCHAR *pszType)</div><div class="ttdef"><b>Definition:</b> CSMacroMgr.cpp:646</div></div>
+<div class="ttc" id="amaxdata_8h_html"><div class="ttname"><a href="../../d2/d43/maxdata_8h.html">maxdata.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

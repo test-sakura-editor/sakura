@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakura Editor: sakura_core/typeprop/CPropTypesScreen.cpp ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sakura Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',false,false,'search.php','検索');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f6b0e4bdc18fa38b9396bfc70080ba85.html">sakura_core</a></li><li class="navelem"><a class="el" href="../../dir_0504ed690d47b92e534a045825b55851.html">typeprop</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">CPropTypesScreen.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>タイプ別設定 - スクリーン  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d8/dc1/_std_afx_8h_source.html">StdAfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d7a/_c_prop_types_8h_source.html">CPropTypes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d94/_c_dlg_open_file_8h_source.html">dlg/CDlgOpenFile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d16/module_8h_source.html">util/module.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/d03/shell_8h_source.html">util/shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/df1/window_8h_source.html">util/window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d4d/file_8h_source.html">util/file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/dff/os_8h_source.html">util/os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d14/sakura__rc_8h_source.html">sakura_rc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d2d/sakura_8hh_source.html">sakura.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/df6/_c_tsv_mode_info_8h_source.html">doc/layout/CTsvModeInfo.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:aef5275616cf71f1af6002fe93db1184b"><td class="memItemLeft" align="right" valign="top"><a id="aef5275616cf71f1af6002fe93db1184b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>eOutlineNativeNamesId</b> { <b>STR2_OUTLINE_XML</b> = 0, 
+<b>STR2_OUTLINE_C</b>, 
+<b>STR2_OUTLINE_CPP</b>, 
+<b>STR2_OUTLINE_MAX</b>
+ }</td></tr>
+<tr class="separator:aef5275616cf71f1af6002fe93db1184b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:abfef79122125dd50dd6b91c3b8cb612a"><td class="memItemLeft" align="right" valign="top">const WCHAR *&#160;</td><td class="memItemRight" valign="bottom"><b>pszOutlineNames</b> []</td></tr>
+<tr class="separator:abfef79122125dd50dd6b91c3b8cb612a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ef63d681e637ab4e6da880a9739f74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; <a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OlmArr</b> []</td></tr>
+<tr class="separator:a60ef63d681e637ab4e6da880a9739f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cd27e8676a5cf25304ab01cd973176"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; <a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1">ETabArrow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TabArrowArr</b> []</td></tr>
+<tr class="separator:af4cd27e8676a5cf25304ab01cd973176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9062677ec706c4d2f63f86fc76543d11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; <a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">ESmartIndentType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SmartIndentArr</b> []</td></tr>
+<tr class="separator:a9062677ec706c4d2f63f86fc76543d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6263b30d7191298084bd19cd148452bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/_c_prop_types_screen_8cpp.html#a6263b30d7191298084bd19cd148452bf">IndentTypeArr</a> []</td></tr>
+<tr class="separator:a6263b30d7191298084bd19cd148452bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ecc270d0eda53d088e0b6a2bfd0e6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>WrapMethodArr</b> []</td></tr>
+<tr class="separator:af9ecc270d0eda53d088e0b6a2bfd0e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8224d9a2c0bb7943084b1132e285f87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TsvModeArr</b> []</td></tr>
+<tr class="separator:ac8224d9a2c0bb7943084b1132e285f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>タイプ別設定 - スクリーン </p>
+<dl class="section date"><dt>日付</dt><dd>2008.04.12 kobake CPropTypes.cppから分離 </dd></dl>
+</div><h2 class="groupheader">変数詳解</h2>
+<a id="a6263b30d7191298084bd19cd148452bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6263b30d7191298084bd19cd148452bf">&#9670;&nbsp;</a></span>IndentTypeArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;int&gt; IndentTypeArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { 0, STR_WRAP_INDENT_NONE },    </div>
+<div class="line">    { 1, STR_WRAP_INDENT_TX2X },    </div>
+<div class="line">    { 2, STR_WRAP_INDENT_BOL },     </div>
+<div class="line">}</div>
+</div><!-- fragment --><p>2行目以降のインデント方法</p>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="../../da/d25/class_c_layout_mgr.html#a779924ed18d80e5355fd82ac798a5e8a">CLayoutMgr::SetLayoutInfo()</a> </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>Oct. 1, 2002 genta </dd></dl>
+
+</div>
+</div>
+<a id="a60ef63d681e637ab4e6da880a9739f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ef63d681e637ab4e6da880a9739f74">&#9670;&nbsp;</a></span>OlmArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;<a class="el" href="../../d5/ddc/_c_type_8h.html#a16b5e596b70273cca152f2094e721e37">EOutlineType</a>&gt; OlmArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { OUTLINE_C_CPP,    STR_OUTLINE_CPP },</div>
+<div class="line">    { OUTLINE_C,        STR2_OUTLINE_C },</div>
+<div class="line">    { OUTLINE_CPP,      STR2_OUTLINE_CPP },</div>
+<div class="line">    { OUTLINE_PLSQL,    STR_OUTLINE_PLSQL },</div>
+<div class="line">    { OUTLINE_JAVA,     STR_OUTLINE_JAVA },</div>
+<div class="line">    { OUTLINE_COBOL,    STR_OUTLINE_COBOL },</div>
+<div class="line">    { OUTLINE_PERL,     STR_OUTLINE_PERL },         </div>
+<div class="line">    { OUTLINE_ASM,      STR_OUTLINE_ASM },</div>
+<div class="line">    { OUTLINE_VB,       STR_OUTLINE_VB },           </div>
+<div class="line">    { OUTLINE_PYTHON,   STR_OUTLINE_PYTHON },       </div>
+<div class="line">    { OUTLINE_ERLANG,   STR_OUTLINE_ERLANG },           </div>
+<div class="line">    { OUTLINE_WZTXT,    STR_OUTLINE_WZ },           </div>
+<div class="line">    { OUTLINE_HTML,     STR_OUTLINE_HTML },         </div>
+<div class="line">    { OUTLINE_XML,      STR2_OUTLINE_XML },         </div>
+<div class="line">    { OUTLINE_TEX,      STR_OUTLINE_TEX },      </div>
+<div class="line">    { OUTLINE_TEXT,     STR_OUTLINE_TEXT }      </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abfef79122125dd50dd6b91c3b8cb612a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfef79122125dd50dd6b91c3b8cb612a">&#9670;&nbsp;</a></span>pszOutlineNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const WCHAR* pszOutlineNames[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    L<span class="stringliteral">&quot;XML&quot;</span>,</div>
+<div class="line">    L<span class="stringliteral">&quot;C&quot;</span>,</div>
+<div class="line">    L<span class="stringliteral">&quot;C++&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9062677ec706c4d2f63f86fc76543d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9062677ec706c4d2f63f86fc76543d11">&#9670;&nbsp;</a></span>SmartIndentArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;<a class="el" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4">ESmartIndentType</a>&gt; SmartIndentArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a5a51c847b9496528a3332156ede5f8c4">SMARTINDENT_NONE</a>, STR_SMART_INDENT_NONE },</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a7ab836923ca78d2e53e75a0713af99bb">SMARTINDENT_CPP</a>,  STR_SMART_INDENT_C_CPP },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af4cd27e8676a5cf25304ab01cd973176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cd27e8676a5cf25304ab01cd973176">&#9670;&nbsp;</a></span>TabArrowArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;<a class="el" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1">ETabArrow</a>&gt; TabArrowArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1acb45b274a618126921dcaa0779b03eb4">TABARROW_STRING</a>,  STR_TAB_SYMBOL_CHARA },         </div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1aacc22db3de14ec15b6d05975393b4b0f">TABARROW_SHORT</a>,   STR_TAB_SYMBOL_SHORT_ARROW },   </div>
+<div class="line">    { <a class="code" href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1adf380dc192b59dcce7f92e09082253a9">TABARROW_LONG</a>,    STR_TAB_SYMBOL_LONG_ARROW },    </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac8224d9a2c0bb7943084b1132e285f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8224d9a2c0bb7943084b1132e285f87">&#9670;&nbsp;</a></span>TsvModeArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;int&gt; TsvModeArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { TSV_MODE_NONE,        STR_TSV_MODE_NONE },    </div>
+<div class="line">    { TSV_MODE_TSV,         STR_TSV_MODE_TSV },     </div>
+<div class="line">    { TSV_MODE_CSV,         STR_TSV_MODE_CSV },     </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9ecc270d0eda53d088e0b6a2bfd0e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ecc270d0eda53d088e0b6a2bfd0e6e">&#9670;&nbsp;</a></span>WrapMethodArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d87/struct_t_y_p_e___n_a_m_e___i_d.html">TYPE_NAME_ID</a>&lt;int&gt; WrapMethodArr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    { <a class="code" href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da2081976ed487d8ecbf683f0069ca5516">WRAP_NO_TEXT_WRAP</a>,    STR_WRAP_METHOD_NO_WRAP },  </div>
+<div class="line">    { <a class="code" href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da2d5743a655db0eb3b568fc2a971c5597">WRAP_SETTING_WIDTH</a>,   STR_WRAP_METHOD_SPEC_WIDTH },   </div>
+<div class="line">    { <a class="code" href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da93fb77f514bbedd1e869e7e2d6a5af5e">WRAP_WINDOW_WIDTH</a>,    STR_WRAP_METHOD_WIN_WIDTH },    </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="a_c_type_8h_html_abc53eb7d1c801464cc0e9b16b7e561c1acb45b274a618126921dcaa0779b03eb4"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1acb45b274a618126921dcaa0779b03eb4">TABARROW_STRING</a></div><div class="ttdeci">@ TABARROW_STRING</div><div class="ttdoc">文字指定</div><div class="ttdef"><b>Definition:</b> CType.h:37</div></div>
+<div class="ttc" id="a_c_type_8h_html_abc53eb7d1c801464cc0e9b16b7e561c1aacc22db3de14ec15b6d05975393b4b0f"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1aacc22db3de14ec15b6d05975393b4b0f">TABARROW_SHORT</a></div><div class="ttdeci">@ TABARROW_SHORT</div><div class="ttdoc">短い矢印</div><div class="ttdef"><b>Definition:</b> CType.h:38</div></div>
+<div class="ttc" id="aglobal_8h_html_a3df5b73e66f3cc76e341d579590aaa3da93fb77f514bbedd1e869e7e2d6a5af5e"><div class="ttname"><a href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da93fb77f514bbedd1e869e7e2d6a5af5e">WRAP_WINDOW_WIDTH</a></div><div class="ttdeci">@ WRAP_WINDOW_WIDTH</div><div class="ttdoc">右端で折り返す</div><div class="ttdef"><b>Definition:</b> global.h:124</div></div>
+<div class="ttc" id="a_c_type_8h_html_abc53eb7d1c801464cc0e9b16b7e561c1adf380dc192b59dcce7f92e09082253a9"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#abc53eb7d1c801464cc0e9b16b7e561c1adf380dc192b59dcce7f92e09082253a9">TABARROW_LONG</a></div><div class="ttdeci">@ TABARROW_LONG</div><div class="ttdoc">長い矢印</div><div class="ttdef"><b>Definition:</b> CType.h:39</div></div>
+<div class="ttc" id="aglobal_8h_html_a3df5b73e66f3cc76e341d579590aaa3da2d5743a655db0eb3b568fc2a971c5597"><div class="ttname"><a href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da2d5743a655db0eb3b568fc2a971c5597">WRAP_SETTING_WIDTH</a></div><div class="ttdeci">@ WRAP_SETTING_WIDTH</div><div class="ttdoc">指定桁で折り返す</div><div class="ttdef"><b>Definition:</b> global.h:123</div></div>
+<div class="ttc" id="a_c_type_8h_html_a427ae3355529353b22280f208318c3e4a7ab836923ca78d2e53e75a0713af99bb"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a7ab836923ca78d2e53e75a0713af99bb">SMARTINDENT_CPP</a></div><div class="ttdeci">@ SMARTINDENT_CPP</div><div class="ttdoc">C/C++</div><div class="ttdef"><b>Definition:</b> CType.h:77</div></div>
+<div class="ttc" id="a_c_type_8h_html_a427ae3355529353b22280f208318c3e4a5a51c847b9496528a3332156ede5f8c4"><div class="ttname"><a href="../../d5/ddc/_c_type_8h.html#a427ae3355529353b22280f208318c3e4a5a51c847b9496528a3332156ede5f8c4">SMARTINDENT_NONE</a></div><div class="ttdeci">@ SMARTINDENT_NONE</div><div class="ttdoc">なし</div><div class="ttdef"><b>Definition:</b> CType.h:76</div></div>
+<div class="ttc" id="aglobal_8h_html_a3df5b73e66f3cc76e341d579590aaa3da2081976ed487d8ecbf683f0069ca5516"><div class="ttname"><a href="../../d2/d49/global_8h.html#a3df5b73e66f3cc76e341d579590aaa3da2081976ed487d8ecbf683f0069ca5516">WRAP_NO_TEXT_WRAP</a></div><div class="ttdeci">@ WRAP_NO_TEXT_WRAP</div><div class="ttdoc">折り返さない（スクロールバーをテキスト幅に合わせる）</div><div class="ttdef"><b>Definition:</b> global.h:122</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
