@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI-doxygen-sakura
+name: sakura help
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -23,20 +23,11 @@ jobs:
       with:
           persist-credentials: false
 
-    - name: Deploy plugin help
+    - name: Deploy sakura help
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master # The branch the action should deploy to.
-          FOLDER: help/plugin/Text # The folder the action should deploy.
-          TARGET_FOLDER: plugin
-          REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
-
-    - name: Deploy macro help
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: help/macro/source # The folder the action should deploy.
-          TARGET_FOLDER: macro
+          FOLDER: help/sakura/res # The folder the action should deploy.
+          TARGET_FOLDER: help
           REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
