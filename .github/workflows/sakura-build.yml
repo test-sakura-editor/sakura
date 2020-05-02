@@ -20,6 +20,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: check env
+      run: set
+      shell: cmd
+
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
 
