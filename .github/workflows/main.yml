@@ -23,11 +23,6 @@ jobs:
       with:
           persist-credentials: false
 
-    - name: Doxygen Build
-      uses: mattnotmitt/doxygen-action@v1
-      with:
-          working-directory: '.'
-          doxyfile-path: './doxygen.conf'
 
     - name: Deploy sakura help
       uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -37,15 +32,6 @@ jobs:
           FOLDER: help/sakura/res # The folder the action should deploy.
           TARGET_FOLDER: help
           REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
-
-    # - name: Deploy doxygen
-    #   uses: JamesIves/github-pages-deploy-action@releases/v3
-    #   with:
-    #       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-    #       BRANCH: gh-pages # The branch the action should deploy to.
-    #       FOLDER: html # The folder the action should deploy.
-    #       TARGET_FOLDER: testdir
-    #       REPOSITORY_NAME: test-sakura-editor/doxygen
 
     - name: Deploy plugin help
       uses: JamesIves/github-pages-deploy-action@releases/v3
