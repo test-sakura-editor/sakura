@@ -42,7 +42,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: master # The branch the action should deploy to.
           FOLDER: help/sakura/res # The folder the action should deploy.
           TARGET_FOLDER: help
           REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
@@ -51,7 +51,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: master # The branch the action should deploy to.
           FOLDER: help/plugin/Text # The folder the action should deploy.
           TARGET_FOLDER: plugin
           REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
@@ -60,7 +60,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
+          BRANCH: master # The branch the action should deploy to.
           FOLDER: help/macro/source # The folder the action should deploy.
           TARGET_FOLDER: macro
           REPOSITORY_NAME: test-sakura-editor/test-sakura-editor.github.io
