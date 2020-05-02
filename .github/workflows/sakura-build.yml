@@ -36,3 +36,13 @@ jobs:
     - name: MSBuild
       run: build-sln.bat ${{ matrix.platform }} ${{ matrix.config }}
       shell: cmd
+      
+    - name: zipArtifacts
+      run: zipArtifacts.bat ${{ matrix.platform }} ${{ matrix.config }}
+      shell: cmd
+
+    - name: Upload
+      uses: actions/upload-artifact@v1
+      with:
+        name: exe ${{ matrix.platform }} ${{ matrix.config }}
+        path: sakura*.zip
