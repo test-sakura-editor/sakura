@@ -17,6 +17,12 @@ jobs:
     # The type of runner that the job will run on
     name: MSBuild
     runs-on: windows-latest
+
+    strategy:
+      matrix:
+        config: ["Debug", "Release"]    
+        platform: ["Win32", "x64"]    
+
     steps:
     - uses: actions/checkout@v1
 
@@ -28,5 +34,5 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.0
       
     - name: MSBuild
-      run: msbuild sakura.sln
+      run: build-sln.bat ${{ matrix.platform }} ${{ matrix.config }}
       shell: cmd
