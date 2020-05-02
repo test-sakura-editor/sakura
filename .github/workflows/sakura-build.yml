@@ -40,6 +40,13 @@ jobs:
     - name: zipArtifacts
       run: zipArtifacts.bat ${{ matrix.platform }} ${{ matrix.config }}
       shell: cmd
+      
+    #
+    # https://github.com/actions/upload-artifact/issues/13
+    #
+    - name: copy to workspace
+      run: copy *.zip ${{ github.workspace }}
+      shell: cmd
 
     - name: Upload
       uses: actions/upload-artifact@v1
