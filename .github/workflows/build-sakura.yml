@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: sakura build
+name: build sakura
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -13,6 +11,7 @@ on:
   pull_request:
     branches:
       - master
+      - feature/*
       - release/*
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -25,16 +24,19 @@ jobs:
 
     strategy:
       matrix:
-        config: ["Debug", "Release"]    
-        platform: ["Win32", "x64"]    
+        config:
+          - Debug
+          - Release
+        platform:
+          - Win32
+          - x64
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
+    ## see https://github.com/actions/checkout
+    - uses: actions/checkout@v2
 
-    - name: check env
-      run: set
-      shell: cmd
-
+    ## see https://github.com/microsoft/setup-msbuild
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.0
       
@@ -42,20 +44,23 @@ jobs:
       run: build-sln.bat ${{ matrix.platform }} ${{ matrix.config }}
       shell: cmd
       
-    - name: Build HTML Help
-      run: build-chm.bat
-      shell: cmd
-      
-    - name: Build installer with Inno Setup
-      run: build-installer.bat ${{ matrix.platform }} ${{ matrix.config }}
-      shell: cmd
+    ## #922 のため無効化
+    #
+    #- name: Build HTML Help
+    #  run: build-chm.bat
+    #  shell: cmd
+    #  
+    #- name: Build installer with Inno Setup
+    #  run: build-installer.bat ${{ matrix.platform }} ${{ matrix.config }}
+    #  shell: cmd
       
     - name: zipArtifacts
       run: zipArtifacts.bat ${{ matrix.platform }} ${{ matrix.config }}
       shell: cmd
 
+    ## see https://github.com/actions/upload-artifact
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
         name: exe ${{ matrix.platform }} ${{ matrix.config }}
-        path: ${{ github.workspace }}/*.zip
+        path: '*.zip'
