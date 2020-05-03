@@ -1,14 +1,19 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI-doxygen-sakura
+name: doxygen
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - feature/*
+
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - release/*
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,8 +25,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-      with:
-          persist-credentials: false
 
     - name: Doxygen Build
       uses: mattnotmitt/doxygen-action@v1
@@ -29,11 +32,8 @@ jobs:
           working-directory: '.'
           doxyfile-path: './doxygen.conf'
 
-    - name: Deploy doxygen
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Upload
+      uses: actions/upload-artifact@v2
       with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: html # The folder the action should deploy.
-          TARGET_FOLDER: testdir
-          REPOSITORY_NAME: ${{ github.repository_owner }}/doxygen
+        name: doxygen
+        path: html

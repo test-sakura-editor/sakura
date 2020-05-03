@@ -6,9 +6,14 @@ name: Bitmap Split MUX
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - feature/*
+
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - release/*
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,18 +25,17 @@ jobs:
 
     strategy:
       matrix:
-        config: ["Debug", "Release"]    
+        config:
+          - Debug
+          - Release
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
-
-    - name: check env
-      run: set
-      shell: cmd
+    - uses: actions/checkout@v2
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.0
-      
+
     - name: Bitmap Split MUX
       run: build-bmp-tools.bat ${{ matrix.config }}
       shell: cmd

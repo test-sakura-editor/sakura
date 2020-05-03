@@ -32,12 +32,9 @@ jobs:
           - Win32
           - x64
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
-
-    - name: check env
-      run: set
-      shell: cmd
+    - uses: actions/checkout@v2
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.0
@@ -62,4 +59,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: exe ${{ matrix.platform }} ${{ matrix.config }}
-        path: ${{ github.workspace }}/*.zip
+        path: *.zip
