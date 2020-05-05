@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: sakura build
+name: Bitmap Split MUX
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -17,6 +17,11 @@ jobs:
     # The type of runner that the job will run on
     name: MSBuild
     runs-on: windows-latest
+
+    strategy:
+      matrix:
+        config: ["Debug", "Release"]    
+
     steps:
     - uses: actions/checkout@v1
 
@@ -27,6 +32,6 @@ jobs:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.0
       
-    - name: MSBuild
-      run: msbuild sakura.sln
+    - name: Bitmap Split MUX
+      run: build-bmp-tools.bat ${{ matrix.config }}
       shell: cmd
