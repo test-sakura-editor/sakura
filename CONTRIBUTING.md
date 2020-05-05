@@ -20,3 +20,4 @@ https://github.com/sakura-editor/sakura/wiki/11.SakuraEditor_PRGuide
 zlib License以外のライセンス(GPLやApacheライセンスなど)が適用された著作物をPull Request等で提供する場合や、不安なことがありましたらGitHub Issuesや掲示板でご一報ください。
 
 [掲示板一覧](https://sakura-editor.github.io/#bbs) 
+
