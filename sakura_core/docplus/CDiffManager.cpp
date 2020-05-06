@@ -13,6 +13,8 @@ EDiffMark CDiffLineGetter::GetLineDiffMark() const{ return (EDiffMark)m_pcDocLin
 /*! 行の差分マークに対応した色を返す -> pnColorIndex
 	
 	色設定が無い場合は pnColorIndex を変更せずに false を返す。	
+	
+	@note テスト
 */
 bool CDiffLineGetter::GetDiffColor(EColorIndexType* pnColorIndex) const
 {
