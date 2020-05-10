@@ -101,15 +101,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Link Include="$(SolutionDir)sakura\$(Platform)\$(Configuration)\*.obj" />
+    <Link Include="$(SolutionDir)sakura\$(Platform)\$(Configuration)\*.res" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test-ccommandline.cpp" />
+    <ClCompile Include="test-clayoutint.cpp" />
     <ClCompile Include="test-cmemory.cpp" />
     <ClCompile Include="test-cnative.cpp" />
     <ClCompile Include="test-editinfo.cpp" />
     <ClCompile Include="test-grepinfo.cpp" />
     <ClCompile Include="test-int2dec.cpp" />
     <ClCompile Include="test-is_mailaddress.cpp" />
+    <ClCompile Include="test-loadstring.cpp" />
     <ClCompile Include="test-mydevmode.cpp" />
     <ClCompile Include="test-parameterized.cpp" />
     <ClCompile Include="test-sample-disabled.cpp" />
