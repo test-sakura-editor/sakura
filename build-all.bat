@@ -2,6 +2,7 @@
 set platform=%1
 set configuration=%2
 
+
 if "%platform%" == "Win32" (
 	@rem OK
 ) else if "%platform%" == "x64" (
