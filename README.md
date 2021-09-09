@@ -56,6 +56,8 @@
 
 A free Japanese text editor for Windows
 
+PR Test
+
 ## Hot topic
 Project(カンバン)運用を始めます。
 
